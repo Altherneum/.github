@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discord
+    url: https://Altherneum.fr/discord/
+    about: Posez vos questions ici
+  - name: Docs
+    url: https://doc.Altherneum.fr/
+    about: Documentation
