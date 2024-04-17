@@ -66,8 +66,11 @@
   
 # Libs externes
 - CMS : @[Azuriom](https://github.com/Azuriom) | [Repo externe](https://github.com/Azuriom/Azuriom)
-- ~~Github Chat : @[Giscus](https://github.com/Giscus) | [Repo externe](https://github.com/Giscus/Giscus)~~
+- ~~Giscus : @[Giscus](https://github.com/Giscus) | [Repo externe](https://github.com/Giscus/Giscus)~~
 - Discord bot : @[Javacord](https://github.com/Javacord) | [Repo externe](https://github.com/Javacord/Javacord)
 - PaperMC : @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Paper)
 - Waterfall : @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)
-- Github pages : @[Github](https://github.com/github) | [README](https://github.com/github/welcome-to-github-and-pages) | [Site](https://pages.github.com/) | [Doc](https://docs.github.com/fr/pages) | [Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) | [404 custom](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+- Maven : [Site](https://maven.apache.org/)
+- VSCode : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)
+- Github : @[Github](https://github.com/github) | [Desktop](https://desktop.github.com) | [Git](https://git-scm.com/)
+- Github pages : [README](https://github.com/github/welcome-to-github-and-pages) | [Site](https://pages.github.com/) | [Doc](https://docs.github.com/fr/pages) | [Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) | [404 custom](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
