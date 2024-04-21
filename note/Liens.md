@@ -11,10 +11,18 @@
 ## Web
 - [w3schools.com](https://www.w3schools.com/)
 - [hits.dwyl.com](https://hits.dwyl.com/)
-- [VSCode.dev](https://vscode.dev/)
 - [Cloud.google.com](https://cloud.google.com/shell?hl=fr)
-- [Google Dorks](https://fr.wikipedia.org/wiki/Google_hacking)
-  - [seela.io/blog/google-dorks ...](https://seela.io/blog/google-dorks-trouver-plus-en-cherchant-moins/)
+- [wikipedia.org / Google Dorks](https://fr.wikipedia.org/wiki/Google_hacking)
+- [seela.io / Google Dorks](https://seela.io/blog/google-dorks-trouver-plus-en-cherchant-moins/)
+
+## Web code editor
+- [VSCode.dev](https://vscode.dev/)
+- [github.dev/github/dev](https://github.dev/github/dev) | [github.com/github/dev](https://github.com/github/dev)
+- [Github Codespace](https://docs.github.com/fr/codespaces) | [VSCode-Space](https://code.visualstudio.com/docs/remote/codespaces)
+
+## Developper
+- [Discord Developper](https://discord.com/developers/applications)
+- [Discord developper badge](https://discord.com/developers/active-developer)
 
 ## Réseau
 - [wireshark.org](https://www.wireshark.org/)
