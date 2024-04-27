@@ -4,13 +4,21 @@ cours sur Windows
 - `Win + R` Recherche ou commande
 - `Win + V` Historique des copier / coller
 - `Win + E` Explorateur de fichiers
+
 - `Win + ➡` Déplacer la fenêtre sélectionnée
+
 - `Windows + ↹` Changer de fenêtre
 - `Windows + ↑ Shift` Changer de fenêtre en arrière
+
 - `Control + Descendre/Monter la molette de souris` Gestion du zoom
+
 - `Control + Z` Annuler / Retour en arrière
+
 - `↹`, `↑ Shift + ↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Control + Alt + Suppr` Menu de secours pour la gestion Windows
+
+- `Impr Ecran Syst` Capture d'écran
+- `Win + ↑ Shift + S` Capture d'écran avec zone
 
 # Console
 - `Echo` Affiche du text
