@@ -53,7 +53,7 @@ mysql> GRANT ALL PRIVILEGES ON [database_name].* TO '[user]'@'[host]' WITH GRANT
 ```
 
 ### Source
-- source : https://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184
-- source : https://dev.mysql.com/doc/refman/8.3/en/getting-information.html
-- source : https://linuxize.com/post/how-to-show-databases-in-mysql/
-- source : https://www.linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees
+- source : [thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184](https://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184)
+- source : [dev.mysql.com/doc/refman/8.3/en/getting-information.html](https://dev.mysql.com/doc/refman/8.3/en/getting-information.html)
+- source : [linuxize.com/post/how-to-show-databases-in-mysql/](https://linuxize.com/post/how-to-show-databases-in-mysql/)
+- source : [linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees](https://www.linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees)

@@ -42,7 +42,7 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 
 ## Consulter le code d'une page 🔬
 
-![d2tl4Oi0I7](https://github.com/Altherneum/.github/assets/84735589/096b576d-3f49-4761-a132-7963769e28b4)
+![290289212-096b576d-3f49-4761-a132-7963769e28b4](https://github.com/Altherneum/.github/assets/84735589/cdcde52d-be28-4d6c-ae6b-d3eca9213c8a)
 
 (Menu "clique droit" sur Chrome v.100+)
 
@@ -54,7 +54,7 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 - Ouvrez le via "clique droit", puis "Afficher le code source"
 - Vous retourne le fichier de base permettant de charger ce site
 
-![chrome_Zf8S87O7vL](https://github.com/Altherneum/.github/assets/84735589/aff1b890-46d5-40e1-8f1f-f4a0fb62d3ca)
+![290290911-aff1b890-46d5-40e1-8f1f-f4a0fb62d3ca](https://github.com/Altherneum/.github/assets/84735589/14cb466f-f159-4c30-9ac9-ae5d10512709)
 
 ---
 
@@ -64,7 +64,7 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 - Ouvrez le via un "clique droit" et "inspecter"
 - Celui là permet de voire et modifier le code du site en temps réel
 
-![chrome_Mgov4xW9UC](https://github.com/Altherneum/.github/assets/84735589/d6272fe4-38a2-426b-941f-218f233d9976)
+![290291063-d6272fe4-38a2-426b-941f-218f233d9976](https://github.com/Altherneum/.github/assets/84735589/da7240f7-d430-4d9f-b33a-cce944b1ede2)
 
 ---
 
