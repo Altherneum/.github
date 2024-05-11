@@ -1,11 +1,18 @@
 # Notes MySQL
 ## Lancer des commandes SQL
+### Mode interactif
 ```
 mysql
 ```
 Permet de lancer le mode interactif sur l'invité de commande
 - Exemple : [# Modifier un utilisateur](#Modifier-un-utilisateur)
+La console affichera `mysql> ` pour signaler le mode interactif
 
+#### Quitter le mode interactif
+- Quitter le mode interactif avec `exit`, `quit` ou `bye`.
+- Quitter le monde interactif avec les raccourcis `Ctrl` + `Z` ou `Ctrl` + `C` ou `Ctrl` + `D`
+
+### Commande directe
 ```
 mysql {Commande}
 ```
