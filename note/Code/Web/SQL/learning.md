@@ -4,12 +4,13 @@
 mysql
 ```
 Permet de lancer le mode interactif sur l'invité de commande
+- Exemple : [# Modifier un utilisateur](#Modifier-un-utilisateur)
 
 ```
 mysql {Commande}
 ```
 Permet de lancer directement la commande SQL
-- Exemple : [# Modifier un utilisateur](#Modifier-un-utilisateur)
+- Exemple : [# reup-une-base-sql](#reup-une-base-sql)
 
 ## Afficher des tableaux
 ### Affiche toutes les bases SQL
