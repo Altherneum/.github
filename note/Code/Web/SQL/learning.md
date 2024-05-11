@@ -17,7 +17,7 @@ La console affichera `mysql > ` pour signaler le mode interactif
 mysql {Commande}
 ```
 Permet de lancer directement la commande SQL
-- Exemple : [# Reup une base SQLl](#Reup-une-base-SQL)
+- Exemple : [# Reup une base SQL](#Reup-une-base-SQL)
 
 ### Lancer une commande avec un autre utilisateur
 ```
