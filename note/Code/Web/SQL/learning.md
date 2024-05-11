@@ -1,4 +1,16 @@
 # Notes MySQL
+## Lancer des commandes SQL
+```
+mysql
+```
+Permet de lancer le mode interactif sur l'invité de commande
+
+```
+mysql {Commande}
+```
+Permet de lancer directement la commande SQL
+- Exemple : [# Modifier un utilisateur](#Modifier-un-utilisateur)
+
 ## Afficher des tableaux
 ### Affiche toutes les bases SQL
 ```
