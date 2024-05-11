@@ -19,6 +19,12 @@ mysql {Commande}
 Permet de lancer directement la commande SQL
 - Exemple : [# reup-une-base-sql](#reup-une-base-sql)
 
+### Lancer une commande avec un autre utilisateur
+```
+mysql -u [user] -p[password] {Commande}
+```
+Permet de lancer des commandes en tant que l'utilisateur `user` et avec le mot de passe de l'argument `password`
+
 ## Afficher des tableaux
 ### Affiche toutes les bases SQL
 ```
