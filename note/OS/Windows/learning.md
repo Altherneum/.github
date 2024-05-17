@@ -5,6 +5,8 @@ cours sur Windows
 - `Win + V` Historique des copier / coller
 - `Win + E` Explorateur de fichiers
 
+- `Win + ;` Liste des émojis
+
 - `Win + ➡` Déplacer la fenêtre sélectionnée
 
 - `Windows + ↹` Changer de fenêtre
