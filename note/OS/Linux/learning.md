@@ -15,6 +15,6 @@
 
 ![ssh top](https://github.com/Altherneum/.github/assets/84735589/e7e272f8-3da0-4ca9-a531-391a38c27ea9)
 
-- `free`
-
+- `free` affiche l'utilisation de la RAM
+- `free --mega` affiche en méga octet
 ![ssh free](https://github.com/Altherneum/.github/assets/84735589/4817a67a-97d9-4a29-9e72-a00d2818800f)
