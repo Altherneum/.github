@@ -1,4 +1,30 @@
 # Notes MySQL
+## Lancer des commandes SQL
+### Mode interactif
+```
+mysql
+```
+Permet de lancer le mode interactif sur l'invité de commande
+- Exemple : [# Modifier un utilisateur](#Modifier-un-utilisateur)
+La console affichera `mysql > ` pour signaler le mode interactif
+
+#### Quitter le mode interactif
+- Quitter le mode interactif avec les commandes `exit`, `quit` ou `bye`.
+- Quitter le mode interactif avec les raccourcis `Ctrl` + `Z` ou `Ctrl` + `C` ou `Ctrl` + `D`
+
+### Commande directe
+```
+mysql {Commande}
+```
+Permet de lancer directement la commande SQL
+- Exemple : [# Reup une base SQL](#Reup-une-base-SQL)
+
+### Lancer une commande avec un autre utilisateur
+```
+mysql -u [user] -p[password] {Commande}
+```
+Permet de lancer des commandes en tant que l'utilisateur `user` et avec le mot de passe de l'argument `password`
+
 ## Afficher des tableaux
 ### Affiche toutes les bases SQL
 ```
@@ -53,7 +79,8 @@ mysql> GRANT ALL PRIVILEGES ON [database_name].* TO '[user]'@'[host]' WITH GRANT
 ```
 
 ### Source
-- source : [thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184](https://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184)
-- source : [dev.mysql.com/doc/refman/8.3/en/getting-information.html](https://dev.mysql.com/doc/refman/8.3/en/getting-information.html)
-- source : [linuxize.com/post/how-to-show-databases-in-mysql/](https://linuxize.com/post/how-to-show-databases-in-mysql/)
-- source : [linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees](https://www.linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees)
+- [thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184](https://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/#more-184)
+- [dev.mysql.com/doc/refman/8.3/en/getting-information.html](https://dev.mysql.com/doc/refman/8.3/en/getting-information.html)
+- [linuxize.com/post/how-to-show-databases-in-mysql/](https://linuxize.com/post/how-to-show-databases-in-mysql/)
+- [linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees](https://www.linuxtricks.fr/wiki/mysql-sauvegarder-et-restaurer-ses-bases-de-donnees)
+- [superuser.com/questions/629709/how-to-exit-mysql-command-prompt](https://superuser.com/questions/629709/how-to-exit-mysql-command-prompt)
