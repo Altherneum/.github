@@ -23,7 +23,10 @@ cours sur Windows
 - `Win + ↑ Shift + S` Capture d'écran avec zone
 
 # Console
-- `Echo` Affiche du text
+- `@echo off` Pour empêcher l’affichage de toutes les commandes d’un fichier de traitement par lots (y compris la commande écho désactivé) à l’écran, sur la première ligne du type de fichier de traitement par lots
+- `echo off` Pour empêcher l’écho des commandes à l’invite de commande
+- `echo text` Affiche "text"
+
 - `:Text` Crée le début d'une boucle nommé 'Text'
 - `goto :Text` Le code va exécuter la boucle 'Text'
 `%random%` Chiffres aléatoires
