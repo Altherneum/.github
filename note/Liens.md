@@ -2,18 +2,11 @@
 - [data.gouv.fr](https://www.data.gouv.fr/)
 - [filigrane.beta.gouv.fr](https://filigrane.beta.gouv.fr/)
 
-# Open source
-- [Odoo.com](https://www.odoo.com)
-
----
-
 # Outils
 ## Web
 - [w3schools.com](https://www.w3schools.com/)
 - [hits.dwyl.com](https://hits.dwyl.com/)
 - [Cloud.google.com](https://cloud.google.com/shell?hl=fr)
-- [wikipedia.org / Google Dorks](https://fr.wikipedia.org/wiki/Google_hacking)
-- [seela.io / Google Dorks](https://seela.io/blog/google-dorks-trouver-plus-en-cherchant-moins/)
 
 ## Web code editor
 - [VSCode.dev](https://vscode.dev/)
@@ -23,6 +16,7 @@
 ## Developper
 - [Discord Developper](https://discord.com/developers/applications)
 - [Discord developper badge](https://discord.com/developers/active-developer)
+- [github.com/getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
 
 ## Réseau
 - [wireshark.org](https://www.wireshark.org/)
@@ -30,6 +24,28 @@
 - [mxtoolbox.com](https://mxtoolbox.com/)
 - [Read The Manual First](https://github.com//Altherneum/.github/tree/main/note/RTFM/v1.pdf)
   - [RTFM v1.1](https://github.com//Altherneum/.github/tree/main/note/RTFM/v1.1.pdf)
+
+## Open source
+- [Odoo.com](https://www.odoo.com)
+
+## Game hack
+### Albion online
+- [Statistics Analysis](https://github.com/Triky313/AlbionOnline-StatisticsAnalysis)
+- [ZQRadar](https://github.com/Zeldruck/Albion-Online-ZQRadar)
+### Minecraft
+- [meteorclient](https://meteorclient.com/)
+  - [github.com/MeteorDevelopment](https://github.com/MeteorDevelopment)
+- [wurstclient](https://www.wurstclient.net/)
+  - [github.com/Wurst-Imperium/Wurst7](https://github.com/Wurst-Imperium/Wurst7)
+
+## OSINT
+- [github.com/megadose/holehe](https://github.com/megadose/holehe)
+- [pypi.org/project/socialscan/](https://pypi.org/project/socialscan/)
+- [wikipedia.org / Google Dorks](https://fr.wikipedia.org/wiki/Google_hacking)
+- [seela.io / Google Dorks](https://seela.io/blog/google-dorks-trouver-plus-en-cherchant-moins/)
+
+## OpSec
+- [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team)
 
 ## Machine learning
 - [chat.openai.com](https://chat.openai.com/)
@@ -42,6 +58,7 @@
   - [huggingface.co/TheBloke/ mistral 7b instruct v0.2 Q4_K_S .gguf](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q4_K_S.gguf)
   - [huggingface.co/mistralai](https://huggingface.co/mistralai)
 - [LMStudio.ai](https://lmstudio.ai/)
+- [github.com/PWhiddy/PokemonRedExperiments](https://github.com/PWhiddy/PokemonRedExperiments)
 
 ## Status
 - [githubstatus.com](https://www.githubstatus.com/)
@@ -50,11 +67,11 @@
 - [motdepasse.xyz](https://www.motdepasse.xyz/)
 - ~~[mail-jetable.com](https://www.mail-jetable.com/)~~ DNS_PROBE_FINISHED_NXDOMAIN
 - [online-sms.org](https://online-sms.org/fr)
-- [mytempsms.com/](https://mytempsms.com/)
+- [mytempsms.com](https://mytempsms.com/)
 
 ## Rétro ingénierie
 - [de4dot](https://github.com/de4dot/de4dot) .NET
-- [simple-assembly-explorer](https://github.com/wickyhu/simple-assembly-explorer) Assembly
+- [simple-assembly-explorer](https://github.com/wickyhu/simple-assembly-explorer)
 
 ---
 
@@ -62,6 +79,9 @@
 ## UTF-8
 - [apps.timwhitlock.info/emoji](https://apps.timwhitlock.info/emoji/tables/unicode)
 - [getEmoji.com](https://getemoji.com/)
+
+## SVG
+- [svgrepo.com](https://www.svgrepo.com/)
 
 ## Text To Speech
 - [fromtexttospeech.com](http://www.fromtexttospeech.com/)
