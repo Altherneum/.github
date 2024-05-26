@@ -47,7 +47,8 @@
 ## OpSec
 - [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team)
 - [wikipedia.org/wiki/Pretty_Good_Privacy](https://wikipedia.org/wiki/Pretty_Good_Privacy)
-  - [pgpkeygen.com](https://pgpkeygen.com/) | [encryptionconsulting.com/how-to-generate-pgp-key-pair/](https://www.encryptionconsulting.com/how-to-generate-pgp-key-pair/)
+  - [pgpkeygen.com](https://pgpkeygen.com/) | [gpg4win.org](https://gpg4win.org/)
+  - [encryptionconsulting.com/how-to-generate-pgp-key-pair/](https://www.encryptionconsulting.com/how-to-generate-pgp-key-pair/)
 
 ## Machine learning
 - [chat.openai.com](https://chat.openai.com/)
