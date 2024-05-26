@@ -45,7 +45,8 @@
 - [seela.io / Google Dorks](https://seela.io/blog/google-dorks-trouver-plus-en-cherchant-moins/)
 
 ## OpSec
-- [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team)
+- [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team) | [metrics.torproject.org/userstats-relay-country](https://metrics.torproject.org/userstats-relay-country.html)
+- [https://orbot.app/](https://orbot.app/)
 - [wikipedia.org/wiki/Pretty_Good_Privacy](https://wikipedia.org/wiki/Pretty_Good_Privacy)
   - [pgpkeygen.com](https://pgpkeygen.com/) | [gpg4win.org](https://gpg4win.org/) | [gnupg.org](https://gnupg.org/)
   - [encryptionconsulting.com/how-to-generate-pgp-key-pair/](https://www.encryptionconsulting.com/how-to-generate-pgp-key-pair/)
@@ -55,6 +56,10 @@
 - [veracrypt.fr](https://veracrypt.fr/)
 - [getmonero.org](https://www.getmonero.org/)
 - [keepassxc.org](https://keepassxc.org/) | [keepass.info](https://keepass.info/)
+- [whonix.org](https://www.whonix.org/)
+- [geti2p.net](https://geti2p.net/)
+- [lokinet.org](lokinet.org)
+- [getsession.org](https://getsession.org/)
 
 ## Machine learning
 - [chat.openai.com](https://chat.openai.com/)
