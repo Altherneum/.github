@@ -46,6 +46,10 @@
 
 ## OpSec
 - [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team)
+- [wikipedia.org/wiki/Pretty_Good_Privacy](https://wikipedia.org/wiki/Pretty_Good_Privacy)
+  - [pgpkeygen.com](https://pgpkeygen.com/) | [gpg4win.org](https://gpg4win.org/)
+  - [encryptionconsulting.com/how-to-generate-pgp-key-pair/](https://www.encryptionconsulting.com/how-to-generate-pgp-key-pair/)
+  - [docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 - [tails.net](https://tails.net/)
 - [thunderbird.net](https://www.thunderbird.net/)
 - [gnupg.org](https://gnupg.org/)
