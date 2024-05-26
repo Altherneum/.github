@@ -7,6 +7,8 @@
 - [w3schools.com](https://www.w3schools.com/)
 - [hits.dwyl.com](https://hits.dwyl.com/)
 - [Cloud.google.com](https://cloud.google.com/shell?hl=fr)
+- [Odoo.com](https://www.odoo.com)
+- [github.com/gorhill/uBlock](https://github.com/gorhill/uBlock)
 
 ## Web code editor
 - [VSCode.dev](https://vscode.dev/)
@@ -24,9 +26,7 @@
 - [mxtoolbox.com](https://mxtoolbox.com/)
 - [Read The Manual First](https://github.com//Altherneum/.github/tree/main/note/RTFM/v1.pdf)
   - [RTFM v1.1](https://github.com//Altherneum/.github/tree/main/note/RTFM/v1.1.pdf)
-
-## Open source
-- [Odoo.com](https://www.odoo.com)
+- [aircrack-ng.org](https://aircrack-ng.org/)
 
 ## Game hack
 ### Albion online
@@ -46,6 +46,12 @@
 
 ## OpSec
 - [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team)
+- [tails.net](https://tails.net/)
+- [thunderbird.net](https://www.thunderbird.net/)
+- [gnupg.org](https://gnupg.org/)
+- [veracrypt.fr](https://veracrypt.fr/)
+- [getmonero.org](https://www.getmonero.org/)
+- [keepassxc.org](https://keepassxc.org/) | [keepass.info](https://keepass.info/)
 
 ## Machine learning
 - [chat.openai.com](https://chat.openai.com/)
