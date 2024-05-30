@@ -44,11 +44,15 @@ Recherche sur le site Github.com et des fichiers PDF
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
 
 - `Base de données Google Dorks`: Un répertoire exhaustif de requêtes de Google Dork préconstruites.  
-[gogedork.com](https://www.gogedork.com/)
+~~[gogedork.com](https://www.gogedork.com/)~~ DNS_PROBE_FINISHED_NXDOMAIN
+
 - `Shodan`: Une base de données ouverte pour appareils connectés à Internet, fréquemment utilisée avec Google Dorks pour étendre les résultats de recherche.  
 [shodan.io](https://www.shodan.io/)
+
+![chrome_dBMhgWpLBV](https://github.com/Altherneum/.github/assets/84735589/ff9b34ba-44e4-4769-a5cc-10e21d509de2)
+
 - `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork.  
-[github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)
+~~[github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)~~ 404
 
 # Utilisation de manière éthique
 
