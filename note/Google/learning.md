@@ -31,6 +31,11 @@ Par exemple : `mots à rechercher:date`
 - `define:` Retourne la définition d'une expression  
 Par exemple : `define:mots à définir`
 
+### Exemple
+[google.com/search?q=site:github.com+token+filetype:yml](https://www.google.com/search?q=site:github.com+token+filetype:yml)
+
+![Google](https://github.com/Altherneum/.github/assets/84735589/db1f3fc2-71a1-4bc3-b31a-7fb409faf1d6)
+
 ## Outils et Ressources pour le Google Dorking
 
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
