@@ -1,4 +1,4 @@
-# Google Dorks : Une outil puissant pour la récupération d'informations
+# Définition
 
 Les Google Dorks, également connus sous le nom de "Google Hacks" ou de "trucs de recherche de moteur de recherche", sont des requêtes de recherche avancées conçues pour récupérer des informations cachées, spécifiques ou non indexées que les recherches Google standard ne découvrent pas. Ce procédé peut être utilisé à des fins légitimes telles que la recherche de données, le test de sécurité ou l'enquête journalistique. Toutefois, il est important d'utiliser cette puissance de manière responsable et de respecter les lois sur la vie privée et les droits de copie.
 
@@ -31,18 +31,30 @@ Par exemple : `mots à rechercher:date`
 - `define:` Retourne la définition d'une expression  
 Par exemple : `define:mots à définir`
 
-## Outils et Ressources pour le Google Dorking
+### Exemple
+- [google.com/search?q=site:github.com+token+filetype:yml](https://www.google.com/search?q=site:github.com+token+filetype:pdf)  
+Recherche sur le site Github.com et des fichiers YML contenant le mot "token"
+- [google.com/search?q=site:github.com+filetype:pdf](https://www.google.com/search?q=site:github.com+filetype:pdf)  
+Recherche sur le site Github.com et des fichiers PDF
+
+![Google](https://github.com/Altherneum/.github/assets/84735589/db1f3fc2-71a1-4bc3-b31a-7fb409faf1d6)
+
+## Outils et Ressources
 
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
 
 - `Base de données Google Dorks`: Un répertoire exhaustif de requêtes de Google Dork préconstruites.  
-[gogedork.com](https://www.gogedork.com/)
+~~[gogedork.com](https://www.gogedork.com/)~~ DNS_PROBE_FINISHED_NXDOMAIN
+
 - `Shodan`: Une base de données ouverte pour appareils connectés à Internet, fréquemment utilisée avec Google Dorks pour étendre les résultats de recherche.  
 [shodan.io](https://www.shodan.io/)
-- `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork.  
-[github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)
 
-# Utilisation de Google Dorks de manière éthique
+![chrome_dBMhgWpLBV](https://github.com/Altherneum/.github/assets/84735589/ff9b34ba-44e4-4769-a5cc-10e21d509de2)
+
+- `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork.  
+~~[github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)~~ 404
+
+# Utilisation de manière éthique
 
 Le Google Dorking peut être un outil puissant, mais il est important d'en utilisateur de manière responsable et éthique. Quelques règles incluent :
 
