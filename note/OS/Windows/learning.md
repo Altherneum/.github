@@ -50,7 +50,9 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `diskpart` disques et outils de formatage
 
 ## Réseau
-- `ipconfig` configuration IP
+- `ipconfig` Configuration IP
+- `ipconfig /all` Configuration IP totale
+- `ipconfig /flushdns` Vide le cache DNS
 - `ping [IP/DNS]` Envoie un paquet IP
 - `tracert` Trace la route des rebonds d'un paquet IP
 
