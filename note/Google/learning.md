@@ -1,4 +1,4 @@
-# Google Dorks : Une outil puissant pour la récupération d'informations
+# Définition
 
 Les Google Dorks, également connus sous le nom de "Google Hacks" ou de "trucs de recherche de moteur de recherche", sont des requêtes de recherche avancées conçues pour récupérer des informations cachées, spécifiques ou non indexées que les recherches Google standard ne découvrent pas. Ce procédé peut être utilisé à des fins légitimes telles que la recherche de données, le test de sécurité ou l'enquête journalistique. Toutefois, il est important d'utiliser cette puissance de manière responsable et de respecter les lois sur la vie privée et les droits de copie.
 
@@ -36,7 +36,7 @@ Par exemple : `define:mots à définir`
 
 ![Google](https://github.com/Altherneum/.github/assets/84735589/db1f3fc2-71a1-4bc3-b31a-7fb409faf1d6)
 
-## Outils et Ressources pour le Google Dorking
+## Outils et Ressources
 
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
 
@@ -47,7 +47,7 @@ De nombreux outils et ressources peuvent vous aider à construire des requêtes 
 - `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork.  
 [github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)
 
-# Utilisation de Google Dorks de manière éthique
+# Utilisation de manière éthique
 
 Le Google Dorking peut être un outil puissant, mais il est important d'en utilisateur de manière responsable et éthique. Quelques règles incluent :
 
