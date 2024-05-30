@@ -54,7 +54,7 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `ipconfig /all` Configuration IP totale
 - `ipconfig /flushdns` Vide le cache DNS
 - `ping [IP/DNS]` Envoie un paquet IP
-- `tracert` Trace la route des rebonds d'un paquet IP
+- `tracert [IP/DNS]` Trace la route des rebonds d'un paquet IP
 
 ## Système
 - `systemInfo` Information système
