@@ -32,7 +32,10 @@ Par exemple : `mots à rechercher:date`
 Par exemple : `define:mots à définir`
 
 ### Exemple
-[google.com/search?q=site:github.com+token+filetype:yml](https://www.google.com/search?q=site:github.com+token+filetype:yml)
+- [google.com/search?q=site:github.com+token+filetype:yml](https://www.google.com/search?q=site:github.com+token+filetype:pdf)  
+Recherche sur le site Github.com et des fichiers YML contenant le mot "token"
+- [google.com/search?q=site:github.com+filetype:pdf](https://www.google.com/search?q=site:github.com+filetype:pdf)  
+Recherche sur le site Github.com et des fichiers PDF
 
 ![Google](https://github.com/Altherneum/.github/assets/84735589/db1f3fc2-71a1-4bc3-b31a-7fb409faf1d6)
 
