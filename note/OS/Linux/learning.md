@@ -18,9 +18,10 @@
 - `cd /folder` se déplacer vers le dossier "folder"
 
 - `ls` liste des dossiers et fichiers
+
 ![ssh ls of main folder](https://github.com/Altherneum/.github/assets/84735589/1dc14cb5-dac3-419a-9769-d2f357e81821)
 
-## cp Copy paste
+## Copy paste
 - `cp [à copier] [déstination]` Permet de copier un ou plusieurs fichiers vers un emplacement spécifié
 - `cp [fichier à copier] [dossier à copier] [fichier à copier] [dossier à copier] [déstination]` Permet de copier une liste de dossiers et fichiers vers l'emplacement spécifié
 - `cp -f [fichier] [déstination]` Permet de forcer l'écrasement d'anciens fichiers et dossiers
@@ -28,15 +29,16 @@
 - `cp -r [dossier] [déstination]` Permet de copier de manière récursive
 - `cp -s [fichier] [déstination]` Permet de créer un lien symbolique vers le fichier d’origine.
 
-# RAM usage
+# Top process
 - `top`
 
 ![ssh top](https://github.com/Altherneum/.github/assets/84735589/e7e272f8-3da0-4ca9-a531-391a38c27ea9)
 
----
+# free RAM
 
 - `free` affiche l'utilisation de la RAM
 - `free --mega` affiche en méga octet (Fonctionne aussi avec `--giga`)
+
 ![ssh free](https://github.com/Altherneum/.github/assets/84735589/4817a67a-97d9-4a29-9e72-a00d2818800f)
 
 # Process statuses
