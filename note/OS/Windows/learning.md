@@ -57,20 +57,17 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `ipconfig /release` Libère les connexions
 - `ipconfig /renew` Rétablit les connexions
 
----
-
+## ICMP
 - `ping [IP/DNS]` Envoie un paquet IP
 - `tracert [IP/DNS]` Trace la route des rebonds d'un paquet IP
 
----
-
+## ARP
 - `arp` Affiche et modifie les entrées dans le cache ARP
 - `arp /a` Affiche les tables de cache ARP de toutes les interfaces
 - `arp /a /n 10.0.0.99` Pour afficher la table de cache ARP de l’interface à laquelle est attribuée l’adresse IP 10.0.0.99
 - `arp /s 10.0.0.80 00-AA-00-4F-2A-9C` Pour ajouter une entrée de cache ARP statique qui résout l’adresse IP 10.0.0.80 en adresse physique 00-AA-00-4F-2A-9C
 
----
-
+## nslookup DNS
 - `nslookup` Affiche des informations que vous pouvez utiliser pour diagnostiquer l’infrastructure DNS (Domain Name System)
 - `nslookup mydomain.com 1.1.1.1` Recherche les adresses IP du nom de domaine mydomain.com sur le serveur de noms DNS à 1.1.1.1
 - `nslookup 4.4.4.4` Recherche le nom de domaine de l’adresse IP 4.4.4.4 sur le serveur de noms DNS par défaut
