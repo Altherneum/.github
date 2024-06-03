@@ -11,7 +11,6 @@ Même si cela arrive, il est peu probable qu'un programme utile démarre étant 
 # Code
 ```
 @echo off
-color a
 :start
 start
 goto :start
