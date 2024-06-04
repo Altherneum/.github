@@ -17,17 +17,19 @@ Même si cela arrive, il est peu probable qu'un programme utile démarre étant 
 start
 goto :start
 ```
-Source : [Github](#Télécharger-depuis-Github)
+[github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb.bat)
 
 ## Variante Windows (Batch)
 ```
 %0|%0
 ```
+[github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb2.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb2.bat)
 
 ## Variante Linux (Bash)
 ```
 :(){ :|:& };:
 ```
+[github.com /Altherneum/.github /blob/main /note /OS/Linux /forkBomb.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/forkBomb.sh)
 
 ## Variante HTML / JS
 ```
@@ -47,6 +49,3 @@ Source : [Github](#Télécharger-depuis-Github)
 - Modifier le text du fichier avec le code suivant : [Code](#Code)
 - Vérifier que vous enregistrez bien le type de fichier en "Tout type de fichier" et non pas text uniquement
 ![notepad_hreGWL4UXj](https://github.com/Altherneum/.github/assets/84735589/940ea3b0-9e4b-4668-9af0-2eecbf35db47)
-
-## Télécharger depuis Github
-- [github.com /Altherneum/.github /blob/main /note /OS/Windows /matrice.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/matrice.bat)
