@@ -41,7 +41,7 @@ goto :start
   window.onload = open_target_blank();
 </script>
 ```
-[github.com /Altherneum/.github /blob/main /note /Code/Web /forkBomb.html](https://github.com/Altherneum/.github/blob/main/note/Code/Web/forkBomb.html)
+[github.com /Altherneum/.github /blob/main /note /Code/Web/HTML /forkBomb.html](https://github.com/Altherneum/.github/blob/main/note/Code/Web/HTML/forkBomb.html)
 
 # Comment utiliser
 
