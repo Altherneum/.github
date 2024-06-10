@@ -1,4 +1,5 @@
 # Area network
+
 ## PAN
 Quelques mètre (Personnal Arean Network) ex : bluetooth
 
@@ -12,6 +13,7 @@ Wide Arean network
 Metropolitan area network
 
 # Type de réseau
+
 ## Internet
 Réseau mondial
 
@@ -22,7 +24,10 @@ Ouverture d'un intranet vers l'exterieur de confiance
 Réseau privé d'entreprise
 
 # Topologie réseau
-![Topologie réseau](https://sti2d.ecolelamache.org/reseau_topologie.jpg) 
+![Topologie réseau](https://sti2d.ecolelamache.org/reseau_topologie.jpg)
+
+### Risques des topologies
+Sur certains réseau, si une branche casse / ne fonctionne plus, le reste du réseau peut être impacté
 
 ## Ring
 Jeton donné à tout le monde, avec un temps de parole.  
@@ -35,7 +40,4 @@ Avec un routeur / hub
 Sur une ligne ou tout les périphériques reçoivent l'information
 
 ## Mesh
-Toutes les machines sont interconnectés, similaire au réseau mondiale
-
-### Risques des topologies
-Sur certains réseau, si une branche casse / ne fonctionne plus, le reste du réseau peut être impacté
+Toutes les machines sont interconnectés, similaire au réseau mondial
