@@ -29,26 +29,34 @@
 Réseau mondial
 
 ## Extranet
-Ouverture d'un intranet vers l'exterieur de confiance
+- L'Extranet est l'utilisation du réseau internet dans laquelle une organisation structure ce réseau pour s'interconnecter avec ses partenaires commerciaux ou ses parties prenantes.
+- Par opposition, un réseau intranet, se limite au réseau interne à l'organisation, sans utiliser d'infrastructure tierce.
 
 ## Intranet
-Réseau privé d'entreprise
+- Un intranet est un réseau informatique privé utilisé par les employés d'une entreprise ou de toute autre entité organisationnelle et qui utilise les mêmes protocoles qu'Internet.
+- Cette utilisation n'est pas nécessairement locale, un intranet pouvant s'étendre à travers le réseau étendu [WAN](#WAN).
 
 # Topologie réseau
 ![Topologie réseau](https://sti2d.ecolelamache.org/reseau_topologie.jpg)
 
 ## Ring
-- Jeton donné à tout le monde, avec un temps de parole.  
-- La discussion est en sens unique dans le cercle, la packet doit faire un tour complet (adresse MAC pour savoir à qui la packet est destiné)
+- Un réseau en anneau est une forme de réseau informatique visant à raccorder l'ensemble des ordinateurs. 
+- Toutes les entités sont reliées entre elles dans une boucle fermée.
+- Les données circulent dans une direction unique, d'une entité à la suivante.
 
 ## Star
-Avec un routeur / hub
+- Dans une topologie de réseau en étoile aussi appelé Hub and spoke, les équipements du réseau sont reliés à un système matériel central.
+- Celui-ci a pour rôle d'assurer la communication entre les différents équipements du réseau.
+- En pratique, l'équipement central peut être un concentrateur, un commutateur ou un routeur.
 
 ## Bus
-Sur une ligne ou tout les périphériques reçoivent l'information
+- En informatique, un réseau en bus est une architecture de communication où la connexion des clients est assurée par un bus partagé par tous les utilisateurs au moyen d'arrêt de bus d'où le nom "réseau en bus". 
 
 ## Mesh
-Toutes les machines sont interconnectés, similaire au réseau mondial
+- Le réseau maillé est une topologie de réseau où tous les hôtes sont connectés pair à pair sans hiérarchie centrale, formant ainsi une structure en forme de filet. 
+- Par conséquent, chaque nœud doit recevoir, envoyer et relayer les données
+- Issue de la recherche militaire et utilisée notamment par les armées américaine et française, cette architecture reproduit le modèle de l'Internet tout en l'optimisant pour le sans-fil
+- Assure une grande tolérance aux pannes et aux interférences
 
 ### Risques des topologies
 Sur certains réseau, si une branche casse / ne fonctionne plus, le reste du réseau peut être impacté
