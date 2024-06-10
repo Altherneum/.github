@@ -22,8 +22,18 @@
 ![câble droit](https://media.fs.com/images/community/upload/wangEditor/201911/06/_1573024176_ciNUcjMTY5.jpg)
 - Les câbles droits sont principalement utilisés pour connecter des appareils non similaires, tandis que les câbles croisés sont principalement utilisés pour connecter des appareils similaires.
 
-## Catégorie
+### Catégorie
 ![catégorie de câble](https://i0.wp.com/www.learnabhi.com/wp-content/uploads/2018/03/ethernet-cable-min.jpg?w=1290&ssl=1)
 
 ![catégorie câble 2](https://telecom.samm.com/Data/EditorFiles/images/blog/015-what-is-the-ethernet/history-of-ethernet-lan-cables-categories.png)
 [telecom.samm.com /history-of-ethernet-lan-cables-categories](https://telecom.samm.com/history-of-ethernet-lan-cables-categories)
+
+## Fibre
+[doc.altherneum.fr /cours/fibre](https://doc.altherneum.fr/cours/fibre.html)
+
+## Câble TERRA
+[wikipedia.org /wiki/TERA](https://fr.wikipedia.org/wiki/TERA)
+
+# CSMA CD
+- Carrier Sense Multiple Access with Collision Detection
+- Protocole qui gère le partage de l'accès physique. Il est utilisé dans les premières normes du réseau Ethernet.
