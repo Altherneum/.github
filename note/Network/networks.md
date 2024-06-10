@@ -1,16 +1,27 @@
 # Area network
 
 ## PAN
-Quelques mètre (Personnal Arean Network) ex : bluetooth
+- Personal Area Network
+- Un réseau personnel ou désigne un type de réseau informatique restreint en matière d'équipements, généralement mis en œuvre dans un espace d'une dizaine de mètres. D'autres appellations pour ce type de réseau sont : réseau domestique ou réseau individuel
+- ![PAN](https://static.packt-cdn.com/products/9781788621434/graphics/assets/ce1b33ed-826d-47c7-8fb5-d9d2215a2d93.png)
+- Exemple : Bluetooth
 
 ## LAN
-Local Area network (Centaines de mètres)
+- Local Area network
+- Un réseau local, en anglais Local Area Network ou LAN, est un réseau informatique où les terminaux qui y participent s'envoient des trames au niveau de la couche de liaison sans utiliser l’accès à internet.
 
 ## WAN
-Wide Arean network
+- Wide Arean network
+- Un réseau étendu, souvent désigné par son acronyme anglais WAN, est un réseau informatique ou un réseau de télécommunications couvrant une grande zone géographique, typiquement à l'échelle d'un pays, d'un continent, ou de la planète entière. Le plus grand WAN est le réseau Internet.
+
+## WLAN²
+- Wireless Local Area Network
+- Un réseau local sans fil est un réseau informatique sans fil qui relie deux ou plusieurs appareils utilisant une communication sans fil pour former un réseau local dans une zone limitée telle qu'une maison, une école, un laboratoire informatique, un campus ou un immeuble de bureaux.
 
 ## MAN
-Metropolitan area network
+- Metropolitan area network
+- Un réseau métropolitain désigne un réseau composé d'ordinateurs habituellement utilisé dans les campus ou dans les villes.
+- Le réseau utilise généralement des fibres optiques.
 
 # Type de réseau
 
