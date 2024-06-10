@@ -14,6 +14,15 @@ par défaut est de 32 bits
 - Address Resolution Protocol.  
 - L’Address Resolution Protocol est un protocole utilisé pour associer l'adresse de protocole de couche réseau d'un hôte distant, à son adresse de protocole de couche de liaison.
 
+# TCP
+# UDP
+# NAT
+# PAT
+# Ports
+# ACL
+# MAC
+
+
 # CSMA CD
 - Carrier Sense Multiple Access with Collision Detection
 - Protocole qui gère le partage de l'accès physique.  
@@ -36,3 +45,14 @@ Il est utilisé dans les premières normes du réseau Ethernet.
 # DMZ
 
 # VLAN
+
+# Baie réseau
+- Routeur
+- Hub
+- AD
+- Serveur Web
+- PC
+
+# Nota bene
+- [ProxMox](https://www.proxmox.com/)
+- [ipfire.org](https://www.ipfire.org/)
