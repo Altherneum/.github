@@ -1,4 +1,3 @@
-
 # Baie réseau
 - Routeur
 - Hub
