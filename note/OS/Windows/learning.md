@@ -59,6 +59,7 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 
 ## ICMP
 - `ping [IP/DNS]` Envoie un paquet IP
+- `ping -t [IP/DNS]` Envoie un paquet IP à l'infinie
 - `tracert [IP/DNS]` Trace la route des rebonds d'un paquet IP
 
 ## ARP
