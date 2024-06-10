@@ -10,11 +10,21 @@
 - Local Area network
 - Un réseau local, en anglais Local Area Network ou LAN, est un réseau informatique où les terminaux qui y participent s'envoient des trames au niveau de la couche de liaison sans utiliser l’accès à internet.
 
+## VLAN
+- Virtual LAN
+- Réseau local virtuel
+- Les VLAN permettent :
+  - de séparer les flux
+  - de segmenter le réseau : réduire la taille d'un domaine de collision
+  - d'améliorer la sécurité : permet de créer un ensemble logique isolé pour améliorer la sécurité.
+- Le seul moyen pour communiquer entre des machines appartenant à des VLAN différents est alors de passer par un routeur.
+- Par conséquent, les VLAN permettent aussi d'améliorer la gestion du réseau et d'optimiser la bande passante.
+
 ## WAN
 - Wide Arean network
 - Un réseau étendu, souvent désigné par son acronyme anglais WAN, est un réseau informatique ou un réseau de télécommunications couvrant une grande zone géographique, typiquement à l'échelle d'un pays, d'un continent, ou de la planète entière. Le plus grand WAN est le réseau Internet.
 
-## WLAN²
+## WLAN
 - Wireless Local Area Network
 - Un réseau local sans fil est un réseau informatique sans fil qui relie deux ou plusieurs appareils utilisant une communication sans fil pour former un réseau local dans une zone limitée telle qu'une maison, une école, un laboratoire informatique, un campus ou un immeuble de bureaux.
 
