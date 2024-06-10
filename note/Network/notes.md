@@ -35,6 +35,7 @@ par défaut est de 32 bits
 [doc.altherneum.fr /cours/fibre](https://doc.altherneum.fr/cours/fibre.html)
 
 ## Câble TERRA
+![câble TERRA](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Tera_steckverbinder.JPG/220px-Tera_steckverbinder.JPG)
 [wikipedia.org /wiki/TERA](https://fr.wikipedia.org/wiki/TERA)
 
 # CSMA CD
