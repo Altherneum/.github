@@ -41,3 +41,13 @@ Toutes les machines sont interconnectés, similaire au réseau mondial
 
 ### Risques des topologies
 Sur certains réseau, si une branche casse / ne fonctionne plus, le reste du réseau peut être impacté
+
+# Hub vs Switch vs Routeur
+## Hub
+Parle à tout le monde
+
+## Switch
+Uniquement le sous réseau cible reçoit l'information
+
+## Routeur
+Un Switch avec une branche vers l'internet
