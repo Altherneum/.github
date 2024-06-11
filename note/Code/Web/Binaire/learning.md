@@ -18,6 +18,17 @@ __**mais en base 2 lié à sa propriété physique**__ !
 - Le binaire devant être stocké, il est gravé soit sur un support physique (disques en métal, en verre ou en céramique empilés) (exemple un [disque dur HDD](https://fr.wikipedia.org/wiki/Disque_dur) via magnétisme sur un disque mécanique en rotation)  
 - Ou alors gravé de manière "électrique" [mémoire flash](https://fr.wikipedia.org/wiki/Mémoire_flash) (NVME & SSD / Clef USB / RAM) en stockant dans un [transistor](https://fr.wikipedia.org/wiki/Transistor) / [MOS](https://fr.wikipedia.org/wiki/Transistor_à_effet_de_champ_à_grille_métal-oxyde) possédant une grille flottante enfouie dans la puce. L'information est stockée grâce au piégeage d'électrons dans cette grille flottante ([Mémoire EEPROM "Electrically-erasable programmable read-only memory"](https://fr.wikipedia.org/wiki/Electrically-erasable_programmable_read-only_memory))
 
+# Octets vs Bits vs Bytes
+- Bit = 1 ou 0
+- Byte est la quantité de donnée
+
+- Exemple 8 bytes font un octet composés de bits
+
+- Les bits ne sont pas utilisés pour représenter les capacités de stockage
+- Un Byte, quant à lui, est la plus petite quantité de données et désigne une unité de mémoire
+- Un octet s'écrit avec 8 bits
+- Une image d'un octet pèse donc 8 bytes
+
 # Comment écrire un chiffre en binaire
 
 Dans ces mémoires, on y stock nos donnés de manière logique, sans quoi, impossible de retrouver quoi que ce soit ...
