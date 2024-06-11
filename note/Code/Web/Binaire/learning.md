@@ -106,6 +106,9 @@ Ou encore en décomponsant le calcul en puissance de 2 (Et oui), des divisons, d
 ## Diviser
 
 # IP & masque réseau
+- Voire [cours IP](https://doc.altherneum.fr/cours/ip)
+- [Cours réseau](https://doc.altherneum.fr/cours/network)
+
 ## Transformer en binaire
 Pour calculer une adresse IP avec son masque on transforme les deux valeurs en binaire
 ```
