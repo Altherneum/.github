@@ -152,6 +152,66 @@ Ce qui donne
 L'adresse IP et masque : 192.168.1.116/24
 ```
 
+### Calculer les sous réseaux et nombre d'hôtes
+
+#### Déterminer le nombre de sous réseau
+- Déterminer la classe de l'adresse IP par défaut  
+(Voire [cours IP # Masque](https://doc.altherneum.fr/cours/ip.html#Masque) et [cours IP # IPv4](https://doc.altherneum.fr/cours/ip.html#IPv4))
+- Soustraire le masque donné
+- Ce qui donne 2^[Résultat] sous réseaux possibles
+
+##### Exemple
+```
+192       . 168       . 1         . 116
+1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
+
+255       . 255       . 255       . 240
+1111 1111 . 1111 1111 . 1111 1111 . 1111 0000
+```
+
+- Ici la classe par défaut d'une adresse en 192.xxx. .... est une classe C (`/24`)
+- Et le masque donné est (`/28`)
+- `28 - 24 = 4`, le nombre de sous réseau maximum possible est donc `2^4`
+
+##### Exemple 2
+```
+192       . 168       . 1         . 116
+1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
+
+255       . 255       . 255       . 0
+1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
+```
+- Classe C (`/24`)
+- Mois le masque (`/24`)
+- `24 - 24 = 0` Il n'y a qu'un seul sous réseau possible
+
+#### Déterminer le nombre d'hôtes
+- Déterminer le nombre de bits à 0 du masque
+- Le nombre d'hôte est donc `2^[Valeur] - 2`
+
+##### Exemple 3
+```
+192       . 168       . 1         . 116
+1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
+
+255       . 255       . 255       . 240
+1111 1111 . 1111 1111 . 1111 1111 . 1111 0000
+```
+
+- Ici le masque est composé de 4 bits avec une valeur de 0 à sa fin
+- Ce qui donne `2 ^ 4 - 2` hôts maximum possible
+
+##### Exemple 4
+```
+192       . 168       . 1         . 116
+1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
+
+255       . 255       . 255       . 0
+1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
+```
+- Ici il y a 8 bits à 0 sur le masque
+- `2 ^ 8` adresses disponibles pour connecter des hôtes 
+
 # Octets vs Bits vs Bytes
 - Bit = 1 ou 0
 - Byte est la quantité de donnée
