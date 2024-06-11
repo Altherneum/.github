@@ -158,7 +158,7 @@ L'adresse IP et masque : 192.168.1.116/24
 - Déterminer la classe de l'adresse IP par défaut  
 (Voire [cours IP # Masque](https://doc.altherneum.fr/cours/ip.html#Masque) et [cours IP # IPv4](https://doc.altherneum.fr/cours/ip.html#IPv4))
 - Soustraire le masque donné
-- Ce qui donne 2^[Résultat] sous réseaux possibles
+- Ce qui donne `2 ^ [Résultat]` sous réseaux possibles
 
 ##### Exemple
 ```
@@ -171,7 +171,7 @@ L'adresse IP et masque : 192.168.1.116/24
 
 - Ici la classe par défaut d'une adresse en 192.xxx. .... est une classe C (`/24`)
 - Et le masque donné est (`/28`)
-- `28 - 24 = 4`, le nombre de sous réseau maximum possible est donc `2^4`
+- `28 - 24 = 4`, le nombre de sous réseau maximum possible est donc `2 ^ 4`
 
 ##### Exemple 2
 ```
@@ -187,7 +187,7 @@ L'adresse IP et masque : 192.168.1.116/24
 
 #### Déterminer le nombre d'hôtes
 - Déterminer le nombre de bits à 0 du masque
-- Le nombre d'hôte est donc `2^[Valeur] - 2`
+- Le nombre d'hôte est donc `2 ^ [Valeur] - 2`
 
 ##### Exemple 3
 ```
@@ -210,7 +210,7 @@ L'adresse IP et masque : 192.168.1.116/24
 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
 ```
 - Ici il y a 8 bits à 0 sur le masque
-- `2 ^ 8` adresses disponibles pour connecter des hôtes 
+- `2 ^ 8 - 2` adresses disponibles pour connecter des hôtes 
 
 # Octets vs Bits vs Bytes
 - Bit = 1 ou 0
