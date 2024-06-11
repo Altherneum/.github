@@ -210,7 +210,21 @@ L'adresse IP et masque : 192.168.1.116/24
 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
 ```
 - Ici il y a 8 bits à 0 sur le masque
-- `2 ^ 8 - 2` adresses disponibles pour connecter des hôtes 
+- `2 ^ 8 - 2` adresses disponibles pour connecter des hôtes
+
+### Piège de l'adresse broadcast
+
+Pour savoir si une adresse est disponible ou une adresse de broadcast : (172.16.3.255)
+```
+1010 1100 . 0001 0000 . 0000 0010 . 1111 1111  -  IP
+1111 1111 . 1111 1111 . 1111 1110 . 0000 0000  -  Masque
+1010 1100 . 0001 0000 . 0000 0010 . 0000 0000  -  Condition ET
+```
+
+Cela donne donc
+- `172 . 16 . 2 . 0` en adresse réseau
+- `2 ^ 9 - 2` = 510 adresses disponibles
+- Le broadcast est donc sur 172.16.3.255
 
 # Octets vs Bits vs Bytes
 - Bit = 1 ou 0
