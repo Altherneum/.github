@@ -148,8 +148,18 @@ Ce qui donne
 192.168.1.0 est l'adresse réseau
 L'adresse IP et masque : 192.168.1.116/24
 ```
-# Un octet ?
+
+# Octets vs Bits vs Bytes
+- Bit = 1 ou 0
+- Byte est la quantité de donnée
+
+- Exemple 8 bytes font un octet composés de bits
+
+- Les bits ne sont pas utilisés pour représenter les capacités de stockage
+- Un Byte, quant à lui, est la plus petite quantité de données et désigne une unité de mémoire
+- Un octet s'écrit avec 8 bits
+- Une image d'un octet pèse donc 8 bytes 
 
 # Créer du text
 
-# Héxa ?
+# Héxadécimale
