@@ -77,6 +77,8 @@ Vous pouvez aussi le voire comme une rangé que vous remplissez petit à petit (
 
 Ou encore en décomponsant le calcul en puissance de 2 (Et oui), des divisons, des bouliers "mécanique", ...
 
+- [sebastienguillon.com /test/javascript /convertisseur](https://sebastienguillon.com/test/javascript/convertisseur.html) (Convertisseur binaire)
+
 ## Additionner, soustraire, ... en binaire
 ### Additionner
 - L'addition en base 2 fonctionne comme l'addition en décimal, mais attention car en binaire, `1 + 1 = 10`
