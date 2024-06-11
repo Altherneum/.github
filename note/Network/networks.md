@@ -3,8 +3,7 @@
 ## PAN
 - Personal Area Network
 - Un réseau personnel ou désigne un type de réseau informatique restreint en matière d'équipements, généralement mis en œuvre dans un espace d'une dizaine de mètres. D'autres appellations pour ce type de réseau sont : réseau domestique ou réseau individuel
-- ![PAN](https://static.packt-cdn.com/products/9781788621434/graphics/assets/ce1b33ed-826d-47c7-8fb5-d9d2215a2d93.png)
-- Exemple : Bluetooth
+- Exemple : Bluetooth, WiFi, ...
 
 ## LAN
 - Local Area network
