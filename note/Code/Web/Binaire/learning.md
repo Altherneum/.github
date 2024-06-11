@@ -5,6 +5,7 @@ Pensez le binaire comme un tableau,
 - 2 lignes
 - de la droite vers la gauche écrivez les puissance de 2
 
+# Origine du binaire
 Le binaire est le mode de comptage non plus en base 5 ([Système quinaire](https://fr.wikipedia.org/wiki/Système_quinaire))
 
 base 9 ( En Chine et au Japon, on peut compter jusqu'à neuf sur chaque main [dactylonomie](https://fr.wikipedia.org/wiki/Dactylonomie)) 
@@ -16,8 +17,6 @@ base 12 ([Système duodécimal](https://fr.wikipedia.org/wiki/Système_duodécim
 __**mais en base 2 lié à sa propriété physique**__ !  
 - Le binaire devant être stocké, il est gravé soit sur un support physique (disques en métal, en verre ou en céramique empilés) (exemple un [disque dur HDD](https://fr.wikipedia.org/wiki/Disque_dur) via magnétisme sur un disque mécanique en rotation)  
 - Ou alors gravé de manière "électrique" [mémoire flash](https://fr.wikipedia.org/wiki/Mémoire_flash) (NVME & SSD / Clef USB / RAM) en stockant dans un [transistor](https://fr.wikipedia.org/wiki/Transistor) / [MOS](https://fr.wikipedia.org/wiki/Transistor_à_effet_de_champ_à_grille_métal-oxyde) possédant une grille flottante enfouie dans la puce. L'information est stockée grâce au piégeage d'électrons dans cette grille flottante ([Mémoire EEPROM "Electrically-erasable programmable read-only memory"](https://fr.wikipedia.org/wiki/Electrically-erasable_programmable_read-only_memory))
-
----
 
 # Comment écrire un chiffre en binaire
 
@@ -79,8 +78,16 @@ Vous pouvez aussi le voire comme une rangé que vous remplissez petit à petit (
 Ou encore en décomponsant le calcul en puissance de 2 (Et oui), des divisons, des bouliers "mécanique", ...
 
 ## Additionner, soustraire, ... en binaire
+### Additionner
 - L'addition en base 2 fonctionne comme l'addition en décimal, mais attention car en binaire, `1 + 1 = 10`
 - il faut donc placer 0 et mettre une retenue de 1 sur le bit suivant. Il faut que les nombres à additionner soient de même taille
+
+```
+1 + 1 = 10 (On ajoute une retenue)
+1 + 0 = 1
+0 + 1 = 1
+0 + 0 = 0
+```
 
 ```
   0 0 0¹ 1¹ 1 0¹ 0¹ 1
@@ -92,6 +99,53 @@ Ou encore en décomponsant le calcul en puissance de 2 (Et oui), des divisons, d
 
 - [maxicours.com /se/cours/ effectuer-des-operations-en-binaire](https://www.maxicours.com/se/cours/effectuer-des-operations-en-binaire)
 
+## Soustraire
+## Multiplier
+## Diviser
+
+# IP & masque réseau
+## Transformer en binaire
+Pour calculer une adresse IP avec son masque on transforme les deux valeurs en binaire
+```
+192       . 168       . 1         . 116
+1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
+
+255       . 255       . 255       . 0
+1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
+```
+
+## Lecture des adresses réseau et client
+On peut déjà déterminer l'adresse réseau et l'adresse des postes de ce réseau
+```
+  1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
++ 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
+= { Adresse . réseau    .         } . { PC     }
+```
+
+## Porte logique ET
+Par la suite on applique un ET logique  
+(Attention on ne fait pas une addition mais une porte logique ET)
+```
+1 + 1 = 1
+1 + 0 = 0
+0 + 1 = 0
+0 + 0 = 0
+```
+
+Ce qui donne
+```
+  1100 0000 . 1010 1000 . 0000 0001 . 0111 0100
++ 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
+= 1100 0000 . 1010 1000 . 0000 0001 . 0000 0000
+```
+
+```
+1100 0000 . 1010 1000 . 0000 0001 . 0000 0000
+192       . 168       . 1         . 0
+
+192.168.1.0 est l'adresse réseau
+L'adresse IP et masque : 192.168.1.116/24
+```
 # Un octet ?
 
 # Créer du text
