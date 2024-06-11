@@ -12,6 +12,7 @@
 ## VLAN
 - Virtual LAN
 - Réseau local virtuel
+
 - Les VLAN permettent :
   - de séparer les flux
   - de segmenter le réseau : réduire la taille d'un domaine de collision
