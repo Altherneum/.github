@@ -41,3 +41,17 @@ NetBIOS sur Tcpip. . . . . . . . . . . : Activé
 [doc.altherneum.fr/outils/logger](https://doc.altherneum.fr/outils/logger.html)
 # Outils IP subnet
 [calculator.net/ip-subnet-calculator](https://www.calculator.net/ip-subnet-calculator.html)
+
+
+# CIDR
+/x
+# Décimale pointé 
+wwww.xxxx.yyyy.zzzz
+# Calculer broadcast
+Mettre tout les bits partie hôte à 1
+# Calculer last adresse
+Broad cast - 1
+# Première adresse
+Adresse réseau + 1
+# Bits poids fort
+# bits poids faible
