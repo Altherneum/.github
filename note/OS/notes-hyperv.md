@@ -76,6 +76,19 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Privé
 - `Clients`
 
+## DNS
+- Doit avoir IP statique
+- Nom commun
+- Suffix DNS
+
+## DHCP
+
+## Clients
+- PC classique
+
+## AD
+- Active directory
+
 # Autres notes
 ## CTRL ALT SUPPR
 ![touche](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_9hxQEdb0vA.png?raw=true)
@@ -90,7 +103,7 @@ Permet :
 
 # To Do
 ## Post install
-- DNS
+- [DNS](#DNS)
 - DHCP
 - AD
 - Poste client
