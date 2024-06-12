@@ -87,3 +87,9 @@ Permet :
 - ...
 
 ![paramètre](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_WhqhXRQbdJ.png?raw=true)
+
+# To Do
+## Post install
+- DNS
+- DHCP
+- AD
