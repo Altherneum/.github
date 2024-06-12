@@ -161,7 +161,7 @@ Permet :
 - Libre d'entrée
 - Plusieurs PC connectés ensemble
 - Partage les ressources que de la "cible" que vous demandez (Avec authentification)
-- Tout est décentralisé sur chaque poste (Authentification) ce qui surcharge (Comme à partir de > 10 postes)
+- Tout est décentralisé sur chaque poste (Authentification) ce qui surcharge (Comme à partir de 10 postes)
 
 ### Active directory
 - Serveur gère le domaine de PC
