@@ -23,7 +23,7 @@ Requiert un OS (Windows / Linux)
 - Service d'intégration Service d'invité
 
 ### ISO
-![Lecteur DVD et ISO](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_TWnWBAwE7M.png)
+![Lecteur DVD et ISO](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_TWnWBAwE7M.png?raw=true)
 - Paramètres [Win22-SRV-0](#Win22-SRV-0) ➡ Lecteur DvD ➡ Ajouter ➡ Lier l'ISO
   - sources_iso (srvapp.m2iformation.local) (Y:\)
     - /Microsoft/Windows Server 2022 Evaluation
@@ -33,7 +33,7 @@ Requiert un OS (Windows / Linux)
 - Gestionnaire de commutateur virtuel
 - Privé ou interne
 
-![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ViSv9fGoJe.png)
+![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ViSv9fGoJe.png?raw=true)
 
 # Tâches
 ![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/Teams_kWashgWdFC.png?raw=true)
