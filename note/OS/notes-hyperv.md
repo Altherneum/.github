@@ -40,6 +40,7 @@ Requiert un OS (Windows / Linux)
 
 # Adressage
 ## Win22-SRV-0
+- Admin password : `Respons11`
 - IP
 - Masque
 - Gateway
