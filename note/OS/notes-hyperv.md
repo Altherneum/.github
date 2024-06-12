@@ -54,3 +54,7 @@ Requiert un OS (Windows / Linux)
 ### Clients
 - Privé
 - `Clients`
+
+# Autres notes
+## CTRL ALT SUPPR
+![touche](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_9hxQEdb0vA.png?raw=true)
