@@ -16,4 +16,4 @@ Requiert un OS (Windows / Linux)
 - Installer l'ISO plus tard
 
 ## Tâches
-![Exemple de réseau à créer](/note/assets/Teams_kWashgWdFC.png)
+![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/Teams_kWashgWdFC.png?raw=true)
