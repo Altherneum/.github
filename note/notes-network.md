@@ -54,6 +54,7 @@ Broad cast - 1
 Adresse réseau + 1
 # Bits poids fort
 # bits poids faible
+# Passerelle
 
 # Créer un network de 1k poste Classe C
 ## Déterminer le masque
