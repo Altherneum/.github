@@ -217,6 +217,74 @@ Nom :    WIN22-SRV-1.FORMATION.LAN
 Address:  192.168.10.10
 ```
 
+### Alias DNS
+- Outils
+- DNS 
+- Alias
+- Nommer `www`
+- Domaine sera `www.FORMATION.LAN`
+- Aller sur Nom de domaine : FQDN "parcourir"
+- Cliquer sur les postes pour cibler le `WIN22srv-1`
+- Valider 
+
+- Verifier avec `nslookup www`
+```
+C:\Users\Administrateur>nslookup www
+Serveur :   localhost
+Address:  127.0.0.1
+
+Nom :    win22-srv-1.FORMATION.LAN
+Address:  192.168.10.10
+Aliases:  www.FORMATION.LAN
+```
+
+### Deuxièmes DNS de secours
+#### Zone recherche directe
+- Pour vérifier SOA ; Doublie cliquer SOA
+- NB : Numéro de série = même zone (DNS info identique & up to date)
+
+- Vérifier NS ; Double clique sur Server de nom (NS)
+
+#### Zone inversé
+- PTR (Pointeur) indique à quel nom d'hôte correspond une adresse IPv4 ou IPv6
+
+#### Création
+- Zone directe
+- Propriété
+- Catégorie Transfert de zone
+- Autoriser vers uniquement serveur listé du DNS
+- Aller dans catégorie Serveurs de noms
+- Ajouter
+- Win22SRV-02.FORMATION.LAN
+- Ajouter son IP 192.168.10.11 (sera fait plus tard)
+- OK
+- Les deux machines seront visibles en tant que DNS
+- Valider
+- F5 sur la zone inversé
+- Sera visible
+
+- Même chose sur recherche inversé
+
+- Sur SRV1 de zone directe
+- Double cliquer
+- Mettre à jour PTR, appliquer
+- Retirer et re appliquer
+
+### Délégation
+- FORMATION.LAN
+- Nouvelle délégation
+- Nommer `m2i`
+- Net name sera `m2i.FORMATION.LAN`
+- Suivant
+- Ajouter Server SRV03.m2i.FORMATION.LAN (exemple bidon)
+- Ajouter son IP 192.168.10.20 (exemple bidon)
+- Terminer
+
+### Redirecteur
+- Clique droit propriété SRV1
+- Redirecteur
+- Ajouter IP 9.9.9.9 (ex bidon) (Serveur qui gère la zone (FORMATION.LAN))
+
 ## Notes
 ### Workgroup
 - Libre d'entrée
