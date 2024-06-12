@@ -3,14 +3,32 @@
 - Le Domain Name System ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements
 
 # Liste d'enregistrement DNS
-- SRV
-- SOA
-- CNAME
-- A
-- AAAA
-- TXT
-- MX
-- ...
+- `SRV` Service  
+Permettent à des services tels que la messagerie instantanée et la VoIP d’être redirigés vers un hôte et un port distincts
+
+- `NS` Name Server  
+Spécifient les serveurs de noms faisant autorité pour un domaine ou des sous-domaines
+
+- `SOA` Start of Authority  
+Stockent les informations concernant les domaines. Ils redirigent la propagation de la zone DNS vers les serveurs de noms secondaires.
+
+- `CNAME` Canonical Name  
+Fournit un alias pour un autre domaine lorsque vous voulez qu’un sous domaine pointe vers un autre site internet
+
+- `A` Address  
+nom de domaine complet vers une adresse IPv4
+
+- `AAAA` Quad A  
+nom de domaine complet vers une adresse IPv6
+
+- `TXT` Text  
+Permettent aux administrateurs d’ajouter une quantité limitée de notes lisibles par l’humain et la machine. Ils peuvent servir à valider des e-mails, vérifier un site et son propriétaire
+
+- `MX` Mail e**X**changer  
+Utilise des serveurs de messagerie pour déterminer l’endroit où livrer les e-mails d’un domaine.
+
+- `PTR` Pointer  
+Les enregistrements PTR sont utilisés dans le cadre des recherches DNS inversées. Alors que les enregistrements de type A et AAAA permettent de mapper des FQDN à des adresses IP, les enregistrements PTR font le contraire : ils mappent les adresses IP aux noms de domaine
 
 ## Ajouter le rôle DNS
 ![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_FgY8qWm1tz.png?raw=true)
