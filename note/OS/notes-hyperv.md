@@ -16,7 +16,7 @@ Requiert un OS (Windows / Linux)
 - 🧠 Mémoire dynamique ▶ 2048Mo
 - 💻 2 V-CPU
 - 📂 50Go storage
--  Service d'intégration ▶ Service d'invité
+- 💾 Service d'intégration ▶ Service d'invité
 - 💽 Installer l'ISO (Windows Server Datacenter user experience (GUI))
 
 ### ISO
@@ -39,14 +39,17 @@ Requiert un OS (Windows / Linux)
 ## Win22-SRV-1
 - Admin password : `Respons11`
 - Win 22 Server datacenter GUI
+- Carte réseau : Serveur
 
 ## Win22-SRV-2
 - Admin password : `Respons11`
 - Win 22 Server datacenter GUI
+- Carte réseau : Serveur
 
 ## Win22-SRV-RTR-1
 - Admin password : `Respons11`
 - Win 22 Server datacenter GUI
+- Carte réseau : Serveur, Clients, et NAT
 
 ## Commutateur / Switch
 ### NAT
