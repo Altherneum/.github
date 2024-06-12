@@ -41,7 +41,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 ![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ViSv9fGoJe.png?raw=true)
 
 # Tâches
-![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/Teams_kWashgWdFC.png?raw=true)
+![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
 
 # Adressage
 ## Win22-SRV-1
