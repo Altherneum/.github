@@ -52,6 +52,8 @@ Requiert un OS (Windows / Linux)
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
 
+![cartes réseau](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_6iWU7wUKqo.png?raw=true)
+
 ## Commutateur / Switch
 ### NAT
 - Interne
