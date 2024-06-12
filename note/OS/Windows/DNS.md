@@ -2,6 +2,16 @@
 - Domain Name System
 - Le Domain Name System ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements
 
+# Liste d'enregistrement DNS
+- SRV
+- SOA
+- CNAME
+- A
+- AAAA
+- TXT
+- MX
+- ...
+
 ## Ajouter le rôle DNS
 ![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_FgY8qWm1tz.png?raw=true)
 - Gestionnaire de serveur
@@ -47,7 +57,7 @@
 
 - Pour valider la configuration ; `/ipconfig registerdns`
 
-### Vérifier le DNS
+#### Vérifier le DNS
 Pour vérifier le DNS :
 - `nslookup 192.168.10.10`
 - `nslookup WIN22-SRV-1`
@@ -69,18 +79,19 @@ Nom :    WIN22-SRV-1.FORMATION.LAN
 Address:  192.168.10.10
 ```
 
-### Alias DNS
-- Outils
-- DNS 
-- Alias
-- Nommer `www`
-- Domaine sera `www.FORMATION.LAN`
-- Aller sur Nom de domaine : FQDN "parcourir"
-- Cliquer sur les postes pour cibler le `WIN22srv-1`
-- Valider 
+### Créer l'alias DNS
+- Clique droit sur le serveur `FORMATION.LAN`
+- Nouvel alias (CNAME)...
+- Nom de l'alias `www`
+- Nom de domaine pleinement qualifié (FQDN) : `www.FORMATION.LAN.`
+- Aller sur nom de domaine complet (FQDN) : "Parcourir"
+- Cliquer sur les postes pour cibler le `WIN22-SRV-1`
 
-#### Vérifier l'alias DNS
-- Verifier avec `nslookup www`
+![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ALsvPrTtJ3.png?raw=true)
+
+#### Vérifier l'alias
+Pour vérifier l'alias
+- `nslookup www`
 ```
 C:\Users\Administrateur>nslookup www
 Serveur :   localhost
@@ -92,48 +103,42 @@ Aliases:  www.FORMATION.LAN
 ```
 
 ### Deuxièmes DNS de secours
-#### Zone recherche directe
-- Pour vérifier SOA ; Doublie cliquer SOA
-- NB : Numéro de série = même zone (DNS info identique & up to date)
+- Clique droit sur le serveur `FORMATION.LAN`
+- Propriétés
+- Catégorie `Transferts de zone`
+- `Uniquement vers les serveurs listés dans l'onglet Serveurs de nom`
+- Catégorie `Serveurs de noms`
+- Bouton `Ajouter`
+- `Nom de domaine complet (FQDN) du serveur` : `WIN22-SRV-2.FORMATION.LAN` ⚠ N'existe pas encore
+- Ajouter son adresse IP `192.168.10.11` ⚠ N'existe pas encore
 
-- Vérifier NS ; Double clique sur Server de nom (NS)
+![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_dUHEL06aZH.png?raw=true)
 
-#### Zone inversé
-- PTR (Pointeur) indique à quel nom d'hôte correspond une adresse IPv4 ou IPv6
+#### Vérifier le DNS de secours
+![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ghchyrj6yf.png?raw=true)
 
-#### Création
-- Zone directe
-- Propriété
-- Catégorie Transfert de zone
-- Autoriser vers uniquement serveur listé du DNS
-- Aller dans catégorie Serveurs de noms
-- Ajouter
-- Win22SRV-02.FORMATION.LAN
-- Ajouter son IP 192.168.10.11 (sera fait plus tard)
-- OK
-- Les deux machines seront visibles en tant que DNS
-- Valider
-- F5 sur la zone inversé
-- Sera visible
+![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_EBOcB1Cvtg.png?raw=true)
 
-- Même chose sur recherche inversé
-
-- Sur SRV1 de zone directe
-- Double cliquer
-- Mettre à jour PTR, appliquer
-- Retirer et re appliquer
+#### Forcer la mise à jour du PTR
+- Dans `Zones de recherche directes`
+- Double cliquer sur `WIN22-SRV-1`
+- Cocher `Mettre à jour l'enregistrement de pointeur (PTR) associé`
+- `Appliquer`
+- Retirer la case cochée, et appliquer à nouveau
 
 ### Délégation
-- FORMATION.LAN
-- Nouvelle délégation
-- Nommer `m2i`
-- Net name sera `m2i.FORMATION.LAN`
-- Suivant
-- Ajouter Server SRV03.m2i.FORMATION.LAN (exemple bidon)
-- Ajouter son IP 192.168.10.20 (exemple bidon)
-- Terminer
+- Dans `Zones de recherche directes`
+- Clique droit sur `FORMATION.LAN`
+- `Nouvelle délégation`
+- `Domaine délégué` : `m2i`
+- `Nom de domaine pleinement qualifié` : `m2i.FORMATION.LAN`
+- Ajouter Server `SRV03.m2i.FORMATION.LAN` ⚠ N'existe pas encore ⚠ Faux exemple
+- Ajouter son IP `192.168.10.20` ⚠ N'existe pas encore ⚠ Faux exemple
 
-### Redirecteur
-- Clique droit propriété SRV1
-- Redirecteur
-- Ajouter IP 9.9.9.9 (ex bidon) (Serveur qui gère la zone (FORMATION.LAN))
+### Redirecteurs
+- Clique droit sur `WIN22-SRV-1`
+- `Propriétés`
+- `Redirecteurs`
+- `Modifier`
+- Ajouter l'adresse IP `9.9.9.9` ⚠ N'existe pas encore ⚠ Faux exemple  
+(Serveur qui gère la zone `FORMATION.LAN`)
