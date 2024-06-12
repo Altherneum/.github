@@ -1,3 +1,6 @@
+# Tâche
+![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
+
 # Hyperviseur
 Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs systèmes d’exploitation de fonctionner en parallèle dans une seule machine physique.
 ![hyperviseur](https://github.com/Altherneum/.github/blob/main/note/assets/hyperviseur-type-1-et-2.png?raw=true)
@@ -40,9 +43,6 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 
 ![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ViSv9fGoJe.png?raw=true)
 
-# Tâche
-![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
-
 # Adressage
 ## Win22-SRV-1
 - Admin password : `Respons11`
@@ -79,7 +79,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - `Clients`
 
 ## DNS
-- Contrôlé par [SRV 1](#win22-srv-1)
+- Contrôlé par [SRV 1](#Win22-SRV-1)
 
 - IP : `192.168.10.10`
 - Masque : `255.255.255.0`
