@@ -41,6 +41,8 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `del [path\file.ext]` Supprimer
 - `cd [chemin]` permet de se déplacer dans la structure de dossier
 - `cd ..` retour en arrière d'un dossier
+- `tree` Affiche graphiquement la structure des répertoires d’un chemin ou du disque d’un lecteur
+
 
 ## Disques
 - `sfc /scannow` scan le système Windows
@@ -56,6 +58,11 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `ipconfig /registerdns` Actualise tous les baux DHCP et réinscrit les noms DNS
 - `ipconfig /release` Libère les connexions
 - `ipconfig /renew` Rétablit les connexions
+
+### netsh WiFi key
+- `netsh wlan show profile` Liste les réseaux auxquels l'ordinateur s'est déjà connecté
+- `netsh wlan show profile "WiFi ABC" key=clear` Affiche les clefs WiFi pour le réseau “WiFi ABC“
+- `for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear` Affiche tous les mots de passe Wi-Fi auxquels l'ordinateur s'est déjà connecté
 
 ## ICMP
 - `ping [IP/DNS]` Envoie un paquet IP
@@ -87,6 +94,11 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `logoff` Déconnecte le compte Windows
 - `ver` Version du système
 - `gpupdate /force` Met à jour les paramètres de la stratégie de groupe
+
+## Shutdown
+- `shutdown /i` Afficher l’interface utilisateur graphique (GUI) de shutdown
+- `shutdown -s -t [secondes]` Arrête l'ordinateur dans x secondes
+- `shutdown -h -t [secondes]` Met en veille l'ordinateur dans x secondes
 
 ## Task
 - `tasklist` Liste des processus
