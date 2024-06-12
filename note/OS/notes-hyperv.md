@@ -58,3 +58,11 @@ Requiert un OS (Windows / Linux)
 # Autres notes
 ## CTRL ALT SUPPR
 ![touche](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_9hxQEdb0vA.png?raw=true)
+
+## Session étendu
+Permet :
+- copier / coller
+- partager des fichiers depuis le PC physique
+- ...
+
+![paramètre](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_WhqhXRQbdJ?raw=true)
