@@ -95,6 +95,9 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `ver` Version du système
 - `gpupdate /force` Met à jour les paramètres de la stratégie de groupe
 
+### Windows key
+- [WinKeyDump.vbs](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/WinKeyDump.vbs)
+
 ## Shutdown
 - `shutdown /i` Afficher l’interface utilisateur graphique (GUI) de shutdown
 - `shutdown -s -t [secondes]` Arrête l'ordinateur dans x secondes
