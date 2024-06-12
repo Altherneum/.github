@@ -3,47 +3,54 @@
 - Le Domain Name System ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements
 
 ## Ajouter le rôle DNS
-- Gestionnaire de serveur
 ![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_FgY8qWm1tz.png?raw=true)
+- Gestionnaire de serveur
 - Gérer
 - Ajouter des rôles et fonctionnalité
-- Suivant * 3 
-- Cocher rôle DNS ![DNS checkbox](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_C6XVGkeqrD.png?raw=true)
-- Suivant * 3
+
+- Suivant jusqu'à `Rôles de serveurs`
+
+![DNS checkbox](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_C6XVGkeqrD.png?raw=true)
+- Cocher rôle DNS
+
+- Suivant jusqu'à `Résultats`
+
 - Installer
 
-![DNS config](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_k9aumJnmnC.png?raw=true)
+![DNS config](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_B4Jm3xvMDQ.png?raw=true)
+- Le DNS est désormais disponible sur la liste des outils
 
 ## Configurer le rôle DNS
-Outils DNS
+![DNS config](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_B4Jm3xvMDQ.png?raw=true)
+- Aller dans la liste des outils pour configurer le DNS
 
-![Outils DNS](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_5GF5YqqLxJ.png?raw=true)
-
-#### Créer la zone DNS
-- Clique droit sur SRV
+### Créer la zone DNS
+- Clique droit sur le serveur `WIN22-SRV-1`
 - Nouvelle zone
 - Zone principale
-- Suivant
-- Nommer zone FORMATION.LAN
-- Suivant
-- Autoriser les mises à jours dynamique sécu et non sécu
-- Suivant
+- Zone de recherche directe
+- Nommer la zone `FORMATION.LAN`
+- Autoriser les mises à jours dynamiques sécurisée et non sécurisée
 
 ![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_EjU5ccZeDI.png?raw=true)
 
-#### DNS inversé
-- Recherche invesré
-- Principale
-- Suivant
-- ID réseau : 192.168.10
-- Autoriser màj séco non sécu
+### Créer la zone DNS inversé
+- Clique droit sur le serveur `WIN22-SRV-1`
+- Nouvelle zone
+- Zone principale
+- Zone de recherche inversée
+- IPv4
+- ID réseau : `192.168.10` (Ne pas préciser le dernier octet)
+- Autoriser les mises à jours dynamiques sécurisée et non sécurisée
 
 ![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_2jJk7YWiZA.png?raw=true)
 
-#### Vérifier le DNS
-- Puis `/ipconfig registerdns`
-- puis `nslookup 192.168.10.10`
-- puis `nslookup WIN22-SRV-1`
+- Pour valider la configuration ; `/ipconfig registerdns`
+
+### Vérifier le DNS
+Pour vérifier le DNS :
+- `nslookup 192.168.10.10`
+- `nslookup WIN22-SRV-1`
 
 ```
 C:\Users\Administrateur>nslookup 192.168.10.10
@@ -72,6 +79,7 @@ Address:  192.168.10.10
 - Cliquer sur les postes pour cibler le `WIN22srv-1`
 - Valider 
 
+#### Vérifier l'alias DNS
 - Verifier avec `nslookup www`
 ```
 C:\Users\Administrateur>nslookup www
