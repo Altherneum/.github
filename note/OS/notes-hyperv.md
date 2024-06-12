@@ -21,9 +21,9 @@ Requiert un OS (Windows / Linux)
 - 2 CPU virtuel
 - Service d'intégration Service d'invité
 
-#### ISO
+### ISO
 ![Lecteur DVD et ISO](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_TWnWBAwE7M.png)
-- Lecteur DvD ➡ Ajouter ➡ Lier l'ISO
+- Paramètres [Win22-SRV-0](#Win22-SRV-0) ➡ Lecteur DvD ➡ Ajouter ➡ Lier l'ISO
   - sources_iso (srvapp.m2iformation.local) (Y:\)
     - /Microsoft/Windows Server 2022 Evaluation
     - /Microsoft/Windows 10 Evaluation
@@ -37,8 +37,6 @@ Requiert un OS (Windows / Linux)
 # Tâches
 ![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/Teams_kWashgWdFC.png?raw=true)
 
-
-
 # Adressage
 ## Win22-SRV-0
 - IP
@@ -46,11 +44,11 @@ Requiert un OS (Windows / Linux)
 - Gateway
 
 ## Commutateur / Switch
-### 1
+### NAT
 - Interne
 - `NAT`
 
-### 2
+### Serveurs
 - Privé
 - `Serveurs`
 
