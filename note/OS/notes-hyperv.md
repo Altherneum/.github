@@ -13,7 +13,7 @@ Requiert un OS (Windows / Linux)
 - `C:\Users\Administrateur\Desktop\Hyper-V`
 - 📜 `Win22-SRV-1` ▶ [**OS**][**AGE**]-[**SRV/PC**]-[**ID**])
 - 👴 Génération 2
-- 🧠 Mémoire dynamique 2048Mo
+- 🧠 Mémoire dynamique ▶ 2048Mo
 - 💻 2 V-CPU
 - 📂 50Go storage
 -  Service d'intégration ▶ Service d'invité
