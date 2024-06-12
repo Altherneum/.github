@@ -17,7 +17,8 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Nouveau ▶ Ordinateur virtuel
 
 - `C:\Users\Administrateur\Desktop\Hyper-V`
-- 📜 `Win22-SRV-1` ▶ [**OS**][**AGE**]-[**SRV/PC**]-[**ID**])
+- 📜 [**OS**][**Date**]-[**SRV/PC**]-[**ID**]
+  - Exemple : `Win22-SRV-1`
 - 👴 Génération 2
 - 🧠 Mémoire dynamique ▶ 2048Mo
 - 💻 2 V-CPU
