@@ -48,6 +48,8 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`
+- Nom de l'ordinateur : `WIN22-SRV-1`
+- Suffixe DNS : `FORMATION.LAN`
 
 ## Win22-SRV-2
 - Admin password : `Respons11`
@@ -92,14 +94,23 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 
 ![DNS IP settings](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ChaWlB2FCn.png?raw=true)
 
-### To Do
-- Nom commun
-- Suffix DNS
+### Rename suffix
+- Ce PC
+- Propriétés
+- Paramètres avancés du système 
+- Nom de l'ordinateur
+- Modifier
+- Changer le nom du serveur
+- Aller sur "Autre"
 
 ### flushdns
 - Une fois l'adresse IP modifiée
+- Vérifier la configuration  
+`ipconfig /all`
 - Penser à flush le DNS  
 `ipconfig /flushdns` Vide le cache DNS
+- Penser à ping pour vérifier  
+`ping 192.168.10.10`
 
 ## DHCP
 
@@ -123,7 +134,20 @@ Permet :
 
 # To Do
 ## Post install
-- [DNS](#DNS)
+- ~~[DNS](#DNS)~~
+- Passer [SRV 1](#win22-srv-1) dans l'AD au lieu du workgroup
 - [DHCP](#DHCP)
 - [AD](#AD)
 - [Poste client](#Clients)
+
+## Notes
+### Workgroup
+- Libre d'entrée
+- Plusieurs PC connectés ensemble
+- Partage les ressources que de la "cible" que vous demandez (Avec authentification)
+- Tout est décentralisé sur chaque poste (Authentification) ce qui surcharge (Comme à partir de > 10 postes)
+
+### Active directory
+- Serveur gère le domaine de PC
+- Centralise (Authentification comme fichiers ou règles de domaine)
+- Partage l'ensemble des ressources à tout le monde (Une seul authentification pour tout le réseau)
