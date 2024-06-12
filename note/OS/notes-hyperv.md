@@ -40,7 +40,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 
 ![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ViSv9fGoJe.png?raw=true)
 
-# Tâches
+# Tâche
 ![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
 
 # Adressage
@@ -48,8 +48,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`
-- Nom de l'ordinateur : `WIN22-SRV-1`
-- Suffixe DNS : `FORMATION.LAN`
+- Gère le [DNS](#DNS)
 
 ## Win22-SRV-2
 - Admin password : `Respons11`
@@ -61,6 +60,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
 
+### Connecter les cartes réseaux
 ![ajouter des cartes réseau](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_QRr4HxxUCH.png?raw=true)
 
 ![cartes réseau](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_6iWU7wUKqo.png?raw=true)
@@ -79,10 +79,15 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - `Clients`
 
 ## DNS
-- IP : `192.168.10.107`
+- Contrôlé par [SRV 1](#win22-srv-1)
+
+- IP : `192.168.10.10`
 - Masque : `255.255.255.0`
 - Gateway : `192.168.10.254`
 - Server DNS préféré : `127.0.0.1`
+
+- Nom de l'ordinateur : `WIN22-SRV-1`
+- Suffixe DNS : `FORMATION.LAN`
 
 ### Passer le DNS en statique
 - Explorateur de fichiers
@@ -94,14 +99,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 
 ![DNS IP settings](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ChaWlB2FCn.png?raw=true)
 
-### Rename suffix
-- Ce PC
-- Propriétés
-- Paramètres avancés du système 
-- Nom de l'ordinateur
-- Modifier
-- Changer le nom du serveur
-- Aller sur "Autre"
+- Puis faire un [flushDNS](#flushdns)
 
 ### flushdns
 - Une fois l'adresse IP modifiée
@@ -112,13 +110,31 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Penser à ping pour vérifier  
 `ping 192.168.10.10`
 
+### Renommer l'ordinateur et changer le suffixe DNS
+- Ce PC
+- Propriétés
+- Paramètres avancés du système 
+- Nom de l'ordinateur
+- Modifier
+- Changer le nom du serveur `WIN22-SRV-1`
+- Aller sur "Autre"
+- Passer le suffix DNS vers `FORMATION.LAN`
+- Redémarrer et vérifier via
+`ipconfig /all`
+
 ## DHCP
+- Dynamic Host Configuration Protocol
+- [TDL](#to-do)
 
 ## Clients
 - PC classique
+- [TDL](#to-do)
 
 ## AD
 - Active directory
+- [TDL](#to-do)
+
+---
 
 # Autres notes
 ## CTRL ALT SUPPR
