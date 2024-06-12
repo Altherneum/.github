@@ -77,9 +77,18 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - `Clients`
 
 ## DNS
-- Doit avoir IP statique
+- IP : `192.168.10.107`
+- Masque : `255.255.255.0`
+- Gateway : `192.168.10.254`
+- Server DNS préféré : `127.0.0.1`
+
 - Nom commun
 - Suffix DNS
+
+### flushdns
+- Une fois l'adresse IP modifiée
+- Penser à flush le DNS  
+`ipconfig /flushdns` Vide le cache DNS
 
 ## DHCP
 
@@ -104,6 +113,10 @@ Permet :
 # To Do
 ## Post install
 - [DNS](#DNS)
-- DHCP
-- AD
-- Poste client
+- [DHCP](#DHCP)
+- [AD](#AD)
+- [Poste client](#Clients)
+
+
+
+Explo fichier -> Carte réseau -> Ethernet -> IPv4 -> IP statique
