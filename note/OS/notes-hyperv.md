@@ -11,11 +11,12 @@ Requiert un OS (Windows / Linux)
 - Nouveau ➡ Ordinateur virtuel
 
 - `C:\Users\Administrateur\Desktop\Hyper-V`
-- 📜 `Win22-SRV-0` ➡ [**OS**][**AGE**]-[**SRV/PC**]-[**ID**])
+- 📜 `Win22-SRV-1` ➡ [**OS**][**AGE**]-[**SRV/PC**]-[**ID**])
 - 👴 Génération 2
 - 🧠 Mémoire dynamique 2048Mo
 - 📂 50Go storage
-- Installer l'ISO plus tard
+- Service invité
+- 💽 Installer l'ISO (Windows Server Datacenter user experience (GUI))
 
 ### Paramètres 
 - 2 CPU virtuel
