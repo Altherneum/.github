@@ -42,13 +42,6 @@ NetBIOS sur Tcpip. . . . . . . . . . . : Activé
 # Outils IP subnet
 [calculator.net/ip-subnet-calculator](https://www.calculator.net/ip-subnet-calculator.html)
 
-
-
-
-
-
-
-
 # CIDR
 /x
 # Décimale pointé 
@@ -119,15 +112,7 @@ Liste des adresse réseau
 - 192.168.0.224
 
 On dispose bien de 8 sous réseaux
-
-
-
-
-
-
-
-
-
+----
 # Créer un réseau de 80K IP
 # Question
 - Créer un réseau de `80'000 IPs`
