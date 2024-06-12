@@ -82,6 +82,17 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 - Gateway : `192.168.10.254`
 - Server DNS préféré : `127.0.0.1`
 
+### Passer le DNS en statique
+- Explorateur de fichiers
+- Paramètres carte réseau
+- Ethernet
+- Propriétés
+- IPv4
+- IP statique en suivant [# DNS](#DNS)
+
+![DNS IP settings](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ChaWlB2FCn.png?raw=true)
+
+### To Do
 - Nom commun
 - Suffix DNS
 
@@ -116,7 +127,3 @@ Permet :
 - [DHCP](#DHCP)
 - [AD](#AD)
 - [Poste client](#Clients)
-
-
-
-Explo fichier -> Carte réseau -> Ethernet -> IPv4 -> IP statique
