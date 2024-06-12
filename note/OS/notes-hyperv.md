@@ -25,6 +25,7 @@ Requiert un OS (Windows / Linux)
   - sources_iso (srvapp.m2iformation.local) (Y:\)
     - /Microsoft/Windows Server 2022 Evaluation
     - /Microsoft/Windows 10 Evaluation
+- Penser à retirer l'ISO (Pour pouvoir le déplacer / supprimer)
 
 ## Créer un commutateur virtuel
 - Gestionnaire de commutateur virtuel
