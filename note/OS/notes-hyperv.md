@@ -156,6 +156,67 @@ Permet :
 - [AD](#AD)
 - [Poste client](#Clients)
 
+## DNS
+### Ajouter le rôle DNS
+- Gestionnaire de serveur ![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_5GF5YqqLxJ.png?raw=true)
+- Gérer
+- Ajouter rôle en fonctionnalité
+- Suivant * 3 
+- Cocher rôle DNS ![DNS checkbox](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_C6XVGkeqrD.png?raw=true)
+- Suivant * 3
+- Installer
+
+![DNS config](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_k9aumJnmnC.png?raw=true)
+
+### Configurer le rôle DNS
+
+Outils DNS
+
+![Outils DNS](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_5GF5YqqLxJ.png?raw=true)
+
+#### Créer la zone DNS
+- Clique droit sur SRV
+- Nouvelle zone
+- Zone principale
+- Suivant
+- Nommer zone FORMATION.LAN
+- Suivant
+- Autoriser les mises à jours dynamique sécu et non sécu
+- Suivant
+
+![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_EjU5ccZeDI.png?raw=true)
+
+#### DNS inversé
+- Recherche invesré
+- Principale
+- Suivant
+- ID réseau : 192.168.10
+- Autoriser màj séco non sécu
+
+![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_2jJk7YWiZA.png?raw=true)
+
+#### Vérifier le DNS
+- Puis `/ipconfig registerdns`
+- puis `nslookup 192.168.10.10`
+- puis `nslookup WIN22-SRV-1`
+
+```
+C:\Users\Administrateur>nslookup 192.168.10.10
+Serveur :   localhost
+Address:  127.0.0.1
+
+Nom :    WIN22-SRV-1.FORMATION.LAN
+Address:  192.168.10.10
+
+
+C:\Users\Administrateur>nslookup WIN22-SRV-1
+Serveur :   localhost
+Address:  127.0.0.1
+
+Nom :    WIN22-SRV-1.FORMATION.LAN
+Address:  192.168.10.10
+```
+
 ## Notes
 ### Workgroup
 - Libre d'entrée
@@ -167,3 +228,7 @@ Permet :
 - Serveur gère le domaine de PC
 - Centralise (Authentification comme fichiers ou règles de domaine)
 - Partage l'ensemble des ressources à tout le monde (Une seul authentification pour tout le réseau)
+
+### To filter
+![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_k9aumJnmnC.png?raw=true)
+![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_QPDLeHWTci.png?raw=true)
