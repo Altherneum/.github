@@ -1,4 +1,7 @@
 # Hyperviseur
+
+![hyperviseur](https://github.com/Altherneum/.github/blob/main/note/assets/hyperviseur-type-1-et-2.png?raw=true)
+
 ## Niveau 1
 - Se suffit à lui même (N'a pas besoin d'un OS)
 - Ils sont généralement plus performants et plus sécurisés 
