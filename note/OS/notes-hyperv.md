@@ -1,5 +1,5 @@
 # Hyperviseur
-
+Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs systèmes d’exploitation de fonctionner en parallèle dans une seule machine physique.
 ![hyperviseur](https://github.com/Altherneum/.github/blob/main/note/assets/hyperviseur-type-1-et-2.png?raw=true)
 
 ## Niveau 1
