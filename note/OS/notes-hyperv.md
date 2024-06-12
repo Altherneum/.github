@@ -74,4 +74,4 @@ Permet :
 - partager des fichiers depuis le PC physique
 - ...
 
-![paramètre](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_WhqhXRQbdJ?raw=true)
+![paramètre](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_WhqhXRQbdJ.png?raw=true)
