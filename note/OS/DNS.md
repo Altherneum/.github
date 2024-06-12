@@ -31,6 +31,10 @@ Utilise des serveurs de messagerie pour déterminer l’endroit où livrer les e
 Les enregistrements PTR sont utilisés dans le cadre des recherches DNS inversées. Alors que les enregistrements de type A et AAAA permettent de mapper des FQDN à des adresses IP, les enregistrements PTR font le contraire : ils mappent les adresses IP aux noms de domaine
 
 # Création d'un serveur DNS
+
+A VERIFIER
+<details>
+
 ## Passer le DNS en statique
 - Explorateur de fichiers
 - Paramètres carte réseau
@@ -63,6 +67,9 @@ Les enregistrements PTR sont utilisés dans le cadre des recherches DNS inversé
 - Passer le suffix DNS vers `FORMATION.LAN`
 - Redémarrer et vérifier via
 `ipconfig /all`
+
+</details>
+FIN A VERIFIER
 
 # Ajouter le rôle DNS
 ![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_FgY8qWm1tz.png?raw=true)
