@@ -34,21 +34,14 @@ Les enregistrements PTR sont utilisés dans le cadre des recherches DNS inversé
 
 # Création d'un serveur DNS
 ## Utiliser une adresse IP statique
-- `Explorateur de fichiers`
-- Clique droit sur `Réseau`
-- Menu : `Propriétés`
-- Carte réseau `Ethernet` / `WiFi`
-- Menu : `Propriétés`
-- Cliquer sur `IPv4`, et à nouveau le menu `Propriétés`
+- Voire [Cours / Windows #AVC]()
 - `Utiliser l'adresse IP suivante` : `192.168.10.10`  
 `Masque de sous réseau` : `255.255.255.0`  
 `Passerelle par défaut` : `192.168.10.254`  
 `Serveur DNS préféré` : `127.0.0.1`
-- (Voire [Adressage](https://doc.altherneum.fr/cours/hyper-v.html#Adressage))
+- (Voire [Adressage](https://doc.altherneum.fr/cours/enterprise-network#Adressage))
 
 ![DNS IP settings](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ChaWlB2FCn.png?raw=true)
-
-- Puis faire un [flushDNS](#flushdns)
 
 ### Vérifier l'adressage IP
 - Une fois l'adresse IP modifiée

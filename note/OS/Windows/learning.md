@@ -96,7 +96,17 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 # TaskManager
 - Raccourcis `Ctrl Alt Suppr`, `TAB` `Entrée`
 
-# ActiveDirectory
+# Workgroup vs Active directory
+## Workgroup
+- Libre d'entrée
+- Plusieurs PC connectés ensemble
+- Partage les ressources que de la "cible" que vous demandez (Avec authentification)
+- Tout est décentralisé sur chaque poste (Authentification) ce qui surcharge (Comme à partir de 10 postes)
+
+## Active directory
+- Serveur gère le domaine de PC
+- Centralise (Authentification comme fichiers ou règles de domaine)
+- Partage l'ensemble des ressources à tout le monde (Une seul authentification pour tout le réseau)
 
 # Installation via ISO
 ## Télécharger l'ISO
@@ -117,5 +127,14 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 
 ## Setup
 ### Configuration IP
+- `Explorateur de fichiers`
+- Clique droit sur `Réseau`
+- Menu : `Propriétés`
+- Carte réseau `Ethernet` / `WiFi`
+- Menu : `Propriétés`
+- Cliquer sur `IPv4`, et à nouveau le menu `Propriétés`
+
+- Voire [Cours / IP](https://doc.altherneum.fr/cours/ip), [Cours / Network](https://doc.altherneum.fr/cours/network)
+
 ### Astuces
 Hors réseau = pas de demande de compte Microsoft
