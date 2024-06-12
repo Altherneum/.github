@@ -36,11 +36,17 @@ Requiert un OS (Windows / Linux)
 ![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/Teams_kWashgWdFC.png?raw=true)
 
 # Adressage
-## Win22-SRV-0
+## Win22-SRV-1
 - Admin password : `Respons11`
-- IP
-- Masque
-- Gateway
+- Win 22 Server datacenter GUI
+
+## Win22-SRV-2
+- Admin password : `Respons11`
+- Win 22 Server datacenter GUI
+
+## Win22-SRV-RTR-1
+- Admin password : `Respons11`
+- Win 22 Server datacenter GUI
 
 ## Commutateur / Switch
 ### NAT
