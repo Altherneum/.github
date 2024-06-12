@@ -38,18 +38,18 @@ Requiert un OS (Windows / Linux)
 # Adressage
 ## Win22-SRV-1
 - Admin password : `Respons11`
-- Win 22 Server datacenter GUI
-- Carte réseau : Serveur
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveur`
 
 ## Win22-SRV-2
 - Admin password : `Respons11`
-- Win 22 Server datacenter GUI
-- Carte réseau : Serveur
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveur`
 
 ## Win22-SRV-RTR-1
 - Admin password : `Respons11`
-- Win 22 Server datacenter GUI
-- Carte réseau : Serveur, Clients, et NAT
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveur`, `Clients`, et `NAT`
 
 ## Commutateur / Switch
 ### NAT
