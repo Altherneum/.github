@@ -163,9 +163,9 @@ ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted o
 `France` `TRAVAIL` `F123456789` `Azerty11` dans l'UO `RH` ⚠ N'a pas été crée
 
 ### Horaire d'accès
+Option `Compte` des `Propriétés` de l'utilisateur, puis bouton `Horaire d'accès`
 
 ### Désactiver un compte
-
 #### Par date
 Option `Compte` des `Propriétés` de l'utilisateur
 
