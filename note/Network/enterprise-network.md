@@ -99,10 +99,10 @@ Domaine : `10.168.192.in-addr.arpa`
 - [TDL](#to-do)
 
 ### Installer le rôle AD DS
-- `Gérer`, `Ajouter des rôle et fonctionnalité`
+- `Gérer`, `Ajouter des rôles et fonctionnalités`
 - Fonctionnalité `AD DS`
-![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_saelIxaPD4.png?raw=true)
 
+![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_saelIxaPD4.png?raw=true)
 - `Promouvoir ce serveur en contrôleur de domaine`
 
 ### Ajouter une fôret
@@ -114,7 +114,7 @@ Domaine : `10.168.192.in-addr.arpa`
 [Voire fichier ad.txt](ad.txt)
 
 ### Supprimer AD
-- `Gérer role et fonc`
+- `Gérer`, `Supprimer des rôles et fonctionnalités`
 - Décocher `DNS` / `AD DS`
 - Bouton : `Supprimer`
 - `Rétrograder le contrôleur de domaine`
