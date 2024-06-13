@@ -191,7 +191,8 @@ Accès au ressource partagés
 Recevoir des messages
 
 #### Porté
-![Portée des groupes](https://github.com/Altherneum/.github/blob/main/AD-Group-Range.png.raw=true)
+![Portée des groupes](https://github.com/Altherneum/.github/blob/main/note/assets/AD-Group-Range.png?raw=true)
+
 ##### Domaine local
 Accès que au ressources locale de son propre groupe
 ##### Globale
