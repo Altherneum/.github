@@ -146,8 +146,7 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 # Partage de ressource
 ⚠ Information non checké  
 Sur un PC membre du domaine
-- `Nouveau dossier`
-- `@_Ressource`
+- `Nouveau dossier` nommé `@_Ressource`
 - `Nouveau dossier` dans `@_Ressource` appelé `Services`
 - `Clique droit` sur `Service` `Propriétés`
   - Retirer `Utilisateurs` (qui est le @all)
