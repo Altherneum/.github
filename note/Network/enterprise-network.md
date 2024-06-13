@@ -12,14 +12,22 @@
 ### NAT
 - Interne
 - `NAT`
+#### Liste des périphériques sur le switch NAT
+- [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
 
 ### Serveurs
 - Privé
 - `Serveurs`
+#### Liste des périphériques sur le switch Serveurs
+- [WIN22-SRV-1](#win22-srv-1)
+- [WIN22-SRV-2](#win22-srv-2)
+- [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
 
 ### Clients
 - Privé
 - `Clients`
+#### Liste des périphériques sur le switch Clients
+- [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
 
 ## Serveurs Windows
 ### Win22-SRV-1
