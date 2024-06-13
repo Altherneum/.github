@@ -195,13 +195,13 @@ Dans `@_FORMATION`, `Groupe`, `IT` ;
 - Exemple : `G_IT_RW`
 [Globale](#Globale) IT, Read write
 - Exemple 2 : `D_IT_RW`
-[Domaine local](#domaine-local) IT, Read write
+[Domaine local](#Domaine-local) IT, Read write
 
 Dans `@_FORMATION`, `Groupe`, `RH` ;
 - Exemple 3 : `G_RH_RW`
 [Globale](#Globale) RH, Read write
 - Exemple 4 : `D_RH_RW`
-[Domaine local](#domaine-local) RH, Read write
+[Domaine local](#Domaine-local) RH, Read write
 
 #### Exemple de membre & membre de
 Exemple avec le groupe `G_IT_RW` :
