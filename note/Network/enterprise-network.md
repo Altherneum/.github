@@ -184,9 +184,32 @@ Limite les ordinateurs sur le quel l'utilisateur peut se connecter
 - `Affichage`, `Fonctionnalité avancé`, `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
 
 ### Groupe
-#### Sécurité 
-Accès au ressource partagés
+Un nom de groupe doit être unique
 
+#### Groupes crées
+Dans `@_FORMATION`, `Groupe`, `IT` ;
+- Exemple : `G_IT_RW`
+[Globale](#Globale) IT, Read write
+- Exemple 2 : `D_IT_RW`
+[Domaine local](#domaine-local) IT, Read write
+
+Dans `@_FORMATION`, `Groupe`, `RH` ;
+- Exemple 3 : `G_RH_RW`
+[Globale](#Globale) RH, Read write
+- Exemple 4 : `D_RH_RW`
+[Domaine local](#domaine-local) RH, Read write
+
+#### Exemple de membre & membre de
+Exemple avec le groupe `G_IT_RW` :
+- `Membre de` (Membre du groupe `D_IT_RW`)
+- `Membre` (Liste des utilisateurs qui sont membre du groupe `Sarah`, `Nordine`)
+
+Exemple 2 avec le groupe `G_RH_RW` :
+- Qui a comme membre `Paul EMPLOI` et `France TRAVAIL`
+- Et qui est membre du groupe `D_RH_RW`
+
+#### Sécurité
+Accès au ressource partagés
 #### Distribution
 Recevoir des messages
 
@@ -196,6 +219,6 @@ Recevoir des messages
 ##### Domaine local
 Accès que au ressources locale de son propre groupe
 ##### Globale
-Accès à toute la fôret de l'Active Directory
+Accès à la forêt de l'active directory
 ##### Universelle
-Accès à toutes les ressources partagés aux groupes universelle
+Accès à toute les forêts de l'Active Directory
