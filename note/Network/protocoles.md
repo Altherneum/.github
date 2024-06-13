@@ -35,7 +35,7 @@ par défaut est de 32 bits
 - Il peut aussi configurer l’adresse de la passerelle par défaut et configurer des serveurs de noms comme DNS ou NBNS
 - Seuls les ordinateurs en service utilisent une adresse de l’espace d’adressage ;
 - Toute modification des paramètres (adresse de la passerelle, des serveurs de noms) est répercutée sur les stations lors du redémarrage
-- [Voire IP dynamique](#ip-dynamique)
+- [voir IP dynamique](#ip-dynamique)
 
 # DNS
 - Domain Name System

@@ -149,7 +149,7 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - Menu : `Propriétés`
 - Cliquer sur `IPv4`, et à nouveau le menu `Propriétés`
 
-- Voire [Cours / IP](https://doc.altherneum.fr/cours/ip), [Cours / Network](https://doc.altherneum.fr/cours/network)
+- voir [Cours / IP](https://doc.altherneum.fr/cours/ip), [Cours / Network](https://doc.altherneum.fr/cours/network)
 
 ### Astuces
 Hors réseau = pas de demande de compte Microsoft

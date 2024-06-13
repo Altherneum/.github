@@ -37,7 +37,7 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 ## Créer un commutateur virtuel
 - Menu : `Gestionnaire de commutateur virtuel`
 - `Privé` ou `interne` ou `externe` à la carte réseau  
-(Voire [Adressage](https://doc.altherneum.fr/cours/enterprise-network#Adressage))
+(voir [Adressage](https://doc.altherneum.fr/cours/enterprise-network#Adressage))
 
 ![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ViSv9fGoJe.png?raw=true)
 

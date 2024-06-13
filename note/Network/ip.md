@@ -23,7 +23,7 @@
 - Classe D (multicast) : `224.0.0.0` à `239.255.255.255`
 - Classe E (réservée) : `240.0.0.0` à `255.255.255.255`
 
-- `127.x.x.x` est réservé (voire [adresses utiles](#adresses-utiles))
+- `127.x.x.x` est réservé (voir [adresses utiles](#adresses-utiles))
 
 ## IPv6
 - Internet Protocol version 6
@@ -42,7 +42,7 @@ Ainsi, l’adresse IPv6 ci-dessus peut être abrégée en la suivante : `2001:db
 - Une adresse IP statique est un indicateur d'une configuration manuelle attribué à un dispositif.
 ## IP dynamique
 - Tandis qu'une adresse IP dynamique change chaque fois que le dispositif se connecte.
-- [Voire DHCP](#DHCP)
+- [voir DHCP](#DHCP)
 
 ## IP publique
 - Les adresses IPv4 sont dites publiques si elles sont enregistrées et routables sur Internet, elles sont donc uniques mondialement.

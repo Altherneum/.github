@@ -1,26 +1,31 @@
 # Tâches
 ## Tâche globale
+Réseau à créer (Avec Active directory redondant)
+
 ![Exemple de réseau complet](https://github.com/Altherneum/.github/blob/main/note/assets/fil-Rouge.png?raw=true)
 
 ## Tâche réseau 1
+Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
+
 ![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
 
 ## Outils
 - [Cours / Hyperviseur](https://doc.altherneum.fr/cours/hyper-v.html)
 - [Cours / Windows](https://doc.altherneum.fr/cours/windows.html)
 - [Cours / DNS](https://doc.altherneum.fr/cours/dns.html)
+- [Cours / Active Directory](https://doc.altherneum.fr/cours/active-directory)
 - ...
 
 # Adressage
 ## Commutateur / Switch
 ### NAT
-- Interne
+- `Interne`
 - `NAT`
 #### Liste des périphériques sur le switch NAT
 - [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
 
 ### Serveurs
-- Privé
+- `Privé`
 - `Serveurs`
 #### Liste des périphériques sur le switch Serveurs
 - [WIN22-SRV-1](#win22-srv-1)
@@ -28,7 +33,7 @@
 - [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
 
 ### Clients
-- Privé
+- `Privé`
 - `Clients`
 #### Liste des périphériques sur le switch Clients
 - [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
@@ -40,6 +45,7 @@
 - Carte réseau sur : `Serveur`
 
 - Gère le [DNS](#DNS)
+- Gère l'[Active Directory](#Active-Directory)
 
 - IP : `192.168.10.10`
 - Masque : `255.255.255.0`
@@ -73,9 +79,6 @@
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
 
 ## DNS
-### Comment ajouter un DNS
-- [/cours / dns # Ajouter-le-rôle-DNS](https://doc.altherneum.fr/cours/dns#Ajouter-le-rôle-DNS)
-
 ### DNS principal
 - Contrôlé par [Win22-SRV-1](#Win22-SRV-1)
 - Nom de l'alias `www`
@@ -98,152 +101,38 @@ Domaine : `10.168.192.in-addr.arpa`
 - Connecté sur le nom de domaine complet du serveur : `WIN22-SRV-1.FORMATION.LAN`
 - Connecté sur le domaine : `10.168.192.in-addr.arpa`
 
-## AD
-- Active directory
-- [TDL](#to-do)
+## Active Directory
+### Structure d'UO
+- `@_FORMATION`
+- - `Utilisateurs`
+- - - `IT`
+- - - `RH`
+- - `Ordinateurs`
+- - - `IT`
+- - - `RH` (N'est pas encore crée)
+- - `Groupes`
+- - - `IT`
+- - - `RH`
+- - `Partages`
 
-### Installer le rôle AD DS
-- `Gérer`, `Ajouter des rôles et fonctionnalités`
-- Fonctionnalité `AD DS`
+### Groupes
+- `G_RH_RW`
+- - `D_RH_RW`
+- `G_IT_RW`
+- - `D_IT_RW`
 
-![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_saelIxaPD4.png?raw=true)
-- `Promouvoir ce serveur en contrôleur de domaine`
+### Utilisateurs
+#### IT
+- `Nordine HATEUR`
+- `Sarah CROCHE`
+#### RH
+- `Paul EMPLOI`
+- `France TRAVAIL`
 
-### Ajouter une fôret
-- Nom de domaine racine : `FORMATION.LAN`
-- Version : `Windows Server 2016`
-- Mot de passe : `Respons11`
-- Ne pas `Créer de délégation DNS` ❌
-- Nom de domaine NetBIOS : `FORMATION`  
-[Voire fichier ad.txt](ad.txt)
-
-# To do list
 ## DHCP
 - Dynamic Host Configuration Protocol
-- [TDL](#to-do)
+- N'est pas encore crée
 
 ## Clients
 - PC classique
-- [TDL](#to-do)
-
-# Supprimer AD
-❌ **__à vérifier avant__**
-- `Gérer`, `Supprimer des rôles et fonctionnalités`
-- Décocher `DNS` / `AD DS`
-- Bouton : `Supprimer`
-- `Rétrograder le contrôleur de domaine`
-- Cocher `dernier contrôleur de doamine`
-- Cocher `supprimer` les valeurs
-
-# Centre d'administration active directory
-## Corbeille
-- `Vue d'ensemble`
-- `Activer la corbeille`
-- Action irreversible  
-Permet de récupérer des User / UO / objets supprimés
-- Sera dans `CN=Deleted Objects,DC=FORMATION,DC=LAN`  
-ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted objects`
-
-## Utilisateurs et ordinateurs Active Directory
-- Liste des Ordinateurs, utilisateurs, domaines, groupes
-## Unité d'organisation
-- `UO` : `Unité d'organisation`
-- Permet de trier / filtrer des groupes d'objets
-- `Clique droit`, `Nouveau`, `Unité d'organisation`
-- `Nom` : `@_FORMATION`  
-(Permet d'être la première unité visible dans la liste)
-- Dans `@_FORMATION`, créer l'UO `Utilisateurs`, `Ordinateurs`, `Groupes`, `Partages`
-- Dans `Ordinateurs` `Utilisateurs` et `Groupes` créer l'UO `IT`
-- Dans `Utilisateurs` créer l'UO `RH`
-
-## Créer un utilisateur
-- Créer un utilisateurs dans `Utilisateurs/IT`  
-`Nordine` `HATEUR`, Login : `N123456789`, Password : `Azerty11` (Avec l'option : `L'utilisateur doit changer le mot de passe à la prochaine ouverture de session`), dans l'UO `Utilisateurs/IT`
-- Second utilisateur  
-`Sarah` `CROCHE` `S123456789` `Azerty11`, dans l'UO `Utilisateurs/IT`
-- 3ème utilisateur  
-`Paul` `EMPLOI` `P123456789` `Azerty11` dans l'UO `RH`
-- 4ème utilisateur  
-`France` `TRAVAIL` `F123456789` `Azerty11` dans l'UO `RH` ⚠ N'a pas été crée
-
-### Horaire d'accès
-Option `Compte` des `Propriétés` de l'utilisateur, puis bouton `Horaire d'accès`
-
-### Désactiver un compte
-#### Par date
-Option `Compte` des `Propriétés` de l'utilisateur
-
-#### Manuellement
-`Clique droit` sur l'utilisateur, `Toutes les tâches`, `Désactiver le compte`
-
-### Se connecter à
-- Bouton : `Se connecter à`  
-Limite les ordinateurs sur le quel l'utilisateur peut se connecter
-
-### Profil
-- `Scripts de démarrage` (Pour scripter au lancement de la session)
-- `Chemin de profil` Stock sur le réseau son environnement en cas de changement de poste
-
-### Modifier ou supprimer
-- `Affichage`, `Fonctionnalité avancé`, `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
-
-### Groupe
-Un nom de groupe doit être unique
-
-#### Groupes crées
-Dans `@_FORMATION`, `Groupe`, `IT` ;
-- Exemple : `G_IT_RW`
-[Globale](#Globale) IT, Read write
-- Exemple 2 : `D_IT_RW`
-[Domaine local](#Domaine-local) IT, Read write
-
-Dans `@_FORMATION`, `Groupe`, `RH` ;
-- Exemple 3 : `G_RH_RW`
-[Globale](#Globale) RH, Read write
-- Exemple 4 : `D_RH_RW`
-[Domaine local](#Domaine-local) RH, Read write
-
-#### Exemple de membre & membre de
-Exemple avec le groupe `G_IT_RW` :
-- `Membre de` (Membre du groupe `D_IT_RW`)
-- `Membre` (Liste des utilisateurs qui sont membre du groupe `Sarah`, `Nordine`)
-
-Exemple 2 avec le groupe `G_RH_RW` :
-- Qui a comme membre `Paul EMPLOI` et `France TRAVAIL`
-- Et qui est membre du groupe `D_RH_RW`
-
-#### Sécurité
-Accès au ressource partagés
-#### Distribution
-Recevoir des messages
-
-#### Porté
-![Portée des groupes](https://github.com/Altherneum/.github/blob/main/note/assets/AD-Group-Range.png?raw=true)
-
-Utilisateur doit être forcément d'un `groupe globale` (sac à patate d'user)
-Le `groupe globale` sera membre du `Domaine local`
-
-##### Domaine local
-Accès que au ressources locale de son propre groupe
-##### Globale
-Accès à la forêt de l'active directory
-##### Universelle
-Accès à toute les forêts de l'Active Directory
-
-
-# Partage de ressource
-Sur un PC membre du domaine
-- `Nouveau dossier`
-- `@_Ressource`
-- `Nouveau dossier` dans `@_Ressource` appelé `Services`
-- `Clique droit` sur `Service` `Propriétés`
-  - Retirer `Utilisateurs` (qui est le @all)
-    - Casser héritage `Avancé` `Désactiver l'héritage`
-  - `Utilisateurs` peut-être maintenant retiré
-- Nouveau dossier dans `Services` nommé `IT`
-- Nouveau dossier dans `Services` nommé `RH`
-- Appliquer un groupe qui peut accéder à la ressource
-  - Le groupe `IT` Peut accéder au dossier `IT` et leurs sous fichiers
-  - Le groupe `RH` Peut accéder au dossier `RH` et leurs sous fichiers
-
-Nom du partage avec `$` à la fin permet de cacher à ceux qui n'ont pas la permission
+- N'est pas encore crée

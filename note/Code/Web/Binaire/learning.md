@@ -73,7 +73,7 @@ Comment écrire 25 ?
 16 + 8 + 1 = 25 ! 🤯
 ```
 
-Vous pouvez aussi le voire comme une rangé que vous remplissez petit à petit ([lehollandaisvolant.net](https://lehollandaisvolant.net/tuto/bin/))
+Vous pouvez aussi le voir comme une rangé que vous remplissez petit à petit ([lehollandaisvolant.net](https://lehollandaisvolant.net/tuto/bin/))
 ```
 1	1	simple !
 2	10	Le premier rang a atteint le maximum autorisé ! Qu'à cela ne tienne, on passe au rang suivant. On met le second à 1 et on remet le premier à 0.

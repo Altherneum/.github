@@ -1,5 +1,5 @@
 # IP & masque réseau
-- Voire [cours IP](https://doc.altherneum.fr/cours/ip)
+- voir [cours IP](https://doc.altherneum.fr/cours/ip)
 - [Cours réseau](https://doc.altherneum.fr/cours/network)
 - [Cours Binaire](https://doc.altherneum.fr/cours/binaire)
 
@@ -117,7 +117,7 @@ Le nouveau masque ayant 3 bits ajoutés, cela donne : `2 ^ 3` = `8` sous réseau
 
 ## Autre méthode
 - Déterminer la classe de l'adresse IP par défaut  
-(Voire [cours IP # Masque](https://doc.altherneum.fr/cours/ip.html#Masque) et [cours IP # IPv4](https://doc.altherneum.fr/cours/ip.html#IPv4))
+(voir [cours IP # Masque](https://doc.altherneum.fr/cours/ip.html#Masque) et [cours IP # IPv4](https://doc.altherneum.fr/cours/ip.html#IPv4))
 - Soustraire le masque donné
 - Ce qui donne `2 ^ [Résultat]` sous réseaux possibles
 

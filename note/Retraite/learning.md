@@ -200,7 +200,7 @@ Ce cours n'est constitué que d'informations OSI (Open source Intelligence), et 
 
 - Une procédure de cessation de l'activité ou de dissolution d'une entreprise, par exemple dans le cas d'une faillite
 
-- Voire [# Liquidation de dossier](#Liquidation-de-dossier)
+- voir [# Liquidation de dossier](#Liquidation-de-dossier)
 
 ### Répartition
 - Un système ou régime par répartition. 
@@ -255,7 +255,7 @@ Ce cours n'est constitué que d'informations OSI (Open source Intelligence), et 
 
 ### MEA
 - Mise en attente
-- Voire [# Trame d'appel](#Trame-dappel) et [# Réaliser une mise en attente](#Réaliser-une-mise-en-attente)
+- voir [# Trame d'appel](#Trame-dappel) et [# Réaliser une mise en attente](#Réaliser-une-mise-en-attente)
 
 ### RGCU
 - Répertoire de Gestion des carrières uniques
@@ -948,7 +948,7 @@ le verbe « quitter » n’est pas des plus positifs, n’est-ce pas ?
 - Si des **paiements ont déjà étés effectués, un __trop perçu__ sera crée** (Envoie au [# BO](#BO))
 - Si __aucun paiement__ n'a été effectué, la **date de départ peut être __reporté si moins de 6 mois__**, ou le **dossier __annulé si plus de 6 mois__** dans [# SCL](#SCL)
 
-- Voire : [#Annulation IRCANTEC](#Annulation-ircantec), [# Dossier annulé](#Dossier-annulé)
+- voir : [#Annulation IRCANTEC](#Annulation-ircantec), [# Dossier annulé](#Dossier-annulé)
 
 ### Reprise de dossier
 - Impossible si annulé depuis plus de 5 ans

@@ -62,7 +62,7 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 
 - Il peut changer en fonction de votre navigateur
 - Ouvrez le via un "clique droit" et "inspecter"
-- Celui là permet de voire et modifier le code du site en temps réel
+- Celui là permet de voir et modifier le code du site en temps réel
 
 ![290291063-d6272fe4-38a2-426b-941f-218f233d9976](https://github.com/Altherneum/.github/assets/84735589/da7240f7-d430-4d9f-b33a-cce944b1ede2)
 

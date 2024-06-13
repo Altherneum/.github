@@ -25,7 +25,7 @@ Merci pour ton signalement !
 - **Pour modifier un fichier**, vous devrez créer un [fork (clone)](https://docs.github.com/get-started/quickstart/fork-a-repo), et par la suite une [pull request (suggestion de modification)](https://docs.github.com/pull-requests)
 
 ⭕ Même un faute d'orthographe peut passer dans les notes ...
-Et vous pouvez aider, et [rendre votre compte et contributions visibles](https://doc.Altherneum.fr/github/contributeur) 👑, [voire statistiques](https://doc.Altherneum.fr/github/statistiques) 📊
+Et vous pouvez aider, et [rendre votre compte et contributions visibles](https://doc.Altherneum.fr/github/contributeur) 👑, [voir statistiques](https://doc.Altherneum.fr/github/statistiques) 📊
 - Les pulls request seront __**vérifiés puis par la suite validés ou refusés**__
 - [CODE OF CONDUCT.md](https://doc.Altherneum.fr/github/code_of_conduct) | [README.md](https://doc.Altherneum.fr/github/readme) 🚀
 

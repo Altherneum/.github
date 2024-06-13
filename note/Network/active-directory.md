@@ -1,0 +1,162 @@
+# Active Directory
+## Gestion du rôle AD DS
+### Installer le rôle AD DS
+- Sur le `Gestionnaire de serveur`
+- `Gérer`, `Ajouter des rôles et fonctionnalités`
+- Fonctionnalité `AD DS`
+- Installer la fonctionnalité
+- `Promouvoir ce serveur en contrôleur de domaine`
+
+![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_saelIxaPD4.png?raw=true)
+
+### Supprimer le rôle AD DS
+- Sur le `Gestionnaire de serveur`
+- `Gérer`, `Supprimer des rôles et fonctionnalités`
+- Décocher `AD DS`
+- Bouton : `Supprimer`
+- `Rétrograder le contrôleur de domaine`
+- Cocher `Dernier contrôleur de doamine`
+- Cocher `Supprimer les partitions d'applications` ainsi que `Supprimer la délégation DNS`
+- Validez un `Nouveau mot de passe d'administrateur` pour la machine
+
+### Ajouter une fôret
+- Nom de domaine racine : `FORMATION.LAN`
+- Version : `Windows Server 2016`
+- Mot de passe : `Respons11`
+- Ne pas `Créer de délégation DNS` ❌
+- Nom de domaine NetBIOS : `FORMATION`
+
+[voir fichier ad.txt](https://github.com/Altherneum/.github/blob/main/note/Network/ad.txt)
+
+### Activer la corbeille active directory
+- Dans le `Centre d'administration Active Directory`
+- Clique droit sur le domaine `FORMATION (local)`
+- `Activer la corbeille` (Action irreversible)  
+Permet de récupérer des objets supprimés de l'Active Directory
+- Sera dans `CN=Deleted Objects,DC=FORMATION,DC=LAN`  
+ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted objects`
+
+## Configuration de l'Active Directory
+- Liste des Ordinateurs, utilisateurs, domaines, groupes
+### Unité d'organisation
+- `UO` : `Unité d'organisation`
+- Permet de trier / filtrer des groupes d'objets
+- `Clique droit`, `Nouveau`, `Unité d'organisation`
+- `Nom` : `@_FORMATION`  
+(Permet d'être la première unité visible dans la liste)
+- Dans `@_FORMATION`, créer l'UO `Utilisateurs`, `Ordinateurs`, `Groupes`, `Partages`
+- Dans `Ordinateurs` `Utilisateurs` et `Groupes` créer l'UO `IT`
+- Dans `Utilisateurs` créer l'UO `RH`
+
+### Créer un utilisateur
+- `Nordine` `HATEUR`  
+- Login : `N123456789`  
+- Password : `Azerty11`  
+- Avec l'option : `L'utilisateur doit changer le mot de passe à la prochaine ouverture de session`)  
+- Dans l'UO `Utilisateurs/IT`
+#### Modifier ou supprimer
+- `Affichage`, `Fonctionnalité avancé`, `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
+#### Horaire d'accès
+Option `Compte` des `Propriétés` de l'utilisateur, puis bouton `Horaire d'accès`
+#### Désactiver un compte
+##### Par date
+Option `Compte` des `Propriétés` de l'utilisateur
+##### Manuellement
+`Clique droit` sur l'utilisateur, `Toutes les tâches`, `Désactiver le compte`
+#### Se connecter à
+- Bouton : `Se connecter à`  
+Limite les ordinateurs sur le quel l'utilisateur peut se connecter
+#### Profil
+- `Scripts de démarrage` (Fond d'écran, lecteurs réseaux, ...)
+- `Chemin de profil` Stocke sur le réseau son environnement en cas de changement de machine
+
+### Groupe
+Un nom de groupe doit être unique
+#### Créer un groupe
+- Dans `@_FORMATION`, `Groupe`, `IT`
+- `Clique droit` sur l'unité d'organisation `IT`
+- `Nouveau`, `Groupe`
+- Nom du groupe : `G_IT_RW`  
+[Globale](#Globale) IT, Read write
+- Exemple 2 : `D_IT_RW`
+[Domaine local](#Domaine-local) IT, Read write
+
+#### Membres
+- `Clique droit` sur le groupe
+- `Propriétés` 
+##### Ajouter des membres
+- Onglet `Membres`
+- Bouton `Ajouter`
+- `Entrez le nom des objets à sélectionner`, ou sur le bouton `Avancé` puis `Rechercher`
+##### Lier le groupe membre de ...
+- Onglet `Membre de`
+- Bouton `Ajouter`
+- Ajouter un groupe au quel cette unité sera lié
+#### Exemple membre vs membre de
+Exemple avec le groupe `G_IT_RW` :
+- `Membre de` l'unité `D_IT_RW`
+- `Membre` : `Sarah`, `Nordine`, ...
+
+#### Type de groupe
+##### Sécurité
+Ils permettent d’utiliser les groupes pour gérer les autorisations d’accès aux ressources
+
+Par exemple, si vous avez un partage sur lequel vous souhaitez donner des autorisations d’accès, vous pourrez utiliser un « groupe de sécurité » pour donner des autorisations à tous les membres de ce groupe
+##### Distribution
+⚠ Information non checké  
+Recevoir des messages
+ces groupes sont utilisés principalement par des applications de messagerie, afin de créer une listes de distribution
+
+#### Porté
+![Portée des groupes](https://github.com/Altherneum/.github/blob/main/note/assets/AD-Group-Range.png?raw=true)
+Utilisateur doit être forcément d'un `groupe globale` (sac à patate d'user)
+Le `groupe globale` sera membre du `Domaine local`
+##### Domaine local
+Accès que au ressources locale de l'arbre
+
+Un groupe qui dispose d’une étendue « domaine local » peut être utilisé uniquement dans le domaine dans lequel il est créé
+
+Avec ce type d’étendue, le groupe reste local au domaine où il est créé
+
+Cependant, les membres d’un groupe à étendue locale peuvent être bien sûr des utilisateurs, mais aussi d’autres groupes à étendues locales, globales ou universelles
+
+##### Globale
+Accès à la forêt de l'active directory
+
+Un groupe ayant une étendue « globale » pourra être utilisé dans le domaine local, mais aussi dans tous les domaines approuvés par le domaine de base
+
+Ainsi, si un « domaine A » approuve via une relation un « domaine B », alors un groupe global créé dans le « domaine A » pourra être utilisé dans le « domaine B »
+
+##### Universelle
+Accèssible dans l’ensemble de la forêt de l'Active Directory
+
+Un groupe universel peut contenir des groupes et objets provenant de n’importe quel domaine de la forêt. 
+
+De la même manière, il est possible de l’utiliser pour définir l’accès aux ressources sur tous les domaines de la forêt.
+
+###### Précision des portées
+- Comptabilité : étendue « domaine local » sur « paris.it-connect.local »
+- Direction : étendue « globale » sur « learn-online.local » qui approuve tous les sous-domaines
+- Informatique : étendue « universelle » sur la forêt
+
+![Portée de groupe](https://github.com/Altherneum/.github/blob/main/note/assets/cours-active-directory-15.png?raw=true)
+
+Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de relation avec un autre domaine ou une autre forêt, cela n’aura pas d’intérêt
+
+# Partage de ressource
+⚠ Information non checké  
+Sur un PC membre du domaine
+- `Nouveau dossier`
+- `@_Ressource`
+- `Nouveau dossier` dans `@_Ressource` appelé `Services`
+- `Clique droit` sur `Service` `Propriétés`
+  - Retirer `Utilisateurs` (qui est le @all)
+    - Casser héritage `Avancé` `Désactiver l'héritage`
+  - `Utilisateurs` peut-être maintenant retiré
+- Nouveau dossier dans `Services` nommé `IT`
+- Nouveau dossier dans `Services` nommé `RH`
+- Appliquer un groupe qui peut accéder à la ressource
+  - Le groupe `IT` Peut accéder au dossier `IT` et leurs sous fichiers
+  - Le groupe `RH` Peut accéder au dossier `RH` et leurs sous fichiers
+
+Un nom de partage avec `$` à la fin permet de cacher le dossier à ceux qui n'ont pas la permission de lecture
