@@ -34,11 +34,13 @@ Les enregistrements PTR sont utilisés dans le cadre des recherches DNS inversé
 
 # Création d'un serveur DNS
 ## Utiliser une adresse IP statique
-- Voire [Cours / Windows #AVC]()
+Voire [Cours / network](https://doc.altherneum.fr/cours/network)
+
 - `Utiliser l'adresse IP suivante` : `192.168.10.10`  
 `Masque de sous réseau` : `255.255.255.0`  
 `Passerelle par défaut` : `192.168.10.254`  
 `Serveur DNS préféré` : `127.0.0.1`
+
 - (Voire [Adressage](https://doc.altherneum.fr/cours/enterprise-network#Adressage))
 
 ![DNS IP settings](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ChaWlB2FCn.png?raw=true)
