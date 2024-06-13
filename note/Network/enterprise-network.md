@@ -114,12 +114,13 @@ Domaine : `10.168.192.in-addr.arpa`
 [Voire fichier ad.txt](ad.txt)
 
 ### Supprimer AD
+❌ **__à vérifier avant__**
 - `Gérer`, `Supprimer des rôles et fonctionnalités`
 - Décocher `DNS` / `AD DS`
 - Bouton : `Supprimer`
 - `Rétrograder le contrôleur de domaine`
-- Cocher dernier contrôleur de doamine
-- Cocher supprimer
+- Cocher `dernier contrôleur de doamine`
+- Cocher `supprimer` les valeurs
 
 # To do list
 ## DHCP

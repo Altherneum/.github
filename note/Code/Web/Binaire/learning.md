@@ -21,13 +21,14 @@ __**mais en base 2 lié à sa propriété physique**__ !
 # Octets vs Bits vs Bytes
 - Bit = 1 ou 0
 - Byte est la quantité de donnée
+- 1 byte = 8 bits
 
-- Exemple 8 bytes font un octet composés de bits
+- Exemple 8 bits font un octet composés de 1 byte
 
 - Les bits ne sont pas utilisés pour représenter les capacités de stockage
 - Un Byte, quant à lui, est la plus petite quantité de données et désigne une unité de mémoire
 - Un octet s'écrit avec 8 bits
-- Une image d'un octet pèse donc 8 bytes
+- Une image d'un octet pèse donc 1 byte, soit 8 bits
 
 # Comment écrire un chiffre en binaire
 
@@ -43,7 +44,7 @@ Dans ces mémoires, on y stock nos donnés de manière logique, sans quoi, impos
 (Vous pouvez écrire dans les tableaux sur [doc.Altherneum.fr/cours/binaire](https://doc.Altherneum.fr/cours/binaire))
 
 - Une case vide ne vaut rien, elle n'ajoute rien au résultat
-- Une case avec un bite stocké rajoute la valeur assigné au résultat
+- Une case avec un bit stocké rajoute la valeur assigné au résultat
 
 Reprennons notre tableau
 ```
