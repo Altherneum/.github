@@ -113,15 +113,6 @@ Domaine : `10.168.192.in-addr.arpa`
 - Nom de domaine NetBIOS : `FORMATION`  
 [Voire fichier ad.txt](ad.txt)
 
-### Supprimer AD
-❌ **__à vérifier avant__**
-- `Gérer`, `Supprimer des rôles et fonctionnalités`
-- Décocher `DNS` / `AD DS`
-- Bouton : `Supprimer`
-- `Rétrograder le contrôleur de domaine`
-- Cocher `dernier contrôleur de doamine`
-- Cocher `supprimer` les valeurs
-
 # To do list
 ## DHCP
 - Dynamic Host Configuration Protocol
@@ -130,3 +121,80 @@ Domaine : `10.168.192.in-addr.arpa`
 ## Clients
 - PC classique
 - [TDL](#to-do)
+
+# Supprimer AD
+❌ **__à vérifier avant__**
+- `Gérer`, `Supprimer des rôles et fonctionnalités`
+- Décocher `DNS` / `AD DS`
+- Bouton : `Supprimer`
+- `Rétrograder le contrôleur de domaine`
+- Cocher `dernier contrôleur de doamine`
+- Cocher `supprimer` les valeurs
+
+# Centre d'administration active directory
+## Corbeille
+- `Vue d'ensemble`
+- `Activer la corbeille`
+- Action irreversible  
+Permet de récupérer des User / UO / objets supprimés
+- Sera dans `CN=Deleted Objects,DC=FORMATION,DC=LAN`  
+ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted objects`
+
+## Utilisateurs et ordinateurs Active Directory
+- Liste des Ordinateurs, utilisateurs, domaines, groupes
+## Unité d'organisation
+- `UO` : `Unité d'organisation`
+- Permet de trier / filtrer des groupes d'objets
+- `Clique droit`, `Nouveau`, `Unité d'organisation`
+- `Nom` : `@_FORMATION`  
+(Permet d'être la première unité visible dans la liste)
+- Dans `@_FORMATION`, créer l'UO `Utilisateurs`, `Ordinateurs`, `Groupes`, `Partages`
+- Dans `Ordinateurs` `Utilisateurs` et `Groupes` créer l'UO `IT`
+- Dans `Utilisateurs` créer l'UO `RH`
+
+## Créer un utilisateur
+- Créer un utilisateurs dans `Utilisateurs/IT`  
+`Nordine` `HATEUR`, Login : `N123456789`, Password : `Azerty11` (Avec l'option : `L'utilisateur doit changer le mot de passe à la prochaine ouverture de session`), dans l'UO `Utilisateurs/IT`
+- Second utilisateur  
+`Sarah` `CROCHE` `S123456789` `Azerty11`, dans l'UO `Utilisateurs/IT`
+- 3ème utilisateur  
+`Paul` `EMPLOI` `P123456789` `Azerty11` dans l'UO `RH`
+- 4ème utilisateur  
+`France` `TRAVAIL` `F123456789` `Azerty11` dans l'UO `RH` ⚠ N'a pas été crée
+
+### Horaire d'accès
+
+### Désactiver un compte
+
+#### Par date
+Option `Compte` des `Propriétés` de l'utilisateur
+
+#### Manuellement
+`Clique droit` sur l'utilisateur, `Toutes les tâches`, `Désactiver le compte`
+
+### Se connecter à
+- Bouton : `Se connecter à`  
+Limite les ordinateurs sur le quel l'utilisateur peut se connecter
+
+### Profil
+- `Scripts de démarrage` (Pour scripter au lancement de la session)
+- `Chemin de profil` Stock sur le réseau son environnement en cas de changement de poste
+
+### Modifier ou supprimer
+- `Affichage`, `Fonctionnalité avancé`, `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
+
+### Groupe
+#### Sécurité 
+Accès au ressource partagés
+
+#### Distribution
+Recevoir des messages
+
+#### Porté
+![Portée des groupes](https://github.com/Altherneum/.github/blob/main/AD-Group-Range.png.raw=true)
+##### Domaine local
+Accès que au ressources locale de son propre groupe
+##### Globale
+Accès à toute la fôret de l'Active Directory
+##### Universelle
+Accès à toutes les ressources partagés aux groupes universelle
