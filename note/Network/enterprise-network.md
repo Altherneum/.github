@@ -1,4 +1,8 @@
-# Tâche
+# Tâches
+## Tâche globale
+![Exemple de réseau complet](https://github.com/Altherneum/.github/blob/main/note/assets/fil-Rouge.png?raw=true)
+
+## Tâche réseau 1
 ![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
 
 ## Outils
