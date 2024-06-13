@@ -91,10 +91,29 @@ Domaine : `10.168.192.in-addr.arpa`
 - [TDL](#to-do)
 
 ### Installer le rôle AD DS
-- Rôle et fonctionnalité
-- AD DS
+- `Gérer`, `Ajouter des rôle et fonctionnalité`
+- Fonctionnalité `AD DS`
+![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_saelIxaPD4.png?raw=true)
 
+- `Promouvoire en contrôleur de domaine`
 
+### Ajouter une fôret
+- Nom de domaine racine : `FORMATION.LAN`
+- Version : `Windows Server 2016`
+- Mot de passe : `Respons11`
+- Ne pas `Créer de délégation DNS` ❌
+- Nom de domaine NetBIOS : `FORMATION`  
+[Voire fichier ad.txt](ad.txt)
+
+### Supprimer AD
+- `Gérer role et fonc`
+- Décocher `DNS` / `AD DS`
+- Bouton : `Supprimer`
+- `Rétrograder le contrôleur de domaine`
+- Cocher dernier contrôleur de doamine
+- Cocher supprimer
+
+# To do list
 ## DHCP
 - Dynamic Host Configuration Protocol
 - [TDL](#to-do)
