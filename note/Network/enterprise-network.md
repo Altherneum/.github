@@ -229,3 +229,21 @@ Accès que au ressources locale de son propre groupe
 Accès à la forêt de l'active directory
 ##### Universelle
 Accès à toute les forêts de l'Active Directory
+
+
+# Partage de ressource
+Sur un PC membre du domaine
+- `Nouveau dossier`
+- `@_Ressource`
+- `Nouveau dossier` dans `@_Ressource` appelé `Services`
+- `Clique droit` sur `Service` `Propriétés`
+  - Retirer `Utilisateurs` (qui est le @all)
+    - Casser héritage `Avancé` `Désactiver l'héritage`
+  - `Utilisateurs` peut-être maintenant retiré
+- Nouveau dossier dans `Services` nommé `IT`
+- Nouveau dossier dans `Services` nommé `RH`
+- Appliquer un groupe qui peut accéder à la ressource
+  - Le groupe `IT` Peut accéder au dossier `IT` et leurs sous fichiers
+  - Le groupe `RH` Peut accéder au dossier `RH` et leurs sous fichiers
+
+Nom du partage avec `$` à la fin permet de cacher à ceux qui n'ont pas la permission
