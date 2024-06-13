@@ -103,7 +103,7 @@ Domaine : `10.168.192.in-addr.arpa`
 - Fonctionnalité `AD DS`
 ![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_saelIxaPD4.png?raw=true)
 
-- `Promouvoire en contrôleur de domaine`
+- `Promouvoir ce serveur en contrôleur de domaine`
 
 ### Ajouter une fôret
 - Nom de domaine racine : `FORMATION.LAN`
