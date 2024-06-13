@@ -216,6 +216,9 @@ Recevoir des messages
 #### Porté
 ![Portée des groupes](https://github.com/Altherneum/.github/blob/main/note/assets/AD-Group-Range.png?raw=true)
 
+Utilisateur doit être forcément d'un `groupe globale` (sac à patate d'user)
+Le `groupe globale` sera membre du `Domaine local`
+
 ##### Domaine local
 Accès que au ressources locale de son propre groupe
 ##### Globale
