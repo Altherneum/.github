@@ -67,7 +67,7 @@ Les enregistrements PTR sont utilisés dans le cadre des recherches DNS inversé
 `ipconfig /all`
 
 # Ajouter le rôle DNS
-![](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_FgY8qWm1tz.png?raw=true)
+![Ajout du rôle DNS](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_FgY8qWm1tz.png?raw=true)
 - Gestionnaire de serveur
 - Gérer
 - Ajouter des rôles et fonctionnalité

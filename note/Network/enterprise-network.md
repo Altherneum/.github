@@ -61,26 +61,39 @@
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
 
 ## DNS
+### Comment ajouter un DNS
+- [/cours / dns # Ajouter-le-rôle-DNS](https://doc.altherneum.fr/cours/dns#Ajouter-le-rôle-DNS)
+
+### DNS principal
 - Contrôlé par [Win22-SRV-1](#Win22-SRV-1)
 - Nom de l'alias `www`
 - Nom de domaine pleinement qualifié (FQDN) : `www.FORMATION.LAN.`
-### Zones de recherche directes
+#### Zones de recherche directes
 - `win22-srv-1.formation.lan`
 - `FORMATION.LAN`
-### Zones de recherche inversée
+#### Zones de recherche inversée
 Domaine : `10.168.192.in-addr.arpa`
 
-## DNS auxiliaire
+### DNS auxiliaire
 - Contrôlé par [Win22-SRV-2](#Win22-SRV-2)
-### Zones de recherche directes secondaire
+#### Zones de recherche directes secondaire
 - Connecté sur : `FORMATION.LAN`
 - Connecté sur : `192.168.10.10`
 - Nom de domaine complet du serveur : `WIN22-SRV-1.FORMATION.LAN` 
-### Zones de recherche inversée secondaire
+#### Zones de recherche inversée secondaire
 - Connecté sur l'ID réseau : `192.168.10`
 - Connecté sur l'adresse IP : `192.168.10.10`
 - Connecté sur le nom de domaine complet du serveur : `WIN22-SRV-1.FORMATION.LAN`
 - Connecté sur le domaine : `10.168.192.in-addr.arpa`
+
+## AD
+- Active directory
+- [TDL](#to-do)
+
+### Installer le rôle AD DS
+- Rôle et fonctionnalité
+- AD DS
+
 
 ## DHCP
 - Dynamic Host Configuration Protocol
@@ -88,8 +101,4 @@ Domaine : `10.168.192.in-addr.arpa`
 
 ## Clients
 - PC classique
-- [TDL](#to-do)
-
-## AD
-- Active directory
 - [TDL](#to-do)
