@@ -180,6 +180,8 @@ Peut être fait aussi avec une imprimantes (Dans son propre dossier comme PC)
 
 # Ajouter une machine dans le domaine
 ## Configuration IP
+Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/enterprise-network.html#Adressage), et [cours / windows #Configuration-IP](https://doc.altherneum.fr/cours/windows.html#Configuration-IP)
+
 ## Renommer la machine
 - Explorateur de fichier
 - Propriétés
