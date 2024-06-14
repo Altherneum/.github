@@ -190,3 +190,7 @@ Peut être fait aussi avec une imprimantes (Dans son propre dossier comme PC)
 ### Ajouter dans le domaine
 - Membre d'un : `Domaine` : `FORMATION.LAN`  
 ⚠ Redémarrer la machine pour appliquer le poste dans le domaine
+### Se connecter sur le domaine
+- `.\Utilisateur` Permet de cibler le PC local
+- `Nom du PC\Utilisateur` Cible le PC local en précisant le nom
+- `Domaine\Utilisateur` Cible un domaine réseau
