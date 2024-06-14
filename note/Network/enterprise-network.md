@@ -138,7 +138,7 @@ Domaine : `10.168.192.in-addr.arpa`
 
 ## Clients
 - ⚠ Installation d'un client, LAN serveur, puis sera passé LAN clients
-- ISO : `19044.1288.211006-0501.21h2_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_fr-fr` : `Windows 10 21h2`
+- ISO : `Windows 10 21h2`
 ### Win10-PC-1
 - Login : `PC-1` 
 - Password : `Respons11`, 

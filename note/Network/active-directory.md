@@ -161,6 +161,9 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 - Le groupe `IT` Peut accéder au dossier `IT` et leurs sous fichiers (Read & write)
 - Le groupe `RH` Peut accéder au dossier `RH` et leurs sous fichiers
 
+### Note sur les persmissions de partage des dossiers
+- `Partage avancé` `Autorisation` `Tout le monde`, `Modifier` & `Lecture`
+
 ## Mise en partage des dossiers
 - Dans l'option `Propriétés` du dossier, 
 - Onglet `partage`, `Partage avancé`, 
@@ -196,3 +199,16 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - `.\Utilisateur` Permet de cibler le PC local
 - `Nom du PC\Utilisateur` Cible le PC local en précisant le nom
 - `Domaine\Utilisateur` Cible un domaine réseau
+
+# Stratégie de groupes
+## Lecteur réseau
+- `Outils`, `gestion de stratégie de groupe`
+- Dans `Formation.LAN` `@_FORMATION`, `Objet de stratégie`
+- `Nouveau` `GPO_IT_U_Lecteur_Reseau`
+- Sur la liste d'utilisateur `IT` clique droit `Lier un objet à une stratégie de groupe existant`, prendre la stratégie `GPO_IT...` OK
+- Clique droit dessus `Modifier`
+- `Préférances` `Param Wind` `Mappage lecteur réseau`, clique droit, `Nouveau` `Lecteur réseau mappé`, sélectionner l'`emplacement` du lecteur réseau déjà crée à relier
+- Se connecter sur le PC client
+- Pour re forcer la règle : `gpupdate /force`
+- L'utilisateur peut créer ses dossiers / fichiers dans ce lecteur
+- Fin
