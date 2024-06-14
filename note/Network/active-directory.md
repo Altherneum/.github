@@ -177,17 +177,15 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 ## Option dossier cacher
 - Un nom de partage avec `$` à la fin permet de cacher le dossier à ceux qui n'ont pas la permission de lecture
 
-------------------------
-**TO FILTER**
-
 ## Lier le partage au domaine
 - Puis ajouter le partage dans l'Active Directory :
 - `Clique droit` sur l'unitée d'organisation `Partage`
 - `Nouveau`, `Dossier partagé`, taper le nom et coller le lien du partage crée depuis l'explorateur de fichier
 
+------------------------
+**TO FILTER**
 ## Partager une imprimante
 Peut être fait aussi avec une imprimantes (Dans son propre dossier comme PC)
-
 **TO FILTER**
 ------------------------
 
@@ -212,12 +210,14 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - `\\Domaine\Utilisateur` ???
 
 # Stratégie de groupes
+
 ## Lecteur réseau
 - `Gestionnaire de serveur`
 - `Outils`, `gestion de stratégie de groupe`
 - Dans `Formation.LAN` `@_FORMATION`, `Objet de stratégie`
 - `Nouveau` `GPO_IT_U_Lecteur_Reseau`
 - Sur la liste d'utilisateur `IT` clique droit `Lier un objet à une stratégie de groupe existant`, prendre la stratégie `GPO_IT_U_Lecteur_Reseau`, `OK`
+
 ### Modifier la stratégie de lecteur réseau
 - `Clique droit` sur la stratégie, `Modifier`
 - `Configuration Utilisateur` 
@@ -231,8 +231,6 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Se connecter sur le PC client
 - Pour forcer ou mettre à jour la règle : commande `gpupdate /force`
 - L'utilisateur peut créer ses dossiers / fichiers dans ce lecteur
-
-
 
 - Penser à check si GPL et FDL sont partagés
 ## Installation de logiciel
@@ -278,7 +276,6 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Sur `@Formation`
 - `Créer un objet GPO dans ce domaine, et le lier ici`
 - Nom :`GPO_UC_FDE+Connexion`
-- `Clique droit`, `Appliqué`
 - `Clique droit`, `modifier`
 - `Utilisateur`, `stratégie`, `modèle d'administration`, `bureau`, `bureau`
 - `Papier peint du bureau`
