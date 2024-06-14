@@ -109,11 +109,14 @@ Domaine : `10.168.192.in-addr.arpa`
 - - - `RH`
 - - `Ordinateurs`
 - - - `IT`
-- - - `RH` (N'est pas encore crée)
+- - - `RH`
 - - `Groupes`
 - - - `IT`
 - - - `RH`
 - - `Partages`
+- - - `IT`
+- - - `RH`
+- - `Imprimantes` (N'existe pas encore)
 
 ### Groupes
 - `G_RH_RW`
@@ -134,5 +137,25 @@ Domaine : `10.168.192.in-addr.arpa`
 - N'est pas encore crée
 
 ## Clients
-- PC classique
-- N'est pas encore crée
+- ⚠ Installation d'un client, LAN serveur, puis sera passé LAN clients
+- ISO : `19044.1288.211006-0501.21h2_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_fr-fr` : `Windows 10 21h2`
+### Win10-PC-1
+- Login : `PC-1` 
+- Password : `Respons11`, 
+- Question de sécurité : `Respons11` x 3
+- Adresse IP `192.168.10.15`
+- Masque de sous-réseau : `255.255.255.0`
+- Passerelle par défaut : `192.168.10.254`
+
+- Serveur DNS préféré : `192.168.10.10`
+- Serveur DNS auxiliaire : `192.168.10.11`
+
+- Domaine : `FORMATION.LAN`
+- Nom du poste : `Win10-PC-1`
+
+## Partage
+- `C:/`
+- - `@_Ressources/`
+- - - `Services/`
+- - - - `RH`, (`\\Win22-srv-1\rh`)
+- - - - `IT`, (`\\Win22-srv-1\it`)

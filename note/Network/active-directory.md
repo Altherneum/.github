@@ -144,18 +144,49 @@ De la même manière, il est possible de l’utiliser pour définir l’accès a
 Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de relation avec un autre domaine ou une autre forêt, cela n’aura pas d’intérêt
 
 # Partage de ressource
-⚠ Information non checké  
-Sur un PC membre du domaine
+## Création des dossiers
+- Dans le disque `C:/`
 - `Nouveau dossier` nommé `@_Ressource`
 - `Nouveau dossier` dans `@_Ressource` appelé `Services`
 - `Clique droit` sur `Service` `Propriétés`
-  - Retirer `Utilisateurs` (qui est le @all)
-    - Casser héritage `Avancé` `Désactiver l'héritage`
+  - Retirer `Utilisateurs` (Qui définit tout les utilisateurs)
+    - Casser l'héritage Propriétés, sécurité, `Avancé`, `Désactiver l'héritage`, `Convertir les autorisations héritées en autorisations explicites sur cet objet`
   - `Utilisateurs` peut-être maintenant retiré
 - Nouveau dossier dans `Services` nommé `IT`
 - Nouveau dossier dans `Services` nommé `RH`
-- Appliquer un groupe qui peut accéder à la ressource
-  - Le groupe `IT` Peut accéder au dossier `IT` et leurs sous fichiers
-  - Le groupe `RH` Peut accéder au dossier `RH` et leurs sous fichiers
 
-Un nom de partage avec `$` à la fin permet de cacher le dossier à ceux qui n'ont pas la permission de lecture
+## Permissions des dossiers
+- Appliquer un groupe qui peut accéder à la ressource
+- `Propriétés du dossier`, `sécurité`, `avancé`, `ajouter`, `Sélectionnez un principal`, taper le nom du groupe ou de l'utilisateur, `OK`, Appliquer les permission (`Lecture et exécution`, `Affichage du contenu du dossier`, `Lecture`)
+- Le groupe `IT` Peut accéder au dossier `IT` et leurs sous fichiers (Read & write)
+- Le groupe `RH` Peut accéder au dossier `RH` et leurs sous fichiers
+
+## Mise en partage des dossiers
+- Dans l'option `Propriétés` du dossier, 
+- Onglet `partage`, `Partage avancé`, 
+- Valider l'option `Partager ce dossier`, 
+- Il obtient un lien réseau à coller dans l'active directory (Exemple : `\\Win22-srv-1\it`)
+
+## Option dossier cacher
+- Un nom de partage avec `$` à la fin permet de cacher le dossier à ceux qui n'ont pas la permission de lecture
+
+## Lier le partage au domaine
+- Puis ajouter le partage dans l'Active Directory :
+- `Clique droit` sur l'unitée d'organisation `Partage`
+- `Nouveau`, `Dossier partagé`, taper le nom et coller le lien du partage crée depuis l'explorateur de fichier
+
+## Partager une imprimante
+Peut être fait aussi avec une imprimantes (Dans son propre dossier comme PC)
+
+# Ajouter une machine dans le domaine
+## Configuration IP
+## Renommer la machine
+- Explorateur de fichier
+- Propriétés
+- Paramètre avancés du système
+- Onglet `Nom de l'ordinateur`
+- `Modifier`
+- Nom de l'ordinateur : `Win10-PC-1`
+### Ajouter dans le domaine
+- Membre d'un : `Domaine` : `FORMATION.LAN`  
+⚠ Redémarrer la machine pour appliquer le poste dans le domaine
