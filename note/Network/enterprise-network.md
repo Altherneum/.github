@@ -126,11 +126,11 @@ Domaine : `10.168.192.in-addr.arpa`
 
 ### Utilisateurs
 #### IT
-- `Nordine HATEUR`, `N123456789`, `Azerty11`
-- `Sarah CROCHE`, `S123456789`, `Azerty11`
+- `Nordine HATEUR`, `N123456789`, `SuperUser11`
+- `Sarah CROCHE`, `S123456789`, `Azerty11` (Mot de passe non changé)
 #### RH
-- `Paul EMPLOI`, `P123456789`, `Azerty11`
-- `France TRAVAIL`, `F123456789`, `Azerty11`
+- `Paul EMPLOI`, `P123456789`, `Azerty11` (Mot de passe non changé)
+- `France TRAVAIL`, `F123456789`, `Azerty11` (Mot de passe non changé)
 
 ## DHCP
 - Dynamic Host Configuration Protocol
