@@ -117,7 +117,7 @@ Domaine : `10.168.192.in-addr.arpa`
 - Connecté sur le domaine : `10.168.192.in-addr.arpa`
 
 ## Active Directory
-### Structure d'UO
+### Structure d'unité d'organisation
 - `@_FORMATION`
 - - `Utilisateurs`
 - - - `IT`
@@ -153,10 +153,8 @@ Domaine : `10.168.192.in-addr.arpa`
 - - - `Services/`
 - - - - `RH`, (`\\Win22-srv-1\rh`)
 - - - - `IT`, (`\\Win22-srv-1\it`)
-- - - `GPL/`
-- - - - `Fichiers MSI` (Chrome, Firefox, Putty, VLC, ...)
-- - - `FDE/`
-- - - - `Wallpaper` (Logo M2I)
+- - - `GPL/` (`\\Win22-srv-1\gpl`) (Chrome, Firefox, Putty, VLC, ...)
+- - - `FDE/` (`\\Win22-srv-1\fde`) (Logo M2I)
 
 ## DHCP
 - Dynamic Host Configuration Protocol

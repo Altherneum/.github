@@ -44,16 +44,16 @@ ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted o
 - `Clique droit`, `Nouveau`, `Unité d'organisation`
 - `Nom` : `@_FORMATION`  
 (Permet d'être la première unité visible dans la liste)
-- Dans `@_FORMATION`, créer l'UO `Utilisateurs`, `Ordinateurs`, `Groupes`, `Partages`
-- Dans `Ordinateurs` `Utilisateurs` et `Groupes` créer l'UO `IT`
-- Dans `Utilisateurs` créer l'UO `RH`
+- Dans `@_FORMATION`, créer l'unité d'organisation `Utilisateurs`, `Ordinateurs`, `Groupes`, `Partages`
+- Dans `Ordinateurs` `Utilisateurs` et `Groupes` créer l'unité d'organisation `IT`
+- Dans `Utilisateurs` créer l'unité d'organisation `RH`
 
 ### Créer un utilisateur
 - `Nordine` `HATEUR`  
 - Login : `N123456789`  
 - Password : `Azerty11`  
 - Avec l'option : `L'utilisateur doit changer le mot de passe à la prochaine ouverture de session`)  
-- Dans l'UO `Utilisateurs/IT`
+- Dans l'unité d'organisation `Utilisateurs/IT`
 #### Modifier ou supprimer
 - `Affichage`, `Fonctionnalité avancé`, `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
 #### Horaire d'accès
@@ -178,8 +178,8 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 - Un nom de partage avec `$` à la fin permet de cacher le dossier à ceux qui n'ont pas la permission de lecture
 
 ## Lier le partage au domaine
-- Puis ajouter le partage dans l'Active Directory :
-- `Clique droit` sur l'unitée d'organisation `Partage`
+- Puis ajouter le partage dans `Utilisateurs et ordinateurs Active Directory` :
+- `Clique droit` sur l'unité d'organisation `Partage`
 - `Nouveau`, `Dossier partagé`, taper le nom et coller le lien du partage crée depuis l'explorateur de fichier
 
 ------------------------
@@ -210,13 +210,14 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - `\\Domaine\Utilisateur` ???
 
 # Stratégie de groupes
-
 ## Lecteur réseau
 - `Gestionnaire de serveur`
 - `Outils`, `gestion de stratégie de groupe`
-- Dans `Formation.LAN` `@_FORMATION`, `Objet de stratégie`
-- `Nouveau` `GPO_IT_U_Lecteur_Reseau`
-- Sur la liste d'utilisateur `IT` clique droit `Lier un objet à une stratégie de groupe existant`, prendre la stratégie `GPO_IT_U_Lecteur_Reseau`, `OK`
+- Dans `Formation.LAN`, `@_FORMATION`, `Objet de stratégie`
+- `Clique droit`, `Nouveau`, Nom : `GPO_IT_U_Lecteur_Reseau`
+- Sur `Formation.LAN`, `@_FORMATION`, `Utilisateurs`, `IT`, `Clique droit`, `Lier un objet à une stratégie de groupe existant`, prendre la stratégie `GPO_IT_U_Lecteur_Reseau`, `OK`
+
+Créer la stratégie dans : `Formation.LAN` `@_FORMATION`, `Objet de stratégie` est identique à `Formation.LAN`, `@_FORMATION`, `Utilisateurs`, `IT` si elle est liée par la suite à l'objet
 
 ### Modifier la stratégie de lecteur réseau
 - `Clique droit` sur la stratégie, `Modifier`
@@ -232,15 +233,7 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Pour forcer ou mettre à jour la règle : commande `gpupdate /force`
 - L'utilisateur peut créer ses dossiers / fichiers dans ce lecteur
 
-- Penser à check si GPL et FDL sont partagés
 ## Installation de logiciel
-### Déplacer le poste dans l'UO ordinateur
-- `Gestionnaire serveur`
-- `Outils`
-- `Utilisateurs et ordinateurs Active Directory`
-- Dans l'onglet `computers` le nouvel ordinateur est présent
-- Déplacer l'ordinateur dans l'UO crée par le passé `Ordinateurs`/`IT`
-
 ### Créer la stratégie d'installation de logiciel
 - Sur `Gestionnaire de stratégie de groupe`
 - Sur `Ordinateurs`
@@ -259,6 +252,13 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Option `Attribué`
 - Les packages vont se créer
 
+### Déplacer le poste dans l'unité d'organisation ordinateur
+- `Gestionnaire serveur`
+- `Outils`
+- `Utilisateurs et ordinateurs Active Directory`
+- Dans l'onglet `computers` le nouvel ordinateur est présent
+- Déplacer l'ordinateur dans l'UO crée par le passé `Ordinateurs`/`IT`
+
 ### Vérifier la stratégie d'installation de logiciel
 - Sur la machine concerné par la stratégie
 - `gpupdate /force`
@@ -276,10 +276,10 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Sur `@Formation`
 - `Créer un objet GPO dans ce domaine, et le lier ici`
 - Nom :`GPO_UC_FDE+Connexion`
-- `Clique droit`, `modifier`
-- `Utilisateur`, `stratégie`, `modèle d'administration`, `bureau`, `bureau`
+- `Clique droit`, `Modifier`
+- `Utilisateur`, `Stratégie`, `Modèle d'administration`, `Bureau`, `Bureau`
 - `Papier peint du bureau`
-- `Activé`
+- Option `Activé`
 - Nom du papier peint `\\Win22-srv-1\FDE\m2i.jpg`
 - Style du papier peint : `étendue`
 
