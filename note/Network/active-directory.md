@@ -283,8 +283,28 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - `Utilisateur`, `stratégie`, `modèle d'administration`, `bureau`, `bureau`
 - `Papier peint du bureau`
 - `Activé`
-- Nom du papier peint `\\Win22-srv-1\FDE\image.jpg`
+- Nom du papier peint `\\Win22-srv-1\FDE\m2i.jpg`
 - Style du papier peint : `étendue`
+
+## Stratégie de fond d'écran de verouillage
+- Sur la même stratégie
+- `Ordinateur`
+- `Stratégie`
+- `Modèle d'administration`
+- `Panneau de configuration`
+- `Personnalisation`
+- `Forcer une image de l'écran de verrouillage et d'ouverture de session par défaut spécifique`
+- `Chemin d'accès de l'image de l'écran de verrouillage` : `\\Win22-srv-1\FDE\m2i.jpg`
+
+## Stratégie de fond vérouillé
+- Sur la même stratégie
+- `Ordinateur`
+- `Stratégie`
+- `Modèle d'administration`
+- `Panneau de configuration`
+- `Personnalisation`
+- `Empêcher la modification de l'image de l'écran de verrouillage et d'ouverture de session`
+- `Activé`
 
 ### Vérifier la stratégie de fond d'écran
 - Retourner sur la machine locale
