@@ -159,3 +159,7 @@ Domaine : `10.168.192.in-addr.arpa`
 - - - `Services/`
 - - - - `RH`, (`\\Win22-srv-1\rh`)
 - - - - `IT`, (`\\Win22-srv-1\it`)
+- - - `GPL/`
+- - - - `Fichiers MSI` (Chrome, Firefox, Putty, VLC, ...)
+- - - `FDE/`
+- - - - `Wallpaper` (Logo M2I)
