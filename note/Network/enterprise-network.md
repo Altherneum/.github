@@ -55,7 +55,6 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Suffixe DNS : `FORMATION.LAN`
 
 - Server DNS préféré : `127.0.0.1`
-
 ### Win22-SRV-2
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
@@ -72,11 +71,27 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 - Server DNS préféré : `127.0.0.1`
 - Serveur DNS auxiliaire : `192.168.10.10`
-
 ### Win22-SRV-RTR-1
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
+
+## Clients
+- ⚠ Installation d'un client, LAN serveur, puis sera passé LAN clients
+- ISO : `Windows 10 21h2`
+### Win10-PC-1
+- Login : `PC-1` 
+- Password : `Respons11`, 
+- Question de sécurité : `Respons11` x 3
+- Adresse IP `192.168.10.15`
+- Masque de sous-réseau : `255.255.255.0`
+- Passerelle par défaut : `192.168.10.254`
+
+- Serveur DNS préféré : `192.168.10.10`
+- Serveur DNS auxiliaire : `192.168.10.11`
+
+- Domaine : `FORMATION.LAN`
+- Nom du poste : `Win10-PC-1`
 
 ## DNS
 ### DNS principal
@@ -132,28 +147,7 @@ Domaine : `10.168.192.in-addr.arpa`
 - `Paul EMPLOI`, `P123456789`, `Azerty11` (Mot de passe non changé)
 - `France TRAVAIL`, `F123456789`, `Azerty11` (Mot de passe non changé)
 
-## DHCP
-- Dynamic Host Configuration Protocol
-- N'est pas encore crée
-
-## Clients
-- ⚠ Installation d'un client, LAN serveur, puis sera passé LAN clients
-- ISO : `Windows 10 21h2`
-### Win10-PC-1
-- Login : `PC-1` 
-- Password : `Respons11`, 
-- Question de sécurité : `Respons11` x 3
-- Adresse IP `192.168.10.15`
-- Masque de sous-réseau : `255.255.255.0`
-- Passerelle par défaut : `192.168.10.254`
-
-- Serveur DNS préféré : `192.168.10.10`
-- Serveur DNS auxiliaire : `192.168.10.11`
-
-- Domaine : `FORMATION.LAN`
-- Nom du poste : `Win10-PC-1`
-
-## Partage
+### Partage
 - `C:/`
 - - `@_Ressources/`
 - - - `Services/`
@@ -163,3 +157,7 @@ Domaine : `10.168.192.in-addr.arpa`
 - - - - `Fichiers MSI` (Chrome, Firefox, Putty, VLC, ...)
 - - - `FDE/`
 - - - - `Wallpaper` (Logo M2I)
+
+## DHCP
+- Dynamic Host Configuration Protocol
+- N'est pas encore crée
