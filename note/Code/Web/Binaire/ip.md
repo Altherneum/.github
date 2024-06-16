@@ -213,3 +213,34 @@ Créer un réseau de 1500 hôtes
 `2 ^ 11 - 2` = 2046
 Il aura besoin de x bits sur 11 à sa fin : 
 - `wwww wwww.xxxx xxxx.yyyy y000.0000 0000`
+
+## Calculer une plage d'adresse de sous réseau
+- On nous donne le réseau : `10.100.0.0` `/16`
+- Ce qui donne en binaire
+```
+10         .100       .0         .0
+0000.1010  0110.0100 0000.0000 0000.0000    IP
+
+1111.1111  1111.1111 0000.0000 0000.0000    Masque
+255        .255       .0         .0
+```
+
+- On souhaite créer 60 sous réseau
+- On reprend le masque et ajoute 6 bits au masque (`2^6` = `64`)
+```
+1111.1111  1111.1111 0000.0000 0000.0000    Masque
+255        .255       .0         .0
+
+1111.1111  1111.1111 1111.1100 0000.0000    Nouveau masque
+255        .255      .248         .0
+```
+- Avec le masque `255.255.248.0` on obtient donc `64 sous réseaux` supplémentaires
+
+- Pour calculer le début et la fin de chaque sous réseau on reprend le nouveau masque
+- `1111.1111  1111.1111 1111.1100 0000.0000` et on utilise le nombre de bits à `0` dans le masque afin de calculer le nombre d'adresses possibles (Adresses adressables et réservés)
+- Ce qui donne `2^10` = `1024`
+- Toute les `1024` adresses on change donc de sous réseau
+- `1024 / 255` = `4`, donc soit tout les `0.0.4.0` adresses au le format IPv4
+
+- Le début du réseau était `10.100.0.0`
+- Ce qui donne comme prochain sous réseau l'adresse `10.100.4.0`, puis `10.100.8.0`, `10.100.12.0`, ...

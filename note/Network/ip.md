@@ -81,8 +81,13 @@ localhost est le nom habituel qui désigne une interface logique de l’ordinate
 - L'adresse de broadcast est une adresse IP qui termine en .255 dans des réseaux de classe A, B ou C, cette adresse est celle qui permet de faire de la diffusion à toutes les machines du réseau
 
 # Passerelle
+En informatique, une passerelle (en anglais, gateway) est le nom générique d'un dispositif permettant de relier deux réseaux informatiques de types différents, par exemple un réseau local et le réseau Internet  
+Il existe différents types de passerelles :
+- un répéteur est une passerelle de niveau 1,
+- un pont une passerelle de niveau 2
+- un relais, souvent appelé routeur, une passerelle de niveau 3
 
-## Masque
+# Masque
 - Le masque est un séparateur entre la partie réseau et la partie machine d'une adresse IP.  
 - Le masque, comme l'adresse IP, est une suite de 4 octets, soit 32 bits. Chacun des ces bits peut prendre la valeur 1 ou 0.  
 - Un masque de sous-réseau divise également une adresse IP en deux parties, créant ainsi deux composants différents d'un réseau.
