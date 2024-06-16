@@ -1,8 +1,7 @@
 # ICMP
 - Internet Control Message Protocol.  
-- ICMP est un protocole de niveau 3 (modèle OSI), encapsulé dans un datagramme IP. Il 
-contient des informations, mais pas de données des couches OSI supérieures, et sa taille 
-par défaut est de 32 bits
+- ICMP est un protocole de niveau 3 (modèle OSI), encapsulé dans un datagramme IP.
+- Il contient des informations, mais pas de données des couches OSI supérieures, et sa taille par défaut est de 32 bits
 - ex : ping
 
 # ARP
