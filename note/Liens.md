@@ -58,7 +58,7 @@
 - [keepassxc.org](https://keepassxc.org/) | [keepass.info](https://keepass.info/)
 - [whonix.org](https://www.whonix.org/)
 - [geti2p.net](https://geti2p.net/)
-- [lokinet.org](lokinet.org)
+- [lokinet.org](https://lokinet.org)
 - [getsession.org](https://getsession.org/)
 
 ## Machine learning
