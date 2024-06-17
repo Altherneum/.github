@@ -106,3 +106,46 @@ Aliases:  www.formation.lan
 - `Type` : `Zone principale`, `Modifier`
 - Ajouter la zone `Enregistrer la zone dans Active Directory`
 - Passer `Mises à jours dynamiques` : `Sécurisés uniquement`
+
+## Repasser le client dans le domaine
+- Client : `Win22-PC-1`
+- Domaine : `FORMATION.LAN`
+
+
+## N'as pas été fait
+Sur SRV1
+Zone de recherche inversé
+Serveurs de noms
+Ajouter le DNS secondaire 192.168.10.11
+Modifier l'ancien serveur de nom pour ajouter son IP 192.168.10.10
+#
+Même chose sur SRV2
+#
+
+# Dupliquer AD sur SRV2
+## Ajouter Rôle AD DS
+- `Promouvoir en contrôleur de domaine`
+## Configurer AD DS 2
+- `Ajouter un contrôleur de domaine à un domaine existant`
+- Domaine : `FORMATION.LAN`
+- `Fournir les informations d'identification pour effectuer cette opération` : `Modifier` ; `FORMATION\Administrateur`
+- `Taper le mot de passe du mode de restauration des services d'annuaire (DSRM)` : `Respons11`
+- `Répliquer depuis` : `Win22-SRV-1.FORMATION.LAN`
+- Script :
+```
+Import-Module ADDSDeployment
+Install-ADDSDomainController `
+-NoGlobalCatalog:$false `
+-CreateDnsDelegation:$false `
+-Credential (Get-Credential) `
+-CriticalReplicationOnly:$false `
+-DatabasePath "C:\Windows\NTDS" `
+-DomainName "FORMATION.LAN" `
+-InstallDns:$true `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-ReplicationSourceDC "WIN22-SRV-1.FORMATION.LAN" `
+-SiteName "Default-First-Site-Name" `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true
+```
