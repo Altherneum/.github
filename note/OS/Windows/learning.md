@@ -96,7 +96,10 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `shutdown /s` Arrête le système
 - `logoff` Déconnecte le compte Windows
 - `ver` Version du système
+
+## Global policy
 - `gpupdate /force` Met à jour les paramètres de la stratégie de groupe
+- `gpresult /r` Affiche les informations de stratégie résultant
 
 ### Windows key
 - [WinKeyDump.vbs](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/WinKeyDump.vbs)
