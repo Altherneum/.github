@@ -103,9 +103,9 @@ Ils permettent d’utiliser les groupes pour gérer les autorisations d’accès
 
 Par exemple, si vous avez un partage sur lequel vous souhaitez donner des autorisations d’accès, vous pourrez utiliser un « groupe de sécurité » pour donner des autorisations à tous les membres de ce groupe
 ##### Distribution
-⚠ Information non checké  
 Recevoir des messages
-ces groupes sont utilisés principalement par des applications de messagerie, afin de créer une listes de distribution
+
+Ces groupes sont utilisés principalement par des applications de messagerie, afin de créer une listes de distribution
 
 #### Porté
 ![Portée des groupes](https://github.com/Altherneum/.github/blob/main/note/assets/AD-Group-Range.png?raw=true)
@@ -142,6 +142,36 @@ De la même manière, il est possible de l’utiliser pour définir l’accès a
 ![Portée de groupe](https://github.com/Altherneum/.github/blob/main/note/assets/cours-active-directory-15.png?raw=true)
 
 Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de relation avec un autre domaine ou une autre forêt, cela n’aura pas d’intérêt
+
+## Configuration d'un domaine secondaire
+### Ajouter Rôle AD DS secondaire
+- `Promouvoir en contrôleur de domaine`
+### Configurer AD DS secondaire
+- `Ajouter un contrôleur de domaine à un domaine existant`
+- Domaine : `FORMATION.LAN`
+- `Fournir les informations d'identification pour effectuer cette opération` : `Modifier` ; `FORMATION\Administrateur`
+- `Taper le mot de passe du mode de restauration des services d'annuaire (DSRM)` : `Respons11`
+- `Répliquer depuis` : `Win22-SRV-1.FORMATION.LAN`
+
+## Configuration d'un domaine routeur
+### Rôle accès à distance
+- `Gestionnaire de serveur`, `Gérer`
+- `Ajouter des rôles et fonctionnalités`
+- Rôles des serveurs : `Accès à distance`
+- Service de rôle : `DirectAccess et VPN (accès à distance)`
+- Service de rôle : `Routage`
+- Outils : `Routage et accès à distance` est disponible
+### Configuration du routage et accès à distance
+- Clique droit sur le `Win22-SRV-RTR-1`
+- `Configurer et activer le routage et l'accès distance`
+- `Configuration personnalisée`
+- Activer `Routage réseau` et `NAT`
+- Le service va démarrer
+#### NAT
+- Dans `Win22-SRV-RTR`, `IPv4` : `Clique droit` sur la carte `NAT`
+- `Nouvelle interface`
+- Choisir la carte `01-NAT`
+- `Interface publique et connectée à internet`, et `Activer NAT sur cette interface`
 
 # Partage de ressource
 ## Création des dossiers
@@ -181,12 +211,9 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 - `Clique droit` sur l'unité d'organisation `Partage`
 - `Nouveau`, `Dossier partagé`, taper le nom et coller le lien du partage crée depuis l'explorateur de fichier
 
-------------------------
-**TO FILTER**
 ## Partager une imprimante
-Peut être fait aussi avec une imprimantes (Dans son propre dossier comme PC)
-**TO FILTER**
-------------------------
+- Peut être fait aussi avec une imprimantes (Dans son unité d'organisation `Imprimantes`)
+- ⚠ N'a pas été fait
 
 # Ajouter une machine dans le domaine
 ## Configuration IP
@@ -206,7 +233,9 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - `.\Utilisateur` Permet de cibler le PC local
 - `Nom du PC\Utilisateur` Cible le PC local en précisant le nom
 - `Domaine\Utilisateur` Cible un domaine réseau
-- `\\Domaine\Utilisateur` ???
+### Sortir du domaine
+- Sortir le client du domaine en le mettant dans le `WORKGROUP`
+- La permission administrateur du domaine va être demandée `FORMATION\Administrateur`
 
 # Stratégie de groupes
 ## Lecteur réseau

@@ -1,0 +1,15 @@
+Import-Module ADDSDeployment
+Install-ADDSDomainController `
+-NoGlobalCatalog:$false `
+-CreateDnsDelegation:$false `
+-Credential (Get-Credential) `
+-CriticalReplicationOnly:$false `
+-DatabasePath "C:\Windows\NTDS" `
+-DomainName "FORMATION.LAN" `
+-InstallDns:$true `
+-LogPath "C:\Windows\NTDS" `
+-NoRebootOnCompletion:$false `
+-ReplicationSourceDC "WIN22-SRV-1.FORMATION.LAN" `
+-SiteName "Default-First-Site-Name" `
+-SysvolPath "C:\Windows\SYSVOL" `
+-Force:$true

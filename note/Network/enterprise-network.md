@@ -21,12 +21,17 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 ### NAT
 - `Interne`
 - `NAT`
+
+- En `DHCP`
 #### Liste des périphériques sur le switch NAT
 - [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
 
 ### Serveurs
 - `Privé`
 - `Serveurs`
+
+- `192.168.10.254`
+- `255.255.255.0`
 #### Liste des périphériques sur le switch Serveurs
 - [WIN22-SRV-1](#win22-srv-1)
 - [WIN22-SRV-2](#win22-srv-2)
@@ -35,8 +40,12 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 ### Clients
 - `Privé`
 - `Clients`
+
+- `192.168.20.254`
+- `255.255.255.0`
 #### Liste des périphériques sur le switch Clients
 - [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
+- [WIN10-PC-1](#Win10-PC-1)
 
 ## Serveurs Windows
 ### Win22-SRV-1
@@ -61,6 +70,9 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Carte réseau sur : `Serveur`
 
 - Gère le [DNS auxiliaire](#DNS-auxiliaire)
+- Gère l'[Active Directory](#Active-Directory) secondaire (Clone)  
+- `Mot de passe de restauration des services d'annuaire (DSRM)` : `Respons11`
+- Réplication depuis : `Win22-SRV-1.FORMATION.LAN`
 
 - IP : `192.168.10.11`
 - Masque : `255.255.255.0`
@@ -77,15 +89,16 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
 
 ## Clients
-- ⚠ Installation d'un client, LAN serveur, puis sera passé LAN clients
 - ISO : `Windows 10 21h2`
 ### Win10-PC-1
 - Login : `PC-1` 
 - Password : `Respons11`, 
 - Question de sécurité : `Respons11` x 3
-- Adresse IP `192.168.10.15`
+- Carte réseau sur `Clients`
+
+- Adresse IP `192.168.20.15`
 - Masque de sous-réseau : `255.255.255.0`
-- Passerelle par défaut : `192.168.10.254`
+- Passerelle par défaut : `192.168.20.254`
 
 - Serveur DNS préféré : `192.168.10.10`
 - Serveur DNS auxiliaire : `192.168.10.11`
@@ -99,17 +112,19 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Nom de l'alias `www`
 - Nom de domaine pleinement qualifié (FQDN) : `www.FORMATION.LAN.`
 #### Zones de recherche directes
-- `win22-srv-1.formation.lan`
-- `FORMATION.LAN`
+- `SOA` : `win22-srv-1.formation.lan`
+- `FORMATION.LAN`, `Mises à jour dynamique` : `Sécurisé uniquement`, `Enregistrer la zone dans Active Directory`, `Zone principale`
+
 #### Zones de recherche inversée
-Domaine : `10.168.192.in-addr.arpa`
+- `10.168.192.in-addr.arpa`, `Mises à jour dynamique` : `Sécurisé uniquement`, `Enregistrer la zone dans Active Directory`, `Zone principale`
+- `20.168.192.in-addr.arpa`, `Mises à jour dynamique` : `Sécurisé uniquement`, `Enregistrer la zone dans Active Directory`, `Zone principale`
 
 ### DNS auxiliaire
 - Contrôlé par [Win22-SRV-2](#Win22-SRV-2)
 #### Zones de recherche directes secondaire
 - Connecté sur : `FORMATION.LAN`
 - Connecté sur : `192.168.10.10`
-- Nom de domaine complet du serveur : `WIN22-SRV-1.FORMATION.LAN` 
+- Connecté sur le nom de domaine complet du serveur : `WIN22-SRV-1.FORMATION.LAN` 
 #### Zones de recherche inversée secondaire
 - Connecté sur l'ID réseau : `192.168.10`
 - Connecté sur l'adresse IP : `192.168.10.10`

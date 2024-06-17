@@ -94,9 +94,10 @@ voir [Cours / network](https://doc.altherneum.fr/cours/network)
 - Clique droit sur le serveur `WIN22-SRV-1`
 - Nouvelle zone
 - Zone principale
+- `Enregistrer la zone dans Active Directory` 
 - Zone de recherche directe
 - Nommer la zone `FORMATION.LAN`
-- Autoriser les mises à jours dynamiques sécurisée et non sécurisée
+- Autoriser les mises à jours dynamiques sécurisée ~~et non sécurisée~~
 
 ![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_EjU5ccZeDI.png?raw=true)
 
@@ -104,14 +105,22 @@ voir [Cours / network](https://doc.altherneum.fr/cours/network)
 - Clique droit sur le serveur `WIN22-SRV-1`
 - Nouvelle zone
 - Zone principale
+- `Enregistrer la zone dans Active Directory` 
 - Zone de recherche inversée
 - IPv4
 - ID réseau : `192.168.10` (Ne pas préciser le dernier octet)
-- Autoriser les mises à jours dynamiques sécurisée et non sécurisée
+- Autoriser les mises à jours dynamiques sécurisée ~~et non sécurisée~~
 
 ![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_2jJk7YWiZA.png?raw=true)
 
 - Pour valider la configuration ; `/ipconfig registerdns`
+
+### Nouvelle zone de recherches inversés
+- `Clique droit` sur `Zone de recherche inversée`, `Nouvelle zone`
+- `Enregistrer la zone dans Active Directory` à cocher
+- `Vers tout les serveurs DNS exécutés sur des controleurs de domaine dans ce domaine : FORMATION.LAN`
+- Ajouter la zone `192.168.20`
+- Ce qui donne la zone `20.168.192.in-addr.arpa`
 
 ### Vérifier le DNS
 Pour vérifier le DNS :
