@@ -52,12 +52,16 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `diskpart` disques et outils de formatage
 
 ## Réseau
+- `ncpa.cpl` Ouvre l'interface des connexions réseau
 - `ipconfig` Configuration IP
 - `ipconfig /all` Configuration IP totale
 - `ipconfig /flushdns` Vide le cache DNS
 - `ipconfig /registerdns` Actualise tous les baux DHCP et réinscrit les noms DNS
 - `ipconfig /release` Libère les connexions
 - `ipconfig /renew` Rétablit les connexions
+
+### Netstat
+- `netstat -aon` Affiche les données détaillées des sockets actifs
 
 ### netsh WiFi key
 - `netsh wlan show profile` Liste les réseaux auxquels l'ordinateur s'est déjà connecté
@@ -83,8 +87,7 @@ Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commande
 - `nslookup -debug -type=A+AAAA -nosearch -recurse mydomain.com 1.1.1.1` Vous pouvez combiner des options et des requêtes de type d’enregistrement de ressource.   
 L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4, ne tente pas d’utiliser le domaine de recherche, utilise la recherche récursive et utilise le serveur de recherche DNS 1.1.1.1
 
----
-
+## FTP
 `ftp` Lance le mode transfert de fichier
 
 ## Système
