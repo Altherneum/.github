@@ -80,3 +80,29 @@ Nom :    win22-srv-1.formation.lan
 Address:  192.168.10.10
 Aliases:  www.formation.lan
 ```
+
+## Ajout d'une zone sur Win22-SRV-1
+### Nouvelle zone de recherches inversés
+- `Clique droit` sur `Zone de recherche inversée`, `Nouvelle zone`
+- `Enregistrer la zone dans Active Directory` à cocher
+- `Vers tout les serveurs DNS exécutés sur des controleurs de domaine dans ce domaine : FORMATION.LAN`
+- Ajouter la zone `192.168.20`
+- Ce qui donne la zone `20.168.192.in-addr.arpa`
+
+### Enregistrer l'ancienne zone de recherche inversé dans l'active directory
+- `Zone de recherche inversé`
+- `Clique droit` sur la zone `10.168.192.in-addr.arpa`, `Propriétés`
+- `Type` : `Zone principale`, `Modifier`
+- `Enregistrer la zone dans Active Directory` à cocher
+
+### Passer zones en mise à jours sécurisé
+#### Zone de recherche inversés sécurisé
+- `Clique droit` sur chaque `zone de recherche inversés`
+- `Propriétés`
+- `Mises à jours dynamiques` : `Sécurisés uniquement`
+
+#### Zone FORMATION.LAN sécurisé
+- `Clique droit` sur `FORMATION.LAN` dans la `zone de recherche directes`
+- `Type` : `Zone principale`, `Modifier`
+- Ajouter la zone `Enregistrer la zone dans Active Directory`
+- Passer `Mises à jours dynamiques` : `Sécurisés uniquement`
