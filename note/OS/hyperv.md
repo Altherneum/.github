@@ -46,6 +46,14 @@ Un hyperviseur est une plate-forme de virtualisation qui permet à plusieurs sys
 
 ![cartes réseau](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_6iWU7wUKqo.png?raw=true)
 
+### Connecter NAT vers un réseau externe
+- Dans `Gestionnaire de commutateur virtuel` sur Hyper-V
+- `NAT`, `Type de connexion` : `Réseau externe` pour utiliser la carte réseau connecté à la machine qui utilise Hyper-V
+- Dans le `Win22-SRV-RTR-1`, `Routage et accès à distance` :
+  - `Win22-SRV-RTR-1`, `IPv4`, `NAT`
+  - `Clique droit` sur `01-NAT` : `Propriétés`
+  - `Services et ports` ; Activer `HTTP` et `HTTPS` avec comme adresse IP `192.168.10.10`
+
 # Autres notes
 ## CTRL ALT SUPPR
 ![touche](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_9hxQEdb0vA.png?raw=true)

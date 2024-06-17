@@ -168,10 +168,16 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 - Activer `Routage réseau` et `NAT`
 - Le service va démarrer
 #### NAT
-- Dans `Win22-SRV-RTR`, `IPv4` : `Clique droit` sur la carte `NAT`
+- Dans `Win22-SRV-RTR`, `Routage et accès à distance` :
+- `IPv4` : `Clique droit` sur la carte `NAT`
 - `Nouvelle interface`
 - Choisir la carte `01-NAT`
 - `Interface publique et connectée à internet`, et `Activer NAT sur cette interface`
+#### Ajouter HTTP et HTTPS
+- Dans `Win22-SRV-RTR-1`, `Routage et accès à distance` :
+  - `Win22-SRV-RTR-1`, `IPv4`, `NAT`
+  - `Clique droit` sur `01-NAT` : `Propriétés`
+  - `Services et ports` ; Activer `HTTP` et `HTTPS` avec comme adresse IP `192.168.10.10`
 
 # Partage de ressource
 ## Création des dossiers

@@ -19,8 +19,7 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 # Adressage
 ## Commutateur / Switch
 ### NAT
-- `Interne`
-- `NAT`
+- `Externe`
 
 - En `DHCP`
 #### Liste des périphériques sur le switch NAT
@@ -28,7 +27,6 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 ### Serveurs
 - `Privé`
-- `Serveurs`
 
 - `192.168.10.254`
 - `255.255.255.0`
@@ -39,7 +37,6 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 ### Clients
 - `Privé`
-- `Clients`
 
 - `192.168.20.254`
 - `255.255.255.0`
