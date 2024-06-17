@@ -4,6 +4,14 @@
 
 ### Titre niveau 3
 
+#### Titre niveau 4
+
+##### Titre niveau 5
+
+###### Titre niveau 6
+
+####### Titre niveau 7
+
 ---
 
 [Text du lien](https://pages.github.com/)
@@ -22,10 +30,14 @@
 
 __Text souligné__
 
+---
+
 <details>
 <summary>Titre</summary>
 Text
 </details>
+
+----
 
 Du text et `un peut de code`, avec du text
 
@@ -33,3 +45,10 @@ Du text et `un peut de code`, avec du text
 Bloc de code
 Multiligne
 ```
+
+----
+
+- List item
+  - Sub list item
+* Star list item
+1. Number list item
