@@ -10,8 +10,6 @@
 
 ###### Titre niveau 6
 
-####### Titre niveau 7
-
 ---
 
 [Text du lien](https://pages.github.com/)
@@ -49,6 +47,13 @@ Multiligne
 ----
 
 - List item
+- Another list item
+
   - Sub list item
+  - Second sub list item
+
 * Star list item
+* Another list item
+
 1. Number list item
+2. Second number list item
