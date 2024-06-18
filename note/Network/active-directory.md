@@ -343,3 +343,22 @@ Créer la stratégie dans : `Formation.LAN` `@_FORMATION`, `Objet de stratégie`
 - `gpupdate /force`
 - Relancer la machine
 - Le fond d'écran est actif
+
+# DHCP
+- `Gestionnaire de serveur`
+  - `Gérer`, `Ajouter des rôles et fonctionnalités`
+  - `DHCP`
+- Application `DHCP`
+  - Déplier l'onglet `NOM DU SERVEUR`
+  - Sur l'onglet `IPv4`
+  - `Clique droit`, `Nouvelle étendue`
+![Option nouvelle étendue DHCP](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ybPAvR8Gg4.png?raw=true)
+## Configuration de l'étendue
+- `Nom de l'étendue` : `m2i`
+- Configurer `Adresse IP de début` : `193.0.124.33`, `Adresse IP de fin` : `192.0.124.37`
+- `Longueur` (CIDR) : `29`, et `Masque de sous-réseau` : `255.255.255.248`
+- Ainsi que le `Routeur` : `193.0.124.38`
+- Et le `Domaine parent` : `m2i.edu`
+## Vérification de l'étendue
+- Vérifier la configuration DHCP sur un client en configuration IP automatique dans le domaine précisé dans l'étendue DHCP : `ipconfig`
+- Pour renouveller l'adresse IP : `ipconfig /release && ipconfig /renew`

@@ -87,3 +87,11 @@
 - Outils `DHCP`
 - Développez le nom du serveur DHCP, sélectionnez `IPv4` avec le `bouton droit`, puis sélectionnez `Nouvelle étendue`.
 ![Option nouvelle étendue DHCP](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ybPAvR8Gg4.png?raw=true)
+- Nom de l'étendue : `m2i`
+- Adresse de début : `193.0.124.33`
+- Adresse de fin : `192.0.124.37`
+- Longueur : `29`
+  - Masque : `255.255.255.248`
+- Aucune exclusions et retard
+- Routeur : `193.0.124.38`
+- Domaine parent : `m2i.edu`
