@@ -20,6 +20,7 @@
 - Validez un `Nouveau mot de passe d'administrateur` pour la machine
 
 ### Ajouter une fôret
+- Option `Ajouter une nouvelle forêt` 🪓
 - Nom de domaine racine : `FORMATION.LAN`
 - Version : `Windows Server 2016`
 - Mot de passe : `Respons11`
