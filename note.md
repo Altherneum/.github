@@ -32,6 +32,38 @@
 - `Experimental`
 - `Interne`
 
+## Utilisateurs
+### Alain
+- `Alain` `TERRIEUR`
+- Login : `Alain.TERRIEUR`
+- Mot de passe : `SuperUser11`
+- `Groupe` : `Informatique`, `Comptabilité`, `Administration`
+### Alex
+- `Alex` `TERRIEUR`
+- Login : `Alex.TERRIEUR`
+- Mot de passe : `SuperUser11`
+### Jean
+- `Jean` `SAISRIEN`
+- Login : `Jean.SAISRIEN`
+- Mot de passe : `SuperUser11`
+
+## Groupes
+### Informatique
+- `G_IT_RW`
+### Administration
+- `G_AD_RW`
+### Comptabilité
+- `G_CO_RW`
+
+## Imprimantes
+### Partage_Imprimante_1
+- Adresse IP : `193.0.124.37`
+- Nom : `Partage_Imprimante_1`
+- Nom du port : `Partage_Imprimante_1_193.0.124.37`
+### Imprimante 1
+- `Generic / Text Only`
+- Sur `Partage_Imprimante_1`
+
 # Tâches
 ## Scénario
 - Vous êtes administrateur système pour une petite entreprise. Vous devez configurer un nouveau serveur Windows Server 2022 pour fournir les services suivants : 
@@ -51,25 +83,33 @@
 - [x] Promouvoir le serveur au rôle de contrôleur de domaine. 
 - [x] Implémenter sur le contrôleur de domaine le service DHCP 
   - [x] le serveur doit avoir la dernière adresse ip du segment donné
-- Créer 3 unités d'organisation (OU) et des utilisateurs dans Active Directory. (Comptabilité, administration et informatique) 
-- Créer un compte utilisateur dans chaque unité d’organisation. 
-- Créer des partages réseau pour les sauvegarde, nommez-le « Backup ». 
-- Configurer un serveur d'impression. 
+- [x] Créer 3 unités d'organisation (OU) et des utilisateurs dans Active Directory. (Comptabilité, administration et informatique) 
+- [x] Créer un compte utilisateur dans chaque unité d’organisation. 
+- [X] Créer des partages réseau pour les sauvegarde, nommez-le « Backup ». 
+- [X] Configurer un serveur d'impression. 
 - Configurer l'accès à distance sur le serveur via le Bureau à distance,  
-- Installer et configurer IIS. 
+- [X] Installer et configurer IIS. 
 - Créer un site Web et le publier. 
 - VÉRIFICATION DE VOS CONFIGS 
-- Connecter le client au domaine, le client doit obtenir sa configuration IP (hôte, passerelle et DNS) du serveur 
-- Ouvrez une session sur le domaine avec un compte utilisateur non administrateur 
+- [X] Connecter le client au domaine, le client doit obtenir sa configuration IP (hôte, passerelle et DNS) du serveur 
+- [X] Ouvrez une session sur le domaine avec un compte utilisateur non administrateur 
 - Tester la fonctionnalité bureau à distance depuis le client 
-- Vérifiez l’accès à l’un des répertoires partagés sur le serveur 
+- [X] Vérifiez l’accès à l’un des répertoires partagés sur le serveur 
 
 
 
 
+# IIS
+[IT-Connect.fr](https://www.it-connect.fr/installer-et-configurer-iis-10-sur-windows-server-2022/)
 
+- Site par défaut : `file:///C:/inetpub/wwwroot/iisstart.htm`
 
-
+## Ajouter un site
+- Application `Gestionnaire des services internet (IIS)`
+- Sur la catégorie `NOM DU SERVEUR`, `Sites`, faire `Clique droit` : `Ajouter un site WEB`
+  - `Nom du site` : `Site`
+  - `Nom d'hôte` : `Site`
+  - `Chemin d'accès` : `C:\inetpub\Site`
 
 
 
