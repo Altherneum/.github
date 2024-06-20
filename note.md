@@ -87,13 +87,13 @@
 - [x] Créer un compte utilisateur dans chaque unité d’organisation. 
 - [X] Créer des partages réseau pour les sauvegarde, nommez-le « Backup ». 
 - [X] Configurer un serveur d'impression. 
-- Configurer l'accès à distance sur le serveur via le Bureau à distance,  
+- [ ] Configurer l'accès à distance sur le serveur via le Bureau à distance,  
 - [X] Installer et configurer IIS. 
-- Créer un site Web et le publier. 
-- VÉRIFICATION DE VOS CONFIGS 
+- [x] Créer un site Web et le publier. 
+- [x] VÉRIFICATION DE VOS CONFIGS 
 - [X] Connecter le client au domaine, le client doit obtenir sa configuration IP (hôte, passerelle et DNS) du serveur 
 - [X] Ouvrez une session sur le domaine avec un compte utilisateur non administrateur 
-- Tester la fonctionnalité bureau à distance depuis le client 
+- [ ] Tester la fonctionnalité bureau à distance depuis le client 
 - [X] Vérifiez l’accès à l’un des répertoires partagés sur le serveur 
 
 
