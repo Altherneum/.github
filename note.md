@@ -142,3 +142,28 @@
 
 # Roue de Deming
 - [WikiPedia.org / roue de Deming](https://fr.wikipedia.org/wiki/Roue_de_Deming)
+
+
+
+
+
+# GPO auto shut down à 20H
+- Créer une GPO sur l'UO `Ordinateurs`
+  - Nommer la GPO `C_Shutdown_20H`
+- `Clique droit` sur la GPO : `Modifier`
+  - `Configuration ordinateur`
+  - `Préférences`
+  - `Paramètres du panneau de configuration`
+  - `Tâches planifiées`
+- `Clique droit`, `Nouveau`, `Tâche planifiée (au minimum Windows 7)`
+  - `Nom` : `Shutdown_20H`
+- Onglet : `Action`, `Nouveau`
+  - `Programme / script` : `C:\Windows\System32\shutdown.exe`
+  - `Ajouter arguments` : `-s -t 0 -f` (Fermeture forcé des applications) 
+  - Ou l'`Arguments` : `-s -t 0 -soft` (Fermeture douce des applications)
+- Onglet `Déclancheur`, `Nouveau`
+  - `Tout les jours` : `20H 00m 00s`
+## Vérifier la GPO auto shut down
+- `gpupdate /force && shutdown -r -t 0` pour appliquer la GPO et relancer la machine
+- `Planificateur de tâches` en tant qu'administrateur
+  - `Bibliothèque du Planificateur de tâches`
