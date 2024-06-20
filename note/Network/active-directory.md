@@ -276,10 +276,13 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - `Gestionnaire de serveur`
 - `Outils`, `gestion de stratégie de groupe`
 - Dans `Formation.LAN`, `@_FORMATION`, `Objet de stratégie`
-- `Clique droit`, `Nouveau`, Nom : `GPO_IT_U_Lecteur_Reseau`
-- Sur `Formation.LAN`, `@_FORMATION`, `Utilisateurs`, `IT`, `Clique droit`, `Lier un objet à une stratégie de groupe existant`, prendre la stratégie `GPO_IT_U_Lecteur_Reseau`, `OK`
+  - `Clique droit`, `Nouveau`, Nom : `GPO_IT_U_Lecteur_Reseau`
+- Sur `Formation.LAN`, `@_FORMATION`, `Utilisateurs`, `IT`
+  - `Clique droit`, `Lier un objet à une stratégie de groupe existant`, prendre la stratégie `GPO_IT_U_Lecteur_Reseau`, `OK`
 
-Créer la stratégie dans : `Formation.LAN` `@_FORMATION`, `Objet de stratégie` est identique à `Formation.LAN`, `@_FORMATION`, `Utilisateurs`, `IT` si elle est liée par la suite à l'objet
+- Créer la stratégie dans : `Formation.LAN` `@_FORMATION`, `Objet de stratégie` est identique à `Formation.LAN`, `@_FORMATION`, `Utilisateurs`, `IT` si elle est liée par la suite à l'objet
+
+- Créer la stratégie sur un groupe ne fonctionnera pas
 
 ### Modifier la stratégie de lecteur réseau
 - `Clique droit` sur la stratégie, `Modifier`
