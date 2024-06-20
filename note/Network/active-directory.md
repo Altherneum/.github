@@ -284,6 +284,7 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 
 - Créer la stratégie sur un groupe ne fonctionnera pas
   - Cette stratégie doit être appliquée sur un utilisateur ou une UO contenant des utilisateurs
+  - Vous devrez sinon créer un [# ciblage](#Ciblage) sur le groupe en question
 
 ### Modifier la stratégie de lecteur réseau
 - `Clique droit` sur la stratégie, `Modifier`
@@ -298,6 +299,10 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Se connecter sur le PC client
 - Pour forcer ou mettre à jour la règle : commande `gpupdate /force`
 - L'utilisateur peut créer ses dossiers / fichiers dans ce lecteur
+
+## Ciblage
+- [IT connect](https://www.it-connect.fr/comment-monter-un-lecteur-reseau-par-gpo/)
+- To do ...
 
 ## Installation de logiciel
 ### Créer la stratégie d'installation de logiciel
