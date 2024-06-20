@@ -135,3 +135,10 @@
 - Aucune exclusions et retard
 - Routeur : `193.0.124.38`
 - Domaine parent : `m2i.edu`
+
+
+
+
+
+# Roue de Deming
+- [WikiPedia.org / roue de Deming](https://fr.wikipedia.org/wiki/Roue_de_Deming)
