@@ -78,23 +78,7 @@
   - Broadcast Address: `193.0.124.39`
   - Domaine : `M2i.edu`
 
-## Tâches 
-- [x] Installer et configurer Windows Server 2022. 
-- [x] Promouvoir le serveur au rôle de contrôleur de domaine. 
-- [x] Implémenter sur le contrôleur de domaine le service DHCP 
-  - [x] le serveur doit avoir la dernière adresse ip du segment donné
-- [x] Créer 3 unités d'organisation (OU) et des utilisateurs dans Active Directory. (Comptabilité, administration et informatique) 
-- [x] Créer un compte utilisateur dans chaque unité d’organisation. 
-- [X] Créer des partages réseau pour les sauvegarde, nommez-le « Backup ». 
-- [X] Configurer un serveur d'impression. 
-- [ ] Configurer l'accès à distance sur le serveur via le Bureau à distance,  
-- [X] Installer et configurer IIS. 
-- [x] Créer un site Web et le publier. 
-- [x] VÉRIFICATION DE VOS CONFIGS 
-- [X] Connecter le client au domaine, le client doit obtenir sa configuration IP (hôte, passerelle et DNS) du serveur 
-- [X] Ouvrez une session sur le domaine avec un compte utilisateur non administrateur 
-- [ ] Tester la fonctionnalité bureau à distance depuis le client 
-- [X] Vérifiez l’accès à l’un des répertoires partagés sur le serveur 
+
 
 
 
@@ -157,6 +141,7 @@
   - `Tâches planifiées`
 - `Clique droit`, `Nouveau`, `Tâche planifiée (au minimum Windows 7)`
   - `Nom` : `Shutdown_20H`
+  - `Lors de l'exécution de la tâche, utilisez le compte d'utilisateur suivant` : `Système`
 - Onglet : `Action`, `Nouveau`
   - `Programme / script` : `C:\Windows\System32\shutdown.exe`
   - `Ajouter arguments` : `-s -t 0 -f` (Fermeture forcé des applications) 
@@ -167,3 +152,58 @@
 - `gpupdate /force && shutdown -r -t 0` pour appliquer la GPO et relancer la machine
 - `Planificateur de tâches` en tant qu'administrateur
   - `Bibliothèque du Planificateur de tâches`
+
+
+# Password Policy
+- Créer une GPO sur l'UO `@_FORMATION`
+  - Nommer la GPO `GPO_C_Password`
+- `Clique droit` sur la GPO : `Modifier`
+- `Configuration ordinateur`
+  - `Stratégies`
+  - `Paramètres Windows`
+  - `Paramètres de sécurité`
+  - `Stratégie de comptes`
+  - `Stratégie de mot de passe`, ainsi que `Stratégie de verrouillage du compte`
+## Stratégie de mot de passe
+- `Longueur minimale du mot de passe` : `14`
+- `Le mot de passe doit respecter des exigences de complexité` : [X]
+- `Durée de vie maximale du mot de passe` : `30`
+- `Durée de vie minimale du mot de passe` : `1`
+## Stratégie de verrouillage du compte
+- `Durée de verrouillage des comptes` : `30` minutes
+- `Réinitialiser le compteur de verouillages du compte après` : `30` minutes
+- `Seuil de verrouillage du compte` : `5`
+
+
+# FireWall forcé
+- Créer une GPO sur l'UO `Ordinateurs`
+  - Nommer la GPO `GPO_C_Firewall`
+- `Clique droit` sur la GPO : `Modifier`
+- `Configuration ordinateur`
+- `Stratégies`
+- `Modèles d'administration`
+- `Réseau`
+- `Connexions réseau`
+- `Pare-feu Windows Defender`
+- `Profil du domaine`
+- `Pare-feu Windows Defender : Protéger toutes les connexions réseau` : `Activer`
+
+
+
+
+# OpenVPN
+- [OpenVPN setup from std.rocks](https://std.rocks/fr/vpn_openvpn_windows_server.html)
+- Appendix : Copier les fichiers de .CFG sur Git
+
+# Block software install
+- [IT-connect](https://www.it-connect.fr/gpo-comment-empecher-les-utilisateurs-dexecuter-certains-logiciels/)
+
+# Block shell & .BAT
+- ....
+
+# To test
+- Tester auto shut down
+  - Dans l'outils prévus
+  - Password policy
+  - Firewall
+  - OpenVPN IP check

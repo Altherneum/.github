@@ -34,6 +34,7 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - [WIN22-SRV-1](#win22-srv-1)
 - [WIN22-SRV-2](#win22-srv-2)
 - [WIN22-SRV-RTR-1](#win22-srv-rtr-1)
+- [WIN22-SRV-VPN-1](#win22-srv-vpn-1)
 
 ### Clients
 - `Privé`
@@ -80,10 +81,31 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 - Server DNS préféré : `127.0.0.1`
 - Serveur DNS auxiliaire : `192.168.10.10`
+
 ### Win22-SRV-RTR-1
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`, `Clients`, et `NAT`
+Carte Serveurs
+  - IP : `192.168.10.254`
+  - Masque : `255.255.255.0`
+- Carte Clients
+  - IP : `192.168.20.254`
+  - Masque : `255.255.255.0`
+
+- Nom de l'ordinateur : `WIN22-SRV-RTR-1`
+- Suffixe DNS : `FORMATION.LAN`
+
+### Win22-SRV-VPN-1
+- Admin password : `Respons11`
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveur`
+
+- IP : `192.168.10.253`
+- Masque : `255.255.255.0`
+
+- Serveur DNS préféré : `192.168.10.10`
+- Serveur DNS auxiliaire : `192.168.10.11`
 
 ## Clients
 - ISO : `Windows 10 21h2`
