@@ -210,3 +210,7 @@
   - Password policy
   - Firewall
   - OpenVPN IP check
+
+
+# To do
+- Nettoyer [Github ... /note/notes-network.md](https://github.com/Altherneum/.github/blob/main/note/notes-network.md) | [/note/notes-network.md](/note/notes-network.md)
