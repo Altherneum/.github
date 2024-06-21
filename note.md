@@ -194,6 +194,9 @@
 # OpenVPN
 - [OpenVPN setup from std.rocks](https://std.rocks/fr/vpn_openvpn_windows_server.html)
 - Appendix : Copier les fichiers de .CFG sur Git
+- NB : Y'a des bugs et j'ai oublié comment j'ai patch, regarder les fichiers de config à l'identique
+- Clef publique sur partage WinSRV
+- Penser à auto install le soft et move key /autoConfig d'openVPN
 
 # Block software install
 - [IT-connect](https://www.it-connect.fr/gpo-comment-empecher-les-utilisateurs-dexecuter-certains-logiciels/)
