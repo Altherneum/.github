@@ -55,18 +55,18 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 ### NAT-2
 - `Externe`
-
 #### Liste des périphériques sur le switch NAT-2
 
 ### Serveurs-2
 - `Privé`
-
 #### Liste des périphériques sur le switch Serveurs-2
+- [Win22-SRV-3](#win22-srv-3)
+- [Win22-RTR-2](#win22-srv-rtr-2)
 
 ### Clients-2
 - `Privé`
-
 #### Liste des périphériques sur le switch Clients-2
+- [Win22-RTR-2](#win22-srv-rtr-2)
 
 ## Serveurs Windows
 - ISO : `Windows Server 2022 build 20348.169.210806-2348`
@@ -114,7 +114,7 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 ### WIN22-SRV-3
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
-- Carte réseau sur : `N/A` (à migrer seul)
+- Carte réseau sur : `Serveurs-2`
 - Va être AD RODC sur un autre réseau
 
 - IP : `192.169.10.10`
@@ -141,7 +141,7 @@ Carte Serveurs
 ### Win22-SRV-RTR-2
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`
-- Carte réseau sur : `Serveur`, `Clients`, et `NAT`
+- Carte réseau sur : `Serveur-2`, `Clients-2`, et `NAT`
 Carte Serveurs
   - IP : `192.169.10.254`
   - Masque : `255.255.255.0`
