@@ -1,88 +1,3 @@
-# Adressage
-## Win22-SRV-3
-- Win 22 Server `datacenter user experience`
-- Carte réseau sur : `Experimental`
-
-- Login : `Administrateur`
-- Password : `SuperUser11`
-
-- Domaine : `m2i.edu`
-- Niveau de forêt : `Windows Server 2016`
-- Mot de passe : `SuperUser11`
-
-- `193.0.124.38`
-- `255.255.255.248`
-
-## Win10-PC-2
-- Win 10 Desktop : `Windows 10 21h2`
-- Carte réseau sur : `Experimental`
-
-- Login : `PC-2`
-- Password : `SuperUser11`
-- Question de sécurité : `SuperUser11` x 3
-
-- IP : `193.0.124.33`
-- Masque : `255.255.255.248`
-- Gateway : `193.0.124.38`
-- DNS : `192.0.124.38`
-
-- Domaine : `m2i.edu`
-
-## Commutateur
-- `Experimental`
-- `Interne`
-
-## Utilisateurs
-### Alain
-- `Alain` `TERRIEUR`
-- Login : `Alain.TERRIEUR`
-- Mot de passe : `SuperUser11`
-- `Groupe` : `Informatique`, `Comptabilité`, `Administration`
-### Alex
-- `Alex` `TERRIEUR`
-- Login : `Alex.TERRIEUR`
-- Mot de passe : `SuperUser11`
-### Jean
-- `Jean` `SAISRIEN`
-- Login : `Jean.SAISRIEN`
-- Mot de passe : `SuperUser11`
-
-## Groupes
-### Informatique
-- `G_IT_RW`
-### Administration
-- `G_AD_RW`
-### Comptabilité
-- `G_CO_RW`
-
-## Imprimantes
-### Partage_Imprimante_1
-- Adresse IP : `193.0.124.37`
-- Nom : `Partage_Imprimante_1`
-- Nom du port : `Partage_Imprimante_1_193.0.124.37`
-### Imprimante 1
-- `Generic / Text Only`
-- Sur `Partage_Imprimante_1`
-
-# Tâches
-## Scénario
-- Vous êtes administrateur système pour une petite entreprise. Vous devez configurer un nouveau serveur Windows Server 2022 pour fournir les services suivants : 
-  - `Gestion des utilisateurs et des ordinateurs dans un domaine Active Directory`
-  - `Partage de fichiers et d'imprimantes`
-  - `Hébergement d'un site Web `
-  - Nom du serveur : `Win22-SRV-3`
-  - Nom du Client : `Win10-PC-2`
-  - Pool DHCP `193.0.124.32/29` : `255.255.255.248`
-  - Network ID : `193.0.124.32`
-  - Adresse range : `193.0.124.33 - 193.0.124.38`
-  - Broadcast Address: `193.0.124.39`
-  - Domaine : `M2i.edu`
-
-
-
-
-
-
 # IIS
 [IT-Connect.fr](https://www.it-connect.fr/installer-et-configurer-iis-10-sur-windows-server-2022/)
 
@@ -108,6 +23,7 @@
 - Srv & PC passé en statique
 ### DHCP
  --------------------------- A COPIER EN DOC
+ --------------------------- CE SERVEUR N'EXISTE PLUS
 - Outils `DHCP`
 - Développez le nom du serveur DHCP, sélectionnez `IPv4` avec le `bouton droit`, puis sélectionnez `Nouvelle étendue`.
 ![Option nouvelle étendue DHCP](https://github.com/Altherneum/.github/blob/main/note/assets/chrome_ybPAvR8Gg4.png?raw=true)
@@ -153,7 +69,6 @@
 - `Planificateur de tâches` en tant qu'administrateur
   - `Bibliothèque du Planificateur de tâches`
 
-
 # Password Policy
 - Créer une GPO sur l'UO `@_FORMATION`
   - Nommer la GPO `GPO_C_Password`
@@ -173,7 +88,6 @@
 - `Durée de verrouillage des comptes` : `30` minutes
 - `Réinitialiser le compteur de verouillages du compte après` : `30` minutes
 - `Seuil de verrouillage du compte` : `5`
-
 
 # FireWall forcé
 - Créer une GPO sur l'UO `Ordinateurs`
@@ -196,7 +110,7 @@
 - Appendix : Copier les fichiers de .CFG sur Git
 - NB : Y'a des bugs et j'ai oublié comment j'ai patch, regarder les fichiers de config à l'identique
 - Clef publique sur partage WinSRV
-- Penser à auto install le soft et move key /autoConfig d'openVPN
+- Penser à auto install le soft et move key /autoConfig d'openVPNWin
 
 # Block software install
 - [IT-connect](https://www.it-connect.fr/gpo-comment-empecher-les-utilisateurs-dexecuter-certains-logiciels/)
