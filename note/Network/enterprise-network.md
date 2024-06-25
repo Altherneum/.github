@@ -154,9 +154,13 @@ Carte Serveurs
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveur`
 
-- IP : `192.168.10.253`
-- Masque : `255.255.255.0`
-- Passerelle par défaut : `192.168.10.254`
+- Carte : `Serveur`
+  - IP : `192.168.10.253`
+  - Masque : `255.255.255.0`
+  - Passerelle par défaut : `192.168.10.254`
+- Carte : `NAT`
+  - `10.0.0.1`
+  - `255.255.255.0`
 
 - Serveur DNS préféré : `192.168.10.10`
 - Serveur DNS auxiliaire : `192.168.10.11`
@@ -174,9 +178,13 @@ Carte Serveurs
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveurs-2`
 
-- IP : `192.169.10.253`
-- Masque : `255.255.255.0`
-- Passerelle par défaut : `192.169.10.254`
+- Carte : `Serveurs-2`
+  - IP : `192.169.10.253`
+  - Masque : `255.255.255.0`
+  - Passerelle par défaut : `192.169.10.254`
+- Carte : `NAT`
+  - `10.0.0.2`
+  - `255.255.255.0`
 
 - Serveur DNS préféré : `192.169.10.10`
 

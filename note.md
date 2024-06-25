@@ -128,3 +128,15 @@
 
 # To do
 - Nettoyer [Github ... /note/notes-network.md](https://github.com/Altherneum/.github/blob/main/note/notes-network.md) | [/note/notes-network.md](/note/notes-network.md)
+
+
+
+
+
+# PPTP VPN
+## Pare-Feu
+- Abaisser le parefeu ou activer `Partage de fichier imprimante` ⚠ dans les deux sens !!!
+- Ajouter le rôle Accès distance
+  - Fonction Routage
+  - Fonction ...
+- 
