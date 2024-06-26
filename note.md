@@ -1,14 +1,4 @@
-# IIS
-[IT-Connect.fr](https://www.it-connect.fr/installer-et-configurer-iis-10-sur-windows-server-2022/)
 
-- Site par défaut : `file:///C:/inetpub/wwwroot/iisstart.htm`
-
-## Ajouter un site
-- Application `Gestionnaire des services internet (IIS)`
-- Sur la catégorie `NOM DU SERVEUR`, `Sites`, faire `Clique droit` : `Ajouter un site WEB`
-  - `Nom du site` : `Site`
-  - `Nom d'hôte` : `Site`
-  - `Chemin d'accès` : `C:\inetpub\Site`
 
 
 

@@ -234,10 +234,15 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 - Ajouter une imprimante via un `Clique droit` sur `Imprimante`, et `Ajouter une imprimante`
   - `Ajouter une nouvelle imprimante via un port existant`, choisir le port déjà crée, `Utiliser un pilote d'imprimante existant sur l'ordinateur` : `Generic / Text Only`
 
-# IIS
-[IT-Connect.fr](https://www.it-connect.fr/installer-et-configurer-iis-10-sur-windows-server-2022/)
-
+## IIS
+- [IT-Connect.fr](https://www.it-connect.fr/installer-et-configurer-iis-10-sur-windows-server-2022/)
 - Site par défaut : `file:///C:/inetpub/wwwroot/iisstart.htm`
+### Ajouter un site
+- Application `Gestionnaire des services internet (IIS)`
+- Sur la catégorie `NOM DU SERVEUR`, `Sites`, faire `Clique droit` : `Ajouter un site WEB`
+  - `Nom du site` : `Site`
+  - `Nom d'hôte` : `Site`
+  - `Chemin d'accès` : `C:\inetpub\Site`
 
 ## Ajouter un site
 - Application `Gestionnaire des services internet (IIS)`
