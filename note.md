@@ -28,23 +28,6 @@
 
 
 
-
-
-# Roue de Deming
-- [WikiPedia.org / roue de Deming](https://fr.wikipedia.org/wiki/Roue_de_Deming)
-
-
-
-
-
-
-
-# Block software install
-- [IT-connect](https://www.it-connect.fr/gpo-comment-empecher-les-utilisateurs-dexecuter-certains-logiciels/)
-
-# Block shell & .BAT
-- ....
-
 -------------------------------------------------------------
 # OpenVPN
 - [OpenVPN setup from std.rocks](https://std.rocks/fr/vpn_openvpn_windows_server.html)
@@ -101,6 +84,7 @@ IP vers Nom DNS CNAME
   - Ajouter l'AD principale et secondaire si dispo
 ## AD DS
 - Role AD DS
+- `Ajouter un nouveau domaine à une forêt existante`
   - Sélectionner le type du domaine : `Domaine enfant`
   - Nom du domaine parent : `FORMATION.LAN`
   - Nouveau nom du domaine : `M2I`

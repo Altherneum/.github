@@ -123,6 +123,34 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 - Server DNS préféré : `127.0.0.1`
 
+### WIN22-SRV-4
+- Admin password : `Respons11`
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveurs`
+
+- Gère le domaine enfant : `M2I.FORMATION.LAN`
+
+- IP : `192.169.10.12`
+- Masque : `255.255.255.0`
+- Gateway : `192.169.10.254`
+
+- Server DNS préféré : `127.0.0.1`
+- Server DNS auxiliaire : `192.168.10.10`
+
+### WIN22-SRV-5
+- Admin password : `Respons11`
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveurs`
+
+- Gère le domaine enfant bis : `ETUDE.LOCAL`
+- Approbation du domaine `FORMATION.LAN`
+
+- IP : `192.169.10.13`
+- Masque : `255.255.255.0`
+- Gateway : `192.169.10.254`
+
+- Server DNS préféré : `127.0.0.1`
+
 ### Win22-SRV-RTR-1
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`

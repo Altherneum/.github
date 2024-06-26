@@ -164,3 +164,11 @@ TO DO
 - `Pare-feu Windows Defender`
 - `Profil du domaine`
 - `Pare-feu Windows Defender : Protéger toutes les connexions réseau` : `Activer`
+
+
+# To Do
+## Block software install
+- [IT-connect](https://www.it-connect.fr/gpo-comment-empecher-les-utilisateurs-dexecuter-certains-logiciels/)
+
+## Block shell & .BAT
+- ....
