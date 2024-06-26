@@ -47,60 +47,7 @@
 
 
 
-# GPO auto shut down à 20H
-- Créer une GPO sur l'UO `Ordinateurs`
-  - Nommer la GPO `C_Shutdown_20H`
-- `Clique droit` sur la GPO : `Modifier`
-  - `Configuration ordinateur`
-  - `Préférences`
-  - `Paramètres du panneau de configuration`
-  - `Tâches planifiées`
-- `Clique droit`, `Nouveau`, `Tâche planifiée (au minimum Windows 7)`
-  - `Nom` : `Shutdown_20H`
-  - `Lors de l'exécution de la tâche, utilisez le compte d'utilisateur suivant` : `Système`
-- Onglet : `Action`, `Nouveau`
-  - `Programme / script` : `C:\Windows\System32\shutdown.exe`
-  - `Ajouter arguments` : `-s -t 0 -f` (Fermeture forcé des applications) 
-  - Ou l'`Arguments` : `-s -t 0 -soft` (Fermeture douce des applications)
-- Onglet `Déclancheur`, `Nouveau`
-  - `Tout les jours` : `20H 00m 00s`
-## Vérifier la GPO auto shut down
-- `gpupdate /force && shutdown -r -t 0` pour appliquer la GPO et relancer la machine
-- `Planificateur de tâches` en tant qu'administrateur
-  - `Bibliothèque du Planificateur de tâches`
 
-# Password Policy
-- Créer une GPO sur l'UO `@_FORMATION`
-  - Nommer la GPO `GPO_C_Password`
-- `Clique droit` sur la GPO : `Modifier`
-- `Configuration ordinateur`
-  - `Stratégies`
-  - `Paramètres Windows`
-  - `Paramètres de sécurité`
-  - `Stratégie de comptes`
-  - `Stratégie de mot de passe`, ainsi que `Stratégie de verrouillage du compte`
-## Stratégie de mot de passe
-- `Longueur minimale du mot de passe` : `14`
-- `Le mot de passe doit respecter des exigences de complexité` : [X]
-- `Durée de vie maximale du mot de passe` : `30`
-- `Durée de vie minimale du mot de passe` : `1`
-## Stratégie de verrouillage du compte
-- `Durée de verrouillage des comptes` : `30` minutes
-- `Réinitialiser le compteur de verouillages du compte après` : `30` minutes
-- `Seuil de verrouillage du compte` : `5`
-
-# FireWall forcé
-- Créer une GPO sur l'UO `Ordinateurs`
-  - Nommer la GPO `GPO_C_Firewall`
-- `Clique droit` sur la GPO : `Modifier`
-- `Configuration ordinateur`
-- `Stratégies`
-- `Modèles d'administration`
-- `Réseau`
-- `Connexions réseau`
-- `Pare-feu Windows Defender`
-- `Profil du domaine`
-- `Pare-feu Windows Defender : Protéger toutes les connexions réseau` : `Activer`
 
 # Block software install
 - [IT-connect](https://www.it-connect.fr/gpo-comment-empecher-les-utilisateurs-dexecuter-certains-logiciels/)
@@ -225,6 +172,18 @@ IP vers Nom DNS CNAME
   - `Authentification pour toutes les ressources de la forêt`
   - `Oui, confirmer l'approbation sortante`
   - `Oui, confirmer l'approbation sortante`
+## Vérification
+- Créer un PC client dans le domaine ETUDE.LOCAL
+  - Connectez vous à un utilisateur de FORMATION.LOCAL
+- Créer des ressources dans les domaine ETUDE.LOCAL
+  - Utilisez les ressources d'ETUDE.LOCAL depuis FORMATION.LAN
+- L'inverse est possible aussi
+
+
+
+
+
+
 ## Utilisateurs et ordinateurs
 - Dans utilisateurs et Ordinateurs AD
   - Créer UO User etc, partage, etc
