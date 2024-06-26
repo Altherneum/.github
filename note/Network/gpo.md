@@ -107,9 +107,6 @@
 - Relancer la machine
 - Le fond d'écran est actif
 
--------------------
-TO DO
--------------------
 ## Stratégie shutdown à 20H
 - Créer une GPO sur l'UO `Ordinateurs`
   - Nommer la GPO `C_Shutdown_20H`
