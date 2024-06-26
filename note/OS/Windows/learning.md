@@ -33,7 +33,6 @@ cours sur Windows
 - `color [couleurs]` Couleur du text ou de l'arrière plan  
 Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commandes en gris et la couleur de premier plan en rouge, tapez : `color 84`
 - `exit` ferme la console
-- `whoami` affiche le nom d'utilisateur
 
 ## Dossiers
 - `dir` Dossiers et fichiers
@@ -93,6 +92,7 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 ## Système
 - `systemInfo` Information système
 - `hostname` Le nom de l’hôte actuel
+- `whoami` affiche le nom d'utilisateur
 - `shutdown /s` Arrête le système
 - `logoff` Déconnecte le compte Windows
 - `ver` Version du système
