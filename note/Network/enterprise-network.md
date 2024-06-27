@@ -269,26 +269,34 @@ Carte Serveurs
 
 ## Active Directory
 ### Structure d'unité d'organisation
+#### FORMATION.LAN
 - `@_FORMATION`
-- - `Utilisateurs`
-- - - `IT`
-- - - `RH`
-- - `Ordinateurs`
-- - - `IT`
-- - - `RH`
-- - `Groupes`
-- - - `IT`
-- - - `RH`
-- - `Partages`
-- - - `IT`
-- - - `RH`
-- - `Imprimantes` (N'existe pas encore)
-
-### Groupes
+-  - `Utilisateurs`
+-  -  - `IT`
+-  -  - `RH`
+-  - `Ordinateurs`
+-  -  - `IT`
+-  -  - `RH`
+-  - `Groupes`
+-  -  - `IT`
+-  -  - `RH`
+-  - `Partages`
+-  -  - `IT`
+-  -  - `RH`
+-  - `Imprimantes` (N'existe pas encore)
+##### Groupes
 - `G_RH_RW`
-- - `D_RH_RW`
+-  - `D_RH_RW`
 - `G_IT_RW`
-- - `D_IT_RW`
+-  - `D_IT_RW`
+
+#### ETUDE.LOCAL
+- `@_ETUDE`
+-  - `Utilisateurs`
+-  - `Ordinateurs`
+-  - `Groupes`
+-  -  - `IT`
+-  - `Partages`
 
 ### Utilisateurs
 #### IT
@@ -300,12 +308,12 @@ Carte Serveurs
 
 ### Partage
 - `C:/`
-- - `@_Ressources/`
-- - - `Services/`
-- - - - `RH`, (`\\Win22-srv-1\rh`)
-- - - - `IT`, (`\\Win22-srv-1\it`)
-- - - `GPL/` (`\\Win22-srv-1\gpl`) (Chrome, Firefox, Putty, VLC, ...)
-- - - `FDE/` (`\\Win22-srv-1\fde`) (Logo M2I)
+-  - `@_Ressources/`
+-  -  - `Services/`
+-  -  -  - `RH`, (`\\Win22-srv-1\rh`)
+-  -  -  - `IT`, (`\\Win22-srv-1\it`)
+-  -  - `GPL/` (`\\Win22-srv-1\gpl`) (Chrome, Firefox, Putty, VLC, ...)
+-  -  - `FDE/` (`\\Win22-srv-1\fde`) (Logo M2I)
 
 ## DHCP
 - Dynamic Host Configuration Protocol

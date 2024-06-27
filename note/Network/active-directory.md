@@ -184,10 +184,12 @@ Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de re
 ## Création des dossiers
 - Dans le disque `C:/`
 - `Nouveau dossier` nommé `@_Ressource`
+
 - `Nouveau dossier` dans `@_Ressource` appelé `Services`
 - `Clique droit` sur `Service`, `Propriétés`
 - Casser l'héritage `Sécurité`, `Avancé`, `Désactiver l'héritage`, `Convertir les autorisations héritées en autorisations explicites sur cet objet`
 - `Utilisateurs` peut-être maintenant `Supprimer`
+
 - Nouveau dossier dans `Services` nommé `IT`
 - Nouveau dossier dans `Services` nommé `RH`
 
