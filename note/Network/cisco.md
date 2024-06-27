@@ -31,6 +31,10 @@ Pour appareil de niveau différents
 
 - `ip route 192.168.10.0 255.255.255.0 192.168.254.1` Configure le routage de l'adresse `10.0` vers `254.1`
 # Routage
-- Afin de router
-![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_nD1Ro5DoIZ.png?raw=true)
+- Afin de router vers le réseau `172.17.0.0` le paquet va prendre le chemin suivant
 ![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_hxJE4ozS93.png?raw=true)
+- Pour créer ce routage, le `Routeur5` doit savoir ou aller
+- On va donc lui indiquer que le `CopyRouteur5` connait le chemin et préciser l'interface Ethernet.
+- Dans le `Routeur5` créer la route statique pour aller au réseau `172.17.0.0` via l'interface entourée du `CopyRouteur5` `(Gig0/2)`
+![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_nD1Ro5DoIZ.png?raw=true)
+![Interface du routeur](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_FvUjtKC88s?raw=true)
