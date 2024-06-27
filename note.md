@@ -37,6 +37,8 @@
 - Penser à auto install le soft et move key /autoConfig d'openVPNWin
 -------------------------------------------------------
 
+
+
 # To test
 - Tester auto shut down
   - Dans l'outils prévus
@@ -45,8 +47,14 @@
   - OpenVPN IP check
 
 
+
+
+
+
 # To do
 - Nettoyer [Github ... /note/notes-network.md](https://github.com/Altherneum/.github/blob/main/note/notes-network.md) | [/note/notes-network.md](/note/notes-network.md)
+
+
 
 
 
@@ -59,6 +67,14 @@
   - Fonction Routage
   - Fonction ...
 ----------------------------------------------------
+## Role
+Routage et accès à distance
+## config
+...
+
+
+
+
 
 
 # Zone inversé
