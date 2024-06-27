@@ -37,4 +37,4 @@ Pour appareil de niveau différents
 - On va donc lui indiquer que le `CopyRouteur5` connait le chemin et préciser l'interface Ethernet.
 - Dans le `Routeur5` créer la route statique pour aller au réseau `172.17.0.0` via l'interface entourée du `CopyRouteur5` `(Gig0/2)`
 ![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_nD1Ro5DoIZ.png?raw=true)
-![Interface du routeur](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_FvUjtKC88s?raw=true)
+![Interface du routeur](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_FvUjtKC88s.png?raw=true)
