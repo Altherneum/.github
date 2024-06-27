@@ -142,7 +142,8 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveurs`
 
-- Gère le domaine enfant bis : `ETUDE.LOCAL`
+- Gère l'[Active Directory](#Active-Directory)
+  - Domaine enfant bis : `ETUDE.LOCAL`
 - Approbation du domaine `FORMATION.LAN`
 
 - IP : `192.169.10.13`
@@ -289,6 +290,22 @@ Carte Serveurs
 -  - `D_RH_RW`
 - `G_IT_RW`
 -  - `D_IT_RW`
+-  -  - `U_IT_RW`
+##### Utilisateurs
+###### IT
+- `Nordine HATEUR`, `N123456789`, `SuperUser11`
+- `Sarah CROCHE`, `S123456789`, `Azerty11` (Mot de passe non changé)
+###### RH
+- `Paul EMPLOI`, `P123456789`, `Azerty11` (Mot de passe non changé)
+- `France TRAVAIL`, `F123456789`, `Azerty11` (Mot de passe non changé)
+##### Partage
+- `C:/`
+-  - `@_Ressources/`
+-  -  - `Services/`
+-  -  -  - `RH`, (`\\Win22-srv-1\rh`)
+-  -  -  - `IT`, (`\\Win22-srv-1\it`)
+-  -  - `GPL/` (`\\Win22-srv-1\gpl`) (Chrome, Firefox, Putty, VLC, ...)
+-  -  - `FDE/` (`\\Win22-srv-1\fde`) (Logo M2I)
 
 #### ETUDE.LOCAL
 - `@_ETUDE`
@@ -298,23 +315,10 @@ Carte Serveurs
 -  -  - `IT`
 -  - `Partages`
 
-### Utilisateurs
-#### IT
-- `Nordine HATEUR`, `N123456789`, `SuperUser11`
-- `Sarah CROCHE`, `S123456789`, `Azerty11` (Mot de passe non changé)
-#### RH
-- `Paul EMPLOI`, `P123456789`, `Azerty11` (Mot de passe non changé)
-- `France TRAVAIL`, `F123456789`, `Azerty11` (Mot de passe non changé)
-
-### Partage
-- `C:/`
--  - `@_Ressources/`
--  -  - `Services/`
--  -  -  - `RH`, (`\\Win22-srv-1\rh`)
--  -  -  - `IT`, (`\\Win22-srv-1\it`)
--  -  - `GPL/` (`\\Win22-srv-1\gpl`) (Chrome, Firefox, Putty, VLC, ...)
--  -  - `FDE/` (`\\Win22-srv-1\fde`) (Logo M2I)
-
+##### Groupes
+- `G_IT_RW`
+-  - `D_IT_RW`
+-  -  - `U_IT_RW @FORMATION.LAN` (à tester car NOK)
 ## DHCP
 - Dynamic Host Configuration Protocol
 - N'est pas encore crée

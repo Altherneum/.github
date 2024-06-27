@@ -89,11 +89,6 @@ IP vers Nom DNS CNAME
 - Supprimer héritage
 - Nouvelle UO (Groupe, utilisateurs, ordinateurs, ...)
 
-
-
-
-
-
 ## Utilisateurs et ordinateurs
 - Dans utilisateurs et Ordinateurs AD
   - Créer UO User etc, partage, etc
@@ -112,10 +107,10 @@ IP vers Nom DNS CNAME
 
 
 
+Attention pleins de groupes ont étés ajoutés les un dans les autres pour tester le shared folder du domaine enfant ETUDE.LOCAL, mais ne marche pas (Groupe Universel added, and added on ETUDE groups IT)
 
 
 
 
 
-
-REGISTER LA ZONE DANS L'AD (Dans DNS)
+REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
