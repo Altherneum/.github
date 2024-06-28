@@ -30,7 +30,12 @@ Pour appareil de niveau différents
 - `no ip address` Réstaure l'IP
 
 - `ip route 192.168.10.0 255.255.255.0 192.168.254.1` Configure le routage de l'adresse `10.0` vers `254.1`
+
+- `router RIP` Active le routage RIP
+- `network 172.18.0.0` active le routage dynamique vers le réseau 172.18.0.0 (doit être fait sur tout les réseaux)
+
 # Routage
+# Routage simple
 - Afin de router vers le réseau `172.17.0.0` le paquet va prendre le chemin suivant
 ![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_hxJE4ozS93.png?raw=true)
 - Pour créer ce routage, le `Routeur5` doit savoir ou aller
@@ -43,5 +48,19 @@ Pour appareil de niveau différents
 ![Image cisco avec route en moins](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_1LaxJbFkfa.png?raw=true)
 ![Image cisco bis](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_xEZwjLLbZI.png?raw=true)
 - On va donc créer une nouvelle route statique sur le routeur `Routeur5` et le `CopyRouteur5`
-- Le `Routeur5` va donc avoir une nouvelle route pour lui indiquer que le `CopyRouteur(1)` connait la route, qui lui même va rediriger vers le `CopyRouteur`
-- L'inverse va être fait, le `CopyRouteur` va avoir une nouvelle route statique vers `CopyRouteur(1)` qui lui même va rediriger à son tour vers `Routeur5`
+- `CopyRouteur5(1)` connait déjà toutes les routes et n'aura donc aucune route à créer
+
+- Le `Routeur5` va donc avoir une nouvelle route pour lui indiquer que le `CopyRouteur5(1)` connait la route, qui lui même va rediriger vers le `CopyRouteur5` pour aller sur le réseau `172.17.0.0`
+- L'inverse va être fait, le `CopyRouteur` va avoir une nouvelle route statique vers `CopyRouteur(1)` qui lui même va rediriger à son tour vers `Routeur5` pour aller vers le réseau `172.18.0.0`
+## Routage dynamique
+[RIP](https://fr.wikipedia.org/wiki/Routing_Information_Protocol) vs [OSPF](https://fr.wikipedia.org/wiki/Open_Shortest_Path_First)
+- `RIP (Routing Information Protocol)` sera le routage sera le chemin avec le moins de saut (Routeur)
+- D'autre comme `OSPF (Open Shortest Path First)` prendront la route la plus rapide (Exemple un réseau fibré ou un réseau sans latence), plustôt que la route avec le moins de saut
+### Exemple
+- Sur le routeur : `CopyRouteur5(1)`
+-  `enable ` Passe en mode Super user
+- `configure terminal ` Passe en mode configuration
+- `router RIP` Active le routage RIP
+- `network 172.17.0.0`
+- `network 192.168.3.0`
+- `network 192.168.2.0` Active la découverte automatique de route dynamique vers tout ces réseaux
