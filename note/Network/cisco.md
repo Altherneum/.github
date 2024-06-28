@@ -56,7 +56,7 @@ Pour appareil de niveau différents
 [RIP](https://fr.wikipedia.org/wiki/Routing_Information_Protocol) vs [OSPF](https://fr.wikipedia.org/wiki/Open_Shortest_Path_First)
 - `RIP (Routing Information Protocol)` sera le routage sera le chemin avec le moins de saut (Routeur)
 - D'autre comme `OSPF (Open Shortest Path First)` prendront la route la plus rapide (Exemple un réseau fibré ou un réseau sans latence), plustôt que la route avec le moins de saut
-### Exemple
+### Routage RIP
 - Sur le routeur : `CopyRouteur5(1)`
 -  `enable ` Passe en mode Super user
 - `configure terminal ` Passe en mode configuration
@@ -64,3 +64,15 @@ Pour appareil de niveau différents
 - `network 172.17.0.0`
 - `network 192.168.3.0`
 - `network 192.168.2.0` Active la découverte automatique de route dynamique vers tout ces réseaux
+### Routage OSPF
+Exemple sur le routeur `Routeur5` 
+(R1 sur l'image) NB : à modifier avec les PKT
+- `enable`
+- `configure terminal`
+- `router OSPF 1`
+- `router-id 1.1.1.1`
+- `network 10.255.255.0   0.0.0.3     area 0`
+- `network 10.255.255.8   0.0.0.3     area 0`
+- `network 172.16.0.0     0.0.0.255   area 0`
+
+![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/ms-teams_9knjVRjsVE.png?raw=true)
