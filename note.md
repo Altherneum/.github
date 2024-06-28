@@ -114,3 +114,16 @@ Attention pleins de groupes ont étés ajoutés les un dans les autres pour test
 
 
 REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
+
+
+
+
+
+
+
+
+
+
+- Sur CISCO faire pe PKT du réseau en OSPF
+- Créer page cisco PKT
+- Créer page PDF listing (set on anon)

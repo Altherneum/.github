@@ -76,3 +76,5 @@ Exemple sur le routeur `Routeur5`
 - `network 172.16.0.0     0.0.0.255   area 0`
 
 ![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/images/ms-teams_9knjVRjsVE.png?raw=true)
+
+Il ne crée que les branches qui lui sont rattachés
