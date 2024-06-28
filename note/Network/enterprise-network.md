@@ -2,12 +2,12 @@
 ## Tâche globale
 Réseau à créer (Avec Active directory redondant)
 
-![Exemple de réseau complet](https://github.com/Altherneum/.github/blob/main/note/assets/fil-Rouge.png?raw=true)
+![Exemple de réseau complet](https://github.com/Altherneum/.github/blob/main/note/assets/images/fil-Rouge.png?raw=true)
 
 ## Tâche réseau 1
 Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
-![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/MicrosoftTeams-image.png?raw=true)
+![Exemple de réseau à créer](https://github.com/Altherneum/.github/blob/main/note/assets/images/MicrosoftTeams-image.png?raw=true)
 
 ## Outils
 - [Cours / Hyperviseur](https://doc.altherneum.fr/cours/hyper-v.html)

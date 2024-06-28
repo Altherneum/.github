@@ -37,16 +37,16 @@ Pour appareil de niveau différents
 # Routage
 # Routage simple
 - Afin de router vers le réseau `172.17.0.0` le paquet va prendre le chemin suivant
-![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_hxJE4ozS93.png?raw=true)
+![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/images/PacketTracer_hxJE4ozS93.png?raw=true)
 - Pour créer ce routage, le `Routeur5` doit savoir ou aller
 - On va donc lui indiquer que le `CopyRouteur5` connait le chemin et préciser l'interface Ethernet.
 - Dans le `Routeur5` créer la route statique pour aller au réseau `172.17.0.0` via l'interface entourée du `CopyRouteur5` `(Gig0/2)`
-![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_nD1Ro5DoIZ.png?raw=true)
-![Interface du routeur](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_FvUjtKC88s.png?raw=true)
+![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/images/PacketTracer_nD1Ro5DoIZ.png?raw=true)
+![Interface du routeur](https://github.com/Altherneum/.github/blob/main/note/assets/images/PacketTracer_FvUjtKC88s.png?raw=true)
 ## Routage intermédiaire
 - Lors une route casse, nous allons devoir créer une nouvelle route afin de rediriger le traffic au bon endroit
-![Image cisco avec route en moins](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_1LaxJbFkfa.png?raw=true)
-![Image cisco bis](https://github.com/Altherneum/.github/blob/main/note/assets/PacketTracer_xEZwjLLbZI.png?raw=true)
+![Image cisco avec route en moins](https://github.com/Altherneum/.github/blob/main/note/assets/images/PacketTracer_1LaxJbFkfa.png?raw=true)
+![Image cisco bis](https://github.com/Altherneum/.github/blob/main/note/assets/images/PacketTracer_xEZwjLLbZI.png?raw=true)
 - On va donc créer une nouvelle route statique sur le routeur `Routeur5` et le `CopyRouteur5`
 - `CopyRouteur5(1)` connait déjà toutes les routes et n'aura donc aucune route à créer
 
@@ -75,4 +75,4 @@ Exemple sur le routeur `Routeur5`
 - `network 10.255.255.8   0.0.0.3     area 0`
 - `network 172.16.0.0     0.0.0.255   area 0`
 
-![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/ms-teams_9knjVRjsVE.png?raw=true)
+![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/images/ms-teams_9knjVRjsVE.png?raw=true)
