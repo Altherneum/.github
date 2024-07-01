@@ -127,3 +127,103 @@ REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
 - Sur CISCO faire pe PKT du réseau en OSPF
 - Créer page cisco PKT
 - Créer page PDF listing (set on anon)
+
+
+
+
+
+
+
+
+
+
+Fonctionnement des VLAN
+-	Segmentation Logique : Les VLAN permettent de regrouper des ports de commutateur (switch) en réseaux logiques indépendamment de leur emplacement physique. Chaque VLAN constitue un domaine de broadcast distinct.
+-	Isolation et Sécurité : Les VLAN isolent le trafic réseau, ce qui améliore la sécurité en empêchant les utilisateurs d'un VLAN d'accéder directement aux ressources d'un autre VLAN sans l'utilisation d'un routeur ou d'un dispositif de routage.
+-	Performance : En limitant les domaines de broadcast, les VLAN réduisent le trafic inutile sur le réseau, améliorant ainsi les performances globales.
+Types de VLAN
+-	VLAN de Données : Utilisés pour le trafic utilisateur normal.
+-	VLAN de Gestion : Utilisés pour accéder et gérer les équipements réseau.
+-	VLAN Voix : Optimisés pour le trafic VoIP (Voice over IP).
+-	VLAN Natifs : Utilisés pour transmettre le trafic non étiqueté lorsqu'un trunk est configuré entre des switches.
+Configuration des VLAN sur les Switches Cisco
+# Création d'un VLAN
+Pour créer un VLAN sur un switch Cisco, vous utilisez les commandes en mode de configuration globale :
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# vlan [vlan_id]
+Switch(config-vlan)# name [vlan_name]
+Switch(config-vlan)# exit
+Switch(config)# exit
+```
+Par exemple, pour créer un VLAN 10 nommé "Sales" :
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# vlan 10
+Switch(config-vlan)# name Sales
+Switch(config-vlan)# exit
+Switch(config)# exit
+```
+# Assigner des Ports à un VLAN
+Pour attribuer des ports spécifiques à un VLAN :
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface [interface_id]
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan [vlan_id]
+Switch(config-if)# exit
+Switch(config)# exit
+```
+Par exemple, pour assigner le port FastEthernet 0/1 au VLAN 10 :
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface fastethernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+Switch(config)# exit
+```
+Configuration d'un Trunk
+Pour permettre à un switch de transporter le trafic de plusieurs VLAN sur une seule interface physique, vous configurez un port en mode trunk :
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface [interface_id]
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk encapsulation dot1q
+Switch(config-if)# switchport trunk allowed vlan [vlan_list]
+Switch(config-if)# exit
+Switch(config)# exit
+```
+Par exemple, pour configurer le port GigabitEthernet 0/1 en mode trunk pour les VLAN 10 et 20 :
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface gigabitethernet 0/1
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk encapsulation dot1q
+Switch(config-if)# switchport trunk allowed vlan 10,20
+Switch(config-if)# exit
+Switch(config)# exit
+```
+# Vérification de la Configuration
+Pour vérifier les VLAN configurés et leurs associations avec les interfaces, utilisez les commandes suivantes :
+-	Afficher les VLAN configurés :
+`Switch# show vlan brief`
+
+-	Afficher la configuration des trunks :
+`Switch# show interfaces trunk`
+
+-	Afficher les détails d'un VLAN spécifique :
+
+`Switch# show vlan id [vlan_id]`
+Par exemple, pour afficher les détails du VLAN 10 :
+
+`Switch# show vlan id 10`
+# Conclusion
+- Les VLAN sont un outil puissant pour segmenter, sécuriser et optimiser les réseaux sur les équipements Cisco. Leur configuration permet une gestion plus flexible et efficace des ressources réseau, en particulier dans les environnements d'entreprise. En utilisant les commandes Cisco appropriées, vous pouvez facilement créer, configurer et gérer les VLAN pour répondre aux besoins spécifiques de votre réseau.
+- Le routage inter-VLAN (inter-VLAN routing) permet la communication entre différents VLANs (Virtual Local Area Networks) au sein d'un réseau. Dans les environnements Cisco, il existe plusieurs méthodes pour configurer le routage inter-VLAN, notamment l'utilisation d'un routeur avec des interfaces sous-interface (Router on a Stick) ou l'utilisation de commutateurs de niveau 3 (Layer 3 switches) qui ont des capacités de routage.
