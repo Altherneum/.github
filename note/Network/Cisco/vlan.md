@@ -1,6 +1,8 @@
 # VLAN
 ## Liste des commandes
 - `show vlan brief`
+- `show interfaces trunk`
+- `show vlan id [vlan_id]`
 - `vlan [VLAN_ID]`
 - `name [vlan_name]`
 - `switchport mode access`
@@ -18,19 +20,15 @@ Sur le mode configuration d'un switch / routeur :
 - `name [vlan_name]` (Nom générique du VLAN)
   - `name Serveur`
 
-- `exit`, `exit`
-
 ## Placer une interface sur un VLAN
 Pour attribuer une interface dans un VLAN
 - `enable`
 - `configure terminal`
-- `interface [interface_id]` (interface à placer dans le VLAN)
+- `interface [interface_type] [interface_id]` (interface à placer dans le VLAN)
   - `interface fastEthernet 0/1`
 - `switchport mode access`
 - `switchport access vlan [vlan_id]`
   - `switchport access vlan 10`
-  
-- `exit`, `exit`
 
 L'interface ne pourra communiquer que avec d'autres interfaces du même VLAN
 
@@ -43,13 +41,12 @@ Deux switchs, chacun avec un PC dans un vlan
   - `vlan 10`
 - `name [vlan_name]`
   - `name Serveur`
-- `interface [interface_id]` (interface relier au PC)
+- `interface [interface_type] [interface_id]` (interface relier au PC)
   - `interface fastEthernet 0/1`
 - `switchport mode access`
 - `switchport access vlan [vlan_id]`
   - `switchport access vlan 10`
   
-- `exit`, `exit`
 ### Switch 2
 Sur le second switch, retaper les mêmes commandes que sur le [Switch 1](#Switch-1)
 ### Explications
@@ -59,13 +56,11 @@ Il va falloir les lier ensembles
 Tirer un câble pour relier les deux switchs / routeurs, et sur leurs interfaces communes :
 - `enable`
 - `configure terminal`
-- `interface [interface_id]` (interface commune aux deux switchs / routeurs)
+- `interface [interface_type] [interface_id]` (interface commune aux deux switchs / routeurs)
   - `interface fastEthernet 0/1`
 - `switchport mode access`
 - `switchport access vlan [vlan_id]`
   - `switchport access vlan 10`
-
-- `exit`, `exit`
 
 Les deux switch peuvent faire communiquer les VLAN identique entre eux
 
@@ -73,12 +68,10 @@ Les deux switch peuvent faire communiquer les VLAN identique entre eux
 Pour permettre à un switch de transporter le trafic de plusieurs VLAN sur une seule interface physique, vous configurez un port en mode trunk :
 - `enable`
 - `configure terminal`
-- `interface [interface_id]` (interface à passer en mode trunk)
+- `interface [interface_type] [interface_id]` (interface à passer en mode trunk)
   - `interface fastEthernet 0/1`
 - `switchport mode trunk`
 - `switchport trunk encapsulation dot1q`
 - `switchport trunk allowed vlan [vlan_list]`
   - `switchport trunk allowed vlan 10`
   - `switchport trunk allowed vlan 10,20`
-
-- `exit`, `exit`

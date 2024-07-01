@@ -171,7 +171,7 @@ Pour attribuer des ports spécifiques à un VLAN :
 ```
 Switch> enable
 Switch# configure terminal
-Switch(config)# interface [interface_id]
+Switch(config)# interface [interface_type] [interface_id]
 Switch(config-if)# switchport mode access
 Switch(config-if)# switchport access vlan [vlan_id]
 Switch(config-if)# exit
@@ -192,7 +192,7 @@ Pour permettre à un switch de transporter le trafic de plusieurs VLAN sur une s
 ```
 Switch> enable
 Switch# configure terminal
-Switch(config)# interface [interface_id]
+Switch(config)# interface [interface_type] [interface_id]
 Switch(config-if)# switchport mode trunk
 Switch(config-if)# switchport trunk encapsulation dot1q
 Switch(config-if)# switchport trunk allowed vlan [vlan_list]
