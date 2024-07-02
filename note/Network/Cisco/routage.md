@@ -53,6 +53,11 @@ Exemple sur le routeur `Routeur5`
   - `network 10.255.255.8   0.0.0.3     area 0`
   - `network 172.16.0.0     0.0.0.255   area 0`
 
+![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/images/ms-teams_9knjVRjsVE.png?raw=true)
+
+Il ne crée que les branches qui lui sont rattachés
+
+
 - `show ip route ospf`
 - `show ip ospf neighbor`
 - `show ip ospf database`
@@ -72,18 +77,17 @@ Router(config-router)# network 192.168.1.0 0.0.0.255 area 0
 Router(config-router)# network 10.0.0.0 0.255.255.255 area 1
 Router(config-router)# exit
 Router(config)# exit
+
+pourquoi area 1 & 2 et pas que 0 ??????
 ```
 
 
-pourquoi area 1 & 2 et pas que 0 ??????
 
 
 
 
 
-![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/images/ms-teams_9knjVRjsVE.png?raw=true)
 
-Il ne crée que les branches qui lui sont rattachés
 
 
 
