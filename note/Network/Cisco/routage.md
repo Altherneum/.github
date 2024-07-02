@@ -58,11 +58,12 @@ Exemple sur le routeur `Routeur5`
 - `show ip ospf database`
 
 
-
+To filter
+```
 Exemple de Configuration
 Supposons que nous avons un réseau avec les segments suivants :
-⦁	Réseau 192.168.1.0/24 dans la zone 0
-⦁	Réseau 10.0.0.0/8 dans la zone 1
+- Réseau 192.168.1.0/24 dans la zone 0
+- Réseau 10.0.0.0/8 dans la zone 1
 La configuration OSPF serait la suivante :
 Router> enable
 Router# configure terminal
@@ -71,7 +72,7 @@ Router(config-router)# network 192.168.1.0 0.0.0.255 area 0
 Router(config-router)# network 10.0.0.0 0.255.255.255 area 1
 Router(config-router)# exit
 Router(config)# exit
-
+```
 
 
 pourquoi area 1 & 2 et pas que 0 ??????
@@ -109,39 +110,39 @@ TO CHECK
 
 
 
+# Enhanced Interior Gateway Routing Protocol (EIGRP)
 TO FILTER
 ```
-# Enhanced Interior Gateway Routing Protocol (EIGRP) 
 est un protocole de routage avancé développé par Cisco. Il combine les avantages des protocoles de routage distance-vector et link-state, offrant une convergence rapide et une grande scalabilité. Voici un aperçu détaillé de ses caractéristiques, fonctionnement et configuration.
 Caractéristiques de EIGRP
-⦁	Protocole Hybride : EIGRP est souvent considéré comme un protocole hybride car il utilise des caractéristiques à la fois des protocoles distance-vector et link-state.
-⦁	Convergence Rapide : Grâce à son algorithme DUAL (Diffusing Update Algorithm), EIGRP peut trouver rapidement des routes de remplacement sans recalculer toute la table de routage.
-⦁	Métrique Composite : EIGRP utilise une métrique composite basée sur la bande passante, le délai, la charge, la fiabilité et la MTU. Par défaut, seuls la bande passante et le délai sont utilisés.
-⦁	Support pour VLSM et CIDR : EIGRP supporte les masques de sous-réseau variables (VLSM) et le routage sans classe (CIDR), permettant une gestion plus efficace des adresses IP.
-⦁	Mises à Jour Partielles : Au lieu d'envoyer des mises à jour complètes, EIGRP envoie des mises à jour partielles et incrémentales lorsque les changements de topologie se produisent, ce qui réduit l'utilisation de la bande passante.
-⦁	Tables Multiples : EIGRP maintient plusieurs tables : une table de voisinage, une table de topologie et une table de routage.
-⦁	Support Multicast et Unicast : Les mises à jour de routage peuvent être envoyées en multicast (224.0.0.10) ou en unicast.
+- Protocole Hybride : EIGRP est souvent considéré comme un protocole hybride car il utilise des caractéristiques à la fois des protocoles distance-vector et link-state.
+- Convergence Rapide : Grâce à son algorithme DUAL (Diffusing Update Algorithm), EIGRP peut trouver rapidement des routes de remplacement sans recalculer toute la table de routage.
+- Métrique Composite : EIGRP utilise une métrique composite basée sur la bande passante, le délai, la charge, la fiabilité et la MTU. Par défaut, seuls la bande passante et le délai sont utilisés.
+- Support pour VLSM et CIDR : EIGRP supporte les masques de sous-réseau variables (VLSM) et le routage sans classe (CIDR), permettant une gestion plus efficace des adresses IP.
+- Mises à Jour Partielles : Au lieu d'envoyer des mises à jour complètes, EIGRP envoie des mises à jour partielles et incrémentales lorsque les changements de topologie se produisent, ce qui réduit l'utilisation de la bande passante.
+- Tables Multiples : EIGRP maintient plusieurs tables : une table de voisinage, une table de topologie et une table de routage.
+- Support Multicast et Unicast : Les mises à jour de routage peuvent être envoyées en multicast (224.0.0.10) ou en unicast.
 Fonctionnement de EIGRP
-⦁	Découverte de Voisins : Les routeurs EIGRP envoient des paquets Hello pour découvrir et maintenir des adjacences avec des routeurs voisins.
-⦁	Formation de la Table de Voisinage : Les routeurs voisins qui répondent aux paquets Hello sont ajoutés à la table de voisinage.
-⦁	Échange d'Informations de Routage : Les routeurs échangent des mises à jour de routage pour construire leur table de topologie.
-⦁	Algorithme DUAL : EIGRP utilise l'algorithme DUAL pour garantir des chemins sans boucle et déterminer les routes optimales vers chaque destination.
-⦁	Tables de Routage : Les informations de la table de topologie sont utilisées pour construire la table de routage.
+- Découverte de Voisins : Les routeurs EIGRP envoient des paquets Hello pour découvrir et maintenir des adjacences avec des routeurs voisins.
+- Formation de la Table de Voisinage : Les routeurs voisins qui répondent aux paquets Hello sont ajoutés à la table de voisinage.
+- Échange d'Informations de Routage : Les routeurs échangent des mises à jour de routage pour construire leur table de topologie.
+- Algorithme DUAL : EIGRP utilise l'algorithme DUAL pour garantir des chemins sans boucle et déterminer les routes optimales vers chaque destination.
+- Tables de Routage : Les informations de la table de topologie sont utilisées pour construire la table de routage.
 Configuration de Base de EIGRP sur un Routeur Cisco
 ```
 
 ```
-⦁	Accéder au mode de configuration globale :
+- Accéder au mode de configuration globale :
 Router> enable
 Router# configure terminal
-⦁	Activer EIGRP et spécifier un AS (Autonomous System) Number :
+- Activer EIGRP et spécifier un AS (Autonomous System) Number :
 Router(config)# router eigrp [as_number]
-⦁	Définir les réseaux à annoncer :
+- Définir les réseaux à annoncer :
 Router(config-router)# network [network_address] [wildcard_mask]
 Exemple de Configuration
 Supposons que nous avons un réseau avec les segments suivants :
-⦁	Réseau 192.168.1.0/24
-⦁	Réseau 10.0.0.0/8
+- Réseau 192.168.1.0/24
+- Réseau 10.0.0.0/8
 La configuration EIGRP serait la suivante :
 Router> enable
 Router# configure terminal
@@ -155,11 +156,11 @@ Router(config)# exit
 ```
 Vérification de la Configuration
 Pour vérifier la configuration et le fonctionnement de EIGRP, vous pouvez utiliser les commandes suivantes :
-⦁	Afficher les routes EIGRP :
+- Afficher les routes EIGRP :
 Router# show ip route eigrp
-⦁	Afficher les voisins EIGRP :
+- Afficher les voisins EIGRP :
 Router# show ip eigrp neighbors
-⦁	Afficher la table de topologie EIGRP :
+- Afficher la table de topologie EIGRP :
 Router# show ip eigrp topology
 Conclusion
 EIGRP est un protocole de routage puissant et flexible, idéal pour les réseaux de moyenne à grande taille. Il offre une convergence rapide, une utilisation efficace de la bande passante et une grande scalabilité. Bien que plus complexe à configurer que des protocoles comme RIP, ses avantages en termes de performance et de fonctionnalités en font un choix populaire pour les réseaux Cisco.
