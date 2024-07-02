@@ -29,34 +29,60 @@ show ip route
 -  `enable ` Passe en mode Super user
 - `configure terminal ` Passe en mode configuration
 - `router RIP` Active le routage RIP
-- `network 172.17.0.0`
-- `network 192.168.3.0`
-- `network 192.168.2.0` Active la découverte automatique de route dynamique vers tout ces réseaux
+- `version 2` (optionnel, si vous voulez utiliser RIPv2)
+- `network [network_address]`
+  - `network 172.17.0.0`
+  - `network 192.168.3.0`
+  - `network 192.168.2.0` Active la découverte automatique de route dynamique vers tout ces réseaux
+
+#### Vérification
+- `show ip route`
+- `show ip protocols`
+- `show ip rip database`
 
 ### Routage OSPF
 Exemple sur le routeur `Routeur5` 
 (R1 sur l'image) NB : à modifier avec les PKT
 - `enable`
 - `configure terminal`
-- `router OSPF 1`
-- `router-id 1.1.1.1`
-- `network 10.255.255.0   0.0.0.3     area 0`
-- `network 10.255.255.8   0.0.0.3     area 0`
-- `network 172.16.0.0     0.0.0.255   area 0`
+- `router ospf [process-id]`
+  - `router OSPF 1`
+- `router-id 1.1.1.1` ?????
+- `network [network_address] [wildcard_mask] area [area_id]`
+  - `network 10.255.255.0   0.0.0.3     area 0`
+  - `network 10.255.255.8   0.0.0.3     area 0`
+  - `network 172.16.0.0     0.0.0.255   area 0`
+
+- `show ip route ospf`
+- `show ip ospf neighbor`
+- `show ip ospf database`
+
+
+
+Exemple de Configuration
+Supposons que nous avons un réseau avec les segments suivants :
+⦁	Réseau 192.168.1.0/24 dans la zone 0
+⦁	Réseau 10.0.0.0/8 dans la zone 1
+La configuration OSPF serait la suivante :
+Router> enable
+Router# configure terminal
+Router(config)# router ospf 1
+Router(config-router)# network 192.168.1.0 0.0.0.255 area 0
+Router(config-router)# network 10.0.0.0 0.255.255.255 area 1
+Router(config-router)# exit
+Router(config)# exit
+
+
+
+pourquoi area 1 & 2 et pas que 0 ??????
+
+
+
+
 
 ![cisco OSPF image](https://github.com/Altherneum/.github/blob/main/note/assets/images/ms-teams_9knjVRjsVE.png?raw=true)
 
 Il ne crée que les branches qui lui sont rattachés
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -72,3 +98,62 @@ TO CHECK
 - `network 172.18.0.0` active le routage dynamique vers le réseau 172.18.0.0 (doit être fait sur tout les réseaux)
 
 - `show running-config`
+
+
+
+
+
+
+
+
+
+
+
+TO FILTER
+
+# Enhanced Interior Gateway Routing Protocol (EIGRP) 
+est un protocole de routage avancé développé par Cisco. Il combine les avantages des protocoles de routage distance-vector et link-state, offrant une convergence rapide et une grande scalabilité. Voici un aperçu détaillé de ses caractéristiques, fonctionnement et configuration.
+Caractéristiques de EIGRP
+⦁	Protocole Hybride : EIGRP est souvent considéré comme un protocole hybride car il utilise des caractéristiques à la fois des protocoles distance-vector et link-state.
+⦁	Convergence Rapide : Grâce à son algorithme DUAL (Diffusing Update Algorithm), EIGRP peut trouver rapidement des routes de remplacement sans recalculer toute la table de routage.
+⦁	Métrique Composite : EIGRP utilise une métrique composite basée sur la bande passante, le délai, la charge, la fiabilité et la MTU. Par défaut, seuls la bande passante et le délai sont utilisés.
+⦁	Support pour VLSM et CIDR : EIGRP supporte les masques de sous-réseau variables (VLSM) et le routage sans classe (CIDR), permettant une gestion plus efficace des adresses IP.
+⦁	Mises à Jour Partielles : Au lieu d'envoyer des mises à jour complètes, EIGRP envoie des mises à jour partielles et incrémentales lorsque les changements de topologie se produisent, ce qui réduit l'utilisation de la bande passante.
+⦁	Tables Multiples : EIGRP maintient plusieurs tables : une table de voisinage, une table de topologie et une table de routage.
+⦁	Support Multicast et Unicast : Les mises à jour de routage peuvent être envoyées en multicast (224.0.0.10) ou en unicast.
+Fonctionnement de EIGRP
+⦁	Découverte de Voisins : Les routeurs EIGRP envoient des paquets Hello pour découvrir et maintenir des adjacences avec des routeurs voisins.
+⦁	Formation de la Table de Voisinage : Les routeurs voisins qui répondent aux paquets Hello sont ajoutés à la table de voisinage.
+⦁	Échange d'Informations de Routage : Les routeurs échangent des mises à jour de routage pour construire leur table de topologie.
+⦁	Algorithme DUAL : EIGRP utilise l'algorithme DUAL pour garantir des chemins sans boucle et déterminer les routes optimales vers chaque destination.
+⦁	Tables de Routage : Les informations de la table de topologie sont utilisées pour construire la table de routage.
+Configuration de Base de EIGRP sur un Routeur Cisco
+⦁	Accéder au mode de configuration globale :
+Router> enable
+Router# configure terminal
+⦁	Activer EIGRP et spécifier un AS (Autonomous System) Number :
+Router(config)# router eigrp [as_number]
+⦁	Définir les réseaux à annoncer :
+Router(config-router)# network [network_address] [wildcard_mask]
+Exemple de Configuration
+Supposons que nous avons un réseau avec les segments suivants :
+⦁	Réseau 192.168.1.0/24
+⦁	Réseau 10.0.0.0/8
+La configuration EIGRP serait la suivante :
+Router> enable
+Router# configure terminal
+Router(config)# router eigrp 1
+Router(config-router)# network 192.168.1.0 0.0.0.255
+Router(config-router)# network 10.0.0.0 0.255.255.255
+Router(config-router)# exit
+Router(config)# exit
+Vérification de la Configuration
+Pour vérifier la configuration et le fonctionnement de EIGRP, vous pouvez utiliser les commandes suivantes :
+⦁	Afficher les routes EIGRP :
+Router# show ip route eigrp
+⦁	Afficher les voisins EIGRP :
+Router# show ip eigrp neighbors
+⦁	Afficher la table de topologie EIGRP :
+Router# show ip eigrp topology
+Conclusion
+EIGRP est un protocole de routage puissant et flexible, idéal pour les réseaux de moyenne à grande taille. Il offre une convergence rapide, une utilisation efficace de la bande passante et une grande scalabilité. Bien que plus complexe à configurer que des protocoles comme RIP, ses avantages en termes de performance et de fonctionnalités en font un choix populaire pour les réseaux Cisco.
