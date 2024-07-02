@@ -137,93 +137,116 @@ REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
 
 
 
-Fonctionnement des VLAN
--	Segmentation Logique : Les VLAN permettent de regrouper des ports de commutateur (switch) en réseaux logiques indépendamment de leur emplacement physique. Chaque VLAN constitue un domaine de broadcast distinct.
--	Isolation et Sécurité : Les VLAN isolent le trafic réseau, ce qui améliore la sécurité en empêchant les utilisateurs d'un VLAN d'accéder directement aux ressources d'un autre VLAN sans l'utilisation d'un routeur ou d'un dispositif de routage.
--	Performance : En limitant les domaines de broadcast, les VLAN réduisent le trafic inutile sur le réseau, améliorant ainsi les performances globales.
-Types de VLAN
--	VLAN de Données : Utilisés pour le trafic utilisateur normal.
--	VLAN de Gestion : Utilisés pour accéder et gérer les équipements réseau.
--	VLAN Voix : Optimisés pour le trafic VoIP (Voice over IP).
--	VLAN Natifs : Utilisés pour transmettre le trafic non étiqueté lorsqu'un trunk est configuré entre des switches.
-Configuration des VLAN sur les Switches Cisco
-# Création d'un VLAN
-Pour créer un VLAN sur un switch Cisco, vous utilisez les commandes en mode de configuration globale :
-```
-Switch> enable
-Switch# configure terminal
-Switch(config)# vlan [vlan_id]
-Switch(config-vlan)# name [vlan_name]
-Switch(config-vlan)# exit
-Switch(config)# exit
-```
-Par exemple, pour créer un VLAN 10 nommé "Sales" :
-```
-Switch> enable
-Switch# configure terminal
-Switch(config)# vlan 10
-Switch(config-vlan)# name Sales
-Switch(config-vlan)# exit
-Switch(config)# exit
-```
-# Assigner des Ports à un VLAN
-Pour attribuer des ports spécifiques à un VLAN :
-```
-Switch> enable
-Switch# configure terminal
-Switch(config)# interface [interface_type] [interface_id]
-Switch(config-if)# switchport mode access
-Switch(config-if)# switchport access vlan [vlan_id]
-Switch(config-if)# exit
-Switch(config)# exit
-```
-Par exemple, pour assigner le port FastEthernet 0/1 au VLAN 10 :
-```
-Switch> enable
-Switch# configure terminal
-Switch(config)# interface fastethernet 0/1
-Switch(config-if)# switchport mode access
-Switch(config-if)# switchport access vlan 10
-Switch(config-if)# exit
-Switch(config)# exit
-```
-Configuration d'un Trunk
-Pour permettre à un switch de transporter le trafic de plusieurs VLAN sur une seule interface physique, vous configurez un port en mode trunk :
-```
-Switch> enable
-Switch# configure terminal
-Switch(config)# interface [interface_type] [interface_id]
-Switch(config-if)# switchport mode trunk
-Switch(config-if)# switchport trunk encapsulation dot1q
-Switch(config-if)# switchport trunk allowed vlan [vlan_list]
-Switch(config-if)# exit
-Switch(config)# exit
-```
-Par exemple, pour configurer le port GigabitEthernet 0/1 en mode trunk pour les VLAN 10 et 20 :
-```
-Switch> enable
-Switch# configure terminal
-Switch(config)# interface gigabitethernet 0/1
-Switch(config-if)# switchport mode trunk
-Switch(config-if)# switchport trunk encapsulation dot1q
-Switch(config-if)# switchport trunk allowed vlan 10,20
-Switch(config-if)# exit
-Switch(config)# exit
-```
-# Vérification de la Configuration
-Pour vérifier les VLAN configurés et leurs associations avec les interfaces, utilisez les commandes suivantes :
--	Afficher les VLAN configurés :
-`Switch# show vlan brief`
+# Configuration de RIP sur un Routeur Cisco
+Pour configurer RIP sur un routeur Cisco, suivez les étapes ci-dessous.
+⦁	Accéder au mode de configuration globale :
+Router> enable
+Router# configure terminal
+⦁	Activer RIP :
+Router(config)# router rip
+⦁	Spécifier la version de RIP (optionnel, si vous voulez utiliser RIPv2) :
+Router(config-router)# version 2
+⦁	Déclarer les réseaux directement connectés :
+Router(config-router)# network [network_address]
+Par exemple, si le routeur a des interfaces dans les réseaux 192.168.1.0/24 et 10.0.0.0/8 :
+Router(config-router)# network 192.168.1.0
+Router(config-router)# network 10.0.0.0
+⦁	Sortir du mode de configuration :
+Router(config-router)# exit
+Router(config)# exit
+Exemple de Configuration Complète
+Voici un exemple de configuration complète pour un routeur ayant des interfaces dans les réseaux 192.168.1.0/24 et 10.0.0.0/8 et utilisant RIPv2 :
+Router> enable
+Router# configure terminal
+Router(config)# router rip
+Router(config-router)# version 2
+Router(config-router)# network 192.168.1.0
+Router(config-router)# network 10.0.0.0
+Router(config-router)# exit
+Router(config)# exit
+Vérification de la Configuration
+Vous pouvez vérifier la configuration RIP et voir les routes apprises via RIP en utilisant les commandes suivantes :
+⦁	Afficher la table de routage :
+Router# show ip route
+⦁	Afficher les informations spécifiques à RIP :
+Router# show ip protocols
+Router# show ip rip database
+RIP est un protocole de routage simple et facile à configurer, idéal pour les petits réseaux. Cependant, en raison de ses limitations telles que le nombre maximum de sauts et la fréquence des mises à jour, il n'est pas adapté aux grands réseaux modernes. Pour des réseaux plus complexes et plus grands, des protocoles de routage plus avancés comme OSPF ou EIGRP sont généralement préférés.
 
--	Afficher la configuration des trunks :
-`Switch# show interfaces trunk`
+# Configuration de Base d'OSPF sur un Routeur Cisco
+⦁	Accéder au mode de configuration globale :
+Router> enable
+Router# configure terminal
+⦁	Activer OSPF et assigner un process ID :
+Router(config)# router ospf [process-id]
+⦁	Définir les réseaux et leurs zones associées :
+Router(config-router)# network [network_address] [wildcard_mask] area [area_id]
+Exemple de Configuration
+Supposons que nous avons un réseau avec les segments suivants :
+⦁	Réseau 192.168.1.0/24 dans la zone 0
+⦁	Réseau 10.0.0.0/8 dans la zone 1
+La configuration OSPF serait la suivante :
+Router> enable
+Router# configure terminal
+Router(config)# router ospf 1
+Router(config-router)# network 192.168.1.0 0.0.0.255 area 0
+Router(config-router)# network 10.0.0.0 0.255.255.255 area 1
+Router(config-router)# exit
+Router(config)# exit
+Vérification de la Configuration
+Pour vérifier la configuration et le fonctionnement d'OSPF, vous pouvez utiliser les commandes suivantes :
+⦁	Afficher les routes OSPF :
+Router# show ip route ospf
+⦁	Afficher les voisins OSPF :
+Router# show ip ospf neighbor
+⦁	Afficher les bases de données OSPF :
+Router# show ip ospf database
+Conclusion
+OSPF est un protocole de routage puissant et flexible, bien adapté aux réseaux de grande taille et complexes. Sa capacité à diviser les réseaux en zones et à fournir une convergence rapide en fait un choix populaire pour les réseaux d'entreprise. Bien qu'il soit plus complexe à configurer et à gérer que des protocoles de routage plus simples comme RIP, ses avantages en termes de performance et de scalabilité sont significatifs.
 
--	Afficher les détails d'un VLAN spécifique :
-
-`Switch# show vlan id [vlan_id]`
-Par exemple, pour afficher les détails du VLAN 10 :
-
-`Switch# show vlan id 10`
-# Conclusion
-- Les VLAN sont un outil puissant pour segmenter, sécuriser et optimiser les réseaux sur les équipements Cisco. Leur configuration permet une gestion plus flexible et efficace des ressources réseau, en particulier dans les environnements d'entreprise. En utilisant les commandes Cisco appropriées, vous pouvez facilement créer, configurer et gérer les VLAN pour répondre aux besoins spécifiques de votre réseau.
-- Le routage inter-VLAN (inter-VLAN routing) permet la communication entre différents VLANs (Virtual Local Area Networks) au sein d'un réseau. Dans les environnements Cisco, il existe plusieurs méthodes pour configurer le routage inter-VLAN, notamment l'utilisation d'un routeur avec des interfaces sous-interface (Router on a Stick) ou l'utilisation de commutateurs de niveau 3 (Layer 3 switches) qui ont des capacités de routage.
+# Enhanced Interior Gateway Routing Protocol (EIGRP) 
+est un protocole de routage avancé développé par Cisco. Il combine les avantages des protocoles de routage distance-vector et link-state, offrant une convergence rapide et une grande scalabilité. Voici un aperçu détaillé de ses caractéristiques, fonctionnement et configuration.
+Caractéristiques de EIGRP
+⦁	Protocole Hybride : EIGRP est souvent considéré comme un protocole hybride car il utilise des caractéristiques à la fois des protocoles distance-vector et link-state.
+⦁	Convergence Rapide : Grâce à son algorithme DUAL (Diffusing Update Algorithm), EIGRP peut trouver rapidement des routes de remplacement sans recalculer toute la table de routage.
+⦁	Métrique Composite : EIGRP utilise une métrique composite basée sur la bande passante, le délai, la charge, la fiabilité et la MTU. Par défaut, seuls la bande passante et le délai sont utilisés.
+⦁	Support pour VLSM et CIDR : EIGRP supporte les masques de sous-réseau variables (VLSM) et le routage sans classe (CIDR), permettant une gestion plus efficace des adresses IP.
+⦁	Mises à Jour Partielles : Au lieu d'envoyer des mises à jour complètes, EIGRP envoie des mises à jour partielles et incrémentales lorsque les changements de topologie se produisent, ce qui réduit l'utilisation de la bande passante.
+⦁	Tables Multiples : EIGRP maintient plusieurs tables : une table de voisinage, une table de topologie et une table de routage.
+⦁	Support Multicast et Unicast : Les mises à jour de routage peuvent être envoyées en multicast (224.0.0.10) ou en unicast.
+Fonctionnement de EIGRP
+⦁	Découverte de Voisins : Les routeurs EIGRP envoient des paquets Hello pour découvrir et maintenir des adjacences avec des routeurs voisins.
+⦁	Formation de la Table de Voisinage : Les routeurs voisins qui répondent aux paquets Hello sont ajoutés à la table de voisinage.
+⦁	Échange d'Informations de Routage : Les routeurs échangent des mises à jour de routage pour construire leur table de topologie.
+⦁	Algorithme DUAL : EIGRP utilise l'algorithme DUAL pour garantir des chemins sans boucle et déterminer les routes optimales vers chaque destination.
+⦁	Tables de Routage : Les informations de la table de topologie sont utilisées pour construire la table de routage.
+Configuration de Base de EIGRP sur un Routeur Cisco
+⦁	Accéder au mode de configuration globale :
+Router> enable
+Router# configure terminal
+⦁	Activer EIGRP et spécifier un AS (Autonomous System) Number :
+Router(config)# router eigrp [as_number]
+⦁	Définir les réseaux à annoncer :
+Router(config-router)# network [network_address] [wildcard_mask]
+Exemple de Configuration
+Supposons que nous avons un réseau avec les segments suivants :
+⦁	Réseau 192.168.1.0/24
+⦁	Réseau 10.0.0.0/8
+La configuration EIGRP serait la suivante :
+Router> enable
+Router# configure terminal
+Router(config)# router eigrp 1
+Router(config-router)# network 192.168.1.0 0.0.0.255
+Router(config-router)# network 10.0.0.0 0.255.255.255
+Router(config-router)# exit
+Router(config)# exit
+Vérification de la Configuration
+Pour vérifier la configuration et le fonctionnement de EIGRP, vous pouvez utiliser les commandes suivantes :
+⦁	Afficher les routes EIGRP :
+Router# show ip route eigrp
+⦁	Afficher les voisins EIGRP :
+Router# show ip eigrp neighbors
+⦁	Afficher la table de topologie EIGRP :
+Router# show ip eigrp topology
+Conclusion
+EIGRP est un protocole de routage puissant et flexible, idéal pour les réseaux de moyenne à grande taille. Il offre une convergence rapide, une utilisation efficace de la bande passante et une grande scalabilité. Bien que plus complexe à configurer que des protocoles comme RIP, ses avantages en termes de performance et de fonctionnalités en font un choix populaire pour les réseaux Cisco.

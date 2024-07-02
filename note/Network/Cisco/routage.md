@@ -1,4 +1,5 @@
 # Routage
+show ip route
 ## Routage simple
 - Afin de router vers le réseau `172.17.0.0` le paquet va prendre le chemin suivant
 ![image cisco](https://github.com/Altherneum/.github/blob/main/note/assets/images/PacketTracer_hxJE4ozS93.png?raw=true)

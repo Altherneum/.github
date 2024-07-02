@@ -20,6 +20,9 @@ Permet de se connecter à l'appareil et envoyer des commandes
   - `interaface gigabitEthernet 0/1`
 - `enable`, `configure terminal`, puis `interface gigabitEthernet 0/1` Dans l'ordre pour passer à la configuration de l'interface 0/1
 
+#### Configuration de plusieurs interfaces
+`interface range fa0/1 - 2` De l'interface 1 à 2
+
 #### Activer une interface
 - `no shutdown` Passe de carte inactive à active
 

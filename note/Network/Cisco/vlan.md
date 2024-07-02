@@ -1,15 +1,31 @@
 # VLAN
+## Définitions
+-	Segmentation Logique : Les VLAN permettent de regrouper des ports de commutateur (switch) en réseaux logiques indépendamment de leur emplacement physique. Chaque VLAN constitue un domaine de broadcast distinct.
+
+-	Isolation et Sécurité : Les VLAN isolent le trafic réseau, ce qui améliore la sécurité en empêchant les utilisateurs d'un VLAN d'accéder directement aux ressources d'un autre VLAN sans l'utilisation d'un routeur ou d'un dispositif de routage.
+
+-	Performance : En limitant les domaines de broadcast, les VLAN réduisent le trafic inutile sur le réseau, améliorant ainsi les performances globales.
+est configuré entre des switches.
+Configuration des VLAN sur les Switches Cisco
+## Types de VLAN
+-	VLAN de Données : Utilisés pour le trafic utilisateur normal
+-	VLAN de Gestion : Utilisés pour accéder et gérer les équipements réseau
+-	VLAN Voix : Optimisés pour le trafic VoIP (Voice over IP)
+-	VLAN Natifs : Utilisés pour transmettre le trafic non étiqueté lorsqu'un trunk
+
 ## Liste des commandes
-- `show vlan brief`
-- `show interfaces trunk`
-- `show vlan id [vlan_id]`
+- Commande `show`
+  - `show vlan brief`
+  - `show interfaces trunk`
+  - `show vlan id [vlan_id]`
 - `vlan [VLAN_ID]`
 - `name [vlan_name]`
-- `switchport mode access`
-- `switchport access vlan [vlan_id]`
-- `switchport mode trunk`
-- `switchport trunk encapsulation dot1q`
-- `switchport trunk allowed vlan [vlan_list]`
+- Commande `Switchport`
+  - `switchport mode access`
+  - `switchport access vlan [vlan_id]`
+  - `switchport mode trunk`
+  - `switchport trunk encapsulation dot1q`
+  - `switchport trunk allowed vlan [vlan_list]`
 
 ## Créer VLAN
 Sur le mode configuration d'un switch / routeur :
