@@ -48,7 +48,7 @@ Pour attribuer une interface dans un VLAN
 
 L'interface ne pourra communiquer que avec d'autres interfaces du même VLAN
 
-## Multi-réseau
+## Multi-réseau sur un VLAN
 Deux switchs, chacun avec un PC dans un vlan
 ### Switch 1
 - `enable`
@@ -87,7 +87,7 @@ Pour permettre à un switch de transporter le trafic de plusieurs VLAN sur une s
 - `interface [interface_type] [interface_id]` (interface à passer en mode trunk)
   - `interface fastEthernet 0/1`
 - `switchport mode trunk`
-- `switchport trunk encapsulation dot1q`
+- `switchport trunk encapsulation dot1q`        ????? ERROR, que sur switch niv°3, ou routeur
 - `switchport trunk allowed vlan [vlan_list]`
   - `switchport trunk allowed vlan 10`
   - `switchport trunk allowed vlan 10,20`

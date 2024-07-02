@@ -110,7 +110,7 @@ TO CHECK
 
 
 TO FILTER
-
+```
 # Enhanced Interior Gateway Routing Protocol (EIGRP) 
 est un protocole de routage avancé développé par Cisco. Il combine les avantages des protocoles de routage distance-vector et link-state, offrant une convergence rapide et une grande scalabilité. Voici un aperçu détaillé de ses caractéristiques, fonctionnement et configuration.
 Caractéristiques de EIGRP
@@ -128,6 +128,9 @@ Fonctionnement de EIGRP
 ⦁	Algorithme DUAL : EIGRP utilise l'algorithme DUAL pour garantir des chemins sans boucle et déterminer les routes optimales vers chaque destination.
 ⦁	Tables de Routage : Les informations de la table de topologie sont utilisées pour construire la table de routage.
 Configuration de Base de EIGRP sur un Routeur Cisco
+```
+
+```
 ⦁	Accéder au mode de configuration globale :
 Router> enable
 Router# configure terminal
@@ -147,6 +150,9 @@ Router(config-router)# network 192.168.1.0 0.0.0.255
 Router(config-router)# network 10.0.0.0 0.255.255.255
 Router(config-router)# exit
 Router(config)# exit
+```
+
+```
 Vérification de la Configuration
 Pour vérifier la configuration et le fonctionnement de EIGRP, vous pouvez utiliser les commandes suivantes :
 ⦁	Afficher les routes EIGRP :
@@ -157,3 +163,4 @@ Router# show ip eigrp neighbors
 Router# show ip eigrp topology
 Conclusion
 EIGRP est un protocole de routage puissant et flexible, idéal pour les réseaux de moyenne à grande taille. Il offre une convergence rapide, une utilisation efficace de la bande passante et une grande scalabilité. Bien que plus complexe à configurer que des protocoles comme RIP, ses avantages en termes de performance et de fonctionnalités en font un choix populaire pour les réseaux Cisco.
+```

@@ -40,3 +40,19 @@ Permet de se connecter à l'appareil et envoyer des commandes
 #### Reset
 - `default interface gi 1/1` Réstaure l'interface
 - `no ip address` Réstaure l'IP
+
+#### Rename
+- `hostname [name]`
+  - `hostname R1`
+
+#### Password
+- `enable password [Password]` Mot de passe en texte non chiffré 
+  - `enable password Password123`
+- `service password-encryption` Chiffre les mots de passe non chiffré
+- `enable secret [Password]` Mot de passe en texte chiffré
+  - `enable secret Password123`
+- `password PASSWORD` Indique le mot de passe avant de se login
+  - `password Password123`
+- `login` Lance la phase de login avec le password
+
+- `banner motd # ACCES NON AUTORISE #` Bannière Message of the day

