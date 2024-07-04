@@ -7,6 +7,7 @@
 -	Performance : En limitant les domaines de broadcast, les VLAN réduisent le trafic inutile sur le réseau, améliorant ainsi les performances globales.
 est configuré entre des switches.
 Configuration des VLAN sur les Switches Cisco
+
 ## Types de VLAN
 -	VLAN de Données : Utilisés pour le trafic utilisateur normal
 -	VLAN de Gestion : Utilisés pour accéder et gérer les équipements réseau

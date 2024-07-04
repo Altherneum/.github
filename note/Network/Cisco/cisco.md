@@ -18,6 +18,8 @@ Permet de se connecter à l'appareil et envoyer des commandes
 - `configure terminal` Passe en mode configuration
 - `interaface [interface_type] [interface_type] [interface_id]` Passe sur l'interface Ethernet 0/1
   - `interaface gigabitEthernet 0/1`
+- `interaface [interface_type] [interface_type] [interface_id].[subinterface_id]` Passe sur la sous interface Ethernet 0/1 . 10
+  - `interaface gigabitEthernet 0/1.10`
 - `enable`, `configure terminal`, puis `interface gigabitEthernet 0/1` Dans l'ordre pour passer à la configuration de l'interface 0/1
 
 #### Configuration de plusieurs interfaces
@@ -54,5 +56,17 @@ Permet de se connecter à l'appareil et envoyer des commandes
 - `password PASSWORD` Indique le mot de passe avant de se login
   - `password Password123`
 - `login` Lance la phase de login avec le password
-
+- `security password min-length [length]` Taille minimum de mot de passe
+  - `security password min-length 12`
 - `banner motd # ACCES NON AUTORISE #` Bannière Message of the day
+
+#### SSH
+Doit être filtré / traité !
+```
+username admin password SuperUser11
+ip domain-name m2i.labo
+crypto key generate rsa modulus 1024
+line vty 0 4
+login local
+transport input ssh
+```

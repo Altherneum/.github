@@ -278,7 +278,7 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 - Sortir le client du domaine en le mettant dans le `WORKGROUP`
 - La permission administrateur du domaine va être demandée `FORMATION\Administrateur`
 
-# DHCP
+## DHCP
 - `Gestionnaire de serveur`
   - `Gérer`, `Ajouter des rôles et fonctionnalités`
   - `DHCP`
@@ -296,3 +296,10 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
 ## Vérification de l'étendue
 - Vérifier la configuration DHCP sur un client en configuration IP automatique dans le domaine précisé dans l'étendue DHCP : `ipconfig`
 - Pour renouveller l'adresse IP : `ipconfig /release && ipconfig /renew`
+
+## Pare-feu et ICMP
+Pour autoriser ou bloquer les pings :
+- Application `Pare-feu Windows Defender`
+- `Autoriser une application ou une fonctionnalité via le Pare-feu Windows Defender`
+- Chercher dans `Applications et fonctionnalités autorisées` : `Partage de fichiers et d'imprimantes`
+- Autoriser en cochant la case `Domaine`, `Privé` et `Public` suivant les besoins

@@ -25,6 +25,7 @@ show ip route
 - D'autre comme `OSPF (Open Shortest Path First)` prendront la route la plus rapide (Exemple un réseau fibré ou un réseau sans latence), plustôt que la route avec le moins de saut
 
 ### Routage RIP
+#### Routage RIP automatique
 - Sur le routeur : `CopyRouteur5(1)`
 -  `enable ` Passe en mode Super user
 - `configure terminal ` Passe en mode configuration
@@ -47,7 +48,8 @@ Exemple sur le routeur `Routeur5`
 - `configure terminal`
 - `router ospf [process-id]`
   - `router OSPF 1`
-- `router-id 1.1.1.1` ?????
+- `router-id [Unique_ID]`
+  - `router-id 1.1.1.1`
 - `network [network_address] [wildcard_mask] area [area_id]`
   - `network 10.255.255.0   0.0.0.3     area 0`
   - `network 10.255.255.8   0.0.0.3     area 0`
@@ -61,7 +63,7 @@ Il ne crée que les branches qui lui sont rattachés
 - `show ip route ospf`
 - `show ip ospf neighbor`
 - `show ip ospf database`
-
+- `no ip ospf network`
 
 To filter
 ```
@@ -97,7 +99,7 @@ pourquoi area 1 & 2 et pas que 0 ??????
 
 
 TO CHECK
-#### Routage
+#### Routage RIP manuel
 - `router RIP` Active le routage RIP
 - `ip route 192.168.10.0 255.255.255.0 192.168.254.1` Configure le routage de l'adresse `10.0` vers `254.1`
 - `network 172.18.0.0` active le routage dynamique vers le réseau 172.18.0.0 (doit être fait sur tout les réseaux)
@@ -169,3 +171,44 @@ Router# show ip eigrp topology
 Conclusion
 EIGRP est un protocole de routage puissant et flexible, idéal pour les réseaux de moyenne à grande taille. Il offre une convergence rapide, une utilisation efficace de la bande passante et une grande scalabilité. Bien que plus complexe à configurer que des protocoles comme RIP, ses avantages en termes de performance et de fonctionnalités en font un choix populaire pour les réseaux Cisco.
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Exemple
+PTK : multi-routeur-routage-cable-serial-dce.pkt
+## RTR 1
+- `ip address 192.168.255.2` (interface SE 0)
+- `ip address 192.168.255.9` (interface SE 1)
+- `ip address 172.17.255.254` (interface Fa 2) (vers switch)
+## RTR 2
+- `ip address 192.168.255.1` (interface SE 0)
+- `ip address 192.168.255.6` (interface SE 1)
+- `ip address 172.17.255.254` (interface Fa 2) (vers switch)
+## RTR 3
+- `ip address 192.168.255.10` (interface SE 0)
+- `ip address 192.168.255.5` (interface SE 1)
+- `ip address 172.17.255.254` (interface Fa 2) (vers switch)
+
+## Routage
+Tout les routeurs
+- `routeur OSPF 1`
+- `router-id x.x.x.x`
+  - `router-id 1.1.1.1` RTR1
+  - `router-id 2.2.2.2` RTR2
+  - `router-id 3.3.3.3` RTR3
+- `network 192.168.255.0  0.0.0.3       area 0`
+- `network 172.16.0.0     0.0.255.255   area 0`
+- `network 172.17.0.0     0.0.255.255   area 0`
+- `network 172.18.0.0     0.0.255.255   area 0`
