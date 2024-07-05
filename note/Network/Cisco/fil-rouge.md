@@ -1,12 +1,14 @@
 # To do
-## Routeur
-- Routage
-- Avant dernière adresse pour les switchs du VLAN management 99 & 100
+- `ssh -l admin 192.168.0.1`
 
-- Vlan que sur switch ?
-- VLan management pas d'interface
-## Switch
-- IP
+- Configurer des ACLs qui permettent de filtrer les éléments suivants :
+  - accès SSH uniquement pour les informaticiens
+  - Seuls les pcs de l’informatique peuvent faire un ping vers ceux de la direction
+- VERIFICATION ETAPE 3 :
+  - Envoyer une capture d’une session SSH ouverte sur le routeur du Bâtiment B depuis un pc du service informatique
+  - Envoyer une autre capture d’une tentative de connexion par SSH sur le routeur du Bâtiment B depuis un PC hors du service informatique
+  - Envoyer une capture d’un ping depuis un pc du service informatique vers la direction
+  - Envoyer une capture d’un ping depuis un pc hors du service informatique vers la direction
 
 # Configuration
 ## Routeur A
@@ -22,6 +24,30 @@ enable secret SuperUser11
 
 
 
+interface loopback 1
+ip address 11.1.1.1 255.255.255.0
+interface loopback 2
+ip address 12.1.1.1 255.255.255.0
+interface loopback 3
+ip address 13.1.1.1 255.255.255.0
+
+interface GigabitEthernet0/1
+ip address 192.168.0.1 255.255.255.252
+no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 gigabitEthernet 0/1
+
+router rip
+version 2
+network 172.16.32.80
+network 172.16.32.64
+network 172.16.32.96
+network 172.16.32.128
+network 192.168.0.0
+exit
+
+
+
 interface GigabitEthernet0/0
 no shutdown
 
@@ -29,7 +55,6 @@ interface gigabitEthernet 0/0.10
 encapsulation dot1Q 10
 ip address 172.16.32.94 255.255.255.240
 no shutdown
-
 exit
 ip dhcp pool R1-Pool-10
 network 172.16.32.80 255.255.255.240
@@ -86,6 +111,23 @@ hostname RTR-B
 service password-encryption
 security password min-length 10
 enable secret SuperUser11
+
+
+
+interface GigabitEthernet0/1
+ip address 192.168.0.2 255.255.255.252
+no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 gigabitEthernet 0/1
+
+router rip
+version 2
+network 172.16.32.120
+network 172.16.32.112
+network 172.16.32.0
+network 172.16.32.136
+network 192.168.0.0
+exit
 
 
 
