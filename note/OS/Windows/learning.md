@@ -31,8 +31,13 @@ cours sur Windows
 - `goto :Text` Le code va exécuter la boucle 'Text'
 `%random%` Chiffres aléatoires
 - `color [couleurs]` Couleur du text ou de l'arrière plan  
-Pour modifier la couleur d’arrière-plan de la fenêtre d’invite de commandes en gris et la couleur de premier plan en rouge, tapez : `color 84`
+  - `color 84` Fond Gris, text rouge
+  - `color 2` text vert
 - `exit` ferme la console
+- `powershell.exe` | `powershell` Console PowerShell
+- `prompt` Modifie le text affiché dans la console
+  - `prompt $d - $t $p$g` : 07/07/2024 - 22:47:04,44 C:\Users\User>
+  - `prompt $p$g` : C:\Users\User>
 
 ## Dossiers
 - `dir` Dossiers et fichiers
