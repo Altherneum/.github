@@ -8,8 +8,6 @@ La feuille de style **CSS** (__**Cascading Style Sheets**__) permet d'améliorer
 - **2005** : Arrivée du CSS Level 3 avec des fonctionnalités supplémentaires telles que les animations, les transitions, et les effets graphiques.
 - **2011** : La version CSS Level 4 est en cours de développement, apportant des améliorations dans plusieurs domaines tels que les feuilles de style à inclusion, les feuilles de styles modulaires, et des fonctionnalités plus avancées pour les médias.
 
----
-
 # **Syntaxe**
 Choisir des éléments HTML à traiter à l'aide d'un type d'élément HTML, et y attribuer une propriété
 ```
