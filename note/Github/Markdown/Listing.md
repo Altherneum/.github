@@ -38,7 +38,7 @@ Du text et `un peut de code`, avec du text
 `Du code avec un *Wildcard*`
 
 ```
-/*Commentaire à ne pas mettre en italique*/
+/* Commentaire à ne pas mettre en italique */
 ```
 
 ```
