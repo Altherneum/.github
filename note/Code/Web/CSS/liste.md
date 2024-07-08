@@ -1,4 +1,5 @@
 Dans ce chapitre, nous allons présenter une liste des propriétés CSS accompagnée de leurs définitions en français.
+
 **Attention** : Cette liste n'est pas exhaustive car le langage CSS est constamment évoluant et se perfectionnant avec chaque nouvelle version. Néanmoins, nous couvrirons ici les propriétés communes et les plus utilisées.
 # Propriétés CSS : Liste et définitions
 ## Propriétés de base
