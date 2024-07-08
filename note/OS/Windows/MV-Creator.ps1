@@ -12,8 +12,6 @@
 
 
 New-VM -name $VMName -MemoryStartupBytes $RAMSize -NewVHDPath $VHDPath -NewVHDSizeBytes $DiskSize -Path $VMPathName -Version 10.0 -Generation 2 -Confirm:$true
-# -SwitchName $Switch
-# -BootDevice "CD"
 
 foreach ($SwitchBis in $Switch) {
     Add-VMNetworkAdapter -VMName $VMName -SwitchName $SwitchBis
@@ -24,7 +22,5 @@ Set-VMProcessor –VMName $VMName –count $CPU
 Add-VMDvdDrive -VMName $VMName -Path $ISO
 
 # Boot order
-$network = Get-VMNetworkAdapter -VMName $VMName
-$vhd = Get-VMHardDiskDrive -VMName $VMName
 $dvd = Get-VMDvdDrive -VMName $VMName
-Set-VMFirmware -VMName $name -BootOrder $dvd,$network,$vhd
+Set-VMFirmware -VMName $VMName -FirstBootDevice $dvd
