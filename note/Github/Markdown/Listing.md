@@ -64,7 +64,7 @@ Multiligne
         - Liste tabulée avec 8 espaces !
           - Liste tabulé avec 10 espaces !!!
 
-- Une liste avec du **gras** présent (Bug présent, le text dans le li va passer en <p> par erreur)
+- Une liste avec du **gras** présent (Bug présent, le text dans le li va passer en text p par erreur)
 - Une liste sans gras présent
 
 élément de rupture thématique (règle horizontale) ⬇
