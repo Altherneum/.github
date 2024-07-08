@@ -22,7 +22,11 @@
 
 **Text en gras**
 
+\*\*Text à ne pas mettre en gras\*\*
+
 *Text en italique*
+
+\*Text à ne pas mettre en italique\*
 
 ~~Text erroné~~
 
