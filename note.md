@@ -171,7 +171,7 @@ Examples:
 ## Variable env
 Permet de créer des commandes auto
 ## VM
-- Créer une VM : [VMCreator.ps1](Https://github.com/Altherneum/.github/blob/main/note/OS/Windows/MV-Creator.ps1)
+- Créer une VM : [VMCreator.ps1](Https://github.com/Altherneum/.github/blob/main/note/OS/Windows/VM-Creator.ps1)
 ## Commandes utiles
 - `Get-VMSwitch` Commande qui liste les switchs
 - `New-VMSwitch -Name <switch-name> -NetAdapterName <netadapter-name>`
