@@ -35,6 +35,10 @@ Set-VMMemory $VMName -DynamicMemoryEnabled $true
 Start-VM -VMName $VMName
 
 # Start auto
+vmconnect $env:COMPUTERNAME $VMName
 Start-VM -VMName $VMName
 Start-Sleep -Seconds 1
-vmconnect $env:COMPUTERNAME $VMName
+
+# Auto Enter
+# Multiple test didn't worked well
+## See https://github.com/farag2/Hyper-V/blob/master/Hyper-V.ps1#L265 to test a fix
