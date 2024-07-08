@@ -6,10 +6,11 @@
 - `Get-Help Test123` Affiche l'aide sur la commande Test123
   - `get-help get-member`
 - `Get-Command` Rechercher une commande
-  - 
-  ```
-  Get-Command "*wmi*"
-  ```
+  - `Get-Command *` Recherche toutes les commandes
+  - `Get-Command  -Name Get-Childitem -Args Cert: -Syntax`
+  - `Get-Command -Verb New` Retrouver à partir du verbe
+  - `Get-Command -Noun Service` Retrouver à partir du pronom
+  - `Get-Command -Name \*Service\*` Retrouver les commandes contenant service
 
 ## Variable
 - [learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-04?view=powershell-7.4](https://learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-04?view=powershell-7.4)
