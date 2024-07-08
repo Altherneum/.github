@@ -2,6 +2,20 @@
 - [learn.microsoft.com /powershell/scripting/lang-spec/ chapter-07](https://learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-07?view=powershell-7.4)
 - [Doc](https://learn.microsoft.com/fr-fr/powershell/scripting/overview?view=powershell-7.4)
 
+## Commandes utiles
+- `$PSVersionTable` Version PowerShell
+- `PowerShell` Passe en mode PowerShell
+- `PWSH` Passe en mode PowerShell 7.x
+
+## Commentaires
+- Commentaire `# Text à commenter` 
+- Commentaire multi ligne
+```
+<#
+Text à commenter
+#>
+```
+
 ## Help
 - `Get-Help Test123` Affiche l'aide sur la commande Test123
   - `get-help get-member`
@@ -10,7 +24,8 @@
   - `Get-Command  -Name Get-Childitem -Args Cert: -Syntax`
   - `Get-Command -Verb New` Retrouver à partir du verbe
   - `Get-Command -Noun Service` Retrouver à partir du pronom
-  - `Get-Command -Name \*Service\*` Retrouver les commandes contenant service
+  - `Get-Command -Name ✨Service✨` Retrouver les commandes contenant service
+- `Get-Module` Liste les modules importés dans la version actuelle
 
 ## Variable
 - [learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-04?view=powershell-7.4](https://learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-04?view=powershell-7.4)

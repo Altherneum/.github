@@ -152,6 +152,17 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 
 - Server DNS préféré : `127.0.0.1`
 
+### PS-SRV-1
+- Admin password : `SuperUser11`
+- Win 22 Server `datacenter user experience`
+- Carte réseau sur : `Serveurs`
+
+- IP : `192.169.10.14`
+- Masque : `255.255.255.0`
+- Gateway : `192.169.10.254`
+
+- Server DNS préféré : `192.168.10.10`
+
 ### Win22-SRV-RTR-1
 - Admin password : `Respons11`
 - Win 22 Server `datacenter user experience`

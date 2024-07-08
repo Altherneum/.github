@@ -61,13 +61,7 @@ Avec Philipe LAMBERT
 
 # PowerShell
 ## To Do
-- Commentaire `# Text à commenter` 
-- Commentaire multi ligne
-```
-<#
-ABC
-#>
-```
+
 - use the backtick (`) character to break commands into multiple lines.
 ```
 $result = Get-Process `
@@ -169,3 +163,18 @@ Examples:
 -join 12345                    # result is "12345"
 -join $null                    # result is ""
 ```
+
+
+
+
+# Note 08/07
+## Variable env
+Permet de créer des commandes auto
+## VM
+- Créer une VM : [VMCreator.ps1](Https://github.com/Altherneum/.github/blob/main/note/OS/Windows/MV-Creator.ps1)
+## Commandes utiles
+- `Get-VMSwitch` Commande qui liste les switchs
+- `New-VMSwitch -Name <switch-name> -NetAdapterName <netadapter-name>`
+## Argument ou paramètres utiles
+- `-WhatIf` Argument qui explique la commande
+- `-Confirm:$true` Demande de confirmer la commande

@@ -101,6 +101,7 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `shutdown /s` Arrête le système
 - `logoff` Déconnecte le compte Windows
 - `ver` Version du système
+- `sysdm.cpl` Propriétés système
 
 ## Global policy
 - `gpupdate /force` Met à jour les paramètres de la stratégie de groupe
