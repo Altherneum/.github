@@ -28,7 +28,9 @@
 
 \*Text à ne pas mettre en italique\*
 
+```
 /*Commentaire à ne pas mettre en italique*/
+```
 
 ~~Text erroné~~
 
