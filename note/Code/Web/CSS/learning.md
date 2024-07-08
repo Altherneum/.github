@@ -22,8 +22,6 @@ Choisir des éléments HTML à traiter à l'aide d'un type d'élément HTML, et 
   }
 ```
 
----
-
 ## **Sélecteur**
 Choisir des éléments HTML à traiter à l'aide d'un identificateur ou une classe.
 ```
@@ -37,8 +35,6 @@ Choisir des éléments HTML à traiter à l'aide d'un identificateur ou une clas
 - **un id** s'applique à __un objet unique__ : il ne peut pas y avoir deux mêmes id dans une page
 - **une classe** peut caractériser __plusieurs objets__ (identiques ou non)
 
----
-
 ## **Propriétés**
 Changer l'aspect visuel des éléments sélectionnés.
 ```
@@ -48,8 +44,6 @@ Changer l'aspect visuel des éléments sélectionnés.
   text-align: center;
 }
 ```
-
----
 
 ## **Animations et Transitions**
 Ajouter une transition entre deux états visuels.
@@ -64,8 +58,6 @@ Ajouter une transition entre deux états visuels.
 }
 ```
 
----
-
 ### **Transition**
 Faire une transition douce lors d'un événement.
 ```
@@ -75,8 +67,6 @@ Faire une transition douce lors d'un événement.
 }
 ```
 
----
-
 ## Sélecteurs Multiples
 Les sélecteurs multiples permettent de s'adresser à plusieurs éléments HTML à la fois. Cela peut être utile pour appliquer des styles similaires à des éléments qui ont une structure semblable dans le HTML.
 ```
@@ -85,8 +75,6 @@ h2, h3 {
   color: blue;
 }
 ```
-
----
 
 ## Sélecteurs Pseudo-classes
 Les sélecteurs avec les symboles de pseudo-classes :: permettent d'appliquer des styles à des états particuliers de nos éléments. Par exemple, nous pouvons utiliser le hover pour les pointeurs du curseur, active lorsqu'un élément est actif ou focus pour des champs d'entrée.
