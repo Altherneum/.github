@@ -1,7 +1,7 @@
 [String]$VMName = "PS-VM-Test"
 [String]$VMPath = "C:\Users\Administrateur\Desktop\Hyper-V\"
-[String]$VHDPath = $VMPath+$VMName+".VHDX"
-[String]$VMPathName = $VMPath+$VMName
+[String]$VHDPath = $VMPath + $VMName + "\" + $VMName + ".VHDX"
+[String]$VMPathName = $VMPath + $VMName
 [String[]]$Switch = "NAT","Serveurs"
 [UInt64]$DiskSize = 50GB
 [UInt64]$RAMSize = 4GB
