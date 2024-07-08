@@ -24,7 +24,7 @@ Text à commenter
   - `Get-Command  -Name Get-Childitem -Args Cert: -Syntax`
   - `Get-Command -Verb New` Retrouver à partir du verbe
   - `Get-Command -Noun Service` Retrouver à partir du pronom
-  - `Get-Command -Name \*Service\*` Retrouver les commandes contenant service
+  - `Get-Command -Name *Service*` Retrouver les commandes contenant service
 - `Get-Module` Liste les modules importés dans la version actuelle
 
 ## Variable
