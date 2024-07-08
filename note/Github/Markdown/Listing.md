@@ -24,11 +24,6 @@
 
 \*Text à ne pas mettre en italique\*
 
-```
-/*Commentaire à ne pas mettre en italique*/
-```
-`Du code avec un *Wildcard*`
-
 ~~Text erroné~~
 
 __Text souligné__
@@ -39,6 +34,12 @@ Text
 </details>
 
 Du text et `un peut de code`, avec du text
+
+`Du code avec un *Wildcard*`
+
+```
+/*Commentaire à ne pas mettre en italique*/
+```
 
 ```
 Bloc de code
@@ -63,7 +64,7 @@ Multiligne
         - Liste tabulée avec 8 espaces !
           - Liste tabulé avec 10 espaces !!!
 
-- Une liste avec du **gras** présent
+- Une liste avec du **gras** présent (Bug présent, le text dans le li va passer en <p> par erreur)
 - Une liste sans gras présent
 
 élément de rupture thématique (règle horizontale) ⬇
