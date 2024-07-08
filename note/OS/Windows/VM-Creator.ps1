@@ -38,5 +38,3 @@ Start-VM -VMName $VMName
 Start-VM -VMName "PS-VM-Test"
 Start-Sleep -Seconds 1
 vmconnect $env:COMPUTERNAME $VMName
-Start-Sleep -Seconds 1
-[System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
