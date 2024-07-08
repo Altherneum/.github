@@ -59,8 +59,11 @@ Multiligne
   - Liste tabulée avec 2 espaces
     - Liste tabulée avec 4 espaces
       - Liste tabulée avec 6 espaces
-        - Liste tabulée avec 8 espaces ! (Dernier qui fonctionne avec margin)
-          - Liste tabulé avec 10 espaces !!! (**WIP**)
+        - Liste tabulée avec 8 espaces !
+          - Liste tabulé avec 10 espaces !!!
+
+- Une liste avec du **gras** présent
+- Une liste sans gras présent
 
 élément de rupture thématique (règle horizontale) ⬇
 
