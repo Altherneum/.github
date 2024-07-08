@@ -6,7 +6,7 @@
 - `Get-Help Test123` Affiche l'aide sur la commande Test123
   - `get-help get-member`
 - `Get-Command` Rechercher une commande
-  - `Get-Command "*wmi*"`
+  - ```Get-Command "*wmi*"```
 
 ## Variable
 - [learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-04?view=powershell-7.4](https://learn.microsoft.com/fr-fr/powershell/scripting/lang-spec/chapter-04?view=powershell-7.4)
