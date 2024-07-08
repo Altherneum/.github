@@ -35,6 +35,6 @@ Set-VMMemory $VMName -DynamicMemoryEnabled $true
 Start-VM -VMName $VMName
 
 # Start auto
-Start-VM -VMName "PS-VM-Test"
+Start-VM -VMName $VMName
 Start-Sleep -Seconds 1
 vmconnect $env:COMPUTERNAME $VMName
