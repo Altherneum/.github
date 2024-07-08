@@ -27,6 +27,7 @@
 ```
 /*Commentaire à ne pas mettre en italique*/
 ```
+`Du code avec un *Wildcard*`
 
 ~~Text erroné~~
 
