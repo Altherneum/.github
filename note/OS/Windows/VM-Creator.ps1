@@ -30,3 +30,11 @@ Set-VMFirmware -VMName $VMName -FirstBootDevice $dvd
 
 # Dynamic RAM
 Set-VMMemory $VMName -DynamicMemoryEnabled $true
+
+# Start VM
+Start-VM -VMName $VMName
+
+# Start auto
+Start-Sleep -Seconds 1
+vmconnect $env:COMPUTERNAME $VMName
+[System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
