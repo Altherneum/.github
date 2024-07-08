@@ -9,10 +9,7 @@
 [UInt64]$DiskSize = 50GB
 [UInt64]$RAMSize = 4GB
 [Int]$CPU = 2
-# Boot order
-$network = Get-VMNetworkAdapter -VMName $VMName
-$vhd = Get-VMHardDiskDrive -VMName $VMName
-$dvd = Get-VMDvdDrive -VMName $VMName
+
 
 New-VM -name $VMName -MemoryStartupBytes $RAMSize -NewVHDPath $VHDPath -NewVHDSizeBytes $DiskSize -Path $VMPathName -Version 10.0 -Generation 2 -Confirm:$true
 # -SwitchName $Switch
@@ -26,4 +23,8 @@ Set-VMProcessor –VMName $VMName –count $CPU
 
 Add-VMDvdDrive -VMName $VMName -Path $ISO
 
+# Boot order
+$network = Get-VMNetworkAdapter -VMName $VMName
+$vhd = Get-VMHardDiskDrive -VMName $VMName
+$dvd = Get-VMDvdDrive -VMName $VMName
 Set-VMFirmware -VMName $name -BootOrder $dvd,$network,$vhd
