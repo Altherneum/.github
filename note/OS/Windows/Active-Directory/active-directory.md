@@ -27,7 +27,7 @@
 - Ne pas `Créer de délégation DNS` ❌
 - Nom de domaine NetBIOS : `FORMATION`
 
-[voir fichier ad.txt](https://github.com/Altherneum/.github/blob/main/note/Network/ad.txt)
+[voir fichier ad.txt](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Active-Directory/ad.txt)
 
 ### Activer la corbeille active directory
 - Dans le `Centre d'administration Active Directory`

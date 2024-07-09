@@ -110,7 +110,7 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `gpresult /r` Affiche les informations de stratégie résultant
 
 ### Windows key
-- [WinKeyDump.vbs](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/WinKeyDump.vbs)
+- [WinKeyDump.vbs](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/WinKeyDump.vbs)
 
 ## Shutdown
 - `shutdown /i` Afficher l’interface utilisateur graphique (GUI) de shutdown
