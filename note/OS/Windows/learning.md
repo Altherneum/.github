@@ -38,6 +38,8 @@ cours sur Windows
 - `prompt` Modifie le text affiché dans la console
   - `prompt $d - $t $p$g` : 07/07/2024 - 22:47:04,44 C:\Users\User>
   - `prompt $p$g` : C:\Users\User>
+- `CMD` Invite de commande
+  - `CMD /c [Commande]` Exécute la commande puis se termine.
 
 ## Dossiers
 - `dir` Dossiers et fichiers

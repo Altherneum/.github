@@ -59,8 +59,29 @@ Avec Philipe LAMBERT
 - Hobie
 - lien si imprimer
 
+
+
+
+
+
+
+
+
+
+
+
+# CMD
+- Dir
+- LS
+- bcdedit (Données de configuration de démarrage)
+- RunAs (Lance une commande en tant que)
+
+
+
+
 # PowerShell
 ## To Do
+`Get-Service | Where-Object {$_.Status -eq "Running"}`
 
 - use the backtick (`) character to break commands into multiple lines.
 ```
@@ -175,6 +196,23 @@ Permet de créer des commandes auto
 ## Commandes utiles
 - `Get-VMSwitch` Commande qui liste les switchs
 - `New-VMSwitch -Name <switch-name> -NetAdapterName <netadapter-name>`
+- `Help Get-Service -online`
+- `Help Get-Service -ShowWindow`
+- `Install-Module <NOM>`
+  - `Install-Module <NOM> -MinimumVersion 2.2.5`
+  - `Install-Module <NOM> -RequiredVersion 2.2.5`
+  - `Install-Module <NOM> -Force`
+- `ShowCommand` [Affiche la commande](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.4) en mode visuel
+- `h` affiche l'historique de commande
+- `slmgr` Détail de license Windows
+  - `slmgr -xpr` Affiche si la license Windows est active
+  - `slmgr -dli` Affiche le détail de la license Windows
+  - `slmgr dlv` Affiche tout les détailes de license
+- `Test-Path <PATH>`
+- `New-Item -Path <PATH> -Name <FileName> -ItemType file`
+- `Add-Content -Path <PATH> -Value <TEXT>`
+- `Get-Content <FILE_PATH>`
 ## Argument ou paramètres utiles
 - `-WhatIf` Argument qui explique la commande
 - `-Confirm:$true` Demande de confirmer la commande
+- `$pass=Read-Host -AsSecureString`

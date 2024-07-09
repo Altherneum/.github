@@ -168,7 +168,7 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveurs`
 
-- IP : `192.169.10.14`
+- IP : `192.169.10.15`
 - Masque : `255.255.255.0`
 - Gateway : `192.169.10.254`
 
