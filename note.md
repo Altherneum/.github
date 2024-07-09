@@ -70,12 +70,6 @@ Avec Philipe LAMBERT
 
 
 
-# CMD
-- Dir
-- LS
-- bcdedit (Données de configuration de démarrage)
-- RunAs (Lance une commande en tant que)
-
 
 
 
@@ -212,7 +206,31 @@ Permet de créer des commandes auto
 - `New-Item -Path <PATH> -Name <FileName> -ItemType file`
 - `Add-Content -Path <PATH> -Value <TEXT>`
 - `Get-Content <FILE_PATH>`
+- `Dir`
+- `LS`
+- `bcdedit` (Données de configuration de démarrage)
+- `RunAs` (Lance une commande en tant que)
+- `Get-ADUser` Utilisateur de l'AD
+- `[COMMANDES] > [PATH]` Envoie le résultat de la commande dans un fichier
+- `Get-Service > test.txt` Envoie le résultat de la commande dans un fichier `.\test.txt`
+- `Get-EventLog system -Newest 5` Affiche les 5 derniers logs système
+- `Get`, `Set`, `Add`, `New` ...
+- `$p=1;$p.GetType()` Int32
+- `"A".GetType()` String
+- `(Get-Service Winrm).stop()` Stop Winrm
 ## Argument ou paramètres utiles
 - `-WhatIf` Argument qui explique la commande
 - `-Confirm:$true` Demande de confirmer la commande
 - `$pass=Read-Host -AsSecureString`
+
+## Pipe
+- `Get-Service | Format-Table name,status` Affiche que le status et name des services
+
+- `Get-SmbShare | Where name -like "*C*"` Affiche les partages contenant \*C\* dans leurs noms
+- `Get-Service | Where name -like "*xbox*"` Affiche les services avec Xbox dans leurs noms
+  - `Get-Service | Where-Object {$_.name -like "*xbox*"}` L'alias de `Where` est aussi `Where-Object`
+  - `Get-Service | ? name -like "*xbox*"` L'alias de `Where` est aussi `?`
+  - `Get-Service | Where-Object name -eq "XboxNetApiSvc"` Affiche le service XboxNetAPISvc
+  - `Get-Service | Where-Object name -like "*xbox*" | Where-Object name -eq "XboxNetApiSvc"` Double pipe
+- `Get-PhysicalDisk | Where-Object -FilterScript { $PSItem.HealthStatus -eq "Healthy" } | Select-Object -Property FriendlyName,OperationalStatus,DriveLetter,FileSystemLabel,DriveType,FileSystem | Format-Table` Récupère les disques, puis uniquement ceux "Healthy", puis récupère uniquement certaines catégories, puis fait un formatage en tableau
+- `Get-Service | Get-Member` Affiche les propriétés des objets via `Get-Member`
