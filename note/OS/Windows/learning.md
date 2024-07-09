@@ -117,7 +117,7 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `shutdown -s -t [secondes]` Arrête l'ordinateur dans x secondes
 - ~~`shutdown -h -t [secondes]` Met en veille l'ordinateur dans x secondes~~ L'argument -h existe mais ne fonctionne pas
 - `timeout /t [secondes]&&rundll32.exe powrprof.dll,SetSuspendState Sleep` Met en veille l'ordinateur dans x secondes
-- Scripts BAT de mise en veille : [sleep.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/sleep.bat)
+- Scripts BAT de mise en veille : [sleep.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/sleep.bat)
 ```
 @echo off
 set /p "min=Nombres de minutes : "

@@ -17,25 +17,25 @@ Même si cela arrive, il est peu probable qu'un programme utile démarre étant 
 start
 goto :start
 ```
-[github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb.bat)
+[forkBomb.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/forkbomb.bat)
 
 ## Variante Windows (Batch)
 ```
 %0|%0
 ```
-[github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb2.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb2.bat)
+[forkBomb2.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/forkbomb2.bat)
 
 ## Variante Windows 2 (Batch)
 ```
 @echo.%0^|%0>$^_^.c^md&$_>nul
 ```
-[github.com /Altherneum/.github /blob/main /note /OS/Windows /forkBomb3.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/forkBomb3.bat)
+[forkBomb3.bat](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/forkbomb3.bat)
 
 ## Variante Linux (Bash)
 ```
 :(){ :|:& };:
 ```
-[github.com /Altherneum/.github /blob/main /note /OS/Linux /forkBomb.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/forkBomb.sh)
+[forkBomb.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/forkBomb.sh)
 
 ## Variante HTML / JS
 ```
@@ -47,7 +47,7 @@ goto :start
   window.onload = open_target_blank();
 </script>
 ```
-[github.com /Altherneum/.github /blob/main /note /Code/Web/HTML /forkBomb.html](https://github.com/Altherneum/.github/blob/main/note/Code/Web/HTML/forkBomb.html)
+[forkBomb.html](https://github.com/Altherneum/.github/blob/main/note/Code/Web/HTML/forkBomb.html)
 
 # Comment utiliser
 
