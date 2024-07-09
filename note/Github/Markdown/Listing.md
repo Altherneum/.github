@@ -10,15 +10,11 @@
 
 ###### Titre niveau 6
 
----
-
 [Text du lien](https://pages.github.com/)
 
 [Un lien local](/CONTRIBUTING.md)
 
 ![Image](https://avatars.githubusercontent.com/u/84735589?v=4)
-
----
 
 **Text en gras**
 
@@ -32,32 +28,46 @@
 
 __Text souligné__
 
----
-
 <details>
 <summary>Titre</summary>
 Text
 </details>
 
----
-
 Du text et `un peut de code`, avec du text
+
+`Du code avec un *Wildcard*`
+
+```
+/* Commentaire à ne pas mettre en italique */
+```
 
 ```
 Bloc de code
 Multiligne
 ```
 
----
-
 - Liste
 - Une autre liste
   - Liste tabulée
   - Une autre liste tabulée
+
 * Liste étoile
 * Une autre liste étoile
+
 1. Liste à nombre
 2. Une autre liste à nombre
+
+- Une autre liste
+  - Liste tabulée avec 2 espaces
+    - Liste tabulée avec 4 espaces
+      - Liste tabulée avec 6 espaces
+        - Liste tabulée avec 8 espaces !
+          - Liste tabulé avec 10 espaces !!!
+
+- Une liste avec du **gras** présent (Bug présent, le text dans le li va passer en text p par erreur)
+- Une liste sans gras présent
+
+élément de rupture thématique (règle horizontale) ⬇
 
 ---
 
