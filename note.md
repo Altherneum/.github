@@ -218,8 +218,37 @@ Permet de créer des commandes auto
 - `RunAs` (Lance une commande en tant que)
 - `Get-ADUser` Utilisateur de l'AD
 
-- `Get-EventLog system -Newest 5` Affiche les 5 derniers logs système
-- `Get`, `Set`, `Add`, `New` ...
+- `Get-WinEvent -LogName System -MaxEvents 5` Affiche les 5 derniers logs système
+- `Get-WinEvent -LogName System -Newest 1`
+- `Get-WinEvent -LogName System -MaxEvents 10 | Format-Table -AutoSize -Wrap`
+- `Get-WinEvent -LogName System | Where-Object {$_.TimeCreated -like "*10/07/2024*"}`
+
+- `Get`, `Set`, `Add`, `New` ... Lister les props 
+
+- `Get-Process | Measure-Object`
+- `Get-Process | Measure-Object -Sum -Average`
+
 - `$p=1;$p.GetType()` Int32
 - `"A".GetType()` String
+
 - `(Get-Service Winrm).stop()` Stop Winrm
+
+
+
+
+
+
+
+
+# Note du 10/07
+
+
+
+
+
+# HashTable
+Get-Volume | Select-Object `
+-Property @{n='Lettre de lecteur'; e= {($_.driveletter)}},`
+  @{n='Taille en GO'; e={'{0:N2}' -f ($_.Size / 1GB) }},`
+  @{ n='Taille Libre en GO'; e={'{0:N2}' -f ($_.SizeRemaining /1GB)}}
+

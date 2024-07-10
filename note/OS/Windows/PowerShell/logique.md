@@ -26,6 +26,16 @@ if ( $nombre -gt 0 )
     Write-Host “> 0”
 }
 ```
+
+#### If and
+```
+[int]$nombre = Read-Host “Entrez un nombre”
+if ( $nombre -gt 0 -and $nombre -lt 10)
+{
+    Write-Host “> 0 and < 10”
+}
+```
+
 ### If Else
 ```
 [int]$nombre = Read-Host “Entrez un nombre”
@@ -163,3 +173,9 @@ finally {
   - `42 -match '[0-9][0-9]'` Vrai si cela correspond à deux nombres
 - `-notmatch`
   - `"book" -notmatch "stone"`
+
+## And Or
+- `And`
+- `Or`
+
+- `Get-Service | ? { $_.Status -eq "Stopped" -or $_.Name -like "*xbox*" }`

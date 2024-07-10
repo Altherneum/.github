@@ -14,9 +14,10 @@
 
 #### Exemples de pipe avec Where
 - `Get-Service | Where name -like "*xbox*"` Affiche les services avec Xbox dans leurs noms
-  - `Get-Service | Where-Object {$_.name -like "*xbox*"}` L'alias de `Where` est aussi `Where-Object`
+  - `Get-Service | Where-Object name -like "*xbox*"` L'alias de `Where` est aussi `Where-Object`
   - `Get-Service | ? name -like "*xbox*"` L'alias de `Where` est aussi `?`
-  - `Get-Service | Where-Object name -eq "XboxNetApiSvc"` Affiche le service XboxNetAPISvc
+  - `Get-Service | Where-Object name -eq "XboxNetApiSvc"` Affiche le service 
+  - `Get-Service | Where-Object {$_.name -like "*xbox*"}` Avec des `{}`
   - `Get-Service | Where-Object name -like "*xbox*" | Where-Object name -eq "XboxNetApiSvc"` Double pipe
 
 #### Autres exemples de pipe
@@ -75,3 +76,14 @@ Text à commenter
 - `-WhatIf` Argument qui explique la commande
 - `-Confirm:$true` Demande de confirmer la commande
 - `$pass=Read-Host -AsSecureString` Permet la saisie de mot de passe
+
+## Formattage
+- `[COMMANDE] | Get-Member` Liste les propriétés d'un objet
+  - `Get-ADUser -filter * | Get-Member` Liste les propriétés de tout les utilisateurs du domaine
+  - `Get-ADUSer -properties * | Get-Member` Liste les propriétés de toutes les propriétés d'un utilisateur
+- `[COMMANDE] | FORMAT-[LIST|TABLE|Wide]` Type de format en sortie
+  - `Get-Service | Format-Table` Liste des services au format table
+  - `Get-Service | Format-Table name` Liste des services au format table (Uniquement le nom)
+  - `Get-Service | Sort-Object -Property Name` Liste les services en filtrant par nom
+  - `Get-Service | Sort-Object -Property Name -Descending` Liste les services en filtran par nom descendant
+- `Get-Service | Out-GridView` Format externe sous forme de tableau
