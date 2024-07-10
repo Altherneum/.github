@@ -40,7 +40,7 @@ cours sur Windows
 # Installation via ISO
 ## Télécharger l'ISO
 - [windows10ISO](https://www.microsoft.com/fr-fr/software-download/windows10ISO)
-- [-windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
+- [windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
 
 ## Déplacer l'ISO sur un support
 - Clef USB / réseau (server de mastering) / CD, ...

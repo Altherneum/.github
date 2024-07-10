@@ -212,6 +212,10 @@ Permet de créer des commandes auto
   - `slmgr -dli` Affiche le détail de la license Windows
   - `slmgr dlv` Affiche tout les détailes de license
 
+
+- `netstat -na | more`
+
+
 - `Dir`
 - `LS`
 - `bcdedit` (Données de configuration de démarrage)
