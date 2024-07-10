@@ -37,6 +37,8 @@ Du text et `un peut de code`, avec du text
 
 `Du code avec un *Wildcard*`
 
+`` ` `` Un backtick dans un code block
+
 ```
 /* Commentaire à ne pas mettre en italique */
 ```
@@ -50,8 +52,6 @@ Multiligne
 Bloc de code `
 Multiligne avec un backtick
 ```
-
-`` ` `` Un backtick dans un code block
 
 - Liste
 - Une autre liste
