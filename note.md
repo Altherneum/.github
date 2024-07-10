@@ -212,6 +212,7 @@ Permet de créer des commandes auto
   - `slmgr -dli` Affiche le détail de la license Windows
   - `slmgr dlv` Affiche tout les détailes de license
 
+- `sconfig` Outil de configuration du serveur
 
 - `netstat -na | more`
 
@@ -251,8 +252,9 @@ Permet de créer des commandes auto
 
 
 # HashTable
+```
 Get-Volume | Select-Object `
--Property @{n='Lettre de lecteur'; e= {($_.driveletter)}},`
-  @{n='Taille en GO'; e={'{0:N2}' -f ($_.Size / 1GB) }},`
+-Property @{n='Lettre de lecteur'; e= {($_.driveletter)}}, `
+  @{n='Taille en GO'; e={'{0:N2}' -f ($_.Size / 1GB) }}, `
   @{ n='Taille Libre en GO'; e={'{0:N2}' -f ($_.SizeRemaining /1GB)}}
-
+```
