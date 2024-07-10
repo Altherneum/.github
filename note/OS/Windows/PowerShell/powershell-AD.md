@@ -3,12 +3,15 @@
 ### Commandes Active Directory
 - `Rename-Computer -NewName "NAME" -Restart`
 - `Get-WindowsFeature` Liste des features Windows
-## Configuration de l'IP
+### Configuration de l'IP
 - `Get-NetIPInterface` Liste des configurations IP
 - `Get-NetAdapter` Propriétés basiques des adaptateurs réseau
 - `Get-netadapter -Name Wi-Fi` Propriété de l'adaptateur Wi-Fi 
 - `New-NetIPAddress –InterfaceIndex <ID> –IPAddress <IP> –PrefixLength <CIDR> –DefaultGateway <IP>`
 - `Set-NetIPInterface -InterfaceIndex 12 -Dhcp {Enabled/Disabled}`
+### Configuration VM-Switch
+- `Get-VMSwitch` Commande qui liste les switchs
+- `New-VMSwitch -Name <switch-name> -NetAdapterName <netadapter-name>`
 
 ## Script
 ## Installer ADDS
