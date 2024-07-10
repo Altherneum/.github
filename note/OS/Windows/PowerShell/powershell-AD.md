@@ -12,6 +12,11 @@
 ### Configuration VM-Switch
 - `Get-VMSwitch` Commande qui liste les switchs
 - `New-VMSwitch -Name <switch-name> -NetAdapterName <netadapter-name>`
+### Ajouter des utilisateurs ou ordinateurs
+`Add-Computer -DomainName form.loc -DomainCredential administrateur@form.loc -Restart` [Doc MS PwS](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
+- `Add-Computer -ComputerName "Win10-PC-1" -DomainCredential Administrateur@PowerShell.lan -DomainName PowerShell -Restart -Force`
+- `Add-Computer -ComputerName "192.168.10.100" -DomainCredential Administrateur@PowerShell.lan -DomainName PowerShell -Restart -Force` (WMI doit être autorisé sur le pare-feu)
+  - `Pare-Feu`, `Infrastructure de gestion Windows (WMI)`
 
 ## Script
 ## Installer ADDS

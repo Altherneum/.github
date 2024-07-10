@@ -46,6 +46,11 @@ Bloc de code
 Multiligne
 ```
 
+```
+Bloc de code `
+Multiligne avec un backtick
+```
+
 - Liste
 - Une autre liste
   - Liste tabulée

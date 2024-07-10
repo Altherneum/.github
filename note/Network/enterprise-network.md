@@ -259,8 +259,9 @@ Carte Serveurs
 - Masque de sous-réseau : `255.255.255.0`
 - Passerelle par défaut : `192.168.20.254`
 
-- Serveur DNS préféré : `192.168.10.10`
-- Serveur DNS auxiliaire : `192.168.10.11`
+- ~~Serveur DNS préféré : `192.168.10.10`~~
+- ~~Serveur DNS auxiliaire : `192.168.10.11`~~
+  - Déplacé dans `192.168.10.14` pour des tests PowerShell
 
 - Domaine : `FORMATION.LAN`
 - Nom du poste : `Win10-PC-1`
