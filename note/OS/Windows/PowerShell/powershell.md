@@ -25,7 +25,7 @@
 - `Get-PhysicalDisk | Where-Object -FilterScript { $PSItem.HealthStatus -eq "Healthy" } | Select-Object -Property FriendlyName,OperationalStatus,DriveLetter,FileSystemLabel,DriveType,FileSystem | Format-Table` Récupère les disques, puis uniquement ceux "Healthy", puis récupère uniquement certaines catégories, puis fait un formatage en tableau
 
 ### Backtick
-- Le backtick sert à diviser les commandes en plusieurs lignes
+- `` ` `` Le backtick sert à diviser les commandes en plusieurs lignes
 ```
 Get-Process `
 | Where-Object { $_.CPU -gt 10 } `

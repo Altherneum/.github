@@ -51,6 +51,8 @@ Bloc de code `
 Multiligne avec un backtick
 ```
 
+`` ` `` Un backtick dans un code block
+
 - Liste
 - Une autre liste
   - Liste tabulée
