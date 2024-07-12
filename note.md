@@ -381,3 +381,12 @@ Peut êter configuré sur le gestionnaire de serveur
   - Gestionnaire de serveur, Serveur local
   - Cliquer sur "Activé" de la ligne bureau à distance
     - ![alt text](/note/assets/images/Bureau-Distant-Settings.png)
+
+
+# TPM
+TPM.MSC permet de vérifier si TPM est présent
+
+# Bitlocker
+- Doit avoir TPM 2.0
+- Comment activer ???
+- commande : `manage-bde`
