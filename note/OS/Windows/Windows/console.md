@@ -104,5 +104,6 @@ timeout /t %sec%&&rundll32.exe powrprof.dll,SetSuspendState Sleep
 ```
 ## Task
 - `tasklist` Liste des processus
-- `taskkill /f /im [process name]` Tuer un processus par le nom
-- `taskkill /f /pid [process ID]` Tuer un processus par son ID
+  - `Tasklist /svc`
+  - `taskkill /f /im [process name]` Tuer un processus par le nom
+  - `taskkill /f /pid [process ID]` Tuer un processus par son ID
