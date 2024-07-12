@@ -129,7 +129,7 @@ Un groupe ayant une étendue « globale » pourra être utilisé dans le domaine
 Ainsi, si un « domaine A » approuve via une relation un « domaine B », alors un groupe global créé dans le « domaine A » pourra être utilisé dans le « domaine B »
 
 ##### Universelle
-Accèssible dans l’ensemble de la forêt de l'Active Directory
+Accèssible dans l’ensemble des forêts sur tout les domaines approuvés
 
 Un groupe universel peut contenir des groupes et objets provenant de n’importe quel domaine de la forêt. 
 

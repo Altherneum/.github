@@ -22,6 +22,8 @@ cours sur Windows
 - `Impr Ecran Syst` Capture d'écran
 - `Win + ↑ Shift + S` Capture d'écran avec zone
 
+- `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
+
 # TaskManager
 - Raccourcis `Ctrl Alt Suppr`, `TAB` `Entrée`
 

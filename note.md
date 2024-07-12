@@ -221,6 +221,16 @@ Permet de créer des commandes auto
 - `LS`
 - `bcdedit` (Données de configuration de démarrage)
 - `RunAs` (Lance une commande en tant que)
+  - De préférance sans charger le profil Windows `/noprofile`
+- `mmc` Microsoft Management Console
+
+
+
+
+
+
+
+
 - `Get-ADUser` Utilisateur de l'AD
 
 - `Get-WinEvent -LogName System -MaxEvents 5` Affiche les 5 derniers logs système
@@ -243,9 +253,29 @@ Permet de créer des commandes auto
 
 
 
+# Outils d'administration Windows
+- Délégation de contrôle
+  - Donne des droits customs à quelqu'un (comme changer les mot de passe)
+- Onglet Utilisateurs et ordinateurs Active Directory
+  - Clique droit sur une UO 
+- Il faudra installer la console AD sur le profil de l'utilisateur "RSAT" (Remote server administration tool)
+  - Ajouter une fonctionnalité facultative, Cliquer sur "Ajouter une fonctionnalité", chercher "RSAT"
+
+    - ![Image RSAT](/note/assets/images/RSAT.png)
+
+  - PowerShell : `Get-WindowsCapability -Name *RSAT* -Online`, `Add-WindowsCapability -online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0`
+  - Shell : `DISM.exe /Online /add-capability -CapabilityName:"Microsoft.Windows.WordPad~~~~0.0.1.0"`
+- Outils d'administration Windows sera disponible
+
+  - ![alt text](/note/assets/images/OutilsAdministrationWin.png) 
 
 
-# Note du 10/07
+
+
+
+
+
+
 
 
 
@@ -258,3 +288,96 @@ Get-Volume | Select-Object `
   @{n='Taille en GO'; e={'{0:N2}' -f ($_.Size / 1GB) }}, `
   @{ n='Taille Libre en GO'; e={'{0:N2}' -f ($_.SizeRemaining /1GB)}}
 ```
+
+
+
+
+
+
+
+
+
+# Droit partage
+Pour modifier,
+Doit avoir droit edit sur Partage du dossier
+Et sur l'onglet sécurité
+
+si restriction, est prio sur permission
+
+
+
+
+
+
+# Observateur d’événements
+Logs Windows, peut-être fait sur un PC comme un domaine
+- Sur un domaine, penser à rendre les journeaux non remplacables lorsque pleins
+- (Clique droit sur Journaux windows, Propriétés, Ne pas remplacer événement)
+
+
+
+
+
+# Profil
+- Mandataire
+Reste au startup avec un profil par défaut custom
+(Fichier `MAN.DAT`) (Racine de dossier user/user)
+- Itinérant
+Profil stocké sur le serveur de stockage AD
+
+
+
+
+
+
+
+
+
+
+# AD
+- NB : `Affichage`, `Fonctionnalités avancées` à cocher
+
+## Organizational Unit
+Créer une unitée organisation : 
+- `New-ADOrganizationalUnit -DisplayName "SuperOUName" -Name "SuperOUName" -Path "DC=PowerShell,DC=LAN"`
+
+## User
+Créer un utilisateur :
+- `New-ADUser -DisplayName "Sylvie" -Name "Sylvie" -Surname "VAR" -SamAccountName "sylvie" -UserPrincipalName "sylvie@form.loc" -Path "OU=Utilisateurs,DC=PowerShell,DC=LAN" -PasswordNeverExpires $true -AccountPassword (Write-Host "Tappez le mot de passe du compte à créer : ");(Read-Host -AsSecureString) -Enabled $true`
+
+
+- NB : Pourquoi Surname = var ???
+
+## Account Password
+- `Set-ADAccountPassword -Identity "Sylvie" -NewPassword (ConvertTo-SecureString -AsPlainTex "ABC123@!123" -Force)`
+- `Set-ADAccountPassword -Identity sylvie -NewPassword (Write-Host "Tappez le nouveau mot de passe du compte : ");(Read-Host -AsSecureString)`
+
+## Account
+- `Enable-ADAccount -Identity "sylvie"`
+
+## Lock & Unclock AD Account
+## Unlock AD Account
+- `Unlock-ADAccount -Identity "sylvie"`
+  - Distinguished Name`-Identity "CN=Patti Fuller,OU=Finance,OU=Users,DC=FABRIKAM,DC=COM"`
+## Disable AD Account
+- `Disable-ADAccount -Identity "sylvie"`
+  - Distinguished Name`-Identity "CN=Patti Fuller,OU=Finance,OU=Users,DC=FABRIKAM,DC=COM"`
+- `Get-ADUser -Filter 'Name -like "*"' -SearchBase "OU=Finance,OU=Users,DC=FABRIKAM,DC=COM" | Disable-ADAccount`
+
+
+
+
+
+
+
+
+
+
+# Bureau à distance
+- mstsc.exe ou bureau à distance
+
+Peut êter configuré sur le gestionnaire de serveur
+  - ![alt text](/note/assets/images/Bureau-Distant.png)
+  - Gestionnaire de serveur, Serveur local
+  - Cliquer sur "Activé" de la ligne bureau à distance
+    - ![alt text](/note/assets/images/Bureau-Distant-Settings.png)
