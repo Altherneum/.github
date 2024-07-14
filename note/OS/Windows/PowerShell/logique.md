@@ -174,8 +174,19 @@ finally {
 - `-notmatch`
   - `"book" -notmatch "stone"`
 
-## And Or
+### And Or
 - `And`
 - `Or`
 
 - `Get-Service | ? { $_.Status -eq "Stopped" -or $_.Name -like "*xbox*" }`
+
+## Le not
+`-not $true` = `False`
+`!$true` = `False`
+`-not $false` = `True`
+`!$false` = `True`
+`-not -not $false` = `False`
+`-not 0` = `True`
+`-not 1` = `False`
+`-not 1.23` = `False`
+`!"xyz"` = `False`

@@ -3,28 +3,14 @@
 
 # To test
 - Tester auto shut down
-  - Dans l'outils prévus
-  - Password policy
-  - Firewall
-  - OpenVPN IP check
+- Block file type (bat, ps1, CMD, etc)
+- Password policy
+- Firewall
+- OpenVPN IP check
 
 # To do
 - Nettoyer [Github ... /note/notes-network.md](https://github.com/Altherneum/.github/blob/main/note/notes-network.md) | [/note/notes-network.md](/note/notes-network.md)
 - Routage [Github ... /note/Network/Cisco/routage.md](https://github.com/Altherneum/.github/blob/main/note/Network/Cisco/routage.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Test Approbation de domaine
 ## Utilisateurs et ordinateurs Active Directory Domaine enfant distant approbation
@@ -55,13 +41,6 @@ Tout a été crée, peut inter connecté des domaines, mais partage de fichier i
 
 REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
 
-
-
-
-
-
-
-
 # CV update
 Avec Philipe LAMBERT
 
@@ -78,9 +57,6 @@ Avec Philipe LAMBERT
 - Né avec un clavier entre les mains
 - Hobie
 - lien si imprimer
-
-
-
 
 
 
@@ -117,33 +93,6 @@ $k++                  # 2147483648 is too big to fit, imp-def behavior
 $x = $null            # target is unconstrained, $null goes to [int]0
 $x++                  # value treated as int, 0->1
 ```
-
-
-
-
-
-
-
-
-
-
-# Le not
-```
--not $true         # False
--not -not $false   # False
--not 0             # True
--not 1.23          # False
-!"xyz"             # False
-```
-
-
-
-
-
-
-
-
-
 
 # Unary
 ```
@@ -184,10 +133,6 @@ unary-expression can be a scalar value or a collection.
 
 
 
-
-
-
-
 ## Variable env
 Permet de créer des commandes auto
 
@@ -216,20 +161,12 @@ Permet de créer des commandes auto
 
 - `netstat -na | more`
 
-
 - `Dir`
 - `LS`
 - `bcdedit` (Données de configuration de démarrage)
 - `RunAs` (Lance une commande en tant que)
   - De préférance sans charger le profil Windows `/noprofile`
 - `mmc` Microsoft Management Console
-
-
-
-
-
-
-
 
 - `Get-ADUser` Utilisateur de l'AD
 
@@ -252,52 +189,12 @@ Permet de créer des commandes auto
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Droit partage
 Pour modifier,
 Doit avoir droit edit sur Partage du dossier
 Et sur l'onglet sécurité
 
 si restriction, est prio sur permission
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
