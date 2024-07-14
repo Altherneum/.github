@@ -24,8 +24,7 @@ Install-WindowsFeature AD-Domain-Services  `
 
 ### Configuration de l'IP
 
-Liste des cartes réseaux et leurs indexes :`Get-NetAdapter`
-
+Liste des cartes réseaux et leurs indexes : `Get-NetAdapter`
 ```
 Set-NetIPAddress –InterfaceIndex 4 –IPAddress 192.169.10.14 –PrefixLength 24 –DefaultGateway 192.169.10.254
 Set-DnsClientServerAddress -InterfaceIndex 4 -ServerAddresses 192.168.10.10
