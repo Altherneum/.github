@@ -50,6 +50,7 @@ Install-ADDSForest `
 -SafeModeAdministratorPassword $pass `
 -Force:$true
 shutdown -r -t 0
+```
 
 ## Organizational Unit
 Créer une unitée organisation : 
@@ -79,7 +80,6 @@ Désactiver un compte :
 - `Disable-ADAccount -Identity "sylvie"`
   - Distinguished Name`-Identity "CN=Patti Fuller,OU=Finance,OU=Users,DC=FABRIKAM,DC=COM"`
 - `Get-ADUser -Filter 'Name -like "*"' -SearchBase "OU=Finance,OU=Users,DC=FABRIKAM,DC=COM" | Disable-ADAccount`
-```
 
 ## Ajouter des ordinateurs
 `Add-Computer -DomainName form.loc -DomainCredential administrateur@form.loc -Restart` [Doc MS PwS](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
