@@ -11,6 +11,15 @@
 # To do
 - Nettoyer [Github ... /note/notes-network.md](https://github.com/Altherneum/.github/blob/main/note/notes-network.md) | [/note/notes-network.md](/note/notes-network.md)
 - Routage [Github ... /note/Network/Cisco/routage.md](https://github.com/Altherneum/.github/blob/main/note/Network/Cisco/routage.md)
+- infos.md to add on website [Github ... /note/OS/Windows/Active-Directory/infos.md](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Active-Directory/infos.md)
+
+
+
+
+
+
+
+
 
 # Test Approbation de domaine
 ## Utilisateurs et ordinateurs Active Directory Domaine enfant distant approbation
@@ -40,6 +49,16 @@ Attention pleins de groupes ont étés ajoutés les un dans les autres pour test
 Tout a été crée, peut inter connecté des domaines, mais partage de fichier impossible
 
 REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
+
+
+
+
+
+
+
+
+
+
 
 # CV update
 Avec Philipe LAMBERT
@@ -152,11 +171,6 @@ Permet de créer des commandes auto
 
 - `ShowCommand` [Affiche la commande](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.4) en mode visuel
 - `h` affiche l'historique de commande
-- `slmgr` Détail de license Windows
-  - `slmgr -xpr` Affiche si la license Windows est active
-  - `slmgr -dli` Affiche le détail de la license Windows
-  - `slmgr dlv` Affiche tout les détailes de license
-
 - `sconfig` Outil de configuration du serveur
 
 - `netstat -na | more`
@@ -170,10 +184,6 @@ Permet de créer des commandes auto
 
 - `Get-ADUser` Utilisateur de l'AD
 
-- `Get-WinEvent -LogName System -MaxEvents 5` Affiche les 5 derniers logs système
-- `Get-WinEvent -LogName System -Newest 1`
-- `Get-WinEvent -LogName System -MaxEvents 10 | Format-Table -AutoSize -Wrap`
-- `Get-WinEvent -LogName System | Where-Object {$_.TimeCreated -like "*10/07/2024*"}`
 
 - `Get`, `Set`, `Add`, `New` ... Lister les props 
 

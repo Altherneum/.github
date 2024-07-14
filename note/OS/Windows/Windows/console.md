@@ -26,7 +26,6 @@
 - `cd ..` retour en arrière d'un dossier
 - `tree` Affiche graphiquement la structure des répertoires d’un chemin ou du disque d’un lecteur
 
-
 ## Disques
 - `sfc /scannow` scan le système Windows
 - `chkdsk /f` vérifie l’intégrité des fichiers système
@@ -81,6 +80,13 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 - `logoff` Déconnecte le compte Windows
 - `ver` Version du système
 - `sysdm.cpl` Propriétés système
+
+## Licence
+- `slmgr` Détail de license Windows
+- Ces commandes doivent être obligatoirement tapées dans la console
+  - `slmgr -xpr` Affiche si la license Windows est active
+  - `slmgr -dli` Affiche le détail de la license Windows
+  - `slmgr dlv` Affiche tout les détailes de license
 
 ## Global policy
 - `gpupdate /force` Met à jour les paramètres de la stratégie de groupe
