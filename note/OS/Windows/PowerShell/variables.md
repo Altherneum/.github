@@ -118,3 +118,7 @@ $i = $true     # ok, conversion to int
 - `-join (123, $false, 19.34e17)` = "123False1.934E+18"
 - `-join 12345` = "12345"
 - `-join $null` = ""
+
+## Types
+- `$p=1;$p.GetType()` Int32
+- `"A".GetType()` String

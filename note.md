@@ -170,30 +170,26 @@ Permet de créer des commandes auto
 ## Commandes utiles
 
 - `ShowCommand` [Affiche la commande](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.4) en mode visuel
-- `h` affiche l'historique de commande
+
 - `sconfig` Outil de configuration du serveur
 
-- `netstat -na | more`
+
 
 - `Dir`
 - `LS`
 - `bcdedit` (Données de configuration de démarrage)
-- `RunAs` (Lance une commande en tant que)
-  - De préférance sans charger le profil Windows `/noprofile`
 - `mmc` Microsoft Management Console
 
+
+
 - `Get-ADUser` Utilisateur de l'AD
-
-
 - `Get`, `Set`, `Add`, `New` ... Lister les props 
 
-- `Get-Process | Measure-Object`
-- `Get-Process | Measure-Object -Sum -Average`
 
-- `$p=1;$p.GetType()` Int32
-- `"A".GetType()` String
 
-- `(Get-Service Winrm).stop()` Stop Winrm
+
+
+
 
 
 

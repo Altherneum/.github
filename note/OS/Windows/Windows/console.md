@@ -1,12 +1,23 @@
 
 # Console
+## Afficher du texte
 - `@echo off` Pour empêcher l’affichage de toutes les commandes d’un fichier de traitement par lots (y compris la commande écho désactivé) à l’écran, sur la première ligne du type de fichier de traitement par lots
 - `echo off` Pour empêcher l’écho des commandes à l’invite de commande
 - `echo text` Affiche "text"
+- `echo %random%` Chiffres aléatoires
 
+## Historique
+- `F7` Affiche l'historique des commandes
+  - `Alt + F7` Supprime l'historique des commandes
+- `F9` Permet de recharger une commande par son n°
+- `F7 + F9`
+- `F8` Commandes précédentes
+- `doskey /History` Affiche l'historique de commande
+
+## Go to
 - `:Text` Crée le début d'une boucle nommé 'Text'
 - `goto :Text` Le code va exécuter la boucle 'Text'
-`%random%` Chiffres aléatoires
+
 - `color [couleurs]` Couleur du text ou de l'arrière plan  
   - `color 84` Fond Gris, text rouge
   - `color 2` text vert
@@ -17,6 +28,10 @@
   - `prompt $p$g` : C:\Users\User>
 - `CMD` Invite de commande
   - `CMD /c [Commande]` Exécute la commande puis se termine.
+
+## Run as
+- `RunAs` (Lance une commande en tant que)
+  - De préférance sans charger le profil Windows `/noprofile`
 
 ## Dossiers
 - `dir` Dossiers et fichiers
@@ -44,6 +59,7 @@
 
 ### Netstat
 - `netstat -aon` Affiche les données détaillées des sockets actifs
+- `netstat -na | more` Affiche toutes les connexions et tous les ports d'écoute, les adresses et numéros de ports seront affichés en format numérique
 
 ### netsh WiFi key
 - `netsh wlan show profile` Liste les réseaux auxquels l'ordinateur s'est déjà connecté

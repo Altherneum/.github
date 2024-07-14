@@ -60,6 +60,9 @@ Text à commenter
 - `$PSVersionTable` Version PowerShell
 - `PowerShell` Passe en mode PowerShell
 - `PWSH` Passe en mode PowerShell 7.x
+### Historique des commandes
+- `h` / `History` Affiche l'historique des commandes
+- `clhy` / `Clear-History` Supprime l'historique des commandes
 ### Installation de module
 - `Install-Module [NOM]`
   - `Install-Module [NOM] -MinimumVersion 2.2.5`
@@ -72,6 +75,10 @@ Text à commenter
 - `Get-Content [FILE_PATH]`
 - `[COMMANDES] > [PATH]` Envoie le résultat de la commande dans un fichier
   - `Get-Service > test.txt` Envoie le résultat de la commande dans un fichier `.\test.txt`
+### Processus et services
+- `Get-Process | Measure-Object`
+- `Get-Process | Measure-Object -Sum -Average`
+- `(Get-Service Winrm).stop()` Stop Winrm
 ### Paramètres utiles
 - `-WhatIf` Argument qui explique la commande
 - `-Confirm:$true` Demande de confirmer la commande
