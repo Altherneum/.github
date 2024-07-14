@@ -37,6 +37,19 @@ Permet de récupérer des objets supprimés de l'Active Directory
 - Sera dans `CN=Deleted Objects,DC=FORMATION,DC=LAN`  
 ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted objects`
 
+### Activer les fonctionnalités avancées
+- `Affichage`, `Fonctionnalités avancées`
+- Permet de [modifier ou supprimer](#Modifier-ou-supprimer) des objets protégés
+
+# Bureau à distance
+- `mstsc.exe` ou `bureau à distance`
+- Permet de se connecter à distance sur le serveur Active Directory
+- Peut êter configuré sur le gestionnaire de serveur
+  - ![Paramètre bureau distant](/note/assets/images/Bureau-Distant.png)
+  - Gestionnaire de serveur, Serveur local
+  - Cliquer sur "Activé" de la ligne bureau à distance
+    - ![Configurer le paramètre bureau distant](/note/assets/images/Bureau-Distant-Settings.png)
+
 ## Configuration de l'Active Directory
 - Liste des Ordinateurs, utilisateurs, domaines, groupes
 ### Unité d'organisation
@@ -56,7 +69,7 @@ ou `Centre d'administration Active Directory` > `FORMATION (Local)` > `Deleted o
 - Avec l'option : `L'utilisateur doit changer le mot de passe à la prochaine ouverture de session`)  
 - Dans l'unité d'organisation `Utilisateurs/IT`
 #### Modifier ou supprimer
-- `Affichage`, `Fonctionnalité avancé`, `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
+[Activer les fonctionnalités avancées](#Activer-les-fonctionnalités-avancées), `Clique droit` sur l'objet à modifier / supprimer et `Propriétés`, catégorie `Objets`, décocher `Protéger l'objet des suppressions accidentelles`
 #### Horaire d'accès
 Option `Compte` des `Propriétés` de l'utilisateur, puis bouton `Horaire d'accès`
 #### Désactiver un compte

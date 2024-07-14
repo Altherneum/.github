@@ -50,6 +50,14 @@ $myHashtable = @{
 }
 ```
 
+#### HashTable pour remplacer des objets
+```
+Get-Volume | Select-Object `
+-Property @{n='Lettre de lecteur'; e= {($_.driveletter)}}, `
+  @{n='Taille en GO'; e={'{0:N2}' -f ($_.Size / 1GB) }}, `
+  @{ n='Taille Libre en GO'; e={'{0:N2}' -f ($_.SizeRemaining /1GB)}}
+```
+
 ## Environnement 
 - `Get-ChildItem Env:` ou `gci` : Lister les variables d'environnement
   - `$env:variable = "test"` Créer une variable d'environnement
