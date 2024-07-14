@@ -172,11 +172,9 @@ Permet de créer des commandes auto
 - `ShowCommand` [Affiche la commande](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.4) en mode visuel
 
 - `sconfig` Outil de configuration du serveur
+  - CMD ou PS
 
 
-
-- `Dir`
-- `LS`
 - `bcdedit` (Données de configuration de démarrage)
 - `mmc` Microsoft Management Console
 

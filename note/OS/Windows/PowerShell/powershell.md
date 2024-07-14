@@ -75,6 +75,10 @@ Text à commenter
 - `Get-Content [FILE_PATH]`
 - `[COMMANDES] > [PATH]` Envoie le résultat de la commande dans un fichier
   - `Get-Service > test.txt` Envoie le résultat de la commande dans un fichier `.\test.txt`
+
+#### Liste des fichiers
+- `ls` / `dir` Liste les fichiers et dossiers
+
 ### Processus et services
 - `Get-Process | Measure-Object`
 - `Get-Process | Measure-Object -Sum -Average`

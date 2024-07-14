@@ -34,7 +34,7 @@
   - De préférance sans charger le profil Windows `/noprofile`
 
 ## Dossiers
-- `dir` Dossiers et fichiers
+- `dir` Liste les dossiers et fichiers
 - `copy [path\file.ext] [path\newfile.ext]` Copier & Coller
 - `del [path\file.ext]` Supprimer
 - `cd [chemin]` permet de se déplacer dans la structure de dossier
