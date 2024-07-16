@@ -172,11 +172,13 @@ Permet de créer des commandes auto
 - `ShowCommand` [Affiche la commande](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.4) en mode visuel
 
 - `sconfig` Outil de configuration du serveur
-  - CMD ou PS
+  - CMD ou PS ?
 
 
 - `bcdedit` (Données de configuration de démarrage)
+  - To test
 - `mmc` Microsoft Management Console
+  - To test
 
 
 
@@ -211,3 +213,60 @@ TPM.MSC permet de vérifier si TPM est présent
 - Doit avoir TPM 2.0
 - Comment activer ???
 - commande : `manage-bde`
+
+
+
+
+# WinRM
+- Permet la gestion à distance de Windows
+- Ports :
+  - `HTTP` : `5985`
+  - `HTTPS` : `5986`
+- Windows Remote Management (WinRM)
+
+- `Get-Service WinRM`
+
+## Activer WinRM
+- `Enable-PSRemoting`
+- ou `winrm quickconfig`
+
+## Vérifier si l'éxecution de scripts est active
+- `Get-ExecutionPolicy` Politique sur l'exécution de scripte à distance
+- `Set-ExecutionPolicy [POLICY]`
+
+## Ouvrir une session
+- `Enter-PSSession -ComputerName CORE01 -Credential "DomaineName\UserName"`
+
+## Invoke command
+`Invoke-Command -ComputerName <Computer> -ScriptBlock {Commande ; Commande 2}`
+
+`Invoke-Commannd -ComputerName PC1,PC2,PC3 -ScriptBlock { dir C:\ }`
+
+`Invoke-command -computername "PC1,DC1" -scriptblock { Start-process chrome.exe }`
+
+
+
+
+
+
+
+# MSG
+Send msg to network computer
+`msg <user_name>`
+msg 1 hello
+
+-or-
+
+msg 0 hello
+
+It would be curious if you get the same error. The ‘*’ sends to every session, so one of them is having a problem. But oh well, it works !
+
+# Linux 
+## LVM
+- Logical volume management
+- Permet plusieurs disques en un seul
+- Permet d'écrire sur plusieurs disques à la fois
+## GRUB
+Boot-loader
+## Deamon
+Logiciel au démarrage en arrière plan

@@ -266,6 +266,18 @@ Carte Serveurs
 - Domaine : `FORMATION.LAN`
 - Nom du poste : `Win10-PC-1`
 
+### Debian
+- Login : `root` / `jeb`
+- Password : `SuperUser11`
+- Carte réseau sur `NAT`
+
+- Nom du poste : `Debian`
+### AlmaLinux
+- Login : `root` / `jeb`
+- Password : `SuperUser11`
+- Carte réseau sur `NAT`
+
+
 ## DNS
 ### DNS principal
 - Contrôlé par [Win22-SRV-1](#Win22-SRV-1)

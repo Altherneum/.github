@@ -57,3 +57,6 @@
 `ctrl+o` Permet de sauvegarder le fichier
 ---
 - `vi [Fichier]` Ouvre l'éditeur de texte vi
+
+# Liste des services
+- `Systemctl`
