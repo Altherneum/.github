@@ -270,3 +270,5 @@ It would be curious if you get the same error. The ‘*’ sends to every sessio
 Boot-loader
 ## Deamon
 Logiciel au démarrage en arrière plan
+## Chron
+Gestionnaire basé sur le temps
