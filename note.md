@@ -476,55 +476,6 @@ alias cx='chmod u+x'
 
 
 
-TP créer des groupes ;
-```
-# Création des groupes
-sudo addgroup cours
-sudo addgroup vente
-sudo addgroup compta
-sudo addgroup tech
-
-# Création des users de tech
-sudo adduser richard
-sudo usermod -g tech richard
-sudo adduser gerard
-sudo usermod -g tech gerard
-sudo adduser willy
-sudo usermod -g tech willy
-sudo usermod -aG cours willy
-sudo adduser jules
-sudo usermod -g tech jules
-sudo usermod -G cours jules
-sudo usermod -aG vente jules
-
-# Création des users de cours
-sudo adduser nicolas cours
-sudo usermod -g cours 
-sudo usermod -G tech nicolas
-sudo adduser linus cours
-sudo usermod -g cours linus
-sudo usermod -G tech linus
-sudo usermod -aG compta linus
-
-# Création des users de vente
-sudo adduser alain vente
-sudo usermod -g vente alain
-
-# Création des users de compta
-sudo adduser soraya
-sudo usermod -g compta soraya
-```
-
-`groups richard gerard willy jules nicolas linus alain soraya`
-```
-sudo deluser gerard
-sudo deluser willy
-sudo deluser jules
-sudo deluser nicolas
-sudo deluser linus
-sudo deluser alain
-sudo deluser soraya
-```
 
 Créer testaccount
 Vérifier naming jeb
