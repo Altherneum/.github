@@ -431,7 +431,7 @@ alias cx='chmod u+x'
   - `adduser [USERName]` Créer un utilisateur
 ## Edit user
 - `usermod`
-  - `usermod -g [GROUPName] [USER]` Group principale
+  - `usermod --ingroup [GROUPName] [USER]` Group principale
   - `usermod -G ...?` Groupes secondaires
 ## Delete user
 - `userdel`
@@ -442,7 +442,7 @@ alias cx='chmod u+x'
 # Group
 - `addgroup` / `groupadd`
   - `addgroup [GROUPName]` Créer un groupe
-  - `addgroup -g [ID] [GROUPName]` Créer le groupe avec un ID
+  - `addgroup --ingroup [ID] [GROUPName]` Créer le groupe avec un ID
 - `etc/group` Fichier de DB des groupes
 - `etc/gshadow` Fichier de DB des groupes avec mot de passe
 ## Edit group
@@ -485,20 +485,20 @@ sudo addgroup compta
 sudo addgroup tech
 
 # Création des users de tech
-sudo adduser richard -g tech
-sudo adduser gerard -g tech
-sudo adduser willy -g tech -G cours
-sudo adduser jules -g tech -G cours,vente
+sudo adduser richard --ingroup tech
+sudo adduser gerard --ingroup tech
+sudo adduser willy --ingroup tech -G cours
+sudo adduser jules --ingroup tech -G cours,vente
 
 # Création des users de cours
-sudo adduser nicolas -g cours -G tech
-sudo adduser linus -g cours -G cours,compta
+sudo adduser nicolas --ingroup cours -G tech
+sudo adduser linus --ingroup cours -G cours,compta
 
 # Création des users de vente
-sudo adduser alain -g vente -G compta
+sudo adduser alain --ingroup vente -G compta
 
 # Création des users de compta
-sudo adduser soraya -g compta
+sudo adduser soraya --ingroup compta
 ```
 
 
