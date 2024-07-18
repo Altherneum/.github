@@ -517,13 +517,13 @@ sudo usermod -g compta soraya
 
 `groups richard gerard willy jules nicolas linus alain soraya`
 ```
-deluser gerard
-deluser willy
-deluser jules
-deluser nicolas
-deluser linus
-deluser alain
-deluser soraya
+sudo deluser gerard
+sudo deluser willy
+sudo deluser jules
+sudo deluser nicolas
+sudo deluser linus
+sudo deluser alain
+sudo deluser soraya
 ```
 
 Créer testaccount
