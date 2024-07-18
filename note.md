@@ -491,11 +491,11 @@ sudo adduser gerard
 sudo usermod -g tech gerard
 sudo adduser willy
 sudo usermod -g tech willy
-sudo usermod -Ga cours willy
+sudo usermod -aG cours willy
 sudo adduser jules
 sudo usermod -g tech jules
 sudo usermod -G cours jules
-sudo usermod -Ga vente jules
+sudo usermod -aG vente jules
 
 # Création des users de cours
 sudo adduser nicolas cours
@@ -504,7 +504,7 @@ sudo usermod -G tech nicolas
 sudo adduser linus cours
 sudo usermod -g cours linus
 sudo usermod -G tech linus
-sudo usermod -Ga compta linus
+sudo usermod -aG compta linus
 
 # Création des users de vente
 sudo adduser alain vente
@@ -516,7 +516,15 @@ sudo usermod -g compta soraya
 ```
 
 `groups richard gerard willy jules nicolas linus alain soraya`
-
+```
+deluser gerard
+deluser willy
+deluser jules
+deluser nicolas
+deluser linus
+deluser alain
+deluser soraya
+```
 
 Créer testaccount
 Vérifier naming jeb
