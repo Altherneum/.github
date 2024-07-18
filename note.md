@@ -432,7 +432,7 @@ alias cx='chmod u+x'
 ## Edit user
 - `usermod`
   - `usermod --ingroup [GROUPName] [USER]` Group principale
-  - `usermod -G ...?` Groupes secondaires
+  - `usermod ...?` Groupes secondaires
 ## Delete user
 - `userdel`
   - `userdel [USER]`
@@ -485,23 +485,23 @@ sudo addgroup compta
 sudo addgroup tech
 
 # Création des users de tech
-sudo adduser richard --ingroup tech
-sudo adduser gerard --ingroup tech
-sudo adduser willy --ingroup tech -G cours
-sudo adduser jules --ingroup tech -G cours,vente
+sudo adduser --disabled-password --gecos "" richard tech
+sudo adduser --disabled-password --gecos "" gerard tech
+sudo adduser --disabled-password --gecos "" willy tech --ingroup cours
+sudo adduser --disabled-password --gecos "" jules tech --ingroup cours,vente
 
 # Création des users de cours
-sudo adduser nicolas --ingroup cours -G tech
-sudo adduser linus --ingroup cours -G cours,compta
+sudo adduser --disabled-password --gecos "" nicolas cours --ingroup tech
+sudo adduser --disabled-password --gecos "" linus cours --ingroup cours,compta
 
 # Création des users de vente
-sudo adduser alain --ingroup vente -G compta
+sudo adduser --disabled-password --gecos "" alain vente --ingroup compta
 
 # Création des users de compta
-sudo adduser soraya --ingroup compta
+sudo adduser --disabled-password --gecos "" soraya compta
 ```
 
-
+groups
 
 
 Créer testaccount
