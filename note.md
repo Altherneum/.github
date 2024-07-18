@@ -485,23 +485,38 @@ sudo addgroup compta
 sudo addgroup tech
 
 # Création des users de tech
-sudo adduser --disabled-password --gecos "" tech richard
-sudo adduser --disabled-password --gecos "" tech gerard
-sudo adduser --disabled-password --gecos "" tech willy --ingroup cours
-sudo adduser --disabled-password --gecos "" tech jules --ingroup cours,vente
+sudo adduser richard
+sudo usermod -g tech richard
+sudo usermod -G 
+sudo adduser gerard
+sudo usermod -g tech gerard
+sudo adduser willy
+sudo usermod -g tech willy
+sudo usermod -G cours willy
+sudo adduser jules
+sudo usermod -g tech jules
+sudo usermod -G cours jules
+sudo usermod -G vente jules
 
 # Création des users de cours
-sudo adduser --disabled-password --gecos "" cours nicolas --ingroup tech
-sudo adduser --disabled-password --gecos "" cours linus --ingroup cours,compta
+sudo adduser nicolas cours
+sudo usermod -g cours 
+sudo usermod -G tech nicolas
+sudo adduser linus cours
+sudo usermod -g cours linus
+sudo usermod -G tech linus
+sudo usermod -G compta linus
 
 # Création des users de vente
-sudo adduser --disabled-password --gecos "" vente alain --ingroup compta
+sudo adduser alain vente
+sudo usermod -g vente alain
 
 # Création des users de compta
-sudo adduser --disabled-password --gecos "" compta soraya
+sudo adduser soraya
+sudo usermod -g compta soraya
 ```
 
-groups
+groups richard
 
 
 Créer testaccount
