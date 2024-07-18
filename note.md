@@ -487,16 +487,15 @@ sudo addgroup tech
 # Création des users de tech
 sudo adduser richard
 sudo usermod -g tech richard
-sudo usermod -G 
 sudo adduser gerard
 sudo usermod -g tech gerard
 sudo adduser willy
 sudo usermod -g tech willy
-sudo usermod -G cours willy
+sudo usermod -Ga cours willy
 sudo adduser jules
 sudo usermod -g tech jules
 sudo usermod -G cours jules
-sudo usermod -G vente jules
+sudo usermod -Ga vente jules
 
 # Création des users de cours
 sudo adduser nicolas cours
@@ -505,7 +504,7 @@ sudo usermod -G tech nicolas
 sudo adduser linus cours
 sudo usermod -g cours linus
 sudo usermod -G tech linus
-sudo usermod -G compta linus
+sudo usermod -Ga compta linus
 
 # Création des users de vente
 sudo adduser alain vente
@@ -516,7 +515,7 @@ sudo adduser soraya
 sudo usermod -g compta soraya
 ```
 
-groups richard
+`groups richard gerard willy jules nicolas linus alain soraya`
 
 
 Créer testaccount
