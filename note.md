@@ -486,5 +486,34 @@ alias cx='chmod u+x'
 
 
 
+
+
+
+
+
+
+Example (login shell):
+
+sudo -i
+Example (with a specified user):
+
+sudo -i -u user
+Example (with a command):
+
+sudo -i -u user whoami
+Example (print user's $HOME):
+
+sudo -i -u user echo \$HOME
+
+
+
+
+
+
+
+
+
+
+
 Créer testaccount
 Vérifier naming jeb
