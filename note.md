@@ -426,6 +426,29 @@ alias cx='chmod u+x'
 
 
 
+
+
+# Type d'utilisateurs
+- Root
+  - UUID : 0
+- Administratif (Système)
+  - UUID < 1000
+- Utilisateurs
+  - UUID > 1000
+
+# Version de l'OS
+- `cat /etc/os-release`
+- `lsb_release -a`
+- `hostnamectl`
+
+# Doc
+- `man [COMMANDE]`
+  - `man man` Affiche le manuel de la commande `man`
+
+
+
+- `/etc/motd`
+
 # User
 - `adduser`
   - `adduser [USERName]` Créer un utilisateur
@@ -452,27 +475,13 @@ alias cx='chmod u+x'
 - `groupdel` / `delgroup`
   - `groupdel [GROUPName]`
 
-# Type d'utilisateurs
-- Root
-  - UUID : 0
-- Administratif (Système)
-  - UUID < 1000
-- Utilisateurs
-  - UUID > 1000
-
-# Version de l'OS
-- `cat /etc/os-release`
-- `lsb_release -a`
-- `hostnamectl`
-
-# Doc
-- `man [COMMANDE]`
-  - `man man` Affiche le manuel de la commande `man`
-
-
-
-- `/etc/motd`
-
+# Exemple pour créer des utilisateurs
+## Créer l'utilisateur et son groupe
+- `adduser --disabled-password --shell /bin/bash --gecos "" --ingroup [GROUP] [USERNAME]`
+## Ajouter des groupes secondaires
+- `sudo usermod --append --groups [GROUP1],[GROUP2],... [USERNAME]`
+## Changer le mot de passe si besoin
+- `sudo passwd [USER]`
 
 
 
