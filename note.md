@@ -244,8 +244,9 @@ TPM.MSC permet de vérifier si TPM est présent
 
 `Invoke-command -computername "PC1,DC1" -scriptblock { Start-process chrome.exe }`
 
-
-
+## Get-Help operators
+get-help about_Comparison_Operators
+update-help
 
 
 
@@ -272,3 +273,236 @@ Boot-loader
 Logiciel au démarrage en arrière plan
 ## Chron
 Gestionnaire basé sur le temps
+## FastFetch
+to setup & use for .MD visuals
+
+### To filter
+- `[CMD] -o Argument Arguments2 --Option-In-Full-Words Argument argument2`
+  - `ls -l -t -r` = `ls ltr`
+  - `ls -l /tmp /etc` Affiche les deux dossiers
+  - `ls --directory --dired` = `ls -dD` = `ls -d -D`
+
+- `Date`
+  - `Date +%T`
+- `Man` Manuel
+- `Man sudo` Affichel le manuel de sudo
+- `Man [CMD] -k`
+- `Man 5 [CMD]` Fichier de config de la commande
+- `su` SuperUser
+  - `su -`
+  - `su -l [Utilisateur]` Se connecte en SU en tant que l'utilisateur
+  - `sudo [CMD]` SuperUser do commande
+  - `nano /etc/sudoers` Liste des comptes SU
+- `Nano`
+- `Clear` Clear l'interface de commande
+
+
+
+- `apt install Most` Paquet pour l'affichage de texte avec couleurs
+- `export PAGER=most` Passe la variable globale de pagination sur le software most
+  - `export` Variable global (temporaire)
+  - `PAGER=most` Pagination passer sur le software most
+
+- `more etc/shells` Liste des shells disponibles
+- `more /etc/passwd` Affiche la liste des utilisateurs et processus et leurs shells
+- `echo $SHELL` Affiche le shell actuel
+  - `echo $0` Affiche le nom du shell actuel
+- `ps -p $$` Affiche les détails du shell actuel
+
+- `chsh` Change de shell
+- `ls -l /bin/sh` Affiche les shells
+- `apt install zsh` Install ZSH shell
+
+- `whereis zsh` Affiche le chemin de zsh
+- `more [File]` ????
+
+- `nano /etc/apt/source.list` liste des repo
+
+- `sudo nano /etc/nanorc` Config de nano
+```
+set linenumbers
+set autoindent
+set tabsize 4
+set brackets
+set matchbrackets "(<[{>]})"
+set brackets ""')>]}"
+set historylog
+set locking
+set mouse
+
+set titlecolor bold,white,red
+set indicator
+set scrollercolor red
+set numbercolor red
+set keycolor bold,red
+set functioncolor green
+```
+
+- `cd /abc` depuis la racine du disque
+- `cd abc` se déplace du dossier actuel vers abc
+- `cd ..` retourne en arrière
+- `cd` ou `cd ~` Votre home
+- `cd -` Retourne dans le dossier précendent
+- mkdir
+
+- `ls` liste des fichiers et dossiers
+- `ls -a` Fichier cachés
+
+- `mkdir` Crée un dossier
+  - `mkdir -p f1/f2/f3` Créer les sous dossiers
+  - `mkdir p1 p2 p1/subp1` Créer plusieurs dossiers  
+- `rmdir [DOSSIER]` Supprime un dossier
+  - `rmdir -r [DOSSIER]` Récursif
+- `rm [FICHIER]` Supprime un fichier
+  - `rm -r [PATH]` Supprime les fichiers dans path de manière récursive
+  - `rm -i [FICHIER]` Demande la confirmation
+
+
+- `tree` Listing en arbre des dossiers
+- `apt install tree`
+
+
+
+
+# To test didn't worked
+- `.profile` Fichier de chargement du profil
+- `.bash_history`
+- `.bashrc` Fichier de config du profil
+
+- [cyberciti.biz/faq/create-permanent-bash-alias-linux-unix/](https://www.cyberciti.biz/faq/create-permanent-bash-alias-linux-unix/)
+- [doc.ubuntu-fr.org/alias](https://doc.ubuntu-fr.org/alias)
+
+- `.bash_aliases` Alias des commandes (Fichier à créer)
+  - Ajouter dans le fichier (Exemple) `alias cls='clear'`
+  - Ou encore `alias h='history'`
+    - Recharger le fichier via : `source .bashrc`
+    - Ou recharger : `source .bash_aliases`
+  - Vérifier la présence du chargement des alias dans le fichier `.bashrc` ~L.100
+```
+alias c='clear'
+alias h='history'
+alias ll='ls -lh'
+alias cx='chmod u+x'
+```
+
+
+
+# File
+- `file [FICHER]` Affiche le type de fichier
+
+# Read file
+- `more [FICHIER]`, `less [FICHIER]`, `cat [FICHIER]` Affiche le contenu des fichiers
+  - `more` Page par page
+    - `ESPACE` Avancer d'un écran
+    - `RETURN` Avancer d'une ligne
+  - `less` Commande `more` avec des commandes de déplacement
+    - `e` Avancer d'une ligne
+    - `y` Reculer d'une ligne
+    - `f` Avancer d'une page
+    - `b`  Reculer d'une page
+    - `h` ou `?` Aide
+    - `q` Quitter la commande `more`
+  - `cat` Concaténation
+- `head [FICHIER]` Première lignes du fichier
+- `tail [FICHIER]` Dernière lignes du fichier
+
+# Write file
+- `> [FILE]` Créer un fichier
+  - `ABC > test` Créer le fichier `test` et écrit dedans `ABC`
+- `>> [FILE]` Créer le fichier si il n'existe pas
+  - `ABC >> test` Créer `test` si il n'exsite pas, et ajoute `ABC` dedans sans écraser
+
+# Touch
+- `touch [FILE]` Modifie la date d'accès au fichier à la date actuelle
+
+# Password
+- `pwck` Vérifie la cohérance entre passwd et shadow
+
+- `more etc/passwd` liste d'utilisateurs
+  - Utilisateurs, x (ancien MDP), UUID, ID de groupe, nom d'affichage, répertoire de connexion, shell par défaut
+    - `man 5 passwd`
+- `more etc/shadow` Liste des mot de passe (chiffrés via `crypt`)
+  - Utilisateurs, mot de passe, Date de dernier changement du mot de passe, 0|1 si il doit changer de mot de passe, âge minimum du mot de passe, âge maximum du mot de passe, période d'avertissement avant expiration, période d'inactivité du mot de passe, date de fin du mot de passe
+
+
+
+# User
+- `adduser`
+  - `adduser [USERName]` Créer un utilisateur
+## Edit user
+- `usermod`
+  - `usermod -g [GROUPName] [USER]` Group principale
+  - `usermod -G ...?` Groupes secondaires
+## Delete user
+- `userdel`
+  - `userdel [USER]`
+  - `userdel -r [USER]` Supprime son home
+  - `userdel -f [USER]` Supprime le home même si l'utilisateur est connecté (pour kick), peut créer des incohérance
+
+# Group
+- `addgroup` / `groupadd`
+  - `addgroup [GROUPName]` Créer un groupe
+  - `addgroup -g [ID] [GROUPName]` Créer le groupe avec un ID
+- `etc/group` Fichier de DB des groupes
+- `etc/gshadow` Fichier de DB des groupes avec mot de passe
+## Edit group
+- `groupmod` / `modgroup`
+  - `groupmod -n [GROUPName] [NEWGroupName]` Renomme le groupe
+## Delete group
+- `groupdel` / `delgroup`
+  - `groupdel [GROUPName]`
+
+# Type d'utilisateurs
+- Root
+  - UUID : 0
+- Administratif (Système)
+  - UUID < 1000
+- Utilisateurs
+  - UUID > 1000
+
+# Version de l'OS
+- `cat /etc/os-release`
+- `lsb_release -a`
+- `hostnamectl`
+
+# Doc
+- `man [COMMANDE]`
+  - `man man` Affiche le manuel de la commande `man`
+
+
+
+- `/etc/motd`
+
+
+
+
+TP créer des groupes ;
+```
+# Création des groupes
+addgroup Cours
+addgroup Vente
+addgroup Compta
+addgroup Tech
+
+# Création des users de Tech
+adduser Richard -g Tech
+adduser Gérard -g Tech
+adduser Willy -g Tech -G Cours
+adduser Jules -g Tech -G Cours,Vente
+
+# Création des users de Cours
+adduser Nicolas -g Cours -G Tech
+adduser Linus -g Cours -G Cours,Compta
+
+# Création des users de Vente
+adduser Alain -g Vente -G Compta
+
+# Création des users de Compta
+adduser Soraya -g Compta
+```
+
+
+
+
+Créer testaccount
+Vérifier naming jeb

@@ -28,6 +28,7 @@
 - `cd /folder` se déplacer vers le dossier "folder"
 
 - `ls` liste des dossiers et fichiers
+- `pwd` Affiche le chemin actuel
 
 ![ssh ls of main folder](https://github.com/Altherneum/.github/assets/84735589/1dc14cb5-dac3-419a-9769-d2f357e81821)
 
