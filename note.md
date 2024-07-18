@@ -479,26 +479,26 @@ alias cx='chmod u+x'
 TP créer des groupes ;
 ```
 # Création des groupes
-addgroup Cours
-addgroup Vente
-addgroup Compta
-addgroup Tech
+sudo addgroup Cours
+sudo addgroup Vente
+sudo addgroup Compta
+sudo addgroup Tech
 
 # Création des users de Tech
-adduser Richard -g Tech
-adduser Gérard -g Tech
-adduser Willy -g Tech -G Cours
-adduser Jules -g Tech -G Cours,Vente
+sudo adduser Richard -g Tech
+sudo adduser Gérard -g Tech
+sudo adduser Willy -g Tech -G Cours
+sudo adduser Jules -g Tech -G Cours,Vente
 
 # Création des users de Cours
-adduser Nicolas -g Cours -G Tech
-adduser Linus -g Cours -G Cours,Compta
+sudo adduser Nicolas -g Cours -G Tech
+sudo adduser Linus -g Cours -G Cours,Compta
 
 # Création des users de Vente
-adduser Alain -g Vente -G Compta
+sudo adduser Alain -g Vente -G Compta
 
 # Création des users de Compta
-adduser Soraya -g Compta
+sudo adduser Soraya -g Compta
 ```
 
 
