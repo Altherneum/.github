@@ -485,20 +485,20 @@ sudo addgroup compta
 sudo addgroup tech
 
 # Création des users de tech
-sudo adduser --disabled-password --gecos "" richard tech
-sudo adduser --disabled-password --gecos "" gerard tech
-sudo adduser --disabled-password --gecos "" willy tech --ingroup cours
-sudo adduser --disabled-password --gecos "" jules tech --ingroup cours,vente
+sudo adduser --disabled-password --gecos "" tech richard
+sudo adduser --disabled-password --gecos "" tech gerard
+sudo adduser --disabled-password --gecos "" tech willy --ingroup cours
+sudo adduser --disabled-password --gecos "" tech jules --ingroup cours,vente
 
 # Création des users de cours
-sudo adduser --disabled-password --gecos "" nicolas cours --ingroup tech
-sudo adduser --disabled-password --gecos "" linus cours --ingroup cours,compta
+sudo adduser --disabled-password --gecos "" cours nicolas --ingroup tech
+sudo adduser --disabled-password --gecos "" cours linus --ingroup cours,compta
 
 # Création des users de vente
-sudo adduser --disabled-password --gecos "" alain vente --ingroup compta
+sudo adduser --disabled-password --gecos "" vente alain --ingroup compta
 
 # Création des users de compta
-sudo adduser --disabled-password --gecos "" soraya compta
+sudo adduser --disabled-password --gecos "" compta soraya
 ```
 
 groups
