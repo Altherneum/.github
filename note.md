@@ -276,6 +276,12 @@ Gestionnaire basé sur le temps
 ## FastFetch
 to setup & use for .MD visuals
 
+# LS
+Afficher  les  informations  des  FICHIERs  (du  répertoire courant par défaut). Les entrées sont triées alphabétiquement si aucune des options
+- `ls -l` Utiliser un format d’affichage long
+- `ls -a` Affiche les fichiers cachés
+- `ls -R` Affiche les fichiers de manière récursive
+
 ### To filter
 - `[CMD] -o Argument Arguments2 --Option-In-Full-Words Argument argument2`
   - `ls -l -t -r` = `ls ltr`
@@ -483,6 +489,8 @@ alias cx='chmod u+x'
 ## Changer le mot de passe si besoin
 - `sudo passwd [USER]`
 
+# To do
+Tester avec useradd au lieu de adduser qui est nul (interactif)
 
 
 
@@ -491,28 +499,67 @@ alias cx='chmod u+x'
 
 
 
-
-Example (login shell):
-
-sudo -i
-Example (with a specified user):
-
-sudo -i -u user
-Example (with a command):
-
-sudo -i -u user whoami
-Example (print user's $HOME):
-
-sudo -i -u user echo \$HOME
+# Sudo login
+- Example (login shell):
+  - `sudo -i`
+- Example (with a specified user):
+  - `sudo -i -u [USER]`
+- Example (with a command):
+  - `sudo -i -u [USER] [CMD: ex (whoami)]`
+- Example (print user's `$HOME`):
+  - `sudo -i -u user echo \$HOME`
 
 
 
 
+# Permission
+d (File Type) rwx (Proprio) rwx (groupe) rwx(reste du monde)
+## Explication
+Read
+write
+Execute
+## Chmod
+- `Chmod` pour changer les permissions
+- Doit `sudo` si ce n'est pas votre fichier
+  - `chmod -r` recursif
+  - `u` utilisateurs (proprio du fichier)
+  - `g` groupe
+  - `o` other
+  - `a` all (user, group & other)
+    - `ugo` est identique à `a`
+  - `+` add perm
+  - `-` remove perm
+  - `=` Reset les permission et applique uniquement les lettres suivantes
+    - `chmod +x`
+    - `chmod a=rwx [FILE]` Met toutes les permissions pour all
+    - `chmod o= [FILE]` Retire tout les droits sur other
+    - `chmod o+x [FILE]` Ajout d'exécution pour other
+    - `chmod u-x,g-w,o+r [FILE]` retrait execute pour user, group retrait de write
+    - `chmod o=x` Other n'aura que Execute
+    - `chmod ugo=x` doit les droits n'auront que execution
+- `chgrp [GROUPE] [FILE]`
+  - Change le groupe du fichier
+
+- `chown [USER] [FILE]`
+  - Change le propriétaire du fichier
+
+## Chmod numérique
+![alt text](image.png)
+R--RWXRWX = 477
+
+## Umask
+![alt text](image-1.png)
+umask va retirer les permission
+ex : umask 777 = retire toutes les permission
+Utilisé lors des créations de fichiers / dossiers
 
 
 
-
-
+# Echo same line
+- If it does not work on your system, you can replace this way,
+  - `echo "test \c"; echo " same line"`
+- can become,
+  - `echo -n "test"; echo " same line"`
 
 
 Créer testaccount
