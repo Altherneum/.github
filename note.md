@@ -251,7 +251,7 @@ update-help
 
 
 
-# MSG
+# MSG Win
 Send msg to network computer
 `msg <user_name>`
 msg 1 hello
@@ -261,6 +261,26 @@ msg 1 hello
 msg 0 hello
 
 It would be curious if you get the same error. The ‘*’ sends to every session, so one of them is having a problem. But oh well, it works !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Linux 
 ## LVM
@@ -281,6 +301,7 @@ Afficher  les  informations  des  FICHIERs  (du  répertoire courant par défaut
 - `ls -l` Utiliser un format d’affichage long
 - `ls -a` Affiche les fichiers cachés
 - `ls -R` Affiche les fichiers de manière récursive
+- `ls -l /tmp /etc` Affiche les deux dossiers
 
 ### To filter
 - `[CMD] -o Argument Arguments2 --Option-In-Full-Words Argument argument2`
@@ -378,11 +399,12 @@ set functioncolor green
 - [cyberciti.biz/faq/create-permanent-bash-alias-linux-unix/](https://www.cyberciti.biz/faq/create-permanent-bash-alias-linux-unix/)
 - [doc.ubuntu-fr.org/alias](https://doc.ubuntu-fr.org/alias)
 
-- `.bash_aliases` Alias des commandes (Fichier à créer)
+- `.bash_aliases` Alias des commandes (Fichier à créer) dans le `/home/[USER]/`
   - Ajouter dans le fichier (Exemple) `alias cls='clear'`
   - Ou encore `alias h='history'`
     - Recharger le fichier via : `source .bashrc`
     - Ou recharger : `source .bash_aliases`
+    - Ou recharger : `source .profile`
   - Vérifier la présence du chargement des alias dans le fichier `.bashrc` ~L.100
 ```
 alias c='clear'
@@ -418,6 +440,18 @@ alias cx='chmod u+x'
 - `>> [FILE]` Créer le fichier si il n'existe pas
   - `ABC >> test` Créer `test` si il n'exsite pas, et ajoute `ABC` dedans sans écraser
 
+- `[CMD|FILE...] < [FILE]` Envoie les informations de la droite vers la gauche
+  - `Cat < File1 > new_file` Envoie `File1` dans `cat`, puis envoie le tout dans `new_file`
+
+- `[Something_Creating_error] 2> [file]` Redirige même les erreurs
+  - `toto 2> error_log`
+  - `fin / -name toto 2> error_log` Enverra que les erreurs dans le log, et conserve les bons résultats dans la console
+  - `fin / -name toto 2> error_log > good_log` Envoie les erreurs dans `error_log`, et les bons résultats dans `good_log`
+
+- `[CMD] &> [FILE]` Envoie les résultats et les erreurs dans le fichier
+  - `[CMD] > [FILE] 2>&1` Envoie les résultats et les erreurs dans le fichier
+
+
 # Touch
 - `touch [FILE]` Modifie la date d'accès au fichier à la date actuelle
 
@@ -443,9 +477,11 @@ alias cx='chmod u+x'
   - UUID > 1000
 
 # Version de l'OS
-- `cat /etc/os-release`
+- `cat /etc/os-release` Fichier de release
 - `lsb_release -a`
 - `hostnamectl`
+- `uname` OS codename
+  - `uname -a` Toutes les infos de l'OS
 
 # Doc
 - `man [COMMANDE]`
@@ -454,43 +490,6 @@ alias cx='chmod u+x'
 
 
 - `/etc/motd`
-
-# User
-- `adduser`
-  - `adduser [USERName]` Créer un utilisateur
-## Edit user
-- `usermod`
-  - `usermod --ingroup [GROUPName] [USER]` Group principale
-  - `usermod ...?` Groupes secondaires
-## Delete user
-- `userdel`
-  - `userdel [USER]`
-  - `userdel -r [USER]` Supprime son home
-  - `userdel -f [USER]` Supprime le home même si l'utilisateur est connecté (pour kick), peut créer des incohérance
-
-# Group
-- `addgroup` / `groupadd`
-  - `addgroup [GROUPName]` Créer un groupe
-  - `addgroup --ingroup [ID] [GROUPName]` Créer le groupe avec un ID
-- `etc/group` Fichier de DB des groupes
-- `etc/gshadow` Fichier de DB des groupes avec mot de passe
-## Edit group
-- `groupmod` / `modgroup`
-  - `groupmod -n [GROUPName] [NEWGroupName]` Renomme le groupe
-## Delete group
-- `groupdel` / `delgroup`
-  - `groupdel [GROUPName]`
-
-# Exemple pour créer des utilisateurs
-## Créer l'utilisateur et son groupe
-- `adduser --disabled-password --shell /bin/bash --gecos "" --ingroup [GROUP] [USERNAME]`
-## Ajouter des groupes secondaires
-- `sudo usermod --append --groups [GROUP1],[GROUP2],... [USERNAME]`
-## Changer le mot de passe si besoin
-- `sudo passwd [USER]`
-
-# To do
-Tester avec useradd au lieu de adduser qui est nul (interactif)
 
 
 
@@ -512,46 +511,7 @@ Tester avec useradd au lieu de adduser qui est nul (interactif)
 
 
 
-# Permission
-d (File Type) rwx (Proprio) rwx (groupe) rwx(reste du monde)
-## Explication
-Read
-write
-Execute
-## Chmod
-- `Chmod` pour changer les permissions
-- Doit `sudo` si ce n'est pas votre fichier
-  - `chmod -r` recursif
-  - `u` utilisateurs (proprio du fichier)
-  - `g` groupe
-  - `o` other
-  - `a` all (user, group & other)
-    - `ugo` est identique à `a`
-  - `+` add perm
-  - `-` remove perm
-  - `=` Reset les permission et applique uniquement les lettres suivantes
-    - `chmod +x`
-    - `chmod a=rwx [FILE]` Met toutes les permissions pour all
-    - `chmod o= [FILE]` Retire tout les droits sur other
-    - `chmod o+x [FILE]` Ajout d'exécution pour other
-    - `chmod u-x,g-w,o+r [FILE]` retrait execute pour user, group retrait de write
-    - `chmod o=x` Other n'aura que Execute
-    - `chmod ugo=x` doit les droits n'auront que execution
-- `chgrp [GROUPE] [FILE]`
-  - Change le groupe du fichier
 
-- `chown [USER] [FILE]`
-  - Change le propriétaire du fichier
-
-## Chmod numérique
-![alt text](image.png)
-R--RWXRWX = 477
-
-## Umask
-![alt text](image-1.png)
-umask va retirer les permission
-ex : umask 777 = retire toutes les permission
-Utilisé lors des créations de fichiers / dossiers
 
 
 
@@ -562,5 +522,86 @@ Utilisé lors des créations de fichiers / dossiers
   - `echo -n "test"; echo " same line"`
 
 
-Créer testaccount
-Vérifier naming jeb
+
+# Exécuter un fichier
+- Taper son nom `File.sh`
+- Taper son nom relatif `./File.txt` Si ce n'est pas un script classique
+  - Ou un nom dupliqué : (Ex rm en fichier alors que la commande rm existe)
+- Le déplacer dans `/bin` puis `source [PATH]` le fichier ou est `bin` (Sourcer une seul fois pour ajouter le path dans `$PATH`)
+
+# Terminal
+## STD
+- `stdin` Taper au clavier
+- `stdout` Sortie écran
+- `stderr` Les erreurs
+
+## Informations
+- Options et arguments
+- Code de retour
+
+# Pipe
+Le résultat de la commande devant le pipe (`|`), devient la commande après le pipe
+- `systemctl | wc -l` Compte le nombre de ligne du résultat de la commande systemctl
+
+
+# find
+- `find [PATH] -name [FILE_NAME]` Recherche le fichier
+
+
+
+
+# Remoting
+```
+# Debian
+dpkg --list | grep ssh                      # Liste les paquets SSH
+
+# Sur Alma
+rpm -qa | grep ssh                          # Liste les paquets SSH
+ip a                                        # Liste les adresses IP (Inet = ip local net) # 10.20.222.86/24
+
+# Debian & Alma
+Systemctl status sshd                       # Vérifie si sshd est lancé ou stoppé
+
+# Alma
+ls -l /etc/ssh                              # Liste les fichiers SSH
+more /etc/ssh/sshd_config                   # La configuration SSHD
+useradd -m -s /bin/bash remotejeb           # Créer l'utilisateur remotejeb
+useradd -m -s /bin/bash jebremote           # Créer l'utilisateur jebremote
+
+# Debian
+useradd -m -s /bin/bash remotejeb           # Créer l'utilisateur jebremote aussi sur debian
+useradd -m -s /bin/bash jebremote           # Créer l'utilisateur remotejeb aussi sur debian
+
+nano etc/sudoers                            # Liste des utilisateurs sudo
+# Ajouter les logins dans la liste sudoers  # Configure les utilisateurs sudo
+
+# Alma
+nano /etc/hostname                          # Config hostname
+# Ajouter "alma" dedans
+reboot                                      # Si besoin car recharge pas tout seul
+hostnamectl set-hostname          # ou      # systemctl restart systemd-hostnamed                    # à la place de reboot si vous souhaitez juste le recharger # A TESTER
+passwd remotejeb                            # Change le mot de passe 
+SuperRemote11                               # Taper le mot de passe suivant
+passwd jebremote                            # Same here
+SuperRemote11                               # Same password :3 ...
+
+# Debian
+ssh remotejeb@10.20.222.86                  # Lance une connection SSH
+SuperRemote11                               # S'auth avec le compte remotejeb et son mot de passe
+###################################################################################################
+
+exit                                        # Quitter alma pour debian
+nano /etc/hosts                             # Config des hôtes
+# Ajouter la ligne # 10.20.222.86   alma    # Configure l'IP pour être résolue par "alma"
+
+SSH remotejeb@alma                          # On peut du coup SSH sur Alma sans taper l'IP
+
+SSH alma                                    # Va se connecter sur le compte reconnu en cours d'utilisation (si identique au système distant)
+
+# Sur debian
+scp [FICHIER] remotejeb@alma:[PATH][FICHIER]  # Envoie le fichier vers alma dans le dossier
+    scp test.txt remotejeb@alma:/home/remotejeb/test.txt
+```
+
+jebremote
+remotejeb
