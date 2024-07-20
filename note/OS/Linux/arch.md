@@ -10,5 +10,3 @@
   - `-S, --sync`
   - `-y, --refresh`
   - `-u, --upgrades`
-
-C'est naze Arch

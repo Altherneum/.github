@@ -1,0 +1,54 @@
+# Fichier
+## File
+- `file [FICHER]` Affiche le type de fichier
+
+## Lire un fichier
+Afficher le contenu des fichiers :
+### More
+- `more` Page par page
+  - `ESPACE` Avancer d'un écran
+  - `RETURN` Avancer d'une ligne
+
+### Less
+- `less` Commande `more` avec des commandes de déplacement
+  - `e` Avancer d'une ligne
+  - `y` Reculer d'une ligne
+  - `f` Avancer d'une page
+  - `b`  Reculer d'une page
+  - `h` ou `?` Aide
+  - `q` Quitter la commande `more`
+
+### Autres commande pour lire un fichier
+- `cat [FICHIER]` Concaténation
+- `head [FICHIER]` Première lignes du fichier
+- `tail [FICHIER]` Dernière lignes du fichier
+
+## Écrire sur un fichier
+### Écrire en écrasant le fichier
+- `[CMD|FILE|Text] > [FILE]` Créer le fichier et écrit dedans, si il existe il sera écrasé
+
+### Écrire à la fin du fichier
+- `[CMD|FILE|Text] >> [FILE]` Créer le fichier si il n'exsite pas, et ajoute le contenu dedans sans écraser à la fin du document
+
+### Envoyer depuis un fichier vers autre chose
+- `[CMD|FILE...] < [FILE]` Envoie les informations de la droite vers la gauche
+  - `Cat < File1 > new_file` Envoie `File1` dans `cat`, puis envoie le tout dans `new_file`
+
+### Écrire les erreurs dans un fichier
+- `[CMD_Erreur] 2> [file]` Redirige les erreurs dans le fichier
+  - `toto 2> error_log`
+  - `find / -name toto 2> error_log` Enverra que les erreurs dans le log, et conserve les bons résultats dans la console
+  - `find / -name toto 2> error_log > good_log` Envoie les erreurs dans `error_log`, et les bons résultats dans `good_log`
+
+### Écrire tout les résultats dans un fichier
+- `[CMD] &> [FILE]` Envoie les résultats et les erreurs dans le fichier
+  - `[CMD] > [FILE] 2>&1` Envoie les résultats et les erreurs dans le fichier
+
+## Touch
+- `touch [FILE]` Modifie la date d'accès au fichier à la date actuelle
+  - Si le fichier n'existe pas, il sera crée
+
+## Supprimer un fichier
+- `rm [FICHIER]` Supprime un fichier
+  - `rm -r [PATH]` Supprime les fichiers dans path de manière récursive
+  - `rm -i [FICHIER]` Demande la confirmation

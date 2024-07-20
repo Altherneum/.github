@@ -296,12 +296,7 @@ Gestionnaire basé sur le temps
 ## FastFetch
 to setup & use for .MD visuals
 
-# LS
-Afficher  les  informations  des  FICHIERs  (du  répertoire courant par défaut). Les entrées sont triées alphabétiquement si aucune des options
-- `ls -l` Utiliser un format d’affichage long
-- `ls -a` Affiche les fichiers cachés
-- `ls -R` Affiche les fichiers de manière récursive
-- `ls -l /tmp /etc` Affiche les deux dossiers
+
 
 ### To filter
 - `[CMD] -o Argument Arguments2 --Option-In-Full-Words Argument argument2`
@@ -365,24 +360,12 @@ set keycolor bold,red
 set functioncolor green
 ```
 
-- `cd /abc` depuis la racine du disque
-- `cd abc` se déplace du dossier actuel vers abc
-- `cd ..` retourne en arrière
-- `cd` ou `cd ~` Votre home
-- `cd -` Retourne dans le dossier précendent
-- mkdir
 
-- `ls` liste des fichiers et dossiers
-- `ls -a` Fichier cachés
 
-- `mkdir` Crée un dossier
-  - `mkdir -p f1/f2/f3` Créer les sous dossiers
-  - `mkdir p1 p2 p1/subp1` Créer plusieurs dossiers  
-- `rmdir [DOSSIER]` Supprime un dossier
-  - `rmdir -r [DOSSIER]` Récursif
-- `rm [FICHIER]` Supprime un fichier
-  - `rm -r [PATH]` Supprime les fichiers dans path de manière récursive
-  - `rm -i [FICHIER]` Demande la confirmation
+
+
+
+
 
 
 - `tree` Listing en arbre des dossiers
@@ -415,45 +398,7 @@ alias cx='chmod u+x'
 
 
 
-# File
-- `file [FICHER]` Affiche le type de fichier
 
-# Read file
-- `more [FICHIER]`, `less [FICHIER]`, `cat [FICHIER]` Affiche le contenu des fichiers
-  - `more` Page par page
-    - `ESPACE` Avancer d'un écran
-    - `RETURN` Avancer d'une ligne
-  - `less` Commande `more` avec des commandes de déplacement
-    - `e` Avancer d'une ligne
-    - `y` Reculer d'une ligne
-    - `f` Avancer d'une page
-    - `b`  Reculer d'une page
-    - `h` ou `?` Aide
-    - `q` Quitter la commande `more`
-  - `cat` Concaténation
-- `head [FICHIER]` Première lignes du fichier
-- `tail [FICHIER]` Dernière lignes du fichier
-
-# Write file
-- `> [FILE]` Créer un fichier
-  - `ABC > test` Créer le fichier `test` et écrit dedans `ABC`
-- `>> [FILE]` Créer le fichier si il n'existe pas
-  - `ABC >> test` Créer `test` si il n'exsite pas, et ajoute `ABC` dedans sans écraser
-
-- `[CMD|FILE...] < [FILE]` Envoie les informations de la droite vers la gauche
-  - `Cat < File1 > new_file` Envoie `File1` dans `cat`, puis envoie le tout dans `new_file`
-
-- `[Something_Creating_error] 2> [file]` Redirige même les erreurs
-  - `toto 2> error_log`
-  - `fin / -name toto 2> error_log` Enverra que les erreurs dans le log, et conserve les bons résultats dans la console
-  - `fin / -name toto 2> error_log > good_log` Envoie les erreurs dans `error_log`, et les bons résultats dans `good_log`
-
-- `[CMD] &> [FILE]` Envoie les résultats et les erreurs dans le fichier
-  - `[CMD] > [FILE] 2>&1` Envoie les résultats et les erreurs dans le fichier
-
-
-# Touch
-- `touch [FILE]` Modifie la date d'accès au fichier à la date actuelle
 
 # Password
 - `pwck` Vérifie la cohérance entre passwd et shadow
@@ -497,29 +442,14 @@ alias cx='chmod u+x'
 
 
 
-
-# Sudo login
-- Example (login shell):
-  - `sudo -i`
-- Example (with a specified user):
-  - `sudo -i -u [USER]`
-- Example (with a command):
-  - `sudo -i -u [USER] [CMD: ex (whoami)]`
-- Example (print user's `$HOME`):
-  - `sudo -i -u user echo \$HOME`
-
-
-
-
-
-
-
-
 # Echo same line
 - If it does not work on your system, you can replace this way,
   - `echo "test \c"; echo " same line"`
 - can become,
   - `echo -n "test"; echo " same line"`
+
+
+
 
 
 
@@ -544,8 +474,9 @@ Le résultat de la commande devant le pipe (`|`), devient la commande après le 
 - `systemctl | wc -l` Compte le nombre de ligne du résultat de la commande systemctl
 
 
-# find
-- `find [PATH] -name [FILE_NAME]` Recherche le fichier
+
+
+
 
 
 
@@ -605,3 +536,11 @@ scp [FICHIER] remotejeb@alma:[PATH][FICHIER]  # Envoie le fichier vers alma dans
 
 jebremote
 remotejeb
+
+
+
+
+
+
+# Lien symbolique
+`ln -ls`

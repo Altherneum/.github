@@ -46,8 +46,6 @@
 - `chgrp [GROUPE] [FILE]`
   - Change le groupe du fichier
 
-
-
 # WIP / To Do
 ## Chmod numérique
 ![alt text](/image.png)

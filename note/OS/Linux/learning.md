@@ -11,17 +11,7 @@
 ### Récupération de compte root
 [gcore.com/learning/how-to-reset-password-in-linux/](https://gcore.com/learning/how-to-reset-password-in-linux/)
 
-# APT Advanced Packaging Tool
-[doc.ubuntu-fr.org/apt](https://doc.ubuntu-fr.org/apt)
-- `apt update` Permet de resynchroniser un fichier répertoriant les paquets disponibles `/etc/apt/sources.list`
-- `apt upgrade` permet d'installer les versions les plus récentes de tous les paquets présents sur le système
-- `apt update && apt upgrade` Lance les deux commandes à la suite
-- `apt show {nom}` Afficher les informatons du paquet
-- `apt install {nom}` Télécharger et installer le paquet
-- `apt remove {nom}` Supprimer le paquet
-- `apt --reinstall install {nom}` Re-Télécharge et re-installer le paquet (Si le système est endommagé)
-- `apt --fix-broken  install {nom}` Répare le paquet (Fonctionne aussi avec remove)
-- `apt purge {nom}` Désinstalle les paquets indiqués et leurs fichiers de configuration
+
 
 ## Folder
 - `cd ..` se déplacer vers le dossier précédent
