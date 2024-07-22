@@ -288,6 +288,24 @@ ret=$?
 echo "Return = $ret"
 ```
 
+## Function loading
+Une fonction une fois lus peut être exécuté hors du script par le shell
+```
+ABC()
+{
+    echo "Test"
+}
+```
+- Lancer le script .sh de la manière suivante :
+  - `. [SCRIPT].sh`
+  - `source [SCRIPT].sh`
+- Dans le shell, écrire : `ABC`
+- Cela aura pour effet de lancer la fonction ABC
+
+- Pour supprimer la fonction de la mémoire du shell :
+  - Relancer le shell
+  - `unset -f [FUNCTION]`
+
 # Exit
 Quitte le script avec un code de retour
 - `exit 0`

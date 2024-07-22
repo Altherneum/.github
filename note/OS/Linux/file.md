@@ -74,3 +74,6 @@ Afficher le contenu des fichiers :
 - `cp -a [fichier] [destination]` Permet de conserver les mêmes droits et métadonnées que le fichier d’origine
 - `cp -r [dossier] [destination]` Permet de copier de manière récursive
 - `cp -s [fichier] [destination]` Permet de créer un lien symbolique vers le fichier d’origine.
+
+# Move file
+- `mv [FILE] [NEW_FILE]`

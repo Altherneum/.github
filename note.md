@@ -619,8 +619,6 @@ ssh-add -t 1h
 
 
 
-# Rename or move a file
-- `mv [FILE] [NEW_FILE]`
 
 
 
@@ -674,34 +672,7 @@ Envoyer des infos dedans les supprimes
 Chemin du shell à utiliser
 Ex : `#!bin/bash`
 
-## Var
-[frederic-lang.developpez.com/tutoriels/linux/prog-shell/?page=les-variables](https://frederic-lang.developpez.com/tutoriels/linux/prog-shell/?page=les-variables)
-- `A="ABC"`, `echo $a` Affecter et afficher une variable
-- `echo using var in echo $(date)`
-- `unset $var` Supprime la variable
-- `A=A B C` 3 arguments et pas un String
-Variable avec default value à faire
 
-# Variable math
-- `expr $a + 1`
-- `expr $a - 2`
-- `expr $a / 3`
-- `expr $a \* 2`
-# Math BC
-```
-a=3.5
-b=1.5
-c=$(echo "$a * $b" | bc -l)
-echo "C vaut $c)
-```
-
-# Variables spéciales
-- ![alt text](image-3.png) variables spéciales
-  - `script.sh abc param2`
-  - utiliser `$0` va retourner le param °0
-
-- `$BASH_VERSION`
-- `$(Which sh)`
 
 # Types set
 - `typeset -i i=10`
