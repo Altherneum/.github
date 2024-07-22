@@ -53,7 +53,7 @@ echo "C vaut $c)
 
 
 # Variables spéciales
-- ![alt text](image-3.png) variables spéciales
+- ![alt text](/image-3.png) variables spéciales
   - `script.sh abc param2`
   - utiliser `$0` va retourner le param °0
 
