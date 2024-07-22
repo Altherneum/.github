@@ -23,6 +23,20 @@ Afficher le contenu des fichiers :
 - `head [FICHIER]` Première lignes du fichier
 - `tail [FICHIER]` Dernière lignes du fichier
 
+## Écrire un fichier
+- `nano` Lance l'éditeur de texte nano
+- `nano [FILE]` Lance nano sur le fichier ciblé
+  - `{ctrl} + X` Permet de fermer nano
+  - `{ctrl} + O` Permet de sauvegarder le fichier
+
+- `vi [Fichier]` Ouvre l'éditeur de texte vi
+  - `:q` Quitter (Quit)
+    - `:q!` Quitter de force
+  - `:w` Sauvegarder (Write)
+  - `:wq` Sauvegarder et quitter
+  - `:[NUMBER]` Se déplacer à la ligne
+    - (Exemple : `:10` = Ligne 10)
+
 ## Écrire sur un fichier
 ### Écrire en écrasant le fichier
 - `[CMD|FILE|Text] > [FILE]` Créer le fichier et écrit dedans, si il existe il sera écrasé
@@ -52,3 +66,11 @@ Afficher le contenu des fichiers :
 - `rm [FICHIER]` Supprime un fichier
   - `rm -r [PATH]` Supprime les fichiers dans path de manière récursive
   - `rm -i [FICHIER]` Demande la confirmation
+
+## Copy paste
+- `cp [à copier] [destination]` Permet de copier un ou plusieurs fichiers vers un emplacement spécifié
+- `cp [fichier à copier] [dossier à copier] [fichier à copier] [dossier à copier] [destination]` Permet de copier une liste de dossiers et fichiers vers l'emplacement spécifié
+- `cp -f [fichier] [destination]` Permet de forcer l'écrasement d'anciens fichiers et dossiers
+- `cp -a [fichier] [destination]` Permet de conserver les mêmes droits et métadonnées que le fichier d’origine
+- `cp -r [dossier] [destination]` Permet de copier de manière récursive
+- `cp -s [fichier] [destination]` Permet de créer un lien symbolique vers le fichier d’origine.

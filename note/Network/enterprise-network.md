@@ -267,11 +267,14 @@ Carte Serveurs
 - Nom du poste : `Win10-PC-1`
 
 ### Debian
-- Login : `root` / `jeb`
-- Password : `SuperUser11`
-- Carte réseau sur `NAT`
+- Login : `root`
+  - Password : `SuperUser11`
+- Login : `jeb`
+  - Password : `User11`
 
+- Carte réseau sur `NAT`
 - Nom du poste : `Debian`
+
 ### AlmaLinux
 - Login : `root` / `jeb`
 - Password : `SuperUser11`

@@ -18,3 +18,6 @@
 ## Supprimer un dossier
 - `rmdir [DOSSIER]` Supprime un dossier
   - `rmdir -r [DOSSIER]` Récursif
+
+## Afficher le chemin actuel
+- `pwd` Affiche le chemin actuel
