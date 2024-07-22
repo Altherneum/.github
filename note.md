@@ -734,34 +734,7 @@ echo "C vaut $c)
 
 `ls [PATHERROR]`, puis `echo $?` si != 0 il y a eu une erreur
 
-# if
-Tabulation / identation non obligatoire
-```
-if test = "$nom" = abc
-  then echo "abc"
-fi
-```
 
-Les espaces autour du crochet est obligatoire
-```
-if [ "$nom" = "abc" ]
-  then eco "abc"
-fi
-```
-
-```
-if [ "$nom" = "abc" ] ; then
-  echo "abc"
-fi
-```
-
-# if else
-```
-if test = "$nom" = abc
-  then echo "abc"
-  else echp "not abc"
-fi
-```
 
 ## check admin
 ```
@@ -786,93 +759,10 @@ if [ $# -eq 1 ] ; then
 fi
 ```
 
-# elif
-`./script.sh [STRING]`
-```
-if [ $1 = "start" ]
-  then echo "Démarrage"
-elif [ $1 = "stop" ]
-  then echo "Arrêt du serveur"
-elif [ $1 = "enable" ]
-  then echo "Activation du serveur"
-elif [ $1 = "disable" ]
-  then echo "Désactivation du serveur"
-else echo "erreur"
-fi
-```
-# Commande test
-`test` permet de vérifier un fichier, valeurs numériques, caractères
-`-x` Vérifier si exécutable
-`-s` Si le fichier est vide
-- `-f` Vérifie si c'est un fichier ordinaire
-- `-w` Si ont peut écrire sur le fichier
-- `-r` Si on peut lire le fichier
-- `-e` Vérifier si le fichier existe
-- `-d` Si c'est un dossier
-`-eq` `-ne` `-gt` `-lt` ......
-`!` = Not
 
-## Test with a if
-`test` équivaut à `if [ CMD ]`
 
-# While do done
-```
-a=0
-while [ $a -ne 10 ]
-do
-  echo $a
-  ((a+=1))
-done
-echo $a
-```
 
-# Until
-```
-until [ $a -eq 10 ]
-do
-  [CMD]
-done
-```
 
-## Break
-`break` Stop une boucle de force et continue le script
-
-## Continue
-La commande `continue` permet de reprendre l'exécution à l'itération suivante d'une boucle `for` / `while` ou `until` sans exécuter toutes les commande de la boucle après le `continue`
-
-# for
-```
-for ((i=1; i<=2; i++)); 
-do
-  [CMD]
-done
-```
-
-`./script.sh a b c`
-```
-for letter
-do
-  echo $letter
-done
-```
-(Par défaut letter (si vide) sera la liste des paramètres !)
-
-`./script.sh a b c`
-```
-letter=$@
-for letter
-do
-  echo $letter
-done
-```
-
-# for in
-```
-for variable in var1 var2 var3
-do
-  [CMD]
-done
-```
 
 # Include
 `.` devant un fichier permet de l'inclure dans le shell en cours d'utilisation
@@ -928,91 +818,14 @@ else echo "erreur faite ABC ou break :("
 fi
 ```
 
-# Exit
-`exit 0`
-`exit 404exit`
-Quitte le script avec un code de retour
 
-# Function
-```
-function ABC
-{
-  echo "Test"
-}
-```
-ou :
-```
-function ABC()
-{
-  echo "Test"
-}
-```
-Lancer la fonction via `ABC`
+
+
 
 # fil rouge
 Firewall *2 ("UFW" sur debian, "D" sur redhat) + proxy
 
 
-# Conditions composées
-- `-a` Et
-- `-o` Ou
-- `!` Négation
-- `=` Vérifie l'égalité
-- `!=` N'est pas égale
 
-# Opérateurs du shell
-Dans un `if` ;
-- `&&` : `[CMD] && [CMD]`
-- `||` : `[CMD] || [CMD]`
 
-# Case in esac
-Forme de Switch
-```
-read reponse
-case "$reponse" in
-a) echo "vous avez tappez A";;
-b) echo "vous avez tappez B";;
-c | d) echo "vous avez tappez C ou D";;
-stop) echo "Arrêt du script ..." ; exit 0;;
-esac
-```
 
-## Case in esac avec wildcard
-```
-read entry
-case "$entry" in
-[aA] ) echo "A a été tappé";;
-[bB-yY] ) echo "de B à Y";;
-*) echo "Erreur";;
-esac
-```
-`*` Wildcard pour tout autre caractère / mot
-`[Regex]`
-  - `[Aa]` Majuscule ou minuscule
-  - `[a-b]` de a à b minuscule
-  - `[A-B]` de A à B majuscule
-  - `[Aa-Bb]` De A à B majuscule ou minuscule
-
-# Select
-Permet de créer des menus et de tapper le n° du menu à lancer :
-```
-select cmd in a b c autre
-do
-echo "Vous avez fait le choix : $cmd"
-done
-```
-
-Exemple : 
-
-```
-select cmd in date pwd break "Lancer pipes.sh"
-do
-case "$cmd" in
-date) echo -n "Date du jour : " ; date;;
-pwd) echo -n "Vous êtes ici : " ; pwd;;
-break) echo "Fin ..." ; break;;
-"Lancer pipes.sh") ./pipes.sh;;
-*) echo "Tapper un nombre entre 1 et 4;;
-esac
-done
-```
