@@ -16,24 +16,10 @@ Variable avec default value à faire
 - `echo "Les lettres sont ${Alphabet[*]}"`
   - `echo "Les lettres sont : ${Alphabet[@]}"`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Variables spéciales
-- ![alt text](/image-3.png) variables spéciales
-  - `script.sh abc param2`
+- `script.sh abc param2`
   - utiliser `$1` va retourner le param °0 `$2 3 4 ...`
-
+  - A TESTER
 - `$*` Ensemble des paramètres positionnels (En un seul mot)
 - `$@` Ensemble des paramètres positionnels (En plusieurs mots)
 - `$#` Nombre de paramètres  positionnels
@@ -42,7 +28,7 @@ Variable avec default value à faire
 - `$$` Numéro du processus courant (le Shell)
 - `$!` Numéro du dernier processus lancé en arrière-plan
 - `$0` Nom de la procédure
-- `$_` 
+- `$_` ??? [https://unix.stackexchange.com/questions/280453/understand-the-meaning-of](https://unix.stackexchange.com/questions/280453/understand-the-meaning-of)
 
 ## Variables internes
 - `$BASH_VERSION` Version du terminal Bash

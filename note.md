@@ -568,6 +568,10 @@ ask user input
 
 # Variable à filter
 ```
+
+https://www.mode83.net/atelier/centre_ressources/crs_fichiers/Formation/OSR2K9/Linux/Programmation%20Bash.pdf
+
+
 $DIRSTACK
 La valeur du dessus de la pile de répertoires (affectée par pushd166 et popd166)
 Cette variable intégrée correspond à la commande dirs. Néanmoins, dirs affiche le contenu entier de la pile de répertoires.
@@ -1323,3 +1327,11 @@ des noms de fichiers temporaires « uniques » (voir l'Exemple A.13, « ftpget: 
 l'Exemple 29.6, « Nettoyage après un Control-C », l'Exemple 15.28, « Déballer une archive rpm » et l'Exemple 14.27, « Un
 script qui se tue lui-même »). Ceci est généralement plus simple que d'appeler mktemp.
 ```
+
+# Filter A tester et à filter
+Faire recherche 
+- a tester
+- à tester
+- a filter
+- to filter
+...
