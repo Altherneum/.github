@@ -1,6 +1,9 @@
 # Titre niveau 1
+- Exemple de code avec description
+  - `Cat < File1 > new_file` Envoie `File1` dans `cat`, puis envoie le tout dans `new_file`
 
 ## Titre niveau 2
+- `var <op>= expr` C'est équivalent à `var = var <op> expr` à l'exception que la partie « var » n'est évaluée qu'une seule fois. Cela peut faire une différence si « var » est un tableau.
 
 ### Titre niveau 3
 
