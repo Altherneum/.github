@@ -1335,3 +1335,16 @@ Faire recherche
 - a filter
 - to filter
 ...
+
+# Wget
+- `WGet [LIEN]`
+  - `Wget -O '[LIEN]'`
+  - `wget -O [PATH] '[LIEN]'`
+  - Exemple `wget -O /scripts/sh/setup.mysql.sh 'https://raw.githubusercontent.com/Altherneum/server/main/scripts/sh/setup.mysql.sh'`
+
+# Tar
+tar -zxf [FILE]
+tar -zxf [FILE] -C [PATH]
+-x pour extraire
+
+
