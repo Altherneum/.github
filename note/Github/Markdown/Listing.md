@@ -37,6 +37,21 @@ Du text et `un peut de code`, avec du text
 
 `Du code avec un *Wildcard*`
 
+`# Un commentaire Shell`
+```
+sudo -i -u god
+# Un commentaire Shell
+```
+
+Une permission linux RWX : `-rw-------`
+
+```
+des permissions linux
+-rw-------
+drwx---rwx
+drw-rw-rw-
+```
+
 `` ` `` Un backtick dans un code block
 
 ```
