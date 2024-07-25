@@ -1,6 +1,9 @@
 # Titre niveau 1
+- Exemple de code avec description
+  - `Cat < File1 > new_file` Envoie `File1` dans `cat`, puis envoie le tout dans `new_file`
 
 ## Titre niveau 2
+- `var <op>= expr` C'est équivalent à `var = var <op> expr` à l'exception que la partie « var » n'est évaluée qu'une seule fois. Cela peut faire une différence si « var » est un tableau.
 
 ### Titre niveau 3
 
@@ -36,6 +39,21 @@ Text
 Du text et `un peut de code`, avec du text
 
 `Du code avec un *Wildcard*`
+
+`# Un commentaire Shell`
+```
+sudo -i -u god
+# Un commentaire Shell
+```
+
+Une permission linux RWX : `-rw-------`
+
+```
+des permissions linux
+-rw-------
+drwx---rwx
+drw-rw-rw-
+```
 
 `` ` `` Un backtick dans un code block
 
