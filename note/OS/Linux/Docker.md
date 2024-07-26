@@ -144,7 +144,9 @@ Les volumes rendent persistant les données
   - `docker volume create my-volume`
 ### Inspecter des volumes
 - `docker volume inspect [VOLUME]`
-  - `docker volume inspect my-volume` 
+  - `docker volume inspect my-volume`
+### Lister les volumes
+- `docker volume ls`
 ### Supprimer des volumes
 - `docker volume rm [VOLUME]`
 ### Monter un volume
@@ -155,27 +157,47 @@ Les volumes rendent persistant les données
 - `docker run -d --name [NOM] --volume "[PATH]":[MOUNTING_PATH] [IMAGE]`
   - `docker run -d --name test-vol-bind --volume "C:/Docker-Files":/mnt/volumes httpd` Partage un dossier Windows
 
-### Ouvrir les ports d'un conteneur
-- `docker run -d --name [NOM] -p [PORT]:[PORT] [IMAGE]`
+## Ouvrir des ports
+### Ouvrir les ports via -p
+- `docker run -d --name [NOM] -p [PORT_MACHINE]:[PORT_CONTAINER] [IMAGE]`
   - `docker run -d --name httpd01 -p 8080:80 httpd`
-- `docker run -d --name [NOM] --publish [PORT]:[PORT] [IMAGE]:[VERSION]`
-  - `docker run -d --name nginx -p 80:80 nginx:latest`
+- `docker run -d --name [NOM] --publish [PORT_MACHINE]:[PORT_CONTAINER] [IMAGE]:[VERSION]`
+  - `docker run -d --name nginx --port 80:80 nginx:latest`
 - `docker run -d --name [NOM] -P [IMAGE]` Ouvre tout les ports du conteneur
   - `docker run -d --name [NOM] --publish-all [IMAGE]`
-
-Alternative
-
+### Ouvrir des ports via --expose
 - `docker run -d --name [NOM] --expose [PORT] [IMAGE]`
 - `docker run -d --name [NOM] --expose [PORT] [IMAGE]:[VERSION]`
   - `docker run -d --name demo-run --expose 443 demo-image:latest`
-
+### Tester les ports HTTP(S)
 - `curl localhost:8080`
 
+## Réseau
+### Types de réseaux
+- `Bridge` (Le conteneur aura l'IP de l'hôte)
+- `Host` (Le conteneur aura sa propre IP)
+- `null` (Le conteneur n'aura pas de réseau)
+### Lister les réseaux
+- `docker network ls`
+### Créer des réseaux
+- `docker network create [NAME]`
+  - `docker network create test-network`
+- `docker network create [NAME] --driver [DRIVER]`
+  - `docker network create test-network --driver bridge`
+- `docker network create --driver [DRIVER] --gateway=[IP] --subnet=[IP]/[CIDR] [NAME]`
+  - `docker network create --driver bridge --gateway=10.20.222.254 --subnet=10.20.222.0/24 test-net`
+### Lancer une image sur un réseau
+- `docker run -d --name [NOM] --network [NETWORK] [IMAGE]`
+  - `docker run -d --name Apache-Host-Net --network host httpd`
+- `docker run -d --name [NOM] -p [PORT_MACHINE]:[PORT_CONTAINER] --network [NETWORK] [IMAGE]`
+  - `docker run -d --name Apache-Host-Net -p 8080:80 --network host httpd`
+- `docker run -d --name [NOM] -p [PORT_MACHINE]:[PORT_CONTAINER] --ip [IP] --network [NETWORK] [IMAGE]`
+  - `docker run -d --name test-bridge-ip -p 8080:80 --ip 10.20.222.110 --network test-net httpd`
+
 # SOON
-## Docker volumes
-## Docker bridge
 ## Docker swarm
 ## Docker build
 ## Docker deploy private registry
 ## Docker secrets
 ## Docker push to dockerhub
+## Docker compose
