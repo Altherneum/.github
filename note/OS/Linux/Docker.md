@@ -162,7 +162,7 @@ Les volumes rendent persistant les données
 - `docker run -d --name [NOM] -p [PORT_MACHINE]:[PORT_CONTAINER] [IMAGE]`
   - `docker run -d --name httpd01 -p 8080:80 httpd`
 - `docker run -d --name [NOM] --publish [PORT_MACHINE]:[PORT_CONTAINER] [IMAGE]:[VERSION]`
-  - `docker run -d --name nginx --port 80:80 nginx:latest`
+  - `docker run -d --name nginx -p 80:80 nginx:latest`
 - `docker run -d --name [NOM] -P [IMAGE]` Ouvre tout les ports du conteneur
   - `docker run -d --name [NOM] --publish-all [IMAGE]`
 ### Ouvrir des ports via --expose
