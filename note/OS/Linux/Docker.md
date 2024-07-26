@@ -18,10 +18,8 @@
   - `docker pull httpd:2.4`
     - `:2.4` Permet de spécifier la version
   - `docker pull openjdk`
-
 ### Lister les images
 - `docker images`
-
 ### Remove image
 - `docker image rm [OPTIONS] [IMAGE...]`
   - `-f`, `--force` Force removal of the image
@@ -42,7 +40,6 @@
 - `docker image remove [IMAGE1] [IMAGE2] [...]`
 #### Supprimer des images pruned
 - `docker image prune` Supprime les images non référencés
-
 ### Inspecter une image
 - `docker inspect [IMAGE]` Permet d'inspecter les images docker
   - `docker inspect httpd`
@@ -54,6 +51,7 @@
   - `docker inspect --format="{{.NetworkSettings}}" serveur1`
 - `docker inspect --format="{{[SETTINGS].[SETTINGS2].[...]}}" [IMAGE|CONTENEUR]`
   - `docker inspect --format="{{.NetworkSettings.IPAddress}}" serveur1`
+  - `docker inspect --format="{{.NetworkSettings.Networks.bridge.IPAddress}}" serveur1`
 
 ## Créer un conteneur
 ### Lancer une image
@@ -174,18 +172,26 @@ Les volumes rendent persistant les données
 
 ## Réseau
 ### Types de réseaux
-- `Bridge` (Le conteneur aura l'IP de l'hôte)
-- `Host` (Le conteneur aura sa propre IP)
-- `null` (Le conteneur n'aura pas de réseau)
+- `Bridge`
+  - Le conteneur aura sa propre IP
+- `Host`
+  - Un seul réseau `host` possible
+  - Le conteneur aura l'IP de l'hôte
+- `null`
+  - Un seul réseau `null` possible
+  - Le conteneur n'aura pas de réseau
 ### Lister les réseaux
 - `docker network ls`
 ### Créer des réseaux
-- `docker network create [NAME]`
+- `docker network create [NOM]`
   - `docker network create test-network`
-- `docker network create [NAME] --driver [DRIVER]`
+- `docker network create [NOM] --driver [DRIVER]`
   - `docker network create test-network --driver bridge`
-- `docker network create --driver [DRIVER] --gateway=[IP] --subnet=[IP]/[CIDR] [NAME]`
+- `docker network create --driver [DRIVER] --gateway=[IP] --subnet=[IP]/[CIDR] [NOM]`
   - `docker network create --driver bridge --gateway=10.20.222.254 --subnet=10.20.222.0/24 test-net`
+### Supprimer des réseaux
+- `docker network rm [NETWORK]`
+  - `docker network rm test-network`
 ### Lancer une image sur un réseau
 - `docker run -d --name [NOM] --network [NETWORK] [IMAGE]`
   - `docker run -d --name Apache-Host-Net --network host httpd`
