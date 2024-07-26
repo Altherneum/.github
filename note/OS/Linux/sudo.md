@@ -1,8 +1,8 @@
 # Sudo
 ## Super user do
-- `su` Se connecte en tant que "Super User" (root)
+- `su` Se connecte en tant que "Super User" (root)  si l'utilisateur actuel est dans la liste des sudoers
 - `sudo [CMD]` Lance la commande en tant que le "Super User"
-  - `sudo su` Se connecter en tant que "Super User" si l'utilisateur actuel est dans la liste des sudoers
+  - `sudo su` Se connecter en tant que "Super User"
 
 ## Lancer une commande en tant que l'utilisateur
 - `sudo -u [USER] [CMD]` Lance la commande en tant que l'utilisateur

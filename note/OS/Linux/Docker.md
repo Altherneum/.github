@@ -5,13 +5,15 @@
 - [docs.docker.com](https://docs.docker.com/)
 - [hub.docker.com](https://hub.docker.com/)
 
+![Docker image explication](/note/assets/images/Container_Evolution.svg)
+
 ## Installer
 ## Vérifier la version
 - `docker version`
 
 ## Images
 ### Pull image
-- `docker pull [NOM]`
+- `docker pull [IMAGE]`
   - `docker pull nginx`
   - `docker pull httpd:2.4`
     - `:2.4` Permet de spécifier la version
@@ -46,10 +48,11 @@
   - `docker inspect httpd`
   - `docker inspect fd484f19954f` Inspecter le conteneur par son ID court
   - `docker inspect 69472fe17a116207aac52e6b782960e307b37d235bb418d3a43f63f5edf050a9` Inspecter le conteneur par son ID long
-### Inspecter une image avec des détails
-- `docker inspect --format="{{[SETTINGS]}}" [NOM]`
+
+## Inspecter une image/conteneur avec des détails
+- `docker inspect --format="{{[SETTINGS]}}" [IMAGE|CONTENEUR]`
   - `docker inspect --format="{{.NetworkSettings}}" serveur1`
-- `docker inspect --format="{{[SETTINGS].[SETTINGS2].[...]}}" [NOM]`
+- `docker inspect --format="{{[SETTINGS].[SETTINGS2].[...]}}" [IMAGE|CONTENEUR]`
   - `docker inspect --format="{{.NetworkSettings.IPAddress}}" serveur1`
 
 ## Créer un conteneur
@@ -65,7 +68,7 @@
   - `-itd`
 
 ### Renommer un conteneur
-- `docker rename [OLD_NAME] [NOM]`
+- `docker rename [CONTENEUR] [NOM]`
   - `docker rename sweet_wozniak serveur1`
 
 ### Lancer et renomer une image
@@ -74,38 +77,38 @@
   - `docker run -d --name Serveur1 nginx`
 
 ### Lancer un conteneur
-- `docker start [NOM]`
+- `docker start [CONTENEUR]`
   - `docker start serveur1`
 
 ## Utiliser un conteneur
 ### Lancer une commande dans un conteneur
-- `docker exec [NOM] [CMD]`
+- `docker exec [CONTENEUR] [CMD]`
   - `docker exec serveur1 ls /usr/local/`
   - `docker exec serveur1 printenv`
 
 ### Se connecter au terminal du conteneur
-- `docker exec -it [NOM] bash`
+- `docker exec -it [CONTENEUR] bash`
   - `docker exec -it serveur1 bash`
 - `exit` pour quitter le shell
 
 ### Envoyer un fichier au conteneur
-- `docker cp [FILE] [NOM]:[PATH]`
+- `docker cp [FILE] [CONTENEUR]:[PATH]`
   - `docker cp C:/Users/Administrateur/Documents/file.txt serveur1:/usr/local`
 
 ### Télécharger un fichier du conteneur
-- `docker cp [NOM]:[FILE] [PATH]`
+- `docker cp [CONTENEUR]:[FILE] [PATH]`
   - `docker cp serveur1:/usr/local/text.txt C:/Users/Administrateur/Documents`
   - `docker cp serveur1:/usr/local/text.txt .` Le `.` Permet de préciser le dossier actuel (là où la console est actuellement)
 
 ## Gérer un conteneur
 ### Stoper un conteneur
-- `docker stop [NOM]`
+- `docker stop [CONTENEUR]`
   - `docker stop Serveur1`
 
 ### Supprimer un conteneur
-- `docker rm [NOM]` Supprime un conteneur
+- `docker rm [CONTENEUR]` Supprime un conteneur
   - `docker rm serveur1`
-- `docker rm -f [NOM]` Supprime de force un conteneur
+- `docker rm -f [CONTENEUR]` Supprime de force un conteneur
   - `docker rm -f serveur1`
 
 ### Supprimer des conteneurs pruned
@@ -123,7 +126,50 @@
 - `docker system df`
 
 ### Logs conteneur
-- `docker logs [NOM]`
+- `docker logs [CONTENEUR]`
+
+## Ajouter une variable à un conteneur
+- `docker run --env [NOM]=[VARIABLE] [CONTENEUR]` Permet d'ajouter des variables
+- `docker run --env [NOM]=[VARIABLE] --e [NOM]=[VARIABLE] [CONTENEUR]` `--e` Permet d'ajouter d'autres variables
+  - `docker run --env OWNER="ABC"`
+
+- `docker exec [CONTENEUR] export [NOM_VARIABLE]=[VARIABLE]` Permet d'ajouter des variables avec le shell linux
+
+- `docker exec [CONTENEUR] printenv` Afficher les variables
+
+## Volumes
+Les volumes rendent persistant les données
+### Créer des volumes
+- `docker volume create [VOLUME]`
+  - `docker volume create my-volume`
+### Inspecter des volumes
+- `docker volume inspect [VOLUME]`
+  - `docker volume inspect my-volume` 
+### Supprimer des volumes
+- `docker volume rm [VOLUME]`
+### Monter un volume
+- `docker run -d --name [NOM] --volume [VOLUME]:[MOUNTING_PATH] [IMAGE]`
+### Partager un dossier
+- `docker run -d --name [NOM] --volume [PATH]:[MOUNTING_PATH] [IMAGE]`
+  - `docker run -d --name bind-vol-container --volume /tmp/m2i:/mnt/volumes/testvolume httpd` Partage un dossier linux
+- `docker run -d --name [NOM] --volume "[PATH]":[MOUNTING_PATH] [IMAGE]`
+  - `docker run -d --name test-vol-bind --volume "C:/Docker-Files":/mnt/volumes httpd` Partage un dossier Windows
+
+### Ouvrir les ports d'un conteneur
+- `docker run -d --name [NOM] -p [PORT]:[PORT] [IMAGE]`
+  - `docker run -d --name httpd01 -p 8080:80 httpd`
+- `docker run -d --name [NOM] --publish [PORT]:[PORT] [IMAGE]:[VERSION]`
+  - `docker run -d --name nginx -p 80:80 nginx:latest`
+- `docker run -d --name [NOM] -P [IMAGE]` Ouvre tout les ports du conteneur
+  - `docker run -d --name [NOM] --publish-all [IMAGE]`
+
+Alternative
+
+- `docker run -d --name [NOM] --expose [PORT] [IMAGE]`
+- `docker run -d --name [NOM] --expose [PORT] [IMAGE]:[VERSION]`
+  - `docker run -d --name demo-run --expose 443 demo-image:latest`
+
+- `curl localhost:8080`
 
 # SOON
 ## Docker volumes
