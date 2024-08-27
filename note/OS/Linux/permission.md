@@ -42,6 +42,7 @@
 ### Changer le propriétaire
 - `chown [USER] [FILE]`
   - Change le propriétaire du fichier
+- `chown -R [USER]:[GROUP] [FILE]` mode récursif
 ### Changer le groupe
 - `chgrp [GROUPE] [FILE]`
   - Change le groupe du fichier

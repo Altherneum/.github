@@ -40,6 +40,10 @@
 - `cd [chemin]` permet de se déplacer dans la structure de dossier
 - `cd ..` retour en arrière d'un dossier
 - `tree` Affiche graphiquement la structure des répertoires d’un chemin ou du disque d’un lecteur
+- `dir` Affiche le dossier et ses fichiers
+
+- `notepad` Ouvre notepad
+- `notepad [FILE]` Ouvre notepad sur le fichier
 
 ## Disques
 - `sfc /scannow` scan le système Windows
@@ -56,6 +60,7 @@
   - `ipconfig /registerdns` Actualise tous les baux DHCP et réinscrit les noms DNS
   - `ipconfig /release` Libère les connexions
   - `ipconfig /renew` Rétablit les connexions
+  - `ipconfig /displaydns` Affiche les informations du DNS
 
 ### Netstat
 - `netstat -aon` Affiche les données détaillées des sockets actifs

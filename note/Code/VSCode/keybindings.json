@@ -1,0 +1,26 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+oem_plus",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+oem_plus",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+alt+oem_plus",
+        "command": "-editor.action.inlineEdit.trigger",
+        "when": "!editorReadonly && !inlineEditVisible"
+    },
+    {
+        "key": "ctrl+alt+oem_plus",
+        "command": "-editor.action.inlineEdit.jumpTo",
+        "when": "inlineEditVisible && !cursorAtInlineEdit && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+oem_plus",
+        "command": "-editor.action.inlineEdit.jumpBack",
+        "when": "cursorAtInlineEdit && !editorReadonly"
+    }
+]

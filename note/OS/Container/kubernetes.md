@@ -1,0 +1,2 @@
+- [kubernetes.io cheatsheet](https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet/)
+- [kubernetes.io overview](https://kubernetes.io/fr/docs/reference/kubectl/overview/)

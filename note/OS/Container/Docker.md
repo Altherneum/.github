@@ -182,6 +182,9 @@ Les volumes rendent persistant les données
   - Le conteneur n'aura pas de réseau
 ### Lister les réseaux
 - `docker network ls`
+### Inspecter un réseau
+- `docker network inspect [NETWORK]`
+  - `docker network inspect bridge`
 ### Créer des réseaux
 - `docker network create [NOM]`
   - `docker network create test-network`
@@ -200,10 +203,147 @@ Les volumes rendent persistant les données
 - `docker run -d --name [NOM] -p [PORT_MACHINE]:[PORT_CONTAINER] --ip [IP] --network [NETWORK] [IMAGE]`
   - `docker run -d --name test-bridge-ip -p 8080:80 --ip 10.20.222.110 --network test-net httpd`
 
-# SOON
-## Docker swarm
 ## Docker build
+### Contenu du dossier
+- Le dockerfile (`app1/dockerfile`)
+- L'application à exporter (Exemple une page HTML) (`app1/myapp.html`)
+### Docker file
+```
+FROM [IMAGE]:[VERSION]
+RUN mkdir -p [PATH]
+WORKDIR [PATH]
+EXPOSE [PORT]
+
+RUN mkdir -p /Docker/appABC
+WORKDIR /Docker/appABC
+```
+
+```
+FROM ubuntu:jammy
+RUN apt update
+RUN apt install -y nginx
+COPY myapp.html /var/www/html/index.html
+EXPOSE 8080
+EXPOSE 80
+```
+### Build un Docker file
+- `docker build [PATH] -t [NOM]:[VERSION]`
+  - `docker build C:/app1 -t image-test:latest` Préciser le nom du dossier contenant le dockerfile
+  - `docker build . -t image-test:latest` Le `.` si la console est déjà placée dans le bon dossier
+### Lancer l'image du build
+- `docker run -d --name test-build -p 1234:80 test-image-build:latest`
+### Uploader l'image sur Dockerhub
+- `docker tag [IMAGE]:[VERSION] [USER]/[REPOSITORY]:[VERSION]` Applique un tag de version à l'image au nom du compte et du repository
+  - `docker tag test-build:1.0 qjwemuta/test-build:1.0`
+- `docker login`
+  - Va demander l'username
+  - Puis le password
+- `docker push [USER]/[REPOSITORY]:[VERSION]`
+  - `docker push qjwemuta/test-build:1.0` Push l'image en ligne sur [hub.docker.com](https://hub.docker.com)
+- L'image de ce build est désormais en ligne et disponible via : `docker run -d --name custom-build-pull -P qjwemuta/test-build:1.0`
+
+
+## Docker compose
+### Version de docker compose
+- `docker compose version`
+### Créer un docker compose
+- Créer un fichier : `docker-compose.yaml`
+```
+version: "3.0"
+services:
+  frontend:
+    image: wordpress
+    depends_on:
+      - "database"
+    ports:
+      - "2200:80"
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: wordpress_pass
+      WORDPRESS_DB_NAME: wordpress_db
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: wordpress_pass
+```
+### Lancer docker compose
+- `docker compose up -d` Deployer le docker compose dans le répertoir de la console
+- `docker compose -f [FICHIER] up -d` Deployer un docker compose avec son chemin
+  - `docker compose -f C:/Users/Administrateur/Desktop/compose`
+- `docker compose down` Retire le docker compose
+### Lister les docker compose
+- `docker compose ls`
+  - `docker compose ls -a`
+- `docker ps` Liste les conteneurs (Dont ceux crée via un compose)
+  - `docker ps -a`
+### Supprimer un docker compose
+- `docker compose rm [SERVICE]`
+  - `docker compose rm -f [SERVICE]`
+  - `docker compose rm c4b6a2cf9b59`
+
+## Docker swarm
+### Créer un docker swarm
+Swarm = essaim
+Master = maître
+Worker = travailleur
+#### Master
+- `docker swarm init`
+
+#### To filter & test
+```
+Docker SWARM
+
+Initialization
+on the master node
+docker swarm init
+
+Verify
+On the master
+docker node ls
+
+expected output
+root@ip-172-31-11-138:~# docker node ls
+ ID                            HOSTNAME       	STATUS	AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+ rw5smxfjirgeawcdm9j6nlbf1     ip-172-31-5-216	Ready 	Active                      	19.03.12
+ u02f28589h8aiwj8nawro978v *   ip-172-31-11-138   Ready 	Active     	Leader       	24.0.2
+ upujlvvpo7um8zqzyx5kness4     ip-172-31-14-123   Ready 	Active                      	19.03.12
+
+Services
+Create
+docker service create --name firstsvc nginx
+
+List
+docker service ls
+
+List containers belonging to a service
+docker service ps firstsvc
+
+Set the scale
+docker service scale firstsvc=6
+ docker service ps firstsvc #check the new containers
+
+Delete
+docker service rm firstsvc
+
+Global vs Replicated Services
+docker service create --name replicated-svc nginx #default mode is replicated
+
+ 
+docker service create --name global-svc --mode global nginx
+
+Publish Services
+docker service create --name published-svc --mode global -p 3333:80  nginx
+
+Access application running in service
+curl 'any-one-nodes-ip-address':3333
+
+Run service on specific node
+docker service create --name node-specific-svc --constraint "node.hostname == <hostname>" --replicas 5 
+```
+# Soon
 ## Docker deploy private registry
 ## Docker secrets
-## Docker push to dockerhub
-## Docker compose

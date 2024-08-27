@@ -1,6 +1,19 @@
 # Lost notes
 - VM Hyper-V stopés le derniers jours
 
+#
+
+# Certif Azure
+Centre personview
+5 sept
+
+# voucher Azure
+Perimé dernier jours de certif
+
+# Compte outlook.com
+Live.com
+Ou outlook.fr
+
 # To test
 - Tester auto shut down
 - Block file type (bat, ps1, CMD, etc)
@@ -45,7 +58,6 @@ REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
 # CV update
 Avec Philipe LAMBERT
 
----
 - Attention aux langages et pré faire des phrases de speech
 - Mots clés qui permettent de créer un speech sans relier comme un robot
 - Transformer instabilité pro en force
@@ -58,6 +70,24 @@ Avec Philipe LAMBERT
 - Né avec un clavier entre les mains
 - Hobie
 - lien si imprimer
+
+## CV update²
+Avec Malik BENAKCHA
+- âge
+- photo
+- Créer un speech de présentation
+- Peut être multi page si complet
+- éviter de parler d'open source (Entreprise dislike) mais de partage de savoir
+- Parle calmement
+- Partage de savoir
+- Inclure lanage de dev et projets type fait dans le speech
+- Culture entrperise, tirer vers le haut, intégration
+
+## Q & R
+Défi en entreprise
+  Pipeline CI CD de AB testing indev.site.com   beta.site.com   release.site.com
+
+
 # PowerShell
 ```
 $i = 0                # $i = 0
@@ -1347,4 +1377,43 @@ tar -zxf [FILE]
 tar -zxf [FILE] -C [PATH]
 -x pour extraire
 
+# Domaine AD
+AD DS (Entra ID / Azure ID)
+Objet
+UO
+Domaine
+Forêt (Qui est : Tenant(Locataire)??? / Annuaire)
 
+
+
+# Local key
+Get-PSDrive
+
+Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
+----           ---------     --------- --------      ----                                               ---------------
+Alias                                  Alias
+C                 161,49         61,48 FileSystem    C:\                                                     Users\User
+Cert                                   Certificate   \
+Env                                    Environment
+Function                               Function
+G                   4,39         10,61 FileSystem    G:\
+HKCU                                   Registry      HKEY_CURRENT_USER
+HKLM                                   Registry      HKEY_LOCAL_MACHINE
+Variable                               Variable
+WSMan                                  WSMan
+
+# local key list
+ls hkcu:
+ls hklm:
+
+
+
+
+
+
+
+# Disques 
+- DAS direct access storage (Direct Attached Storage est le terme utilisé pour un système de disque dur en attachement direct, par opposition au NAS qui est en attachement réseau)
+- SAS Serial Attached SCSI (technique d'interface pour disques durs, elle constitue une évolution des bus SCSI)
+- NAS Network Attached Storage (serveur de fichiers autonome, relié à un réseau)
+- SAN storage area network (est un réseau spécialisé permettant de mutualiser des ressources de stockage, système de stockage en block (Exemple 64Ko))
