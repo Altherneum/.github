@@ -49,11 +49,58 @@
 
 # WIP / To Do
 ## Chmod numérique
-![alt text](/image.png)
-R--RWXRWX = 477
+### Calculer une permission
+- Additionner les valeurs afin de créer un chiffre
+- `R = 4`
+- `W = 2`
+- `X = 1`
+
+### Appliquer pour un utilisateur, groupe et autre
+- Cumuler les 3 chiffres pour créer le nombre définissant les permission à appliquer
+
+```
+740 = RWXR-----
+777 = RWXRWXRWX
+644 = RW-R--R--
+```
+
+### Exemples de chmod numérique
+`chmod -R 755 /var/www` Applique les permissions `RWXR-XR-X` de manière récursive sur `/var/www` (Exemple pour Apache2)
 
 ## Umask
-![alt text](/image-1.png)
-umask va retirer les permission
-ex : umask 777 = retire toutes les permission
-Utilisé lors des créations de fichiers / dossiers
+### Définition de umask
+- `umask` (user file creation mode mask, masque de création de fichier par l'utilisateur)
+- Le `umask` définit les permissions par défaut d'un répertoire ou d'un fichier créé
+- L’umask est utilisé par `open`, `mkdir`, `touch` et d’autres appels systèmes qui créé ou modifie les permissions sur les nouveaux fichiers ou répertoires
+
+### Précisions sur umask
+- Par défaut, tous les fichiers sont créés avec les droits `666` (`rw-rw-rw—`)
+- Par défaut tous les répertoires sont créés avec les droits `777` (`rwxrwxrwx`)
+- Puis le masque est appliqué
+- Le masque est le même pour l'ensemble des fichiers
+- Un masque ne modifie pas les droits des fichiers existants, mais seulement ceux des nouveaux fichiers
+
+```
+0 = RWX
+1 = RW-
+2 = R-X
+3 = R--
+4 = -WX
+5 = -W-
+6 = --X
+7 = ---
+```
+
+### Vérifier le umask actuel
+Utilisez l’option `-S` pour afficher les valeurs de permissions `umask` pour les utilisateurs, groupes et autres
+
+`umask -S`
+
+### Exemples d'umask
+- `umask 022` (`RWXR-XR-X`)
+- `umask a=rwx` (`RWXRWXRWX`)
+- `umask u=rwx,g=rwx,o=rwx` (`RWXRWXRWX`)
+
+### Variations d'umask
+- `dmask` (Directory) pour les dossiers uniquement
+- `fmask` (File) pour les fichiers uniquement
