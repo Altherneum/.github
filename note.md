@@ -1,8 +1,6 @@
 # Lost notes
 - VM Hyper-V stopés le derniers jours
 
-#
-
 # Certif Azure
 Centre personview
 5 sept
@@ -56,8 +54,6 @@ Tout a été crée, peut inter connecté des domaines, mais partage de fichier i
 REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
 
 # CV update
-Avec Philipe LAMBERT
-
 - Attention aux langages et pré faire des phrases de speech
 - Mots clés qui permettent de créer un speech sans relier comme un robot
 - Transformer instabilité pro en force
@@ -72,7 +68,6 @@ Avec Philipe LAMBERT
 - lien si imprimer
 
 ## CV update²
-Avec Malik BENAKCHA
 - âge
 - photo
 - Créer un speech de présentation
@@ -83,9 +78,8 @@ Avec Malik BENAKCHA
 - Inclure lanage de dev et projets type fait dans le speech
 - Culture entrperise, tirer vers le haut, intégration
 
-## Q & R
-Défi en entreprise
-  Pipeline CI CD de AB testing indev.site.com   beta.site.com   release.site.com
+## AB testing
+Pipeline CI CD de AB testing indev.site.com   beta.site.com   release.site.com
 
 
 # PowerShell
@@ -1417,3 +1411,8 @@ ls hklm:
 - SAS Serial Attached SCSI (technique d'interface pour disques durs, elle constitue une évolution des bus SCSI)
 - NAS Network Attached Storage (serveur de fichiers autonome, relié à un réseau)
 - SAN storage area network (est un réseau spécialisé permettant de mutualiser des ressources de stockage, système de stockage en block (Exemple 64Ko))
+
+
+# To finish
+Finir docker swarm
+Move azure images to asset
