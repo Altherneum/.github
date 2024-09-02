@@ -59,6 +59,7 @@
 - https://www.myinstants.com/fr/index/fr/
 - https://fr.wikipedia.org/wiki/Partition_(informatique)
 - https://pastebin.com/
+- https://github.com/gibbed/SteamAchievementManager
 
 ## Self hosting
 - [Host your own encrypted DNS](https://www.youtube.com/watch?v=pj_jyVG7sB4)
