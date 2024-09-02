@@ -74,3 +74,4 @@ Hors réseau = pas de demande de compte Microsoft
 - Composant de Windows 2000 et des versions ultérieures du système d'exploitation, est utilisé pour créer des packages auto-extractibles à partir d'un ensemble de fichiers. 
 - Ces packages peuvent être utilisés pour installer des logiciels.
 - `iexpress.exe`, `C:\Windows\System32`
+- [Youtube / John HAMMOND / Self-Extracting Executables for Hackers](https://www.youtube.com/watch?v=mAond4BkCfM)
