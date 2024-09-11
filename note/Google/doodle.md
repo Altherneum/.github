@@ -1,0 +1,6 @@
+- [Pac-man](https://www.google.com/search?q=pacman)
+- [Askew](https://www.google.com/search?q=askew)
+- [DvD screen saver](https://www.google.com/search?q=dvd+screensaver)
+- [Fidget spinner](https://www.google.com/search?q=Fidget+spinner)
+- [Cha cha slide](https://www.google.com/search?q=cha+cha+slide)
+- [Do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll)

@@ -1,17 +1,3 @@
-# Lost notes
-- VM Hyper-V stopés le derniers jours
-
-# Certif Azure
-Centre personview
-5 sept
-
-# voucher Azure
-Perimé dernier jours de certif
-
-# Compte outlook.com
-Live.com
-Ou outlook.fr
-
 # To test
 - Tester auto shut down
 - Block file type (bat, ps1, CMD, etc)
