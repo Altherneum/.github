@@ -13,12 +13,12 @@ Systemctl status sshd                       # Vérifie si sshd est lancé ou sto
 # Alma
 ls -l /etc/ssh                              # Liste les fichiers SSH
 more /etc/ssh/sshd_config                   # La configuration SSHD
-useradd -m -s /bin/bash remotejeb           # Créer l'utilisateur remotejeb
-useradd -m -s /bin/bash jebremote           # Créer l'utilisateur jebremote
+useradd -m -s /bin/bash user1           # Créer l'utilisateur user1
+useradd -m -s /bin/bash user2           # Créer l'utilisateur user2
 
 # Debian
-useradd -m -s /bin/bash remotejeb           # Créer l'utilisateur jebremote aussi sur debian
-useradd -m -s /bin/bash jebremote           # Créer l'utilisateur remotejeb aussi sur debian
+useradd -m -s /bin/bash user1           # Créer l'utilisateur user2 aussi sur debian
+useradd -m -s /bin/bash user2           # Créer l'utilisateur user1 aussi sur debian
 
 nano etc/sudoers                            # Liste des utilisateurs sudo
 # Ajouter les logins dans la liste sudoers  # Configure les utilisateurs sudo
@@ -28,21 +28,21 @@ nano /etc/hostname                          # Config hostname
 # Ajouter "alma" dedans
 reboot                                      # Si besoin car recharge pas tout seul
 hostnamectl set-hostname          # ou      # systemctl restart systemd-hostnamed                    # à la place de reboot si vous souhaitez juste le recharger # A TESTER
-passwd remotejeb                            # Change le mot de passe 
+passwd user1                            # Change le mot de passe 
 SuperRemote11                               # Taper le mot de passe suivant
-passwd jebremote                            # Same here
+passwd user2                            # Same here
 SuperRemote11                               # Same password :3 ...
 
 # Debian
-ssh remotejeb@10.20.222.86                  # Lance une connection SSH
-SuperRemote11                               # S'auth avec le compte remotejeb et son mot de passe
+ssh user1@10.20.222.86                  # Lance une connection SSH
+SuperRemote11                               # S'auth avec le compte user1 et son mot de passe
 ###################################################################################################
 
 exit                                        # Quitter alma pour debian
 nano /etc/hosts                             # Config des hôtes
 # Ajouter la ligne # 10.20.222.86   alma    # Configure l'IP pour être résolue par "alma"
 
-SSH remotejeb@alma                          # On peut du coup SSH sur Alma sans taper l'IP
+SSH user1@alma                          # On peut du coup SSH sur Alma sans taper l'IP
 
 SSH alma                                    # Va se connecter sur le compte reconnu en cours d'utilisation (si identique au système distant)
 
@@ -51,8 +51,8 @@ SSH alma                                    # Va se connecter sur le compte reco
 # Commandes SSH SFTP
 ```
 # Sur debian
-scp [FICHIER] remotejeb@alma:[PATH][FICHIER]  # Envoie le fichier vers alma dans le dossier
-    scp test.txt remotejeb@alma:/home/remotejeb/test.txt
+scp [FICHIER] user1@alma:[PATH][FICHIER]  # Envoie le fichier vers alma dans le dossier
+    scp test.txt user1@alma:/home/user1/test.txt
 
 scp -r [PATH] [RemoteHost]/[PATH]             # SCP un dossier de manière récursive
 scp -r Workspace 10.20.222.86/home/jeb        # Exemple
