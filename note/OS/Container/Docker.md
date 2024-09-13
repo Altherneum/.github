@@ -343,6 +343,28 @@ curl 'any-one-nodes-ip-address':3333
 
 Run service on specific node
 docker service create --name node-specific-svc --constraint "node.hostname == <hostname>" --replicas 5 
+
+Scale service instances
+Each service defined in Docker compose configuration can be scaled using below command
+
+docker-compose scale <service name> = <no of instances>
+
+For example :
+
+docker-compose scale redis-master=3
+
+Although services can be scaled but you could get arbitrary range of ports assigned since the ports are randomly assigned by Docker engine.This can be controlled by assigning port range on the ports section of compose yaml file.
+
+services: 
+
+redis-master: 
+
+image: redis:latest 
+
+ports: - "6379-6385:6379"
+Scaling can also be done by using up command as well with the --scale flag.
+
+docker-compose up --scale redis-master=3 -d
 ```
 # Soon
 ## Docker deploy private registry
