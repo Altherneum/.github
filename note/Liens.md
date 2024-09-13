@@ -84,6 +84,11 @@
 - [Read The Manual First](https://github.com//Altherneum/.github/tree/main/note/RTFM/v1.pdf)
   - [RTFM v1.1](https://github.com//Altherneum/.github/tree/main/note/RTFM/v1.1.pdf)
 - [aircrack-ng.org](https://aircrack-ng.org/)
+### Uptime
+- [uptime.kuma.pet](https://uptime.kuma.pet/) | [github.com louislam uptime-kuma](https://github.com/louislam/uptime-kuma)
+- [upptime.js.org](https://upptime.js.org/) | [github.com upptime upptime](https://github.com/upptime/upptime)
+### Auto updater
+- [containrrr.dev watchtower](https://containrrr.dev/watchtower/) | [github.com containrrr watchtower](https://github.com/containrrr/watchtower)
 
 # Games
 ## Game hack
