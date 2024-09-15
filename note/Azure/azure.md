@@ -1,22 +1,27 @@
 # Azure AZ-104
 - [portal.azure.com](https://portal.azure.com/)
-
+## Learn
 - [learn.microsoft.com study-guides/az-104](https://learn.microsoft.com/fr-fr/credentials/certifications/resources/study-guides/az-104)
 - [learn.microsoft.com azure](https://learn.microsoft.com/fr-fr/azure)
-- [learn.microsoft.com training/courses/az-104t00](https://learn.microsoft.com/fr-fr/training/courses/az-104t00)
+- [learn.microsoft.com training courses az-104t00](https://learn.microsoft.com/fr-fr/training/courses/az-104t00)
+## Ressources
+- [skylinesacademy.com az-104-ultimate-study-guide](https://www.skylinesacademy.com/az-104-ultimate-study-guide)
+- [certs.msfthub.wiki azure az-104](https://certs.msfthub.wiki/azure/az-104/)
+## Guides
+- [github.com oliverbebber AZ-104-Study-Notes](https://github.com/oliverbebber/AZ-104-Study-Notes)
+- [github.com MicrosoftLearning AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator)
+- [microsoftlearning.github.io AZ-104-MicrosoftAzureAdministrator](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)
+## Practice
+- [learn.microsoft.com en-us credentials certifications azure-administrator practice assessment ?assessment-type=practice &assessmentId=21 &practice-assessment-type=certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/practice/assessment?assessment-type=practice&assessmentId=21&practice-assessment-type=certification)
 
-- [skylinesacademy.com/az-104-ultimate-study-guide](https://www.skylinesacademy.com/az-104-ultimate-study-guide)
-- [github.com /oliverbebber /AZ-104-Study-Notes](https://github.com/oliverbebber/AZ-104-Study-Notes)
-- [github.com  MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator)
-
-## Sujets de l'AZ-104
+# Sujets de l'AZ-104
 - Gérer les identités et la gouvernance Azure (20-25 %)
 - Implémenter et gérer le stockage (15-20 %)
 - Déployer et gérer les ressources de calcul Azure (20–25 %)
 - Implémenter et gérer des réseaux virtuels (15-20 %)
 - Superviser les ressources Azure et en assurer la maintenance (10–15 %)
 
-## Définition du cloud
+# Définition du cloud
 - Paiement à la demande
 - Scalable
   - Monter en charge
@@ -108,13 +113,11 @@ Permet de stocker des ressources (Stockage, VM, réseaux, ...)
 - Appliquer un nom (Unique)
 - Sélectionner la région
 - Séléctionner la redondance
-### Réseaux
-### ...
 
+## Se connecter à une VM
 - La VM est disponible dans la liste des groupes de ressources
 - En cliquant dessus vous pourrez vous y connecter (Connect > Connect > RDP)
 
-- Le déploiement se fait via un JSON
 
 ## Supprimer des ressources
 - Demander la suppression arrête la facturation
@@ -133,6 +136,8 @@ Permet de stocker des ressources (Stockage, VM, réseaux, ...)
 Deux fichiers : `parameters.json`, et `template.json`
 
 ### Déployer à partir d'un modèle personnalisé
+Le déploiement se fait via un JSON
+
 - Onglet `Déployer à partir d'un modèle personnalisé`
 - Créer votre propre modèle dans l'éditeur
 - Coller le fichier `template.json` et enregistrer
@@ -160,7 +165,7 @@ Via le cloud shell sur portail Azurez
 - Exemple pour créer une ressource de stockage : `New-AzResourceGroupDeployment -ResourceGroupName ARM-NAME-Storage-test -TemplateFile ./template.json -TemplateParameterFile ./parameters.json`
 - Exemple pour supprimer le ressource group : `Delete-AzResourceGroup -Name ARM-NAME-Storage-test`
 #### AZ.exe (CLI)
-- 
+- [learn.microsoft.com cli azure install-azure-cli-windows](https://learn.microsoft.com/fr-fr/cli/azure/install-azure-cli-windows)
 
 ## ARM
 Azure ressource manager
