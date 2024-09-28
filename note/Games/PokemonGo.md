@@ -72,8 +72,10 @@
 # Filtre de recherche utile
 ## Pokémon à supprimer
 ```
-!nouvelleévolution & !évolutionparéchange & !oeufseulement & !chanceux & !légendaire & !fabuleux & !purifié & !obscur & !chromatique & !costume & !ultrachimère & !PC1500- & !4 & !alola &!galar & !hisui & !+évoli & !83 & !115 & !122 & !128 & !132 & !201 & !214 & !222 & !313 & !314 & !324 & !327 & !335-338 & !351 & !357 & !369 & !412 & !417 & !421 & !422 & !423 & !439 & !441 & !449 & !455 & !479 & !480-482 & !511-516 & !538 & !539 & !550 & !556 & !561 & !626 & !631 & !632 & !669-671 & !676 & !707 & !741 & !764
+!nouvelleévolution & !évolutionparéchange & !oeufseulement & !chanceux & !légendaire & !fabuleux & !purifié & !obscur & !chromatique & !costume & !ultrachimère & !PC1500- & !4 & !alola &!galar & !hisui & !+évoli & !83 & !103 & !104-105 & !115 & !122 & !128 & !132 & !201 & !214 & !222 & !313 & !314 & !324 & !327 & !335-338 & !351 & !357 & !369 & !412 & !417 & !421 & !422 & !423 & !439 & !441 & !449 & !455 & !479 & !480-482 & !511-516 & !538 & !539 & !550 & !555 & !556 & !561 & !585 & !586 & !626 & !631 & !632 & !660 & !666 & !669-671 & !676 & !701 & !707 & !710 & !711 & !720 & !741 & !764 & !797 & !798 & !805 & !806 & !874
 ```
+
+à ajouter : dimorphisme sexuel : https://www.pokebip.com/page/jeuxvideo/pokemon_go/differences-male-femelle  & !id:genre &
 
 ## Pokémon à évoluer
 - `évoluer & nouvelleévolution | évolutionparéchange`
