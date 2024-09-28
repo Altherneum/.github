@@ -71,11 +71,9 @@
 
 # Filtre de recherche utile
 ## Pokémon à supprimer
-- `!évoluer & !objet & !nouvelleévolution & !évolutionparéchange & !oeufseulement & !chanceux & !légendaire & !fabuleux & !purifié & !obscur & !chromatique & !costume & !ultrachimère & PC1500- & !4*`
-
-A ajouter / tester : 
-- `!alola & !galar & !hisui & !paldea`
-- Pokémon autres : Métamorph, +évoli, zarbi, etc
+```
+!nouvelleévolution & !évolutionparéchange & !oeufseulement & !chanceux & !légendaire & !fabuleux & !purifié & !obscur & !chromatique & !costume & !ultrachimère & !PC1500- & !4 & !alola &!galar & !hisui & !+évoli & !83 & !115 & !122 & !128 & !132 & !201 & !214 & !222 & !313 & !314 & !324 & !327 & !335-338 & !351 & !357 & !369 & !412 & !417 & !421 & !422 & !423 & !439 & !441 & !449 & !455 & !479 & !480-482 & !511-516 & !538 & !539 & !550 & !556 & !561 & !626 & !631 & !632 & !669-671 & !676 & !707 & !741 & !764
+```
 
 ## Pokémon à évoluer
 - `évoluer & nouvelleévolution | évolutionparéchange`
