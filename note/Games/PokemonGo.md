@@ -39,7 +39,7 @@
 - `favoris` Affiche tous les Pokémon de votre liste qui sont marqués comme favoris
 - `défenseur` Affiche tous les Pokémon de votre liste actuellement en train de défendre une Arène
 - **Pokémon avec mot-clé** Affiche les Pokémon pour lequel vous avez ajouté un mot-clé spécifique, entrez # suivi du nom du mot-clé. Par exemple, `#combat` montrera tous les Pokémon auxquels vous avez ajouté le mot-clé « combat »
-- `mâle`, `femelle` Affiche les Pokémon par genre
+- `mâle`, `femelle`, `sexeinconnu` Affiche les Pokémon par genre
 
 ## Évolution
 - `évoluer` Affiche tous les Pokémon de votre liste qui peuvent évoluer. Cette recherche prend en compte les objets spéciaux ainsi que les Bonbons
@@ -72,6 +72,11 @@
 # Filtre de recherche utile
 ## Pokémon à supprimer
 - `!évoluer & !objet & !nouvelleévolution & !évolutionparéchange & !oeufseulement & !chanceux & !légendaire & !fabuleux & !purifié & !obscur & !chromatique & !costume & !ultrachimère & PC1500- & !4*`
+
+A ajouter / tester : 
+- `!alola & !galar & !hisui & !paldea`
+- Pokémon autres : Métamorph, +évoli, zarbi, etc
+
 ## Pokémon à évoluer
 - `évoluer & nouvelleévolution | évolutionparéchange`
 ## Pokémon rare
@@ -79,3 +84,13 @@
 
 ## A tester / traduire
 @[Number][Name of Pokemon move] - Shows every Pokemon that have chosen move on chosen position (example: @2shadow ball: Shows all Pokemons with shadow ball as their 2 attack)
+
+- bonbonl > permet d'afficher les Pokémon ayant un niveau supérieur à 40
+
+- xxs > permet d'afficher les Pokémon de taille XXS
+- xs > permet d'afficher les Pokémon de taille XS
+- s > permet d'afficher les Pokémon de taille S
+- m > permet d'afficher les Pokémon de taille M
+- l > permet d'afficher les Pokémon de taille L
+- xl > permet d'afficher les Pokémon de taille XL
+- xxl > permet d'afficher les Pokémon de taille XXL
