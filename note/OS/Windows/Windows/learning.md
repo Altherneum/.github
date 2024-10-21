@@ -41,11 +41,22 @@ cours sur Windows
 
 # Installation via ISO
 ## Télécharger l'ISO
-- [windows10ISO](https://www.microsoft.com/fr-fr/software-download/windows10ISO)
-- [windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
+- [microsoft.com /.../ windows10ISO](https://www.microsoft.com/fr-fr/software-download/windows10ISO)
+- [microsoft.com /.../ windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
 
 ## Déplacer l'ISO sur un support
 - Clef USB / réseau (server de mastering) / CD, ...
+### Intune
+- [learn.microsoft.com /.../ what-is-intune](https://learn.microsoft.com/fr-fr/mem/intune/fundamentals/what-is-intune)
+### Etcher
+- [etcher.balena.io](https://etcher.balena.io/)
+- [github.com / balena-io / etcher](https://github.com/balena-io/etcher)
+### Rufus
+- [rufus.ie](https://rufus.ie/fr/)
+### WDS
+- [learn.microsoft.com /.../ windows-deployment-services-portal](https://learn.microsoft.com/fr-fr/windows/win32/wds/windows-deployment-services-portal)
+### SysPrep
+- [learn.microsoft.com /.../ sysprep--generalize--a-windows-installation](https://learn.microsoft.com/fr-fr/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation)
 
 ## BIOS
 - Booter d'ISO vs auto setup
