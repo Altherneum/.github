@@ -1,6 +1,7 @@
 
 # Console
 ## Afficher du texte
+- `echo.` Pour faire écho à une ligne vide à l’écran
 - `@echo off` Pour empêcher l’affichage de toutes les commandes d’un fichier de traitement par lots (y compris la commande écho désactivé) à l’écran, sur la première ligne du type de fichier de traitement par lots
 - `echo off` Pour empêcher l’écho des commandes à l’invite de commande
 - `echo text` Affiche "text"
