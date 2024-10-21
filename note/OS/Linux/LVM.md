@@ -94,7 +94,8 @@ PV : Volumes Physiques (Persistent Volumes)
 - Vérifier via les liens [# liens](#liens)
 - Test sur distro
 
-### Doc to do 
+### Doc to do
+```
 Volumes Logique (LV)
 Créer un LV
 <!> N'oubliez pas de vérifier si vous assez de place : un LV de 100Go ne rentrera pas dans un VG de 10Go.
@@ -119,3 +120,4 @@ Pour supprimer un Volume Logique, assurez-vous d'abord qu'il ne soit plus utilis
 
 # lvremove /dev/monGroupeVirtuel1/monVolumeLogique1
 Il vous sera surement demande de confirmer la suppression du Volume Logique s'il est actif.CategoryL10nFrUpdate
+```
