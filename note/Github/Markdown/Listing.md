@@ -71,6 +71,12 @@ Bloc de code `
 Multiligne avec un backtick
 ```
 
+Une IP en binaire
+```
+10         .100       .0         .0
+0000.1010  0110.0100 0000.0000 0000.0000    IP
+```
+
 - Liste
 - Une autre liste
   - Liste tabulée
