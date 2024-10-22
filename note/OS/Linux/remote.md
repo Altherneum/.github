@@ -87,7 +87,6 @@ ssh [USER]@[HOST]                             # Le mot de passe n'est plus deman
 ssh-agent                                     # Permet de créer un agent de mot de passe pour ne plus taper la passphrase
 ssh-add                                       # Va demander la passPhrase pour la stocker à vie
 ssh-add -d                                    # Supprime la clé de l'agent
-ssh-add -l                                    # Affiche les clés de l'agent 
+ssh-add -l                                    # Affiche les clés de l'agent
+ssh-add -t 1h                                 # Durée de vie de l'identité de l'agent (Seconde ou format compact)
 ```
-
-ssh-add -t 1h
