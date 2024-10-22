@@ -39,31 +39,6 @@ Tout a été crée, peut inter connecté des domaines, mais partage de fichier i
 
 REGISTER LA ZONE DANS L'AD (Dans DNS) ?????
 
-# CV update
-- Attention aux langages et pré faire des phrases de speech
-- Mots clés qui permettent de créer un speech sans relier comme un robot
-- Transformer instabilité pro en force
-  - Vision globale, adaptivité, expériences multiples
----
-- âge
-- photo
-- Formation en cours date de fin
-- Riche ROME pole emploi
-- Né avec un clavier entre les mains
-- Hobie
-- lien si imprimer
-
-## CV update²
-- âge
-- photo
-- Créer un speech de présentation
-- Peut être multi page si complet
-- éviter de parler d'open source (Entreprise dislike) mais de partage de savoir
-- Parle calmement
-- Partage de savoir
-- Inclure lanage de dev et projets type fait dans le speech
-- Culture entrperise, tirer vers le haut, intégration
-
 ## AB testing
 Pipeline CI CD de AB testing indev.site.com   beta.site.com   release.site.com
 
