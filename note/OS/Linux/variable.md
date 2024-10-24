@@ -28,7 +28,7 @@ Variable avec default value à faire
 - `$$` Numéro du processus courant (le Shell)
 - `$!` Numéro du dernier processus lancé en arrière-plan
 - `$0` Nom de la procédure
-- `$_` ??? [https://unix.stackexchange.com/questions/280453/understand-the-meaning-of](https://unix.stackexchange.com/questions/280453/understand-the-meaning-of)
+- `$_` ??? [unix.stackexchange.com /question /understand-the-meaning-of](https://unix.stackexchange.com/questions/280453/understand-the-meaning-of)
 
 ## Variables internes
 - `$BASH_VERSION` Version du terminal Bash
