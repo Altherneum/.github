@@ -1,14 +1,10 @@
 Sur ce guide on va vous expliquer le fonctionnement du site  
 Tout les cours et guides utilisent le markdown en fichier principal
 
----
-
 # Une erreur ? Une issue 😍
 Tu ne sais pas coder ? Déjà prince de signaler une erreur alors la corriger moi même 🙊
 - [Ouvrir une issue](https://doc.Altherneum.fr/github/issues.html) "Problème"
 Merci pour ton signalement ! 
-
----
 
 # Comment aider 💾 Cloner 
 - Vous devez au préalable [fork un repo "Cloner un projet"](https://github.com/Altherneum/.github/fork) / [Télécharger un fichier "exemple README.md"](https://github.com/Altherneum/.github/raw/main/note/README.md) / [Consulter un morceau de code "Vue en ligne du même README"](https://github.com/Altherneum/.github/blob/main/note/README.md), [vue secondaire "code"](https://github.com/Altherneum/.github/blob/main/note/README.md?plain=1), et par ["blame" (différences)](https://github.com/Altherneum/.github/blame/main/note/README.md)
@@ -29,8 +25,6 @@ Et vous pouvez aider, et [rendre votre compte et contributions visibles](https:/
 - Les pulls request seront __**vérifiés puis par la suite validés ou refusés**__
 - [CODE OF CONDUCT.md](https://doc.Altherneum.fr/github/code_of_conduct) | [README.md](https://doc.Altherneum.fr/github/readme) 🚀
 
----
-
 ## Utilisation sur [doc.Altherneum.fr](https://doc.Altherneum.fr) ✨
 Les pages seront affichés en temps réel sur le site via un script  
 
@@ -38,8 +32,6 @@ Vous pouvez cliquer sur ce bouton sur le [site](https://doc.Altherneum.fr/cours/
 
 ### Markdown to HTML wrapper made in JS
 Dans le site [doc.Altherneum.fr](https://doc.Altherneum.fr) [[Repo](https://github.com/Altherneum/Altherneum.github.io/)] le contenu est transcrit de Markdown (.MD) vers HTML via un script JS (Github.com/ [Altherneum.github.io/src/js/](https://github.com/Altherneum/Altherneum.github.io/tree/main/src/js) ⏩ [markdown.js](https://github.com/Altherneum/Altherneum.github.io/blob/main/src/js/markdown.js))
-
----
 
 ## Ou depuis [Github.com](https://github.com) ✌
 

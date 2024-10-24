@@ -71,6 +71,12 @@ Bloc de code `
 Multiligne avec un backtick
 ```
 
+Une IP en binaire
+```
+10         .100       .0         .0
+0000.1010  0110.0100 0000.0000 0000.0000    IP
+```
+
 - Liste
 - Une autre liste
   - Liste tabulée
@@ -89,7 +95,7 @@ Multiligne avec un backtick
         - Liste tabulée avec 8 espaces !
           - Liste tabulé avec 10 espaces !!!
 
-- Une liste avec du **gras** présent (Bug présent, le text dans le li va passer en text p par erreur)
+- Une liste avec du **gras** présent
 - Une liste sans gras présent
 
 élément de rupture thématique (règle horizontale) ⬇
