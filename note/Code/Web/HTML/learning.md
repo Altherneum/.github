@@ -15,8 +15,6 @@ HTML est inspiré du [Standard Generalized Markup Language](https://fr.wikipedia
 - 2000-2006 : [XHTML](https://fr.wikipedia.org/wiki/Extensible_Hypertext_Markup_Language)
 - De 2007 à nos jours : HTML 5 et abandon du XHTML 2
 
----
-
 # Syntaxe de HTML ✨
 
 ```
@@ -27,8 +25,6 @@ HTML est inspiré du [Standard Generalized Markup Language](https://fr.wikipedia
 <pre> AB   C (permet de conserver les espaces)</pre>
 ```
 
----
-
 ## Explication
 Cet exemple contient du texte, cinq balises et une référence d’entité :
 - `TITLE` est la balise ouvrante de l’élément TITLE. `/TITLE` est la balise fermante de l’élément TITLE. `Exemple de HTML` est le contenu de l’élément TITLE.
@@ -38,15 +34,11 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 - `< !-- {CODE OU COMMENTAIRE} -- >` est la balise "commentaire" et permet de ne pas exécuter de code ou de laisser une note
 - `pre` représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits
 
----
-
 ## Consulter le code d'une page 🔬
 
 ![290289212-096b576d-3f49-4761-a132-7963769e28b4](https://github.com/Altherneum/.github/assets/84735589/cdcde52d-be28-4d6c-ae6b-d3eca9213c8a)
 
 (Menu "clique droit" sur Chrome v.100+)
-
----
 
 [view-source:](view-source:https://doc.Altherneum.fr/cours/html) (Peut être bloqué car il n'est pas censé être utilisé depuis une page web comme lien)  
 
@@ -56,8 +48,6 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 
 ![290290911-aff1b890-46d5-40e1-8f1f-f4a0fb62d3ca](https://github.com/Altherneum/.github/assets/84735589/14cb466f-f159-4c30-9ac9-ae5d10512709)
 
----
-
 Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique droit sur la page** (A.K.A "**DevTools**")  
 
 - Il peut changer en fonction de votre navigateur
@@ -66,8 +56,6 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 
 ![290291063-d6272fe4-38a2-426b-941f-218f233d9976](https://github.com/Altherneum/.github/assets/84735589/da7240f7-d430-4d9f-b33a-cce944b1ede2)
 
----
-
 # Définition d'un élément HTML
 
 [MDN Qu'est ce qu'un élément HTML](https://developer.mozilla.org/fr/docs/Glossary/Element)
@@ -75,8 +63,6 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 ![image d'un élément HTML](https://developer.mozilla.org/fr/docs/Glossary/Element/anatomy-of-an-html-element.png)
 
 Exemple d'un élément text **P** avec une class "nice" (Pour appliquer des styles ou sélecteur de code) et comme contenu (et donc text) "Hello world!"
-
----
 
 ## Documentation
 
