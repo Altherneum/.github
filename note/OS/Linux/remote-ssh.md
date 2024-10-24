@@ -1,6 +1,7 @@
 # SSH
 ## Vérifier le status de SSHD
 - `Systemctl status sshd`
+
 ## Fichier de configuration SSH
 - `ls -l /etc/ssh`
 - `more /etc/ssh/sshd_config` Fichier de configuration original [doc](https://www.delafond.org/traducmanfr/man/man5/sshd_config.5.html)
@@ -12,6 +13,10 @@
   - `PubkeyAuthentication` Spécifie si on autorise l'authentification par clef publique
 ### Afficher la configuration
 - `sudo sshd -T`
+
+## Vérifier les logs
+- `var/log/auth.log` ou `/var/log/secure`
+
 ## Créer une clé
 - `ssh-keygen -f [KEY_NAME]`
 ### Transférer la clé sur le serveur
@@ -23,6 +28,7 @@
 - `PasswordAuthentication no`
 - `service ssh restart`
 - `service sshd restart`
+
 ## Se connecter
 ### Se connecter en SSH
 - `ssh [USER]@[HOST]`
@@ -31,7 +37,7 @@
 - `ssh [HOST] "[CMD]"` Lance une commande sans rester connecté
 - `ssh 10.20.222.86 "ls -a"` Exemple
 ### Se connecter en SFTP
-## Envoyer ou télécharger des fichiers
+### Envoyer ou télécharger des fichiers
 - `scp [FICHIER] [USER]@[HOST]:[PATH][FICHIER]` Envoie le fichier vers l'host
   - `scp test.txt superusername@altherneum.fr:/home/superusername/test.txt`
 - `scp -r [PATH] [RemoteHost]/[PATH]` SCP un dossier de manière récursive
