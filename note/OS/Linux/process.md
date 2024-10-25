@@ -2,13 +2,13 @@
 ## Top processus
 - `top`
 
-![ssh top](https://github.com/Altherneum/.github/assets/84735589/e7e272f8-3da0-4ca9-a531-391a38c27ea9)
+![ssh top](/note/assets/images/top.png)
 
 ## free RAM
 - `free` affiche l'utilisation de la RAM
 - `free --mega` affiche en méga octet (Fonctionne aussi avec `--giga`)
 
-![ssh free](https://github.com/Altherneum/.github/assets/84735589/4817a67a-97d9-4a29-9e72-a00d2818800f)
+![ssh free](/note/assets/images/free.png)
 
 ## Process statuses
 - `ps` Permet de lister les processus en cours

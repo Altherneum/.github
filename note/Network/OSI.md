@@ -1,4 +1,4 @@
-![Couches OSI](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/OSI_Model_v1.svg/langfr-330px-OSI_Model_v1.svg.png)
+![Couches OSI](/note/assets/images/OSI_Model_v1.png)
 
 [Wikipedia.org /wiki /Modèle_OSI](https://fr.wikipedia.org/wiki/Modèle_OSI)
 

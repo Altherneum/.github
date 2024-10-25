@@ -1,7 +1,7 @@
 # LS
 Afficher  les  informations  des  FICHIERs  (du  répertoire courant par défaut). Les entrées sont triées alphabétiquement si aucune des options
 
-![ssh ls of main folder](https://github.com/Altherneum/.github/assets/84735589/1dc14cb5-dac3-419a-9769-d2f357e81821)
+![ssh ls of main folder](/note/assets/images/ls.png)
 
 - `ls` liste des fichiers et dossiers
   - `ls -l` Utiliser un format d’affichage long

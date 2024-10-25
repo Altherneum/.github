@@ -17,7 +17,8 @@
 
 [Un lien local](/CONTRIBUTING.md)
 
-![Image](https://avatars.githubusercontent.com/u/84735589?v=4)
+![Image](https://avatars.githubusercontent.com/u/84735589?v=4) image HTTP
+![Image local](/note/assets/images/Binaire.png) image local
 
 **Text en gras**
 
