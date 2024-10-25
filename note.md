@@ -349,7 +349,7 @@ Ex : `#!bin/bash`
 
 ## Printf
 `printf` Echo avec syntaxe supplémentaire
-  - ![alt text](image-2.png)
+  - ![alt text](/note/assets/images/printf.png)
 
 ## Find
 `find`
