@@ -38,19 +38,13 @@ Avant de commencer, veuillez vérifier que vous disposez des prérequis suivants
 - Chercher un LLM
 - __Télécharger un modèle en **.GGUF**__
 
-![LM_Studio_ThNMBPboC8](https://github.com/Altherneum/.github/assets/84735589/3037d0d6-36a9-4a12-9553-1bda302185c3)
-
 # Vérifier un modèle
 - Onglet "Dossier"
 - Vérifier la fin du téléchargement
 - Vérifier la présence de "Should Work"
-
-![LM_Studio_LspvHpn6iZ](https://github.com/Altherneum/.github/assets/84735589/7d0194c3-a246-4445-834a-1b30cb368f11)
 
 # Lancer un modèle
 - Onglet "Message"
 - Choisir le modèle et le charger
 - Configurer si besoin le modèle sur la droite
 - Discuter avec le modèle
-
-![LM_Studio_ZWLyYvgo02](https://github.com/Altherneum/.github/assets/84735589/a376d244-c228-4ea4-aedb-ee8f59c30b18)

@@ -37,7 +37,7 @@ Recherche sur le site Github.com et des fichiers YML contenant le mot "token"
 - [google.com/search?q=site:github.com+filetype:pdf](https://www.google.com/search?q=site:github.com+filetype:pdf)  
 Recherche sur le site Github.com et des fichiers PDF
 
-![Google](/note/assets/images/google-dork.png)
+![image Google dork](/note/assets/images/google-dork.png)
 
 ## Outils et Ressources
 
@@ -49,7 +49,7 @@ De nombreux outils et ressources peuvent vous aider à construire des requêtes 
 - `Shodan`: Une base de données ouverte pour appareils connectés à Internet, fréquemment utilisée avec Google Dorks pour étendre les résultats de recherche.  
 [shodan.io](https://www.shodan.io/)
 
-![chrome_dBMhgWpLBV](/note/assets/images/Shodan.png)
+![image Shodan](/note/assets/images/Shodan.png)
 
 - `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork.  
 ~~[github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)~~ 404

@@ -36,7 +36,7 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 
 ## Consulter le code d'une page 🔬
 
-![290289212-096b576d-3f49-4761-a132-7963769e28b4](https://github.com/Altherneum/.github/assets/84735589/cdcde52d-be28-4d6c-ae6b-d3eca9213c8a)
+![image Chrome RClick](/note/assets/images/Chrome-RClick.png)
 
 (Menu "clique droit" sur Chrome v.100+)
 
