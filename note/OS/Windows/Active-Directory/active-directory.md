@@ -7,7 +7,7 @@
 - Installer la fonctionnalité
 - `Promouvoir ce serveur en contrôleur de domaine`
 
-![Promotion en contrôleur de domaine](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_saelIxaPD4.png?raw=true)
+![Promotion en contrôleur de domaine](/note/assets/images/chrome_saelIxaPD4.png))
 
 ### Supprimer le rôle AD DS
 - Sur le `Gestionnaire de serveur`
@@ -122,7 +122,7 @@ Recevoir des messages
 Ces groupes sont utilisés principalement par des applications de messagerie, afin de créer une listes de distribution
 
 #### Porté
-![Portée des groupes](https://github.com/Altherneum/.github/blob/main/note/assets/images/AD-Group-Range.png?raw=true)
+![Portée des groupes](/note/assets/images/AD-Group-Range.png))
 Utilisateur doit être forcément d'un `groupe globale` (sac à patate d'user)
 Le `groupe globale` sera membre du `Domaine local`
 ##### Domaine local
@@ -153,7 +153,7 @@ De la même manière, il est possible de l’utiliser pour définir l’accès a
 - Direction : étendue « globale » sur « learn-online.local » qui approuve tous les sous-domaines
 - Informatique : étendue « universelle » sur la forêt
 
-![Portée de groupe](https://github.com/Altherneum/.github/blob/main/note/assets/images/cours-active-directory-15.png?raw=true)
+![Portée de groupe](/note/assets/images/cours-active-directory-15.png))
 
 Si vous créez un groupe à étendue universelle, mais qu’il n’y a pas de relation avec un autre domaine ou une autre forêt, cela n’aura pas d’intérêt
 
@@ -299,7 +299,7 @@ Voir [cours / enterprise-network #Adressage](https://doc.altherneum.fr/cours/ent
   - Déplier l'onglet `NOM DU SERVEUR`
   - Sur l'onglet `IPv4`
   - `Clique droit`, `Nouvelle étendue`
-![Option nouvelle étendue DHCP](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_ybPAvR8Gg4.png?raw=true)
+![Option nouvelle étendue DHCP](/note/assets/images/chrome_ybPAvR8Gg4.png))
 ## Configuration de l'étendue
 - `Nom de l'étendue` : `m2i`
 - Configurer `Adresse IP de début` : `193.0.124.33`, `Adresse IP de fin` : `192.0.124.37`

@@ -43,7 +43,7 @@ voir [Cours / network](https://doc.altherneum.fr/cours/network)
 
 - (voir [Adressage](https://doc.altherneum.fr/cours/enterprise-network#Adressage))
 
-![DNS IP settings](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_ChaWlB2FCn.png?raw=true)
+![DNS IP settings](/note/assets/images/chrome_ChaWlB2FCn.png))
 
 ### Vérifier l'adressage IP
 - Une fois l'adresse IP modifiée
@@ -69,25 +69,25 @@ voir [Cours / network](https://doc.altherneum.fr/cours/network)
 `ipconfig /all`
 
 # Ajouter le rôle DNS
-![Ajout du rôle DNS](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_FgY8qWm1tz.png?raw=true)
+![Ajout du rôle DNS](/note/assets/images/chrome_FgY8qWm1tz.png))
 - Gestionnaire de serveur
 - Gérer
 - Ajouter des rôles et fonctionnalité
 
 - Suivant jusqu'à `Rôles de serveurs`
 
-![DNS checkbox](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_C6XVGkeqrD.png?raw=true)
+![DNS checkbox](/note/assets/images/chrome_C6XVGkeqrD.png))
 - Cocher rôle DNS
 
 - Suivant jusqu'à `Résultats`
 
 - Installer
 
-![DNS config](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_B4Jm3xvMDQ.png?raw=true)
+![DNS config](/note/assets/images/chrome_B4Jm3xvMDQ.png))
 - Le DNS est désormais disponible sur la liste des outils
 
 # Configurer le rôle DNS
-![DNS config](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_B4Jm3xvMDQ.png?raw=true)
+![DNS config](/note/assets/images/chrome_B4Jm3xvMDQ.png))
 - Aller dans la liste des outils pour configurer le DNS
 
 ## Créer la zone DNS
@@ -99,7 +99,7 @@ voir [Cours / network](https://doc.altherneum.fr/cours/network)
 - Nommer la zone `FORMATION.LAN`
 - Autoriser les mises à jours dynamiques sécurisée ~~et non sécurisée~~
 
-![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_EjU5ccZeDI.png?raw=true)
+![Resultat](/note/assets/images/chrome_EjU5ccZeDI.png))
 
 ## Créer la zone DNS inversé
 - Clique droit sur le serveur `WIN22-SRV-1`
@@ -111,7 +111,7 @@ voir [Cours / network](https://doc.altherneum.fr/cours/network)
 - ID réseau : `192.168.10` (Ne pas préciser le dernier octet)
 - Autoriser les mises à jours dynamiques sécurisée ~~et non sécurisée~~
 
-![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_2jJk7YWiZA.png?raw=true)
+![Resultat](/note/assets/images/chrome_2jJk7YWiZA.png))
 
 - Pour valider la configuration ; `/ipconfig registerdns`
 
@@ -152,7 +152,7 @@ Address:  192.168.10.10
 - Aller sur nom de domaine complet (FQDN) : "Parcourir"
 - Cliquer sur les postes pour cibler le `WIN22-SRV-1`
 
-![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_ALsvPrTtJ3.png?raw=true)
+![Resultat](/note/assets/images/chrome_ALsvPrTtJ3.png))
 
 ### Vérifier l'alias
 Pour vérifier l'alias
@@ -177,12 +177,12 @@ Aliases:  www.FORMATION.LAN
 - `Nom de domaine complet (FQDN) du serveur` : `WIN22-SRV-2.FORMATION.LAN` ⚠ N'existe pas encore
 - Ajouter son adresse IP `192.168.10.11` ⚠ N'existe pas encore
 
-![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_dUHEL06aZH.png?raw=true)
+![Resultat](/note/assets/images/chrome_dUHEL06aZH.png))
 
 ### Vérifier le DNS de secours
-![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_ghchyrj6yf.png?raw=true)
+![Resultat](/note/assets/images/chrome_ghchyrj6yf.png))
 
-![Resultat](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_EBOcB1Cvtg.png?raw=true)
+![Resultat](/note/assets/images/chrome_EBOcB1Cvtg.png))
 
 ### Forcer la mise à jour du PTR
 - Dans `Zones de recherche directes`
