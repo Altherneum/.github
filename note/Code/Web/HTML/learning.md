@@ -46,7 +46,7 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 - Ouvrez le via "clique droit", puis "Afficher le code source"
 - Vous retourne le fichier de base permettant de charger ce site
 
-![290290911-aff1b890-46d5-40e1-8f1f-f4a0fb62d3ca](https://github.com/Altherneum/.github/assets/84735589/14cb466f-f159-4c30-9ac9-ae5d10512709)
+![HTML source](/note/assets/images/HTML-source.png)
 
 Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique droit sur la page** (A.K.A "**DevTools**")  
 
@@ -54,7 +54,7 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 - Ouvrez le via un "clique droit" et "inspecter"
 - Celui là permet de voir et modifier le code du site en temps réel
 
-![290291063-d6272fe4-38a2-426b-941f-218f233d9976](https://github.com/Altherneum/.github/assets/84735589/da7240f7-d430-4d9f-b33a-cce944b1ede2)
+![HTML-devTool](/note/assets/images/HTML-devTool.png)
 
 # Définition d'un élément HTML
 
