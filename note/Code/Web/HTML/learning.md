@@ -60,7 +60,7 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 
 [MDN Qu'est ce qu'un élément HTML](https://developer.mozilla.org/fr/docs/Glossary/Element)
 
-![image d'un élément HTML](https://developer.mozilla.org/fr/docs/Glossary/Element/anatomy-of-an-html-element.png)
+![image d'un élément HTML](/note/assets/images/HTML-elem.png)
 
 Exemple d'un élément text **P** avec une class "nice" (Pour appliquer des styles ou sélecteur de code) et comme contenu (et donc text) "Hello world!"
 

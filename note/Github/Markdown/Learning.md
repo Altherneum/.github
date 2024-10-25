@@ -17,8 +17,7 @@ Depuis 2019, CommonMark.org a été publié avec des problèmes majeurs qui rest
 Néanmoins, les sites Web et projets suivants ont adopté CommonMark / MarkDown : [Discord](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-), Discourse, [GitHub](https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), GitLab, Reddit, Qt, Stack Exchange (Stack Overflow), Swift, et d'autres ...
 
 # Exemple de markdown
-![Exemple de markdown](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_uKrMVGwLFY.png?raw=true)
-
+![Exemple de markdown](/note/assets/images/chrome_uKrMVGwLFY.png)
 # Exemple du rendu
 - **Text en gras**
 - *Text en italique*
