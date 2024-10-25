@@ -98,7 +98,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
+> **Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
 1. On the **Getting started** screen select **Mount storage account**, select your **Storage account subscription**, and then select **Apply**.
 
