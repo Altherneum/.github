@@ -109,7 +109,7 @@ Ou encore en décomponsant le calcul en puissance de 2 (Et oui), des divisons, d
 = 0 0 1  1  0 1  0  0
 ```
 
-![addition binaire](https://www.maxicours.com/se/media/img/5/7/9/2/579261.png)
+![addition binaire](/note/assets/images/Binaire.png)
 
 - [maxicours.com /se/cours/ effectuer-des-operations-en-binaire](https://www.maxicours.com/se/cours/effectuer-des-operations-en-binaire)
 
