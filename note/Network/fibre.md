@@ -1,7 +1,5 @@
 Sur ce guide on va vous expliquer le fonctionnement basique de la fibre optique
 
----
-
 # Test d'éligibilité
 
 - [**Guide de l'ARCEP**](https://www.arcep.fr/demarches-et-services/utilisateurs/comment-connaitre-son-eligibilite-a-la-fibre-optique.html)
@@ -11,15 +9,13 @@ Sur ce guide on va vous expliquer le fonctionnement basique de la fibre optique
 - [Test SFR](https://www.sfr.fr/offre-internet/test-eligibilite-adsl-vdsl-fibre)
 - [DegroupTest](https://www.degrouptest.com/)
 
----
-
 # Fibre Optique
 
 Une fibre optique est un fil dont l’âme, très fine et faite de verre ou de plastique, a la propriété de conduire la lumière et sert pour la fibroscopie, l'éclairage ou la transmission de données numériques. Elle offre un débit d'information nettement supérieur à celui des câbles coaxiaux et peut servir de support à un réseau « large bande » par lequel transitent aussi bien la télévision, le téléphone, la visioconférence ou les données informatiques. Le principe de la fibre optique date du début du xxe siècle mais ce n'est qu'en 1970 qu'est développée une fibre utilisable pour les télécommunications, dans les laboratoires de l'entreprise américaine Corning Glass Works (actuelle Corning Incorporated).
 
 Entourée d'une gaine protectrice, la fibre optique peut être utilisée pour conduire de la lumière entre deux lieux distants de plusieurs centaines, voire milliers, de kilomètres. Le signal lumineux codé par une variation d'intensité est capable de transmettre une grande quantité d'information. En permettant les communications à très longue distance et à des débits jusqu'alors impossibles, les fibres optiques ont constitué l'un des éléments clés de la révolution des télécommunications. Ses propriétés sont également exploitées dans le domaine des capteurs (température, pression, etc.), dans l'imagerie et dans l'éclairage.
 
-![image faisceau de fibre optique](https://upload.wikimedia.org/wikipedia/commons/4/49/Fibreoptic.jpg)
+![image faisceau de fibre optique](/note/assets/images/fibre.jpg)
 
 source : [wikipedia.org/wiki/Fibre_optique](https://fr.wikipedia.org/wiki/Fibre_optique)
 
@@ -29,7 +25,7 @@ La fibre optique est un guide d'ondes qui exploite les propriétés réfractrice
 
 Lorsqu'un rayon lumineux entre dans une fibre optique à l'une de ses extrémités avec un angle adéquat, il subit de multiples réflexions totales internes. Ce rayon se propage alors jusqu'à l'autre extrémité de la fibre optique sans perte, en empruntant un parcours en zigzag. La propagation de la lumière dans la fibre peut se faire avec très peu de pertes même lorsque la fibre est courbée.
 
-![image fibre optique](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Principe_fibre_optique_2.png/1280px-Principe_fibre_optique_2.png)
+![image fibre optique](/note/assets/images/Principe_fibre_optique.png)
 
 ---
 
@@ -41,7 +37,7 @@ En France, la terminologie des nœuds de raccordement optique est définie par l
 
 Le 18 novembre 2011, l'ARCEP a publié une synthèse des réponses à sa consultation publique relative aux coûts de déploiement des réseaux [FTTH](https://fr.wikipedia.org/wiki/FTTH) dans laquelle il est question des nœuds de raccordement d'abonnés (NRA et NRO), des points de branchement optique (PBO) et des prises terminales optiques (PTO) présentes chez les abonnés.
 
-![image NRO SFR FTTH](https://epinalinfos.fr/wp-content/uploads/2021/03/d%C3%A91.jpg)
+![image NRO SFR FTTH](/note/assets/images/NRO.jpg)
 
 source : [wikipedia.org/wiki/Nœud_de_raccordement_optique](https://fr.wikipedia.org/wiki/Nœud_de_raccordement_optique)
 
@@ -54,10 +50,10 @@ Le PBO (Point de Branchement Optique) est un boîtier placé à l'extrémité am
 source : [fibre.guide/deploiement/pbo](https://fibre.guide/deploiement/pbo)
 
 ## PBOI – Point de Branchement Optique Intérieur  
-![image PBOI](https://fibre.guide/wp-content/uploads/2017/10/pboi-300x200.jpg)
+![image PBOI](/note/assets/images/PBOI.jpg)
 
 ## PBOE – Point de Branchement Optique Extérieur  
-![image PBOE](https://fibre.guide/wp-content/uploads/2018/07/PBOE-275x200.jpg)
+![image PBOE](/note/assets/images/PBOE.jpg)
 
 ---
 
@@ -65,9 +61,9 @@ source : [fibre.guide/deploiement/pbo](https://fibre.guide/deploiement/pbo)
 
 Le point de mutualisation (PM), ou point de flexibilité, est, sur un [réseau FTTH](https://fr.wikipedia.org/wiki/Réseau_FTTH) mutualisable, l'endroit où s'effectue la connexion entre les [fibres optiques](https://fr.wikipedia.org/wiki/Fibre_optique) des différents abonnés (c'est-à-dire de l'opérateur d'immeuble) et les fibres optiques des opérateurs commerciaux. Cette connexion peut être une [soudure](https://fr.wikipedia.org/wiki/Soudage) ou un [brassage](https://fr.wikipedia.org/wiki/Baie_de_brassage).
 
-![image PM fermé](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/PMZ_SFR_%C3%A0_Beauvais.JPG/1280px-PMZ_SFR_%C3%A0_Beauvais.JPG)
+![image PMZ fermé](/note/assets/images/PMZ_SFR_à_Beauvais.JPG)
 
-![image PM ouvert](https://lafibre.info/images/orange_pmz/202203_orange_mise_en_conformite_pmz_12.jpg)
+![image PM ouvert](/note/assets/images/PMZ_Orange_ouverte.jpg)
 
 source :  [wikipedia.org/wiki/Point_de_mutualisation](https://fr.wikipedia.org/wiki/Point_de_mutualisation)
 
@@ -77,7 +73,7 @@ source :  [wikipedia.org/wiki/Point_de_mutualisation](https://fr.wikipedia.org/w
 
 Un Optical Network Termination (ONT) (« terminaison de réseau optique » en français), est un équipement de réseau optique employé pour le raccordement à [Internet](https://fr.wikipedia.org/wiki/Internet) par fibre optique jusqu’au domicile ([FTTH](https://fr.wikipedia.org/wiki/Réseau_FTTH), Fiber To The Home) ; il incorpore la fonction d’accès aux terminaux de l’utilisateur et parfois la prise terminale optique (PTO) délimitant le réseau FTTH de l'opérateur.
 
-![image boitier FTTH](https://upload.wikimedia.org/wikipedia/commons/5/53/FTTH.jpg)
+![image boitier FTTH](/note/assets/images/FTTH.jpg)
 
 Dans la technologie [GPON](https://fr.wikipedia.org/wiki/GPON), ONT et [ONU](https://fr.wikipedia.org/wiki/Optical_Network_Unit) sont généralement confondus dans le même équipement1. Leurs fonctions sont définies par les normes [UIT](https://fr.wikipedia.org/wiki/Union_internationale_des_télécommunications) G.984.12, G.984.2, G.984.33 et G.984.4.
 
@@ -102,8 +98,8 @@ Une trame GPON dispose intrinsèquement de mécanismes fonctionnellement importa
 la gestion de la qualité de service (QoS) dès les couches de bas niveaux ;
 le chiffrement des données utilisant l'algorithme AES (en mode compteur), permettant une confidentialité point-à-point dans le sens descendant (central vers maison) sans devoir recourir à des protocoles de couches supérieures. Dans le sens montant cette confidentialité est intrinsèque à l'architecture d'un réseau PON.
 
-![image réseau GPON](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ftth_gpon_french.jpg/1920px-Ftth_gpon_french.jpg)
-![image réseau GPON P2P](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ftth_p2p_french.svg/1920px-Ftth_p2p_french.svg.png)
+![image réseau GPON](/note/assets/images/Ftth_gpon_french.jpg)
+![image réseau GPON P2P](/note/assets/images/Ftth_p2p_french.png)
 
 source : [wikipedia.org/wiki/GPON](https://fr.wikipedia.org/wiki/GPON)
 
@@ -115,7 +111,7 @@ Une jarretière est un câble de longueur courte (de quelques centimètres à qu
 
 Lorsqu'il s'agit d'interconnexions de fibre optique, on parle de « jarretière optique ».
 
-![image de jarretière optique](https://upload.wikimedia.org/wikipedia/commons/f/fd/Fibre_OM4_.jpg?uselang=fr)
+![image de jarretière optique](/note/assets/images/Fibre_OM4.jpg)
 
 source : [wikipedia.org/wiki/Jarretière_(électronique)](https://fr.wikipedia.org/wiki/Jarretière_(électronique))
 
@@ -126,23 +122,23 @@ source : [wikipedia.org/wiki/Jarretière_(électronique)](https://fr.wikipedia.o
 Les connecteurs fibre optique sont des dispositifs normalisés terminant une fibre optique et permettant de la raccorder aux équipements terminaux comme les switchs, les [HBA](https://fr.wikipedia.org/wiki/Contrôleur_hôte_de_bus), les contrôleurs disques ou les librairies de sauvegarde dans un [réseau de stockage SAN](https://fr.wikipedia.org/wiki/Réseau_de_stockage_SAN), ou divers équipements utilisant la fibre optique.
 
 Un connecteur FC/PC
-![image connecteur fibre optique](https://upload.wikimedia.org/wikipedia/commons/4/43/FCPC_002.jpg)
+![image connecteur fibre optique](/note/assets/images/FCPC.jpg)
 
 Un connecteur EC "European Connector"
-![image connecteur "European Connector"](https://upload.wikimedia.org/wikipedia/commons/1/1a/Connectique_fibre_optique_EC_%28European_Connector%29.jpg?uselang=fr)
+![image connecteur "European Connector"](/note/assets/images/Connectique_fibre_optique_EC_(European_Connector).jpg)
 
 Un connecteur "Souriau"
-![image connecteur Souriau](https://upload.wikimedia.org/wikipedia/commons/8/8d/Connectique_fibre_optique_multimode_Souriau_bis.jpg?uselang=fr)
+![image connecteur Souriau](/note/assets/images/Connectique_fibre_optique_multimode_Souriau.jpg)
 
 Un connecteur Connecteur ST "Straight Tip" et SC "Switching Connector"
-![image connecteur ST et SC](https://upload.wikimedia.org/wikipedia/commons/c/c8/St-sc-fiber-connectors.jpg)
+![image connecteur ST et SC](/note/assets/images/St-sc-fiber-connectors.jpg)
 
 Il extiste aussi des [fibres optiques plastiques](https://fr.wikipedia.org/wiki/Fibre_optique_plastique) à base de polymères [perfluorés](https://fr.wikipedia.org/wiki/Composé_perfluoré) (principalement le poly-per-fluoro-butényle-vinyl-éther)
 
-![image fibre optique plastique](https://upload.wikimedia.org/wikipedia/commons/0/0c/PZOa.png)
+![image fibre optique plastique](/note/assets/images/PZOa.png)
 
 Un connecteur SFP (Fibre - Ethernet)
-![Connecteur SFP fibre et ethernet](https://www.netgear.com/zone2/cid/fit/1024x633/to/jpg/https/www.netgear.com/fr/media/AGM734_productcarousel_hero_image_tcm169-100194.png)
+![Connecteur SFP fibre et ethernet](/note/assets/images/Connecteur_SFP_fibre_ethernet.jfif)
 
 source : [wikipedia.org/wiki/Connecteur_fibre_optique](https://fr.wikipedia.org/wiki/Connecteur_fibre_optique)
 
@@ -154,6 +150,6 @@ Les points de mutualisation **(PM) permettent de faire le lien entre le transpor
 
 Chaque **nœud de raccordement constitue le point de départ d'un réseau de transport optique qui va desservir plusieurs** (PM) points de mutualisation.
 
-![image réseau fibre optique](https://www.echosdunet.net/sites/echosdunet.net/files/boucle-locale-optique-mutualis%C3%A9e.png)
+![image réseau fibre optique](/note/assets/images/boucle-locale-optique-mutualisée.webp)
 
 source :  [source : echosdunet.net/...](https://www.echosdunet.net/reseau-internet/fibre/point-mutualisation#:~:text=Les%20points%20de%20mutualisation%20permettent,desservir%20plusieurs%20points%20de%20mutualisation.)

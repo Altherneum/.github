@@ -10,7 +10,7 @@
 ## IPv4
 - Internet Protocol version 4
 
-- ![IPV4](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Adresse_Ipv4.svg/440px-Adresse_Ipv4.svg.png)
+- ![IPV4](/note/assets/images/Adresse_Ipv4.png)
 
 - Codées sur 32 bits. Au maximum 4"'294"967'296, soit 232 adresses peuvent donc être attribuées simultanément en théorie
 - L'épuisement des adresses IPv4 a conduit au développement d'une nouvelle version d'IP, IPv6
