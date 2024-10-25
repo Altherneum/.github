@@ -33,7 +33,7 @@
 - Localisation
 
 ## Modèle d'hébergement
-![alt text](image-3.png)
+![Image des modèles](/note/assets/images/modele-cloud.png)
 - IAAS : Infrastructure as a service
 - PAAS : Platform as a service
 - SAAS : Software as a service
@@ -358,7 +358,7 @@ Le pare-feu est le `Network security group`
 - Scale out : monté en charge / augmentation des ressources
 - Scale in : Descente de charge / réduction des ressources
 
-![scaling image](image.png)
+![scaling image](/note/assets/images/scaling.png)
 
 ## PWSH Lab 08 New AZ VM
 ```
