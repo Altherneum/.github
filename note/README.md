@@ -25,17 +25,11 @@ Et vous pouvez aider, et [rendre votre compte et contributions visibles](https:/
 - Les pulls request seront __**vérifiés puis par la suite validés ou refusés**__
 - [CODE OF CONDUCT.md](https://doc.Altherneum.fr/github/code_of_conduct) | [README.md](https://doc.Altherneum.fr/github/readme) 🚀
 
-## Utilisation sur [doc.Altherneum.fr](https://doc.Altherneum.fr) ✨
-Les pages seront affichés en temps réel sur le site via un script  
-
-Vous pouvez cliquer sur ce bouton sur le [site](https://doc.Altherneum.fr/cours/readme) pour modifier un fichier .MD ![chrome_6l3t5ekLJQ](https://github.com/Altherneum/.github/assets/84735589/a5f5ceb3-8d2f-4437-a4c7-73ae6413a547)  
+## Utilisation sur [doc.Altherneum.fr](https://doc.Altherneum.fr)
+Les pages seront affichés en temps réel sur le site via un script, exemple : [doc.altherneum.fr/cours/readme](https://doc.altherneum.fr/cours/readme#Utilisation-sur-doc.Altherneum.fr)
 
 ### Markdown to HTML wrapper made in JS
 Dans le site [doc.Altherneum.fr](https://doc.Altherneum.fr) [[Repo](https://github.com/Altherneum/Altherneum.github.io/)] le contenu est transcrit de Markdown (.MD) vers HTML via un script JS (Github.com/ [Altherneum.github.io/src/js/](https://github.com/Altherneum/Altherneum.github.io/tree/main/src/js) ⏩ [markdown.js](https://github.com/Altherneum/Altherneum.github.io/blob/main/src/js/markdown.js))
-
-## Ou depuis [Github.com](https://github.com) ✌
-
-Des boutons en haut et à droite permettent diverses actions sur les repo que vous consultez ![chrome_9LG1sL1Fv4](https://github.com/Altherneum/.github/assets/84735589/93b3bb7e-0bca-479c-8629-dc141fb2cb63)  
 
 Et de la même manière __**depuis votre éditeur de code (via Git) ou Github en version application mobile / de bureau**__
 
