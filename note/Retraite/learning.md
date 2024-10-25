@@ -362,8 +362,6 @@ Le premier régime à contacter pour ouvrir ses droits afin d'obtenir la [# noti
 
 Chaque régime procède à son propre versement bancaire
 
-![pyramide-retraite-1](https://github.com/Altherneum/.github/assets/84735589/123ebc78-f9d6-4507-934c-ebc97f40c812)
-
 ## Régime de base
 - La retraite de base est un régime de **__retraite par trimestre__** (3 mois, 4 trimestres/année).
 - Elle est **__calculée en fonction d’un taux de liquidation, du salaire moyen des 25 meilleures années et du nombre de trimestres validés__** (durée d'assurance).
@@ -426,8 +424,6 @@ Vous pouvez partir à la retraite avant d'avoir atteint l'âge légal dans les s
 - en qualité de [parent de trois enfants ou d'un enfant atteint d'une infirmité](https://retraitesdeletat.gouv.fr/actif/lage-de-depart/la-retraite-anticipee#le-depart-anticipe-en-qualite-de-parent-de-3-enfants-ou-dun-enfant-atteint-dune-infirmite) ;
 - au titre d'une [infirmité ou d'une maladie incurable](https://retraitesdeletat.gouv.fr/actif/lage-de-depart/la-retraite-anticipee#le-depart-anticipe-si-vous-ou-votre-conjoint-etes-atteint-dune-infirmite-ou-dune-maladie-incurable) ;
 - au titre d'une [incapacité permanente d'au moins 50 %](https://retraitesdeletat.gouv.fr/actif/lage-de-depart/la-retraite-anticipee#le-depart-anticipe-si-vous-etes-atteint-dune-incapacite-permanente-dau-moins-50).
-
-![chrome_IIR89Rj74Z](https://github.com/Altherneum/.github/assets/84735589/4a6d0833-fca6-4e3a-b8e0-9251016be77e)
 
 Source : [retraitesdeletat.gouv.fr](https://retraitesdeletat.gouv.fr/actif/lage-de-depart/la-retraite-anticipee#le-depart-anticipe-pour-invalidite)
 

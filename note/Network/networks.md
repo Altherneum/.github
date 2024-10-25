@@ -47,7 +47,7 @@ Réseau mondial
 - Cette utilisation n'est pas nécessairement locale, un intranet pouvant s'étendre à travers le réseau étendu [WAN](#WAN).
 
 # Topologie réseau
-![Topologie réseau](https://sti2d.ecolelamache.org/reseau_topologie.jpg)
+![Topologie réseau](https://reseau_topologie.jpg)
 
 ## Ring
 - Un réseau en anneau est une forme de réseau informatique visant à raccorder l'ensemble des ordinateurs. 
