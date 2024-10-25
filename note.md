@@ -459,25 +459,6 @@ Firewall *2 ("UFW" sur debian, "D" sur redhat) + proxy
 
 `cut`
 
-# Jobs
-`CTRL+Z` stop une commande en cours
-`BG` le fait partir en fond
-`jobs` Tâche en cours
-`jobs -l` Liste des job avec ID
-`FG [ID]` Relance le job en foreground
-`sleep 200 &` Sleep 200s en tache de fond via le `&`
-`kill -9 [PID]` Ex : `kill -9 5385` Tuer de force le PID
-`kill -l` Liste des envoie de signaux ; Rechercher sighup (Détacher du shell)
-
-`wait [PID]` Attend la fin du processus [PID] avant de continuer 
-
-# PS
-`ps` Liste des process
-`ps -e` Liste de tout les process
-`ps -ef` Liste tout les process et leurs utilisateurs UID
-`pstree` Arbre des processus
-
-
 # UI
 `whiptail` Créer des menus
 
