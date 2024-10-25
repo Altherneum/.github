@@ -34,3 +34,10 @@
 ### Se connecter et lancer une commande
 - `sudo -i -u [USER] [CMD]` Se connecte au compte et lancer une commande
   - Exemple (Afficher le `$HOME` de l'utilisateur) : `sudo -i -u user echo \$HOME`
+
+## Se déconnecter
+- `logout`
+- `exit`
+- `CTRL + D`
+- `pkill -KILL -u [user]`, ou `killall -u [user]`
+  - `who`, ou `w` Pour voir la liste des utilisateurs connectés
