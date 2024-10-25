@@ -52,8 +52,8 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Within the editor pane, make these changes.
 
-    + Change **disks_az104_disk1_name** to `disk_name` (two places to change)
-    + Change **az104-disk1** to `az104-disk2` (one place to change)
+    - Change **disks_az104_disk1_name** to `disk_name` (two places to change)
+    - Change **az104-disk1** to `az104-disk2` (one place to change)
 
 1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
 
@@ -104,16 +104,16 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select **I want to create a storage account** and then **Next**. Complete the **Create storage account** information. 
     
-    | Settings | Values |
-    |  -- | -- |
-    | Resource Group | **az104-rg3** |
-    | Region | *select your region* | 
-    | Storage account (Create new) | *must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only* |
-    | File share (Create new) | `fs-cloudshell` |
+| Settings | Values |
+|  -- | -- |
+| Resource Group | **az104-rg3** |
+| Region | *select your region* | 
+| Storage account (Create new) | *must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only* |
+| File share (Create new) | `fs-cloudshell` |
 
 1. When completed select **Create**.
 
-    >It will take a couple of minutes to provision the storage.
+>It will take a couple of minutes to provision the storage.
 
 1. Select **Settings** (top bar) and then **Go to classic version**.
 
@@ -125,20 +125,21 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
 
-    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+> **Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
-    ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
-    ```
+```powershell
+New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
+```
+
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
 1. Confirm the disk was created.
 
-   ```powershell
-   Get-AzDisk
-   ```
+```powershell
+Get-AzDisk
+```
    
 ## Task 4: Deploy a template with the CLI 
 
@@ -146,29 +147,29 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Verify your files are available in the Cloud Shell storage. If you completed the previous task your template files should be available. 
 
-    ```sh
-    ls
-    ```
+```sh
+ls
+```
 
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
 1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes. 
 
-    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+> **Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
 1. To deploy to a resource group, use **az deployment group create**.
 
-    ```sh
-    az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
-    ```
+```sh
+az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
+```
     
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
 1. Confirm the disk was created.
 
-     ```sh
-     az disk list --output table
-     ```
+```sh
+az disk list --output table
+```
    
 ## Task 5: Deploy a resource by using Azure Bicep
 
@@ -186,30 +187,30 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Make the following changes:
 
-    + Change the **managedDiskName** value to `Disk4`.
-    + Change the **sku name** value to `StandardSSD_LRS`.
-    + Change the **diskSizeinGiB** value to `32`.
+    - Change the **managedDiskName** value to `Disk4`.
+    - Change the **sku name** value to `StandardSSD_LRS`.
+    - Change the **diskSizeinGiB** value to `32`.
 
 1. Use **Ctrl +S** to save your changes.
 
 1. Now, deploy the template.
 
-    ```
-    az deployment group create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
-    ```
+```
+az deployment group create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
+```
 
 1. Confirm the disk was created.
 
-    ```sh
-    az disk list --output table
-    ```
+```sh
+az disk list --output table
+```
 
-    >**Note:** You have successfully deployed five managed disks, each in a different way. Nice job!
+> **Note:** You have successfully deployed five managed disks, each in a different way. Nice job!
 
 ## Cleanup your resources
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
+- In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+- Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+- Using the CLI, `az group delete --name resourceGroupName`.
