@@ -37,8 +37,8 @@ mount /dev/mapper/cryptlvm /mnt
 mount --mkdir /dev/sda1 /mnt/boot
 
 # Packages
-yes | pacstrap /mnt base linux linux-firmware base-devel openssh git sudo nano lvm2 cryptsetup grub efibootmgr networkmanager
-
+yes | pacstrap /mnt base linux linux-firmware base-devel lvm2 cryptsetup grub efibootmgr networkmanager
+# Removed for test download speed # yes | pacstrap openssh git sudo nano
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -66,15 +66,15 @@ hostnamectl set-hostname ${hostname}
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 mkinitcpio -P
 
-# grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot /dev/sda
+grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
 
-# UUIDcrypt=blkid -o value -s UUID /dev/sda2
-# UUIDroot=blkid -o value -s UUID /dev/mapper/cryptlvm
-# sed -i 's/GRUB_CMDLINE_LINUX="\(.*\)"GRUB_CMDLINE_LINUX="cryptdevice=UUID=$UUIDcrypt:cryptlvm root=UUID=$UUIDroot"/' /etc/default/grub
+UUIDcrypt=blkid -o value -s UUID /dev/sda2
+UUIDroot=blkid -o value -s UUID /dev/mapper/cryptlvm
+sed -i 's/GRUB_CMDLINE_LINUX="\(.*\)"GRUB_CMDLINE_LINUX="cryptdevice=UUID=$UUIDcrypt:cryptlvm root=UUID=$UUIDroot"/' /etc/default/grub
 
-# grub-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
-# systemctl enable NetworkManager
+systemctl enable NetworkManager
 
 # exit
 # reboot
