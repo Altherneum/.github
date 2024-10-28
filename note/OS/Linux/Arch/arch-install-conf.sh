@@ -36,6 +36,12 @@ mkfs.ext4 /dev/mapper/cryptlvm
 # Mount
 mount /dev/mapper/cryptlvm /mnt
 mount --mkdir /dev/sda1 /mnt/boot
+# TEST
+# mount /dev/sdaN /mnt
+mount --rbind /dev  /mnt/dev
+mount --rbind /proc /mnt/proc
+mount --rbind /sys  /mnt/sys
+# TEST
 
 # Packages
 yes | pacstrap /mnt base linux linux-firmware base-devel lvm2 cryptsetup grub efibootmgr networkmanager
@@ -67,6 +73,8 @@ hostnamectl set-hostname ${hostname}
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 mkinitcpio -P
 
+###### ERROR HERER
+####### Error: failed to get cannonical path of 'airootfs'
 grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
 
 mkdir /boot/grub
