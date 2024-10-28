@@ -38,9 +38,12 @@ yes | pacstrap /mnt base linux linux-firmware base-devel lvm2 cryptsetup grub ef
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
 
+# # Jump into installation
+# arch-chroot /mnt /bin/bash <<"EOT"
+# curl -o /install.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch.sh
+# chmod +x /install.sh
+# /install.sh
+# EOT
+
 # Jump into installation
-arch-chroot /mnt /bin/bash <<"EOT"
-curl -o /install.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch.sh
-chmod +x /install.sh
-/install.sh
-EOT
+arch-chroot /mnt /bin/bash -c "curl -o /install.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch.sh && chmod +x /install.sh && /install.sh"
