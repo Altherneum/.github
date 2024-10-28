@@ -1,5 +1,8 @@
 # Execute with :
 # curl -o /script.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-install-conf.sh
+# nano /script.sh
+# chmod +x /script.sh
+# /script.sh
 
 # Variables
 hostname=desktop
