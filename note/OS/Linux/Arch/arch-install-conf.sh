@@ -1,4 +1,5 @@
 # Execute with :
+# loadkeys fr
 # curl -o /script.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-install-conf.sh
 # nano /script.sh
 # chmod +x /script.sh
