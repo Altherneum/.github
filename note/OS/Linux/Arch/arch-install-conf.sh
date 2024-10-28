@@ -15,9 +15,9 @@ pacman -Syy
 
 # Disques
 parted --script "${device}" -- mklabel gpt \
-  mkpart ESP fat32 1Mib 129MiB \
+  mkpart ESP fat32 1Mib 257MiB \
   set 1 boot on \
-  mkpart primary ext4 129MiB 100%
+  mkpart primary ext4 257MiB 100%
 
 # Formater la partition /boot
 mkfs.fat -F32 /dev/sda1
