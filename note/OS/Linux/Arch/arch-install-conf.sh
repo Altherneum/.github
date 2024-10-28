@@ -21,7 +21,7 @@ parted --script "${device}" -- mklabel gpt \
 mkfs.fat -F32 /dev/sda1
 
 # Cryptlvm
-cryptsetup --use-random luksFormat /dev/sda2 <<< ${passwordlvm}
+echo -n "${passwordlvm}" cryptsetup --use-random luksFormat /dev/sda2
 cryptsetup luksOpen /dev/sda2 cryptlvm
 #
 pvcreate /dev/mapper/cryptlvm
