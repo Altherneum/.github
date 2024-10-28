@@ -1,8 +1,11 @@
+# Execute with :
+# curl -o /script.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-install-conf.sh
+
 hostname=desktop
 username=admin
 password=password
 lvmpassword=lvmpassword
-device=/dev/sda1
+device=/dev/sda
 
 loadkeys fr
 pacman -Syy
@@ -18,7 +21,7 @@ parted --script "${device}" -- mklabel gpt \
 mkfs.fat -F32 /dev/sda1
 
 # Cryptlvm
-cryptsetup --use-random luksFormat /dev/sda3 <<< ${passwordlvm}
+cryptsetup --use-random luksFormat /dev/sda2 <<< ${passwordlvm}
 cryptsetup luksOpen /dev/sda2 cryptlvm
 #
 pvcreate /dev/mapper/cryptlvm
@@ -40,11 +43,11 @@ mount --mkdir /dev/sda1 /mnt/boot
 mount --mkdir /dev/vg0/home /mnt/home
 swapon /dev/vg0/swap
 
-pacstrap /mnt base linux linux-firmware
+yes | pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
 
-pacstrap -K /mnt base linux linux-firmware openssh git sudo nano
+yes | pacstrap -K /mnt base linux linux-firmware openssh git sudo nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
