@@ -1,4 +1,4 @@
-# Execute with :
+# # Execute with :
 # loadkeys fr
 # curl -o /script.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-install-conf.sh
 # nano /script.sh
@@ -82,7 +82,7 @@ mkdir /boot/grub
 UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
 # sed -i 's/GRUB_CMDLINE_LINUX="\(.*\)"GRUB_CMDLINE_LINUX="cryptdevice=UUID=$UUIDcrypt:cryptlvm root=UUID=$UUIDroot"/' /etc/default/grub
-sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/' /etc/default/grub
+sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
