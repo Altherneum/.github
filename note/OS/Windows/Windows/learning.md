@@ -53,6 +53,7 @@ cours sur Windows
 - [github.com / balena-io / etcher](https://github.com/balena-io/etcher)
 ### Rufus
 - [rufus.ie](https://rufus.ie/fr/)
+- [github.com / pbatard /rufus](https://github.com/pbatard/rufus)
 ### WDS
 - [learn.microsoft.com /.../ windows-deployment-services-portal](https://learn.microsoft.com/fr-fr/windows/win32/wds/windows-deployment-services-portal)
 ### SysPrep
