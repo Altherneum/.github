@@ -54,8 +54,9 @@ echo "$rootpassword" | passwd --stdin
 useradd -m -s /bin/bash ${username}
 echo "$password" | passwd $username --stdin
 
-usermod -aG sudo ${username}
+# usermod -aG sudo ${username}
 ### Vérifier le fichier sudoers si le groupe sudo est OK pour utiliser l'élévation de privilèges
+### Erreur report group sudo existe pas, dans la config %sudo est commenté
 hostnamectl set-hostname ${hostname}
 
 # mkinitcpio
