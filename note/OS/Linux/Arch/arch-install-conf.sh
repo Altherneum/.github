@@ -50,7 +50,7 @@ yes | pacstrap /mnt base linux linux-firmware base-devel lvm2 cryptsetup grub ef
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Jump into installation
-arch-chroot /mnt /bin/bash
+arch-chroot /mnt /bin/bash <<"EOT"
 
 # User config
 echo "KEYMAP=fr" > /etc/vconsole.conf
@@ -73,19 +73,16 @@ hostnamectl set-hostname ${hostname}
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 mkinitcpio -P
 
-###### ERROR HERER
-####### Error: failed to get cannonical path of 'airootfs'
 grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
-
-mkdir /boot/grub
 
 UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
-# sed -i 's/GRUB_CMDLINE_LINUX="\(.*\)"GRUB_CMDLINE_LINUX="cryptdevice=UUID=$UUIDcrypt:cryptlvm root=UUID=$UUIDroot"/' /etc/default/grub
 sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub
+
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
 
 # exit
 # reboot
+EOT
