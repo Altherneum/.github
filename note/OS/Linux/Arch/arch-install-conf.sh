@@ -68,8 +68,8 @@ mkinitcpio -P
 
 grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
 
-UUIDcrypt=blkid -o value -s UUID /dev/sda2
-UUIDroot=blkid -o value -s UUID /dev/mapper/cryptlvm
+UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
+UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
 sed -i 's/GRUB_CMDLINE_LINUX="\(.*\)"GRUB_CMDLINE_LINUX="cryptdevice=UUID=$UUIDcrypt:cryptlvm root=UUID=$UUIDroot"/' /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
