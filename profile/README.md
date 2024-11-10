@@ -2,14 +2,11 @@
 
 
 [Altherneum.fr](https://Altherneum.fr) | [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)   
-[github.com/Altherneum](https://github.com/Altherneum)  
-  
-  
+[github.com/Altherneum](https://github.com/Altherneum)
+
 <a href=""><img src="https://img.shields.io/github/stars/Altherneum?color=red&style=for-the-badge"></a>  
 <a href=""><img src="https://komarev.com/ghpvc/?username=Altherneum&color=red&label=%F0%9F%91%80"></a>  
 <a href="https://Altherneum.fr/discord"><img src="https://discordapp.com/api/guilds/1081921426333909072/widget.png"></a>  
-  
----
 
 # Repo
 - **Altherneum.github.io** : [Page](https://Altherneum.github.io) | [Page DNS](https://doc.Altherneum.fr) | [Repo](https://github.com/Altherneum/Altherneum.github.io)
@@ -18,8 +15,6 @@
 - **Plugin** : [Repo](https://github.com/Altherneum/plugin) | [Latest release](https://github.com/Altherneum/plugin/releases/latest)
 - **ResourcePack** : [Repo](https://github.com/Altherneum/resourcePack) | [Latest release](https://github.com/Altherneum/resourcePack/releases/latest)
 - **.github** : [Repo](https://github.com/Altherneum/.github) | [profile README](https://github.com/Altherneum/.github/blob/main/profile/README.md) | [Cours repo](https://github.com/Altherneum/.github/tree/main/note) | [README cours](https://doc.Altherneum.fr/cours/readme.html)
-
----
 
 # Contribuer
 - Merci de suivre ce guide sur comment [contribuer](https://doc.Altherneum.fr/github/contribuer.html),  
@@ -45,14 +40,12 @@
 - [doc.Altherneum.fr/github/statistiques](https://doc.Altherneum.fr/github/statistiques.html)
 - [Commits .github](https://github.com/Altherneum/.github/commits/main) | [Commits plugin](https://github.com/Altherneum/plugin/commits/main) | [Commits bot](https://github.com/Altherneum/bot/commits/main) | [Commits server](https://github.com/Altherneum/server/commits/main) | [Commits resourcePack](https://github.com/Altherneum/resourcePack/commits/main) | [Commits Altherneum.github.io](https://github.com/Altherneum/Altherneum.github.io/commits/main)
 
----
-
 # Liens
 - [Discord](https://doc.Altherneum.fr/discord) | [Support](https://doc.Altherneum.fr/github/support.html) | [Sécurité](https://doc.Altherneum.fr/github/security.html)
 - [Issue template](https://github.com/Altherneum/.github/tree/main/.github/ISSUE_TEMPLATE) | [Issues](https://doc.Altherneum.fr/github/issues.html)
 - [Code of conduct](https://doc.Altherneum.fr/github/code_of_conduct.html) | [License](https://doc.Altherneum.fr/github/license.html)
 - [Contribution](https://doc.Altherneum.fr/github/contribuer.html)
-  
+
 <a href=""><img src="https://img.shields.io/github/commit-activity/m/Altherneum/.github?color=red&style=for-the-badge"></a>
 <a href=""><img src="https://img.shields.io/github/last-commit/Altherneum/.github?color=red&style=for-the-badge"></a>
 
@@ -62,8 +55,6 @@
 <a href=""><img src="https://img.shields.io/github/languages/code-size/Altherneum/.github?color=red"></a>
 <a href=""><img src="https://img.shields.io/github/repo-size/Altherneum/.github?color=red"></a>
 
-----
-  
 # Libs externes
 - CMS : @[Azuriom](https://github.com/Azuriom) | [Repo externe](https://github.com/Azuriom/Azuriom)
 - ~~Giscus : @[Giscus](https://github.com/Giscus) | [Repo externe](https://github.com/Giscus/Giscus)~~
