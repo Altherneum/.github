@@ -18,7 +18,8 @@
 [Un lien local](/CONTRIBUTING.md)
 
 ![Image](https://avatars.githubusercontent.com/u/84735589?v=4) image HTTP
-![Image local](/note/assets/images/Binaire.png) image local
+![Image local .github repo](/note/assets/images/Binaire.png) image local
+![Image local github.io repo](/assets/image/pp.png) image local
 
 **Text en gras**
 
@@ -76,6 +77,26 @@ Une IP en binaire
 ```
 10         .100       .0         .0
 0000.1010  0110.0100 0000.0000 0000.0000    IP
+```
+
+Du HTML
+```
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Titre</title>
+    <meta property="og:title" content="Titre" />
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script src="index.js"></script>
+  </body>
+</html>
 ```
 
 - Liste
