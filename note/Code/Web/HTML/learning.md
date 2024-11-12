@@ -36,7 +36,7 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 
 ## Consulter le code d'une page 🔬
 
-![image Chrome RClick](/note/assets/images/Chrome-RClick.png)
+![image Chrome RClick](https://github.com/Altherneum/.github/blob/main/note/assets/images/Chrome-RClick.png?raw=true)
 
 (Menu "clique droit" sur Chrome v.100+)
 
@@ -46,7 +46,7 @@ Cet exemple contient du texte, cinq balises et une référence d’entité :
 - Ouvrez le via "clique droit", puis "Afficher le code source"
 - Vous retourne le fichier de base permettant de charger ce site
 
-![HTML source](/note/assets/images/HTML-source.png)
+![HTML source](https://github.com/Altherneum/.github/blob/main/note/assets/images/HTML-source.png?raw=true)
 
 Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique droit sur la page** (A.K.A "**DevTools**")  
 
@@ -54,13 +54,13 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 - Ouvrez le via un "clique droit" et "inspecter"
 - Celui là permet de voir et modifier le code du site en temps réel
 
-![HTML-devTool](/note/assets/images/HTML-devTool.png)
+![HTML-devTool](https://github.com/Altherneum/.github/blob/main/note/assets/images/HTML-devTool.png?raw=true)
 
 # Définition d'un élément HTML
 
 [MDN Qu'est ce qu'un élément HTML](https://developer.mozilla.org/fr/docs/Glossary/Element)
 
-![image d'un élément HTML](/note/assets/images/HTML-elem.png)
+![image d'un élément HTML](https://github.com/Altherneum/.github/blob/main/note/assets/images/HTML-elem.png?raw=true)
 
 Exemple d'un élément text **P** avec une class "nice" (Pour appliquer des styles ou sélecteur de code) et comme contenu (et donc text) "Hello world!"
 

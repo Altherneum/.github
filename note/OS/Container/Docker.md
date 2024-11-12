@@ -5,7 +5,7 @@
 - [docs.docker.com](https://docs.docker.com/)
 - [hub.docker.com](https://hub.docker.com/)
 
-![Docker image explication](/note/assets/images/Container_Evolution.svg)
+![Docker image explication](https://github.com/Altherneum/.github/blob/main/note/assets/images/Container_Evolution.svg?raw=true)
 
 ## Installer
 ## Vérifier la version

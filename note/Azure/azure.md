@@ -33,7 +33,7 @@
 - Localisation
 
 ## Modèle d'hébergement
-![Image des modèles](/note/assets/images/modele-cloud.png)
+![Image des modèles](https://github.com/Altherneum/.github/blob/main/note/assets/images/modele-cloud.png?raw=true)
 - IAAS : Infrastructure as a service
 - PAAS : Platform as a service
 - SAAS : Software as a service
@@ -289,9 +289,9 @@ Prix calculé à la volé
 ## Availability
 Disponibilitée :
 - Fault domains (Plusieurs marques / appareils de marques différents)
-![azure fault domain image](/note/assets/images/azurefaultdomain.jpg)
+![azure fault domain image](https://github.com/Altherneum/.github/blob/main/note/assets/images/azurefaultdomain.jpg?raw=true)
 - Update domains : Plusieurs instances de machines afin d'éviter des coupures (Ex maintenance / MàJ)
-![azure update domain image](/note/assets/images/azureupdatedomain.png)
+![azure update domain image](https://github.com/Altherneum/.github/blob/main/note/assets/images/azureupdatedomain.png?raw=true)
 
 - Cela va répartir à taux "égal" les machines dans chaques domaines
 - Ex : 2 availability zone, 2 machines, cela va donner :
@@ -358,7 +358,7 @@ Le pare-feu est le `Network security group`
 - Scale out : monté en charge / augmentation des ressources
 - Scale in : Descente de charge / réduction des ressources
 
-![scaling image](/note/assets/images/scaling.png)
+![scaling image](https://github.com/Altherneum/.github/blob/main/note/assets/images/scaling.png?raw=true)
 
 ## PWSH Lab 08 New AZ VM
 ```

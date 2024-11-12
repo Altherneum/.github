@@ -1,4 +1,4 @@
-![Bureau à distance](/note/assets/images/mstsc_chkerNhIfd.png)
+![Bureau à distance](https://github.com/Altherneum/.github/blob/main/note/assets/images/mstsc_chkerNhIfd.png?raw=true)
 
 [exemple.rdp](https://github.com/Altherneum/.github/blob/main/note/assets/exemple.rdp)
 

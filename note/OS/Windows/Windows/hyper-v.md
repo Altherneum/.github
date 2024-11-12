@@ -13,7 +13,7 @@
 - 💽 Installer l'ISO (`Windows Server Datacenter user experience` (GUI))
 
 ### ISO
-![Lecteur DVD et ISO](/note/assets/images/chrome_TWnWBAwE7M.png))
+![Lecteur DVD et ISO](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_TWnWBAwE7M.png?raw=true)
 - `Paramètres` : `Win22-SRV-1` ▶ `Lecteur DvD` ▶ `Fichier image` ▶ `Parcourir` pour lier l'ISO
   - sources_iso (`Y:\`)
     - `/Microsoft/Windows Server 2022 Evaluation`...
@@ -25,12 +25,12 @@
 - `Privé` ou `interne` ou `externe` à la carte réseau  
 (voir [Adressage](https://doc.altherneum.fr/cours/enterprise-network#Adressage))
 
-![Configuration](/note/assets/images/chrome_ViSv9fGoJe.png))
+![Configuration](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_ViSv9fGoJe.png?raw=true)
 
 ### Connecter les cartes réseaux
-![ajouter des cartes réseau](/note/assets/images/chrome_QRr4HxxUCH.png))
+![ajouter des cartes réseau](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_QRr4HxxUCH.png?raw=true)
 
-![cartes réseau](/note/assets/images/chrome_6iWU7wUKqo.png))
+![cartes réseau](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_6iWU7wUKqo.png?raw=true)
 
 ### Connecter NAT vers un réseau externe
 - Dans `Gestionnaire de commutateur virtuel` sur Hyper-V
@@ -42,7 +42,7 @@
 
 # Autres notes
 ## CTRL ALT SUPPR
-![touche](/note/assets/images/chrome_9hxQEdb0vA.png))
+![touche](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_9hxQEdb0vA.png?raw=true)
 
 ## Session étendu
 ### Possibilités du mode de session étendu
@@ -54,4 +54,4 @@
 - Menu : `Paramètres Hyper-V`
 - Catégorie `Mode de session étendu`
 
-![paramètre](/note/assets/images/chrome_WhqhXRQbdJ.png))
+![paramètre](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_WhqhXRQbdJ.png?raw=true)

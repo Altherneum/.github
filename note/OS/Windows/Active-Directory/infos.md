@@ -36,8 +36,8 @@ Logs Windows, peut-être fait sur un PC comme un domaine
   - Clique droit sur une UO 
 - Il faudra installer la console AD sur le profil de l'utilisateur "RSAT" (Remote server administration tool)
   - Ajouter une fonctionnalité facultative, Cliquer sur "Ajouter une fonctionnalité", chercher "RSAT"
-    - ![Image RSAT](/note/assets/images/RSAT.png)
+    - ![Image RSAT](https://github.com/Altherneum/.github/blob/main/note/assets/images/RSAT.png?raw=true)
   - PowerShell : `Get-WindowsCapability -Name *RSAT* -Online`, `Add-WindowsCapability -online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0`
   - Shell : `DISM.exe /Online /add-capability -CapabilityName:"Microsoft.Windows.WordPad~~~~0.0.1.0"`
 - Outils d'administration Windows sera disponible
-  - ![Dans le menu Windows](/note/assets/images/OutilsAdministrationWin.png)
+  - ![Dans le menu Windows](https://github.com/Altherneum/.github/blob/main/note/assets/images/OutilsAdministrationWin.png?raw=true)

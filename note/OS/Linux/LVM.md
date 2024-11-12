@@ -4,7 +4,7 @@
 - Il permet notamment de redimensionner les partitions de disques sans reformatage
 - Il permet également de rajouter des disques à la volée
 
-- ![image de doc.ubuntu-fr.org sur lvm](https://lvm.jpg)
+- ![image de doc.ubuntu-fr.org sur lvm](https://github.com/Altherneum/.github/blob/main/note/assets/images/lvm.jpg?raw=true)
 
 ## Liens
 - [it-connect.fr/chapitres/decouverte-du-lvm](https://www.it-connect.fr/chapitres/decouverte-du-lvm/)

@@ -2,13 +2,13 @@
 ## Top processus
 - `top`
 
-![ssh top](/note/assets/images/top.png)
+![ssh top](https://github.com/Altherneum/.github/blob/main/note/assets/images/top.png?raw=true)
 
 ## free RAM
 - `free` affiche l'utilisation de la RAM
 - `free --mega` affiche en méga octet (Fonctionne aussi avec `--giga`)
 
-![ssh free](/note/assets/images/free.png)
+![ssh free](https://github.com/Altherneum/.github/blob/main/note/assets/images/free.png?raw=true)
 
 ## Process statuses
 - `ps` Permet de lister les processus en cours
@@ -90,7 +90,7 @@ Xkill est un programme utilitaire distribué avec le "X Window System" qui deman
 Lorsqu'il est exécuté sans argument de ligne de commande, le programme affiche un curseur spécial (généralement un réticule ou une tête de mort)
 
 `xkill`
-![image XKill](/note/assets/images/Xkill.png)
+![image XKill](https://github.com/Altherneum/.github/blob/main/note/assets/images/Xkill.png?raw=true)
 #### XKill avec paramètres
 - `xkill [resource]`
 

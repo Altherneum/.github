@@ -1,4 +1,4 @@
-![Couches OSI](/note/assets/images/OSI_Model_v1.png)
+![Couches OSI](https://github.com/Altherneum/.github/blob/main/note/assets/images/OSI_Model_v1.png?raw=true)
 
 [Wikipedia.org /wiki /Modèle_OSI](https://fr.wikipedia.org/wiki/Modèle_OSI)
 

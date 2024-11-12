@@ -94,7 +94,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
-![Screenshot of cloud shell](/note/assets/images/Cloud-shell.png)
+![Screenshot of cloud shell](https://github.com/Altherneum/.github/blob/main/note/assets/images/Cloud-shell.png?raw=true)
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 

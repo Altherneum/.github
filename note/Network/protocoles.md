@@ -40,7 +40,7 @@
 - Domain Name System
 - Service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements
 - Pour faciliter l'accès aux hôtes sur un réseau IP, un mécanisme a été mis en place pour associer un nom à une adresse IP. Ce nom, plus simple à retenir qu'une suite de chiffres, est appelé « nom de domaine ». Résoudre un nom de domaine consiste à trouver l'adresse IP qui lui est associée.
-- ![Image topologie DNS](/note/assets/images/Dns-raum.png)
+- ![Image topologie DNS](https://github.com/Altherneum/.github/blob/main/note/assets/images/Dns-raum.png?raw=true)
 
 - A record ou address record (également appelé enregistrement d’hôte) qui fait correspondre un nom d'hôte ou un nom de domaine ou un sous-domaine à une adresse IPv4 de 32 bits distribués sur quatre octets ex: 123.234.1.2 ;
 - AAAA record ou IPv6 address record qui fait correspondre un nom d'hôte à une adresse IPv6 de 128 bits distribués sur seize octets ;
@@ -97,7 +97,7 @@ Les serveurs proxys sont notamment utilisés pour assurer les fonctions suivante
 - l'anonymat
 - la répartition de charge
 
-![proxy image](/note/assets/images/schema-proxy-contourner-restriction.png)
+![proxy image](https://github.com/Altherneum/.github/blob/main/note/assets/images/schema-proxy-contourner-restriction.png?raw=true)
 
 ## Proxy filtrant
 - L'utilité des serveurs proxys est importante, notamment dans le cadre de la sécurisation des systèmes d'information.
@@ -123,7 +123,7 @@ Les serveurs proxys sont notamment utilisés pour assurer les fonctions suivante
 - On utilise notamment cette technologie en situation de télétravail ainsi que dans le cadre de l'informatique en nuage.
 - Un VPN permet d'accéder à des ordinateurs distants comme si l'on était connecté au réseau local. Il permet d'avoir un accès au réseau interne (réseau d'entreprise, par exemple) ou de créer un réseau de pairs.
 - Un VPN dispose généralement aussi d'une « passerelle » permettant d'accéder à l'internet, ce qui permet de changer l'adresse IP source publique de ses connexions
-- ![Image VPN](/note/assets/images/VPN_site-to-site.jpg)
+- ![Image VPN](https://github.com/Altherneum/.github/blob/main/note/assets/images/VPN_site-to-site.jpg?raw=true)
 
 # DMZ
 - demilitarized zone
@@ -132,4 +132,4 @@ Les serveurs proxys sont notamment utilisés pour assurer les fonctions suivante
 - Ce sous-réseau contient les machines étant susceptibles d'être accédées depuis Internet, et qui n'ont pas besoin d'accéder au réseau local.
 - Les services susceptibles d'être accédés depuis Internet seront situés en DMZ, et tous les flux en provenance d'Internet sont redirigés par défaut vers la DMZ par le pare-feu.
 - Le pare-feu bloquera donc les accès au réseau local à partir de la DMZ pour garantir la sécurité. En cas de compromission d'un des services dans la DMZ, le pirate n'aura accès qu'aux machines de la DMZ et non au réseau local.
-- ![Image DMZ](/note/assets/images/Demilitarized_Zone_Diagram.png)
+- ![Image DMZ](https://github.com/Altherneum/.github/blob/main/note/assets/images/Demilitarized_Zone_Diagram.png?raw=true)
