@@ -18,7 +18,7 @@
 [Un lien local](/CONTRIBUTING.md)
 
 ![Image](https://avatars.githubusercontent.com/u/84735589?v=4) image HTTP
-![Image web .github repo](https://github.com/Altherneum/.github/blob/main/note/assets/images/Binaire.png?raw=true) image local
+![Image web .github repo](https://github.com/Altherneum/.github/blob/main/note/assets/images/Binaire.png?raw=true) image web repo
 ![Image local github.io repo](/assets/image/pp.png) image local
 
 **Text en gras**
