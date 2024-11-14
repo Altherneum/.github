@@ -26,6 +26,7 @@ cours sur Windows
 
 - `Windows` + `PAUSE` Ouvrir les informations systèmes
 - `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
+  - Windows 11 +
 - `Windows` + `G` Ouvrir la game barre 
 
 # TaskManager
