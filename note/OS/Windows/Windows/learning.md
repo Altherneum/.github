@@ -24,6 +24,8 @@ cours sur Windows
 
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
+- `Windows` + `PAUSE` Ouvrir les informations systèmes
+
 # TaskManager
 - Raccourcis `Ctrl Alt Suppr`, `TAB` `Entrée`
 
