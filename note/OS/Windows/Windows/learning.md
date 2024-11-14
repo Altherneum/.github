@@ -25,6 +25,8 @@ cours sur Windows
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
 - `Windows` + `PAUSE` Ouvrir les informations systèmes
+- `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
+- `Windows` + `G` Ouvrir la game barre 
 
 # TaskManager
 - Raccourcis `Ctrl Alt Suppr`, `TAB` `Entrée`
