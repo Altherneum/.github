@@ -1,13 +1,12 @@
-<a href="https://Altherneum.fr"><img src="https://avatars.githubusercontent.com/u/166306046"></a>
+[![Altherneum .fr profile image](https://avatars.githubusercontent.com/u/166306046)](https://Altherneum.fr)
 
+![Github stars](https://img.shields.io/github/stars/Altherneum?color=red&style=for-the-badge)
+![View](https://komarev.com/ghpvc/?username=Altherneum&color=red&label=%F0%9F%91%80)
+![Discord](https://discordapp.com/api/guilds/1081921426333909072/widget.png)
 
 - [Altherneum.fr](https://Altherneum.fr)
 - [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)
 - [github.com/Altherneum](https://github.com/Altherneum)
-
-<a href=""><img src="https://img.shields.io/github/stars/Altherneum?color=red&style=for-the-badge"></a>  
-<a href=""><img src="https://komarev.com/ghpvc/?username=Altherneum&color=red&label=%F0%9F%91%80"></a>  
-<a href="https://Altherneum.fr/discord"><img src="https://discordapp.com/api/guilds/1081921426333909072/widget.png"></a>  
 
 # Repo
 - **Altherneum.github.io** : [Page](https://Altherneum.github.io) | [Page DNS](https://doc.Altherneum.fr) | [Repo](https://github.com/Altherneum/Altherneum.github.io)
