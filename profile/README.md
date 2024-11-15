@@ -1,4 +1,4 @@
-[![Altherneum .fr profile image](https://avatars.githubusercontent.com/u/166306046)](https://Altherneum.fr)
+<a href="https://Altherneum.fr"><img src="https://avatars.githubusercontent.com/u/166306046"></a>
 
 ![Github stars](https://img.shields.io/github/stars/Altherneum?color=red&style=for-the-badge)
 ![View](https://komarev.com/ghpvc/?username=Altherneum&color=red&label=%F0%9F%91%80)
