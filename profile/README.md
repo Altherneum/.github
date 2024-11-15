@@ -1,12 +1,12 @@
-<a href="https://Altherneum.fr"><img src="https://avatars.githubusercontent.com/u/166306046"></a>
+[![Altherneum .fr profile image](https://avatars.githubusercontent.com/u/166306046)](https://Altherneum.fr)
 
+![Github stars](https://img.shields.io/github/stars/Altherneum?color=red&style=for-the-badge)
+![View](https://komarev.com/ghpvc/?username=Altherneum&color=red&label=%F0%9F%91%80)
+![Discord](https://discordapp.com/api/guilds/1081921426333909072/widget.png)
 
-[Altherneum.fr](https://Altherneum.fr) | [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)   
-[github.com/Altherneum](https://github.com/Altherneum)
-
-<a href=""><img src="https://img.shields.io/github/stars/Altherneum?color=red&style=for-the-badge"></a>  
-<a href=""><img src="https://komarev.com/ghpvc/?username=Altherneum&color=red&label=%F0%9F%91%80"></a>  
-<a href="https://Altherneum.fr/discord"><img src="https://discordapp.com/api/guilds/1081921426333909072/widget.png"></a>  
+- [Altherneum.fr](https://Altherneum.fr)
+- [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)
+- [github.com/Altherneum](https://github.com/Altherneum)
 
 # Repo
 - **Altherneum.github.io** : [Page](https://Altherneum.github.io) | [Page DNS](https://doc.Altherneum.fr) | [Repo](https://github.com/Altherneum/Altherneum.github.io)
@@ -17,26 +17,26 @@
 - **.github** : [Repo](https://github.com/Altherneum/.github) | [profile README](https://github.com/Altherneum/.github/blob/main/profile/README.md) | [Cours repo](https://github.com/Altherneum/.github/tree/main/note) | [README cours](https://doc.Altherneum.fr/cours/readme.html)
 
 # Contribuer
-- Merci de suivre ce guide sur comment [contribuer](https://doc.Altherneum.fr/github/contribuer.html),  
-- Ainsi que ce [cours sur l'utilisation de Github et du site de documentation](https://doc.Altherneum.fr/cours/readme.html)  
+- Merci de suivre ce guide sur comment [contribuer](https://doc.Altherneum.fr/github/contribuer.html),
+- Ainsi que ce [cours sur l'utilisation de Github et du site de documentation](https://doc.Altherneum.fr/cours/readme.html)
 - Voici au cas ou le [code de conduite](https://doc.Altherneum.fr/github/code_of_conduct.html) 👼 ...
 
-## Discussions : 
-- [Liste](https://github.com/orgs/Altherneum/discussions) | [Créer une discussion](https://github.com/orgs/Altherneum/discussions/new) | [Bienvenue !](https://github.com/orgs/Altherneum/discussions/1)  
+## Discussions
+- [Liste](https://github.com/orgs/Altherneum/discussions) | [Créer une discussion](https://github.com/orgs/Altherneum/discussions/new) | [Bienvenue !](https://github.com/orgs/Altherneum/discussions/1)
 
-## Problèmes / Issues :
+## Problèmes / Issues
 - [Créer un nouveau problème](https://github.com/Altherneum/.github/issues/new/choose) | [doc.Altherneum.fr/github/issues](https://doc.Altherneum.fr/github/issues.html)
 - [Liste .github](https://github.com/Altherneum/.github/issues) | [Liste plugin](https://github.com/Altherneum/plugin/issues) | [Liste bot](https://github.com/Altherneum/bot/issues) | [Liste server](https://github.com/Altherneum/server/issues) | [Liste ResourcePack](https://github.com/Altherneum/resourcePack/issues) | [Liste Altherneum.github.io](https://github.com/Altherneum/Altherneum.github.io/issues)
 
-## Tableaux : 
-- [Liste](https://github.com/orgs/Altherneum/projects) | [Tableaux ouverts](https://github.com/orgs/Altherneum/projects?query=is%3Aopen) | [RoadMap](https://github.com/orgs/Altherneum/projects/1)  
+## Tableaux
+- [Liste](https://github.com/orgs/Altherneum/projects) | [Tableaux ouverts](https://github.com/orgs/Altherneum/projects?query=is%3Aopen) | [RoadMap](https://github.com/orgs/Altherneum/projects/1)
 - [Tableau .github](https://github.com/orgs/Altherneum/projects/6) | [Tableau plugin](https://github.com/orgs/Altherneum/projects/3) | [Tableau bot](https://github.com/orgs/Altherneum/projects/2) | [Tableau server](https://github.com/orgs/Altherneum/projects/6) | [Tableau resourcePack](https://github.com/orgs/Altherneum/projects/7) | [Tableau Altherneum.github.io](https://github.com/orgs/Altherneum/projects/4)
 
-# Contributeurs :
-- @[lx78WyY0J5](https://github.com/lx78WyY0J5) | @[Toi ?](https://github.com/)  
+# Contributeurs
+- @[lx78WyY0J5](https://github.com/lx78WyY0J5) | @[Toi ?](https://github.com/)
 - [doc.Altherneum.fr/github/contributeur](https://doc.Altherneum.fr/github/contributeur.html)
 
-## Commits :
+## Commits
 - [doc.Altherneum.fr/github/statistiques](https://doc.Altherneum.fr/github/statistiques.html)
 - [Commits .github](https://github.com/Altherneum/.github/commits/main) | [Commits plugin](https://github.com/Altherneum/plugin/commits/main) | [Commits bot](https://github.com/Altherneum/bot/commits/main) | [Commits server](https://github.com/Altherneum/server/commits/main) | [Commits resourcePack](https://github.com/Altherneum/resourcePack/commits/main) | [Commits Altherneum.github.io](https://github.com/Altherneum/Altherneum.github.io/commits/main)
 
