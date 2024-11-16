@@ -39,8 +39,7 @@
 ## Ajouter des groupes secondaires
 - `sudo usermod --append --groups [GROUP1],[GROUP2],... [USERNAME]`
 ## Changer le mot de passe si besoin
-- `sudo passwd [USER]`
-  - Tapper le mot de passe
+[# Password](#Password)
 
 ## Lister les utilisateurs
 - `more /etc/passwd` Liste des utilisateurs
