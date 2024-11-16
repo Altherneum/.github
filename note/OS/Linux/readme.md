@@ -37,14 +37,16 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
   - Gestion des groupes
   - Utilisation de `sudo` et de `su`
 - Gestion des utilisateurs et des groupes :
-  - Création et gestion des utilisateurs
-  - Attribution de droits pour les utilisateurs et les groupes
+  - [Création](#Add-user) et [supprimer](#Delete-user) des utilisateurs
+  - [Attribution de droits pour les utilisateurs et les groupes](#Edit-user)
   - [Changer les mots de passe](#Changer-les-mots-de-passes)
 
 ## Gestion des paquets et des dépendances
 - Introduction aux gestionnaires de paquets (par exemple, `apt`, `yum`)
 - Installation et mise à jour des paquets :
-  - `apt-get`, `aptitude`, `yum`
+  - `apt-get` [# APT Advanced Packaging Tool](#APT-Advanced-Packaging-Tool)
+  - `aptitude`
+  - `yum`
 - Gestion des dépendances et des conflicts entre paquets
 
 ## Réseau et internet
