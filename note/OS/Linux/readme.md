@@ -10,12 +10,8 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
 - Avantages de l'utilisation du Linux
 
 ## Installation et configuration
-- Installer le Linux sur un ordinateur ou une machine virtuelle
-- Configuration système de base :
-  - Gestion des utilisateurs (utilisateurs, groupes, autorisations)
-  - Paramétrage de la connexion réseau (Wi-Fi, Ethernet, DNS)
-  - Définition de la zone horaire et du pays
-- Introduction aux gestionnaires de paquets (par exemple, `apt`, `yum`)
+- Installer Linux sur un ordinateur
+- Installer Linux sur une machine virtuelle
 
 ## Navigation du système de fichiers
 - Compréhension de la structure de fichiers Linux :
@@ -43,6 +39,7 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
 - Gestion des utilisateurs et des groupes :
   - Création et gestion des utilisateurs
   - Attribution de droits pour les utilisateurs et les groupes
+  - [Changer les mots de passe](#Changer-les-mots-de-passes)
 
 ## Gestion des paquets et des dépendances
 - Introduction aux gestionnaires de paquets (par exemple, `apt`, `yum`)
