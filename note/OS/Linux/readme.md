@@ -38,6 +38,7 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
   - Utilisation de `sudo` et de `su`
 - Gestion des utilisateurs et des groupes :
   - [Création](#Add-user) et [supprimer](#Delete-user) des utilisateurs
+  - [Créer des groupes](#Group)
   - [Attribution de droits pour les utilisateurs et les groupes](#Edit-user)
   - [Changer les mots de passe](#Changer-les-mots-de-passes)
 
