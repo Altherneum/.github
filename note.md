@@ -171,16 +171,6 @@ msg 0 hello
 
 It would be curious if you get the same error. The ‘*’ sends to every session, so one of them is having a problem. But oh well, it works !
 
-
-
-
-
-
-
-
-
-
-
 # Linux 
 ## LVM
 - Logical volume management
