@@ -1351,3 +1351,18 @@ Move azure images to asset
 
 # JS detect leave & reopen page tab
 [medium.com/@duduHonorato](https://medium.com/@duduHonorato/detect-when-user-switches-browser-tabs-using-pure-javascript-without-any-library-085c87683f6d)
+
+# 3D Donut
+- [Article](https://www.a1k0n.net/2011/07/20/donut-math.html)
+- [JS](https://www.a1k0n.net/js/donut.js)
+
+- [Another JS](https://github.com/EvanZhouDev/TheDonutProject/blob/main/donuts/donut.js)
+- [JSFuckery](https://github.com/EvanZhouDev/TheDonutProject/blob/main/donuts/donut.jsfuck.js)
+
+# BSKy
+[bsky](https://bsky.app/)
+
+# Rosetta Code
+[Rosettacode org](https://rosettacode.org/wiki/Rosetta_Code)
+[2048 exemple](https://rosettacode.org/wiki/2048)
+[Java list](https://rosettacode.org/wiki/Category:Java)
