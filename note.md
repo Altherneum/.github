@@ -1358,3 +1358,6 @@ ls hklm:
 # To finish
 Finir docker swarm
 Move azure images to asset
+
+# JS detect leave & reopen page tab
+[medium.com/@duduHonorato](https://medium.com/@duduHonorato/detect-when-user-switches-browser-tabs-using-pure-javascript-without-any-library-085c87683f6d)
