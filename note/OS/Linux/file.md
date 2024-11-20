@@ -75,7 +75,7 @@ Afficher le contenu des fichiers :
 - `cp -r [dossier] [destination]` Permet de copier de manière récursive
 - `cp -s [fichier] [destination]` Permet de créer un lien symbolique vers le fichier d’origine.
 
-# Move file
+## Move file
 - `mv [FILE] [NEW_FILE]`
 
 # Fichiers utiles
