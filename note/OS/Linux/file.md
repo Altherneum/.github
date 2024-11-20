@@ -86,6 +86,6 @@ Afficher le contenu des fichiers :
 - `more /etc/motd` Le MOTD (Message Of The Day) affiché après une connection
 - `nano /etc/motd.d/[NAME].motd` Permet de créer des MOTD
 - `more /etc/os-release` Version et codename de l'OS
-- `more /etc/utmp`	Contains a record of users logged into the system.
-- `more /var/adm/wtmp`	Contains connect accounting information.
-- `more /etc/security/failedlogin`	Contains a record of invalid login attempts.
+- `more /etc/utmp` Contient un enregistrement des utilisateurs connectés au système
+- `more /var/adm/wtmp` Contient les informations comptables de connexion
+- `more /etc/security/failedlogin` Contient un enregistrement des tentatives de connexion invalides
