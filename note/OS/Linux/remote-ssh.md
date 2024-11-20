@@ -42,3 +42,9 @@
   - `scp test.txt superusername@altherneum.fr:/home/superusername/test.txt`
 - `scp -r [PATH] [RemoteHost]/[PATH]` SCP un dossier de manière récursive
   - `scp -r Workspace altherneum.fr/home/superusername` Exemple
+
+## Lister 
+- `who` Afficher les utilisateurs connectés au système
+  - `who -a` Affiche toutes les informations d'utilisateurs (`--all`) 
+  - `who -q` Affiche le nombre d'utilisateurs (`--count`)
+- `whoami` Afficher votre nom d'utilisateur
