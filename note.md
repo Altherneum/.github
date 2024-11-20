@@ -185,17 +185,7 @@ Gestionnaire basé sur le temps
 ## FastFetch
 to setup & use for .MD visuals
 
-### config files
-- `more /etc/sudoers` Liste des comptes SU
-- `more /etc/shells` Liste des shells disponibles
-- `more /etc/passwd` Affiche la liste des utilisateurs et processus et leurs 
-- `more etc/shadow` Liste des mot de passe (chiffrés via `crypt`)
-- `more /etc/motd` Le MOTD (Message Of The Day) affiché après une connection
-- `nano /etc/motd.d/[NAME].motd` Permet de créer des MOTD
-- `more /etc/os-release` Version et codename de l'OS
-- `more /etc/utmp`	Contains a record of users logged into the system.
-- `more /var/adm/wtmp`	Contains connect accounting information.
-- `more /etc/security/failedlogin`	Contains a record of invalid login attempts.
+
 ## Color
 - `apt install Most` Paquet pour l'affichage de texte avec couleurs
 - `export PAGER=most` Passe la variable globale de pagination sur le software most
