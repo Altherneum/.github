@@ -55,6 +55,8 @@
 
 ## Réseau
 - `ncpa.cpl` Ouvre l'interface des connexions réseau
+
+### IPConfig
 - `ipconfig` Configuration IP
   - `ipconfig /all` Configuration IP totale
   - `ipconfig /flushdns` Vide le cache DNS
@@ -62,6 +64,15 @@
   - `ipconfig /release` Libère les connexions
   - `ipconfig /renew` Rétablit les connexions
   - `ipconfig /displaydns` Affiche les informations du DNS
+
+### quser
+- `quser` Affiche des informations sur les sessions utilisateur sur un serveur hôte de session Bureau à distance
+  - `quser /server:ServerABC` Spécifie le serveur hôte de session Bureau à distance que vous souhaitez interroger. Sinon, le serveur hôte de session Bureau à distance actuel est utilisé
+
+### Net user
+- `Net user` Ajoute ou modifie ou affiche des comptes d'utilisateurs
+  - `net user tommyh` Affiche des informations sur le compte utilisateur tommyh
+  - `net user jayj Cyk4^g3B /add /passwordreq:yes /fullname:"Jay Jamison"` Ajoute un compte d'utilisateur dont le nom complet est Jay Jamison et dont le nom de compte est jayj, un mot de passe obligatoire (Cyk4^g3B)
 
 ### Netstat
 - `netstat -aon` Affiche les données détaillées des sockets actifs
@@ -72,18 +83,18 @@
 - `netsh wlan show profile "WiFi ABC" key=clear` Affiche les clefs WiFi pour le réseau “WiFi ABC“
 - `for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear` Affiche tous les mots de passe Wi-Fi auxquels l'ordinateur s'est déjà connecté
 
-## ICMP
+### ICMP
 - `ping [IP/DNS]` Envoie un paquet IP
   - `ping -t [IP/DNS]` Envoie un paquet IP à l'infinie
 - `tracert [IP/DNS]` Trace la route des rebonds d'un paquet IP
 
-## ARP
+### ARP
 - `arp` Affiche et modifie les entrées dans le cache ARP
   - `arp /a` Affiche les tables de cache ARP de toutes les interfaces
   - `arp /a /n 10.0.0.99` Pour afficher la table de cache ARP de l’interface à laquelle est attribuée l’adresse IP 10.0.0.99
   - `arp /s 10.0.0.80 00-AA-00-4F-2A-9C` Pour ajouter une entrée de cache ARP statique qui résout l’adresse IP 10.0.0.80 en adresse physique 00-AA-00-4F-2A-9C
 
-## nslookup DNS
+### nslookup DNS
 - `nslookup` Affiche des informations que vous pouvez utiliser pour diagnostiquer l’infrastructure DNS (Domain Name System)
   - `nslookup mydomain.com 1.1.1.1` Recherche les adresses IP du nom de domaine mydomain.com sur le serveur de noms DNS à 1.1.1.1
   - `nslookup 4.4.4.4` Recherche le nom de domaine de l’adresse IP 4.4.4.4 sur le serveur de noms DNS par défaut
@@ -91,8 +102,12 @@
   - `nslookup -debug -type=A+AAAA -nosearch -recurse mydomain.com 1.1.1.1` Vous pouvez combiner des options et des requêtes de type d’enregistrement de ressource.   
 L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4, ne tente pas d’utiliser le domaine de recherche, utilise la recherche récursive et utilise le serveur de recherche DNS 1.1.1.1
 
-## FTP
+### FTP
 `ftp` Lance le mode transfert de fichier
+
+### SSH
+- `ssh user@192.168.1.2` Se connecter au serveur SSH via l'utilisateur user
+- `ssh -i C:/Users/User/.ssh/id_rsa user@192.168.1.2` Se connecter à l’aide d’une paire de clés
 
 ## Système
 - `systemInfo` Information système
