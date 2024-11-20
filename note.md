@@ -193,6 +193,9 @@ to setup & use for .MD visuals
 - `more /etc/motd` Le MOTD (Message Of The Day) affiché après une connection
 - `nano /etc/motd.d/[NAME].motd` Permet de créer des MOTD
 - `more /etc/os-release` Version et codename de l'OS
+- `more /etc/utmp`	Contains a record of users logged into the system.
+- `more /var/adm/wtmp`	Contains connect accounting information.
+- `more /etc/security/failedlogin`	Contains a record of invalid login attempts.
 ## Color
 - `apt install Most` Paquet pour l'affichage de texte avec couleurs
 - `export PAGER=most` Passe la variable globale de pagination sur le software most
