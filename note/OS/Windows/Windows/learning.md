@@ -85,7 +85,12 @@ cours sur Windows
 - voir [Cours / IP](https://doc.altherneum.fr/cours/ip), [Cours / Network](https://doc.altherneum.fr/cours/network)
 
 ### Astuces
+#### Installation hors réseau
 Hors réseau = pas de demande de compte Microsoft
+#### Installation OOBE
+Sur le menu d'installation : `Shift + F10`, et lancer la commande `OOBE\BYPASSNRO` pour relancer l'ordinateur en mode (W)OOBE (Windows) "Out of Box Experience"
+
+![Image de OOBE](https://github.com/Altherneum/.github/blob/main/note/assets/images/0dc02787-ce2e-4dac-858e-d74cd2d98ed5.png?raw=true)
 
 ## IExpress
 - Composant de Windows 2000 et des versions ultérieures du système d'exploitation, est utilisé pour créer des packages auto-extractibles à partir d'un ensemble de fichiers. 
