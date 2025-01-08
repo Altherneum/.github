@@ -16,6 +16,9 @@ cours sur Windows
 
 - `Control + Z` Annuler / Retour en arrière
 
+- `Control + F` Rechercher
+- `Control + H` Remplacer
+
 - `↹`, `↑ Shift + ↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Control + Alt + Suppr` Menu de secours pour la gestion Windows
 
