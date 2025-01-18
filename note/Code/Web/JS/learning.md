@@ -1,5 +1,6 @@
 # JavaScript
 Sur ce guide on va vous expliquer le JS
+- [Wikipedia.org /wiki /JavaScript](https://fr.wikipedia.org/wiki/JavaScript)
 ## Définition de JS
 JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web.
 
