@@ -1,6 +1,7 @@
 cours sur Windows
 
 # Raccourcis
+## Touche Windows
 - `Win + R` Recherche ou commande
 - `Win + V` Historique des copier / coller
 - `Win + E` Explorateur de fichiers
@@ -8,10 +9,22 @@ cours sur Windows
 - `Win + ;` Liste des émojis
 
 - `Win + ➡` Déplacer la fenêtre sélectionnée
+- `Win + [1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
+  - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
 
 - `Windows + ↹` Changer de fenêtre
 - `Windows + ↑ Shift` Changer de fenêtre en arrière
 
+- `Win + ↑ Shift + S` Capture d'écran avec zone
+
+- `Windows` + `PAUSE` Ouvrir les informations systèmes
+
+- `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
+  - Windows 11 +
+
+- `Windows` + `G` Ouvrir la game barre 
+
+## Touche Control
 - `Control + Descendre/Monter la molette de souris` Gestion du zoom
 
 - `Control + Z` Annuler / Retour en arrière
@@ -19,18 +32,12 @@ cours sur Windows
 - `Control + F` Rechercher
 - `Control + H` Remplacer
 
-- `↹`, `↑ Shift + ↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Control + Alt + Suppr` Menu de secours pour la gestion Windows
-
-- `Impr Ecran Syst` Capture d'écran
-- `Win + ↑ Shift + S` Capture d'écran avec zone
-
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
-- `Windows` + `PAUSE` Ouvrir les informations systèmes
-- `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
-  - Windows 11 +
-- `Windows` + `G` Ouvrir la game barre 
+## Autres touches
+- `↹`, `↑ Shift + ↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
+- `Impr Ecran Syst` Capture d'écran
 
 # TaskManager
 - Raccourcis `Ctrl Alt Suppr`, `TAB` `Entrée`
