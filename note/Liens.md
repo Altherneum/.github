@@ -192,6 +192,7 @@
   - [neal.fun infinite-craft](https://neal.fun/infinite-craft/)
   - [neal.fun internet-artifacts](https://neal.fun/internet-artifacts/)
   - [neal.fun password-game](https://neal.fun/password-game/)
+  - [neal.fun stimulation-clicker](https://neal.fun/stimulation-clicker/)
 - [peopleofwalmart.com](https://www.peopleofwalmart.com/)
 - [theannoyingsite.com](https://theannoyingsite.com/) - [github.com feross TheAnnoyingSite.com](https://github.com/feross/TheAnnoyingSite.com)
 - [driveandlisten.herokuapp.com](https://driveandlisten.herokuapp.com/)
