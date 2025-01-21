@@ -109,6 +109,8 @@
 - [wikipedia.org / Google Dorks](https://fr.wikipedia.org/wiki/Google_hacking)
 - [seela.io / Google Dorks](https://seela.io/blog/google-dorks-trouver-plus-en-cherchant-moins/)
 - [kxs.fr securisation-communications asymetrique](https://kxs.fr/cours/securisation-communications/asymetrique)
+- [wikileaks.org](https://wikileaks.org/)
+  - [wikileaks Vault 7: CIA Hacking Tools Revealed](https://wikileaks.org/ciav7p1/)
 ## OpSec
 - [torproject.org](https://www.torproject.org/) | [gitlab.torproject.org/tpo/team](https://gitlab.torproject.org/tpo/team) | [metrics.torproject.org/userstats-relay-country](https://metrics.torproject.org/userstats-relay-country.html)
 - [https://orbot.app/](https://orbot.app/)
