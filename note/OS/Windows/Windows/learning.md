@@ -102,6 +102,10 @@ Sur le menu d'installation : `Shift + F10`, et lancer la commande `OOBE\BYPASSNR
 
 ![Image de OOBE](https://github.com/Altherneum/.github/blob/main/note/assets/images/0dc02787-ce2e-4dac-858e-d74cd2d98ed5.png?raw=true)
 
+## MicroSoft OpenJDK build
+- [learn.microsoft.com /fr-fr /java](https://learn.microsoft.com/fr-fr/java/)
+  - [learn.microsoft.com /fr-fr/ java /openjdk /download](https://learn.microsoft.com/fr-fr/java/openjdk/download)
+
 ## IExpress
 - Composant de Windows 2000 et des versions ultérieures du système d'exploitation, est utilisé pour créer des packages auto-extractibles à partir d'un ensemble de fichiers. 
 - Ces packages peuvent être utilisés pour installer des logiciels.
