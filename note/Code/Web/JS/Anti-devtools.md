@@ -56,6 +56,10 @@ devtoolIsOpening();
 }();
 ```
 
+### Heart beat
+- [david-fong.github.io /detect devtools via debugger heartstop](https://david-fong.github.io/detect-devtools-via-debugger-heartstop/)
+  - [Github repo](https://github.com/david-fong/detect-devtools-via-debugger-heartstop)
+
 ## Hack
 - Charger la page web
 - Ouvrir le DevTools du navigateur
