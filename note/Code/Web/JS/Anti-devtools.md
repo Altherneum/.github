@@ -20,8 +20,9 @@ function devtoolIsOpening() {
 devtoolIsOpening();
 ```
 
-### JSFiddle .net
-[jsfiddle.net/composite/3r6dq51y](https://jsfiddle.net/composite/3r6dq51y/)
+### Attach event
+[jsfiddle.net /composite /3r6dq51y](https://jsfiddle.net/composite/3r6dq51y/)
+[dev.to /composite /a-simple-way-to-detect-devtools-2ag0](https://dev.to/composite/a-simple-way-to-detect-devtools-2ag0)
 
 ```
 !function() {
