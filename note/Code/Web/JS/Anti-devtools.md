@@ -1,7 +1,7 @@
 # Anti DevTools
 ## Sites
-### Streaming website
-`papadustream`
+### Heuristics
+Vue sur des sites de streaming comme `papadustream`
 
 ```
 function devtoolIsOpening() {
@@ -21,8 +21,8 @@ devtoolIsOpening();
 ```
 
 ### Attach event
-[jsfiddle.net /composite /3r6dq51y](https://jsfiddle.net/composite/3r6dq51y/)
-[dev.to /composite /a-simple-way-to-detect-devtools-2ag0](https://dev.to/composite/a-simple-way-to-detect-devtools-2ag0)
+- [jsfiddle.net /composite /3r6dq51y](https://jsfiddle.net/composite/3r6dq51y/)
+- [dev.to /composite /a-simple-way-to-detect-devtools-2ag0](https://dev.to/composite/a-simple-way-to-detect-devtools-2ag0)
 
 ```
 !function() {
