@@ -44,6 +44,12 @@
 - [Discord developper badge](https://discord.com/developers/active-developer)
 - [github.com/getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
 ### Web dev
+#### Java
+## MicroSoft OpenJDK build
+- [doc.altherneum.fr /cours /windows #MicroSoft-OpenJDK-build](https://doc.altherneum.fr/cours/windows#MicroSoft-OpenJDK-build)
+- [OpenJDK.org](https://openjdk.org/)
+  - [openjdk.org /install](https://openjdk.org/install/)
+
 #### HTML
 - [developer.mozilla.org progress](https://developer.mozilla.org/fr/docs/Web/HTML/Element/progress)
 - [developer.mozilla.org meter](https://developer.mozilla.org/fr/docs/Web/HTML/Element/meter)
