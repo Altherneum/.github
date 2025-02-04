@@ -3,6 +3,16 @@
 ### Heuristics
 Vue sur des sites de streaming comme `papadustream`
 
+#### Explications
+- Fondamentalement, l'exécution de ce code avec la console fermée prend environ 100 microsecondes et lorsque la console est ouverte, cela prend environ deux fois plus, soit 200 microsecondes
+- (1 ms = 1000 μs)
+
+```
+console.log(1);
+console.clear();
+```
+
+#### Code heuristics
 ```
 function devtoolIsOpening() {
     console.clear();
@@ -59,6 +69,36 @@ devtoolIsOpening();
 ### Heart beat
 - [david-fong.github.io /detect devtools via debugger heartstop](https://david-fong.github.io/detect-devtools-via-debugger-heartstop/)
   - [Github repo](https://github.com/david-fong/detect-devtools-via-debugger-heartstop)
+
+#### Heart beat verdict
+```
+const onHeartMsg = (/** @type {MessageEvent<PulseAck>}*/ msg) => {
+    if (msg.data.isOpenBeat) {
+        /** @type {Promise<boolean | null>} */
+        let p = new Promise((_resolveVerdict) => {
+            resolveVerdict = _resolveVerdict;
+            let wait$ = setTimeout(
+                () => { wait$ = NaN; resolveVerdict(true); },
+                config.maxMillisBeforeAckWhenClosed + 1,
+            );
+        });
+        p.then((verdict) => {
+            if (verdict === null) return;
+            if (verdict !== _isDevtoolsOpen) {
+                _isDevtoolsOpen = verdict;
+                const cb = { true: config.onDetectOpen, false: config.onDetectClose }[verdict+""];
+                if (cb) cb();
+            }
+            nextPulse$ = setTimeout(
+                () => { nextPulse$ = NaN; doOnePulse(); },
+                config.pollingIntervalSeconds * 1000,
+            );
+        });
+    } else {
+        resolveVerdict(false);
+    }
+};
+```
 
 ## Hack
 - Charger la page web
