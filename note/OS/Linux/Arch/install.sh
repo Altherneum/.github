@@ -25,8 +25,10 @@ mkfs.ext4 /dev/mapper/cryptlvm
 # Mount
 mount /dev/mapper/cryptlvm /mnt
 mount --mkdir /dev/sda1 /mnt/boot
+
 # TEST
 # mount /dev/sdaN /mnt
+
 mount --rbind /dev  /mnt/dev
 mount --rbind /proc /mnt/proc
 mount --rbind /sys  /mnt/sys
@@ -40,6 +42,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 # Jump into installation
 arch-chroot /mnt /bin/bash <<"EOT"
+
 # Variables
 hostname=desktop
 username=admin

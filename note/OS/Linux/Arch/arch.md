@@ -183,7 +183,7 @@ Installer des packages supplémentaires pour la gestion des utilisateurs et du r
 - `passwd`
 
 ## Relancer
-- exit `chroot`: `exit`
+- exit `chroot` : `exit`
 - unmount everything : `umount -R /mnt`
 - and reboot : `reboot`
 
