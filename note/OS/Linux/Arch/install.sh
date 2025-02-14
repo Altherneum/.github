@@ -48,7 +48,7 @@ mount --mkdir /dev/vg0/home /mnt/home
 mount --mkdir /dev/sda1 /mnt/boot
 
 # Packages
-yes | pacstrap /mnt base linux linux-firmware base-devel lvm2 cryptsetup grub efibootmgr networkmanager
+yes | pacstrap /mnt base
 # Removed for test download speed # yes | pacstrap openssh git sudo nano
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab

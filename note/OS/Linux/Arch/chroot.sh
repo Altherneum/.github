@@ -23,7 +23,7 @@ usermod -aG wheel ${username}
 hostnamectl set-hostname ${hostname}
 
 # Setup grub (TO TEST) & OS Prober = dual boot
-yes | pacman -S grub os-prober
+yes | pacman -S grub os-prober linux linux-firmware base-devel lvm2 cryptsetup efibootmgr networkmanager sudo
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
