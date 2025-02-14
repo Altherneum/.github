@@ -31,7 +31,7 @@ mkfs.ext4 /dev/vg0/root
 mkfs.ext4 /dev/vg0/home
 
 # Format swap memory and mount it
-mkswap /dev/swap
+mkswap /dev/vg0/swap
 swapon /dev/vg0/swap
 
 # Mount root & home
