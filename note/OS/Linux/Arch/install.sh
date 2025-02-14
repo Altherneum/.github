@@ -11,8 +11,11 @@ pacman-key --refresh-keys
 # Disques
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 257MiB \
-  set 1 boot on \
+  set 1 bios_grub on \
   mkpart primary ext4 257MiB 100%
+
+# Format Boot
+mkfs.fat -F32 /dev/sda1
 
 # Cryptlvm
 echo $lvmpassword | cryptsetup --use-random luksFormat /dev/sda2
@@ -41,7 +44,7 @@ mount /dev/vg0/root /mnt
 mount --mkdir /dev/vg0/home /mnt/home
 
 # Boot
-mkfs.ext4 /dev/sda1
+# mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
 mount --mkdir /dev/sda1 /mnt/boot
 
 # Packages
@@ -50,16 +53,6 @@ yes | pacstrap /mnt base linux linux-firmware base-devel lvm2 cryptsetup grub ef
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# Jump into installation
-arch-chroot /mnt /bin/bash <<"EOT"
-
-# curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
-# chmod +x /chroot.sh
+curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
+chmod +x /chroot.sh
 # /chroot.sh
-
-# exit
-
-EOT
-
-# umount -R /mnt # Removed for TEST
-# reboot # Removed for TEST

@@ -1,3 +1,6 @@
+# Jump into installation
+arch-chroot /mnt /bin/bash <<"EOT"
+
 # Variables
 hostname=desktop
 username=admin
@@ -5,7 +8,7 @@ password=password
 rootpassword=toor
 
 # User config
-ln -sf /usr/share/zoneinfo/Europe/Paris /etc/
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 hwclock --systohc
 echo "KEYMAP=fr" > /etc/vconsole.conf
 echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
@@ -20,7 +23,7 @@ usermod -aG wheel ${username}
 hostnamectl set-hostname ${hostname}
 
 # Setup grub (TO TEST) & OS Prober = dual boot
-pacman -S grub os-prober
+yes | pacman -S grub os-prober
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
@@ -37,7 +40,14 @@ sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=
 grub-mkconfig -o /boot/grub/grub.cfg
 mkinitcpio -P
 
+exit
+
+EOT
+
+# umount -R /mnt # Removed for TEST
+# reboot # Removed for TEST
 # enable network
 # systemctl enable NetworkManager
 # systemctl enable powertop
 # timedatectl set-ntp true 
+
