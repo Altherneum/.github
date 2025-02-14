@@ -56,7 +56,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 read -p "Press [Enter] key to start arch-chroot..."
 # Jump into installation
-arch-chroot /mnt /bin/bash <<"EOT"
+arch-chroot /mnt /bin/bash <<'EOT'
 
 # Variables
 hostname=desktop
