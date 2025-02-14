@@ -45,7 +45,7 @@ mount --mkdir /dev/vg0/home /mnt/home
 
 # Boot
 # mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
-mount --mkdir /dev/sda1 /mnt/boot/efi
+mount --mkdir /dev/sda1 /mnt/boot
 
 
 curl -o /pacstrap.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/pacstrap.sh

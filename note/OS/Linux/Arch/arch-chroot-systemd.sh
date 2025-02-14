@@ -21,15 +21,13 @@ echo "$password" | passwd $username --stdin
 usermod -aG wheel ${username}
 hostnamectl set-hostname ${hostname}
 
-# Setup grub (TO TEST) & OS Prober = dual boot
-yes | pacman -S grub os-prober
-# yes | pacman -S os-prober # only os-prober to test systemd
+yes | pacman -S systemd os-prober
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
+mkinitcpio -p linux
 
-# grub
-grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot/efi --removable /dev/sda
+bootctl install
 
 # Set Disk ID to LVM
 UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
@@ -40,4 +38,25 @@ sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=
 grub-mkconfig -o /boot/grub/grub.cfg
 mkinitcpio -P
 
+mkdir /boot/loader
+/boot/loader/loader.conf <<EOF
+default arch
+timeout 3
+editor 0
 EOF
+
+mkdir /boot/loader/entries/
+/boot/loader/entries/arch.conf <<EOF
+title Arch Linux
+linux /vmlinuz-linux
+initrd /initramfs-linux.img
+options cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=/dev/volume/root quiet rw
+timeout 3
+editor 0
+EOF
+
+exit
+
+EOF
+
+umount -R /mnt
