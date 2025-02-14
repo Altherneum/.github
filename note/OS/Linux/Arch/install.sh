@@ -113,12 +113,8 @@ EOT
 
 # umount -R /mnt # Removed for TEST
 # reboot # Removed for TEST
+
 # enable network
 # systemctl enable NetworkManager
 # systemctl enable powertop
-# timedatectl set-ntp true 
-
-
-# curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
-# chmod +x /chroot.sh
-# /chroot.sh
+# timedatectl set-ntp true
