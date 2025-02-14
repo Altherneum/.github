@@ -58,8 +58,8 @@ read -p "Press [Enter] key to start arch-chroot..."
 # Jump into installation
 
 # Download chroot script
-curl -o /mnt/arch-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot.sh
-chmod +x /mnt/arch-chroot.sh
+curl -o /arch-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot.sh
+chmod +x /arch-chroot.sh
 
 {
   /arch-chroot.sh
