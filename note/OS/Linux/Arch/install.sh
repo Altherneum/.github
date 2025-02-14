@@ -10,9 +10,9 @@ pacman-key --refresh-keys
 
 # Disques
 parted --script "${device}" -- mklabel gpt \
-  mkpart ESP fat32 1Mib 257MiB \
+  mkpart ESP fat32 1Mib 1024MiB \
   set 1 bios_grub on \
-  mkpart primary ext4 257MiB 100%
+  mkpart primary ext4 1024MiB 100%
 
 # Format Boot
 mkfs.fat -F32 /dev/sda1
