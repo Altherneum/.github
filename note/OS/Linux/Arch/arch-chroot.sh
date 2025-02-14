@@ -34,7 +34,7 @@ sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard 
 
 read -p "Press [Enter] key to start install..."
 # grub
-grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
+grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot/efi --removable /dev/sda
 
 read -p "Press [Enter] key to start setDisk..."
 # Set Disk ID to LVM

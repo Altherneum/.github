@@ -45,7 +45,7 @@ mount --mkdir /dev/vg0/home /mnt/home
 
 # Boot
 # mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
-mount --mkdir /dev/sda1 /mnt/boot
+mount --mkdir /dev/sda1 /mnt/boot/efi
 
 read -p "Press [Enter] key to start pacstrap..."
 # Packages
