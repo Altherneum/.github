@@ -45,7 +45,7 @@ mount --mkdir /dev/vg0/home /mnt/home
 
 # Boot
 # mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
-mount --mkdir /dev/sda1 /mnt/boot/efi
+mount --mkdir /dev/sda1 /mnt/boot
 
 read -p "Press [Enter] key to start pacstrap..."
 # Packages
@@ -88,7 +88,7 @@ sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard 
 
 read -p "Press [Enter] key to start install..."
 # grub
-grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot/efi --removable /dev/sda
+grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
 
 read -p "Press [Enter] key to start setDisk..."
 # Set Disk ID to LVM
