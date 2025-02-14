@@ -88,6 +88,7 @@ hostnamectl set-hostname ${hostname}
 read -p "Press [Enter] key to start download grub..."
 # Setup grub (TO TEST) & OS Prober = dual boot
 yes | pacman -S grub os-prober
+# yes | pacman -S os-prober # only os-prober to test systemd
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
@@ -127,5 +128,5 @@ EOT
 
 
 
-
+# bootctl install
 # systemctl enable systemd-timesyncd # To replace Grub-install and related update
