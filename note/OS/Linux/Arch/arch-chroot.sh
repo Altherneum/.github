@@ -40,6 +40,4 @@ sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=
 grub-mkconfig -o /boot/grub/grub.cfg
 mkinitcpio -P
 
-exit
-
 EOF
