@@ -11,7 +11,8 @@ pacman-key --refresh-keys
 # Disques
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 1024MiB \
-  set 1 bios_grub on \
+  set 1 boot on \
+  set 1 efi on \
   mkpart primary ext4 1024MiB 100%
 
 # Format Boot
@@ -117,4 +118,14 @@ EOT
 # enable network
 # systemctl enable NetworkManager
 # systemctl enable powertop
-# timedatectl set-ntp true
+# timedatectl set-ntp 
+
+
+
+
+
+
+
+
+
+# systemctl enable systemd-timesyncd # To replace Grub-install and related update
