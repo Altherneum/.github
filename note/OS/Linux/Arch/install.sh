@@ -53,12 +53,13 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Jump into installation
 arch-chroot /mnt /bin/bash <<"EOT"
 
-curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
-chmod +x /chroot.sh
-/chroot.sh
+# curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
+# chmod +x /chroot.sh
+# /chroot.sh
 
-# exit # Removed for TEST
-# umount -R /mnt # Removed for TEST
-# reboot # Removed for TEST
+# exit
 
 EOT
+
+# umount -R /mnt # Removed for TEST
+# reboot # Removed for TEST

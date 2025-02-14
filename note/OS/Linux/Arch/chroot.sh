@@ -5,10 +5,10 @@ password=password
 rootpassword=toor
 
 # User config
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/
+hwclock --systohc
 echo "KEYMAP=fr" > /etc/vconsole.conf
 echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
-timedatectl set-timezone Europe/Paris
-timedatectl set-ntp true
 
 # User
 echo "$rootpassword" | passwd --stdin
@@ -39,3 +39,5 @@ mkinitcpio -P
 
 # enable network
 # systemctl enable NetworkManager
+# systemctl enable powertop
+# timedatectl set-ntp true 
