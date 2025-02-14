@@ -11,8 +11,7 @@ pacman-key --refresh-keys
 # Disques
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 1024MiB \
-  set 1 boot on \
-  set 1 efi on \
+  set 1 esp on \
   mkpart primary ext4 1024MiB 100%
 
 # Format Boot
