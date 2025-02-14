@@ -60,11 +60,7 @@ read -p "Press [Enter] key to start arch-chroot..."
 # Download chroot script
 curl -o /arch-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot.sh
 chmod +x /arch-chroot.sh
-
-{
-  /arch-chroot.sh
-} | arch-chroot /mnt
-
+/arch-chroot.sh
 
 # umount -R /mnt # Removed for TEST
 # reboot # Removed for TEST

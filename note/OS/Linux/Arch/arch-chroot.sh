@@ -1,51 +1,38 @@
 # Variables
-hostname=desktop
-username=admin
-password=password
-rootpassword=toor
+hostname=desktop | arch-chroot /mnt
+username=admin | arch-chroot /mnt
+password=password | arch-chroot /mnt
+rootpassword=toor | arch-chroot /mnt
 
 # User config
-read -p "Press [Enter] key to start Europe Paris local time²²²²²²²²²..."
-ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
-read -p "Press [Enter] key to start hwclock..."
-# hwclock --systohc
-read -p "Press [Enter] key to start Keymap..."
-echo "KEYMAP=fr" > /etc/vconsole.conf
-read -p "Press [Enter] key to start lang..."
-echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime  | arch-chroot /mnt
+echo "KEYMAP=fr" > /etc/vconsole.conf | arch-chroot /mnt
+echo "LANG=fr_FR.UTF-8" > /etc/locale.conf | arch-chroot /mnt
 
-read -p "Press [Enter] key to start password & user ..."
 # User
-echo "$rootpassword" | passwd --stdin
+echo "$rootpassword" | passwd --stdin | arch-chroot /mnt
 
-useradd -m -s /bin/bash ${username}
-echo "$password" | passwd $username --stdin
+useradd -m -s /bin/bash ${username} | arch-chroot /mnt
+echo "$password" | passwd $username --stdin | arch-chroot /mnt
 
-usermod -aG wheel ${username}
-hostnamectl set-hostname ${hostname}
+usermod -aG wheel ${username} | arch-chroot /mnt
+hostnamectl set-hostname ${hostname} | arch-chroot /mnt
 
-read -p "Press [Enter] key to start download grub..."
 # Setup grub (TO TEST) & OS Prober = dual boot
-yes | pacman -S grub os-prober
+yes | pacman -S grub os-prober | arch-chroot /mnt
 # yes | pacman -S os-prober # only os-prober to test systemd
 
 # mkinitcpio
-sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
+sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf | arch-chroot /mnt
 
-read -p "Press [Enter] key to start install..."
 # grub
-grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot/efi --removable /dev/sda
+grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot/efi --removable /dev/sda | arch-chroot /mnt
 
-read -p "Press [Enter] key to start setDisk..."
 # Set Disk ID to LVM
-UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
-UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
-sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub
+UUIDcrypt=$(blkid -o value -s UUID /dev/sda2) | arch-chroot /mnt
+UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm) | arch-chroot /mnt
+sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub | arch-chroot /mnt
 
-read -p "Press [Enter] key to start grub mkconfig..."
 # grub mkconfig
-grub-mkconfig -o /boot/grub/grub.cfg
-mkinitcpio -P
-
-read -p "Press [Enter] key to finish..."
-exit
+grub-mkconfig -o /boot/grub/grub.cfg | arch-chroot /mnt
+mkinitcpio -P | arch-chroot /mnt
