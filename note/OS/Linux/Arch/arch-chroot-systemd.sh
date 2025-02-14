@@ -29,21 +29,16 @@ mkinitcpio -p linux
 
 bootctl install
 
-# Set Disk ID to LVM
-UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
-UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
-sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub
-
-# grub mkconfig
-grub-mkconfig -o /boot/grub/grub.cfg
-mkinitcpio -P
-
 mkdir /boot/loader
 /boot/loader/loader.conf <<EOF
 default arch
 timeout 3
 editor 0
 EOF
+
+# Set Disk ID to LVM
+UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
+UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
 
 mkdir /boot/loader/entries/
 /boot/loader/entries/arch.conf <<EOF
