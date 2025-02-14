@@ -50,10 +50,15 @@ mount --mkdir /dev/sda1 /mnt/boot
 
 curl -o /pacstrap.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/pacstrap.sh
 chmod +x /pacstrap.sh
-# /pacstrap.sh
+/pacstrap.sh
 
-# umount -R /mnt # Removed for TEST
+
+
+
+
 # reboot # Removed for TEST
+
+
 
 # enable network
 # systemctl enable NetworkManager
