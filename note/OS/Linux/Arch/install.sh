@@ -5,6 +5,8 @@ device=/dev/sda
 # Setup
 loadkeys fr
 pacman -Syy
+# Update PGP keys
+pacman-key --refresh-keys
 
 # Disques
 parted --script "${device}" -- mklabel gpt \
@@ -21,7 +23,7 @@ pvcreate /dev/mapper/cryptlvm
 # Volume de groupe VG
 vgcreate vg0 /dev/mapper/cryptlvm
 # Volume logique LV
-lvcreate --size 1G -n root vg0 # /root
+lvcreate --size 5G -n root vg0 # /root
 lvcreate --size 1G -n swap vg0 # /swap
 lvcreate -l 100%FREE -n home vg0 # /home
 lvreduce --size -256M vg0/home # garde de l'espace vide
