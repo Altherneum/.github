@@ -65,11 +65,16 @@ password=password
 rootpassword=toor
 
 # User config
+read -p "Press [Enter] key to start Europe Paris local time..."
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+read -p "Press [Enter] key to start hwclock..."
 hwclock --systohc
+read -p "Press [Enter] key to start Keymap..."
 echo "KEYMAP=fr" > /etc/vconsole.conf
+read -p "Press [Enter] key to start lang..."
 echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
 
+read -p "Press [Enter] key to start password & user ..."
 # User
 echo "$rootpassword" | passwd --stdin
 
