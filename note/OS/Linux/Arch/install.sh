@@ -47,12 +47,14 @@ mount --mkdir /dev/vg0/home /mnt/home
 # mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
 mount --mkdir /dev/sda1 /mnt/boot/efi
 
+read -p "Press [Enter] key to start pacstrap..."
 # Packages
 yes | pacstrap /mnt base linux linux-firmware sof-firmware grub base-devel lvm2 cryptsetup efibootmgr networkmanager sudo nano
 # Removed for test download speed # yes | pacstrap openssh git sudo nano
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
 
+read -p "Press [Enter] key to start arch-chroot..."
 # Jump into installation
 arch-chroot /mnt /bin/bash <<"EOT"
 
@@ -77,24 +79,29 @@ echo "$password" | passwd $username --stdin
 usermod -aG wheel ${username}
 hostnamectl set-hostname ${hostname}
 
+read -p "Press [Enter] key to start download grub..."
 # Setup grub (TO TEST) & OS Prober = dual boot
 yes | pacman -S grub os-prober
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 
+read -p "Press [Enter] key to start install..."
 # grub
 grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
 
+read -p "Press [Enter] key to start setDisk..."
 # Set Disk ID to LVM
 UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
 sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub
 
+read -p "Press [Enter] key to start grub mkconfig..."
 # grub mkconfig
 grub-mkconfig -o /boot/grub/grub.cfg
 mkinitcpio -P
 
+read -p "Press [Enter] key to finish..."
 EOT
 
 
