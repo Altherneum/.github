@@ -47,20 +47,10 @@ mount --mkdir /dev/vg0/home /mnt/home
 # mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
 mount --mkdir /dev/sda1 /mnt/boot/efi
 
-read -p "Press [Enter] key to start pacstrap..."
-# Packages
-yes | pacstrap /mnt base linux linux-firmware sof-firmware grub base-devel lvm2 cryptsetup efibootmgr networkmanager sudo nano
-# Removed for test download speed # yes | pacstrap openssh git sudo nano
-# Genfstab config
-genfstab -U /mnt >> /mnt/etc/fstab
 
-read -p "Press [Enter] key to start arch-chroot..."
-# Jump into installation
-
-# Download chroot script
-curl -o /arch-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot.sh
-chmod +x /arch-chroot.sh
-/arch-chroot.sh
+curl -o /pacstrap.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/pacstrap.sh
+chmod +x /pacstrap.sh
+# /pacstrap.sh
 
 # umount -R /mnt # Removed for TEST
 # reboot # Removed for TEST
@@ -69,13 +59,6 @@ chmod +x /arch-chroot.sh
 # systemctl enable NetworkManager
 # systemctl enable powertop
 # timedatectl set-ntp 
-
-
-
-
-
-
-
 
 # bootctl install
 # systemctl enable systemd-timesyncd # To replace Grub-install and related update
