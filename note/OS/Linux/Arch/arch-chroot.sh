@@ -8,7 +8,7 @@ rootpassword=toor
 read -p "Press [Enter] key to start Europe Paris local time..."
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 read -p "Press [Enter] key to start hwclock..."
-hwclock --systohc
+# hwclock --systohc
 read -p "Press [Enter] key to start Keymap..."
 echo "KEYMAP=fr" > /etc/vconsole.conf
 read -p "Press [Enter] key to start lang..."
