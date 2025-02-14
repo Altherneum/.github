@@ -45,14 +45,68 @@ mount --mkdir /dev/vg0/home /mnt/home
 
 # Boot
 # mkfs.ext4 /dev/sda1 # Already formated :( it will erase ????
-mount --mkdir /dev/sda1 /mnt/boot
+mount --mkdir /dev/sda1 /mnt/boot/efi
 
 # Packages
-yes | pacstrap /mnt base
+yes | pacstrap /mnt base linux linux-firmware sof-firmware grub base-devel lvm2 cryptsetup efibootmgr networkmanager sudo nano
 # Removed for test download speed # yes | pacstrap openssh git sudo nano
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
 
-curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
-chmod +x /chroot.sh
+# Jump into installation
+arch-chroot /mnt /bin/bash <<"EOT"
+
+# Variables
+hostname=desktop
+username=admin
+password=password
+rootpassword=toor
+
+# User config
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+hwclock --systohc
+echo "KEYMAP=fr" > /etc/vconsole.conf
+echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
+
+# User
+echo "$rootpassword" | passwd --stdin
+
+useradd -m -s /bin/bash ${username}
+echo "$password" | passwd $username --stdin
+
+usermod -aG wheel ${username}
+hostnamectl set-hostname ${hostname}
+
+# Setup grub (TO TEST) & OS Prober = dual boot
+yes | pacman -S grub os-prober
+
+# mkinitcpio
+sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
+
+# grub
+grub-install --target=x86_64-efi --bootloader-id=ArchLinux --efi-directory=/boot --removable /dev/sda
+
+# Set Disk ID to LVM
+UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
+UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm)
+sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_DEFAULT=\"loglevel=3 quiet cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=UUID=${UUIDroot}\"/" /etc/default/grub
+
+# grub mkconfig
+grub-mkconfig -o /boot/grub/grub.cfg
+mkinitcpio -P
+
+EOT
+
+
+
+# umount -R /mnt # Removed for TEST
+# reboot # Removed for TEST
+# enable network
+# systemctl enable NetworkManager
+# systemctl enable powertop
+# timedatectl set-ntp true 
+
+
+# curl -o /chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
+# chmod +x /chroot.sh
 # /chroot.sh
