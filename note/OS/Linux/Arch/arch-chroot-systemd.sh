@@ -25,7 +25,7 @@ echo ${hostname} >> /etc/hostname
 yes | pacman -S systemd os-prober efibootmgr dosfstools
 
 # mkinitcpio
-sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
+sed -i 's/HOOKS=(.*)/HOOKS=(base systemd autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 
 bootctl --path=/boot install
 
