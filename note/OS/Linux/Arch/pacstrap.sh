@@ -4,6 +4,7 @@ yes | pacstrap /mnt base linux linux-firmware linux-zen lvm2 cryptsetup sudo man
 
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
+# echo "fmask=0137,dmask=0027" >> /mnt/etc/fstab # Check if it solve "Boot is world readable" # Or try 0077,0777 if not working
 
 # Download chroot script
 curl -o /arch-chroot-grub.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-grub.sh
