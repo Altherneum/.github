@@ -22,13 +22,13 @@ echo "$password" | passwd $username --stdin
 usermod -aG wheel ${username}
 echo ${hostname} >> /etc/hostname
 
-yes | pacman -S systemd os-prober
+yes | pacman -S systemd os-prober efibootmgr dosfstools
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
-bootctl install
+bootctl --path=/boot install
 
 # /boot/loader/loader.conf
 echo "default arch" > /boot/loader/loader.conf
