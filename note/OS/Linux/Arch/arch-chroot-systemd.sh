@@ -43,9 +43,23 @@ UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 # /boot/loader/entries/arch.conf
 echo "title Arch Linux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
+echo "initrd  /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
+# echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
+echo "options root=UUID=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
 
+# Boot Backup Hook When Pacman Transactions are Made
+mkdir -p /etc/pacman.d/hooks
+echo "[Trigger]" > /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "Type = Package" >> /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "Operation = Upgrade" >> /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "Target = systemd" >> /etc/pacman.d/hooks/95-systemd-boot.hook
+
+[Action]
+Description = Gracefully upgrading systemd-boot...
+When = PostTransaction
+Exec = /usr/bin/systemctl restart systemd-boot-update.service
+EOF
 
 bootctl list
 
