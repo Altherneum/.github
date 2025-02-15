@@ -7,20 +7,15 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # echo "fmask=0137,dmask=0027" >> /mnt/etc/fstab # Check if it solve "Boot is world readable" # Or try 0077,0777 if not working
 
 # Download chroot script
-curl -o /arch-chroot-grub.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-grub.sh
-chmod +x /arch-chroot-grub.sh
+# curl -o /arch-chroot-grub.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-grub.sh
+# chmod +x /arch-chroot-grub.sh
 # /arch-chroot-grub.sh
 
 # Download chroot script ²
-curl -o /arch-chroot-systemd.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-systemd.sh
-chmod +x /arch-chroot-systemd.sh
+# curl -o /arch-chroot-systemd.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-systemd.sh
+# chmod +x /arch-chroot-systemd.sh
 # /arch-chroot-systemd.sh
 
-# Test script
-curl -o /arch-chroot-systemd2-start.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-systemd2-start.sh
-chmod +x /arch-chroot-systemd2-start.sh
-/arch-chroot-systemd2-start.sh
-
-curl -o /mnt/arch-chroot-systemd2.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-systemd2.sh
-chmod +x /mnt/arch-chroot-systemd2.sh
-# /arch-chroot-systemd2.sh
+curl -o /mnt/arch-chroot-systemd.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-systemd.sh
+chmod +x /mnt/arch-chroot-systemd.sh
+arch-chroot /mnt /arch-chroot-systemd.sh
