@@ -10,7 +10,7 @@ rootpassword=toor
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 hwclock --systohc
 echo "KEYMAP=fr" >> /etc/vconsole.conf
-# echo "FONT=ter-v28b" >> /etc/vconsole.conf
+# echo "FONT=ter-v28b" >> /etc/vconsole.conf # font nout found # ISSUE
 echo "LANG=fr_FR.UTF-8" >> /etc/locale.conf
 
 # User
@@ -45,8 +45,8 @@ echo "title Arch Linux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd  /amd-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-# echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
-echo "options root=UUID=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
+echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
+# echo "options root=UUID=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
 
 # Boot Backup Hook When Pacman Transactions are Made
 mkdir -p /etc/pacman.d/hooks
