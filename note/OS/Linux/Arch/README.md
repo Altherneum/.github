@@ -1,4 +1,4 @@
-# Execute arch install
+# Arch auto installation script
 ## Keyboard
 `loadkeys fr` to load French keyboard "AZERTY"
 
