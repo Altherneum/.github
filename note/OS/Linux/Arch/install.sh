@@ -52,18 +52,7 @@ curl -o /pacstrap.sh https://raw.githubusercontent.com/Altherneum/.github/refs/h
 chmod +x /pacstrap.sh
 /pacstrap.sh
 
-
-
-
-
-# reboot # Removed for TEST
-
-
-
 # enable network
 # systemctl enable NetworkManager
 # systemctl enable powertop
 # timedatectl set-ntp 
-
-# bootctl install
-# systemctl enable systemd-timesyncd # To replace Grub-install and related update
