@@ -1,6 +1,7 @@
 # Packages
-yes | pacstrap /mnt base linux linux-firmware sof-firmware grub base-devel lvm2 cryptsetup efibootmgr networkmanager sudo nano
-# Removed for test download speed # yes | pacstrap openssh git sudo nano
+# yes | pacstrap /mnt base linux linux-firmware sof-firmware grub base-devel lvm2 cryptsetup efibootmgr networkmanager sudo nano # Grub
+yes | pacstrap /mnt base linux linux-firmware linux-zen lvm2 cryptsetup sudo man-db base-devel linux-tools nano # Systemd bootloader
+
 # Genfstab config
 genfstab -U /mnt >> /mnt/etc/fstab
 

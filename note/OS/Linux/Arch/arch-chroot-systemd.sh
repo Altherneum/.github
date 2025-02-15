@@ -22,17 +22,19 @@ echo "$password" | passwd $username --stdin
 usermod -aG wheel ${username}
 echo ${hostname} >> /etc/hostname
 
-yes | pacman -S systemd os-prober efibootmgr dosfstools
+yes | pacman -S systemd os-prober efibootmgr dosfstools amd-ucode
 
 # mkinitcpio
-sed -i 's/HOOKS=(.*)/HOOKS=(base systemd autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
+sed -i 's/HOOKS=(.*)/HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt lvm2 filesystems brtfs)/' /etc/mkinitcpio.conf
+mkinitcpio -p linux-zen
 
 bootctl --path=/boot install
 
 # /boot/loader/loader.conf
-echo "default arch" > /boot/loader/loader.conf
+echo "default arch.conf" > /boot/loader/loader.conf
 echo "timeout 3" >> /boot/loader/loader.conf
-echo "editor 0" >> /boot/loader/loader.conf
+echo "console-mode max" >> /boot/loader/loader.conf
+echo "editor no" >> /boot/loader/loader.conf
 
 # Set Disk ID to LVM
 UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
@@ -42,11 +44,8 @@ UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 echo "title Arch Linux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=/dev/volume/root quiet rw" >> /boot/loader/entries/arch.conf
-echo "timeout 3" >> /boot/loader/entries/arch.conf
-echo "editor 0" >> /boot/loader/entries/arch.conf
+echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
 
-mkinitcpio -p linux
 
 EOF
 
