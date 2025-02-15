@@ -1,1 +1,1 @@
-arch-chroot /mnt
+arch-chroot /mnt /arch-chroot-systemd2.sh
