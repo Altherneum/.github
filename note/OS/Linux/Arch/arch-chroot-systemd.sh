@@ -26,7 +26,6 @@ yes | pacman -S systemd os-prober efibootmgr dosfstools
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
-mkinitcpio -p linux
 
 bootctl --path=/boot install
 
@@ -47,7 +46,9 @@ echo "options cryptdevice=UUID=${UUIDcrypt}:cryptlvm root=/dev/volume/root quiet
 echo "timeout 3" >> /boot/loader/entries/arch.conf
 echo "editor 0" >> /boot/loader/entries/arch.conf
 
+mkinitcpio -p linux
+
 EOF
 
 umount -R /mnt
-reboot
+# reboot
