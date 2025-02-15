@@ -63,4 +63,4 @@ bootctl list
 # exit
 # umount -R /mnt
 # reboot
-# Remove ISO after ?
+# Remove ISO after !!!
