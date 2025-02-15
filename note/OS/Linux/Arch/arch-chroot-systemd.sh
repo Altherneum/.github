@@ -10,7 +10,7 @@ rootpassword=toor
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 hwclock --systohc
 echo "KEYMAP=fr" >> /etc/vconsole.conf
-echo "FONT=ter-v28b" >> /etc/vconsole.conf
+# echo "FONT=ter-v28b" >> /etc/vconsole.conf
 echo "LANG=fr_FR.UTF-8" >> /etc/locale.conf
 
 # User
@@ -54,12 +54,11 @@ echo "[Trigger]" > /etc/pacman.d/hooks/95-systemd-boot.hook
 echo "Type = Package" >> /etc/pacman.d/hooks/95-systemd-boot.hook
 echo "Operation = Upgrade" >> /etc/pacman.d/hooks/95-systemd-boot.hook
 echo "Target = systemd" >> /etc/pacman.d/hooks/95-systemd-boot.hook
-
-[Action]
-Description = Gracefully upgrading systemd-boot...
-When = PostTransaction
-Exec = /usr/bin/systemctl restart systemd-boot-update.service
-EOF
+echo "" >> /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "[Action]" >> /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "Description = Gracefully upgrading systemd-boot..." >> /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "When = PostTransaction" >> /etc/pacman.d/hooks/95-systemd-boot.hook
+echo "Exec = /usr/bin/systemctl restart systemd-boot-update.service" >> /etc/pacman.d/hooks/95-systemd-boot.hook
 
 bootctl list
 
