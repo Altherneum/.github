@@ -47,6 +47,8 @@ echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
 
 
+bootctl list
+
 EOF
 
 umount -R /mnt
