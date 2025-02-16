@@ -6,6 +6,7 @@ device=/dev/sda
 pacman -Syy
 # Update PGP keys
 pacman-key --refresh-keys
+# pcaman --needed # used as # pacman -S --needed superpaquetatelecharger
 
 # Disques
 parted --script "${device}" -- mklabel gpt \
