@@ -4,3 +4,4 @@
 # sudo pacman -S mesa vulkan-radeon libva-mesa-driver libva-utils # To test # From reddit # Cleaned of 32bits
 # sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver libva-utils # To test # From reddit # Not cleaned of 32bits
 
+# lib32-systemd vulkan-radeon lib32-vulkan-radeon amdvlk lib32-amdvlk
