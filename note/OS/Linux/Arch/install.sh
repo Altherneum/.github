@@ -2,8 +2,7 @@
 lvmpassword=lvmpassword
 device=/dev/sda
 
-# Setup
-loadkeys fr
+# pacman -Sy archlinux-keyring # To test if faster than --refresh-keys
 pacman -Syy
 # Update PGP keys
 pacman-key --refresh-keys
