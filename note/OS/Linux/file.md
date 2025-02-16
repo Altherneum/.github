@@ -78,6 +78,20 @@ Afficher le contenu des fichiers :
 ## Move file
 - `mv [FILE] [NEW_FILE]`
 
+## Locate a file
+### Locate
+- `locate "<NAME>"`
+- `locate "*.html" -n 20`
+  - `-d path`, `--database=path`
+  - `-r`, `--regex`
+  - `-l N`, `--limit=N`
+### Find
+- `find <startingdirectory> <options> <name>`
+- `find /home -iname my-file`
+- `find ./ -name “*.txt”`
+  - `-iname` insensitive
+  - `-name` sensitive
+
 # Fichiers utiles
 - `more /etc/sudoers` Liste des comptes SU
 - `more /etc/shells` Liste des shells disponibles
