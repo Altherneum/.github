@@ -89,10 +89,10 @@ Afficher le contenu des fichiers :
 - `find <startingdirectory> <options> <name>`
 - `find /home -iname my-file`
 - `find ./ -name “*.txt”`
-  - `-iname` insensitive
-  - `-name` sensitive
-  - `-iregex` insensitive regex
-  - `-regex` sensitive regex
+  - `-iname` insensitive to caps
+  - `-name` sensitive to caps
+  - `-iregex` insensitive to caps regex
+  - `-regex` sensitive to caps regex
 
 # Fichiers utiles
 - `more /etc/sudoers` Liste des comptes SU
