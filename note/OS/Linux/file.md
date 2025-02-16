@@ -91,6 +91,8 @@ Afficher le contenu des fichiers :
 - `find ./ -name “*.txt”`
   - `-iname` insensitive
   - `-name` sensitive
+  - `-iregex` insensitive regex
+  - `-regex` sensitive regex
 
 # Fichiers utiles
 - `more /etc/sudoers` Liste des comptes SU
