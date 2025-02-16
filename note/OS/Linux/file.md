@@ -80,6 +80,8 @@ Afficher le contenu des fichiers :
 
 ## Locate a file
 ### Locate
+Le paquet `mlocate` n'est pas présent par défaut sur certains Linux
+
 - `locate "<NAME>"`
 - `locate "*.html" -n 20`
   - `-d path`, `--database=path`
