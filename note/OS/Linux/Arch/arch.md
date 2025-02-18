@@ -199,3 +199,9 @@ https://wiki.archlinux.org/title/Installation_guide#Root_password
 https://wiki.archlinux.org/title/Installation_guide#Localization
 https://wiki.archlinux.org/title/Linux_console#Keyboard_shortcuts
 https://wiki.archlinux.org/title/KDE
+https://net-security.fr/system/luks-lvm-sur-arch-linux/
+https://net-security.fr/system/arch-linux-pourquoi-et-comment/
+https://github.com/wrzlbrmft/arch-install/blob/master/arch-install.sh
+https://gist.github.com/noghartt/8388f7d8543e3eb1777cb6ed4a3d7807
+https://gist.github.com/OdinsPlasmaRifle/e16700b83624ff44316f87d9cdbb5c94
+https://github.com/soomroz/arch/blob/main/archins.sh
