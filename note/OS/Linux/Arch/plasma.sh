@@ -4,9 +4,11 @@ pacman -S plasma
 # pacman -S plasma-desktop # Minimal configuration
 
 # Wayland
-## Stacking
+## https://wiki.archlinux.org/title/Wayland
 ## Tiling
-pacman -S swayfx
-### Sway
-## Dynamic
-## 0ther
+pacman -S swayfx # sway
+## Window manager
+pacman -S hyprland
+pacman -S labwc
+## Display manager
+pacman -S sddm
