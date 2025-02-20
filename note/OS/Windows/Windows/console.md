@@ -150,3 +150,6 @@ timeout /t %sec%&&rundll32.exe powrprof.dll,SetSuspendState Sleep
   - `tasklist /svc` Liste des processus crée par SVCHost
   - `taskkill /f /im [process name]` Tuer un processus par le nom
   - `taskkill /f /pid [process ID]` Tuer un processus par son ID
+
+## Clear RAM
+`%windir%\system32\rundll32.exe advapi32.dll,ProcessIdleTasks`
