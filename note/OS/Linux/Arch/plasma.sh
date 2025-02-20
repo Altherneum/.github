@@ -5,6 +5,7 @@ pacman -S plasma
 
 # Wayland
 ## https://wiki.archlinux.org/title/Wayland
+### https://www.fosskers.ca/en/blog/wayland
 ## Tiling
 pacman -S swayfx # sway
 ## Window manager
