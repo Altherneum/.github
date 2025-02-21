@@ -12,8 +12,9 @@ cours sur Windows
 - `Win + [1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
   - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
 
-- `Windows + ↹` Changer de fenêtre
-- `Windows + ↑ Shift` Changer de fenêtre en arrière
+- `Windows + ↹ TAB` Changer de fenêtre
+  - `Windows + ↑ Shift` Changer de fenêtre en arrière
+- `Windows + ↑ Shift + ↹ TAB`
 
 - `Win + ↑ Shift + S` Capture d'écran avec zone
 
