@@ -65,8 +65,10 @@ cours sur Windows
 # Installation via ISO
 ## Télécharger l'ISO
 ### Téléchargement via Microsoft
+#### Windows Desktop OS
 - [microsoft.com /.../ windows10ISO](https://www.microsoft.com/fr-fr/software-download/windows10ISO)
 - [microsoft.com /.../ windows11ISO](https://www.microsoft.com/fr-fr/software-download/windows11)
+#### Windows Server OS
 - [microsoft.com /.../ windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
 - [microsoft.com /.../ windows-server-2025](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2025)
 
