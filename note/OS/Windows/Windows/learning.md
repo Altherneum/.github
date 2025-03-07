@@ -45,6 +45,9 @@ cours sur Windows
 ## Autres touches
 - `↹ TAB` ou `↑ Shift` + `↹ TAB` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Impr Ecran Syst` Capture d'écran
+- `▤` Touche entre `Alt Gr` et la touche `Control/CTRL` de droite,
+  - Permet de faire un clique droit via le clavier
+  - Elle est maintenant souvent représenté avec le logo Copilot, et ouvre donc le menu Copilot (IA Windows)
 
 # Workgroup vs Active directory
 ## Workgroup
