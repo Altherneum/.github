@@ -31,16 +31,16 @@ cours sur Windows
 - `⊞ Windows` + `G` Ouvrir la game barre 
 
 ## Touche Control
-- `Control` + `Descendre/Monter la molette de souris` Gestion du zoom
+- `Control/CTRL` + `Descendre/Monter la molette de souris` Gestion du zoom
 ---
-- `Control` + `Z` Annuler / Retour en arrière
+- `Control/CTRL` + `Z` Annuler / Retour en arrière
 ---
-- `Control` + `F` Rechercher
-- `Control` + `H` Remplacer
+- `Control/CTRL` + `F` Rechercher
+- `Control/CTRL` + `H` Remplacer
 
 ### Touche Control d'administration
-- `Control` + `Alt` + `Suppr` Ouvrir le menu d'administration rapide
-- `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
+- `Control/CTRL` + `Alt` + `Suppr` Ouvrir le menu d'administration rapide
+- `Control/CTRL`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
 ## Autres touches
 - `↹ TAB` ou `↑ Shift` + `↹ TAB` Se déplacer dans un champ de saisie/bouton suivant/précédent
