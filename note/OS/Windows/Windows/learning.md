@@ -14,7 +14,6 @@ cours sur Windows
 - `Windows` + `PAUSE` Ouvrir les informations systèmes
 - `Windows` + `R` Recherche ou commande
 - `Windows` + `↑ Shift` + `Escape/Echape` Ouvrir le gestionnaire des tâches
-  - Alternative `Ctrl` + `Alt` + `Suppr`, `↹ TAB` & `Entrée` Ouvrir le menu d'administration rapide
 
 ### Déplacement et choix des fenêtres 
 - `Windows` + `➡` Déplacer la fenêtre sélectionnée
@@ -40,7 +39,7 @@ cours sur Windows
 - `Control` + `H` Remplacer
 
 ### Touche Control d'administration
-- `Control` + `Alt` + `Suppr` Menu de secours pour la gestion Windows
+- `Control` + `Alt` + `Suppr` Ouvrir le menu d'administration rapide
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
 ## Autres touches
