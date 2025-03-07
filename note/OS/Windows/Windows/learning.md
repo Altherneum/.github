@@ -48,6 +48,7 @@ cours sur Windows
 - `▤` Touche entre `Alt Gr` et la touche `Control/CTRL` de droite,
   - Permet de faire un clique droit via le clavier
   - Elle est maintenant souvent représenté avec le logo Copilot, et ouvre donc le menu Copilot (IA Windows)
+    - Alternative : `↑ Shift` + `F10`
 
 # Workgroup vs Active directory
 ## Workgroup
