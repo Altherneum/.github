@@ -3,32 +3,32 @@ cours sur Windows
 # Raccourcis
 ## Touche Windows
 ### Touches Windows utilisateur
-- `Windows` + `V` Historique des copier / coller
-- `Windows` + `E` Explorateur de fichiers
+- `⊞ Windows` + `V` Historique des copier / coller
+- `⊞ Windows` + `E` Explorateur de fichiers
 ---
-- `Windows` + `;` Liste des émojis
+- `⊞ Windows` + `;` Liste des émojis
 ---
-- `Windows` + `↑ Shift` + `S` Capture d'écran avec zone
+- `⊞ Windows` + `↑ Shift` + `S` Capture d'écran avec zone
 
 ### Touches Windows d'administration
-- `Windows` + `PAUSE` Ouvrir les informations systèmes
-- `Windows` + `R` Recherche ou commande
-- `Windows` + `↑ Shift` + `Escape/Échap/ESC` Ouvrir le gestionnaire des tâches
+- `⊞ Windows` + `PAUSE` Ouvrir les informations systèmes
+- `⊞ Windows` + `R` Recherche ou commande
+- `⊞ Windows` + `↑ Shift` + `Escape/Échap/ESC` Ouvrir le gestionnaire des tâches
 
 ### Déplacement et choix des fenêtres 
-- `Windows` + `➡ Flèche` Déplacer la fenêtre sélectionnée
-- `Windows` + `[1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
+- `⊞ Windows` + `➡ Flèche` Déplacer la fenêtre sélectionnée
+- `⊞ Windows` + `[1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
   - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
 ---
-- `Windows` + `↹ TAB` Changer de fenêtre
-  - `Windows` + `↑ Shift` Changer de fenêtre en arrière
-- `Windows` + `↑ Shift` + `↹ TAB`
+- `⊞ Windows` + `↹ TAB` Changer de fenêtre
+  - `⊞ Windows` + `↑ Shift` Changer de fenêtre en arrière
+- `⊞ Windows` + `↑ Shift` + `↹ TAB`
 ---
-- `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
+- `⊞ Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
   - Windows 11 et +
 
 ### Autres touches Windows
-- `Windows` + `G` Ouvrir la game barre 
+- `⊞ Windows` + `G` Ouvrir la game barre 
 
 ## Touche Control
 - `Control` + `Descendre/Monter la molette de souris` Gestion du zoom
