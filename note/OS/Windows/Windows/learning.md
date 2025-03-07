@@ -71,7 +71,7 @@ cours sur Windows
 
 ## Déplacer l'ISO sur un support
 - Clef USB / réseau (server de mastering) / CD, ...
-- Si vous utilisez l'étape du [#Téléchargement via Microsoft](#Téléchargement-via-microsoft) vous pourrez créer un support USB via cet outil
+- Si vous utilisez l'étape du [#Téléchargement via Microsoft](#Téléchargement-via-Microsoft) vous pourrez créer un support USB via cet outil
 
 ### Intune
 - [learn.microsoft.com /.../ what-is-intune](https://learn.microsoft.com/fr-fr/mem/intune/fundamentals/what-is-intune)
