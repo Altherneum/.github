@@ -2,27 +2,29 @@ cours sur Windows
 
 # Raccourcis
 ## Touche Windows
-- `Windows` + `R` Recherche ou commande
+### Touches Windows utilisateur
 - `Windows` + `V` Historique des copier / coller
 - `Windows` + `E` Explorateur de fichiers
-
+---
 - `Windows` + `;` Liste des émojis
-
+---
 - `Windows` + `↑ Shift` + `S` Capture d'écran avec zone
 
+### Touches Windows d'administration
 - `Windows` + `PAUSE` Ouvrir les informations systèmes
-
-- `Windows` + `↑ Shift` + `Escape/Echape`
+- `Windows` + `R` Recherche ou commande
+- `Windows` + `↑ Shift` + `Escape/Echape` Ouvrir le gestionnaire des tâches
+  - Alternative `Ctrl` + `Alt` + `Suppr`, `↹ TAB` & `Entrée` Ouvrir le menu d'administration rapide
 
 ### Déplacement et choix des fenêtres 
 - `Windows` + `➡` Déplacer la fenêtre sélectionnée
 - `Windows` + `[1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
   - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
-
+---
 - `Windows` + `↹ TAB` Changer de fenêtre
   - `Windows` + `↑ Shift` Changer de fenêtre en arrière
 - `Windows` + `↑ Shift` + `↹ TAB`
-
+---
 - `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
   - Windows 11 et +
 
@@ -31,21 +33,19 @@ cours sur Windows
 
 ## Touche Control
 - `Control` + `Descendre/Monter la molette de souris` Gestion du zoom
-
+---
 - `Control` + `Z` Annuler / Retour en arrière
-
+---
 - `Control` + `F` Rechercher
 - `Control` + `H` Remplacer
 
+### Touche Control d'administration
 - `Control` + `Alt` + `Suppr` Menu de secours pour la gestion Windows
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
 ## Autres touches
 - `↹`, `↑ Shift` + `↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Impr Ecran Syst` Capture d'écran
-
-# TaskManager
-- Raccourcis `Ctrl Alt Suppr`, `TAB` `Entrée`
 
 # Workgroup vs Active directory
 ## Workgroup
