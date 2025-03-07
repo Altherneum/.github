@@ -13,6 +13,7 @@ cours sur Windows
 ### Touches Windows d'administration
 - `⊞ Windows` + `PAUSE` Ouvrir les informations systèmes
 - `⊞ Windows` + `R` Recherche ou commande
+- `⊞ Windows` + `X` Ouvrir le menu rapide
 - `⊞ Windows` + `↑ Shift` + `Escape/Échap/ESC` Ouvrir le gestionnaire des tâches
 
 ### Déplacement et choix des fenêtres 
@@ -28,7 +29,7 @@ cours sur Windows
   - Windows 11 et +
 
 ### Autres touches Windows
-- `⊞ Windows` + `G` Ouvrir la game barre 
+- `⊞ Windows` + `G` Ouvrir la game barre
 
 ## Touche Control
 - `Control/CTRL` + `Descendre/Monter la molette de souris` Gestion du zoom
@@ -62,7 +63,7 @@ cours sur Windows
 - Centralise (Authentification comme fichiers ou règles de domaine)
 - Partage l'ensemble des ressources à tout le monde (Une seul authentification pour tout le réseau)
 
-# Installation via ISO
+# Installation de Windows
 ## Télécharger l'ISO
 ### Téléchargement via Microsoft
 #### Windows Desktop OS
@@ -71,19 +72,29 @@ cours sur Windows
 #### Windows Server OS
 - [microsoft.com /.../ windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
 - [microsoft.com /.../ windows-server-2025](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2025)
-
-## Déplacer l'ISO sur un support
+### Déplacer l'ISO sur un support
 - Clef USB / réseau (server de mastering) / CD, ...
+#### Déplacer l'ISO via les outils Microsoft
 - Si vous utilisez l'étape du [#Téléchargement via Microsoft](#Téléchargement-via-Microsoft) vous pourrez créer un support USB via cet outil
-
-### Intune
-- [learn.microsoft.com /.../ what-is-intune](https://learn.microsoft.com/fr-fr/mem/intune/fundamentals/what-is-intune)
+#### Déplacer l'ISO via d'autres outils
 ### Etcher
 - [etcher.balena.io](https://etcher.balena.io/)
 - [github.com / balena-io / etcher](https://github.com/balena-io/etcher)
 ### Rufus
 - [rufus.ie](https://rufus.ie/fr/)
 - [github.com / pbatard /rufus](https://github.com/pbatard/rufus)
+
+## Réinitialiser sans ISO
+[microsoft.com /.../ réinitialiser-votre-pc](https://support.microsoft.com/fr-fr/windows/réinitialiser-votre-pc-0ef73740-b927-549b-b7c9-e6f2b48d275e)
+### Menu réinitialiser ce PC
+- Touche `⊞ Windows` et écrire `Réinitialiser ce PC`
+### Menu d'administration de récupération
+- [microsoft.com /.../ environnement-de-récupération-windows](https://support.microsoft.com/fr-fr/windows/environnement-de-récupération-windows-0eb14733-6301-41cb-8d26-06a12b42770bà
+  - [microsoft.com /.../ hold-shift-key-shutting-down-not-disable-automatic-logon](https://learn.microsoft.com/fr-fr/troubleshoot/windows-client/user-profiles-and-logon/hold-shift-key-shutting-down-not-disable-automatic-logon)
+
+## Autres méthodes
+### Intune
+- [learn.microsoft.com /.../ what-is-intune](https://learn.microsoft.com/fr-fr/mem/intune/fundamentals/what-is-intune)
 ### WDS
 - [learn.microsoft.com /.../ windows-deployment-services-portal](https://learn.microsoft.com/fr-fr/windows/win32/wds/windows-deployment-services-portal)
 ### SysPrep
