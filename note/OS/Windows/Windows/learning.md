@@ -13,10 +13,10 @@ cours sur Windows
 ### Touches Windows d'administration
 - `Windows` + `PAUSE` Ouvrir les informations systèmes
 - `Windows` + `R` Recherche ou commande
-- `Windows` + `↑ Shift` + `Escape/Echape` Ouvrir le gestionnaire des tâches
+- `Windows` + `↑ Shift` + `Escape/Échap/ESC` Ouvrir le gestionnaire des tâches
 
 ### Déplacement et choix des fenêtres 
-- `Windows` + `➡` Déplacer la fenêtre sélectionnée
+- `Windows` + `➡ Flèche` Déplacer la fenêtre sélectionnée
 - `Windows` + `[1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
   - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
 ---
@@ -43,7 +43,7 @@ cours sur Windows
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
 ## Autres touches
-- `↹`, `↑ Shift` + `↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
+- `↹ TAB` ou `↑ Shift` + `↹ TAB` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Impr Ecran Syst` Capture d'écran
 
 # Workgroup vs Active directory
