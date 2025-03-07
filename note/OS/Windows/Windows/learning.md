@@ -89,7 +89,7 @@ cours sur Windows
 ### Menu réinitialiser ce PC
 - Touche `⊞ Windows` et écrire `Réinitialiser ce PC`
 ### Menu d'administration de récupération
-- [microsoft.com /.../ environnement-de-récupération-windows](https://support.microsoft.com/fr-fr/windows/environnement-de-récupération-windows-0eb14733-6301-41cb-8d26-06a12b42770bà
+- [microsoft.com /.../ environnement-de-récupération-windows](https://support.microsoft.com/fr-fr/windows/environnement-de-récupération-windows-0eb14733-6301-41cb-8d26-06a12b42770b)
   - [microsoft.com /.../ hold-shift-key-shutting-down-not-disable-automatic-logon](https://learn.microsoft.com/fr-fr/troubleshoot/windows-client/user-profiles-and-logon/hold-shift-key-shutting-down-not-disable-automatic-logon)
 
 ## Autres méthodes
