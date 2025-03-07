@@ -64,11 +64,15 @@ cours sur Windows
 
 # Installation via ISO
 ## Télécharger l'ISO
+### Téléchargement via Microsoft
 - [microsoft.com /.../ windows10ISO](https://www.microsoft.com/fr-fr/software-download/windows10ISO)
+- [microsoft.com /.../ windows11ISO](https://www.microsoft.com/fr-fr/software-download/windows11)
 - [microsoft.com /.../ windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
 
 ## Déplacer l'ISO sur un support
 - Clef USB / réseau (server de mastering) / CD, ...
+- Si vous utilisez l'étape du [#Téléchargement via Microsoft](#Téléchargement-via-microsoft) vous pourrez créer un support USB via cet outil
+
 ### Intune
 - [learn.microsoft.com /.../ what-is-intune](https://learn.microsoft.com/fr-fr/mem/intune/fundamentals/what-is-intune)
 ### Etcher
