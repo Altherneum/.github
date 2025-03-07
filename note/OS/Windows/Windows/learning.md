@@ -68,6 +68,7 @@ cours sur Windows
 - [microsoft.com /.../ windows10ISO](https://www.microsoft.com/fr-fr/software-download/windows10ISO)
 - [microsoft.com /.../ windows11ISO](https://www.microsoft.com/fr-fr/software-download/windows11)
 - [microsoft.com /.../ windows-server-2022](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022)
+- [microsoft.com /.../ windows-server-2025](https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2025)
 
 ## Déplacer l'ISO sur un support
 - Clef USB / réseau (server de mastering) / CD, ...
