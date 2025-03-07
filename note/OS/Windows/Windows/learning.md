@@ -2,42 +2,46 @@ cours sur Windows
 
 # Raccourcis
 ## Touche Windows
-- `Win + R` Recherche ou commande
-- `Win + V` Historique des copier / coller
-- `Win + E` Explorateur de fichiers
+- `Windows` + `R` Recherche ou commande
+- `Windows` + `V` Historique des copier / coller
+- `Windows` + `E` Explorateur de fichiers
 
-- `Win + ;` Liste des émojis
+- `Windows` `+` `;` Liste des émojis
 
-- `Win + ➡` Déplacer la fenêtre sélectionnée
-- `Win + [1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
-  - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
-
-- `Windows + ↹ TAB` Changer de fenêtre
-  - `Windows + ↑ Shift` Changer de fenêtre en arrière
-- `Windows + ↑ Shift + ↹ TAB`
-
-- `Win + ↑ Shift + S` Capture d'écran avec zone
+- `Windows` + `↑ Shift` + `S` Capture d'écran avec zone
 
 - `Windows` + `PAUSE` Ouvrir les informations systèmes
 
-- `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
-  - Windows 11 +
+- `Windows` + `↑ Shift` + `Escape/Echape`
 
+### Déplacement et choix des fenêtres 
+- `Windows` + `➡` Déplacer la fenêtre sélectionnée
+- `Windows` + `[1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
+  - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
+
+- `Windows` + `↹ TAB` Changer de fenêtre
+  - `Windows` + `↑ Shift` Changer de fenêtre en arrière
+- `Windows` + `↑ Shift` + `↹ TAB`
+
+- `Windows` + `Z` Placer toutes vos fenêtres suivant des modèles
+  - Windows 11 et +
+
+### Autres touches Windows
 - `Windows` + `G` Ouvrir la game barre 
 
 ## Touche Control
-- `Control + Descendre/Monter la molette de souris` Gestion du zoom
+- `Control` + `Descendre/Monter la molette de souris` Gestion du zoom
 
-- `Control + Z` Annuler / Retour en arrière
+- `Control` + `Z` Annuler / Retour en arrière
 
-- `Control + F` Rechercher
-- `Control + H` Remplacer
+- `Control` + `F` Rechercher
+- `Control` + `H` Remplacer
 
-- `Control + Alt + Suppr` Menu de secours pour la gestion Windows
+- `Control` + `Alt` + `Suppr` Menu de secours pour la gestion Windows
 - `Control`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 
 ## Autres touches
-- `↹`, `↑ Shift + ↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
+- `↹`, `↑ Shift` + `↹` Se déplacer dans un champ de saisie/bouton suivant/précédent
 - `Impr Ecran Syst` Capture d'écran
 
 # TaskManager
@@ -99,7 +103,7 @@ cours sur Windows
 #### Installation hors réseau
 Hors réseau = pas de demande de compte Microsoft
 #### Installation OOBE
-Sur le menu d'installation : `Shift + F10`, et lancer la commande `OOBE\BYPASSNRO` pour relancer l'ordinateur en mode (W)OOBE (Windows) "Out of Box Experience"
+Sur le menu d'installation : `Shift` + `F10`, et lancer la commande `OOBE\BYPASSNRO` pour relancer l'ordinateur en mode (W)OOBE (Windows) "Out of Box Experience"
 
 ![Image de OOBE](https://github.com/Altherneum/.github/blob/main/note/assets/images/0dc02787-ce2e-4dac-858e-d74cd2d98ed5.png?raw=true)
 
