@@ -6,7 +6,7 @@ cours sur Windows
 - `Windows` + `V` Historique des copier / coller
 - `Windows` + `E` Explorateur de fichiers
 
-- `Windows` `+` `;` Liste des émojis
+- `Windows` + `;` Liste des émojis
 
 - `Windows` + `↑ Shift` + `S` Capture d'écran avec zone
 
