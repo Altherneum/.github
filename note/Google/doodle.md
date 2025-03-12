@@ -10,6 +10,9 @@ Les Google Doodles apportent de l'amusement et de la créativité à des message
 - [Fidget spinner](https://www.google.com/search?q=Fidget+spinner)
 - [Cha cha slide](https://www.google.com/search?q=cha+cha+slide)
 - [Do a barrel roll](https://www.google.com/search?q=do+a+barrel+roll)
+- [Pac Man](https://www.google.com/search?q=pacman)
+- [Démineur](https://www.google.com/search?q=minesweeper)
+- [Snake](https://www.google.com/search?q=snake)
 
 # To do
 - https://cognitiveseo.com/blog/13616/google-easter-eggs/
