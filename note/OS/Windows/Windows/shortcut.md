@@ -31,33 +31,35 @@ Liste de touche raccourcies
 - `⊞ Windows` + `L` Verouiller la session
 
 ## Touche Control
-### Zoom sur navigateur
-- `Control/CTRL` + `Descendre/Monter la molette de souris` Gestion du zoom
-- `Control/CTRL` + `0` Zoom à 100%
-- `Control/CTRL` + `-` Augmenter le zoom
-- `Control/CTRL` + `+` Réduire le zoom
-### Changer d'onglet sur navigateur
-- `Control/CTRL` + `[1-9]` Passer à l'onglet du numéro indiqué
-- `Control/CTRL` + `↹ TAB` Changer de fenêtre
-  - `Control/CTRL` + `↑ Shift` + `↹ TAB` Revenir en arrière dans le changement de fenêtre
 ### Annuler
 - `Control/CTRL` + `Z` Annuler / Retour en arrière
 - `Control/CTRL` + `Y` Annuler le retour en arrière
 ### Rechercher et remplacer
 - `Control/CTRL` + `F` Rechercher
 - `Control/CTRL` + `H` Remplacer
+### Touches Control utilisateur
+- `Control/CTRL` + `A` Tout sélectionner
+- `Control/CTRL` + `P` Imprimer
+- `Control/CTRL` + `S` Sauvegarder
+### Press papier
+- `Control/CTRL` + `C` Copier
+- `Control/CTRL` + `X` Couper
+- `Control/CTRL` + `V` Coller
 ### Touche Control d'administration
 - `Control/CTRL` + `ALT` + `Suppr` Ouvrir le menu d'administration rapide
 - `Control/CTRL`+ `Shift` + `Lancer une application` Pour démarrer en tant qu'administrateur
 - `Control/CTRL` + `↑ Shift` + `Escape/Échap/ESC` Ouvrir le gestionnaire des tâches
 - `Control/CTRL` + `Escape/Échap/ESC` ALTernative d'ouverture du menu Windows
-### Touches Control utilisateur
-- `Control/CTRL` + `A` Tout sélectionner
-- `Control/CTRL` + `P` Imprimer
-#### Press papier
-- `Control/CTRL` + `C` Copier
-- `Control/CTRL` + `X` Couper
-- `Control/CTRL` + `V` Coller
+### Touche control sur navigateur
+#### Zoom sur navigateur
+- `Control/CTRL` + `Descendre/Monter la molette de souris` Gestion du zoom
+- `Control/CTRL` + `0` Zoom à 100%
+- `Control/CTRL` + `-` Augmenter le zoom
+- `Control/CTRL` + `+` Réduire le zoom
+#### Changer d'onglet sur navigateur
+- `Control/CTRL` + `[1-9]` Passer à l'onglet du numéro indiqué
+- `Control/CTRL` + `↹ TAB` Changer de fenêtre
+  - `Control/CTRL` + `↑ Shift` + `↹ TAB` Revenir en arrière dans le changement de fenêtre
 
 ## Touche TAB
 - `ALT` + `↹ TAB` Choix des fenêtres ouvertes
