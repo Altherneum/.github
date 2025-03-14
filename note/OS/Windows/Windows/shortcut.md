@@ -72,15 +72,15 @@ Liste de touche raccourcies
   - Permet de faire un clique droit via le clavier
   - Elle est maintenant souvent représenté avec le logo Copilot, et ouvre donc le menu Copilot (IA Windows)
     - ALTernative : `↑ Shift` + `F10`
-#### Déplacement et modification de texte
+### Déplacement et modification de texte
 - `Control/CTRL` + `➡ Flèche`  Se déplacer dans le sens de la flèche d'un mot
 - `Control/CTRL` + `↑ Shift` + `➡ Flèche`  Se déplacer dans le sens de la flèche d'un mot en sélectionnant
 - `↑ Shift` + `➡ Flèche`  Se déplacer dans le sens de la flèche en sélectionnant
 - `Control/CTRL` + `Retour ←` Supprimer un mot entier
-#### Touche Entrer
+### Touche Entrer
 - `Control/CTRL` + `↲ Enter` Créer un saut de page sur Word
 - `Control/CTRL` + `↲ Enter` Forcer la saut de ligne sur Word (En cas de tirer, titre, etc)
-#### Clique souris
+### Clique souris
 - `Control/CTRL` + `Clic gauche` Pour sélectionner plusieurs éléments (des fichiers ou des dossiers par exemple)
 - `↑ Shift` + `Clic gauche` Pour sélectionner tous les éléments compris entre le premier et le second clic 
   - Fonctionne avec du texte, des fichiers et des dossiers, et peut être combiné avec  `Control/CTRL` + `Clic gauche`
