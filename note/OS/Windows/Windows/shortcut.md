@@ -58,8 +58,9 @@ Liste de touche raccourcies
 - `Control/CTRL` + `+` Réduire le zoom
 #### Changer d'onglet sur navigateur
 - `Control/CTRL` + `[1-9]` Passer à l'onglet du numéro indiqué
-- `Control/CTRL` + `↹ TAB` Changer de fenêtre
-  - `Control/CTRL` + `↑ Shift` + `↹ TAB` Revenir en arrière dans le changement de fenêtre
+- `Control/CTRL` + `↹ TAB` Changer d'onglet vers le suivant
+  - `Control/CTRL` + `↑ Shift` + `↹ TAB` Revenir en arrière dans le changement d'onglet
+- `Control/CTRL` + `F4` Fermer l'onglet actuellement ouvert
 
 ## Touche TAB
 - `ALT` + `↹ TAB` Choix des fenêtres ouvertes
