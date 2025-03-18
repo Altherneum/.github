@@ -128,6 +128,9 @@ Du HTML
 
 ---
 
+Vidéo YouTube
+[YTB](https://youtube.com/watch?v=jNQXAC9IVRw)
+
 > citation
 
 Texte en <sub>indice</sub>
