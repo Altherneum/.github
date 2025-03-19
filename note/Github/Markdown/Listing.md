@@ -130,10 +130,10 @@ Du HTML
 
 Vidéo YouTube
 [YTB](https://youtube.com/watch?v=Zr7i30r8Gbs)
-Une autre vidéo YouTube [YTB 2](https://www.youtube.com/watch?v=XqZsoesa55w)
+Une autre vidéo YouTube [YTB 2](https://youtube.com/watch?v=XqZsoesa55w)
 
 Toujours une vidéo :
-[YTB 3](https://www.youtube.com/watch?v=OPf0YbXqDm0)
+[YTB 3](https://youtube.com/watch?v=OPf0YbXqDm0)
 
 > citation
 
@@ -182,4 +182,4 @@ Seconde note de bas de page multi-ligne[^2].
 <!-- Commentaire ignoré -->
 
 YouTube embed
-[Me at the zoo YouTube's creator video](https://youtube.com/watch?v=jNQXAC9IVRw)
+[Me at the zoo YouTube's creator video](https://www.youtube.com/shorts/pHqEuwjSdic)
