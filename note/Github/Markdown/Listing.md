@@ -129,7 +129,7 @@ Du HTML
 ---
 
 Vidéo YouTube
-[YTB](https://youtube.com/watch?v=jNQXAC9IVRw)
+[YTB](https://youtube.com/watch?v=Zr7i30r8Gbs)
 Une autre vidéo YouTube [YTB 2](https://www.youtube.com/watch?v=XqZsoesa55w)
 
 Toujours une vidéo :
