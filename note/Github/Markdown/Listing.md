@@ -130,10 +130,10 @@ Du HTML
 
 Vidéo YouTube
 [YTB](https://youtube.com/watch?v=jNQXAC9IVRw)
-Une autre vidéo YouTube [YTB 2](https://youtube.com/watch?v=jNQXAC9IVRw)
+Une autre vidéo YouTube [YTB 2](https://www.youtube.com/watch?v=XqZsoesa55w)
 
 Toujours une vidéo :
-[YTB 3](https://youtube.com/watch?v=jNQXAC9IVRw)
+[YTB 3](https://www.youtube.com/watch?v=OPf0YbXqDm0)
 
 > citation
 
