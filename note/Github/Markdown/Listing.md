@@ -182,4 +182,4 @@ Seconde note de bas de page multi-ligne[^2].
 <!-- Commentaire ignoré -->
 
 YouTube embed
-[Me at the zoo YouTube's creator video](https://www.youtube.com/shorts/pHqEuwjSdic)
+[Me at the zoo YouTube's creator video](https://youtube.com/shorts/pHqEuwjSdic)
