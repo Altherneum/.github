@@ -24,7 +24,7 @@ Liste de touche raccourcies
 - `⊞ Windows` + `↹ TAB` Choix des fenêtres ouvertes
 #### Applications de la barre des tâches
 - `⊞ Windows` + `[1~9]` Lancer l'application de la barre des tâches n° `1 à 9`
-  - [doc. altherneum.fr /admin /video #yt - D7UwheQ_7cQ](https://doc.altherneum.fr/admin/video#yt-D7UwheQ_7cQ)
+  - [youtube](https://youtube.com/watch?v=D7UwheQ_7cQ)
 ### Autres touches Windows
 - `⊞ Windows` + `G` Ouvrir la game barre
 - `⊞ Windows` + `Espace` Changer la langue du clavier
