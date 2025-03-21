@@ -86,3 +86,11 @@ Sur le menu d'installation : `Shift` + `F10`, et lancer la commande `OOBE\BYPASS
 - Ces packages peuvent être utilisés pour installer des logiciels.
 - `iexpress.exe`, `C:\Windows\System32`
 - [Youtube / John HAMMOND / Self-Extracting Executables for Hackers](https://www.youtube.com/watch?v=mAond4BkCfM)
+
+## Raccourcis .URL
+- Créer un fichier `<NOM>.URL`
+- Modifier le contenu avec :
+```
+[InternetShortcut]
+URL=https://google.fr
+```
