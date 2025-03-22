@@ -1,4 +1,6 @@
 # Sudo
+[C0OHejfYhfE](https://youtube.com/watch?v=C0OHejfYhfE)
+
 ## Ajouter un utilisateur au groupe sudo
 ### Usermod sudo
 - `usermod -aG sudo [USERNAME]`
