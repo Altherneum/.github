@@ -103,6 +103,17 @@ Du HTML
 </html>
 ```
 
+Un script PowerShell
+```
+Set-NetIPAddress –InterfaceIndex 4 –IPAddress 192.169.10.14 –PrefixLength 24 –DefaultGateway 192.169.10.254
+Set-DnsClientServerAddress -InterfaceIndex 4 -ServerAddresses 192.168.10.10
+Get-NetAdapter | Restart-NetAdapter
+
+### Enable Ping
+NetSH advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol="icmpv4:8,any" dir=in action=allow
+NetSH advfirewall firewall add rule name="ICMP Allow outgoing V4 echo request" protocol="icmpv4:8,any" dir=out action=allow
+```
+
 - Liste
 - Une autre liste
   - Liste tabulée
