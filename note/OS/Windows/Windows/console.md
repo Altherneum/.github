@@ -79,6 +79,8 @@
 - `netstat -na | more` Affiche toutes les connexions et tous les ports d'écoute, les adresses et numéros de ports seront affichés en format numérique
 
 ### netsh WiFi key
+[shorts / opcRUbVb208](https://www.youtube.com/shorts/opcRUbVb208)
+
 - `netsh wlan show profile` Liste les réseaux auxquels l'ordinateur s'est déjà connecté
 - `netsh wlan show profile "Wi-Fi ABC" key=clear` Affiche les clefs WiFi pour le réseau “WiFi ABC“
   - `netsh wlan show profile name=”Wi-Fi ABC” key=clear`
