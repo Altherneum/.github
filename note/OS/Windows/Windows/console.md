@@ -80,7 +80,8 @@
 
 ### netsh WiFi key
 - `netsh wlan show profile` Liste les réseaux auxquels l'ordinateur s'est déjà connecté
-- `netsh wlan show profile "WiFi ABC" key=clear` Affiche les clefs WiFi pour le réseau “WiFi ABC“
+- `netsh wlan show profile "Wi-Fi ABC" key=clear` Affiche les clefs WiFi pour le réseau “WiFi ABC“
+  - `netsh wlan show profile name=”Wi-Fi ABC” key=clear`
 - `for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear` Affiche tous les mots de passe Wi-Fi auxquels l'ordinateur s'est déjà connecté
 
 ### ICMP
