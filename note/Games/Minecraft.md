@@ -1,3 +1,6 @@
+# Shortcut
+[shorts / tIV_AxtXdfY](https://www.youtube.com/shorts/tIV_AxtXdfY)
+
 # To do list
 - Auto craft
 - Trial chamber
