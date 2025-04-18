@@ -5,7 +5,13 @@
 - `@echo off` Pour empêcher l’affichage de toutes les commandes d’un fichier de traitement par lots (y compris la commande écho désactivé) à l’écran, sur la première ligne du type de fichier de traitement par lots
 - `echo off` Pour empêcher l’écho des commandes à l’invite de commande
 - `echo text` Affiche "text"
+### Afficher des variables
 - `echo %random%` Chiffres aléatoires
+- `echo %USERNAME%` Affiche le nom d'utilisateur
+- `echo %COMPUTERNAME%` Affiche le nom du PC
+- `echo %USERDOMAIN%` Affiche le nom de domaine
+### Autres variables
+voire [gist github](gist.github.com/RebeccaWhit3/5dad8627b8227142e1bea432db3f8824)
 
 ## Historique
 - `F7` Affiche l'historique des commandes
