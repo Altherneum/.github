@@ -13,7 +13,8 @@
 ### Autres variables
 - voire [gist github](gist.github.com/RebeccaWhit3/5dad8627b8227142e1bea432db3f8824)
 - `SET` Liste les variables du système
-- `SET <nomDeVariable>` Affiche la variable, exemple `SET computername`
+- `SET <nomDeVariable>` Affiche la variable
+  - exemple `SET computername`
 
 ## Historique
 - `F7` Affiche l'historique des commandes
