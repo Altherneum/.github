@@ -1,5 +1,4 @@
-Sur ce guide on va vous expliquer le HTML  
-
+# HTML
 HTML (**Hypertext Markup Language** ; "langage de balisage d’hypertexte") dans sa dernière version "HTML5", est le langage de **balisage** conçu pour représenter et structurer [sémantiquement](https://fr.wikipedia.org/wiki/Sémantique) une page web.  
 
 Il est souvent utilisé conjointement avec le langage de programmation [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) et des [feuilles de style en cascade](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade) (CSS).  
@@ -16,7 +15,6 @@ HTML est inspiré du [Standard Generalized Markup Language](https://fr.wikipedia
 - De 2007 à nos jours : HTML 5 et abandon du XHTML 2
 
 # Syntaxe de HTML ✨
-
 ```
 <TITLE>Exemple de titre</TITLE>
 <p>Ceci est une phrase avec un <a HREF="cible.html">hyperlien</a>.</p>
@@ -29,13 +27,15 @@ HTML est inspiré du [Standard Generalized Markup Language](https://fr.wikipedia
 Cet exemple contient du texte, cinq balises et une référence d’entité :
 - `TITLE` est la balise ouvrante de l’élément TITLE. `/TITLE` est la balise fermante de l’élément TITLE. `Exemple de HTML` est le contenu de l’élément TITLE.
 - `A HREF="cible.html"` est la balise ouvrante de l’élément A, avec : `HREF=cible.html`, l’attribut HREF dont la valeur est cible.html (le lien).
-- `P` est la balise ouvrante de l’élément text. Toutefois, elle est utilisée ici comme s’il s’agissait d’un séparateur de paragraphe, et c’est même ainsi qu’elle est souvent présentée dans les plus anciennes documentations de HTML. Il s’agit de la balise ouvrante du paragraphe dont le contenu est Ceci est un paragraphe où; il n’y a pas d’hyperlien. La balise fermante de l’élément P, qui est optionnelle, est ici omise. L’élément P est implicitement terminé lorsqu’un nouveau paragraphe commence ou que l’élément parent est fermé (cas non présent).
-- Les balises peuvent être indifféremment écrites en minuscules ou majuscules. L’usage des minuscules devient plus courant car XHTML les impose.
+- `P` est la balise ouvrante de l’élément text
+  - Toutefois, elle est utilisée ici comme s’il s’agissait d’un séparateur de paragraphe, et c’est même ainsi qu’elle est souvent présentée dans les plus anciennes documentations de HTML
+  - Il s’agit de la balise ouvrante du paragraphe dont le contenu est Ceci est un paragraphe où ; il n’y a pas d’hyperlien
+  - La balise fermante de l’élément P, qui est optionnelle, est ici omise. L’élément P est implicitement terminé lorsqu’un nouveau paragraphe commence ou que l’élément parent est fermé (cas non présent)
+- Les balises peuvent être indifféremment écrites en minuscules ou majuscules. L’usage des minuscules devient plus courant car XHTML les impose
 - `< !-- {CODE OU COMMENTAIRE} -- >` est la balise "commentaire" et permet de ne pas exécuter de code ou de laisser une note
 - `pre` représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits
 
 ## Consulter le code d'une page 🔬
-
 ![image Chrome RClick](https://github.com/Altherneum/.github/blob/main/note/assets/images/Chrome-RClick.png?raw=true)
 
 (Menu "clique droit" sur Chrome v.100+)
@@ -57,7 +57,6 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 ![HTML-devTool](https://github.com/Altherneum/.github/blob/main/note/assets/images/HTML-devTool.png?raw=true)
 
 # Définition d'un élément HTML
-
 [MDN Qu'est ce qu'un élément HTML](https://developer.mozilla.org/fr/docs/Glossary/Element)
 
 ![image d'un élément HTML](https://github.com/Altherneum/.github/blob/main/note/assets/images/HTML-elem.png?raw=true)
@@ -65,12 +64,10 @@ Vous pouvez aussi **inspecter et modifier le code en direct** avec un **clique d
 Exemple d'un élément text **P** avec une class "nice" (Pour appliquer des styles ou sélecteur de code) et comme contenu (et donc text) "Hello world!"
 
 ## Documentation
-
 - __**Liste glossaire des éléments**__ [sur le MDN Mozilla](https://developer.mozilla.org/fr/docs/Glossary/Element) "mozilla developer network"
 - Doc [MDN des éléments HTML](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
 
 ## Exemples de page HTML
-
 - La page que vous consultez : [Code](https://github.com/Altherneum/Altherneum.github.io/blob/main/cours/html.html) (pré-charge les pages)
 - Le corps de la page "Chiffrement de César" : [Code](https://github.com/Altherneum/Altherneum.github.io/blob/main/src/html/content/caesar.html) (chargé via JS), [Page web](https://doc.Altherneum.fr/outils/caesar.html)
 - Le Header avec les liens : [Code](https://github.com/Altherneum/Altherneum.github.io/blob/main/src/html/include/header.html) (chargé via JS sur les pages requises)
