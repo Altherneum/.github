@@ -1,5 +1,4 @@
-Sur ce guide on va vous expliquer le CSS
-
+# CSS
 La feuille de style **CSS** (__**Cascading Style Sheets**__) permet d'améliorer la vue visuelle de leur site Web. Nous aborderons diverses techniques et concepts clés, allant des selecteurs de base aux animations et transitions.
 
 - **1994** : Le W3C publie les spécifications CSS Level 0.
@@ -8,7 +7,7 @@ La feuille de style **CSS** (__**Cascading Style Sheets**__) permet d'améliorer
 - **2005** : Arrivée du CSS Level 3 avec des fonctionnalités supplémentaires telles que les animations, les transitions, et les effets graphiques.
 - **2011** : La version CSS Level 4 est en cours de développement, apportant des améliorations dans plusieurs domaines tels que les feuilles de style à inclusion, les feuilles de styles modulaires, et des fonctionnalités plus avancées pour les médias.
 
-# **Syntaxe**
+## Syntaxe du CSS
 Choisir des éléments HTML à traiter à l'aide d'un type d'élément HTML, et y attribuer une propriété
 ```
   body {
