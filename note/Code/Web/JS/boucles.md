@@ -32,7 +32,6 @@ for (let i = 0; i < nombres.length; i++) {
 ```
 ### for...in
 - La boucle `for...in` est utilisée pour parcourir les *propriétés* d'un objet.  Contrairement à la boucle `for...in` qui utilise un tableau, la boucle `for...in` retourne également le nom de chaque propriété
-- 
 ```
 let personne = {
   nom: "Alice",
