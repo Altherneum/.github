@@ -42,11 +42,3 @@ Microsoft réagit alors en développant JScript, qu'il inclut ensuite dans Inter
 "JavaScript" est une marque déposée d'Oracle Corporation aux États-Unis. 
 
 À l'origine, la marque a été attribuée à Sun Microsystems le 6 mai 1997, puis transférée à Oracle lors de leur acquisition de Sun en 2009
-
-# Exemples de fonctions JS
-## Typeof
-- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
-  - `console.log(typeof 42);`
-  - `console.log(typeof 'blubber');`
-  - `console.log(typeof true);`
-  - `console.log(typeof undeclaredVariable);`
