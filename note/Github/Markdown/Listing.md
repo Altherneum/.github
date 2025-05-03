@@ -26,12 +26,20 @@
 ![Image local github.io repo](/note/assets/images/chrome_uKrMVGwLFY.png) image local .github
 
 **Text en gras**
-
 \*\*Text à ne pas mettre en gras\*\*
+`**Gras dans du code**`
+```
+**ABC**
+```
 
 *Text en italique*
-
 \*Text à ne pas mettre en italique\*
+`*Italique dans du code*`
+```
+*ABC*
+```
+
+***Gras et italique***
 
 ~~Text erroné~~
 
