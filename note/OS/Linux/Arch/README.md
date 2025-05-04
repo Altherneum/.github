@@ -22,3 +22,6 @@ chmod +x /install.sh
 Retirer l'ISO ou CD/DVD du lecteur
 ### Boot the system
 PRENDRE CAPTURE DU BOOT LOADER
+## Installer l'userspace
+- [/user-space.sh](/note/OS/Linux/Arch/user-space.sh)
+  - Le fichier n'est pas téléchargé par défaut !
