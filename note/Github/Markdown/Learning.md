@@ -20,9 +20,13 @@ Néanmoins, les sites Web et projets suivants ont adopté CommonMark / MarkDown�
 ![Exemple de markdown](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_uKrMVGwLFY.png?raw=true)
 # Exemple du rendu
 - **Text en gras**
+  - S'écrit via \*\*Text en gras\*\*
 - *Text en italique*
+  - S'écrit via \*Text en italique\*
 - ~~Text erroné~~
+  - S'écrit via \~\~Text erroné\~\~
 - __Text souligné__
+  - S'écrit via \_\_Text souligné\_\_
 - Vidéo YouTube [Me at the zoo](https://youtube.com/watch?v=jNQXAC9IVRw)
 
 
