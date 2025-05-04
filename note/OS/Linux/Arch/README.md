@@ -14,7 +14,7 @@ chmod +x /install.sh
 - [/install.sh](/note/OS/Linux/Arch/install.sh) (LVM & Disk to use)
 - [/pacstrap.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/pacstrap.sh)
 - Chroot (Root, user, and hostname)
-  - ~[arch-chroot-grub.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/arch-chroot-grub.sh)~
+  - ~~[arch-chroot-grub.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/arch-chroot-grub.sh)~~
   - [/mnt/arch-chroot-systemd.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/arch-chroot-systemd.sh)
 
 ## Start Arch
