@@ -27,21 +27,25 @@
 - `==` : Égal à
   - `3 == 3` est `true`
   - `5 == 3` est `false`
+
 ### Différent de
 - `!=` : Différent de
   - `5 != 3` est `true`
   - `5 != 5` est `false`
+
 ### Égal à stricte
-- `===` : Égal à (Comparaison stricte)
+- `===` : Égal à [comparaison stricte](#comparaison-stricte)
   - `5 === 5` est `true`
   - `"5" === "5"` est `true`
   - `"5" === 5` est `false`
+
 ### Différent de stricte
-- `!==` : Différent de (Comparaison stricte)
+- `!==` : Différent de [comparaison stricte](#comparaison-stricte)
   - `5 !== 3` est `true`
   - `"5" !== "3"` est `true`
   - `"5" !== 5` est `true`
   - `5 !== 5` est `false`
+
 ### Inférieur à
 - `<` : Inférieur à
   - `5 < 3` est `true`
@@ -49,13 +53,31 @@
 - `>` : Supérieur à
   - `5 > 3` est `true`
   - `3 > 5` est `false`
+
 ### Inférieur ou égal à
 - `<=` : Inférieur ou égal à
   - `5 <= 5` est `true`
   - `3 <= 5` est `true`
   - `5 <= 3` est `false`
+
 ### Supérieur ou égal à
 - `>=` : Supérieur ou égal à
   - `5 >= 3` est `true`
   - `5 >= 5` est `true`
   - `3 >= 5` est `false`
+
+### Comparaison stricte
+#### Définition d'une comparaison stricte
+- L'opérateur de comparaison `==` converti les valeurs vers un type correspondant
+- L'opérateur de comparaison `===` compare la valeurs et le type
+#### Exemples de comparaisons
+- Comparaisons classique
+  - `0 == ""` est `true`
+  - `1 == "1"` est `true`
+  - `1 == true` est `true`
+- Comparaisons strictes
+  - `0 === ""` est `false`
+  - `1 === "1"` est `false`
+  - `1 === true` est `false`
+
+### Cas spécifique
