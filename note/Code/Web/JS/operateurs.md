@@ -68,7 +68,7 @@
 
 ### Comparaison stricte
 #### Définition d'une comparaison stricte
-- L'opérateur de comparaison `==` converti les valeurs vers un type correspondant
+- L'opérateur de comparaison `==` convertit les valeurs vers un type correspondant
 - L'opérateur de comparaison `===` compare la valeurs et le type
 #### Exemples de comparaisons
 - Comparaisons classique
@@ -81,3 +81,39 @@
   - `1 === true` est `false`
 
 ### Cas spécifique
+#### 0.1 + 0.2
+- `0.1 + 0.2 == 0.3` est `false`
+- La console indique `0.1 + 0.2 = 0.30000000000000004`
+#### Floating point calcul
+- `parseInt(0.000001)` est `0`
+- `parseInt(0.0000001)` est `1`
+- `parseInt(1 / 1999999)` est `5`
+#### Console output manipulés
+```js
+(![] + [])[+[]] +
+  (![] + [])[+!+[]] +
+  ([![]] + [][[]])[+!+[] + [+[]]] +
+  (![] + [])[!+[] + !+[]];
+```
+Ce script va retourner `'fail'`
+#### Exemples d'output manipulés
+- `+![]` est `0`
+- `+!![]` est `1`
+- `!![]` est `true`
+- `![]` est `false`
+- `[][[]]` est `undefined`
+- `+!![] / +![]` est `Infinity`
+- `[] + {}` est `"[object Object]"`
+- `+{}` est `NaN`
+#### Autres cas
+- `![] + []` est `'false'`
+- `![]` est `false`
+#### Array concat
+`[1, 2, 3] + [4, 5, 6]` est `'1,2,34,5,6'`
+#### ParseInt F*ck
+- `parseInt("f*ck")` est `NaN`
+- `parseInt("f*ck", 16)` est `15`
+- `parseInt("Infinity", 18)` est `NaN`
+- `parseInt("Infinity", 19)` est `18`
+## Sources
+- [github.com/denysdovhan/wtfjs/blob/master/README.md](https://github.com/denysdovhan/wtfjs/blob/master/README.md)
