@@ -1365,3 +1365,58 @@ Move azure images to asset
 - [Stackoverflow Export](https://stackoverflow.com/questions/22317951/export-html-table-data-to-excel-using-javascript-jquery-is-not-working-properl)
 - [Phppot Convert](https://phppot.com/javascript/convert-html-table-excel-javascript/)
 - [Stackoverflow Convert](https://stackoverflow.com/questions/70304838/convert-excel-sheet-data-to-html-with-javascript)
+
+# ⌛
+# Proposition de mise à niveau
+## Documentation
+
+### Reprise des documentations en format ouvert
+- Reprendre les documentations
+  - Attribuer quelqu'un qui passera plus de temps dessus
+
+### Création d'un CI / CD régulier
+#### Rerpise de documentation ancienne
+- Reprendre des documentations par dates anti chronologiques et valider la procédure ou la recréer
+#### Modification du CI actuel administratif
+- Trouver un canal mail Manager, DSI et autre afin de signaler chaque mise à jour de procédure
+- Créer un document sur l'endroit où les déposer
+- Créer un workflow
+  - Différence entre chaques updates
+  - Message et vérification des versions
+#### Regrouper et placer en silot les procédures
+- Wiki
+- Ivanti (Consignes)
+- Ivanti (Historiques de ticket)
+- Procédure en ligne
+- Autre SharePoint séparés (fork de fichier possible ?)
+- Procédure orales sans écrits
+
+### Tests aléatoires
+- Créer une vérification via un choix d'incident et de client aléatoire afin de valider et tester les procédures
+
+### Création de contrat = procédure...
+Voire le cas du 13/05 suite à un appel ou l'administrateur à indiqué ne pas connaitre le contrat et indiquer que cela semble être le mauvais n° de téléphone
+
+### Test des 5 cliques
+- Plus de 5 cliques pour trouver une procédure ou une information = 💩
+- Créer des règles d'architectures
+- Créer une image représentative (voire les architectures que je permet en folder imbriqués)
+
+### Test du newb
+Faire prendre quelqu'un de non technicien, et un technicien, les deux ne doivent pas connaitre le sujet, et le traiter sans aucune aide afin de valider si la façon de faire est viable
+
+### Stock sur demande
+- Attribuer 2 à 4 utilisateurs permits au stock
+- Toutes actions liés au stock doivent passer par eux, permettant de réguler et savoir qui trash le stock ou pique dedans 🤣
+
+### Création d'un plan d'architecture
+- Silot (équipe, entreprise)
+- Clients (Liste, contrats, type d'incident, GLPI vs Ivanti, bastion et notes)
+  - Liens vers les actions techniques aux choix
+  - Adresses mails, équipes techniques
+  - Liens vers les Silot d'équipes concernés
+- Actions techniques
+  - Liste complète (voire les cours que je peut stocker :shush it:)
+- Liste des applications, URL et endpoint
+  - Liste aussi qui les gères (Ex: VPN, DNS(Avocats :shush it too:), ...)
+- Plan réseau comme d'hab car on l'a même pas mdr (on aurais au moins le plan des bastions et rebonds)
