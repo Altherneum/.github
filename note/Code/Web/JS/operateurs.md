@@ -108,6 +108,8 @@ Ce script va retourner `'fail'`
 #### Autres cas
 - `![] + []` est `'false'`
 - `![]` est `false`
+- `true + true` est `2`
+- `(true + true) * (true + true) - true` est `3`
 #### Array concat
 `[1, 2, 3] + [4, 5, 6]` est `'1,2,34,5,6'`
 #### ParseInt F*ck
