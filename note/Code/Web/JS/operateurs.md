@@ -117,5 +117,8 @@ Ce script va retourner `'fail'`
 - `parseInt("f*ck", 16)` est `15`
 - `parseInt("Infinity", 18)` est `NaN`
 - `parseInt("Infinity", 19)` est `18`
+NaN est un nombre
+- Le type d'objet de `NaN` (`Not a number`, soit "pas un nombre") est `'number'`
+  - `typeof NaN` est `'number'`
 ## Sources
 - [github.com/denysdovhan/wtfjs/blob/master/README.md](https://github.com/denysdovhan/wtfjs/blob/master/README.md)
