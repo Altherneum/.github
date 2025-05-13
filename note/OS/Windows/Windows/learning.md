@@ -87,10 +87,16 @@ Sur le menu d'installation : `Shift` + `F10`, et lancer la commande `OOBE\BYPASS
 - `iexpress.exe`, `C:\Windows\System32`
 - [Youtube / John HAMMOND / Self-Extracting Executables for Hackers](https://www.youtube.com/watch?v=mAond4BkCfM)
 
-## Raccourcis .URL
+## Raccourcis
+## .URL
 - Créer un fichier `<NOM>.URL`
 - Modifier le contenu avec :
 ```
 [InternetShortcut]
 URL=https://google.fr
 ```
+
+## Lien WEB
+- Créer un raccourci
+- Rentrer une URL (Exemple : `https://github.com/Altherneum/.github/`)
+- Saisir le nom du raccourci et valider
