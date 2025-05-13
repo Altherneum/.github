@@ -102,7 +102,7 @@
   ([![]] + [][[]])[+!+[] + [+[]]] +
   (![] + [])[!+[] + !+[]];
 ```
-Ce script va retourner `'fail'`
+soit aussi en une ligne `(![] + [])[+[]] + (![] + [])[+!+[]] + ([![]] + [][[]])[+!+[] + [+[]]] + (![] + [])[!+[] + !+[]];`, et va retourner `'fail'`
 #### Exemples d'output manipulés
 - `+![]` est `0`
 - `+!![]` est `1`
