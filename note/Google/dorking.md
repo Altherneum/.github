@@ -2,6 +2,9 @@
 
 Les Google Dorks, également connus sous le nom de "Google Hacks" ou de "trucs de recherche de moteur de recherche", sont des requêtes de recherche avancées conçues pour récupérer des informations cachées, spécifiques ou non indexées que les recherches Google standard ne découvrent pas. Ce procédé peut être utilisé à des fins légitimes telles que la recherche de données, le test de sécurité ou l'enquête journalistique. Toutefois, il est important d'utiliser cette puissance de manière responsable et de respecter les lois sur la vie privée et les droits de copie.
 
+## Alternative Brave
+[search.brave.com/help/operators](https://search.brave.com/help/operators)
+
 ## Google Search Operators
 
 Les opérateurs de recherche de Google sont des symboles ou textes ajoutés à une requête pour modifier les résultats de la recherche. Voici une liste non exhaustive de certains opérateurs :
