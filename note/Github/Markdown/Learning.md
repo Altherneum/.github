@@ -19,19 +19,25 @@ Néanmoins, les sites Web et projets suivants ont adopté CommonMark / MarkDown�
 # Exemple de markdown
 - **Text en gras**
   - S'écrit via \*\*Text en gras\*\*
+  - `**Text en gras**`
 - *Text en italique*
   - S'écrit via \*Text en italique\*
+  - `*Text en italique*`
 - ~~Text erroné~~
   - S'écrit via \~\~Text erroné\~\~
+  - `~~Text erroné~~`
 - __Text souligné__
   - S'écrit via \_\_Text souligné\_\_
+  - `__Text souligné__`
 - Une [URL vers un site](https://doc.altherneum.fr)
   - S'écrit via \[URL vers un site\]\(https://doc.altherneum.fr)
+  - `[URL vers un site](https://doc.altherneum.fr)`
 - Vidéo YouTube [Me at the zoo](https://youtube.com/watch?v=jNQXAC9IVRw)
   - S'écrit via \[Me at the zoo\]\(https://youtube.com/watch?v=jNQXAC9IVRw)
-
-## Image d'exemple
-![Exemple de markdown](https://github.com/Altherneum/.github/blob/main/note/assets/images/chrome_uKrMVGwLFY.png?raw=true)
+  - `[Me at the zoo](https://youtube.com/watch?v=jNQXAC9IVRw)`
+## Exemple de chapitre
+- S'écrit via \#\# Chapitre en début de ligne
+- `## Exemple de chapitre`
 
 # Source
 Text et référence issues de : [wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown), [docs.github.com](https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
