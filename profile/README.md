@@ -72,5 +72,6 @@
   - [Apache2](https://doc.ubuntu-fr.org/apache2)
   - [OpenJDK](https://openjdk.org/)
   - [VsFTPd](https://doc.ubuntu-fr.org/vsftpd)
-  - [screen](https://doc.ubuntu-fr.org/screen) | [Exemple d'utilisation de Screen](https://doc.ubuntu-fr.org/screen#exemple_d_utilisation_de_screen)
+  - [Screen](https://doc.ubuntu-fr.org/screen)
+    - [Exemple d'utilisation de Screen](https://doc.ubuntu-fr.org/screen#exemple_d_utilisation_de_screen)
   - [MySQL](https://www.mysql.com/fr/)
