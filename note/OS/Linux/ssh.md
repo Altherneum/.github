@@ -36,15 +36,33 @@
 ### Envoyer une commande et se déconnecter
 - `ssh [HOST] "[CMD]"` Lance une commande sans rester connecté
 - `ssh 10.20.222.86 "ls -a"` Exemple
-### Se connecter en SFTP
-### Envoyer ou télécharger des fichiers
-- `scp [FICHIER] [USER]@[HOST]:[PATH][FICHIER]` Envoie le fichier vers l'host
-  - `scp test.txt superusername@altherneum.fr:/home/superusername/test.txt`
-- `scp -r [PATH] [RemoteHost]/[PATH]` SCP un dossier de manière récursive
-  - `scp -r Workspace altherneum.fr/home/superusername` Exemple
 
-## Lister 
-- `who` Afficher les utilisateurs connectés au système
-  - `who -a` Affiche toutes les informations d'utilisateurs (`--all`) 
-  - `who -q` Affiche le nombre d'utilisateurs (`--count`)
-- `whoami` Afficher votre nom d'utilisateur
+## Vérifier les dernières connexions SSH
+### Connexions SSH échouées
+`lastb`
+### Connexions SSH réussies
+`last`
+### Connexions SSH depuis un fichier
+#### Auth.log
+- `/var/log/auth.log`
+  - `grep "Failed password" /var/log/auth.log`
+#### var/log/secure
+- `/var/log/secure`
+  - `grep "Failed password" /var/log/secure`
+#### var/log/btmp
+- `/var/log/btmp` est le fichier sous Linux est utilisé pour stocker des informations sur les tentatives de connexion infructueuses.
+Il s'agit d'un fichier binaire qui enregistre chaque tentative de connexion infructueuse effectuée sur le système
+  - `last /var/log/btmp` Affiche la première connexion enregistré
+  - `last -f /var/log/btmp` Affiche le fichier 
+### Connexions SSH log par SystemD
+- `journalctl`
+  - `journalctl _SYSTEMD_UNIT=sshd.service`
+  - `journalctl _SYSTEMD_UNIT=sshd.service | grep "Failed"`
+
+## Vérifier la configuration SSHD
+Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la commande `sshd -T`
+
+- Cela vous permet de voir les paramètres actuellement appliqués, y compris les valeurs par défaut et les remplacements du fichier de configuration
+- Cette commande affiche les paramètres de configuration complets dans l'ordre dans lequel ils sont traités par sshd
+- Si vous devez vérifier la syntaxe du fichier de configuration avant d'appliquer des modifications, vous pouvez utiliser l'option `-t` à la place
+  - Cela vérifie la validité du fichier de configuration et la santé des clés, en veillant à ce qu'il n'y ait pas d'erreurs de syntaxe
