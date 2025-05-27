@@ -6,6 +6,9 @@
 
 Le protocole SSH a été conçu avec l'objectif de remplacer les différents protocoles non chiffrés comme rlogin, telnet, rcp et rsh
 
+## Image SSH avec un MOTD
+![Image de connexion SSH avec un MOTD](https://github.com/Altherneum/.github/blob/main/note/assets/images/WindowsTerminal_C6L2YhXPMX.png?raw=true)
+
 ## SSH vs SSD
 - **SSH**: Outil côté **__client__** pour initier des connexions
 - **SSHD**: Daemon côté **__serveur__** pour accepter et gérer les connexions
