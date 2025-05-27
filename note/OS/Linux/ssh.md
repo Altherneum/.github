@@ -1,6 +1,14 @@
 # SSH
 ## Vérifier le status de SSHD
+### Vérifier le status de SSHD via systemCTL
 - `Systemctl status sshd`
+### Vérifier la configuration de SSHD
+Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la commande `sshd -T`
+
+- Cela vous permet de voir les paramètres actuellement appliqués, y compris les valeurs par défaut et les remplacements du fichier de configuration
+- Cette commande affiche les paramètres de configuration complets dans l'ordre dans lequel ils sont traités par sshd
+- Si vous devez vérifier la syntaxe du fichier de configuration avant d'appliquer des modifications, vous pouvez utiliser l'option `-t` à la place
+  - Cela vérifie la validité du fichier de configuration et la santé des clés, en veillant à ce qu'il n'y ait pas d'erreurs de syntaxe
 
 ## Fichier de configuration SSH
 - `ls -l /etc/ssh`
@@ -11,11 +19,14 @@
   - `AllowUsers` Ce mot-clef peut être suivi d'une liste de noms d'utilisateurs. S'il est spécifié, seuls les noms d'utilisateurs correspondant sont autorisés à se connecter
   - `AuthorizedKeysFile` Spécifie le fichier contenant les clefs publiques à utiliser pour l'authentification de l'utilisateur
   - `PubkeyAuthentication` Spécifie si on autorise l'authentification par clef publique
-### Afficher la configuration
-- `sudo sshd -T`
-
-## Vérifier les logs
-- `var/log/auth.log` ou `/var/log/secure`
+### Fichier de configuration custom
+- Voire dans le repo server comment j'avait fait et le doc ici
+  - créer un fichier dans un endroit de SSH
+  - et ajouter les règles dedans
+  - reboot ssh
+### Relancer SSH
+#### Via SystemCTL
+- `Systemctl restart ssh`
 
 ## Créer une clé SSH
 ### Créer la clé
@@ -79,12 +90,11 @@ id_rsa.pub           100%  760     8.7KB/s   00:00
 ```
 
 ### Tester la clé
+Vérifier si la commande est OK : à tester : TO DO !
 - `ssh -i ~/.ssh/[KEY_NAME] root@[HOST]`
+
 ### Bloquer les connections sans clé
-- `PermitRootLogin without-password`
-- `PasswordAuthentication no`
-- `service ssh restart`
-- `service sshd restart`
+- Voire la chapitre [# Fichier de configuration SSH](#Fichier-de-configuration-SSH)
 
 ### Valider la clé
 - `ssh admin@root`
@@ -93,6 +103,25 @@ PS C:\Users\user> ssh admin@altherneum.fr
 Enter passphrase for key 'C:\Users\user/.ssh/id_rsa':
 ```
 - Valider avec la passPhrase
+
+### Ajouter la clé privé sur Windows
+- Lancer SSH en administrateur : `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service`
+- Ajouter la clé privé : `ssh-add "C:\Users\<username>\.ssh\<id_rsa_key_name>"`
+  - Exemple du cours : `ssh-add "C:\Users\user\.ssh\id_rsa"`
+- Valider avec la passPhrase
+#### Résultat de l'ajout de la clé privé sur Windows
+```
+ssh-add "C:\Users\user\.ssh\id_rsa"
+Enter passphrase for C:\Users\user\.ssh\id_rsa:
+Identity added: C:\Users\user\.ssh\id_rsa (admin@vps)
+```
+
+Et lors de la connexion :
+```
+ssh admin@altherneum.fr
+🐧      OS              GNU/Linux
+...
+```
 
 ## Se connecter
 ### Se connecter en SSH
@@ -123,11 +152,3 @@ Il s'agit d'un fichier binaire qui enregistre chaque tentative de connexion infr
 - `journalctl`
   - `journalctl _SYSTEMD_UNIT=sshd.service`
   - `journalctl _SYSTEMD_UNIT=sshd.service | grep "Failed"`
-
-## Vérifier la configuration SSHD
-Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la commande `sshd -T`
-
-- Cela vous permet de voir les paramètres actuellement appliqués, y compris les valeurs par défaut et les remplacements du fichier de configuration
-- Cette commande affiche les paramètres de configuration complets dans l'ordre dans lequel ils sont traités par sshd
-- Si vous devez vérifier la syntaxe du fichier de configuration avant d'appliquer des modifications, vous pouvez utiliser l'option `-t` à la place
-  - Cela vérifie la validité du fichier de configuration et la santé des clés, en veillant à ce qu'il n'y ait pas d'erreurs de syntaxe
