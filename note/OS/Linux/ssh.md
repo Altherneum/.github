@@ -17,7 +17,7 @@
 ## Vérifier les logs
 - `var/log/auth.log` ou `/var/log/secure`
 
-## Créer une clé V2
+## Créer une clé SSH
 ### Créer la clé
 - `ssh-keygen -t rsa -b 4096`
 - Le serveur va répondre `Generating public/private rsa key pair.`
