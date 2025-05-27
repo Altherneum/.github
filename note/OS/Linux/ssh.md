@@ -1,7 +1,18 @@
 # SSH
+**Secure Shell** (SSH) est un protocole de communication sécurisé
+- Le protocole de connexion impose un échange de clés de chiffrement en début de connexion
+- Par la suite, tous les segments TCP sont authentifiés et chiffrés
+  - Il devient donc impossible d'utiliser un analyseur de paquets (sniffer) pour voir ce que fait l'utilisateur
+
+Le protocole SSH a été conçu avec l'objectif de remplacer les différents protocoles non chiffrés comme rlogin, telnet, rcp et rsh
+
+## SSH vs SSD
+- **SSH**: Outil côté **__client__** pour initier des connexions
+- **SSHD**: Daemon côté **__serveur__** pour accepter et gérer les connexions
+
 ## Vérifier le status de SSHD
 ### Vérifier le status de SSHD via systemCTL
-- `Systemctl status sshd`
+- `Systemctl status sshd` ou `Systemctl status ssh`
 ### Vérifier la configuration de SSHD
 Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la commande `sshd -T`
 
@@ -10,7 +21,7 @@ Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la command
 - Si vous devez vérifier la syntaxe du fichier de configuration avant d'appliquer des modifications, vous pouvez utiliser l'option `-t` à la place
   - Cela vérifie la validité du fichier de configuration et la santé des clés, en veillant à ce qu'il n'y ait pas d'erreurs de syntaxe
 
-## Fichier de configuration SSH
+## Fichier de configuration SSHD
 - `ls -l /etc/ssh`
 - `more /etc/ssh/sshd_config` Fichier de configuration original [doc](https://www.delafond.org/traducmanfr/man/man5/sshd_config.5.html)
 - `nano /etc/ssh/sshd_config.d/*.conf` Fichier de configuration à modifier
@@ -20,10 +31,27 @@ Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la command
   - `AuthorizedKeysFile` Spécifie le fichier contenant les clefs publiques à utiliser pour l'authentification de l'utilisateur
   - `PubkeyAuthentication` Spécifie si on autorise l'authentification par clef publique
 ### Fichier de configuration custom
-- Voire dans le repo server comment j'avait fait et le doc ici
-  - créer un fichier dans un endroit de SSH
-  - et ajouter les règles dedans
-  - reboot ssh
+#### Comment créer un fichier de configuration SSH
+- Créer un fichier `<NOM>.conf` dans `/etc/ssh/sshd_config.d/`
+- Ajouter dans le fichier les règles SSH
+  - Exemple :
+```
+PermitRootLogin no
+permitemptypasswords no
+PubkeyAuthentication yes
+```
+- Relancer SSHD : `systemctl restart sshd`
+#### En script
+```
+touch /etc/ssh/sshd_config.d/hardening.conf
+
+echo "PermitRootLogin no" >> /etc/ssh/sshd_config.d/hardening.conf
+echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config.d/hardening.conf
+# echo "PasswordAuthentication no" >> /etc/ssh/sshd_config.d/hardening.conf # Créer une clef SSH avant d'activer
+echo "permitemptypasswords no" >> /etc/ssh/sshd_config.d/hardening.conf
+
+systemctl restart sshd
+```
 ### Relancer SSH
 #### Via SystemCTL
 - `Systemctl restart ssh`
