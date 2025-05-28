@@ -47,7 +47,6 @@
 - `chgrp [GROUPE] [FILE]`
   - Change le groupe du fichier
 
-# WIP / To Do
 ## Chmod numérique
 ### Calculer une permission
 - Additionner les valeurs afin de créer un chiffre
