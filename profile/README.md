@@ -6,6 +6,7 @@
 
 - [Altherneum.fr](https://Altherneum.fr)
 - [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)
+- [mc.Altherneum.fr](https://mc.Altherneum.fr)
 - [github.com/Altherneum](https://github.com/Altherneum)
 
 # Repo
