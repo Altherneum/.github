@@ -5,6 +5,12 @@
 `/home/user`
 # Exemple
 ```
+[user]
+	name = lx78WyY0J5
+	email = 9j2k37st@gmail.com
+```
+# Commande
+```
 git config --global user.name "lx78WyY0J5"
 git config --global user.email "9j2k37st@gmail.com"
 ```
