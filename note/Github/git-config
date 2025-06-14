@@ -2,7 +2,7 @@
 ## Windows
 `C:\Users\user`
 ## Ubuntu
-`/home/user`
+`/home/user` or `~/.gitconfig`
 # Exemple
 ```
 [user]
