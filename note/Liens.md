@@ -226,6 +226,7 @@
   - [Chrome://Media-Engagement](chrome://media-engagement/)
   - [Chrome://Site-Engagement](chrome://site-engagement/)
   - [Chrome://Discards](chrome://discards/)
+  - [Chrome://Restart](chrome://restart)
 - [FTP://](ftp://)
 - [File:///C:](file:///C:/)
 - [View-Source://](view-source://)
