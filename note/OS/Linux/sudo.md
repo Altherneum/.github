@@ -3,7 +3,7 @@
 ### Usermod sudo
 - `usermod -aG sudo [USERNAME]`
 ### /etc/sudoers
-- `nano etc/sudoers`
+- `nano /etc/sudoers`
 - `username ALL=(ALL:ALL) ALL`
   - Le premier ALL indique que l'utilisateur peut exécuter sudo à partir de n'importe quel hôte
   - Le (ALL:ALL) indique que l'utilisateur peut exécuter la commande en tant qu'utilisateur et n'importe quel groupe
