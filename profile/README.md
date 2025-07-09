@@ -64,7 +64,9 @@
 - PaperMC : @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Paper)
 - Waterfall : @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)
 - Maven : [Site](https://maven.apache.org/)
-- VSCode : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)
+- ~~VSCode : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)~~
+- Code-Server : [Site](https://coder.com/) | [Repo externe](https://github.com/coder/code-server)
+- Git : [Site](https://git-scm.com/) | [Repo externe](https://github.com/git/git)
 - Github : @[Github](https://github.com/github) | [Desktop](https://desktop.github.com) | [Git](https://git-scm.com/)
 - Github pages : [README](https://github.com/github/welcome-to-github-and-pages) | [Site](https://pages.github.com/) | [Doc](https://docs.github.com/fr/pages) | [Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) | [404 custom](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 - Ubuntu : [Site](https://ubuntu.com/) | [Repo](https://github.com/ubuntu) | [Help](https://help.ubuntu.com/) | [Ask](https://askubuntu.com/) | [Packages](https://packages.ubuntu.com/)
