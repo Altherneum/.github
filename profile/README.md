@@ -61,8 +61,9 @@
 - CMS : @[Azuriom](https://github.com/Azuriom) | [Repo externe](https://github.com/Azuriom/Azuriom)
 - ~~Giscus : @[Giscus](https://github.com/Giscus) | [Repo externe](https://github.com/Giscus/Giscus)~~
 - Discord bot : @[Javacord](https://github.com/Javacord) | [Repo externe](https://github.com/Javacord/Javacord)
-- PaperMC : @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Paper)
-- Waterfall : @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)
+- PaperMC : [Site](https://papermc.io/software/paper) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Paper)
+  - ~~Waterfall : [Site](https://papermc.io/software/waterfall) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)~~
+  - Velocity : [Site](https://papermc.io/software/velocity) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Velocity)
 - Maven : [Site](https://maven.apache.org/)
 - ~~VSCode : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)~~
 - Code-Server : [Site](https://coder.com/) | [Repo externe](https://github.com/coder/code-server)
