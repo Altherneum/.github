@@ -1,15 +1,15 @@
-# note/Github/.gitconfig
-## Windows
+# . Git Config
+## Windows git config
 `C:\Users\user`
-## Ubuntu
-`/home/<user>/.gitconfig` or `~/.gitconfig`
-# Exemple
+## Linux git config
+`/home/<user>/.gitconfig` ou `~/.gitconfig`
+# Exemple de .gitconfig
 ```
 [user]
 	name = lx78WyY0J5
 	email = 9j2k37st@gmail.com
 ```
-# Commande
+# Commande git config
 ## Global user
 Cela définit le nom d'utilisateur et e-mail de tous les référentiels (repository) de votre système
 `git config --global user.name "lx78WyY0J5"`

@@ -13,6 +13,8 @@
 - `git config --global user.name "Username"`
 - `git config --global user.email "Email"`
 
+Voire [# Linux git config](#linux-git-config)
+
 # Innitialize repo
 - `git init`
 
