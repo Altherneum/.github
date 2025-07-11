@@ -2,7 +2,7 @@
 ## Windows
 `C:\Users\user`
 ## Ubuntu
-`/home/user` or `~/.gitconfig`
+`/home/<user>/.gitconfig` or `~/.gitconfig`
 # Exemple
 ```
 [user]
@@ -10,7 +10,13 @@
 	email = 9j2k37st@gmail.com
 ```
 # Commande
-```
-git config --global user.name "lx78WyY0J5"
-git config --global user.email "9j2k37st@gmail.com"
-```
+## Global user
+Cela définit le nom d'utilisateur et e-mail de tous les référentiels (repository) de votre système
+`git config --global user.name "lx78WyY0J5"`
+`git config --global user.email "9j2k37st@gmail.com"`
+## Repo user
+Cela définira le nom d'utilisateur et l'e-mail uniquement pour ce référentiel spécifique
+`git config user.name "lx78WyY0J5"`
+`git config user.email "9j2k37st@gmail.com"`
+## Vérification
+Vérifiez votre configuration actuelle en utilisant : `git config --list`
