@@ -15,8 +15,8 @@ Merci pour ton signalement !
 - Puis en envoyant votre mise à jour au dépôt Github (Pull request "Demande de tirage") [Demandes en attenantes](https://github.com/Altherneum/.github/pulls), [créer une PR](https://github.com/Altherneum/.github/compare) 
 
 ### Vidéos
-- [GitHub Pull Request in 100 Seconds - YT - FireShip](https://www.youtube.com/watch?v=8lGpZkjnkt4)
-- [Pull Request et Fork Par la pratique - YT - Thomas Mouchelet](https://www.youtube.com/watch?v=S0aH4kfy87k)
+- ![GitHub Pull Request in 100 Seconds - YT - FireShip](https://www.youtube.com/watch?v=8lGpZkjnkt4)
+- ![Pull Request et Fork Par la pratique - YT - Thomas Mouchelet](https://www.youtube.com/watch?v=S0aH4kfy87k)
 
 ### Créer ou modifier du contenu (PR)
 - __N'hésitez pas à envoyer une **pull request**__, toute aide est la bien venue 👌
