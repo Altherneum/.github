@@ -8,12 +8,12 @@ Extrait de `man tar`
 
 ## tar exemples
 - `tar -acf [FILE].zip [PATH]` Crée un fichier zip nommé `[FILE].zip` vers le dossier `[PATH]`
-- `tar -cf [FILE] [FILE2] [FILE3]...` Create `[FILE]` from files `[FILE2]` and `[FILE3]`
-- `tar -cf [FILE] [FILE2] [FILE3]... -C [PATH]` Create `[FILE]` from files `[FILE2]` and `[FILE3]` to `[PATH]`
-- `tar -tvf [FILE]` List all files in [FILE] verbosely
-- `tar -xf [FILE]` Extract all files from `[FILE]`
-- `tar -zxf [FILE]` Extract all files from `[FILE]` with gzip
-- `tar -zxf [FILE] -C [PATH]` Extract all files from `[FILE]` with gzip to [PATH]
+- `tar -cf [FILE] [FILE2] [FILE3]...` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]`
+- `tar -cf [FILE] [FILE2] [FILE3]... -C [PATH]` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]` vers `[PATH]`
+- `tar -tvf [FILE]` Lister tous les fichiers dans `[FILE]` de manière verbose
+- `tar -xf [FILE]` Extraire tous les fichiers de `[FILE]`
+- `tar -zxf [FILE]` Extraire tous les fichiers de `[FILE]` avec gzip
+- `tar -zxf [FILE] -C [PATH]` Extraire tous les fichiers de `[FILE]` avec gzip vers `[PATH]`
 
 ## Main operation mode
 - `-A,`, `--catenate`, `--concatenate ` append tar files to an archive
