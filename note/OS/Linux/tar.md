@@ -16,7 +16,7 @@ Extrait de `man tar`
 - `tar -zxf [FILE] -C [PATH]` Extraire tous les fichiers de `[FILE]` avec gzip vers `[PATH]`
 
 ## Main operation mode
-- `-A,`, `--catenate`, `--concatenate ` append tar files to an archive
+- `-A,`, `--catenate`, `--concatenate` append tar files to an archive
 - `-c,`, `--create` create a new archive
 - `--delete` delete from the archive (not on mag tapes!)
 - `-d,`, `--diff`, `--compare` find differences between archive and file system
@@ -28,10 +28,10 @@ Extrait de `man tar`
 
 ## Operation modifiers
 - `--check-device` check device numbers when creating incremental archives (default)
-- `-g,`, `--listed-incremental=FILE ` handle new GNU-format incremental backup
+- `-g,`, `--listed-incremental=FILE` handle new GNU-format incremental backup
 - `-G,`, `--incremental` handle old GNU-format incremental backup
 - `--hole-detection=TYPE` technique to detect holes
-- `--ignore-failed-read ` do not exit with nonzero on unreadable files
+- `--ignore-failed-read` do not exit with nonzero on unreadable files
 - `--level=NUMBER` dump level for created listed-incremental archive
 - `--no-check-device` do not check device numbers when creating incremental archives
 - `--no-seek` archive is not seekable
@@ -46,19 +46,19 @@ Extrait de `man tar`
 - `--exclude=PATTERN` exclude files, given as a PATTERN
 - `--exclude-backups` exclude backup and lock files
 - `--exclude-caches` exclude contents of directories containing `CACHEDIR.TAG`, except for the tag file itself
-- `--exclude-caches-all ` exclude directories containing `CACHEDIR.TAG`
+- `--exclude-caches-all` exclude directories containing `CACHEDIR.TAG`
 `--exclude-caches-under` exclude everything under directories containing `CACHEDIR.TAG`
 - `--exclude-ignore=FILE` read exclude patterns for each directory from `FILE`, if it exists
 `--exclude-ignore-recursive=FILE` read exclude patterns for each directory and its subdirectories from FILE, if it exists
 - `--exclude-tag=FILE` exclude contents of directories containing FILE, except for FILE itself
 - `--exclude-tag-all=FILE` exclude directories containing FILE
-- `--exclude-tag-under=FILE ` exclude everything under directories containing FILE
+- `--exclude-tag-under=FILE` exclude everything under directories containing FILE
 - `--exclude-vcs` exclude version control system directories
 - `--exclude-vcs-ignores` read exclude patterns from the VCS ignore files
 - `--no-null` disable the effect of the previous --null option
 - `--no-recursion` avoid descending automatically in directories
 - `--no-unquote` do not unquote input file or member names
-- `--no-verbatim-files-from ` -T treats file names starting with dash as options (default)
+- `--no-verbatim-files-from` -T treats file names starting with dash as options (default)
 - `--null` -T reads null-terminated names; implies `--verbatim-files-from`
 - `--recursion` recurse into directories (default)
 - `-T,`, `--files-from=FILE` get names to extract or create from FILE
@@ -72,12 +72,12 @@ Extrait de `man tar`
 - `--no-anchored` patterns match after any '/' (default for exclusion)
 - `--no-ignore-case` case sensitive matching (default)
 - `--no-wildcards` verbatim string matching
-- `--no-wildcards-match-slash ` wildcards do not match '/'
+- `--no-wildcards-match-slash` wildcards do not match '/'
 - `--wildcards` use wildcards (default for exclusion)
-- `--wildcards-match-slash ` wildcards match '/' (default for exclusion)
+- `--wildcards-match-slash` wildcards match '/' (default for exclusion)
 
 ## Overwrite control
-- `--keep-directory-symlink ` preserve existing symlinks to directories when extracting
+- `--keep-directory-symlink` preserve existing symlinks to directories when extracting
 - `--keep-newer-files` don't replace existing files that are newer than their archive copies
 - `-k,`, `--keep-old-files` don't replace existing files when extracting, treat them as errors
 - `--no-overwrite-dir` preserve metadata of existing directories
@@ -92,18 +92,18 @@ Extrait de `man tar`
 
 ## Select output stream
 `--ignore-command-error` ignore exit codes of children
-- `--no-ignore-command-error ` treat non-zero exit codes of children as error
+- `--no-ignore-command-error` treat non-zero exit codes of children as error
 - `-O,`, `--to-stdout` extract files to standard output
-- `--to-command=COMMAND ` pipe extracted files to another program
+- `--to-command=COMMAND` pipe extracted files to another program
 
 ## Handling of file attributes
-- `--atime-preserve[=METHOD] ` preserve access times on dumped files, either by restoring the times after reading (METHOD='replace'; default) or by not setting the times in the first place (METHOD='system')
+- `--atime-preserve[=METHOD]` preserve access times on dumped files, either by restoring the times after reading (METHOD='replace'; default) or by not setting the times in the first place (METHOD='system')
 - `--clamp-mtime` only set time when the file is more recent than what was given with `--mtime`
-- `--delay-directory-restore ` delay setting modification times and permissions of extracted directories until the end of extraction
+- `--delay-directory-restore` delay setting modification times and permissions of extracted directories until the end of extraction
 - `--group=NAME` force NAME as group for added files
 - `--group-map=FILE` use FILE to map file owner GIDs and names
 - `--mode=CHANGES` force (symbolic) mode CHANGES for added files
-- `--mtime=DATE-OR-FILE ` set mtime for added files from DATE-OR-FILE
+- `--mtime=DATE-OR-FILE` set mtime for added files from DATE-OR-FILE
 - `-m,`, `--touch` don't extract file modified time
 - `--no-delay-directory-restore` cancel the effect of `--delay-directory-restore` option
 - `--no-same-owner` extract files as yourself (default for ordinary users)
@@ -130,17 +130,17 @@ Extrait de `man tar`
 - `--force-local` archive file is local even if it has a colon
 - `-f,`, `--file=ARCHIVE` use archive file or device ARCHIVE
 - `-F`, `--info-script=NAME`, `--new-volume-script=NAME` run script at end of each tape (implies -M)
-- `-L,`, `--tape-length=NUMBER ` change tape after writing NUMBER x 1024 bytes
+- `-L,`, `--tape-length=NUMBER` change tape after writing NUMBER x 1024 bytes
 - `-M,`, `--multi-volume` create/list/extract multi-volume archive
 - `--rmt-command=COMMAND` use given rmt COMMAND instead of rmt
 - `--rsh-command=COMMAND` use remote COMMAND instead of rsh
 - `--volno-file=FILE` use/update the volume number in FILE
 
 ## Device blocking
-- `-b,`, `--blocking-factor=BLOCKS ` BLOCKS x 512 bytes per record
+- `-b,`, `--blocking-factor=BLOCKS` BLOCKS x 512 bytes per record
 - `-B,`, `--read-full-records` reblock as we read (for 4.2BSD pipes)
 - `-i,`, `--ignore-zeros` ignore zeroed blocks in archive (means EOF)
-- `--record-size=NUMBER ` NUMBER of bytes per record, multiple of 512
+- `--record-size=NUMBER` NUMBER of bytes per record, multiple of 512
 
 ## Archive format selection
 - `-H,`, `--format=FORMAT` create archive of the given format
@@ -167,8 +167,8 @@ Extrait de `man tar`
 - `--lzop` filter the archive through lzop
 - `--no-auto-compress` do not use archive suffix to determine the compression program
 - `--zstd` filter the archive through zstd
-- `-z, --gzip,`, `--gunzip`, `--ungzip ` filter the archive through gzip
-- `-Z,`, `--compress`, `--uncompress ` filter the archive through compress
+- `-z, --gzip,`, `--gunzip`, `--ungzip` filter the archive through gzip
+- `-Z,`, `--compress`, `--uncompress` filter the archive through compress
 
 ## Local file selection
 - `--backup[=CONTROL]` backup before removal, choose version CONTROL
@@ -182,17 +182,17 @@ Extrait de `man tar`
 - `--suffix=STRING` backup before removal, override usual suffix ('~' unless overridden by environment variable SIMPLE_BACKUP_SUFFIX)
 
 ## File name transformations
-- `--strip-components=NUMBER ` strip NUMBER leading components from file names on extraction
+- `--strip-components=NUMBER` strip NUMBER leading components from file names on extraction
 - `--transform=EXPRESSION`, `--xform=EXPRESSION` use sed replace EXPRESSION to transform file names
 
 ## Informative output
 - `--checkpoint[=NUMBER]` display progress messages every NUMBERth record (default 10)
-- `--checkpoint-action=ACTION ` execute ACTION on each checkpoint
+- `--checkpoint-action=ACTION` execute ACTION on each checkpoint
 - `--full-time` print file time to its full resolution
 - `--index-file=FILE` send verbose output to FILE
 - `-l,`, `--check-links` print a message if not all links are dumped
-- `--no-quote-chars=STRING ` disable quoting for characters from STRING
-- `--quote-chars=STRING ` additionally quote characters from STRING
+- `--no-quote-chars=STRING` disable quoting for characters from STRING
+- `--quote-chars=STRING` additionally quote characters from STRING
 - `--quoting-style=STYLE` set name quoting style; see below for valid STYLE values
 - `-R,`, `--block-number` show block number within archive with each message
 - `--show-defaults` show tar defaults
