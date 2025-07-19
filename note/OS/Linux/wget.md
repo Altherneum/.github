@@ -1,13 +1,18 @@
 # Wget
-GNU Wget is a free utility for non-interactive download of files from the Web.  It supports HTTP, HTTPS, and FTP protocols, as well as retrieval through HTTP proxies.
+## Introduction à wget
+- Wget est une utilitaire gratuite pour le téléchargement non-interactif de fichiers sur Internet
+  - Elle prend en charge les protocoles HTTP, HTTPS et FTP, ainsi que la récupération via des proxies HTTP.
 
-Wget is non-interactive, meaning that it can work in the background, while the user is not logged on.  This allows you to start a retrieval and disconnect from the system, letting Wget finish the work.  By
-contrast, most of the Web browsers require constant user's presence, which can be a great hindrance when transferring a lot of data.
+- Wget est non-interactive, ce qui signifie qu'il peut fonctionner en arrière-plan, alors que l'utilisateur n'est pas connecté.
+  - Cela permet d'iniciar une récupération et de se déconnecter du système, permettant à Wget de terminer le travail.
+  - À la différence, la plupart des navigateurs web exigent une présence constante de l'utilisateur, ce qui peut être un obstacle considérable lors du transfert de grandes quantités de données.
 
-Wget can follow links in HTML, XHTML, and CSS pages, to create local versions of remote web sites, fully recreating the directory structure of the original site.  This is sometimes referred to as "recursive
-downloading."  While doing that, Wget respects the Robot Exclusion Standard (/robots.txt).  Wget can be instructed to convert the links in downloaded files to point at the local files, for offline viewing.
+- Wget peut suivre les liens dans les pages HTML, XHTML et CSS, pour créer des versions locales des sites Web, reproduisant entièrement la structure des dossiers du site original.
+  - Cela est parfois appelé "récupération récursive". En faisant cela, Wget respecte le Standard Robot Exclusion (robots.txt). 
+  - Wget peut être indiqué à convertir les liens dans les fichiers téléchargés en pointant vers les fichiers locaux, pour une visualisation hors ligne.
 
-Wget has been designed for robustness over slow or unstable network connections; if a download fails due to a network problem, it will keep retrying until the whole file has been retrieved.  If the server
+- Wget a été conçu pour la robustesse face aux connexions réseau lentes ou instables
+  - Si une récupération échoue en raison d'un problème de connexion réseau, elle tentera de réessayer jusqu'à ce que toutes les données aient été récupérées.
 
 ## Exemples de wget
 - `WGet [LIEN]`
