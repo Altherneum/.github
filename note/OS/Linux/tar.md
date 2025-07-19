@@ -1,4 +1,9 @@
 # tar
+- Le terme `tar` signifie `Tape Archiver`
+- Il sert d'utilitaire de ligne de commande utilisé dans les systèmes d'exploitation Linux et de type Unix
+- Il permet de créer et gérer des fichiers d'archive
+- Il est couramment utilisé pour regrouper plusieurs fichiers et répertoires dans un seul fichier d'archive, qui peut ensuite être compressé à l'aide de divers algorithmes de compression tels que gzip ou bzip2
+
 Extrait de `man tar`
 
 ## tar exemples
