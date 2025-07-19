@@ -27,183 +27,183 @@ Extrait de `man tar`
 - `-x,`, `--extract`, `--get` extraire des fichiers d'une archive
 
 ## Operation modifiers
-- `--check-device` check device numbers when creating incremental archives (default)
-- `-g,`, `--listed-incremental=FILE` handle new GNU-format incremental backup
-- `-G,`, `--incremental` handle old GNU-format incremental backup
-- `--hole-detection=TYPE` technique to detect holes
-- `--ignore-failed-read` do not exit with nonzero on unreadable files
-- `--level=NUMBER` dump level for created listed-incremental archive
-- `--no-check-device` do not check device numbers when creating incremental archives
-- `--no-seek` archive is not seekable
-- `-n,`, `--seek` archive is seekable
-- `--occurrence[=NUMBER]` process only the NUMBERth occurrence of each file in the archive; this option is valid only in conjunction with one of the subcommands --delete, --diff, --extract or --list and when a list of files is given either on the command line or via the -T option; NUMBER defaults to 1
-- `--sparse-version=MAJOR[.MINOR]` set version of the sparse format to use (implies --sparse)
-- `-S,`, `--sparse` handle sparse files efficiently
+- `--check-device` vérifie les nombres de périphériques lors de la création d'archives incrémentales (par défaut)
+- `-g,`, `--listed-incremental=FILE` gère une nouvelle sauvegarde avancée GNU-format
+- `-G,`, `--incremental` gère une ancienne sauvegarde GNU-format
+- `--hole-detection=TYPE` utilise une technique pour détecter les trous
+- `--ignore-failed-read` ne fait pas sortir le système avec un nombre non nul lorsque des fichiers sont illisibles
+- `--level=NUMBER` affiche le niveau de dump pour l'archive listée incrémentale créée
+- `--no-check-device` n’examine pas les nombres de périphériques lors de la création d’archives incrémentales
+- `--no-seek` l’archive ne peut pas être rechercher
+- `-n,`, `--seek` l’archive peut être rechercher
+- `--occurrence[=NUMBER]` processe uniquement le `[NUMBER]`ème événement de chaque fichier dans l'archive ; cette option est valide uniquement avec l'un des commandes `--delete`, `--diff`, `--extract` ou `--list` et lorsque une liste de fichiers est donnée soit sur la ligne de commande, soit via l’option `-T`
+- `--sparse-version=MAJOR[.MINOR]` définit la version du format sparse (implique `--sparse`)
+- `-S,`, `--sparse` gère efficacement les fichiers sparses
 
 ## Local file name selection
-- `--add-file=FILE` add given `FILE` to the archive (useful if its name starts with a dash)
-- `-C,`, `--directory=DIR` change to directory DIR
-- `--exclude=PATTERN` exclude files, given as a PATTERN
-- `--exclude-backups` exclude backup and lock files
-- `--exclude-caches` exclude contents of directories containing `CACHEDIR.TAG`, except for the tag file itself
+- `--add-file=FILE` ajoute le fichier `FILE` à l'archive (utile si son nom commence par un point)
+- `-C,`, `--directory=DIR` change vers le répertoire `DIR`
+- `--exclude=PATTERN` exclut les fichiers, donnés comme `PATTERN`
+- `--exclude-backups` exclut les fichiers de sauvegarde et les fichiers bloqués
+- `--exclude-caches` exclut les contenus des dossiers contenant `CACHEDIR.TAG`, à l'exception du fichier lui-même
 - `--exclude-caches-all` exclude directories containing `CACHEDIR.TAG`
 `--exclude-caches-under` exclude everything under directories containing `CACHEDIR.TAG`
-- `--exclude-ignore=FILE` read exclude patterns for each directory from `FILE`, if it exists
-`--exclude-ignore-recursive=FILE` read exclude patterns for each directory and its subdirectories from FILE, if it exists
-- `--exclude-tag=FILE` exclude contents of directories containing FILE, except for FILE itself
-- `--exclude-tag-all=FILE` exclude directories containing FILE
-- `--exclude-tag-under=FILE` exclude everything under directories containing FILE
-- `--exclude-vcs` exclude version control system directories
-- `--exclude-vcs-ignores` read exclude patterns from the VCS ignore files
-- `--no-null` disable the effect of the previous --null option
-- `--no-recursion` avoid descending automatically in directories
-- `--no-unquote` do not unquote input file or member names
-- `--no-verbatim-files-from` -T treats file names starting with dash as options (default)
-- `--null` -T reads null-terminated names; implies `--verbatim-files-from`
-- `--recursion` recurse into directories (default)
-- `-T,`, `--files-from=FILE` get names to extract or create from FILE
-- `--unquote` unquote input file or member names (default)
-- `--verbatim-files-from` -T reads file names verbatim (no escape or option handling)
-- `-X,`, `--exclude-from=FILE` exclude patterns listed in FILE
+- `--exclude-ignore=FILE` lit les patterns d’exclusion pour chaque répertoire depuis `FILE`, si elle existe
+- `--exclude-ignore-recursive=FILE` lit les patterns d’exclusion pour chaque répertoire et ses sous-répertoires depuis `FILE`, si elle existe
+- `--exclude-tag=FILE` exclut tout ce qui se trouve dans les dossiers contenant `FILE`, à l'exception de `FILE` lui-même
+- `--exclude-tag-all=FILE` exclut les dossiers contenant `FILE`
+- `--exclude-tag-under=FILE` exclut tout ce qui se trouve sous les dossiers contenant `FILE`
+- `--exclude-vcs` exclut les domaines de contrôle de version (version control)
+- `--exclude-vcs-ignores` lit les patterns d’exclusion à partir des fichiers VCS ignore
+- `--no-null` désactive l’effet de l’option précédente --null
+- `--no-recursion` évite la récursion dans les sous-dossiers (par défaut)
+- `--no-unquote` ne traite pas le caractère nul de l’entrée ou des noms de membres (par défaut)
+- `--no-verbatim-files-from` `-T` traite les noms de fichiers commençant par un point comme options (par défaut)
+- `--null` `-T` lit les noms-flottants en `null-terminated` ; implique `--verbatim-files-from`
+- `--recursion` effectue la récursion dans les sous-dossiers (par défaut)
+- `-T,`, `--files-from=FILE` récupère les noms à extraire ou à créer à partir de `FILE`
+- `--unquote` décode les noms des fichiers ou des membres (par défaut)
+- `--verbatim-files-from` `-T` lit les noms de fichiers en `verbatim` (pas d’échappement ni d’option de traitement)
+- `-X,`, `--exclude-from=FILE` exclut les patterns listés dans `FILE`
 
 ## File name matching options (affect both exclude and include patterns)
-- `--anchored` patterns match file name start
-- `--ignore-case` ignore case
-- `--no-anchored` patterns match after any '/' (default for exclusion)
-- `--no-ignore-case` case sensitive matching (default)
-- `--no-wildcards` verbatim string matching
-- `--no-wildcards-match-slash` wildcards do not match '/'
-- `--wildcards` use wildcards (default for exclusion)
-- `--wildcards-match-slash` wildcards match '/' (default for exclusion)
+- `--anchored` recherche les noms de fichiers qui commencent par un pattern.
+- `--ignore-case` ignore la casse.
+- `--no-anchored` recherche les noms de fichiers après n’importe quel `/` (la valeur par défaut pour l'exclusion).
+- `--no-ignore-case` Recherche sensible à aux majuscules.
+- `--no-wildcards` recherche les chaînes de caractères verbatim.
+- `--no-wildcards-match-slash` ne correspond pas aux caractères `/`
+- `--wildcards` utilise les caractères de wildcard (la valeur par défaut pour l’exclusion).
+- `--wildcards-match-slash` correspond aux caractères `/` (la valeur par défaut pour l'exclusion).
 
 ## Overwrite control
-- `--keep-directory-symlink` preserve existing symlinks to directories when extracting
-- `--keep-newer-files` don't replace existing files that are newer than their archive copies
-- `-k,`, `--keep-old-files` don't replace existing files when extracting, treat them as errors
-- `--no-overwrite-dir` preserve metadata of existing directories
-- `--one-top-level[=DIR]` create a subdirectory to avoid having loose files extracted
-- `--overwrite` overwrite existing files when extracting
-- `--overwrite-dir` overwrite metadata of existing directories when extracting (default)
-- `--recursive-unlink` empty hierarchies prior to extracting directory
-- `--remove-files` remove files after adding them to the archive
-- `--skip-old-files` don't replace existing files when extracting, silently skip over them
-- `-U,`, `--unlink-first` remove each file prior to extracting over it
-- `-W,`, `--verify` attempt to verify the archive after writing it
+- `--keep-directory-symlink` conserve les liens symboliques existants des dossiers lors de l'extraction.
+- `--keep-newer-files` ne remplace pas les fichiers existants qui sont plus récents que leurs copies d’archive.
+- `-k,`, `--keep-old-files` ne remplace pas les fichiers existants lors de l’extraction, les traitant comme des erreurs.
+- `--no-overwrite-dir` conserve la métadonnées des dossiers existants.
+- `--one-top-level[=DIR]` crée un sous-dossier pour éviter d'avoir des fichiers extraits en loose.
+- `--overwrite` écrase les fichiers existants lors de l’extraction.
+- `--overwrite-dir` écrase la métadonnées des dossiers existants lors de l’extraction (par défaut).
+- `--recursive-unlink` supprime chaque fichier avant d’ajouter un fichier à l'archive.
+- `--remove-files` supprime les fichiers après avoir ajouté les fichiers à l’archive.
+- `--skip-old-files` ne remplace pas les fichiers existants lors de l’extraction, en ignorant silencieusement les fichiers qui sont traités comme des erreurs.
+- `-U,`, `--unlink-first` supprime chaque fichier avant d’ajouter un fichier à l’archive.
+- `-W,`, `--verify` tente de vérifier l'archive après la rédaction.
 
 ## Select output stream
-`--ignore-command-error` ignore exit codes of children
-- `--no-ignore-command-error` treat non-zero exit codes of children as error
-- `-O,`, `--to-stdout` extract files to standard output
-- `--to-command=COMMAND` pipe extracted files to another program
+- `--ignore-command-error` ignore les erreurs de commande des enfants.
+- `--no-ignore-command-error` traite les non-zéros d'erreur de commandes comme des erreurs.
+- `-O,`, `--to-stdout` extraire les fichiers vers le flux standard (stdout).
+- `--to-command=COMMAND` acheminer les fichiers extraits vers un autre programme.
 
 ## Handling of file attributes
-- `--atime-preserve[=METHOD]` preserve access times on dumped files, either by restoring the times after reading (METHOD='replace'; default) or by not setting the times in the first place (METHOD='system')
-- `--clamp-mtime` only set time when the file is more recent than what was given with `--mtime`
-- `--delay-directory-restore` delay setting modification times and permissions of extracted directories until the end of extraction
-- `--group=NAME` force NAME as group for added files
-- `--group-map=FILE` use FILE to map file owner GIDs and names
-- `--mode=CHANGES` force (symbolic) mode CHANGES for added files
-- `--mtime=DATE-OR-FILE` set mtime for added files from DATE-OR-FILE
-- `-m,`, `--touch` don't extract file modified time
-- `--no-delay-directory-restore` cancel the effect of `--delay-directory-restore` option
-- `--no-same-owner` extract files as yourself (default for ordinary users)
-- `--no-same-permissions` apply the user's umask when extracting permissions from the archive (default for ordinary users)
-- `--numeric-owner` always use numbers for user/group names
-- `--owner=NAME` force NAME as owner for added files
-- `--owner-map=FILE` use FILE to map file owner UIDs and names
-- `-p`, `--preserve-permissions`, `--same-permissions` extract information about file permissions (default for superuser)
-- `--same-owner` try extracting files with the same ownership as exists in the archive (default for superuser)
-- `--sort=ORDER` directory sorting order: none (default), name or inode
-`-s`, `--preserve-order`, `--same-order` member arguments are listed in the same order as the files in the archive
+- `--atime-preserve[=METHOD]` préserve les temps d'accès des fichiers dumpés, soit en restaurant les temps après la lecture (METHOD='replace'; par défaut), soit en ne mettant pas de temps dans le premier lieu (METHOD='system').
+- `--clamp-mtime` ne met que du temps lorsque le fichier est plus récent que ce qui a été donné avec `--mtime`.
+- `--delay-directory-restore` retarde la mise à jour des temps d’accès et des permissions des dossiers extraits jusqu’à la fin de l’extraction.
+- `--group=NAME` force (symbolique) GID pour les fichiers ajoutés.
+- `--group-map=FILE` utilise FILE pour mapper les noms des groupes et des noms de fichiers.
+- `--mode=CHANGES` force (symbolique) mode changements pour les fichiers ajoutés.
+- `--mtime=DATE-OR-FILE` met à jour le temps d’accès du fichier en fonction de la date ou du fichier.
+- `-m,`, `--touch` ne récupère pas le temps modifié du fichier.
+- `--no-delay-directory-restore` annule l'effet de `--delay-directory-restore` option.
+- `--no-same-owner` extrait les fichiers en tant que vous (par défaut pour les utilisateurs ordinaires).
+- `--no-same-permissions` applique l’utilitaire de permissions de l’archive (par défaut pour les utilisateurs ordinaires).
+- `--numeric-owner` utilise toujours des nombres pour les noms d’utilisateur/groupe.
+- `--owner=NAME` force (symbolique) le nom comme propriétaire des fichiers ajoutés.
+- `--owner-map=FILE` utilise FILE pour mapper les UIDs et les noms de fichiers.
+- `-p`, `--preserve-permissions`, `--same-permissions` extrait des informations sur les permissions des fichiers (par défaut pour l’utilisateur superutilisateur).
+- `--same-owner` essaie d’extraire les fichiers avec la même propriété que dans l’archive (par défaut pour l’utilisateur superutilisateur).
+- `--sort=ORDER` ordre de tri du répertoire : aucun (par défaut), nom ou inode.
+- `-s`, `--preserve-order`, `--same-order` les arguments de type fichier dans le même ordre que les fichiers dans l’archive.
 
 ## Handling of extended file attributes
-- `--acls` Enable the POSIX ACLs support
-- `--no-acls` Disable the POSIX ACLs support
-- `--no-selinux` Disable the SELinux context support
-- `--no-xattrs` Disable extended attributes support
-- `--selinux` Enable the SELinux context support
-- `--xattrs` Enable extended attributes support
-- `--xattrs-exclude=MASK` specify the exclude pattern for xattr keys
-- `--xattrs-include=MASK` specify the include pattern for xattr keys
+- `--acls` Activez le support des ACLs POSIX.
+- `--no-acls` Désactive le support des ACLs POSIX.
+- `--no-selinux` Désactive le support du contexte SELinux.
+- `--no-xattrs` Désactive le support des attributs étendus.
+- `--selinux` Activez le support du contexte SELinux.
+- `--xattrs` Activez le support des attributs étendus.
+- `--xattrs-exclude=MASK` spécifiez un motif d’exclusion pour les clés des attributs Xattr.
+- `--xattrs-include=MASK` spécifiez un motif d’inclusion pour les clés des attributs Xattr.
 
 ## Device selection and switching
-- `--force-local` archive file is local even if it has a colon
-- `-f,`, `--file=ARCHIVE` use archive file or device ARCHIVE
-- `-F`, `--info-script=NAME`, `--new-volume-script=NAME` run script at end of each tape (implies -M)
-- `-L,`, `--tape-length=NUMBER` change tape after writing NUMBER x 1024 bytes
-- `-M,`, `--multi-volume` create/list/extract multi-volume archive
-- `--rmt-command=COMMAND` use given rmt COMMAND instead of rmt
-- `--rsh-command=COMMAND` use remote COMMAND instead of rsh
-- `--volno-file=FILE` use/update the volume number in FILE
+- `--force-local` l’archive file est local même si il a un point-virgule.
+- `-f,`, `--file=ARCHIVE` utilise le fichier ou le périphérique `ARCHIVE`.
+- `-F`, `--info-script=NAME`, `--new-volume-script=NAME` exécute le script à la fin de chaque bande (implique `-M`).
+- `-L,`, `--tape-length=NUMBER` change la taille du disque après l’écriture NUMBER x 1024 octets.
+- `-M,`, `--multi-volume` crée/liste/extraire un archive multi-volume.
+- `--rmt-command=COMMAND` utilise le commande rmt donnée (au lieu de rmt).
+- `--rsh-command=COMMAND` utilise la commande rsh donnée au lieu de rsh.
+- `--volno-file=FILE` utilise/met l’information du numéro de volume dans un FILE.
 
 ## Device blocking
-- `-b,`, `--blocking-factor=BLOCKS` BLOCKS x 512 bytes per record
-- `-B,`, `--read-full-records` reblock as we read (for 4.2BSD pipes)
-- `-i,`, `--ignore-zeros` ignore zeroed blocks in archive (means EOF)
-- `--record-size=NUMBER` NUMBER of bytes per record, multiple of 512
+- `-b,`, `--blocking-factor=BLOCKS` bloque x 512 octets par enregistrement.
+- `-B,`, `--read-full-records` bloque comme on lit (pour les tubes 4.2BSD).
+- `-i,`, `--ignore-zeros` ignore les blocs zéros dans l’archive (signifie EOF).
+- `--record-size=NUMBER` NUMBER de bytes par enregistrement, multiple de 512.
 
 ## Archive format selection
-- `-H,`, `--format=FORMAT` create archive of the given format
-`--old-archive`, `--portability` same as --format=v7
-`--pax-option=keyword[[:]=value][,keyword[[:]=value]]...` control pax keywords
-- `--posix` same as --format=posix
-- `-V,`, `--label=TEXT` create archive with volume name TEXT; at list/extract time, use TEXT as a globbing pattern for volume name
+- `-H,`, `--format=FORMAT` crée un archive avec le format donné.
+- `--old-archive`, `--portability` est identique à `--format=v7.
+- `--pax-option=keyword[[:]=value][,keyword[[:]=value]]...` contrôle les mots clés Pax.
+- `--posix` Identique à `--format=posix`
+- `-V,`, `--label=TEXT` crée un archive avec le nom de volume `TEXT`; au moment de l’extraction/lecture, utilisez `TEXT` comme une sous-chaîne de globbing pour le nom du volume.
 
 ### FORMAT is one of the following
-- `gnuGNU` tar 1.13.x format
-- `oldgnuGNU` format as per tar <= 1.12
-- `paxPOSIX` 1003.1-2001 (pax) format
-- `posixsame` as pax
-- `ustarPOSIX` 1003.1-1988 (ustar) format
-- `v7old` V7 tar format
+- `gnuGNU` format pour tar 1.13.x.
+- `oldgnuGNU` format selon tar <= 1.12.
+- `paxPOSIX` format conforme à tar >= 1003.1-2001 (pax).
+- `posixsame` est identique à `pax`.
+- `ustarPOSIX` format pour tar 1003.1-1988 (ustar).
+- `v7old` format pour tar V7.
 
 ## Compression options
-- `-a,`, `--auto-compress` use archive suffix to determine the compressionprogram
-- `-I`, `--use-compress-program=PROG` filter through PROG (must accept -d)
-- `-j,`, `--bzip2` filter the archive through bzip2
-- `-J,`, `--xz` filter the archive through xz
-- `--lzip` filter the archive through lzip
-- `--lzma` filter the archive through xz
-- `--lzop` filter the archive through lzop
-- `--no-auto-compress` do not use archive suffix to determine the compression program
-- `--zstd` filter the archive through zstd
-- `-z, --gzip,`, `--gunzip`, `--ungzip` filter the archive through gzip
-- `-Z,`, `--compress`, `--uncompress` filter the archive through compress
+- `-a,`, `--auto-compress` utilise le suffix de l’archive pour déterminer le programme de compression.
+- `-I`, `--use-compress-program=PROG` filtre les archives en fonction de l’argument PROG (doit accepter -d).
+- `-j,`, `--bzip2` filtre les archives en utilisant le programme de compression bzip2.
+- `-J,`, `--xz` filtre les archives en utilisant le programme de compression xz.
+- `--lzip` filtre les archives en utilisant le programme de compression lzip.
+- `--lzma` filtre les archives en utilisant le programme de compression xz.
+- `--lzop` filtre les archives en utilisant le programme de compression lzop.
+- `--no-auto-compress` ne fait pas l’utilisation du suffix de l’archive pour déterminer le programme de compression.
+- `--zstd` filtre les archives en utilisant le programme de compression zstd.
+- `-z,`, `--gzip,`, `--ungzip`, `--ungzip` filtre les archives en utilisant le gzip.
+- `-Z,`, `--compress`, `--uncompress` filtre les archives en utilisant le compresssion.
 
 ## Local file selection
-- `--backup[=CONTROL]` backup before removal, choose version CONTROL
-- `--hard-dereference` follow hard links; archive and dump the files they refer to
-- `-h,`, `--dereference` follow symlinks; archive and dump the files they point to
-- `-K`, `--starting-file=MEMBER-NAME` begin at member MEMBER-NAME when reading the archive
-- `--newer-mtime=DATE` compare date and time when data changed only
-- `-N`, `--newer=DATE-OR-FILE`, `--after-date=DATE-OR-FILE` only store files newer than DATE-OR-FILE
-- `--one-file-system` stay in local file system when creating archive
-- `-P,`, `--absolute-names` don't strip leading '/'s from file names
-- `--suffix=STRING` backup before removal, override usual suffix ('~' unless overridden by environment variable SIMPLE_BACKUP_SUFFIX)
+- `--backup[=CONTROL]` crée une sauvegarde avant de supprimer, en choisissant version `CONTROL`.
+- `--hard-dereference` suit les liens fermés; archive et dump les fichiers qu’ils désignent.
+- `-h,`, `--dereference` suit les liens symlink; archive et dump les fichiers qu’ils pointent.
+- `-K`, `--starting-file=MEMBER-NAME` commence à la mémoire de `MEMBER-NAME` lorsqu’on lit l’archive.
+- `--newer-mtime=DATE` compare le temps de modification uniquement des données modifiées.
+- `-N`, `--newer=DATE-OR-FILE`, `--after-date=DATE-OR-FILE` ne stocke que les fichiers plus récents que `DATE-OR-FILE`
+- `--one-file-system` reste dans le système de fichiers local lors de la création d’archive.
+- `-P,`, `--absolute-names` ne supprime pas les noms de fichier avec un préfixe '/'.
+- `--suffix=STRING` crée une sauvegarde avant de supprimer, en remplaçant le suffix standard ('~' sauf si l’environnement variable `SIMPLE_BACKUP_SUFFIX` est modifié).
 
 ## File name transformations
-- `--strip-components=NUMBER` strip NUMBER leading components from file names on extraction
-- `--transform=EXPRESSION`, `--xform=EXPRESSION` use sed replace EXPRESSION to transform file names
+- `--strip-components=NUMBER` supprime `NUMBER` de composants au début des noms de fichiers lors de l'extraction.
+- `--transform=EXPRESSION`, `--xform=EXPRESSION` utilise `sed` pour remplacer l’expression `EXPRESSION` par une transformation de nom de fichier.
 
 ## Informative output
-- `--checkpoint[=NUMBER]` display progress messages every NUMBERth record (default 10)
-- `--checkpoint-action=ACTION` execute ACTION on each checkpoint
-- `--full-time` print file time to its full resolution
-- `--index-file=FILE` send verbose output to FILE
-- `-l,`, `--check-links` print a message if not all links are dumped
-- `--no-quote-chars=STRING` disable quoting for characters from STRING
-- `--quote-chars=STRING` additionally quote characters from STRING
-- `--quoting-style=STYLE` set name quoting style; see below for valid STYLE values
-- `-R,`, `--block-number` show block number within archive with each message
-- `--show-defaults` show tar defaults
-- `--show-omitted-dirs` when listing or extracting, list each directory that does not match search criteria
-- `--show-snapshot-field-ranges` show valid ranges for snapshot-file fields
-- `--show-transformed-names`, `--show-stored-names` show file or archive names after transformation
-- `--totals[=SIGNAL]` print total bytes after processing the archive; with an argument- print total bytes when this SIGNAL is delivered; Allowed signals are: SIGHUP, SIGQUIT, SIGINT, SIGUSR1 and SIGUSR2; the names without SIG prefix are also accepted
-- `--utc` print file modification times in UTC
-- `-v,`, `--verbose` verbosely list files processed
-- `--warning=KEYWORD` warning control
-- `-w`, `--interactive`, `--confirmation` ask for confirmation for every action
+- `--checkpoint[=NUMBER]` affiche des messages de progression tout les `NUMBER` fois (par défaut 10).
+- `--checkpoint-action=ACTION` exécute l'ACTION sur chaque checkpoint.
+- `--full-time` imprime le temps de fichier à sa résolution complète.
+- `--index-file=FILE` envoie des informations de débogage vers `FILE`.
+- `-l,`, `--check-links` affiche un message si tous les liens ne sont pas dumpés.
+- `--no-quote-chars=STRING` désactive la mise en caractères entre guillemets pour les caractères de `STRING`.
+- `--quote-chars=STRING` ajoute une mise en caractères entre guillemets pour les caractères de `STRING`.
+- `--quoting-style=STYLE` définit le style de citation des noms; voir ci-dessous pour les valeurs valides.
+- `-R,`, `--block-number` affiche un message si tous les blocs ne sont pas dumpés.
+- `--show-defaults` affiche les paramètres TAR par défaut.
+- `--show-omitted-dirs` lors de la liste ou de l'extraction, liste chaque répertoire qui ne correspond pas aux critères de recherche.
+- `--show-snapshot-field-ranges` montre les plages valides pour les champs de snapshot-file.
+- `--show-transformed-names` montre les noms de fichiers ou d'archive transformés.
+- `--totals[=SIGNAL]` affiche le total en bytes après avoir traité l'archive; avec un argument, affiche le total en bytes lorsque cette `SIGNAL` est livrée ; Les noms sans `SIG` prefix sont également acceptables.
+- `--utc` imprime les temps de modification des fichiers en UTC.
+- `-v,`, `--verbose` liste les fichiers traités verbosement.
+- `--warning=KEYWORD` affiche un avertissement.
+- `-w`, `--interactive`, `--confirmation` demande une confirmation pour chaque action
 
 ## Compatibility options
-- `-o` when creating, same as --old-archive; when extracting, same as --no-same-owner
+- `-o` lors de la création, identique à `--old-archive`; lors de l'extraction, identique à `--no-same-owner`
