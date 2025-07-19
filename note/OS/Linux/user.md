@@ -24,6 +24,7 @@
   - `userdel -f [USER]` Supprime le home même si l'utilisateur est connecté (pour expulser), peut créer des incohérance
 
 # Group
+## Add group
 - `addgroup` / `groupadd`
   - `addgroup [GROUPName]` Créer un groupe
 ## Edit group
