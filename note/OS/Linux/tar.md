@@ -8,6 +8,7 @@ Extrait de `man tar`
 
 ## tar exemples
 - `tar -acf [FILE].zip [PATH]` Crée un fichier zip nommé `[FILE].zip` vers le dossier `[PATH]`
+  - `unzip -o [FILE].zip -d [PATH]` Extrait le zip nommé `[FILE].zip` vers le dossier `[PATH]`
 - `tar -cf [FILE] [FILE2] [FILE3]...` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]`
 - `tar -cf [FILE] [FILE2] [FILE3]... -C [PATH]` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]` vers `[PATH]`
 - `tar -tvf [FILE]` Lister tous les fichiers dans `[FILE]` de manière verbose
