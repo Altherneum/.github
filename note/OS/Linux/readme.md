@@ -12,41 +12,69 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
 ## Installation et configuration
 - Installer Linux sur un ordinateur
 - Installer Linux sur une machine virtuelle
+- Informations système
+  - `hostname`
+  - [Afficher la version de l'OS](#Afficher-la-version-de-lOS)
+  - [MOTD](#MOTD)
+  - [uptime](#Uptime)
+  - [free RAM](#free-RAM)
+  - [Top processus](#Top-processus)
+
+
+## Gestion des services et scripts
+- [Gestion des services](#Systemctl)
+- [Jobs](#Jobs)
+- [Variables](#Variables) et [variables spéciales](#Variables-spéciales)
+- Mathématiques
+  - [Expr](#Expr)
+  - [BC](#BC)
+  - [Let](#Let)
+  - [Double parenthèse](#Double-parenthèse)
+- [Alias de commande](#Alias)
+- Scripts et [Shebang](#Shebang)
+  - Conditions et boucles
+- [Fichiers utiles](#Fichiers-utiles)
+- Vérifier les [process statuses](#Process-statuses) et leurs [PIDof](#PIDof) pour [tuer un processus](#Tuer-un-processus)
 
 ## Navigation du système de fichiers
 - Compréhension de la structure de fichiers Linux :
   - Répertoire racine (`/`)
   - Répertoires d'ordinateur domicile (`~username/`)
   - Répertoires systèmes (`/usr/`, `/var/`, etc.)
-- Commandes de base pour gérer les fichiers et les répertoires :
-  - `ls`, `cd`, `mkdir`, `rm`, `cp`, `mv`
+  - Liens symboliques
 - Création et gestion des fichiers et des répertoires
-
-## Interface de commande (CLI)
-- Introduction au terminal Linux :
-  - Types de shells (bash, zsh, fish)
-  - Émulateurs de terminal (par exemple, Gnome Terminal, Konsole)
-- Commandes de shell de base :
-  - Navigation (`cd`, `pwd`, `ls`)
-  - Gestion des fichiers et répertoires (`mkdir`, `rm`, `cp`, `mv`)
-  - Informations système (`hostname`, `uptime`, `free`)
+  - [Créer un dossier](#Créer-un-dossier)
+  - `rm` [...]()
+    - [Supprimer-un-dossier](#Supprimer-un-dossier)
+  - Créer une archive via [tar](#tar)
+- Commandes de base pour gérer les fichiers et les répertoires
+  - [Copy paste](#Copy-paste)
+  - [Move file](#Move-file)
+- Navigation
+  - [Changer de dossier](#Changer-de-dossier)
+  - [Lister les fichiers](#Lister-les-fichiers)
+  - [Afficher le chemin actuel](#Afficher-le-chemin-actuel)
+- Gestion des fichiers et des répertoires avec les outils de ligne de commande
+  - [Écrire un fichier](#Écrire-un-fichier)
+  - [Écrire sur un fichier](#Écrire-sur-un-fichier)
+  - [Lire un fichier](#Lire-un-fichier)
+  - `find`
+  - `grep`
 
 ## Sécurité et gestion des utilisateurs
 - Sécurité basique sur le Linux :
-  - Droits d'accès (`rwx`, `r-x`, etc.)
-  - Gestion des groupes
-  - Utilisation de `sudo` et de `su`
+  - Droits d'accès et [permissions](#Permission)
+  - Utilisation de [sudo](#Sudo) et de [su](#SU---Super-User)
 - Gestion des utilisateurs et des groupes :
-  - [Création](#Add-user) et [supprimer](#Delete-user) des utilisateurs
-  - [Créer des groupes](#Group)
-  - [Attribution de droits pour les utilisateurs et les groupes](#Edit-user)
+  - [Création](#Add-user), [modifier](#Edit-user), [supprimer](#Delete-user), ou [ajouter des groupes secondaires](#Ajouter-des-groupes-secondaires) des utilisateurs
+  - [Créer](#Add-Group), [modifier](#Edit-group) et [supprimer](#Delete-group) des groupes
   - [Changer les mots de passe](#Changer-les-mots-de-passes)
+- [Liste des utilisateurs](#Who) et [qui suis-je](#Whoami) ?
 
 ## Gestion des paquets et des dépendances
-- Introduction aux gestionnaires de paquets (par exemple, `apt`, `yum`)
-- Installation et mise à jour des paquets :
-  - `apt-get` [# APT Advanced Packaging Tool](#APT-Advanced-Packaging-Tool)
-  - `aptitude`
+- Introduction aux gestionnaires de paquets
+  - `apt-get` [# APT Advanced Packaging Tool](APT-Advanced-Packaging-Tool)
+  - `pacman`
   - `yum`
 - Gestion des dépendances et des conflicts entre paquets
 
@@ -54,18 +82,18 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
 - Configuration réseau de base :
   - Établissement d'une connexion Wi-Fi ou Ethernet
   - Paramétrage du serveur DHCP et du routeur
-- Introduction aux outils de réseau (par exemple, `ping`, `traceroute`)
+- Introduction aux outils de réseau
+  - `ping`
+  - `traceroute`
+  - [informations réseau](#Netstat)
 - Accès à Internet avec le Linux :
   - Installation des pilotes pour la carte réseau
   - Configuration du proxy HTTP/HTTPS
-
-## Édition de texte et de fichiers
-- Introduction aux éditeurs de texte (par exemple, `nano`, `vim`, `gedit`)
-- Commandes de base pour l'édition de fichiers :
-  - Création d'un fichier
-  - Modification d'un fichier
-  - Suppression d'un fichier
-- Gestion des fichiers et des répertoires avec les outils de ligne de commande (par exemple, `find`, `grep`)
+  - Utiliser [SSH](#SSH)
+  - Pare-feu [UFW](#UFW)
+- Télécharger depuis internet
+  - [Télécharger](#Wget)
+  - [Secure Copy Protocol](#SCP)
 
 ## Méthodes de sauvegarde et de restauration
 - Introduction aux méthodes de sauvegarde :
