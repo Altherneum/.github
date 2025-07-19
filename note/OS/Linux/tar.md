@@ -7,14 +7,18 @@
 Extrait de `man tar`
 
 ## tar exemples
+### Gestion des zip avec tar
 - `tar -acf [FILE].zip [PATH]` Crée un fichier zip nommé `[FILE].zip` vers le dossier `[PATH]`
-  - `unzip -o [FILE].zip -d [PATH]` Extrait le zip nommé `[FILE].zip` vers le dossier `[PATH]`
+  - `unzip -o [FILE].zip -d [PATH]`, ou `tar −xvf [FILE].zip −C [PATH]` Extrait le zip nommé `[FILE].zip` vers le dossier `[PATH]`
+### Compresser avec tar
 - `tar -cf [FILE] [FILE2] [FILE3]...` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]`
-- `tar -cf [FILE] [FILE2] [FILE3]... -C [PATH]` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]` vers `[PATH]`
+  - `tar -cf [FILE] [FILE2] [FILE3]... -C [PATH]` Crée `[FILE]` à partir des fichiers `[FILE2]` et `[FILE3]` vers `[PATH]`
+### Lister avec tar
 - `tar -tvf [FILE]` Lister tous les fichiers dans `[FILE]` de manière verbose
+### Extraire avec tar
 - `tar -xf [FILE]` Extraire tous les fichiers de `[FILE]`
-- `tar -zxf [FILE]` Extraire tous les fichiers de `[FILE]` avec gzip
-- `tar -zxf [FILE] -C [PATH]` Extraire tous les fichiers de `[FILE]` avec gzip vers `[PATH]`
+  - `tar -zxf [FILE]` Extraire tous les fichiers de `[FILE]` avec gzip
+  - `tar -zxf [FILE] -C [PATH]` Extraire tous les fichiers de `[FILE]` avec gzip vers `[PATH]`
 
 ## Main operation mode
 - `-A,`, `--catenate`, `--concatenate` ajouter des fichiers tar à une archive
