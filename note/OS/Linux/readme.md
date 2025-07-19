@@ -73,7 +73,7 @@ Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés 
 
 ## Gestion des paquets et des dépendances
 - Introduction aux gestionnaires de paquets
-  - `apt-get` [# APT Advanced Packaging Tool](APT-Advanced-Packaging-Tool)
+  - [APT Advanced Packaging Tool](#APT-Advanced-Packaging-Tool)
   - `pacman`
   - `yum`
 - Gestion des dépendances et des conflicts entre paquets
