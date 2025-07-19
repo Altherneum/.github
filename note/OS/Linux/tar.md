@@ -46,8 +46,8 @@ Extrait de `man tar`
 - `--exclude=PATTERN` exclut les fichiers, donnés comme `PATTERN`
 - `--exclude-backups` exclut les fichiers de sauvegarde et les fichiers bloqués
 - `--exclude-caches` exclut les contenus des dossiers contenant `CACHEDIR.TAG`, à l'exception du fichier lui-même
-- `--exclude-caches-all` exclude directories containing `CACHEDIR.TAG`
-`--exclude-caches-under` exclude everything under directories containing `CACHEDIR.TAG`
+- `--exclude-caches-all` exclut les dossiers contenant `CACHEDIR.TAG`.
+- `--exclude-caches-under` exclut tout le contenu sous les dossiers contenant `CACHEDIR.TAG`.
 - `--exclude-ignore=FILE` lit les patterns d’exclusion pour chaque répertoire depuis `FILE`, si elle existe
 - `--exclude-ignore-recursive=FILE` lit les patterns d’exclusion pour chaque répertoire et ses sous-répertoires depuis `FILE`, si elle existe
 - `--exclude-tag=FILE` exclut tout ce qui se trouve dans les dossiers contenant `FILE`, à l'exception de `FILE` lui-même
