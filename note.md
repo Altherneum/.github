@@ -1285,11 +1285,7 @@ Faire recherche
 - to filter
 ...
 
-# Wget
-- `WGet [LIEN]`
-  - `Wget -O '[LIEN]'`
-  - `wget -O [PATH] '[LIEN]'`
-  - Exemple `wget -O /scripts/sh/setup.mysql.sh 'https://raw.githubusercontent.com/Altherneum/server/main/scripts/sh/setup.mysql.sh'`
+
 
 
 
