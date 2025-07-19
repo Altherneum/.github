@@ -26,7 +26,7 @@ Voici quelques-unes des principales différences entre le Linux et les autres sy
 4. **Sécurité** : Linux est considéré comme un système d'exploitation plus sécurisé que les autres, car il a une communauté active de développeurs qui le mettent à jour en permanence.
 5. **Compatibilité** : Linux peut s'exécuter sur une grande variété de machines et de configurations, tandis que certains systèmes d'exploitation sont plus spécifiques à un type d'appareil ou d'architecture.
 
-## Avantages de l'utilisation du Linux
+## Avantages de l'utilisation de Linux
 Voici quelques-uns des avantages de l'utilisation du Linux :
 
 1. **Liberté de choix** : Linux est gratuit et peut être personnalisé pour répondre aux besoins spécifiques d'un utilisateur.
