@@ -1,5 +1,7 @@
 # tar
-## tar zip files
+Extrait de `man tar`
+
+## tar exemples
 - `tar -acf [FILE].zip [PATH]` Crée un fichier zip nommé `[FILE].zip` vers le dossier `[PATH]`
 - `tar -cf [FILE] [FILE2] [FILE3]...` Create `[FILE]` from files `[FILE2]` and `[FILE3]`
 - `tar -cf [FILE] [FILE2] [FILE3]... -C [PATH]` Create `[FILE]` from files `[FILE2]` and `[FILE3]` to `[PATH]`
