@@ -4,10 +4,10 @@
 Dans ce cours exhaustif, nous allons couvrir un large éventail de sujets liés à l'utilisation de Linux, des bases aux fonctionnalités avancées et aux pratiques recommandées. À la fin de ce cours, vous serez bien équipé pour aborder la plupart des tâches sur votre système Linux.
 
 ## Introduction au Linux
-- Qu'est-ce que le Linux ?
-- Histoire du Linux
-- Principales différences entre le Linux et d'autres systèmes d'exploitation (par exemple, Windows, macOS)
-- Avantages de l'utilisation du Linux
+- [Qu'est-ce que Linux ?](#Quest-ce-que-Linux-?)
+- [Histoire du Linux](#Histoire-de-Linux)
+- Principales différences entre le Linux et d'autres systèmes d'exploitation (par exemple, [Linux vs Windows vs macOS](#Linux-vs-Windows-vs-macOS))
+- [Avantages de l'utilisation de Linux](#Avantages-de-lutilisation-de-Linux)
 
 ## Installation et configuration
 - Installer Linux sur un ordinateur
