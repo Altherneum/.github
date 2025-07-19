@@ -1,5 +1,6 @@
-# LS
-Afficher  les  informations  des  FICHIERs  (du  répertoire courant par défaut). Les entrées sont triées alphabétiquement si aucune des options
+# Lister les fichiers
+- Afficher les informations des fichiers (du répertoire courant par défaut).
+- Les entrées sont triées alphabétiquement si aucune des options
 
 ![ssh ls of main folder](https://github.com/Altherneum/.github/blob/main/note/assets/images/ls.png?raw=true)
 
