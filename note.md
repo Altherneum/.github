@@ -1291,10 +1291,7 @@ Faire recherche
   - `wget -O [PATH] '[LIEN]'`
   - Exemple `wget -O /scripts/sh/setup.mysql.sh 'https://raw.githubusercontent.com/Altherneum/server/main/scripts/sh/setup.mysql.sh'`
 
-# Tar
-tar -zxf [FILE]
-tar -zxf [FILE] -C [PATH]
--x pour extraire
+
 
 # Domaine AD
 AD DS (Entra ID / Azure ID)
