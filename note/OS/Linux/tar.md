@@ -16,15 +16,15 @@ Extrait de `man tar`
 - `tar -zxf [FILE] -C [PATH]` Extraire tous les fichiers de `[FILE]` avec gzip vers `[PATH]`
 
 ## Main operation mode
-- `-A,`, `--catenate`, `--concatenate` append tar files to an archive
-- `-c,`, `--create` create a new archive
-- `--delete` delete from the archive (not on mag tapes!)
-- `-d,`, `--diff`, `--compare` find differences between archive and file system
-- `-r,`, `--append` append files to the end of an archive
-- `--test-label` test the archive volume label and exit
-- `-t,`, `--list` list the contents of an archive
-- `-u,`, `--update` only append files newer than copy in archive
-- `-x,`, `--extract`, `--get` extract files from an archive
+- `-A,`, `--catenate`, `--concatenate` ajouter des fichiers tar à une archive
+- `-c,`, `--create` créer une nouvelle archive
+- `--delete` supprimer de l'archive (pas sur les bandes magnétiques !)
+- `-d,`, `--diff`, `--compare` trouver les différences entre l'archive et le système de fichiers
+- `-r,`, `--append` ajouter des fichiers à la fin d'une archive
+- `--test-label` tester l'étiquette du volume de l'archive et quitter
+- `-t,`, `--list` lister le contenu d'une archive
+- `-u,`, `--update` seulement ajouter les fichiers plus récents que la copie dans l'archive
+- `-x,`, `--extract`, `--get` extraire des fichiers d'une archive
 
 ## Operation modifiers
 - `--check-device` check device numbers when creating incremental archives (default)
