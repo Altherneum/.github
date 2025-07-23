@@ -121,7 +121,7 @@ id_rsa.pub           100%  760     8.7KB/s   00:00
 ```
 
 ### Tester la clé
-Vérifier si la commande est OK : à tester : TO DO !
+Vérifier si la commande est valide :
 - `ssh -i ~/.ssh/[KEY_NAME] root@[HOST]`
 
 ### Bloquer les connections sans clé
