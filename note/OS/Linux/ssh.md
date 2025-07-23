@@ -179,6 +179,11 @@ ssh admin@altherneum.fr
 Il s'agit d'un fichier binaire qui enregistre chaque tentative de connexion infructueuse effectuée sur le système
   - `last /var/log/btmp` Affiche la première connexion enregistré
   - `last -f /var/log/btmp` Affiche le fichier 
+#### etc/ssh/sshrc
+- `/etc/ssh/sshrc`
+  - Créer le fichier et y ajouter des commandes
+  - Ce fichier et exécuté avant de finaliser la connection SSH
+  - Exemple de script : [Discord WebHook on SSH connection](https://github.com/Altherneum/server/blob/main/etc/ssh/sshrc)
 ### Connexions SSH log par SystemD
 - `journalctl`
   - `journalctl _SYSTEMD_UNIT=sshd.service`
