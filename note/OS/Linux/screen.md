@@ -1,39 +1,41 @@
 # Screen
 ## Screen Help
-- `-4` Resolve hostnames only to IPv4 addresses
-- `-6` Resolve hostnames only to IPv6 addresses
-- `-a` Force all capabilities into each window's termcap
-- `-A -[r|R]` Adapt all windows to the new display width & height
-- `-c file` Read configuration file instead of '.screenrc'
-- `-d (-r)` Detach the elsewhere running screen (and reattach here)
-- `-dmS name` Start as daemon: Screen session in detached mode
-- `-D (-r)` Detach and logout remote (and reattach here)
-- `-D -RR` Do whatever is needed to get a screen session
-- `-e xy` Change command characters
-- `-f` Flow control on, -fn = off, -fa = auto
-- `-h lines` Set the size of the scrollback history buffer
-- `-i` Interrupt output sooner when flow control is on
-- `-l` Login mode on (update /var/run/utmp), -ln = off
-- `-ls [match] ` or
-- `-list` Do nothing, just list our SockDir [on possible matches]
-- `-L` Turn on output logging
-- `-Logfile` file Set logfile name
-- `-m` ignore $STY variable, do create a new screen session
-- `-O` Choose optimal output rather than exact vt100 emulation
-- `-p window` Preselect the named window if it exists
-- `-q` Quiet startup. Exits with non-zero return code if unsuccessful
-- `-Q` Commands will send the response to the stdout of the querying process
-- `-r [session]` Reattach to a detached screen process
-- `-R` Reattach if possible, otherwise start a new session
-- `-s shell` Shell to execute rather than $SHELL
-- `-S sockname ` Name this session `<pid>.sockname` instead of `<pid>.<tty>.<host>`
-- `-t title` Set title. (window's name)
-- `-T term` Use term as $TERM for windows, rather than "screen"
-- `-U` Tell screen to use UTF-8 encoding
-- `-v` Print "Screen version 4.09.00 (GNU) 30-Jan-22"
-- `-wipe [match]` Do nothing, just clean up SockDir [on possible matches]
-- `-x` Attach to a not detached screen. (Multi display mode)
-- `-X` Execute `<cmd>` as a screen command in the specified session
+`screen --help`
+
+- `-4` Résoud les noms de hostnames uniquement en IPv4 adresses
+- `-6` Résoud les noms de hostnames uniquement en IPv6 adresses
+- `-a` Force toutes les capacités dans chaque fenêtre du terme (capsule)
+- `-A -[r|R]` Adapte automatiquement toutes les fenêtres au nouveau format d'affichage et de hauteur
+- `-c file` Lit le fichier de configuration en lieu et place du fichier `.screenrc`
+- `-d (-r)` Déconnecte et redémarre le écran (et le ré-attache ici)
+- `-dmS name` Démarrer screen en tant que session daemon en mode détaché
+- `-D (-r)` Déconnecte et se déconnecte du serveur.  Le ré-attache ici
+- `-D -RR` Effectue tout ce qui est nécessaire pour démarrer une session Screen
+- `-e xy` Change les caractères de commande. (Exemple `xy` pour changer le format de la commande)
+- `-f` Flow control sur, -fn = off, -fa = auto
+- `-h lines` Définit la taille du tampon de l'historique des commandes
+- `-i` Interruption d'output plus tôt lorsque le flow control est activé
+- `-l` Logement en mode login, -ln = off
+- `-ls [match] ` or (Optionnel) Liste les noms de sockets
+- `-list` Ne fait rien, liste simplement notre SockDir [sur possible matches]
+- `-L` Active le logging
+- `-Logfile` Définit le nom du fichier de journalisation
+- `-m` Ignore la variable `STY` et crée une nouvelle session Screen
+- `-O` Choisit un mode de sortie optimal plutôt qu'une émulation VT100 exacte
+- `-p window` Sélectionnez automatiquement la fenêtre nommée si elle existe
+- `-q` Redémarre le startup en mode silencieux (mise à jour du fichier `/var/run/utmp`, -ln = off)
+- `-Q` Redémarre le processus si possible, sinon démarre une nouvelle session
+- `-r [session]` Redémarre le processus Screen en mode "session" (détaché)
+- `-R` Ré-attache si possible, sinon démarre une nouvelle session
+- `-s shell` Exécute la commande plutôt que `$SHELL`
+- `-S sockname` Définit le nom de la session sous forme de chemin d'accès `<pid>.sockname` au lieu de `<pid>.<tty>.<host>`
+- `-t title` Définit le titre de la fenêtre. (le nom de la fenêtre)
+- `-T term` Utilise le terme comme `$TERM` pour les fenêtres, au lieu de "screen"
+- `-U` Utilise l'encodage UTF-8 pour le terminal
+- `-v` Affiche la version du terminal Screen (GNU 4.09.00)
+- `-wipe [match]` Nettoie le fichier SockDir [sur possible matches]
+- `-x` Redémarre le screen en mode non attaché. (mode multi-écran)
+- `-X` Exécute un autre command comme une commande Screen dans la session spécifiée
 ## Lister les screens
 `screen -ls` Permet de lister les screen actifs
 ## S'attacher à un screen
