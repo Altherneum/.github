@@ -114,7 +114,28 @@ Ou encore en décomponsant le calcul en puissance de 2 (Et oui), des divisons, d
 - [maxicours.com /se/cours/ effectuer-des-operations-en-binaire](https://www.maxicours.com/se/cours/effectuer-des-operations-en-binaire)
 
 ## Soustraire
-...
+### Convertir en binaire pour soustraire
+Convertir les nombres en binaire, exemple `25 - 9` = `16`
+```
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|     |    |    | X  | X |   |   | X |    25
+|     |    |    |    | X |   |   | X |    -9
+```
+
+### Appliquer la porte logique pour soustraire
+- Commencez par le bit en haut à droite
+- et comparez-le au chiffre du nombre qu'il faut soustraire en dessous
+- En partant du haut de la colonne vers le bas jusqu'à ce que tous les bits soient traités, ou que vous obtenez un résultat négatif.
+
+- Si le bit est supérieur au chiffre à retirer (1 > 0)
+  - ajoutez un 1
+  - sinon, ajoutez un 0.
+```
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|     |    |    | X  | X |   |   | X |
+|     |    |    |    | X |   |   | X |
+|     |    |    | X  |   |   |   |   | ce qui donne 16
+```
 
 ## Multiplier
 ...
