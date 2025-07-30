@@ -143,6 +143,7 @@ L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4,
 
 ### Windows key
 - [WinKeyDump.vbs](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/WinKeyDump.vbs)
+- [WinKeyDump2.vbs](https://github.com/Altherneum/.github/blob/main/note/OS/Windows/Scripts/WinKeyDump2.vbs)
 
 ## Shutdown
 - `shutdown /i` Afficher l’interface utilisateur graphique (GUI) de shutdown
