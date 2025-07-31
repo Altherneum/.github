@@ -17,13 +17,63 @@
 
 -  La plage d'attribution s'étend de `0.0.0.0` à `255.255.255.255`
 
-- Classe A : `0.0.0.0` à `126.255.255.255` `/8` (`255.0.0.0`)
-- Classe B : `128.0.0.0` à `191.255.255.255` `/16` (`255.255.0.0`)
-- Classe C : `192.0.0.0` à `223.255.255.255` `/24` (`255.255.255.0`)
-- Classe D (multicast) : `224.0.0.0` à `239.255.255.255`
-- Classe E (réservée) : `240.0.0.0` à `255.255.255.255`
+## Classes d'adresses
+- Chaque adresse IP appartient à une classe qui correspond à une plage d’adresses IP
+- Ces classes d’adresses sont au nombre de 5 c'est-à-dire les classes A, B, C, D et E
+- Le fait d’avoir des classes d’adresses permet d’adapter la taille du réseau
 
-- `127.x.x.x` est réservé (voir [adresses utiles](#adresses-utiles))
+- __Classe A__ : `0.0.0.0` à `126.255.255.255` `/8` (`255.0.0.0`)
+- __Classe B__ : `128.0.0.0` à `191.255.255.255` `/16` (`255.255.0.0`)
+- __Classe C__ : `192.0.0.0` à `223.255.255.255` `/24` (`255.255.255.0`)
+- __Classe D (multicast)__ : `224.0.0.0` à `239.255.255.255`
+- __Classe E (réservée)__ : `240.0.0.0` à `255.255.255.255`
+
+## Masque
+### Définition
+- Le masque est un séparateur entre la partie réseau et la partie machine d'une adresse IP
+- On l'appel aussi CIDR (Classless Inter-Domain Routing) dans son format `IP/CIDR` indiquant le nombre de bits dans le masque
+- Le masque, comme l'adresse IP, est une suite de 4 octets, soit 32 bits. Chacun des ces bits peut prendre la valeur 1 ou 0
+- Un masque de sous-réseau divise également une adresse IP en deux parties, créant ainsi deux composants différents d'un réseau.
+### Classes
+- Classe A : `255.0.0.0` `/8` (224-2 = 16 777 214 hôtes)
+- Classe B : `255.255.0.0` `/16` (216-2 = 65 534 hôtes)
+- Classe C : `255.255.255.0` `/24` (28-2 = 254 hôtes)
+- `255.255.255.255` `/32` (20-0 = 1 hôte)
+### Liste de masque
+Nombres d'IP par réseau, Nombres de réseaux, Masque au format CIDR (Nombres de bits du masque), Masque au format numérique
+- IP : `1`, Réseaux : `0`, CIDR : `/32`, Masque : `255.255.255.255`
+- IP : `2`, Réseaux : `1`, CIDR : `/31`, Masque : `255.255.255.254`
+- IP : `4`, Réseaux : `2`, CIDR : `/30`, Masque : `255.255.255.252`
+- IP : `8`, Réseaux : `3`, CIDR : `/29`, Masque : `255.255.255.248`
+- IP : `16`, Réseaux : `4`, CIDR : `/28`, Masque : `255.255.255.240`
+- IP : `32`, Réseaux : `5`, CIDR : `/27`, Masque : `255.255.255.224`
+- IP : `64`, Réseaux : `6`, CIDR : `/26`, Masque : `255.255.255.192`
+- IP : `128`, Réseaux : `7`, CIDR : `/25`, Masque : `255.255.255.128`
+- IP : `256`, Réseaux : `8`, CIDR : `/24`, Masque : `255.255.255.0`
+- IP : `512`, Réseaux : `9`, CIDR : `/23`, Masque : `255.255.254.0`
+- IP : `1 K`, Réseaux : `10`, CIDR : `/22`, Masque : `255.255.252.0`
+- IP : `2 K`, Réseaux : `11`, CIDR : `/21`, Masque : `255.255.248.0`
+- IP : `4 K`, Réseaux : `12`, CIDR : `/20`, Masque : `255.255.240.0`
+- IP : `8 K`, Réseaux : `13`, CIDR : `/19`, Masque : `255.255.224.0`
+- IP : `16 K`, Réseaux : `14`, CIDR : `/18`, Masque : `255.255.192.0`
+- IP : `32 K`, Réseaux : `15`, CIDR : `/17`, Masque : `255.255.128.0`
+- IP : `64 K`, Réseaux : `16`, CIDR : `/16`, Masque : `255.255.0.0`
+- IP : `128 K`, Réseaux : `17`, CIDR : `/15`, Masque : `255.254.0.0`
+- IP : `256 K`, Réseaux : `18`, CIDR : `/14`, Masque : `255.252.0.0`
+- IP : `512 K`, Réseaux : `19`, CIDR : `/13`, Masque : `255.248.0.0`
+- IP : `1 M`, Réseaux : `20`, CIDR : `/12`, Masque : `255.240.0.0`
+- IP : `2 M`, Réseaux : `21`, CIDR : `/11`, Masque : `255.224.0.0`
+- IP : `4 M`, Réseaux : `22`, CIDR : `/10`, Masque : `255.192.0.0`
+- IP : `8 M`, Réseaux : `23`, CIDR : `/9`, Masque : `255.128.0.0`
+- IP : `16 M`, Réseaux : `24`, CIDR : `/8`, Masque : `255.0.0.0`
+- IP : `32 M`, Réseaux : `25`, CIDR : `/7`, Masque : `254.0.0.0`
+- IP : `64 M`, Réseaux : `26`, CIDR : `/6`, Masque : `252.0.0.0`
+- IP : `128 M`, Réseaux : `27`, CIDR : `/5`, Masque : `248.0.0.0`
+- IP : `256 M`, Réseaux : `28`, CIDR : `/4`, Masque : `240.0.0.0`
+- IP : `512 M`, Réseaux : `29`, CIDR : `/3`, Masque : `224.0.0.0`
+- IP : `1024 M`, Réseaux : `30`, CIDR : `/2`, Masque : `192.0.0.0`
+- IP : `2048 M`, Réseaux : `31`, CIDR : `/1`, Masque : `128.0.0.0`
+- IP : `4096 M`, Réseaux : `32`, CIDR : `/0`, Masque : `0.0.0.0`
 
 ## IPv6
 - Internet Protocol version 6
@@ -37,48 +87,61 @@ Ainsi, l’adresse IPv6 ci-dessus est équivalente à la suivante : `2001:db8:0:
 Ainsi, l’adresse IPv6 ci-dessus peut être abrégée en la suivante : `2001:db8:0:85a3::ac1f:8001`
 - [wikipedia.org/wiki/IPv6](https://fr.wikipedia.org/wiki/IPv6)
 
-## IP fixe
+## IP fixes et dynamiques
+### IP fixe
 - La principale différence entre les adresses IP statiques et dynamiques est qu'une adresse IP statique reste la même
 - Une adresse IP statique est un indicateur d'une configuration manuelle attribué à un dispositif.
-## IP dynamique
+### IP dynamique
 - Tandis qu'une adresse IP dynamique change chaque fois que le dispositif se connecte.
 - [voir DHCP](#DHCP)
 
-## IP publique
+## Portée des IP
+### IP publique
 - Les adresses IPv4 sont dites publiques si elles sont enregistrées et routables sur Internet, elles sont donc uniques mondialement.
 - À l'inverse, les adresses privées ne sont utilisables que dans un réseau local, et ne doivent être uniques que dans ce réseau.
 - La traduction d'adresse réseau, réalisée notamment par les box internet, transforme des adresses privées en adresses publiques et permet d’accéder à Internet à partir d'un poste du réseau privé.
-
-- [iplocation.net/ip-lookup](https://www.iplocation.net/ip-lookup)
-
-## IP privée
+### IP privée
 - Un réseau privé est un réseau qui utilise les plages d'adressage IP définies par la RFC 19181,2 « Address Allocation for Private Internets ».
 - Ces adresses ne sont pas routées sur Internet.
 - Un réseau privé peut être numéroté librement avec les plages d'adresses privées prévues à cet effet.
 - Par opposition aux adresses publiques d'Internet, ces adresses ne sont pas uniques, plusieurs réseaux pouvant utiliser les mêmes adresses.
-- `10.0.0.0` à `10.255.255.255` `/8` (`/255.0.0.0`)
-- `172.16.0.0` à `172.31.0.0` `/16` (`/255.255.0.0`)
-- `192.168.0.0` à `192.168.255.0` `/24` (`/255.255.255.0`)
-
-## Adresses utiles
-- `0.0.0.0` à `	0.255.255.255` `/8` (`/255.0.0.0`) Ce réseau
-- `127.0.0.0` à `127.255.255.255` `/8` (`/255.0.0.0`) Boucle locale  
-localhost est le nom habituel qui désigne une interface logique de l’ordinateur local
-- `169.254.0.0` à `169.254.255.255` `/16` (`/255.255.0.0`) APIPA  
-(Auto provisionning) (pas de DHCP ou IP statique déjà existante en doublon)
-- `172.16.0.0` à `172.31.255.255` `/12` (`255.240.0.0`) [Adresse IP privée](#ip-privée)
-- `192.88.99.0` à `192.88.99.255` `/24` (`255.255.255.0`) IPv6 vers IPv4 (6to4) anycast
-- `192.168.0.0` à `192.168.255.255` `/16` (`/255.255.0.0`) [Adresse IP privée](#ip-privée)
-- `198.18.0.0` à `198.19.255.255` `/15` (`255.254.0.0`) Tests de performance
-- `224.0.0.0` à `239.255.255.255` `/4` (`240.0.0.0`) Multicast « Multidiffusion »
-- `240.0.0.0` `255.255.255.254` `/4` (`240.0.0.0`) Réservé à un usage ultérieur non précisé (Sauf 255.255.255.254)
-- `255.255.255.253` à `255.255.255.254` `/31` (`255.255.255.252`) Point to Point Network (Uniquement deux adresses disponibles)
-- `255.255.255.255` à `255.255.255.255` `/32` (`255.255.255.255`) broadcast limité
+### Adresses utiles
 
 - [wikipedia.org/wiki/Reserved_IP_addresses](https://wikipedia.org/wiki/Reserved_IP_addresses)
-
-## Adresse broadcast
+### Adresse broadcast
 - L'adresse de broadcast est une adresse IP qui termine en .255 dans des réseaux de classe A, B ou C, cette adresse est celle qui permet de faire de la diffusion à toutes les machines du réseau
+
+## Liste des IP
+- **__Spéciale__** `0.0.0.0` à `0.255.255.255` `/8` (`/255.0.0.0`) Ce réseau
+- **__Publique__** `1.0.0.0` à `9.255.255.255` `/8` (`255.0.0.0`)
+- **__Privée__** `10.0.0.0` à `10.255.255.255` `/8` (`/255.0.0.0`)
+- **__Publique__** `11.0.0.0` à `100.63.255.255` `/8` (`255.0.0.0`)
+- **__Privée__** `100.64.0.0` à `100.127.255.255` `/10` (`255.192.0.0`) Espace partagé pour Carrier Grade NAT
+- **__Publique__** `100.128.0.0` à `126.255.255.255` `/8` (`255.0.0.0`)
+- **__Spéciale__** `127.0.0.0` à `127.255.255.255` `/8` (`/255.0.0.0`) Boucle locale (`localhost`) est le nom habituel qui désigne une interface logique de l’ordinateur local
+- **__Publique__** `128.0.0.0` à `169.253.255.255` `/16` (`255.255.0.0`)
+- **__Spéciale__** `169.254.0.0` à `169.254.255.255` `/16` (`/255.255.0.0`) APIPA (Auto provisionning) (pas de DHCP ou IP statique déjà existante en doublon)
+- **__Publique__** `169.255.0.0` à `172.15.255.255` `/16` (`255.255.0.0`)
+- **__Privée__** `172.16.0.0` à `172.31.255.255` `/12` (`255.240.0.0`)
+- **__Publique__** `172.32.0.0` à `191.255.255.255` `/16` (`255.255.0.0`)
+- **__Spéciale__** `192.0.0.0` à `192.0.0.255` `/24` (`255.255.255.0`) Réservé par l'IETF
+- **__Publique__** `192.0.1.0` à `192.0.1.255` `/24` (`255.255.255.0`)
+- **__Spéciale__** `192.0.2.0` à `192.0.2.255` `/24` (`255.255.255.0`) Réseau de test TEST-NET-1 / documentation
+- **__Publique__** `192.0.3.0` à `192.88.98.255` `/24` (`255.255.255.0`)
+- **__Spéciale__** `192.88.99.0` à `192.88.99.255` `/24` (`255.255.255.0`) IPv6 vers IPv4 (6to4) anycast
+- **__Publique__** `192.88.100.0` à `192.167.255.255` `/24` (`255.255.255.0`)
+- **__Privée__** `192.168.0.0` à `192.168.255.255` `/16` (`/255.255.0.0`)
+- **__Publique__** `192.169.0.0` à `198.17.255.255` `/24` (`255.255.255.0`)
+- **__Spéciale__** `198.18.0.0` à `198.19.255.255` `/15` (`255.254.0.0`) Tests de performance
+- **__Publique__** `198.20.0.0` à `198.51.99.255` `/24` (`255.255.255.0`)
+- **__Spéciale__** `198.51.100.0` à `198.51.100.255` `/24` (`255.255.255.0`) Réseau de test TEST-NET-2 / documentation
+- **__Publique__** `198.51.101.0` à `203.0.112.255` `/24` (`255.255.255.0`)
+- **__Spéciale__** `203.0.113.0` à `203.0.113.255` `/24` (`255.255.255.0`) Réseau de test TEST-NET-3 / documentation
+- **__Publique__** `203.0.114.0` à `223.255.255.255` `/24` (`255.255.255.0`)
+- **__Spéciale__** `224.0.0.0` à `239.255.255.255` `/4` (`240.0.0.0`) Multicast « Multidiffusion »
+- **__Spéciale__** `240.0.0.0` `255.255.255.254` `/4` (`240.0.0.0`) Réservé à un usage ultérieur non précisé (Sauf 255.255.255.254)
+- **__Spéciale__** `255.255.255.253` à `255.255.255.254` `/31` (`255.255.255.252`) Point to Point Network (Uniquement deux adresses disponibles)
+- **__Spéciale__** `255.255.255.255` à `255.255.255.255` `/32` (`255.255.255.255`) broadcast limité
 
 # Passerelle
 En informatique, une passerelle (en anglais, gateway) est le nom générique d'un dispositif permettant de relier deux réseaux informatiques de types différents, par exemple un réseau local et le réseau Internet  
@@ -86,17 +149,6 @@ Il existe différents types de passerelles :
 - un répéteur est une passerelle de niveau 1,
 - un pont une passerelle de niveau 2
 - un relais, souvent appelé routeur, une passerelle de niveau 3
-
-# Masque
-- Le masque est un séparateur entre la partie réseau et la partie machine d'une adresse IP.  
-- Le masque, comme l'adresse IP, est une suite de 4 octets, soit 32 bits. Chacun des ces bits peut prendre la valeur 1 ou 0.  
-- Un masque de sous-réseau divise également une adresse IP en deux parties, créant ainsi deux composants différents d'un réseau.
-- Classe A : `255.0.0.0` `/8` (224-2 = 16 777 214)
-- Classe B : `255.255.0.0` `/16` (216-2 = 65 534)
-- Classe C : `255.255.255.0` `/24` (28-2 = 254)
-- `255.255.255.255` /32 (20-0 =1)
-
-- [wikipedia.org/wiki/Sous-réseau](https://fr.wikipedia.org/wiki/Sous-réseau)
 
 # MAC
 - Une adresse MAC, parfois nommée adresse physique, est un identifiant physique stocké dans une carte réseau ou une interface réseau similaire.  
