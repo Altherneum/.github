@@ -73,7 +73,7 @@
   - `ipconfig /release` Libère les connexions
   - `ipconfig /renew` Rétablit les connexions
   - `ipconfig /displaydns` Affiche les informations du DNS
-- Voire le [cours sur l'IP](doc.altherneum.fr/cours/IP##Exemple-d'ipconfig-Windows)
+- Voire le [cours sur l'IP](doc.altherneum.fr/cours/IP#Exemple-d'ipconfig-Windows)
 
 ### quser
 - `quser` Affiche des informations sur les sessions utilisateur sur un serveur hôte de session Bureau à distance
