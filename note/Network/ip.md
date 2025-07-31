@@ -17,6 +17,18 @@
 
 -  La plage d'attribution s'étend de `0.0.0.0` à `255.255.255.255`
 
+## IPv6
+- Internet Protocol version 6
+- Une adresse IPv6 est longue de 128 bits, soit 16 octets
+- IPv6 est l'aboutissement des travaux menés au sein de l'IETF au cours des années 1990 pour succéder à IPv4
+- Grâce à des adresses de 128 bits, IPv6 dispose d'un espace d'adressage bien plus important qu'IPv4 (plus de 340 sextillions)
+- Exemple d'adresse IPv6 : `2001:0db8:0000:85a3:0000:0000:ac1f:8001`
+- Il est permis d’omettre de un à trois chiffres zéros non significatifs dans chaque groupe de quatre chiffres hexadécimaux.  
+Ainsi, l’adresse IPv6 ci-dessus est équivalente à la suivante : `2001:db8:0:85a3:0:0:ac1f:8001`
+- Une unique suite de un ou plusieurs groupes consécutifs de 16 bits tous nuls peut être omise  
+Ainsi, l’adresse IPv6 ci-dessus peut être abrégée en la suivante : `2001:db8:0:85a3::ac1f:8001`
+- [wikipedia.org/wiki/IPv6](https://fr.wikipedia.org/wiki/IPv6)
+
 ## Classes d'adresses
 - Chaque adresse IP appartient à une classe qui correspond à une plage d’adresses IP
 - Ces classes d’adresses sont au nombre de 5 c'est-à-dire les classes A, B, C, D et E
@@ -74,18 +86,6 @@ Nombres d'IP par réseau, Nombres de réseaux, Masque au format CIDR (Nombres de
 - IP : `1024 M`, Réseaux : `30`, CIDR : `/2`, Masque : `192.0.0.0`
 - IP : `2048 M`, Réseaux : `31`, CIDR : `/1`, Masque : `128.0.0.0`
 - IP : `4096 M`, Réseaux : `32`, CIDR : `/0`, Masque : `0.0.0.0`
-
-## IPv6
-- Internet Protocol version 6
-- Une adresse IPv6 est longue de 128 bits, soit 16 octets
-- IPv6 est l'aboutissement des travaux menés au sein de l'IETF au cours des années 1990 pour succéder à IPv4
-- Grâce à des adresses de 128 bits, IPv6 dispose d'un espace d'adressage bien plus important qu'IPv4 (plus de 340 sextillions)
-- Exemple d'adresse IPv6 : `2001:0db8:0000:85a3:0000:0000:ac1f:8001`
-- Il est permis d’omettre de un à trois chiffres zéros non significatifs dans chaque groupe de quatre chiffres hexadécimaux.  
-Ainsi, l’adresse IPv6 ci-dessus est équivalente à la suivante : `2001:db8:0:85a3:0:0:ac1f:8001`
-- Une unique suite de un ou plusieurs groupes consécutifs de 16 bits tous nuls peut être omise  
-Ainsi, l’adresse IPv6 ci-dessus peut être abrégée en la suivante : `2001:db8:0:85a3::ac1f:8001`
-- [wikipedia.org/wiki/IPv6](https://fr.wikipedia.org/wiki/IPv6)
 
 ## IP fixes et dynamiques
 ### IP fixe
@@ -173,3 +173,84 @@ Il existe différents types de passerelles :
 - `01:00:5E:xx:xx:xx` Adresses multicast IPv4
 - `00:00:0c:07:ac:xx` Adresses HSRP
 - `00:00:5E:00:01:XX` Adresses VRRP
+
+# Exemple d'ipconfig Windows
+## Ipconfig
+```
+C:\Users\user>ipconfig
+
+Configuration IP de Windows
+
+Carte Ethernet Ethernet :
+
+   Suffixe DNS propre à la connexion. . . :
+
+   Adresse IPv6. . . . . . . . . . . . . .: 2a01:e0a:912:5c0:7735:7686:d892:8c55
+
+   Adresse IPv6 temporaire . . . . . . . .: 2a01:e0a:912:5c0:b8f3:b0a7:3505:32de
+
+   Adresse IPv6 de liaison locale. . . . .: fe80::2d49:eb25:4822:8328%7
+
+   Adresse IPv4. . . . . . . . . . . . . .: 192.168.1.73
+
+   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+
+   Passerelle par défaut. . . . . . . . . : fe80::3627:92ff:fe53:95e8%7
+
+                                       192.168.1.254
+```
+
+## Ipconfig /all
+```
+C:\Users\user>ipconfig /all
+
+Configuration IP de Windows
+
+   Nom de l’hôte . . . . . . . . . . : win-user
+   Suffixe DNS principal . . . . . . :
+   Type de noeud. . . . . . . . . .  : Hybride
+   Routage IP activé . . . . . . . . : Non
+   Proxy WINS activé . . . . . . . . : Non
+
+Carte Ethernet Ethernet :
+
+   Suffixe DNS propre à la connexion. . . :
+   Description. . . . . . . . . . . . . . : Realtek PCIe GbE Family Controller
+   Adresse physique . . . . . . . . . . . : 3C-7C-3F-ED-BF-B9
+   DHCP activé. . . . . . . . . . . . . . : Oui
+   Configuration automatique activée. . . : Oui
+   Adresse IPv6. . . . . . . . . . . . . .: 2a01:e0a:912:5c0:7735:7686:d892:8c55(préféré)
+   Adresse IPv6 temporaire . . . . . . . .: 2a01:e0a:912:5c0:b8f3:b0a7:3505:32de(préféré)
+   Adresse IPv6 de liaison locale. . . . .: fe80::2d49:eb25:4822:8328%7(préféré)
+   Adresse IPv4. . . . . . . . . . . . . .: 192.168.1.73(préféré)
+   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+   Bail obtenu. . . . . . . . . . . . . . : lundi 21 juillet 2025 21:42:47
+   Bail expirant. . . . . . . . . . . . . : mardi 22 juillet 2025 09:42:45
+   Passerelle par défaut. . . . . . . . . : fe80::3627:92ff:fe53:95e8%7
+                                       192.168.1.254
+   Serveur DHCP . . . . . . . . . . . . . : 192.168.1.254
+   IAID DHCPv6 . . . . . . . . . . . : 87850047
+   DUID de client DHCPv6. . . . . . . . : 00-01-00-01-2F-7C-DF-15-3C-7C-3F-ED-BF-B9
+   Serveurs DNS. . .  . . . . . . . . . . : 192.168.1.254
+                                       fd0f:ee:b0::1
+   NetBIOS sur Tcpip. . . . . . . . . . . : Activé
+```
+
+## Définition
+- Votre routeur : [192.168.1.254](http://192.168.1.254/)
+- Votre adresse locale (privée) : IPv4 `192.168.1.73`, IPv6 `2a01:e0a:912:5c0:7735:7686:d892:8c55`
+- DHCP : Attribution d'adresse locale automatique ou statique : COURS DHCP
+- Masque de sous-réseau : Masque permettant de calculer les parties d'adresse réseau et les emplacements adresse machines
+- Serveur DNS : Serveur permettant de convertir une adresse web (Exemple : `Altherneum.fr`) en adresse IPv4 publique
+
+## Adresse publique
+### Adresse IPv6 publique
+```
+C:\Users\user>curl ifconfig.me
+2a01:abc1:abc1:abc1:abc1:abc1:abc1:abc1
+```
+### Adresse IPv4 publique
+```
+C:\Users\user>curl -4 ifconfig.me
+88.123.456.789
+```
