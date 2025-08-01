@@ -3,7 +3,7 @@ lvmpassword=lvmpassword
 device=/dev/sda
 
 # pacman -Sy archlinux-keyring # To test if faster than --refresh-keys
-pacman -Syy
+pacman -Syyu
 # Update PGP keys
 pacman-key --refresh-keys
 # pcaman --needed # used as # pacman -S --needed superpaquetatelecharger
