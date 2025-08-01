@@ -1,6 +1,7 @@
 # WSL
 Minimum : Windows 10 version 2004 (Build >= 19041)
 ## Installation
+### Installer WSL
 `wsl --install`
 ### Ajouter les fonctions HyperV
 Via un PowerShell Admin :
@@ -9,6 +10,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:HypervisorPlatform /all /norestart
 ```
+Relancer le système pour démarrer ces fonctionnalités avec Windows
 ### Mettre à jour
 `wsl --update`
 ### Stoper WSL
