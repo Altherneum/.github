@@ -60,6 +60,10 @@ echo "Exec = /usr/bin/systemctl restart systemd-boot-update.service" >> /etc/pac
 
 bootctl list
 
+curl -o /amd.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/amd.sh
+chmod +x /amd.sh
+/amd.sh
+
 # exit
 # umount -R /mnt
 # reboot
