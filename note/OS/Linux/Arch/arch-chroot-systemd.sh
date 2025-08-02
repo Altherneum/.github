@@ -35,7 +35,7 @@ echo "console-mode max" >> /boot/loader/loader.conf
 echo "editor no" >> /boot/loader/loader.conf
 
 # Set Disk ID to LVM
-UUIDcrypt=$(blkid -o value -s UUID /dev/sda1)
+UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 # UUIDroot=$(blkid -o value -s UUID /dev/mapper/cryptlvm) # Use less now
 
 # /boot/loader/entries/arch.conf
