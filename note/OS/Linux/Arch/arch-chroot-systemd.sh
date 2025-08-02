@@ -43,7 +43,8 @@ echo "title Arch Linux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd  /amd-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
+# echo "options root=UUID=${UUIDcrypt} rw" >> /boot/loader/entries/arch.conf
+echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/mapper/vg0-swap root=/dev/mapper/vg0-root rw quiet" >> /boot/loader/entries/arch.conf
 # echo "options root=UUID=/dev/sda2 rw" >> /boot/loader/entries/arch.conf
 
 # Boot Backup Hook When Pacman Transactions are Made
