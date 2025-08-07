@@ -24,7 +24,7 @@ yes | pacman -S systemd os-prober efibootmgr dosfstools amd-ucode
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt lvm2 keymap consolefont fsck encrypt filesystems udev)/' /etc/mkinitcpio.conf
-mkinitcpio -p linux-zen
+mkinitcpio -p linux
 
 bootctl --path=/boot install
 
