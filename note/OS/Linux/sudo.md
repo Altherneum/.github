@@ -1,4 +1,5 @@
 # Sudo
+**__Super user do__**
 ## Ajouter un utilisateur au groupe sudo
 ### Usermod sudo
 - `usermod -aG sudo [USERNAME]`
@@ -15,8 +16,9 @@
 - `sudo -i -u [USER] [CMD]` Se connecte au compte et lancer une commande
   - Exemple (Afficher le `$HOME` de l'utilisateur) : `sudo -i -u user echo \$HOME`
 
-# SU - Super User
-## Super user do
+# SU
+**__Super User__**
+## Se connecter en root
 [C0OHejfYhfE](https://youtube.com/watch?v=C0OHejfYhfE)
 - `su` Se connecte en tant que "Super User" (root)  si l'utilisateur actuel est dans la liste des sudoers
 - `sudo [CMD]` Lance la commande en tant que le "Super User"
