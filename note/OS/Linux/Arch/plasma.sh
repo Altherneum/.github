@@ -1,1 +1,1 @@
-yes | pacman -S plasma swayfx hyprland labwc sddm
+pacman -S --noconfirm plasma swayfx hyprland labwc sddm

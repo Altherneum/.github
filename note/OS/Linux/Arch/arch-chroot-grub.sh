@@ -21,7 +21,7 @@ echo "$password" | passwd $username --stdin
 usermod -aG wheel ${username}
 hostnamectl set-hostname ${hostname}
 
-yes | pacman -S grub os-prober
+pacman -S --noconfirm grub os-prober
 
 # mkinitcpio
 sed -i 's/HOOKS=(.*)/HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt lvm2 filesystems fsck)/' /etc/mkinitcpio.conf
