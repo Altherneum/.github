@@ -12,7 +12,7 @@ pacman-key --refresh-keys
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 1024MiB \
   set 1 esp on \
-  mkpart primary ext4 1024MiB 100%
+  mkpart primary 1024MiB 100%
 
 # Format Boot
 mkfs.fat -F32 /dev/sda1
