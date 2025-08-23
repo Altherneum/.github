@@ -114,23 +114,23 @@ mkinitcpio -P
 bootctl install
 
 # systemd-boot loader configuration
-cat > /boot/loader/loader.conf <<EOF
+cat > /boot/loader/loader.conf <<LOADER
 default arch
 timeout 5
 console-mode max
-EOF
+LOADER
 
 # LVM and encrypted root UUID
 UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
 
 # Boot entry
-cat > /boot/loader/entries/arch.conf <<EOF
+cat > /boot/loader/entries/arch.conf <<ENTRY
 title Arch Linux
 linux /vmlinuz-linux
 initrd /amd-ucode.img
 initrd /initramfs-linux.img
 options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/swap root=/dev/vg0/root rw
-EOF
+ENTRY
 
 # Network setup
 systemctl enable systemd-networkd
@@ -138,15 +138,18 @@ systemctl enable systemd-resolved
 systemctl enable NetworkManager
 systemctl enable sshd
 
-cat > /etc/hosts <<EOF
+cat > /etc/hosts <<HOSTS
 127.0.0.1    localhost
 ::1          localhost
 127.0.1.1    $hostname.localdomain    $hostname
-EOF
+HOSTS
 
 # Verify bootctl
 bootctl list
+
+# Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
 EOF
+
 echo "Remove the CD/USB ISO of arch"
 echo "Reboot into your new installation of Arch"
