@@ -1,29 +1,22 @@
 # Arch auto installation script
-
 ## install.sh
 ### Keyboard
-`loadkeys fr` to load French keyboard "AZERTY"
+- `loadkeys fr` pour charger un clavier `AZERTY`
+  - Ce qui donne avec un clavier `QWERTY` : `loqdkeys fr`
 ### Downloading script
 ```
-curl -o /install.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/install.sh
-chmod +x /install.sh
+curl -o /arch.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archinstall/arch.sh
+chmod +x /arch.sh
 ```
-### Set password
-`nano`, `vim`, etc..., to update password
-- [/install.sh](/note/OS/Linux/Arch/install.sh) (LVM & Disk to use)
-- [/pacstrap.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/pacstrap.sh)
-- Chroot (Root, user, and hostname)
-  - ~~[arch-chroot-grub.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/arch-chroot-grub.sh)~~
-  - [/mnt/arch-chroot-systemd.sh](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/arch-chroot-systemd.sh)
-- [ # /user-space.sh](#installer-luserspace)
-### Starting script
-`/install.sh`
+### Modifier les variables
+- Utilisateur, mot de passe, nom d'hôte, ...
+- Pour modifier le fichier, utilisez `nano`, `vim`, etc...
+  - Exemple : `nano /arch.sh`
+  - Pour sauvegarder : `CTRL` + `X`, `Y`/`N` pour choisir de sauvegarder ou quitter, puis valider le nom si vous sauvegardez le fichier.
+### Lancer l'installation
+`/arch.sh 2>&1 'file=@-' 0x0.st`
 
 ## Start Arch
 ### Remove ISO
 Retirer l'ISO ou CD/DVD du lecteur (Virtuel comme physique)
-### Boot the system
-PRENDRE CAPTURE DU BOOT LOADER
-## Installer l'userspace
-- [/user-space.sh](/note/OS/Linux/Arch/user-space.sh)
-  - Le fichier n'est pas téléchargé par défaut !
+## Login
