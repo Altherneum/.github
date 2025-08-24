@@ -1,6 +1,6 @@
 # Variables
 device="/dev/sda"
-lvmpassword="arch"
+lvmpassword="BootPass123"
 
 # Pacman config
 ## Add colors
