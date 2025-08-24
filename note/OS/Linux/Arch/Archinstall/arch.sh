@@ -66,9 +66,9 @@ langkey=fr
 fonttype=ter-v28b
 utflang=fr_FR.UTF-8
 hostname="ARCH"
-rootpassword="arch"
+rootpassword="SuperPass123"
 username="arch"
-userpassword="arch"
+userpassword="UserPass123"
 
 # Pacman config
 ## Add colors
