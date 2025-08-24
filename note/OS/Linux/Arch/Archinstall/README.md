@@ -14,7 +14,7 @@ chmod +x /arch.sh
   - Exemple : `nano /arch.sh`
   - Pour sauvegarder : `CTRL` + `X`, `Y`/`N` pour choisir de sauvegarder ou quitter, puis valider le nom si vous sauvegardez le fichier.
 ### Lancer l'installation
-`/arch.sh 2>&1 'file=@-' 0x0.st`
+`/arch.sh 2>&1 | 'file=@-' 0x0.st`
 
 ## Start Arch
 ### Remove ISO
