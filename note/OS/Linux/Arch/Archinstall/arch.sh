@@ -77,31 +77,31 @@ sed -i 's/^#Color/Color/' /etc/pacman.conf
 sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 
 # Timezone and Clock
-ln -sf /usr/share/zoneinfo$localtime /etc/localtime
+ln -sf /usr/share/zoneinfo\$localtime /etc/localtime
 hwclock --systohc
 
 # Console Settings
-echo "KEYMAP=$langkey" > /etc/vconsole.conf
-echo "FONT=$fonttype" >> /etc/vconsole.conf
+echo "KEYMAP=\$langkey" > /etc/vconsole.conf
+echo "FONT=\$fonttype" >> /etc/vconsole.conf
 
 # Locale
-echo "$utflang UTF-8" >> /etc/locale.gen
+echo "\$utflang UTF-8" >> /etc/locale.gen
 locale-gen
-echo "LANG=$utflang" > /etc/locale.conf
+echo "LANG=\$utflang" > /etc/locale.conf
 
 # Computer & user
 ## Hostname
-echo "$hostname" > /etc/hostname
+echo "\$hostname" > /etc/hostname
 
 ## Root Password
-echo "root:$rootpassword" | chpasswd
+echo "root:\$rootpassword" | chpasswd
 
 ## Create User
-useradd -m -s /bin/bash "$username"
-echo "$username:$password" | chpasswd
+useradd -m -s /bin/bash "\$username"
+echo "\$username:\$password" | chpasswd
 
 ## Add the user to sudoers file
-usermod -aG wheel "$username"
+usermod -aG wheel "\$username"
 
 ## Uncomment wheel's group line
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
