@@ -53,105 +53,13 @@ pacstrap -K /mnt linux linux-firmware base base-devel vim nano terminus-font efi
 # Get the fstab
 genfstab -U /mnt > /mnt/etc/fstab
 
-# Get the next stage
-##curl -o https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch-chroot-systemd.sh
-##chmod +x arch-chroot-systemd.sh && cp arch-chroot-systemd.sh /mnt
-
 # Chroot
-arch-chroot /mnt /bin/bash <<EOF
-
-# Variables
-localtime=/Europe/Paris
-langkey=fr
-fonttype=ter-v28b
-utflang=fr_FR.UTF-8
-hostname="ARCH"
-rootpassword="SuperPass123"
-username="arch"
-userpassword="UserPass123"
-
-# Pacman config
-## Add colors
-sed -i 's/^#Color/Color/' /etc/pacman.conf
-## Add pacman Parallel Downloads
-sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
-
-# Timezone and Clock
-ln -sf /usr/share/zoneinfo\$localtime /etc/localtime
-hwclock --systohc
-
-# Console Settings
-echo "KEYMAP=\$langkey" > /etc/vconsole.conf
-echo "FONT=\$fonttype" >> /etc/vconsole.conf
-
-# Locale
-echo "\$utflang UTF-8" >> /etc/locale.gen
-locale-gen
-echo "LANG=\$utflang" > /etc/locale.conf
-
-# Computer & user
-## Hostname
-echo "\$hostname" > /etc/hostname
-
-## Root Password
-# echo "root:$rootpassword" | chpasswd # Seem not to work
-echo "$rootpassword" | passwd root --stdin
-
-## Create User
-useradd -m -s /bin/bash "\$username"
-# echo "$username:$password" | chpasswd # Seem not to work
-echo "$password" | passwd $username --stdin
-
-## Add the user to sudoers file
-usermod -aG wheel "\$username"
-
-## Uncomment wheel's group line
-sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
-
-# mkinitcpio
-sed -i 's/^HOOKS=.*/HOOKS=(base udev keyboard autodetect microcode modconf kms keymap encrypt lvm2 consolefont block encrypt filesystems fsck)/' /etc/mkinitcpio.conf
-mkinitcpio -P
-
-# systemd-boot installation
-bootctl install
-
-# systemd-boot loader configuration
-cat > /boot/loader/loader.conf <<LOADER
-default arch
-timeout 5
-console-mode max
-LOADER
-
-# LVM and encrypted root UUID
-UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
-
-# Boot entry
-cat > /boot/loader/entries/arch.conf <<ENTRY
-title Arch Linux
-linux /vmlinuz-linux
-initrd /amd-ucode.img
-initrd /initramfs-linux.img
-options cryptdevice=UUID=\${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/swap root=/dev/vg0/root rw
-ENTRY
-
-# Network setup
-systemctl enable systemd-networkd
-systemctl enable systemd-resolved
-systemctl enable NetworkManager
-systemctl enable sshd
-
-cat > /etc/hosts <<HOSTS
-127.0.0.1    localhost
-::1          localhost
-127.0.1.1    \$hostname.localdomain    \$hostname
-HOSTS
-
-# Verify bootctl
-bootctl list
-
-# Exit chroot
-echo "Installation and basic configuration complete. exiting chroot"
-EOF
+#arch-chroot /mnt /bin/bash <<EOF
+## OLD Methode to chroot code all in one
+#EOF
+curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archinstall/chroot.sh
+chmod +x /mnt/chroot.sh
+arch-chroot /mnt /chroot.sh
 
 echo "Remove the CD/USB ISO of arch"
 echo "Reboot into your new installation of Arch"
