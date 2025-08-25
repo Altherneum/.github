@@ -85,3 +85,4 @@ bootctl list
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
 exit
+echo "exited"
