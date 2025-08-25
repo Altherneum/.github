@@ -94,13 +94,13 @@ echo "LANG=\$utflang" > /etc/locale.conf
 echo "\$hostname" > /etc/hostname
 
 ## Root Password
-# echo "root:\$rootpassword" | chpasswd # Seem not to work
-echo "\$rootpassword" | passwd root --stdin
+# echo "root:$rootpassword" | chpasswd # Seem not to work
+echo "$rootpassword" | passwd root --stdin
 
 ## Create User
 useradd -m -s /bin/bash "\$username"
-# echo "\$username:\$password" | chpasswd # Seem not to work
-echo "\$password" | passwd \$username --stdin
+# echo "$username:$password" | chpasswd # Seem not to work
+echo "$password" | passwd $username --stdin
 
 ## Add the user to sudoers file
 usermod -aG wheel "\$username"
