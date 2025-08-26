@@ -78,7 +78,20 @@ echo "::1          localhost" >> /etc/hosts
 echo "127.0.1.1    $hostname.localdomain    $hostname" >> /etc/hosts
 
 # Verify bootctl
+echo "BootCTL list"
 bootctl list
+
+# Installing softwares
+## System
+pacman -S --noconfirm ufw openssh pipewire lib32-pipewire 
+## Media
+pacman -S --noconfirm brave-bin obs-studio
+## Games
+pacman -S --noconfirm steam
+## Code
+pacman -S --noconfirm git vscodium github-desktop-bin
+## Display
+pacman -S --noconfirm plasma swayfx hyprland labwc sddm
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
