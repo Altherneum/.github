@@ -89,7 +89,7 @@ pacman -S --noconfirm plasma hyprland labwc sddm
 ## System
 pacman -S --noconfirm git ufw pipewire keepassxc wireplumber
 ## Video drivers
-pacman -S --noconfirm xf86-video-amdgpu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver
+pacman -S --noconfirm xf86-video-amdgpu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver amdvlk lib32-amdvlk
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
