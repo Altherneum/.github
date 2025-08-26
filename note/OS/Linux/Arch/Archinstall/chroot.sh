@@ -83,9 +83,9 @@ bootctl list
 
 # Installing softwares
 ## System
-pacman -S --noconfirm ufw openssh pipewire lib32-pipewire 
+pacman -S --noconfirm ufw openssh pipewire lib32-pipewire keepassxc
 ## Media
-pacman -S --noconfirm brave-bin obs-studio
+pacman -S --noconfirm brave-bin obs-studio discord soundux
 ## Games
 pacman -S --noconfirm steam
 ## Code
