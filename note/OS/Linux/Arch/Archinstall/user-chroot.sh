@@ -14,3 +14,9 @@ systemctl --user enable pipewire pipewire-pulse wireplumber
 # systemctl --user start pipewire pipewire-pulse wireplumber # No need to start it will do it on reboot
 ## Show if PipeWire is running
 pactl info
+
+# Dev
+yay -S --noconfirm vscodium-bin github-desktop-bin
+
+# Steam
+yay -S steam
