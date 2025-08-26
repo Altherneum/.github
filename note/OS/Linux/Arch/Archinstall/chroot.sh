@@ -87,5 +87,9 @@ pacman -S --noconfirm obs-studio discord plasma hyprland labwc sddm git ufw pipe
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
 exit
-
 echo "exited"
+
+# User software installation
+curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archinstall/user-chroot.sh
+chmod +x /mnt/user-chroot.sh
+arch-chroot -u $user /mnt /user-chroot.sh
