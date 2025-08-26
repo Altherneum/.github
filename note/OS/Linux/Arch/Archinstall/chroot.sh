@@ -1,8 +1,8 @@
 # Variables
-localtime=/Europe/Paris
-langkey=fr
-fonttype=ter-v28b
-utflang=fr_FR.UTF-8
+localtime="/Europe/Paris"
+langkey="fr"
+fonttype="ter-v28b"
+utflang="fr_FR.UTF-8"
 hostname="ARCH"
 rootpassword="SuperPass123"
 username="arch"
