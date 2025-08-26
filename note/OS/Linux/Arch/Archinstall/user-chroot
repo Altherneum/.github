@@ -1,0 +1,5 @@
+# Yay installation
+su arch -c "mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm"
+
+# swayfx
+yay --noconfirm -S swayfx
