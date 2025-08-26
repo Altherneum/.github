@@ -84,13 +84,8 @@ bootctl list
 # Installing softwares
 pacman -S --noconfirm obs-studio discord plasma hyprland labwc sddm git ufw pipewire keepassxc
 
-# Yay installation
-su arch -c "mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm"
-
-# swayfx
-yay --noconfirm -S swayfx
-
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
 exit
+
 echo "exited"
