@@ -83,15 +83,14 @@ bootctl list
 
 # Installing softwares
 ## System
-pacman -S --noconfirm ufw openssh pipewire lib32-pipewire keepassxc
+pacman -S --noconfirm ufw pipewire keepassxc
 ## Media
-pacman -S --noconfirm brave-bin obs-studio discord soundux
+pacman -S --noconfirm obs-studio discord
 ## Games
-pacman -S --noconfirm steam
 ## Code
-pacman -S --noconfirm git vscodium github-desktop-bin
+pacman -S --noconfirm git
 ## Display
-pacman -S --noconfirm plasma swayfx hyprland labwc sddm
+pacman -S --noconfirm plasma sway hyprland labwc sddm
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
