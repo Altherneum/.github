@@ -20,3 +20,8 @@ yay -S --noconfirm --needed vscodium-bin github-desktop-bin
 
 # Steam
 yay -S --noconfirm --needed steam
+
+# Exit user arch-chroot
+echo "Exit user arch-chroot"
+exit
+echo "exited"
