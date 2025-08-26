@@ -6,6 +6,7 @@
 - `adduser` / `useradd`
   - `useradd [USER]` Créer un utilisateur
   - `useradd -m -s /bin/bash [USER]` Créer l'utilisateur et son `/home` et précise comme shell `bash`
+  - `useradd -m -p $(openssl passwd -1 $password) -s /bin/bash "$username"` Permet de créer l'utilisateur à partir d'une variable et de chiffrer son mot de passe 
 
 ## Edit user
 - `usermod`
