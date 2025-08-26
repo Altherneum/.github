@@ -32,13 +32,12 @@ echo "LANG=$utflang" > /etc/locale.conf
 echo "$hostname" > /etc/hostname
 
 ## Root Password
-# echo "root:$rootpassword" | chpasswd # Seem not to work
-echo "$rootpassword" | passwd root --stdin
+echo "root:$rootpassword" | chpasswd
 
 ## Create User
 useradd -m -s /bin/bash "$username"
-# echo "$username:$password" | chpasswd # Seem not to work
-echo "$password" | passwd $username --stdin
+# useradd -m -p $(openssl passwd -1 $password) -s /bin/bash "$username" # To test later if ⬇️ dont work
+echo "$username:$password" | chpasswd
 
 ## Add the user to sudoers file
 usermod -aG wheel "$username"
