@@ -83,19 +83,19 @@ bootctl list
 
 # Installing softwares
 ## Media
-pacman -S --noconfirm obs-studio discord
+pacman -S --needed --noconfirm obs-studio discord
 ## Windows
-pacman -S --noconfirm plasma hyprland labwc sddm
+pacman -S --needed --noconfirm plasma hyprland labwc sddm
 ## System
-pacman -S --noconfirm git ufw pipewire keepassxc wireplumber
+pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber
 ## Video drivers
 ### xf86
-pacman -S --noconfirm xf86-video-amdgpu
+pacman -S --needed --noconfirm xf86-video-amdgpu
 ### Mesa
-pacman -S --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mesa-driver
+pacman -S --needed --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mesa-driver
 ### Vulkan
-pacman -S --noconfirm amdvlk lib32-amdvlk
-pacman -S --noconfirm vulkan-radeon lib32-vulkan-radeon
+pacman -S --needed --noconfirm amdvlk lib32-amdvlk
+pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
 #### Test Vulkan install
 vulkaninfo
 #### Display VGA & 3D env
