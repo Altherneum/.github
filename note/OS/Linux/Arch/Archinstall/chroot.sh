@@ -82,15 +82,14 @@ echo "BootCTL list"
 bootctl list
 
 # Installing softwares
-## System
-pacman -S --noconfirm ufw pipewire keepassxc
-## Media
-pacman -S --noconfirm obs-studio discord
-## Games
-## Code
-pacman -S --noconfirm git
-## Display
-pacman -S --noconfirm plasma sway hyprland labwc sddm
+pacman -S --noconfirm obs-studio discord plasma hyprland labwc sddm git ufw pipewire keepassxc
+
+# Yay installation
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si
+
+# swayfx
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
