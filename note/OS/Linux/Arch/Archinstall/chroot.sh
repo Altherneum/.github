@@ -82,7 +82,7 @@ echo "BootCTL list"
 bootctl list
 
 # Installing softwares
-pacman -S --noconfirm obs-studio discord plasma hyprland labwc sddm git ufw pipewire keepassxc wireplumber
+pacman -S --noconfirm obs-studio discord plasma hyprland labwc sddm git ufw pipewire keepassxc wireplumber xf86-video-amdgpu mesa lib32-mesa
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
