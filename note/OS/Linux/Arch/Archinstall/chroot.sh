@@ -37,7 +37,7 @@ echo "root:$rootpassword" | chpasswd
 ## Create User
 useradd -m -s /bin/bash "$username"
 # useradd -m -p $(openssl passwd -1 $password) -s /bin/bash "$username" # To test later if ⬇️ dont work
-echo "$username:$password" | chpasswd
+echo "$username:$userpassword" | chpasswd
 
 ## Add the user to sudoers file
 usermod -aG wheel "$username"
