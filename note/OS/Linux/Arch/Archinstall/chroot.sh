@@ -89,7 +89,15 @@ pacman -S --noconfirm plasma hyprland labwc sddm
 ## System
 pacman -S --noconfirm git ufw pipewire keepassxc wireplumber
 ## Video drivers
-pacman -S --noconfirm xf86-video-amdgpu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver amdvlk lib32-amdvlk
+### xf86
+pacman -S --noconfirm xf86-video-amdgpu
+### Mesa
+pacman -S --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mesa-driver
+### Vulkan
+pacman -S --noconfirm amdvlk lib32-amdvlk
+pacman -S --noconfirm vulkan-radeon lib32-vulkan-radeon
+#### Test Vulkan install
+vulkaninfo
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
