@@ -48,7 +48,7 @@ mount --mkdir /dev/vg0/home /mnt/home
 mount --mkdir /dev/sda1 /mnt/boot
 
 # Install the base system
-pacstrap -K /mnt linux linux-firmware base base-devel vim nano terminus-font efibootmgr lvm2 cryptsetup networkmanager openssh os-prober dosfstools amd-ucode
+pacstrap -K /mnt linux linux-firmware base base-devel nano terminus-font efibootmgr lvm2 cryptsetup networkmanager openssh os-prober dosfstools amd-ucode
 
 # Get the fstab
 genfstab -U /mnt > /mnt/etc/fstab
