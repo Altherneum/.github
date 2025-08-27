@@ -66,9 +66,11 @@ vulkaninfo
 lspci -k | grep -A 3 -E "(VGA|3D)"
 
 # mkinitcpio
+more /etc/mkinitcpio.conf
 sed -i 's/^HOOKS=.*/HOOKS=(base udev keyboard autodetect microcode modconf kms keymap lvm2 consolefont block encrypt filesystems fsck)/' /etc/mkinitcpio.conf
-# sudo sed -i 's/MODULES=()/MODULES=(amdgpu radeon)/' /etc/mkinitcpio.conf # To test if MODULES is empty
+sed -i 's/MODULES=.*/MODULES=(amdgpu radeon)/' /etc/mkinitcpio.conf # To test if MODULES is empty
 # sudo sed -i 's/MODULES=($$.*$$)/MODULES=(amdgpu radeon \1)/' /etc/mkinitcpio.conf # To test if modules are not empty to append to it first it the row
+more /etc/mkinitcpio.conf
 mkinitcpio -P
 
 # systemd-boot installation
