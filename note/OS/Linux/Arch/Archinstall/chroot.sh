@@ -53,7 +53,7 @@ pacman -S --needed --noconfirm wayland wlroots xdg-desktop-portal-hyprland hyprl
 ### Enable SDDM
 systemctl enable sddm
 ## System
-pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber
+pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber go
 ## Video drivers
 ### xf86
 pacman -S --needed --noconfirm xf86-video-amdgpu
