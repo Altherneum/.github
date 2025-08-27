@@ -85,7 +85,8 @@ bootctl list
 ## Media
 pacman -S --needed --noconfirm obs-studio discord
 ## Windows
-pacman -S --needed --noconfirm plasma hyprland labwc sddm
+### pacman -S --needed --noconfirm plasma hyprland labwc sddm
+pacman -S --needed --noconfirm wayland wlroots xdg-desktop-portal-hyprland hyprland
 ## System
 pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber
 ## Video drivers
