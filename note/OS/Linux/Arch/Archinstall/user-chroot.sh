@@ -1,10 +1,11 @@
 # Change home
-echo $HOME
+username=$(whoami)
+echo "Old home : $HOME"
 HOME=/home/$USER
-echo "new home is : " && echo $HOME
+echo "new home is : $HOME"
 
 # Yay installation
-su arch -c "mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm"
+mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 
 # Hyperland configuration
 mkdir -p ~/.config/hypr && cp /usr/share/hyprland/examples/hyprland.conf ~/.config/hypr/
