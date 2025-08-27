@@ -111,6 +111,8 @@ exit
 echo "exited chroot"
 
 echo "Run User chroot for software installation"
+
+username="arch"
 # User software installation
 curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archinstall/user-chroot.sh
 chmod +x /mnt/user-chroot.sh
