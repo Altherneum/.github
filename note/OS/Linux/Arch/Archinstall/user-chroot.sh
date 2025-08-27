@@ -9,11 +9,11 @@ mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.g
 
 # swayfx
 userpassword="UserPass123"
-echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse} vscodium-bin github-desktop-bin steam
+echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse}
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
-# systemctl --user start pipewire pipewire-pulse wireplumber # No need to start it will do it on reboot
+systemctl --user start pipewire pipewire-pulse wireplumber
 ## Show if PipeWire is running
 pactl info
 
