@@ -1,7 +1,7 @@
 # Change home
 username=$(whoami)
 echo "Old home : $HOME"
-HOME=/home/$USER
+HOME=/home/$username
 echo "new home is : $HOME"
 
 # Yay installation
