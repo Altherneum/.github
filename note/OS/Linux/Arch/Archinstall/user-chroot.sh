@@ -1,3 +1,8 @@
+# Change home
+echo $HOME
+HOME=/home/$USER
+echo "new home is : " && echo $HOME
+
 # Yay installation
 su arch -c "mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm"
 
