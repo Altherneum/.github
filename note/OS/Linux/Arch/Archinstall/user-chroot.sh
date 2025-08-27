@@ -1,6 +1,9 @@
 # Yay installation
 su arch -c "mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm"
 
+# Hyperland configuration
+mkdir -p ~/.config/hypr && cp /usr/share/hyprland/examples/hyprland.conf ~/.config/hypr/
+
 # swayfx
 yay -S --noconfirm --needed swayfx 
 
