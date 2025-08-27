@@ -60,8 +60,6 @@ pacman -S --needed --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mes
 ### Vulkan
 pacman -S --needed --noconfirm amdvlk lib32-amdvlk
 pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
-#### Test Vulkan install
-vulkaninfo
 #### Display VGA & 3D env
 lspci -k | grep -A 3 -E "(VGA|3D)"
 
