@@ -7,9 +7,6 @@ echo "new home is : $HOME"
 # Yay installation
 mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 
-# Hyperland configuration
-mkdir -p ~/.config/hypr && cp /usr/share/hyprland/examples/hyprland.conf ~/.config/hypr/
-
 # swayfx
 yay -S --noconfirm --needed swayfx 
 
@@ -29,6 +26,9 @@ yay -S --noconfirm --needed vscodium-bin github-desktop-bin
 
 # Steam
 yay -S --noconfirm --needed steam
+
+# Hyperland configuration
+mkdir -p ~/.config/hypr && cp /usr/share/hyprland/examples/hyprland.conf ~/.config/hypr/
 
 # Exit user arch-chroot
 echo "Exit user arch-chroot"
