@@ -8,7 +8,8 @@ echo "new home is : $HOME"
 mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 
 # swayfx
-yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse} vscodium-bin github-desktop-bin steam
+userpassword="UserPass123"
+echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse} vscodium-bin github-desktop-bin steam
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
