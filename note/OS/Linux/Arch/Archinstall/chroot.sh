@@ -44,8 +44,31 @@ usermod -aG wheel "$username"
 ## Uncomment wheel's group line
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
+# Installing softwares
+## Media
+pacman -S --needed --noconfirm obs-studio discord
+## Windows
+### pacman -S --needed --noconfirm plasma hyprland labwc sddm
+pacman -S --needed --noconfirm wayland wlroots xdg-desktop-portal-hyprland hyprland
+## System
+pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber
+## Video drivers
+### xf86
+pacman -S --needed --noconfirm xf86-video-amdgpu
+### Mesa
+pacman -S --needed --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mesa-driver
+### Vulkan
+pacman -S --needed --noconfirm amdvlk lib32-amdvlk
+pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
+#### Test Vulkan install
+vulkaninfo
+#### Display VGA & 3D env
+lspci -k | grep -A 3 -E "(VGA|3D)"
+
 # mkinitcpio
 sed -i 's/^HOOKS=.*/HOOKS=(base udev keyboard autodetect microcode modconf kms keymap lvm2 consolefont block encrypt filesystems fsck)/' /etc/mkinitcpio.conf
+# sudo sed -i 's/MODULES=()/MODULES=(amdgpu radeon)/' /etc/mkinitcpio.conf # To test if MODULES is empty
+# sudo sed -i 's/MODULES=($$.*$$)/MODULES=(amdgpu radeon \1)/' /etc/mkinitcpio.conf # To test if modules are not empty to append to it first it the row
 mkinitcpio -P
 
 # systemd-boot installation
@@ -80,27 +103,6 @@ echo "127.0.1.1    $hostname.localdomain    $hostname" >> /etc/hosts
 # Verify bootctl
 echo "BootCTL list"
 bootctl list
-
-# Installing softwares
-## Media
-pacman -S --needed --noconfirm obs-studio discord
-## Windows
-### pacman -S --needed --noconfirm plasma hyprland labwc sddm
-pacman -S --needed --noconfirm wayland wlroots xdg-desktop-portal-hyprland hyprland
-## System
-pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber
-## Video drivers
-### xf86
-pacman -S --needed --noconfirm xf86-video-amdgpu
-### Mesa
-pacman -S --needed --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mesa-driver
-### Vulkan
-pacman -S --needed --noconfirm amdvlk lib32-amdvlk
-pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
-#### Test Vulkan install
-vulkaninfo
-#### Display VGA & 3D env
-lspci -k | grep -A 3 -E "(VGA|3D)"
 
 # Exit chroot
 echo "Installation and basic configuration complete. exiting chroot"
