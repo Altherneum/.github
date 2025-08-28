@@ -41,3 +41,15 @@
 - `CTRL + D`
 - `pkill -KILL -u [user]`, ou `killall -u [user]`
   - `who`, ou `w` Pour voir la liste des utilisateurs connectés
+
+# Sudo sans mot de passe
+- Pour configurer sudo sans mot de passe sur Linux, vous devez modifier le fichier sudoers à l'aide de la commande `visudo` ou `sudo nano`
+- La méthode la plus courante consiste à ajouter une ligne pour votre utilisateur ou groupe dans le répertoire `/etc/sudoers.d/`
+## Utilisateur avec Sudo sans mot de passe
+- Pour un utilisateur spécifique, créez un fichier dans `/etc/sudoers.d/` (par exemple, `100-username`) avec le contenu suivant, en remplaçant username par votre nom d'utilisateur réel : `username ALL=(ALL) NOPASSWD: ALL`
+  - Cela permet à l'utilisateur spécifié d'exécuter n'importe quelle commande avec sudo sans demander de mot de passe
+## Groupe avec Sudo sans mot de passe
+- Vous pouvez également utiliser le groupe wheel en décommentant la ligne `%wheel ALL=(ALL) NOPASSWD: ALL` dans le fichier principal `/etc/sudoers`
+  - Assurez-vous que toutes les entrées conflictuelles dans `/etc/sudoers.d/` sont commentées pour éviter que la demande de mot de passe ne persiste
+## Restreindre l'accès à Sudo sans mot de passe
+- Pour une sécurité renforcée, vous pouvez restreindre l'accès sans mot de passe à certaines commandes, comme pacman pour les mises à jour système : `username ALL=(ALL) NOPASSWD: /usr/bin/pacman -Syu`
