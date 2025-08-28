@@ -17,7 +17,7 @@
   - Exemple (Afficher le `$HOME` de l'utilisateur) : `sudo -i -u user echo \$HOME`
 
 # SU
-**__Super User__**
+**__Switch User__**
 ## Se connecter en root
 [C0OHejfYhfE](https://youtube.com/watch?v=C0OHejfYhfE)
 - `su` Se connecte en tant que "Super User" (root)  si l'utilisateur actuel est dans la liste des sudoers
