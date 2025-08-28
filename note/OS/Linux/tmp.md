@@ -8,3 +8,10 @@
 ## Nettoyer /tmp
 - `find /tmp -ctime +10 -exec rm -rf {} +` supprime tout les fichiers de plus de 10 jours du dossier `/tmp`
   - `rm -rf /tmp` supprime tout le dossier `/tmp`
+## Tmpfs
+- TmpFS, pour `Temporary File System` est un **__système de fichiers__** basé sur la mémoire virtuelle sous Linux qui **__stocke son contenu dans la RAM__**
+- Cela offre un **__accès extrêmement rapide aux fichiers__**
+- Bénéfique pour la gestion des fichiers temporaires générés lors de tâches intensives telles que la **__compilation de programmes__**, où **__un grand volume de données temporaires est créé, manipulé et supprimé__**
+- Les fichiers stockés dans un TMPFS ne sont pas permanents et sont **__automatiquement supprimés lorsque le système de fichiers est démonté, que le système est arrêté ou redémarré__**
+
+[Wikipedia / tmpfs](https://wikipedia.org/wiki/Tmpfs)
