@@ -8,7 +8,7 @@ userpassword="UserPass123"
 # Yay installation
 mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -s --noconfirm
 yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
-echo $userpassword | sudo -S pacman -U $yaytar
+echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 
 # swayfx
 echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse}
