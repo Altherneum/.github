@@ -11,10 +11,12 @@ yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
 echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 
 # Install with yay
-# echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse}
-echo "Getting pipewire" && echo $userpassword | sudo -S yay -S --noconfirm --needed pipewire
-echo "Getting swayfx" && echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx
-echo "Getting Brave" && echo $userpassword | sudo -S yay -S --noconfirm --needed brave
+# echo "Getting pipewire" && echo $userpassword | sudo -S yay -S --noconfirm --needed pipewire # Seem not to work as it will prompt that it hate sudo :(
+# echo "Getting swayfx" && echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx # Seem not to work as it will prompt that it hate sudo :(
+# echo "Getting Brave" && echo $userpassword | sudo -S yay -S --noconfirm --needed brave # Seem not to work as it will prompt that it hate sudo :(
+echo "Getting pipewire" && yay -S --noconfirm --needed pipewire
+echo "Getting swayfx" && yay -S --noconfirm --needed swayfx
+echo "Getting Brave" && yay -S --noconfirm --needed brave
 
 
 ## Enable PipeWire
