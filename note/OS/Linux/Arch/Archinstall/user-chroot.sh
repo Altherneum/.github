@@ -10,8 +10,12 @@ mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.g
 yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
 echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 
-# swayfx
-echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse}
+# Install with yay
+# echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx brave-bin pipewire-{jack,jack-dropin,alsa,pulse}
+echo "Getting pipewire" && echo $userpassword | sudo -S yay -S --noconfirm --needed pipewire
+echo "Getting swayfx" && echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx
+echo "Getting Brave" && echo $userpassword | sudo -S yay -S --noconfirm --needed brave
+
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
