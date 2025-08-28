@@ -23,8 +23,8 @@ pactl info
 mkdir -p ~/.config/hypr && cp /usr/share/hyprland/examples/hyprland.conf ~/.config/hypr/
 
 # Clean install
-echo $userpassword | sudo pacman -Scc --noconfirm
-echo $userpassword | sudo yay -Scc --noconfirm
+echo $userpassword | sudo -S pacman -Scc --noconfirm
+echo $userpassword | sudo -S yay -Scc --noconfirm
 
 # Exit user arch-chroot
 echo "Exit user arch-chroot"
