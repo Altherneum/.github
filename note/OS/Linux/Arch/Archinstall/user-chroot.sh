@@ -17,7 +17,7 @@ echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 # echo "Getting Brave" && echo $userpassword | sudo -S yay -S --noconfirm --needed brave # Seem not to work as it will prompt that it hate sudo :(
 echo "Getting pipewire" && yay -S --noconfirm --needed pipewire
 echo "Getting swayfx" && yay -S --noconfirm --needed swayfx
-echo "Getting Brave" && yay -S --noconfirm --needed brave
+echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 
 
 ## Enable PipeWire
