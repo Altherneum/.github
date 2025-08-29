@@ -29,7 +29,7 @@ pvcreate /dev/mapper/cryptlvm
 # Volume de groupe VG
 vgcreate vg0 /dev/mapper/cryptlvm
 # Volume logique LV
-lvcreate -l 50%FREE -n root vg0 # /root
+lvcreate -l 75%FREE -n root vg0 # /root
 lvcreate --size 4G -n swap vg0 # /swap
 lvcreate -l 100%FREE -n home vg0 # /home
 lvreduce --size -256M vg0/home # garde de l'espace vide
