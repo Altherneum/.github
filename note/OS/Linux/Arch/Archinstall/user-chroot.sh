@@ -27,7 +27,6 @@ systemctl --user start pipewire pipewire-pulse wireplumber
 echo "pactl info = " && pactl info
 
 # Hyperland configuration
-# mkdir -p ~/.config/hypr && cp /usr/share/hyprland/examples/hyprland.conf ~/.config/hypr/ # Seem not to work as files dont exist here
 mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/
 
 # Clean install
