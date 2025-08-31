@@ -13,6 +13,9 @@ userpassword="UserPass123"
 sed -i 's/^#Color/Color/' /etc/pacman.conf
 ## Add pacman Parallel Downloads
 sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
+## Add multilib pacman (for steam)
+sed -i 's/^#\[multilib\]/\[multilib\]/' /etc/pacman.conf
+sed -i 's/^#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist' /etc/pacman.conf
 
 # Timezone and Clock
 ln -sf /usr/share/zoneinfo$localtime /etc/localtime
@@ -45,8 +48,11 @@ usermod -aG wheel "$username"
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 # Installing softwares
+pacman -Syu
 ## Media
-pacman -S --needed --noconfirm obs-studio discord steam
+pacman -S --needed --noconfirm obs-studio discord
+## Steam
+pacman -S --needed --noconfirm steam
 ## Windows
 pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland
 ### Enable SDDM
