@@ -57,7 +57,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 #arch-chroot /mnt /bin/bash <<EOF
 ## OLD Methode to chroot code all in one
 #EOF
-curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archinstall/chroot.sh
+curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
 chmod +x /mnt/chroot.sh
 arch-chroot /mnt /chroot.sh
 
@@ -65,7 +65,7 @@ arch-chroot /mnt /chroot.sh
 echo "Run User chroot for software installation"
 username="arch"
 # User software installation
-curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archinstall/user-chroot.sh
+curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/user-chroot.sh
 chmod +x /mnt/user-chroot.sh
 arch-chroot -u $username /mnt /user-chroot.sh
 echo "exited user-chroot"
