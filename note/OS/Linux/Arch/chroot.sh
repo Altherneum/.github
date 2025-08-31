@@ -46,7 +46,7 @@ sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /et
 
 # Installing softwares
 ## Media
-pacman -S --needed --noconfirm obs-studio discord
+pacman -S --needed --noconfirm obs-studio discord steam
 ## Windows
 pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland
 ### Enable SDDM
