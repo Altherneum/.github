@@ -12,12 +12,11 @@ yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
 echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 
 # Install with yay
-# echo "Getting pipewire" && echo $userpassword | sudo -S yay -S --noconfirm --needed pipewire # Seem not to work as it will prompt that it hate sudo :(
-# echo "Getting swayfx" && echo $userpassword | sudo -S yay -S --noconfirm --needed swayfx # Seem not to work as it will prompt that it hate sudo :(
-# echo "Getting Brave" && echo $userpassword | sudo -S yay -S --noconfirm --needed brave # Seem not to work as it will prompt that it hate sudo :(
-echo "Getting pipewire" && yay -S --noconfirm --needed pipewire
-echo "Getting swayfx" && yay -S --noconfirm --needed swayfx
+echo "Getting PipeWire" && yay -S --noconfirm --needed pipewire
+echo "Getting SwayFx" && yay -S --noconfirm --needed swayfx
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
+# yay -Rns protonup-qt # Peut être requis pour clean avant d'install
+echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 
 
 ## Enable PipeWire
@@ -27,7 +26,8 @@ systemctl --user start pipewire pipewire-pulse wireplumber
 echo "pactl info = " && pactl info
 
 # Hyperland configuration
-mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/
+mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
+curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/Note/OS/Linux/Arch/hyperland.conf
 
 # Clean install
 echo "Clean installation"
