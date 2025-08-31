@@ -15,9 +15,8 @@ echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 echo "Getting PipeWire" && yay -S --noconfirm --needed pipewire
 echo "Getting SwayFx" && yay -S --noconfirm --needed swayfx
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
-# yay -Rns protonup-qt # Peut être requis pour clean avant d'install
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
-
+echo "Getting sddm-astronaut-theme" && yay -S --noconfirm --needed sddm-astronaut-theme
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
