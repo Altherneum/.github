@@ -29,6 +29,9 @@ echo "pactl info = " && pactl info
 mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
 curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/hyprland.conf
 
+# SDDM keyboard layout
+localectl set-x11-keymap fr
+
 # Clean install
 echo "Clean installation"
 echo $userpassword | sudo -S pacman -Scc --noconfirm
