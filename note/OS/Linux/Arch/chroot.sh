@@ -49,7 +49,6 @@ sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /et
 pacman -S --needed --noconfirm obs-studio discord
 ## Windows
 pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland
-### pacman -S --needed --noconfirm wayland wlroots xdg-desktop-portal-hyprland hyprland plasma-wayland-session plasma kde-applications
 ### Enable SDDM
 systemctl enable sddm
 ## System
