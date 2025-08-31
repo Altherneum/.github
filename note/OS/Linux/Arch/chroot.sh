@@ -30,6 +30,10 @@ echo "$utflang UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=$utflang" > /etc/locale.conf
 
+# Keyboard layout
+localectl set-x11-keymap fr
+localectl set-keymap fr
+
 # Computer & user
 ## Hostname
 echo "$hostname" > /etc/hostname
