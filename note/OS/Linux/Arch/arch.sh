@@ -54,14 +54,12 @@ pacstrap -K /mnt linux linux-firmware base base-devel nano terminus-font efiboot
 genfstab -U /mnt > /mnt/etc/fstab
 
 # Chroot
-#arch-chroot /mnt /bin/bash <<EOF
-## OLD Methode to chroot code all in one
-#EOF
 curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
 chmod +x /mnt/chroot.sh
 arch-chroot /mnt /chroot.sh
 
 
+# User-Chroot
 echo "Run User chroot for software installation"
 username="arch"
 # User software installation
