@@ -27,7 +27,7 @@ echo "pactl info = " && pactl info
 
 # Hyperland configuration
 mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
-curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/Note/OS/Linux/Arch/hyperland.conf
+curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/hyprland.conf
 
 # Clean install
 echo "Clean installation"
