@@ -25,7 +25,7 @@ HTML est inspiré du [Standard Generalized Markup Language](https://fr.wikipedia
 
 ## Explication
 Cet exemple contient du texte, cinq balises et une référence d’entité :
-- `TITLE` est la balise ouvrante de l’élément TITLE. `/TITLE` est la balise fermante de l’élément TITLE. `Exemple de HTML` est le contenu de l’élément TITLE.
+- `TITLE` est la balise ouvrante de l’élément TITLE. `/TITLE` est la balise fermante de l’élément TITLE. `Exemple de titre` est le contenu de l’élément TITLE.
 - `A HREF="cible.html"` est la balise ouvrante de l’élément A, avec : `HREF=cible.html`, l’attribut HREF dont la valeur est cible.html (le lien).
 - `P` est la balise ouvrante de l’élément text
   - Toutefois, elle est utilisée ici comme s’il s’agissait d’un séparateur de paragraphe, et c’est même ainsi qu’elle est souvent présentée dans les plus anciennes documentations de HTML
