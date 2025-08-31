@@ -52,6 +52,7 @@ pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland
 ### Enable SDDM
 systemctl enable sddm
 ## System
+pacman -S --needed --noconfirm alacritty
 pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber go htop
 ## Video drivers
 ### xf86
