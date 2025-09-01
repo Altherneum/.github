@@ -29,7 +29,7 @@ echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting mpvpaper" && yay -S --noconfirm --needed mpvpaper
 
 mkdir -p /etc/sddm.conf.d && cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
-curl -o /etc/sddm.conf.d/ https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/sddm.conf
+curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/sddm.conf
 
 # Hyperland configuration
 mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
