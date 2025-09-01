@@ -8,15 +8,6 @@ rootpassword="SuperPass123"
 username="arch"
 userpassword="UserPass123"
 
-# Pacman config
-## Add colors
-sed -i 's/^#Color/Color/' /etc/pacman.conf
-## Add pacman Parallel Downloads
-sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
-## Add multilib pacman (for steam)
-sed -i 's/^#\[multilib\]/\[multilib\]/' /etc/pacman.conf
-sed -i 's/^#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist' /etc/pacman.conf
-
 # Timezone and Clock
 ln -sf /usr/share/zoneinfo$localtime /etc/localtime
 hwclock --systohc
@@ -51,8 +42,16 @@ usermod -aG wheel "$username"
 ## Uncomment wheel's group line
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
+# Pacman config
+## Add colors
+sed -i 's/^#Color/Color/' /etc/pacman.conf
+## Add pacman Parallel Downloads
+sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
+## Add multilib pacman (for steam)
+sed -i 's/^#\[multilib\]/\[multilib\]/' /etc/pacman.conf
+sed -i 's/^#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/' /etc/pacman.conf
 # Installing softwares
-pacman -Syu
+pacman -Syu --noconfirm
 ## Media
 pacman -S --needed --noconfirm obs-studio discord
 ## Steam
@@ -76,10 +75,10 @@ pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
 lspci -k | grep -A 3 -E "(VGA|3D)"
 
 # mkinitcpio
-more /etc/mkinitcpio.conf
+# more /etc/mkinitcpio.conf
 sed -i 's/^HOOKS=.*/HOOKS=(base udev keyboard autodetect microcode modconf kms keymap lvm2 consolefont block encrypt filesystems fsck)/' /etc/mkinitcpio.conf
 sed -i 's/MODULES=.*/MODULES=(amdgpu radeon)/' /etc/mkinitcpio.conf # sudo sed -i 's/MODULES=($$.*$$)/MODULES=(amdgpu radeon \1)/' /etc/mkinitcpio.conf # if modules are not empty to append to it first it the row
-more /etc/mkinitcpio.conf
+# more /etc/mkinitcpio.conf
 mkinitcpio -P
 
 # systemd-boot installation
