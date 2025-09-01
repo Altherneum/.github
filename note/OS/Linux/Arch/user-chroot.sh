@@ -17,6 +17,7 @@ echo "Getting SwayFx" && yay -S --noconfirm --needed swayfx
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting sddm-astronaut-theme" && yay -S --noconfirm --needed sddm-astronaut-theme
+echo "Getting mpvpaper" && yay -S --noconfirm --needed mpvpaper
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
