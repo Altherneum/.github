@@ -1,0 +1,5 @@
+- https://motionbgs.com/neon-galaxy-bedroom
+  - https://motionbgs.com//i/c/1920x1080/media/6433/neon-galaxy-bedroom.jpg
+  - https://motionbgs.com//i/c/960x540/media/6433/neon-galaxy-bedroom.jpg
+  - https://motionbgs.com/dl/hd/6433/ 1920x1080
+  - https://motionbgs.com/dl/4k/6433/ 3840x2160
