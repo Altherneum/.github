@@ -18,12 +18,29 @@ echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting sddm-astronaut-theme" && yay -S --noconfirm --needed sddm-astronaut-theme
 echo "Getting mpvpaper" && yay -S --noconfirm --needed mpvpaper
+# https://github.com/GhostNaN/mpvpaper/blob/master/mpvpaper.man
+#    # mpvpaper -l overlay -vs -o "no-audio loop" '*' ~/Wallpapers/Video/itachi-uchiha.1920x1080.mp4 -f ; sleep 1 ; hyprlock -c bg.conf ; pkill mpvpaper
+#
+# In the hyprlock.conf file, the background settings should be configured to be transparent and without blur:
+#
+#background {
+#    monitor =
+#    path =
+#    color = rgba(0, 0, 0, 0)
+#    blur_passes = 0
+#    noise = 0.0
+#}
+#
+#    # https://mpv.io/manual/master/#command-interface
+#    #    # --video-unscaled=no --vf=scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:108
+#
+# https://www.reddit.com/r/hyprland/comments/1lc5ct5/comment/my0lwf6/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
 systemctl --user start pipewire pipewire-pulse wireplumber
 ## Show if PipeWire is running
-echo "pactl info = " && pactl info
+# echo "pactl info = " && pactl info # Need hyprland started # It generate error as nothing is running for now & we are inside chroot
 
 # Hyperland configuration
 mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
