@@ -35,6 +35,8 @@ echo "Getting mpvpaper" && yay -S --noconfirm --needed mpvpaper
 #    #    # --video-unscaled=no --vf=scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:108
 #
 # https://www.reddit.com/r/hyprland/comments/1lc5ct5/comment/my0lwf6/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+#
+# CMD will be inside Exec-once of Hyprland conf
 
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
