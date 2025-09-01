@@ -48,8 +48,10 @@ sed -i 's/^#Color/Color/' /etc/pacman.conf
 ## Add pacman Parallel Downloads
 sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 ## Add multilib pacman (for steam)
-sed -i 's/^#\[multilib\]/\[multilib\]/' /etc/pacman.conf
-sed -i 's/^#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/' /etc/pacman.conf
+# sed -i 's/^#\[multilib\]/\[multilib\]/' /etc/pacman.conf # Issue as next line do everywhere
+# sed -i 's/^#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/' /etc/pacman.conf # Issue as this line do it on wrong section also
+sed -iz 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/' /etc/pacman.conf
+
 # Installing softwares
 pacman -Syu --noconfirm
 ## Media
