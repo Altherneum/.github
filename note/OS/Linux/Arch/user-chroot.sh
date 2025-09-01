@@ -37,6 +37,7 @@ curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneu
 # Hyprlock configuration
 mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.default
 curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprlock.conf
+curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
 
 # https://github.com/GhostNaN/mpvpaper/blob/master/mpvpaper.man
 #    # mpvpaper -l overlay -vs -o "no-audio loop" '*' ~/Wallpapers/Video/itachi-uchiha.1920x1080.mp4 -f ; sleep 1 ; hyprlock -c bg.conf ; pkill mpvpaper
