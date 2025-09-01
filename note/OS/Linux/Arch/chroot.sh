@@ -59,7 +59,7 @@ pacman -S --needed --noconfirm obs-studio discord
 ## Steam
 pacman -S --needed --noconfirm steam
 ## Windows
-pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland
+pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland hyprlock
 ### Enable SDDM
 systemctl enable sddm
 ## System

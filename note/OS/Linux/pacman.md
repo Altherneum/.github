@@ -20,29 +20,31 @@ Utilitaire de gestion de package
 - Les fichiers appartenant aux packages précisés seront supprimés et la base de donnée sera mise à jour
 - La plupart des fichiers de configuration seront sauvegardés avec l'extension .pacsave sauf si l'option --nosave est saisie
 ## Mettre à jour un paque via pacman
-- `-U`, `--upgrade` Mettez à niveau ou ajoutez des packages au système et installez les dépendances requises depuis les dépôts de synchronisation
+- `pacman -U`, `--upgrade` Mettez à niveau ou ajoutez des packages au système et installez les dépendances requises depuis les dépôts de synchronisation
 - Vous pouvez spécifier une URL ou un chemin d'accès
 - Il s'agit d'un processus de type « suppression puis ajout »
 ## Ne pas demander la confirmation de pacman
-- `--noconfirm` Acquitte automatiquement tous les messages et demandes de confirmation
+- `pacman --noconfirm <PACKAGE>` Acquitte automatiquement tous les messages et demandes de confirmation
 - À éviter sauf si vous souhaitez exécuter pacman dans un script
 ## Installer uniquement les packages requis avec pacman
-- `--needed` Installe seulement la cible qui n'est pas installée ou à jour.
-## Lister les fichiers d'un package pacman
-- `-l <package>`, `--list <package>` Liste tous les fichiers inclus dans `<package>`
-- Plusieurs packages peuvent être donnés sur la ligne de commande
+- `pacman --needed <PACKAGE>` Installe seulement la cible qui n'est pas installée ou à jour.
 ## Chercher un package avec pacman
-### Chercher un package pacman installé via search
-- `-s`, `--search <regexp>` Recherchez dans chaque package installé localement les noms ou descriptions correspondant à l'expression régulière
-- Lorsque vous incluez plusieurs termes de recherche, seuls les packages dont les descriptions correspondent à TOUS ces termes sont renvoyés
 ### Chercher un package pacman installé via query
-- `-Q`, `--query` Interroger la base de données des packages
+- `pacman -Q`, `--query` Interroger la base de données des packages
 - Cette opération permet de visualiser les packages installés et leurs fichiers, ainsi que les méta-informations sur chaque package (dépendances, conflits, date d'installation, date de compilation, taille)
 - Cette opération peut être effectuée sur la base de données locale des packages ou sur des fichiers de packages individuels
   - Dans le premier cas, si aucun nom de package n'est fourni en ligne de commande, tous les packages installés seront interrogés
 - De plus, différents filtres peuvent être appliqués à la liste des packages. Voir `--query`
+#### Chercher un package pacman installé via query et grep
+- `pacman -Q | grep <PACKAGE>`
+### Lister les dossiers d'un package pacman
+- `pacman -Qo <package>`, `--owns --query <package>` Liste tous les dossiers inclus dans `<package>`
+- Plusieurs packages peuvent être donnés sur la ligne de commande
+### Lister les fichiers d'un package pacman
+- `pacman -Ql <package>`, `--list --query <package>` Liste tous les fichiers inclus dans `<package>`
+- Plusieurs packages peuvent être donnés sur la ligne de commande
 ## Nettoyer le cache de pacman
-- `-c`, `--clean` Supprimez du cache les paquets qui ne sont plus installés ainsi que les bases de données de synchronisation actuellement inutilisées pour libérer de l'espace disque
+- `pacman -c <PACKAGE>`, `--clean` Supprimez du cache les paquets qui ne sont plus installés ainsi que les bases de données de synchronisation actuellement inutilisées pour libérer de l'espace disque
 - Lorsque pacman télécharge des paquets, il les enregistre dans un répertoire de cache
   - De plus, les bases de données sont enregistrées pour chaque base de données de synchronisation téléchargée et ne sont pas supprimées
 - Utilisez un paramètre `--clean` pour supprimer uniquement les paquets qui ne sont plus installés
@@ -56,7 +58,7 @@ Utilitaire de gestion de package
 - Soumettre cette option deux fois pour activer la rétrogration de package
   - Dans ce cas pacman va sélectionner les packages synchronisés dont la version ne correspond pas avec la version locale
   - Cela peut être utile pour les utilisateurs qui passent du dépôt testing au dépôt stable.
-- Il est possible de spécfier manuellement d'autres cibles : ainsi `-Su <package>` déclenchera une mise à jour du système pour installer ou mettre à jour le package
+- Il est possible de spécfier manuellement d'autres cibles : ainsi `pacman -Su <package>` déclenchera une mise à jour du système pour installer ou mettre à jour le package
 ## Mettre à jour les bases de données pacman
 - `-y`, `--refresh` Téléchargez une nouvelle copie des bases de données des dépôts de packages `repo.db` depuis le(s) serveur(s) défini(s) dans `pacman.conf`
 ## Installer un package local via pacman
