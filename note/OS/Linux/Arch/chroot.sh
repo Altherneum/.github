@@ -50,17 +50,20 @@ sed -iz 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nI
 
 # Installing softwares
 pacman -Syu --noconfirm
+## OS
+pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland hyprlock hypridle waybar
+pacman -S --needed --noconfirm pipewire wireplumber
+### Enable SDDM
+systemctl enable sddm
 ## Media
 pacman -S --needed --noconfirm obs-studio discord
 ## Steam
 pacman -S --needed --noconfirm steam
-## Windows
-pacman -S --needed --noconfirm plasma hyprland labwc sddm wayland hyprlock
-### Enable SDDM
-systemctl enable sddm
 ## System
 pacman -S --needed --noconfirm alacritty
-pacman -S --needed --noconfirm git ufw pipewire keepassxc wireplumber go htop
+pacman -S --needed --noconfirm git ufw keepassxc go
+### Other software
+pacman -S --needed --noconfirm btop fastfetch htop
 ## Video drivers
 ### xf86
 pacman -S --needed --noconfirm xf86-video-amdgpu
