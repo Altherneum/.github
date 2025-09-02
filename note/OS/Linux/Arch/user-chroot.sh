@@ -21,7 +21,6 @@ systemctl --user start pipewire pipewire-pulse wireplumber
 ### echo "pactl info = " && pactl info # Need hyprland started # It generate error as nothing is running for now & we are inside chroot
 
 ## Downloading software from yay
-echo "Getting SwayFx" && yay -S --noconfirm --needed swayfx
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting mpvpaper" && yay -S --noconfirm --needed mpvpaper
@@ -52,18 +51,9 @@ curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherne
 echo $userpassword | localectl set-x11-keymap fr
 echo $userpassword | localectl set-keymap fr
 
-# For automatic screen locking after inactivity, use hypridle. Configure hypridle.conf to trigger actions based on idle time. For instance, lock the screen after 5 minutes of inactivity by setting timeout = 300 and on-timeout = loginctl lock-session.
-# You can also configure hypridle to turn off the screen after 7 minutes and suspend the system after 10 minutes.
-#
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
 # The image is then embedded into the UKI binary during the mkinitcpio build process.
 # The default splash image is located at /usr/share/systemd/bootctl/splash-arch.bmp, and you can replace it or specify a custom one.
-#
-# https://github.com/Alexays/Waybar
-# https://github.com/davatorium/rofi
-# https://github.com/Ruixi-rebirth/sway-dotfiles
-# https://github.com/aristocratos/btop
-# https://github.com/ammen99/wf-recorder
 
 # Clean install
 echo "Clean installation"
