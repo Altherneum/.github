@@ -19,12 +19,13 @@ systemctl --user enable pipewire pipewire-pulse wireplumber
 systemctl --user start pipewire pipewire-pulse wireplumber
 ## Show if PipeWire is running
 ### echo "pactl info = " && pactl info # Need hyprland started # It generate error as nothing is running for now & we are inside chroot
+echo "Getting Soundux" && yay -S --noconfirm --needed soundux-git
 
 ## Downloading software from yay
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
-echo "Getting mpvpaper" && yay -S --noconfirm --needed mpvpaper
-echo "Getting mpvpaper" && yay -S --noconfirm --needed pipes.sh
+echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
+echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 
 # SDDM configuration
 mkdir -p /etc/sddm.conf.d && cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
