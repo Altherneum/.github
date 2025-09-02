@@ -43,15 +43,8 @@ curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherne
 echo $userpassword | localectl set-x11-keymap fr
 echo $userpassword | localectl set-keymap fr
 
-# https://github.com/GhostNaN/mpvpaper/blob/master/mpvpaper.man
-#    # mpvpaper -l overlay -vs -o "no-audio loop" '*' ~/Wallpapers/Video/itachi-uchiha.1920x1080.mp4 -f ; sleep 1 ; hyprlock -c bg.conf ; pkill mpvpaper
-#
-#    # https://mpv.io/manual/master/#command-interface
-#    #    # --video-unscaled=no --vf=scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080
-#
-# https://www.reddit.com/r/hyprland/comments/1lc5ct5/comment/my0lwf6/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
-#
-# CMD will be inside Exec-once of Hyprland conf
+# For automatic screen locking after inactivity, use hypridle. Configure hypridle.conf to trigger actions based on idle time. For instance, lock the screen after 5 minutes of inactivity by setting timeout = 300 and on-timeout = loginctl lock-session.
+# You can also configure hypridle to turn off the screen after 7 minutes and suspend the system after 10 minutes.
 
 # Clean install
 echo "Clean installation"
