@@ -19,7 +19,7 @@ systemctl --user enable pipewire pipewire-pulse wireplumber
 systemctl --user start pipewire pipewire-pulse wireplumber
 ## Show if PipeWire is running
 ### echo "pactl info = " && pactl info # Need hyprland started # It generate error as nothing is running for now & we are inside chroot
-echo "Getting Soundux" && yay -S --noconfirm --needed soundux-git
+echo "Getting Soundux" && yay -S --noconfirm --needed soundux
 
 ## Downloading software from yay
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
