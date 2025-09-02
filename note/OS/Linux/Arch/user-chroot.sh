@@ -24,6 +24,7 @@ echo "Getting Soundux" && yay -S --noconfirm --needed soundux
 ## Downloading software from yay
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
+echo "Getting Bottles" && yay -S --noconfirm --needed bottles
 echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
 echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 
