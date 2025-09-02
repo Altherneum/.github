@@ -52,9 +52,10 @@ sed -iz 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nI
 pacman -Syu --noconfirm
 ## OS
 pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar rofi
-pacman -S --needed --noconfirm pipewire wireplumber
 ### Enable SDDM
 systemctl enable sddm
+### Sound system
+pacman -S --needed --noconfirm pipewire wireplumber cava
 ## Media
 pacman -S --needed --noconfirm obs-studio discord
 ## Steam
