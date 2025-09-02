@@ -51,7 +51,7 @@ sed -iz 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nI
 # Installing softwares
 pacman -Syu --noconfirm
 ## OS
-pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar rofi
+pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar rofi networkmanager
 ### Enable SDDM
 systemctl enable sddm
 ### Sound system
