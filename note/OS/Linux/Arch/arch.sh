@@ -1,14 +1,14 @@
 # Variables
 device="/dev/sda"
+hostname="ARCH"
+username="arch"
 lvmpassword="BootPass123"
+userpassword="UserPass123"
+rootpassword="SuperPass123"
 localtime="/Europe/Paris"
+utflang="fr_FR.UTF-8"
 langkey="fr"
 fonttype="ter-v28b"
-utflang="fr_FR.UTF-8"
-hostname="ARCH"
-rootpassword="SuperPass123"
-username="arch"
-userpassword="UserPass123"
 
 # Pacman config
 ## Add colors
