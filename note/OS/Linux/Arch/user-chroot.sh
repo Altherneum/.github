@@ -29,25 +29,30 @@ echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
 echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 
 # SDDM configuration
-mkdir -p /etc/sddm.conf.d && cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
-curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/sddm.conf
+echo $userpassword | sudo -S mkdir -p /etc/sddm.conf.d
+echo $userpassword | sudo -S cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
+echo $userpassword | sudo -S curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/sddm.conf
 
 # Hyperland configuration
-echo $userpassword | sudo -S mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
-curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprland.conf
+echo $userpassword | sudo -S mkdir -p ~/.config/hypr 
+echo $userpassword | sudo -S cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprland.conf
 
 # Hyprlock configuration
-mkdir -p ~/.config/hypr && cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.default
-curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprlock.conf
-curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
+echo $userpassword | sudo -S mkdir -p ~/.config/hypr
+echo $userpassword | sudo -S cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.default
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprlock.conf
+echo $userpassword | sudo -S curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
 
 # HyprIdle configuration
-mkdir -p ~/.config/hypr && cp /usr/share/hypr/hypridle.conf ~/.config/hypr/hypridle.conf.default
-curl -o ~/.config/hypr/hypridle.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hypridle.conf
+echo $userpassword | sudo -S mkdir -p ~/.config/hypr
+echo $userpassword | sudo -S cp /usr/share/hypr/hypridle.conf ~/.config/hypr/hypridle.conf.default
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hypridle.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hypridle.conf
 
-# Waybar 
-mkdir -p ~/.config/waybar && cp /etc/xdg/waybar/config.jsonc ~/.config/waybar/config.jsonc.default
-curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/waybar.conf
+# Waybar
+echo $userpassword | sudo -S mkdir -p ~/.config/waybar
+echo $userpassword | sudo -S cp /etc/xdg/waybar/config.jsonc ~/.config/waybar/config.jsonc.default
+echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/waybar.conf
 
 # Keyboard layout
 echo $userpassword | localectl set-x11-keymap fr
