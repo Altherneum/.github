@@ -1,12 +1,12 @@
-# Variables
-localtime="/Europe/Paris"
-langkey="fr"
-fonttype="ter-v28b"
-utflang="fr_FR.UTF-8"
-hostname="ARCH"
-rootpassword="SuperPass123"
-username="arch"
-userpassword="UserPass123"
+# Variables localtime langkey fonttype utflang hostname rootpassword username userpassword
+localtime=$1
+langkey=$2
+fonttype=$3
+utflang=$4
+hostname=$5
+rootpassword=$6
+username=$7
+userpassword=$8
 
 # Timezone and Clock
 ln -sf /usr/share/zoneinfo$localtime /etc/localtime

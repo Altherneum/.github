@@ -1,6 +1,14 @@
 # Variables
 device="/dev/sda"
 lvmpassword="BootPass123"
+localtime="/Europe/Paris"
+langkey="fr"
+fonttype="ter-v28b"
+utflang="fr_FR.UTF-8"
+hostname="ARCH"
+rootpassword="SuperPass123"
+username="arch"
+userpassword="UserPass123"
 
 # Pacman config
 ## Add colors
@@ -56,16 +64,15 @@ genfstab -U /mnt > /mnt/etc/fstab
 # Chroot
 curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
 chmod +x /mnt/chroot.sh
-arch-chroot /mnt /chroot.sh
+arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $rootpassword $username $userpassword
 
 
 # User-Chroot
 echo "Run User chroot for software installation"
-username="arch"
 # User software installation
 curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/user-chroot.sh
 chmod +x /mnt/user-chroot.sh
-arch-chroot -u $username /mnt /user-chroot.sh
+arch-chroot -u $username /mnt /user-chroot.sh $username $userpassword
 echo "exited user-chroot"
 
 echo "Remove the CD/USB ISO of arch"

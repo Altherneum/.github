@@ -1,10 +1,10 @@
 # Change home
 echo "User-chroot installation"
-username=$(whoami)
+username=$1
 echo "Old home : $HOME"
 HOME=/home/$username
 echo "new home is : $HOME"
-userpassword="UserPass123"
+userpassword=$2
 
 # Yay installation
 echo "Yay installation" && mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -s --noconfirm
