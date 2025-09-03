@@ -1,4 +1,4 @@
-# Variables localtime langkey fonttype utflang hostname rootpassword username userpassword
+# Variables from /arch.sh
 localtime=$1
 langkey=$2
 fonttype=$3

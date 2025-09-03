@@ -1,4 +1,4 @@
-# Change home
+# Change home with variables from /arch.sh
 echo "User-chroot installation"
 username=$1
 echo "Old home : $HOME"
