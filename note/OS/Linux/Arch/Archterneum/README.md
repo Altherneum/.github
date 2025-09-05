@@ -4,10 +4,16 @@
 - `loadkeys fr` pour charger un clavier `AZERTY`
   - Ce qui donne avec un clavier `QWERTY` : `loqdkeys fr`
 ### Downloading script
+- `curl -o /arch.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/arch.sh`
+  - Lien alternatif : `curl -ILo /arch.sh http://arch.altherneum.fr`
+  - Liste de liens DNS :
 ```
-curl -o /arch.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/arch.sh
-chmod +x /arch.sh
+arch.altherneum.fr
+archterneum.altherneum.fr
+git.arch.altherneum.fr
 ```
+### Rendre le script exécutable
+`chmod +x /arch.sh`
 ### Modifier les variables
 - Utilisateur, mot de passe, nom d'hôte, ...
 - Pour modifier le fichier, utilisez `nano`, `vim`, etc...
