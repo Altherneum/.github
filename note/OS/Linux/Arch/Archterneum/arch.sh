@@ -62,7 +62,7 @@ pacstrap -K /mnt linux linux-firmware base base-devel nano terminus-font efiboot
 genfstab -U /mnt > /mnt/etc/fstab
 
 # Chroot
-curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/chroot.sh
+curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/chroot.sh
 chmod +x /mnt/chroot.sh
 arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $rootpassword $username $userpassword
 
@@ -70,7 +70,7 @@ arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $ro
 # User-Chroot
 echo "Run User chroot for software installation"
 # User software installation
-curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/user-chroot.sh
+curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/user-chroot.sh
 chmod +x /mnt/user-chroot.sh
 arch-chroot -u $username /mnt /user-chroot.sh $username $userpassword
 echo "exited user-chroot"

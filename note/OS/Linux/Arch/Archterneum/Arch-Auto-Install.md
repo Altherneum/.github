@@ -5,7 +5,7 @@
   - Ce qui donne avec un clavier `QWERTY` : `loqdkeys fr`
 ### Downloading script
 ```
-curl -o /arch.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/arch.sh
+curl -o /arch.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/arch.sh
 chmod +x /arch.sh
 ```
 ### Modifier les variables

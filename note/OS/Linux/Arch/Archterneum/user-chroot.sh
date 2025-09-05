@@ -33,28 +33,28 @@ echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 # SDDM configuration
 echo $userpassword | sudo -S mkdir -p /etc/sddm.conf.d
 echo $userpassword | sudo -S cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
-echo $userpassword | sudo -S curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/sddm.conf
+echo $userpassword | sudo -S curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/sddm.conf
 
 # Hyperland configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr 
 echo $userpassword | sudo -S cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
-echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprland.conf
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland.conf
 
 # Hyprlock configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
 echo $userpassword | sudo -S cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.default
-echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hyprlock.conf
-echo $userpassword | sudo -S curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprlock.conf
+echo $userpassword | sudo -S curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
 
 # HyprIdle configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
 echo $userpassword | sudo -S cp /usr/share/hypr/hypridle.conf ~/.config/hypr/hypridle.conf.default
-echo $userpassword | sudo -S curl -o ~/.config/hypr/hypridle.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/hypridle.conf
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hypridle.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hypridle.conf
 
 # Waybar
 echo $userpassword | sudo -S mkdir -p ~/.config/waybar
 echo $userpassword | sudo -S cp /etc/xdg/waybar/config.jsonc ~/.config/waybar/config.jsonc.default
-echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/files/waybar.conf
+echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.conf
 
 # Keyboard layout
 echo $userpassword | localectl set-x11-keymap fr
