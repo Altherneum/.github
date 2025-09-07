@@ -5,7 +5,7 @@
 
 window#waybar {
     background-color: rgba(45, 45, 45, 0.4);
-    border-top: 3px solid rgba(100, 114, 125, 0.5);
+    border-top: 3px solid rgba(100, 114, 125, 0.25);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -168,12 +168,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: rgba(45, 200, 110, 0.5);
+    background-color: rgba(45, 200, 110, 0.15);
     color: #000000;
 }
 
 #memory {
-    background-color: rgb(155, 90, 180, 0.5);
+    background-color: rgba(155, 90, 180, 0.15);
 }
 
 #disk {
@@ -185,7 +185,7 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: rgba(45, 130, 185, 0.15);
 }
 
 #network.disconnected {
@@ -193,7 +193,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    background-color: rgba(240, 195, 15, 0.15);
     color: #000000;
 }
 
