@@ -28,7 +28,7 @@ echo "Getting Bottles" && yay -S --noconfirm --needed bottles
 echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
 echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
-
+echo "Getting Emote" && yay -S --noconfirm --needed emote
 
 # SDDM configuration
 echo $userpassword | sudo -S mkdir -p /etc/sddm.conf.d
