@@ -55,7 +55,7 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/hypridle.conf https://raw.gi
 echo $userpassword | sudo -S mkdir -p ~/.config/waybar
 echo $userpassword | sudo -S cp /etc/xdg/waybar/config.jsonc ~/.config/waybar/config.jsonc.default
 echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.conf
-
+echo $userpassword | sudo -S curl -o ~/.config/waybar/syle.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.css
 # xfce4-terminal
 echo $userpassword | sudo -S mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
 echo $userpassword | sudo -S curl -o ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-terminal.xml https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/xfce4-terminal.xml
