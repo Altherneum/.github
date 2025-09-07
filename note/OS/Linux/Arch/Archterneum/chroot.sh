@@ -60,6 +60,7 @@ pacman -S --needed --noconfirm obs-studio discord
 pacman -S --needed --noconfirm steam
 ## System
 pacman -S --needed --noconfirm xfce4 nautilus
+pacman -S --needed --noconfirm otf-font-awesome
 pacman -S --needed --noconfirm git ufw keepassxc go
 ### Other software
 pacman -S --needed --noconfirm btop fastfetch htop
