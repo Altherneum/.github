@@ -6,6 +6,7 @@
 window#waybar {
     background-color: rgba(45, 45, 45, 0.4);
     border-top: 3px solid rgba(100, 114, 125, 0.25);
+    margin-top: 5px;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -181,7 +182,6 @@ label:focus {
 }
 
 #network {
-    background-color: rgba(45, 130, 185, 0.15);
 }
 
 #network.disconnected {
@@ -189,8 +189,6 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: rgba(240, 195, 15, 0.15);
-    color: #000000;
 }
 
 #pulseaudio.muted {
@@ -222,11 +220,10 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    color:red;
 }
 
 #tray {
