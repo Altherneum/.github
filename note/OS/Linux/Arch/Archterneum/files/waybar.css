@@ -113,7 +113,6 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
 }
 
 #battery {
@@ -168,12 +167,9 @@ label:focus {
 }
 
 #cpu {
-    background-color: rgba(45, 200, 110, 0.15);
-    color: #000000;
 }
 
 #memory {
-    background-color: rgba(155, 90, 180, 0.15);
 }
 
 #disk {
