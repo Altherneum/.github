@@ -42,8 +42,18 @@ Pour installer l'ISO sur une clef USB
 #### Lister les disques
 - `lsblk`
 #### Créer une clef USB bootable
-- `sudo dd if=archlinux-<VERSION>.iso of=/dev/sdX status=progress bs=4M conv=fsync`
-  - Remplacez `/dev/sdX` par la clef USB à utiliser
+- Remplacez `/dev/sdX` par la clef USB à utiliser
+- Remplacez `archlinux-version-x86_64.iso` par l'ISO à utiliser
+##### Créer la clef via cat
+- `cat path/to/archlinux-version-x86_64.iso > /dev/sdX`
+##### Créer la clef via cp
+- `cp path/to/archlinux-version-x86_64.iso /dev/sdX`
+##### Créer la clef via dd
+- `dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdX conv=fsync oflag=direct status=progress`
+##### Créer la clef via tee
+- `tee < path/to/archlinux-version-x86_64.iso > /dev/sdX`
+##### Créer la clef via pv
+- `pv path/to/archlinux-version-x86_64.iso -Yo /dev/sdX`
 
 # Installation automatique
 Voire [README](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/Archterneum/README.md)
