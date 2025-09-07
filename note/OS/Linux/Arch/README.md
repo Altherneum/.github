@@ -25,15 +25,18 @@ Pour installer l'ISO sur une clef USB
 ##### Ancienne version de Rufus
 - Pour les versions antérieures à la version 3.0, 
   - Sélectionnez `Mode image DD` dans le menu déroulant du bas
-#### Créer une clef USB
+#### Choix des paramètres Rufus
 - Cliquez sur le bouton `SÉLECTIONNER` à côté de `Sélection de démarrage` et choisissez le fichier ISO Arch Linux téléchargé
 - Sélectionnez la clé USB cible dans la liste `Périphérique`
   - Assurez-vous de sélectionner le bon lecteur pour éviter toute perte de données
+![rufus image](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/rufus-4.9p_86pvWugyZi.png)
+#### Lancer la création via Rufus
 - Cliquez sur le bouton `DÉMARRER`
   - Si vous y êtes invité, confirmez le mode sélectionné (par exemple, mode image DD)
 - Rufus gravera l'image ISO sur la clé USB
   - Cette opération peut prendre plusieurs minutes
 - Une fois terminée, la clé USB sera bootable pour l'installation d'Arch Linux
+![rufus image](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/rufus-4.9p_EFz6cUT7Y9.png)
 
 ### Linux
 #### Lister les disques
