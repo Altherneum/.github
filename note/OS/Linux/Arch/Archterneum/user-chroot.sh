@@ -61,6 +61,9 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/style.css https://raw.gith
 # xfce4-terminal
 echo $userpassword | sudo -S mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
 echo $userpassword | sudo -S curl -o ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-terminal.xml https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/xfce4-terminal.xml
+# XDG theme config
+echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
+echo $userpassword | sudo -S curl -o ~/.config/xdg-desktop-portal/hyprland-portals.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland-portals.conf
 
 # Keyboard layout
 echo $userpassword | localectl set-x11-keymap fr
