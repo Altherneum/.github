@@ -59,8 +59,20 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.g
 echo $userpassword | sudo -S cp /etc/xdg/waybar/style.css ~/.config/waybar/style.css.default
 echo $userpassword | sudo -S curl -o ~/.config/waybar/style.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.css
 # xfce4-terminal
-echo $userpassword | sudo -S mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
-echo $userpassword | sudo -S curl -o ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-terminal.xml https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/xfce4-terminal.xml
+xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s ""
+xfconf-query -c xfce4-terminal --create -p /color-use-theme --type bool -s "false"
+xfconf-query -c xfce4-terminal --create -p /color-cursor-use-default --type bool -s "true"
+xfconf-query -c xfce4-terminal --create -p /background-mode --type string -s "TERMINAL_BACKGROUND_TRANSPARENT"
+xfconf-query -c xfce4-terminal --create -p /background-darkness --type double -s "0.5"
+xfconf-query -c xfce4-terminal --create -p /run-custom-command --type bool -s "true"
+xfconf-query -c xfce4-terminal --create -p /custom-command --type string -s "fastfetch"
+xfconf-query -c xfce4-terminal --create -p /font-name --type string -s "Monospace 12"
+xfconf-query -c xfce4-terminal --create -p /font-use-system --type bool -s "false"
+xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s "#ffffff"
+xfconf-query -c xfce4-terminal --create -p /color-background --type string -s "#000000000000"
+# fastfetch on terminal open
+echo "fastfetch" >> ./.bashrc
+
 # XDG theme config
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
 echo $userpassword | sudo -S curl -o ~/.config/xdg-desktop-portal/hyprland-portals.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland-portals.conf

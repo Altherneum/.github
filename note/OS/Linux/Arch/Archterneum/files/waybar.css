@@ -6,7 +6,6 @@
 window#waybar {
     background-color: rgba(45, 45, 45, 0.4);
     border-top: 3px solid rgba(100, 114, 125, 0.25);
-    margin-top: 12px;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -50,7 +49,6 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
 }
 
 #workspaces button {
@@ -94,8 +92,13 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 10px;
+    padding: 10px;
+    padding-top: 15px;
     color: #ffffff;
+}
+
+#custom-power {
+    margin-right: 25px;
 }
 
 #window,
@@ -117,13 +120,10 @@ button:hover {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
 }
 
 @keyframes blink {
@@ -135,7 +135,6 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
