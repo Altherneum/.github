@@ -59,7 +59,7 @@ pacman -S --needed --noconfirm obs-studio discord
 ## Steam
 pacman -S --needed --noconfirm steam
 ## System
-pacman -S --needed --noconfirm xfce4 nautilus
+pacman -S --needed --noconfirm xfce4 nautilus man
 pacman -S --needed --noconfirm otf-font-awesome noto-fonts-emoji
 pacman -S --needed --noconfirm $(pacman -Sgq nerd-fonts)
 fc-cache # reload cache of fonts
