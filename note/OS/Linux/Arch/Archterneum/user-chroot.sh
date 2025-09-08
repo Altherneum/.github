@@ -81,6 +81,11 @@ echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.
 # fastfetch on terminal open
 echo "fastfetch" >> ./.bashrc
 
+# Rofi theme
+echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
+echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi.rasi
+# Need to force rofi to use theme : rofi-theme-selector --help
+
 # XDG theme config
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
 echo $userpassword | sudo -S curl -o ~/.config/xdg-desktop-portal/hyprland-portals.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland-portals.conf
