@@ -84,7 +84,6 @@ echo "fastfetch" >> ./.bashrc
 # Rofi theme
 echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
 echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi.rasi
-# Need to force rofi to use theme : rofi -theme <name>
 
 # XDG theme config
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
