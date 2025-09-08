@@ -58,6 +58,7 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.g
 ## Waybar CSS
 echo $userpassword | sudo -S cp /etc/xdg/waybar/style.css ~/.config/waybar/style.css.default
 echo $userpassword | sudo -S curl -o ~/.config/waybar/style.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.css
+
 # xfce4-terminal
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s ""
 xfconf-query -c xfce4-terminal --create -p /color-use-theme --type bool -s "false"
@@ -70,6 +71,13 @@ xfconf-query -c xfce4-terminal --create -p /font-name --type string -s "Monospac
 xfconf-query -c xfce4-terminal --create -p /font-use-system --type bool -s "false"
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s "#ffffff"
 xfconf-query -c xfce4-terminal --create -p /color-background --type string -s "#000000000000"
+xfconf-query -c xfce4-terminal --create -p /misc-cursor-shape --type string -s "TERMINAL_CURSOR_SHAPE_IBEAM"
+## xfce4-terminal spacing
+echo $userpassword | sudo -S touch ~/.config/gtk-3.0/gtk.css
+echo $userpassword | sudo -S sh -c 'echo "VteTerminal, vte-terminal {" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+echo $userpassword | sudo -S sh -c 'echo "    padding: 25px;" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+
 # fastfetch on terminal open
 echo "fastfetch" >> ./.bashrc
 
