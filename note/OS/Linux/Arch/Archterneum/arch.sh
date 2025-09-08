@@ -1,7 +1,7 @@
 # Variables
 device="/dev/sda"
-hostname="ARCH"
-username="arch"
+hostname="Arch"
+username="User"
 lvmpassword="BootPass123"
 userpassword="UserPass123"
 rootpassword="SuperPass123"
