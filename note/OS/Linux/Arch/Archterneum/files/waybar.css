@@ -101,6 +101,15 @@ button:hover {
     margin-right: 25px;
 }
 
+menu {
+    background: rgba(20, 20, 30, 0.85);
+    color: #ffffff;
+}
+
+menuitem, menu {
+    border-radius: 15px;
+}
+
 #window,
 #workspaces {
     margin: 0 4px;
