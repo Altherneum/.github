@@ -1,72 +1,97 @@
-* {
-    bg0:rgba(30, 30, 30, 0.6);
-    bg1:rgba(40, 40, 40, 0.6);
-    bg2:rgba(60, 60, 60, 0.5);
-    bg3:rgba(90, 90, 90, 0.95);
-    fg0:rgb(230, 230, 230);
-    fg1:rgb(255, 255, 255);
-    fg2:rgb(150, 150, 150);
-    fg3:rgb(60, 60, 60);
+configuration {
+    show-icons: true;
+    transparency: "root";
+    fullscreen: true;
+
+    combi-modes: [ window, drun, ssh, filebrowser, recursivebrowser, run ];
+
+    display-ssh: "⚡️ SSH ";
+    display-run: "📌 Run ";
+    display-drun: "📌 DRun ";
+    display-window: "🧭 Window ";
+    display-combi: "✨ Combi ";
 }
 
 * {
+    transparent: rgba(0,0,0,0);
+    transparent-low: rgba(20,20,20,0.65);
+    fg-text-selected:rgb(200, 200, 200);
+    fg-text:rgb(255, 255, 255);
+    border:rgba(255,255,255,0.75);
+
     font: "Roboto 12";
 
-    background-color: transparent;
-    text-color: @fg0;
+    text-color: @fg-text;
 
     margin: 0px;
     padding: 0px;
     spacing: 0px;
+    background-color: @transparent;
+    blink: false;
 }
 
-window {
-    location: north;
-    y-offset: calc(50% - 176px);
-    width: 480;
-    border-radius: 24px;
+#window {
+    width: 100%;
+    height: 100%;
 
-    background-color: @bg0;
+    margin: 20%;
+
+    x-offset: 0%;
+    y-offset: 0%;
+
+    background-color: @transparent;
+
+    border-radius: 12px;
+    border: 1px;
+    border-color: @border;
+
+    children:  [mainbox];
+    orientation: horizontal;
 }
 
-mainbox {
+#mainbox {
+    background-color: @transparent-low;
     padding: 12px;
+    children: [ inputbar, message, listview ];
 }
 
-inputbar {
-    background-color: @bg1;
-    border-color: @bg3;
+#inputbar {
+    background-color: @transparent;
+    border-color: @border;
 
-    border: 2px;
-    border-radius: 16px;
+    border: 1px;
+    border-radius: 6px;
 
-    padding: 8px 16px;
+    padding: 14px;
     spacing: 8px;
+
     children: [ prompt, entry ];
 }
 
-prompt {
-    text-color: @fg2;
+#prompt {
+    text-color: @fg-text;
+    horizontal-align: 0;
 }
 
-entry {
-    placeholder: "Search";
-    placeholder-color: @fg3;
+#entry {
+    placeholder: "  . . .";
+    placeholder-color: @fg-text-selected;
+    horizontal-align: 0;
 }
 
-message {
+#message {
     margin: 12px 0 0;
-    border-radius: 16px;
-    border-color: @bg2;
-    background-color: @bg2;
+    border-radius: 6px;
+    border-color: @border;
+    background-color: @transparent;
 }
 
-textbox {
+#textbox {
     padding: 8px 24px;
 }
 
-listview {
-    background-color: transparent;
+#listview {
+    background-color: @transparent;
 
     margin: 12px 0 0;
     lines: 8;
@@ -75,29 +100,37 @@ listview {
     fixed-height: false;
 }
 
-element {
-    padding: 8px 16px;
-    spacing: 8px;
-    border-radius: 16px;
-}
-
-element normal active {
-    text-color: @bg3;
-}
-
-element alternate active {
-    text-color: @bg3;
-}
-
-element selected normal, element selected active {
-    background-color: @bg3;
-}
-
-element-icon {
-    size: 1em;
+#element {
+    padding: 8px;
+    border-radius: 6px;
     vertical-align: 0.5;
 }
 
-element-text {
+#element normal active {
+    text-color: red;
+}
+
+#element alternate active {
+    text-color: @fg-text;
+}
+
+#element selected normal, element selected active {
+    border-color: @border;
+    border:1px;
+}
+
+#element-icon {
+    size: 25px;
+    padding: 0px 10px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    margin: 0px 0px 0px 2.5%;
+}
+
+#element-text {
+    padding: 6px 12px;
     text-color: inherit;
+    margin: 0px 5% 0px 0px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
 }
