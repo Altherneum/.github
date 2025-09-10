@@ -58,6 +58,9 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.g
 ## Waybar CSS
 echo $userpassword | sudo -S cp /etc/xdg/waybar/style.css ~/.config/waybar/style.css.default
 echo $userpassword | sudo -S curl -o ~/.config/waybar/style.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.css
+## Waybar pacman custom script
+echo $userpassword | sudo -S curl -o ~/.config/waybar/pacman_updater.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman_updater.sh
+echo $userpassword | sudo -S chmod +x ~/.config/waybar/pacman_updater.sh
 
 # xfce4-terminal
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s ""

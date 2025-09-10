@@ -78,6 +78,8 @@ button:hover {
 #clock,
 #battery,
 #cpu,
+#custom-emote,
+#custom-rofi,
 #memory,
 #disk,
 #temperature,
@@ -92,9 +94,12 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 10px;
-    padding-top: 15px;
+    margin: 20px;
     color: #ffffff;
+}
+
+#custom-rofi{
+    padding: 0px 0px 0px 20px;
 }
 
 #custom-power {
@@ -249,11 +254,9 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
     color: #2d3436;
 }
 
