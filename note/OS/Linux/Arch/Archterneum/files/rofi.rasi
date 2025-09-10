@@ -2,7 +2,7 @@ configuration {
     show-icons: true;
     transparency: "root";
     fullscreen: true;
-
+    
     combi-modes: [ window, drun, ssh, filebrowser, recursivebrowser, run ];
 
     display-ssh: "⚡️ SSH ";
@@ -45,14 +45,14 @@ configuration {
     border: 1px;
     border-color: @border;
 
-    children:  [mainbox];
+    children: [ "mainbox"];
     orientation: horizontal;
 }
 
 #mainbox {
     background-color: @transparent-low;
     padding: 12px;
-    children: [ inputbar, message, listview ];
+    children: [ inputbar, message, listview, sidebar ];
 }
 
 #inputbar {
@@ -65,7 +65,13 @@ configuration {
     padding: 14px;
     spacing: 8px;
 
-    children: [ prompt, entry ];
+    children: [ "prompt","entry","num-filtered-rows","textbox-num-sep", "num-rows","case-indicator" ];
+}
+
+textbox-num-sep {
+    expand: false;
+    str: "/";
+    text-color: @fg-text-selected;
 }
 
 #prompt {
@@ -92,6 +98,7 @@ configuration {
 
 #listview {
     background-color: @transparent;
+    scrollbar:    true;
 
     margin: 12px 0 0;
     lines: 8;
@@ -133,4 +140,34 @@ configuration {
     margin: 0px 5% 0px 0px;
     horizontal-align: 0.5;
     vertical-align: 0.5;
+}
+
+#scrollbar {
+    max-width: 10px;
+    width: 8px ;
+    margin: 0px 5px 0px 15px;
+    handle-width: 6px ;
+    border: 1px;
+    border-color: @border;
+    handle-color: @fg-text;
+    border-radius: 12px;
+}
+
+#sidebar {
+    border-color: @border;
+    border: 1px solid 0px 0px ;
+    margin: 0px 25px 0px 25px;
+    padding: 25px 0px 25px 0px;
+}
+
+#button {
+    text-color: @fg-text-selected;
+    padding: 6px;
+}
+
+#button selected {
+    border-color: @border;
+    border: 1px;
+    border-radius: 6px;
+    text-color: @fg-text;
 }
