@@ -6,10 +6,13 @@ configuration {
     combi-modes: [ window, drun, ssh, filebrowser, recursivebrowser, run ];
 
     display-ssh: "⚡️ SSH ";
-    display-run: "📌 Run ";
-    display-drun: "📌 DRun ";
+    display-run: "📌 Lancer ";
+    filebrowser-run: "📂 Fichiers ";
+    recursivebrowser-run: "📂 ~/ ";
+    display-drun: "📌 Lancer ";
     display-window: "🧭 Window ";
     display-combi: "✨ Combi ";
+    display-cmd: "🖥️ CMD ";
 }
 
 * {

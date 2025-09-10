@@ -84,6 +84,10 @@ echo "fastfetch" >> ./.bashrc
 # Rofi theme
 echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
 echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi.rasi
+# Rofi cmd script
+echo $userpassword | sudo -S mkdir -p ~/.config/rofi/
+echo $userpassword | sudo -S curl -o ~/.config/rofi/run_cmd.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland-portals.conf
+echo $userpassword | sudo -S chmod +x ~/.config/rofi/run_cmd.sh
 
 # XDG theme config
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
