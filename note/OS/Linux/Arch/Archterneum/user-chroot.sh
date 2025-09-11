@@ -30,6 +30,12 @@ echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
+# Hyprbars install
+echo $userpassword | sudo -S pacman --noconfirm --needed cpio
+echo $userpassword > hyprpm --force update
+echo $userpassword > sudo -S hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm enable hyprbars
+
 # SDDM configuration
 echo $userpassword | sudo -S mkdir -p /etc/sddm.conf.d
 echo $userpassword | sudo -S cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
@@ -99,6 +105,11 @@ echo $userpassword | sudo -S curl -o ~/.config/xdg-desktop-portal/hyprland-porta
 # Keyboard layout
 echo $userpassword | localectl set-x11-keymap fr
 echo $userpassword | localectl set-keymap fr
+
+# Hyprbars
+echo $userpassword | sudo -S echo "" ; hyprpm update -v
+echo $userpassword | sudo -S echo "" ; hyprpm add https://github.com/hyprwm/hyprland-plugins
+echo $userpassword | sudo -S echo "" ; hyprpm enable hyprbars
 
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
 # The image is then embedded into the UKI binary during the mkinitcpio build process.

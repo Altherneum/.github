@@ -1,0 +1,62 @@
+# SystemD
+## SystemD Analyze
+`systemd-analyze blame`
+```
+[arch@ARCH ~]$ systemd-analyze blame
+775ms dev-mapper-vg0\x2droot.device
+553ms NetworkManager.service
+400ms systemd-tmpfiles-setup-dev-early.service
+334ms lvm2-monitor.service
+308ms systemd-journal-flush.service
+273ms systemd-random-seed.service
+258ms systemd-networkd.service
+249ms user@1000.service
+191ms upower.service
+190ms systemd-udev-trigger.service
+158ms systemd-tmpfiles-clean.service
+145ms home.mount
+133ms systemd-tmpfiles-setup.service
+128ms systemd-fsck@dev-disk-by\x2duuid-ee08dda0\x2d91fb\x2d4da2\x2dac50\x2dfee963d5b647.service
+126ms systemd-resolved.service
+124ms udisks2.service
+112ms systemd-journald.service
+106ms systemd-udevd.service
+ 97ms systemd-vconsole-setup.service
+ 87ms polkit.service
+ 78ms systemd-logind.service
+ 69ms systemd-fsck@dev-disk-by\x2duuid-FAE5\x2d0B45.service
+ 69ms systemd-hostnamed.service
+ 62ms systemd-boot-random-seed.service
+ 56ms systemd-userdbd.service
+ 53ms boot.mount
+ 52ms systemd-networkd-persistent-storage.service
+ 51ms dbus-broker.service
+ 47ms dev-hugepages.mount
+ 47ms dev-mqueue.mount
+ 46ms sys-kernel-debug.mount
+ 45ms sys-kernel-tracing.mount
+ 43ms systemd-remount-fs.service
+ 42ms systemd-udev-load-credentials.service
+ 42ms sshd.service
+ 41ms dev-disk-by\x2duuid-84a0c24f\x2dae85\x2d427c\x2da385\x2d8cc7a6913d8a.swap
+ 38ms systemd-update-utmp.service
+ 36ms user-runtime-dir@1000.service
+ 36ms systemd-tmpfiles-setup-dev.service
+ 33ms kmod-static-nodes.service
+ 30ms modprobe@configfs.service
+ 29ms systemd-sysctl.service
+ 29ms modprobe@dm_mod.service
+ 28ms modprobe@drm.service
+ 27ms modprobe@fuse.service
+ 27ms modprobe@loop.service
+ 27ms proc-sys-fs-binfmt_misc.mount
+ 23ms sys-fs-fuse-connections.mount
+ 23ms sys-kernel-config.mount
+ 22ms systemd-modules-load.service
+ 21ms systemd-network-generator.service
+ 19ms systemd-user-sessions.service
+ 14ms rtkit-daemon.service
+  6ms tmp.mount
+```
+## Journalctl
+`journalctl -b 0` 
