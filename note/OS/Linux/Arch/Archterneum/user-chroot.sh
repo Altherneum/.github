@@ -101,10 +101,12 @@ echo $userpassword | localectl set-x11-keymap fr
 echo $userpassword | localectl set-keymap fr
 
 # Hyprbars
-echo $userpassword | sudo -S pacman --noconfirm --needed cpio
-echo $userpassword | sudo -S echo "" ; hyprpm --force update
-echo $userpassword | sudo -S echo "" ; hyprpm add https://github.com/hyprwm/hyprland-plugins
-echo $userpassword | sudo -S echo "" ; hyprpm enable hyprbars
+# Work in auto ??? test before leaving chroot
+# Or else do it auto on first launch, then delete script
+# echo $userpassword | sudo -S pacman --noconfirm --needed -S cpio
+# echo $userpassword | sudo -S echo "" ; hyprpm --force update
+# echo $userpassword | sudo -S echo "" ; hyprpm add https://github.com/hyprwm/hyprland-plugins
+# echo $userpassword | sudo -S echo "" ; hyprpm enable hyprbars
 ## "Normal" setup but not working # To test later
 # cd /home/arch/git-clone && rm -rf ./hyprland-plugins && git clone https://github.com/hyprwm/hyprland-plugins.git && cd hyprland-plugins/hyprbars
 # meson setup . build
