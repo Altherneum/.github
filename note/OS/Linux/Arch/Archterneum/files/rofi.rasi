@@ -10,6 +10,7 @@ configuration {
     display-filebrowser: "📂 Fichiers ";
     display_recursivebrowser: "📂 ~/ ";
     display-drun: "📌 Lancer ";
+    display-calc: " 🧮 Calculatrice ";
     display-window: "🧭 Window ";
     display-combi: "✨ Combi ";
     display-cmd: "🖥️ CMD ";
