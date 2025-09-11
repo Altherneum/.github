@@ -3,7 +3,7 @@ configuration {
     transparency: "root";
     fullscreen: true;
     
-    combi-modes: [ window, drun, ssh, filebrowser, recursivebrowser, run ];
+    combi-modes: [ window, drun, calc, ssh, filebrowser, recursivebrowser, run ];
 
     display-ssh: "⚡️ SSH ";
     display-run: "📌 Lancer ";
