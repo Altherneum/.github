@@ -14,6 +14,8 @@ configuration {
     display-window: "🧭 Window ";
     display-combi: "✨ Combi ";
     display-cmd: "🖥️ CMD ";
+
+    kb-cancel: "Escape, Super_L";
 }
 
 * {
