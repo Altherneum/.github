@@ -57,8 +57,8 @@ Pour installer l'ISO sur une clef USB
 
 # Installation automatique
 Voire [README](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/Archterneum/README.md)
-## Requis
-- GPU AMD
+## Drivers
+- GPU & CPU : AMD
 
 # Installation manuelle
 Voire README : [Arch-install.md](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/Arch-install.md)
