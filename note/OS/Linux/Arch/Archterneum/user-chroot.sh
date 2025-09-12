@@ -104,12 +104,20 @@ echo $userpassword | localectl set-keymap fr
 
 # Hyprbars
 # Work in auto ??? test before leaving chroot
+echo ""
+echo "hypr plugins"
+echo ""
 # Or else do it auto on first launch, then delete script
-# echo $userpassword | sudo -S pacman --noconfirm --needed -S cpio
-# echo $userpassword | sudo -S echo "" ; hyprpm --force update
-# echo $userpassword | sudo -S echo "" ; hyprpm --force add https://github.com/hyprwm/hyprland-plugins
-# echo $userpassword | sudo -S echo "" ; hyprpm --force enable hyprbars
+echo $userpassword | sudo -S pacman --noconfirm --needed -S cpio
+echo $userpassword | sudo -S echo "" ; hyprpm --force update
+echo $userpassword | sudo -S echo "" ; hyprpm --force add https://github.com/hyprwm/hyprland-plugins
+echo $userpassword | sudo -S echo "" ; hyprpm --force add https://github.com/virtcode/hypr-dynamic-cursors
+echo $userpassword | sudo -S echo "" ; hyprpm --force enable hyprbars
+echo $userpassword | sudo -S echo "" ; hyprpm --force enable dynamic-cursors
 #
+echo ""
+echo "hypr plugins"
+echo ""
 #
 ## "Normal" setup but not working # To test later
 # cd /home/arch/git-clone && rm -rf ./hyprland-plugins && git clone https://github.com/hyprwm/hyprland-plugins.git && cd hyprland-plugins/hyprbars
