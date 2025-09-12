@@ -3,6 +3,60 @@
 - Utiliser une fonction variable dans un echo : `echo $(date)`
 - `unset $var` Supprime la variable
 
+## Variable locale
+local secret="Secret password to store in local"
+### Exemple sans local
+```
+[arch@ARCH ~]$ cat file
+secret="abc"
+echo $secret
+```
+```
+[arch@ARCH ~]$ bash ./file 
+abc
+```
+```
+[arch@ARCH ~]$ echo $secret
+
+```
+```
+[arch@ARCH ~]$ source ./file
+abc
+```
+```
+[arch@ARCH ~]$ echo $secret
+abc
+```
+### Exemple avec local
+```
+[arch@ARCH ~]$ cat file
+func() {
+    secret="abc"
+    echo $secret
+}
+func
+```
+```
+[arch@ARCH ~]$ bash ./file 
+abc
+```
+```
+[arch@ARCH ~]$ echo $secret
+
+```
+```
+[arch@ARCH ~]$ source ./file
+abc
+```
+```
+[arch@ARCH ~]$ echo $secret
+
+```
+Même via `source`, il ne sera plus possible d'extraire une variable hors de portée de la fonction
+- Elle restera dans la portée du script
+  - Et ne peut donc pas être extraite
+- Pollue moins la mémoire
+- Évite d'avoir « deux » variables avec un nom commun (exemple : `x`) qui, autrement, n'en seraient qu'une
 ## Array
 - `Alphabet=(A B C)` Permet de créer un `Array`
 Variable avec default value à faire
