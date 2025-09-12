@@ -103,6 +103,9 @@ echo "initrd /amd-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/swap root=/dev/vg0/root rw" >> /boot/loader/entries/arch.conf
 
+# Fan control
+systemctl enable fancontrol
+
 # Network setup
 systemctl enable systemd-networkd
 systemctl enable systemd-resolved
