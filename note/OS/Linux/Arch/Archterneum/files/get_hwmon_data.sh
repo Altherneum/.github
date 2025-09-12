@@ -3,6 +3,7 @@
 # $0 GPU|CPU
 # $1 FanSpeed|Temp
 # or `GPU path` to get its hwmon path for `fancontrol`
+# or `GPU device` to get its hwmon device ID path for `fancontrol`
 
 # If value exist echo it, else no temp/fan probe exist
 # Only ask for CPU temp, GPU temp, GPU fan speed
@@ -29,6 +30,14 @@ getdata() {
                 fi
                 if [ "$2" = "path" ]; then
                     echo $path
+                fi
+                if [ "$2" = "device" ]; then
+                    pathuuid=("udevadm info -a -p $path")
+                    uuid=$($pathuuid | grep "looking at device '/devices/pci.*/hwmon/hwmon0'")
+                    
+                    IFS="/" read -r -a uuidtrimed <<< "${uuid}"
+                    
+                    echo "${uuidtrimed[1]}/${uuidtrimed[2]}/${uuidtrimed[3]}/${uuidtrimed[4]}"
                 fi
             fi
         else
