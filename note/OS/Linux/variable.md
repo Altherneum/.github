@@ -4,7 +4,7 @@
 - `unset $var` Supprime la variable
 
 ## Variable locale
-local secret="Secret password to store in local"
+`local secret="Secret password to store in local"`
 ### Exemple sans local
 ```
 [arch@ARCH ~]$ cat file
