@@ -121,18 +121,18 @@ sudo chmod +x /home/$username/gpu_scan.sh
 ## parsing data
 touch /etc/fancontrol
 echo "INTERVAL=10" >> /etc/fancontrol
-gpuid=$/home/$username/gpu_scan
-echo "DEVPATH=hwmon0=devices/pci0000:00/0000:00:03.1/0000:07:00.0" >> /etc/fancontrol
-echo "DEVNAME=hwmon0=amdgpu" >> /etc/fancontrol
-echo "FCTEMPS=hwmon0/pwm1=hwmon0/temp1_input" >> /etc/fancontrol
-echo "FCFANS= hwmon0/pwm1=" >> /etc/fancontrol
-echo "MINTEMP=hwmon0/pwm1=20" >> /etc/fancontrol
-echo "MAXTEMP=hwmon0/pwm1=75" >> /etc/fancontrol
-echo "MINSTART=hwmon0/pwm1=0" >> /etc/fancontrol
-echo "MINSTOP=hwmon0/pwm1=0" >> /etc/fancontrol
-echo "MAXPWM=hwmon0/pwm1=255" >> /etc/fancontrol
-
-
+gpuid=$(/home/$username/gpu_scan GPU device)
+hwmon=$(/home/$username/gpu_scan GPU hwmon)
+echo "DEVPATH=$hwmon=$gpuid" >> /etc/fancontrol
+gpuid=$(/home/$username/gpu_scan GPU device)
+echo "DEVNAME=$hwmon=amdgpu" >> /etc/fancontrol
+echo "FCTEMPS=$hwmon/pwm1=$hwmon/temp1_input" >> /etc/fancontrol
+echo "FCFANS= $hwmon/pwm1=" >> /etc/fancontrol
+echo "MINTEMP=$hwmon/pwm1=20" >> /etc/fancontrol
+echo "MAXTEMP=$hwmon/pwm1=75" >> /etc/fancontrol
+echo "MINSTART=$hwmon/pwm1=0" >> /etc/fancontrol
+echo "MINSTOP=$hwmon/pwm1=0" >> /etc/fancontrol
+echo "MAXPWM=$hwmon/pwm1=255" >> /etc/fancontrol
 systemctl enable fancontrol
 
 # Network setup

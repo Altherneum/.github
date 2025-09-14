@@ -26,7 +26,7 @@ getdata() {
                     echo $gputemp
                 fi
                 if [ "$2" = "hwmon" ]; then
-                    hwmonname=hwmon$num
+                    hwmonname="hwmon$num"
                     echo $hwmonname
                 fi
                 if [ "$2" = "fan" ]; then
@@ -34,7 +34,7 @@ getdata() {
                     echo $gpufan
                 fi
                 if [ "$2" = "name" ]; then
-                    $gpuname(more $path/name)
+                    gpuname=$(more $path/name)
                     echo $gpuname
                 fi
                 if [ "$2" = "path" ]; then
