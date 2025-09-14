@@ -115,7 +115,23 @@ echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/swap root=/dev/vg0/root rw" >> /boot/loader/entries/arch.conf
 
 # Fan control
-curl -o /etc/fancontrol https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/fancontrol
+## Script
+curl -o /home/$username/gpu_scan.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/get_hwmon_data.sh
+sudo chmod +x /home/$username/gpu_scan.sh
+## parsing data
+echo "INTERVAL=10"
+gpuid=$
+echo "DEVPATH=hwmon0=devices/pci0000:00/0000:00:03.1/0000:07:00.0" >> /etc/fancontrol
+echo "DEVNAME=hwmon0=amdgpu" >> /etc/fancontrol
+echo "FCTEMPS=hwmon0/pwm1=hwmon0/temp1_input" >> /etc/fancontrol
+echo "FCFANS= hwmon0/pwm1=" >> /etc/fancontrol
+echo "MINTEMP=hwmon0/pwm1=20" >> /etc/fancontrol
+echo "MAXTEMP=hwmon0/pwm1=75" >> /etc/fancontrol
+echo "MINSTART=hwmon0/pwm1=0" >> /etc/fancontrol
+echo "MINSTOP=hwmon0/pwm1=0" >> /etc/fancontrol
+echo "MAXPWM=hwmon0/pwm1=255" >> /etc/fancontrol
+
+
 systemctl enable fancontrol
 
 # Network setup
