@@ -51,6 +51,11 @@ sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 ## Add multilib pacman (for steam)
 sed -z 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/' -i /etc/pacman.conf
 
+# https://community.unix.com/t/18-mar-2012-1403-209-general-error-socket-file-descriptor-exceeds-limit-4096-4096/306717/2
+# Update the per process limit for descriptors to avoid waybar crash
+set rlim_fd_max  8192
+set rlim_fd_cur  8192
+
 # Installing softwares
 pacman -Syu --noconfirm
 ## OS
