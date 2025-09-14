@@ -46,6 +46,11 @@ sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 ## Add multilib pacman (for steam)
 sed -z 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/' -i /etc/pacman.conf
 
+# Sudo less
+sudo touch /etc/sudoers.d/arch
+sudo echo "$username ALL=(ALL) NOPASSWD: ALL" > sudo /etc/sudoers.d/$username
+# sudoers file already include files in this directory
+
 # Installing softwares
 pacman -Syu --noconfirm
 ## OS
