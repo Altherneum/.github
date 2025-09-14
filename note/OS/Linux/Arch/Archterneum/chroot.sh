@@ -67,6 +67,7 @@ pacman -S --needed --noconfirm pipewire wireplumber cava
 ## Media
 ### Screen shots
 pacman -S --needed --noconfirm grim slurp
+pacman -S --needed --noconfirm hyprshot
 ### clipboard
 pacman -S --needed --noconfirm wl-clipboard
 ### OBS
