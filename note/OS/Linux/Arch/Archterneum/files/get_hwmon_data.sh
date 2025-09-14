@@ -4,6 +4,7 @@
 # $1 FanSpeed|Temp
 # or `GPU path` to get its hwmon path for `fancontrol`
 # or `GPU device` to get its hwmon device ID path for `fancontrol`
+# or `GPU name` to get base name `amdgpu` for `fancontrol`
 
 # If value exist echo it, else no temp/fan probe exist
 # Only ask for CPU temp, GPU temp, GPU fan speed
@@ -24,9 +25,17 @@ getdata() {
                     gputemp=$(more $path/temp1_input)
                     echo $gputemp
                 fi
+                if [ "$2" = "hwmon" ]; then
+                    hwmonname=hwmon$num
+                    echo $hwmonname
+                fi
                 if [ "$2" = "fan" ]; then
                     gpufan=$(more $path/fan1_input)
                     echo $gpufan
+                fi
+                if [ "$2" = "name" ]; then
+                    $gpuname(more $path/name)
+                    echo $gpuname
                 fi
                 if [ "$2" = "path" ]; then
                     echo $path
