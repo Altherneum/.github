@@ -38,6 +38,11 @@ usermod -aG wheel "$username"
 ## Uncomment wheel's group line
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
+# Sudo less
+sudo touch /etc/sudoers.d/arch
+sudo echo "$username ALL=(ALL) NOPASSWD: ALL" > sudo /etc/sudoers.d/$username
+# sudoers file already include files in this directory
+
 # Pacman config
 ## Add colors
 sed -i 's/^#Color/Color/' /etc/pacman.conf
@@ -45,11 +50,6 @@ sed -i 's/^#Color/Color/' /etc/pacman.conf
 sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 ## Add multilib pacman (for steam)
 sed -z 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/' -i /etc/pacman.conf
-
-# Sudo less
-sudo touch /etc/sudoers.d/arch
-sudo echo "$username ALL=(ALL) NOPASSWD: ALL" > sudo /etc/sudoers.d/$username
-# sudoers file already include files in this directory
 
 # Installing softwares
 pacman -Syu --noconfirm
@@ -119,8 +119,9 @@ echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/s
 curl -o /home/$username/gpu_scan.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/get_hwmon_data.sh
 sudo chmod +x /home/$username/gpu_scan.sh
 ## parsing data
-echo "INTERVAL=10"
-gpuid=$
+touch /etc/fancontrol
+echo "INTERVAL=10" >> /etc/fancontrol
+gpuid=$/home/$username/gpu_scan
 echo "DEVPATH=hwmon0=devices/pci0000:00/0000:00:03.1/0000:07:00.0" >> /etc/fancontrol
 echo "DEVNAME=hwmon0=amdgpu" >> /etc/fancontrol
 echo "FCTEMPS=hwmon0/pwm1=hwmon0/temp1_input" >> /etc/fancontrol
