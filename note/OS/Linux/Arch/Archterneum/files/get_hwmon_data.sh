@@ -23,7 +23,8 @@ getdata() {
             if [ "$1" = "GPU" ]; then
                 if [ "$2" = "temp" ]; then
                     gputemp=$(more $path/temp1_input)
-                    echo $gputemp
+                    expressedtemp=$(expr $gputemp / 1000)
+                    echo $expressedtemp
                 fi
                 if [ "$2" = "hwmon" ]; then
                     hwmonname="hwmon$num"
@@ -54,7 +55,8 @@ getdata() {
                 if [ "$2" = "temp" ]; then
                     if [ -f $path/temp1_input ]; then
                         cputemp=$(echo $(more $path/temp1_input))
-                        echo $cputemp
+                        expressedtemp=$(expr $cputemp / 1000)
+                        echo $expressedtemp
                     fi
                 fi
             fi

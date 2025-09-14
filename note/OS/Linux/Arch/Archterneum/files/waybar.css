@@ -81,7 +81,10 @@ button {
 #custom-rofi,
 #memory,
 #disk,
-#temperature,
+#custom-gputemperature,
+#custom-gputemperature,
+#custom-tempcpu,
+#custom-fan,
 #backlight,
 #network,
 #pulseaudio,
@@ -225,10 +228,8 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-}
-
-#temperature.critical {
+#custom-gputemperature.critical,
+#custom-tempcpu.critical {
     color:red;
 }
 
