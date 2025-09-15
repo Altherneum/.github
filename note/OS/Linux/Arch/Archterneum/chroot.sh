@@ -66,6 +66,8 @@ systemctl enable sddm
 pacman -S --needed --noconfirm pipewire wireplumber
 pacman -S --needed --noconfirm cava # Sound visualizer
 pacman -S --needed --noconfirm mpd # Music player daemon
+#### https://wiki.archlinux.org/title/Music_Player_Daemon_(Fran%C3%A7ais)
+#### https://wiki.archlinux.org/title/Music_Player_Daemon
 pacman -S --needed --noconfirm vlc
 ## Media
 ### Screen shots
@@ -75,6 +77,7 @@ pacman -S --needed --noconfirm hyprshot
 pacman -S --needed --noconfirm shotwell imv gimp # test pick `imv|shotwell`
 ### clipboard
 pacman -S --needed --noconfirm wl-clipboard cliphist
+#### https://github.com/sentriz/cliphist?tab=readme-ov-file#picker-examples # cliphist to do list
 ### Other media
 pacman -S --needed --noconfirm obs-studio
 ### Discord & Vencord
