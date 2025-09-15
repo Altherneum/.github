@@ -63,14 +63,19 @@ pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar ro
 ### Enable SDDM
 systemctl enable sddm
 ### Sound system
-pacman -S --needed --noconfirm pipewire wireplumber cava
+pacman -S --needed --noconfirm pipewire wireplumber
+pacman -S --needed --noconfirm cava # Sound visualizer
+pacman -S --needed --noconfirm mpd # Music player daemon
+pacman -S --needed --noconfirm vlc
 ## Media
 ### Screen shots
 pacman -S --needed --noconfirm grim slurp
 pacman -S --needed --noconfirm hyprshot
+### Images
+pacman -S --needed --noconfirm shotwell imv gimp # test pick `imv|shotwell`
 ### clipboard
-pacman -S --needed --noconfirm wl-clipboard
-### OBS
+pacman -S --needed --noconfirm wl-clipboard cliphist
+### Other media
 pacman -S --needed --noconfirm obs-studio
 ### Discord & Vencord
 pacman -S --needed --noconfirm discord
