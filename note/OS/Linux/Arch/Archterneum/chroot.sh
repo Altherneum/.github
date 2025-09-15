@@ -65,9 +65,6 @@ systemctl enable sddm
 ### Sound system
 pacman -S --needed --noconfirm pipewire wireplumber
 pacman -S --needed --noconfirm cava # Sound visualizer
-pacman -S --needed --noconfirm mpd # Music player daemon
-#### https://wiki.archlinux.org/title/Music_Player_Daemon_(Fran%C3%A7ais)
-#### https://wiki.archlinux.org/title/Music_Player_Daemon
 pacman -S --needed --noconfirm vlc
 ## Media
 ### Screen shots
