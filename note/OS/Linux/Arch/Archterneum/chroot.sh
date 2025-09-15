@@ -71,7 +71,7 @@ pacman -S --needed --noconfirm vlc
 pacman -S --needed --noconfirm grim slurp
 pacman -S --needed --noconfirm hyprshot
 ### Images
-pacman -S --needed --noconfirm imv gimp # test pick `imv|shotwell`
+pacman -S --needed --noconfirm gimp
 ### clipboard
 pacman -S --needed --noconfirm wl-clipboard cliphist
 #### https://github.com/sentriz/cliphist?tab=readme-ov-file#picker-examples # cliphist to do list
