@@ -64,6 +64,10 @@ echo $userpassword | sudo -S chmod +x ~/.config/waybar/pacman_updater.sh
 ## waybar power_menu.xml
 echo $userpassword | sudo -S curl -o ~/.config/waybar/power_menu.xml https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/power_menu.xml
 
+# xfce4-notifyd
+##### download theme file as : mkdir -p ~/.themes/transparent/xfce-notify-4.0/ ; cp /usr/share/themes/Smoke/xfce-notify-4.0/gtk.css ~/.themes/transparent/xfce-notify-4.0/gtk.css
+xfconf-query -c xfce4-notifyd -p /theme -s transparent
+xfconf-query -c xfce4-notifyd -p /notify-location -s bottom-center
 # xfce4-terminal
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s ""
 xfconf-query -c xfce4-terminal --create -p /color-use-theme --type bool -s "false"
