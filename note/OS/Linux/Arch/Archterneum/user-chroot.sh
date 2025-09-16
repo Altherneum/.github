@@ -91,7 +91,6 @@ echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.
 
 # fastfetch on terminal open
 echo "fastfetch" >> ./.bashrc
-echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi.rasi
 
 # Rofi theme
 echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
