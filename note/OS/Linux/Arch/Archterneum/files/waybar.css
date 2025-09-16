@@ -95,6 +95,7 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#keyboard-state,
 #mpd {
     margin: 20px 10px 20px 10px;
     color: #ffffff;
@@ -283,8 +284,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+	background-color: transparent;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -295,7 +295,7 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
 }
 
 #scratchpad {

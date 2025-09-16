@@ -34,6 +34,8 @@ echo "$username:$userpassword" | chpasswd
 
 ## Add the user to sudoers file
 usermod -aG wheel "$username"
+## Add the user to input group
+usermod -aG input "$username"
 
 ## Uncomment wheel's group line
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
@@ -80,7 +82,7 @@ pacman -S --needed --noconfirm obs-studio
 ### Discord & Vencord
 pacman -S --needed --noconfirm discord
 curl -o /home/arch/vencord -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
-chmod +x /tmp/vencord
+chmod +x /home/arch/vencord
 sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/arch/vencord" --install -location /opt/discord
 rm -f /home/arch/vencord
 ## Steam
