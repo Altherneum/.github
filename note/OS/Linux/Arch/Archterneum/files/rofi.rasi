@@ -3,7 +3,7 @@ configuration {
     transparency: "root";
     fullscreen: true;
     
-    combi-modes: [ window, drun, calc, ssh, filebrowser, recursivebrowser, run ];
+    combi-modes: [ window, drun, cmd, clipboard, filebrowser, recursivebrowser, run, calc, ssh ];
 
     display-ssh: "⚡️ SSH ";
     display-run: "📌 Lancer ";
@@ -14,6 +14,7 @@ configuration {
     display-window: "🧭 Window ";
     display-combi: "✨ Combi ";
     display-cmd: "🖥️ CMD ";
+    display-clipboard: "📋️ Clipboard ";
 
     kb-cancel: "Escape, Super_L";
 }
