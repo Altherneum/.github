@@ -102,6 +102,7 @@ echo $userpassword | sudo -S curl -o ~/.config/rofi/run_cmd.sh https://raw.githu
 echo $userpassword | sudo -S chmod +x ~/.config/rofi/run_cmd.sh
 # Rofi cliphist-rofi-img
 echo $userpassword | sudo -S curl -o ~/.config/rofi/cliphist-rofi-img.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/cliphist-rofi-img
+echo $userpassword | sudo -S chmod +x ~/.config/rofi/cliphist-rofi-img.sh
 
 # XDG theme config
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
