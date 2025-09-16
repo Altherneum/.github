@@ -67,7 +67,7 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/power_menu.xml https://raw
 # xfce4-notifyd
 ##### download theme file as : mkdir -p ~/.themes/transparent/xfce-notify-4.0/ ; cp /usr/share/themes/Smoke/xfce-notify-4.0/gtk.css ~/.themes/transparent/xfce-notify-4.0/gtk.css
 mkdir -p ~/.themes/transparent/xfce-notify-4.0/
-curl -o ~/.themes/transparent/xfce-notify-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/notifyd.css
+echo $userpassword | sudo -S curl -o ~/.themes/transparent/xfce-notify-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/notifyd.css
 xfconf-query -c xfce4-notifyd -p /theme -s transparent
 xfconf-query -c xfce4-notifyd -p /notify-location -s bottom-center
 # xfce4-terminal
@@ -91,6 +91,7 @@ echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.
 
 # fastfetch on terminal open
 echo "fastfetch" >> ./.bashrc
+echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi.rasi
 
 # Rofi theme
 echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
@@ -99,6 +100,8 @@ echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https
 echo $userpassword | sudo -S mkdir -p ~/.config/rofi/
 echo $userpassword | sudo -S curl -o ~/.config/rofi/run_cmd.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi_run_cmd.sh
 echo $userpassword | sudo -S chmod +x ~/.config/rofi/run_cmd.sh
+# Rofi cliphist-rofi-img
+echo $userpassword | sudo -S curl -o ~/.config/rofi/cliphist-rofi-img.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/cliphist-rofi-img
 
 # XDG theme config
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
