@@ -85,6 +85,7 @@ sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/arch/vencord" --install -locat
 rm -f /home/arch/vencord
 ## Steam
 pacman -S --needed --noconfirm steam
+sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPosition     "TopRight"/' /home/arch/.steam/steam/resource/styles/steam.styles
 ## System
 pacman -S --needed --noconfirm xfce4 nautilus man
 pacman -S --needed --noconfirm otf-font-awesome noto-fonts-emoji

@@ -31,6 +31,9 @@ echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
 echo $userpassword | sudo -S waydroid init -s GAPPS
+### Full screen
+waydroid prop set persist.waydroid.width ""
+waydroid prop set persist.waydroid.height ""
 
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
@@ -69,7 +72,7 @@ echo $userpassword | sudo -S chmod +x ~/.config/waybar/pacman_updater.sh
 echo $userpassword | sudo -S curl -o ~/.config/waybar/power_menu.xml https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/power_menu.xml
 
 # xfce4-notifyd
-##### download theme file as : mkdir -p ~/.themes/transparent/xfce-notify-4.0/ ; cp /usr/share/themes/Smoke/xfce-notify-4.0/gtk.css ~/.themes/transparent/xfce-notify-4.0/gtk.css
+##### download theme
 mkdir -p ~/.themes/transparent/xfce-notify-4.0/
 echo $userpassword | sudo -S curl -o ~/.themes/transparent/xfce-notify-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/notifyd.css
 xfconf-query -c xfce4-notifyd -p /theme -s transparent
