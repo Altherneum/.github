@@ -27,7 +27,11 @@ echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting Bottles" && yay -S --noconfirm --needed bottles
 echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
 echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
+### Waydroid
 echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
+#### Initialize Waydroid ROM
+echo $userpassword | sudo -S waydroid init -s GAPPS
+
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
 # SDDM configuration
