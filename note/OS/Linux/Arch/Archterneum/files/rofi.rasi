@@ -16,7 +16,7 @@ configuration {
     display-cmd: "🖥️ CMD ";
     display-clipboard: "📋️ Clipboard ";
 
-    kb-cancel: "Escape, Super_L";
+    kb-cancel: "Escape";
 }
 
 * {
