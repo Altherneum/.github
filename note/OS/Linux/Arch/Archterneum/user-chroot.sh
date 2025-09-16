@@ -66,6 +66,8 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/power_menu.xml https://raw
 
 # xfce4-notifyd
 ##### download theme file as : mkdir -p ~/.themes/transparent/xfce-notify-4.0/ ; cp /usr/share/themes/Smoke/xfce-notify-4.0/gtk.css ~/.themes/transparent/xfce-notify-4.0/gtk.css
+mkdir -p ~/.themes/transparent/xfce-notify-4.0/
+curl -o ~/.themes/transparent/xfce-notify-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/notifyd.css
 xfconf-query -c xfce4-notifyd -p /theme -s transparent
 xfconf-query -c xfce4-notifyd -p /notify-location -s bottom-center
 # xfce4-terminal
