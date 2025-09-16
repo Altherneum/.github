@@ -8,7 +8,7 @@ configuration {
     display-ssh: "⚡️ SSH ";
     display-run: "📌 Lancer ";
     display-filebrowser: "📂 Fichiers ";
-    display_recursivebrowser: "📂 ~/ ";
+    display-recursivebrowser: "📂 ~/ ";
     display-drun: "📌 Lancer ";
     display-calc: " 🧮 Calculatrice ";
     display-window: "🧭 Window ";
