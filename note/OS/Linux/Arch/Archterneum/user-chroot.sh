@@ -40,6 +40,7 @@ waydroid prop set persist.waydroid.height 950
 #### Start Waydroid
 waydroid session stop
 waydroid container stop
+##### https://docs.waydro.id/faq/google-play-certification
 ### MC
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
 ### Emote launcher
