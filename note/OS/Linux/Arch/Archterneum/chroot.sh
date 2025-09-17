@@ -68,6 +68,7 @@ systemctl enable sddm
 pacman -S --needed --noconfirm pipewire wireplumber
 pacman -S --needed --noconfirm cava # Sound visualizer
 pacman -S --needed --noconfirm vlc
+pacman -S --needed --noconfirm pavucontrol
 ## Media
 ### Screen shots
 pacman -S --needed --noconfirm grim slurp
