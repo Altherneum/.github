@@ -30,6 +30,7 @@ echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 ### Waydroid
 echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
+##### Docs : https://forum.garudalinux.org/t/ultimate-guide-to-install-waydroid-in-any-arch-based-distro-especially-garuda/15902 : https://medium.com/@tony.j.miri/android-on-linux-mint-with-waydroid-setup-guide-ff0ca8eab22
 echo $userpassword | sudo -S waydroid init -s GAPPS
 #### Start Waydroid
 echo $userpassword | sudo -S systemctl enable --now waydroid-container
