@@ -34,6 +34,8 @@ echo $userpassword | sudo -S waydroid init -s GAPPS
 ### Full screen
 waydroid prop set persist.waydroid.width ""
 waydroid prop set persist.waydroid.height ""
+### MC
+echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
 
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
