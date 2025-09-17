@@ -62,6 +62,7 @@ set rlim_fd_cur  8192
 pacman -Syu --noconfirm
 ## OS
 pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar rofi rofi-calc networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+pacman -S --needed --noconfirm  jdk21-openjdk go
 ### Enable SDDM
 systemctl enable sddm
 ### Sound system
@@ -94,7 +95,7 @@ pacman -S --needed --noconfirm xfce4 nautilus man
 pacman -S --needed --noconfirm otf-font-awesome noto-fonts-emoji
 pacman -S --needed --noconfirm $(pacman -Sgq nerd-fonts)
 fc-cache # reload cache of fonts
-pacman -S --needed --noconfirm git ufw keepassxc go
+pacman -S --needed --noconfirm git ufw keepassxc
 ### Other software
 pacman -S --needed --noconfirm btop fastfetch htop
 ## Video drivers
