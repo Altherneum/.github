@@ -31,12 +31,18 @@ echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
 echo $userpassword | sudo -S waydroid init -s GAPPS
-### Full screen
-waydroid prop set persist.waydroid.width ""
-waydroid prop set persist.waydroid.height ""
+#### Start Waydroid
+waydroid container start
+waydroid session start
+#### Full screen
+waydroid prop set persist.waydroid.width 750
+waydroid prop set persist.waydroid.height 950
+#### Start Waydroid
+waydroid session stop
+waydroid container stop
 ### MC
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
-
+### Emote launcher
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
 # SDDM configuration
