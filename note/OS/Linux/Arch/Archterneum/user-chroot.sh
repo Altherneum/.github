@@ -32,6 +32,7 @@ echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
 echo $userpassword | sudo -S waydroid init -s GAPPS
 #### Start Waydroid
+systemctl enable --now waydroid-container
 waydroid container start
 waydroid session start
 #### Full screen
