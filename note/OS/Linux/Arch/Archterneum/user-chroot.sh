@@ -32,15 +32,15 @@ echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
 echo $userpassword | sudo -S waydroid init -s GAPPS
 #### Start Waydroid
-systemctl enable --now waydroid-container
-waydroid container start
+echo $userpassword | sudo -S systemctl enable --now waydroid-container
+echo $userpassword | sudo -S waydroid container start
 waydroid session start
 #### Full screen
 waydroid prop set persist.waydroid.width 750
 waydroid prop set persist.waydroid.height 950
 #### Start Waydroid
 waydroid session stop
-waydroid container stop
+echo $userpassword | sudo -S waydroid container stop
 ##### https://docs.waydro.id/faq/google-play-certification
 ### MC
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
