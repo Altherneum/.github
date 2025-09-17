@@ -96,6 +96,9 @@ echo $userpassword | sudo -S sh -c 'echo "VteTerminal, vte-terminal {" >> /home/
 echo $userpassword | sudo -S sh -c 'echo "    padding: 25px;" >> /home/'$username'/.config/gtk-3.0/gtk.css'
 echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.0/gtk.css'
 
+## pavucontrol theme
+echo $userpassword | sudo -S cp -a /home/'$username'/.config/gtk-3.0/ /home/'$username'/.config/gtk-4.0/ 
+
 # fastfetch on terminal open
 echo "fastfetch" >> ./.bashrc
 
