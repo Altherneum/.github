@@ -51,7 +51,8 @@ getdata() {
                 fi
                 if [ "$2" = "load" ]; then
                     gpuload=$(more /sys/class/drm/card1/device/gpu_busy_percent)
-                    echo $gpuload
+                    number=$(printf "%02d" "$gpuload")
+                    echo $number
                 fi
                 
             fi
