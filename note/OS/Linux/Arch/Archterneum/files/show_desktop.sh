@@ -10,7 +10,7 @@ set_opacity() {
 }
 
 if [ "$(get_opacity active_opacity)" = "1.000000" ] && [ "$(get_opacity inactive_opacity)" = "1.000000" ]; then
-  set_opacity 0.35
+  set_opacity $1
 else
   set_opacity 1
 fi
