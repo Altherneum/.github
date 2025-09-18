@@ -49,6 +49,11 @@ getdata() {
                     
                     echo "${uuidtrimed[1]}/${uuidtrimed[2]}/${uuidtrimed[3]}/${uuidtrimed[4]}"
                 fi
+                if [ "$2" = "load" ]; then
+                    gpuload=$(more /sys/class/drm/card$num/device/gpu_busy_percent)
+                    echo $gpuload
+                fi
+                
             fi
         else
             if [ "$1" = "CPU" ]; then
