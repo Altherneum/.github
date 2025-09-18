@@ -137,7 +137,7 @@ echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/s
 
 # Show desktop script
 curl -o /home/$username/show_desktop.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/show_desktop.sh
-sudo chmod +x /home/$username/show_desktop.sh
+chmod +x /home/$username/show_desktop.sh
 
 # Fan control
 ## Script
