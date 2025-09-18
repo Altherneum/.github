@@ -135,6 +135,10 @@ echo "initrd /amd-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/swap root=/dev/vg0/root rw" >> /boot/loader/entries/arch.conf
 
+# Show desktop script
+curl -o /home/$username/show_desktop.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/show_desktop.sh
+sudo chmod +x /home/$username/show_desktop.sh
+
 # Fan control
 ## Script
 curl -o /home/$username/gpu_scan.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/get_hwmon_data.sh
