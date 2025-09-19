@@ -101,6 +101,25 @@ button {
     color: #ffffff;
 }
 
+#custom-pacman,
+#memory,
+#keyboard-state,
+#tray {
+    margin: 20px 20px 20px 20px;
+}
+
+#window,
+#idle_inhibitor,
+#custom-emote,
+#pulseaudio {
+    margin: 20px 10px 20px 10px;
+}
+
+
+#network {
+    margin: 20px 20px 20px 10px;
+}
+
 #custom-rofi{
     padding: 0px 0px 0px 20px;
 }
@@ -238,8 +257,7 @@ label:focus {
 }
 
 #tray *{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0px 5px 0px 5px;
 }
 
 #tray > .passive {
@@ -285,8 +303,6 @@ label:focus {
 
 #keyboard-state {
 	background-color: transparent;
-    padding: 0 0px;
-    margin: 0 5px;
     min-width: 16px;
 }
 
