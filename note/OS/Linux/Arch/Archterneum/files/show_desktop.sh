@@ -15,7 +15,7 @@ else
   if [ -z "$1" ]; then
     set_opacity 1
   else
-    if [ "$(get_opacity active_opacity)" != "1.000000" ] && [ "$(get_opacity inactive_opacity)" != "1.000000" ]; then
+    if [[ "$(get_opacity active_opacity)" == $1* ]] && [[ "$(get_opacity inactive_opacity)" == $1* ]]; then
       set_opacity 1
     else
       set_opacity $1
