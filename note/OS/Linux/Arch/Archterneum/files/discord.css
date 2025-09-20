@@ -24,10 +24,10 @@
   --message-padding-top: 8px;
   --message-padding-side: 8px;
   --undefined: 0;
-  --reply-hue: 226;
-  --reply-saturation: 77%;
-  --reply-lightness: 61%;
-  --reply-opacity: 1;
+  --reply-hue: 0;
+  --reply-saturation: 100%;
+  --reply-lightness: 100%;
+  --reply-opacity: 0.05;
   --textarea-color: 255,255,255;
   --textarea-alpha: 0.1;
   --textarea-alpha-focus: 0.15;
