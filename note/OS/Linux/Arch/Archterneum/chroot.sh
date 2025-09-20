@@ -87,6 +87,8 @@ curl -o /home/arch/vencord -L https://github.com/Vencord/Installer/releases/late
 chmod +x /home/arch/vencord
 sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/arch/vencord" --install -location /opt/discord
 rm -f /home/arch/vencord
+curl -o ~/.config/Vencord/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
+
 ## Steam
 pacman -S --needed --noconfirm steam
 sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPosition     "TopRight"/' /home/arch/.steam/steam/resource/styles/steam.styles
