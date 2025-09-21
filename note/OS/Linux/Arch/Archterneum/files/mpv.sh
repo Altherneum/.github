@@ -1,6 +1,9 @@
 # Exemple # /home/vscode/repo/.github/note/OS/Linux/Arch/Archterneum/files/mpv.sh getFileCount "/home/vscode/repo/.github/note/OS/Linux/Arch/Archterneum/files/backgrounds/"
 
 getFileCount() {
+    if[ -z "$1" ]; then
+        echo "Need a folder to scan as param"
+    fi
     find $1 -type f -name "*.mp4" | wc -l
 }
 
@@ -20,7 +23,7 @@ setRandomVideo() {
 
 addNewBackground() {
     if [ -z "$1" ]; then
-        echo Add an URL
+        echo "Missing an URL as param"
     else
         newVideoID=0
         newVideoID=$(getFileCount ~/.config/hypr/backgrounds/)
@@ -33,7 +36,7 @@ addNewBackground() {
 
 startLoop() {
     if [ -z "$1" ]; then
-        echo "Need a timer in sec"
+        echo "Need a timer in sec as param"
     else
         while true; do
             $(setRandomVideo)
