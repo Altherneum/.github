@@ -1,7 +1,7 @@
 # Exemple # /home/vscode/repo/.github/note/OS/Linux/Arch/Archterneum/files/mpv.sh getFileCount "/home/vscode/repo/.github/note/OS/Linux/Arch/Archterneum/files/backgrounds/"
 
 getFileCount() {
-    if[ -z "$1" ]; then
+    if [ -z "$1" ]; then
         echo "Need a folder to scan as param"
     else
         find $1 -type f -name "*.mp4" | wc -l
