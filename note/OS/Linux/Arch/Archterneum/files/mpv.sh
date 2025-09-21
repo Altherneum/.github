@@ -3,8 +3,9 @@
 getFileCount() {
     if[ -z "$1" ]; then
         echo "Need a folder to scan as param"
+    else
+        find $1 -type f -name "*.mp4" | wc -l
     fi
-    find $1 -type f -name "*.mp4" | wc -l
 }
 
 setRandomVideo() {
