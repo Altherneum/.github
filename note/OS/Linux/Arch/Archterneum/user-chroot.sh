@@ -67,7 +67,31 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/mpvpaper.sh https://raw.gith
 echo $userpassword | sudo -S chmod +x ~/.config/hypr/mpvpaper.sh
 ## MpvPaper Video background list
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr/backgrounds/
+# Get each video
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/1.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/2.mp4 -L https://motionbgs.com/dl/hd/6199
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/3.mp4 -L https://motionbgs.com/dl/hd/2623
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/4.mp4 -L https://motionbgs.com/dl/hd/8536
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/5.mp4 -L https://motionbgs.com/dl/hd/8325
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/6.mp4 -L https://motionbgs.com/dl/hd/4607
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/7.mp4 -L https://motionbgs.com/black-hole
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/8.mp4 -L https://motionbgs.com/dl/hd/1044
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/9.mp4 -L https://motionbgs.com/dl/hd/3261
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/10.mp4 -L https://motionbgs.com/dl/hd/2095
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/11.mp4 -L https://motionbgs.com/dl/hd/2887
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/12.mp4 -L https://motionbgs.com/dl/hd/5093
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/13.mp4 -L https://motionbgs.com/dl/hd/1585
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/14.mp4 -L https://motionbgs.com/dl/hd/7003
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/15.mp4 -L https://motionbgs.com/dl/hd/2538
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/16.mp4 -L https://motionbgs.com/dl/hd/6870
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/17.mp4 -L https://motionbgs.com/dl/hd/4356
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/18.mp4 -L https://motionbgs.com/dl/hd/5681
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/19.mp4 -L https://motionbgs.com/dl/hd/8134
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/20.mp4 -L https://motionbgs.com/dl/hd/6643
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/21.mp4 -L https://motionbgs.com/dl/hd/5351
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/22.mp4 -L https://motionbgs.com/dl/hd/5529
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/23.mp4 -L https://motionbgs.com/dl/hd/5819
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/24.mp4 -L https://motionbgs.com/dl/hd/3511
 
 # HyprIdle configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr

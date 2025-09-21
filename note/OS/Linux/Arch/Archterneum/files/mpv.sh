@@ -11,7 +11,6 @@ getFileCount() {
 setRandomVideo() {
     FPS=30
 
-    VideoNumber=1
     maxvideoamount=$(getFileCount ~/.config/hypr/backgrounds/)
     minvideoid=1
 
@@ -40,7 +39,7 @@ startLoop() {
         echo "Need a timer in sec as param"
     else
         while true; do
-            $(setRandomVideo)
+            setRandomVideo
             sleep $1
         done
     fi
