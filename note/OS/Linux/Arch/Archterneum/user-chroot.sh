@@ -64,6 +64,7 @@ echo $userpassword | sudo -S cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyp
 echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprlock.conf
 ## MpvPaper script
 echo $userpassword | sudo -S curl -o /home/.config/hypr/mpvpaper.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/mpvpaper.sh
+echo $userpassword | sudo -S chmod +x /home/.config/hypr/mpvpaper.sh
 ## MpvPaper Video background list
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/1.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
 
