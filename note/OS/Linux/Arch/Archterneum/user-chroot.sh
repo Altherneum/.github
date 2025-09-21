@@ -90,8 +90,7 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/19.mp4 -L https:
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/20.mp4 -L https://motionbgs.com/dl/hd/6643
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/21.mp4 -L https://motionbgs.com/dl/hd/5351
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/22.mp4 -L https://motionbgs.com/dl/hd/5529
-echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/23.mp4 -L https://motionbgs.com/dl/hd/5819
-echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/24.mp4 -L https://motionbgs.com/dl/hd/3511
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/23.mp4 -L https://motionbgs.com/dl/hd/3511
 
 # HyprIdle configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
