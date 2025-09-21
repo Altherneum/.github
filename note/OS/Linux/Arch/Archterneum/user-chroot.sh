@@ -62,7 +62,8 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf https://raw.gi
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
 echo $userpassword | sudo -S cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.default
 echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprlock.conf
-echo $userpassword | sudo -S curl -o ~/.config/hypr/background.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
+## MpvPaper video background list
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/1.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
 
 # HyprIdle configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
