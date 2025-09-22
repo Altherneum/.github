@@ -3,13 +3,13 @@
 :root {
   --app-bg: transparent;
   --app-blur: 6px;
-  --app-margin: 24px;
+  --app-margin: 12px;
   --app-radius: 8px;
   --accent-hue: 360;
   --accent-saturation: 100%;
   --accent-lightness: 100%;
   --accent-opacity: 0.25;
-  --sidebar-color: rgba(0,0,0,0.4);
+  --sidebar-color: rgba(0,0,0,0.6);
   --main-content-color: rgba(0,0,0,0.2);
   --undefined: 0;
   --interactive-normal: #aaa;
