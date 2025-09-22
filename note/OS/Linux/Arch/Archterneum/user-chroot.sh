@@ -74,7 +74,7 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/3.mp4 -L https:/
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/4.mp4 -L https://motionbgs.com/dl/hd/8536
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/5.mp4 -L https://motionbgs.com/dl/hd/8325
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/6.mp4 -L https://motionbgs.com/dl/hd/4607
-echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/7.mp4 -L https://motionbgs.com/black-hole
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/7.mp4 -L https://motionbgs.com/dl/hd/53
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/8.mp4 -L https://motionbgs.com/dl/hd/1044
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/9.mp4 -L https://motionbgs.com/dl/hd/3261
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/10.mp4 -L https://motionbgs.com/dl/hd/2095
