@@ -41,7 +41,7 @@ usermod -aG input "$username"
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 # Sudo less
-sudo touch /etc/sudoers.d/arch
+sudo touch /etc/sudoers.d/$username
 sudo echo "$username ALL=(ALL) NOPASSWD: ALL" > sudo /etc/sudoers.d/$username
 # sudoers file already include files in this directory
 
@@ -61,7 +61,14 @@ set rlim_fd_cur  8192
 # Installing softwares
 pacman -Syu --noconfirm
 ## OS
-pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar rofi rofi-calc networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+### Rofi
+pacman -S --needed --noconfirm rofi rofi-calc
+#### requiered for rofi plugin click close
+pacman -S --needed --noconfirm slurp jq
+curl -o /home/$username/.config/rofi/rofi-slurp-monitor.sh -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
+chmod +x ~/.config/rofi/rofi-slurp-monitor.sh
+### Language stack
 pacman -S --needed --noconfirm  jdk21-openjdk go
 ### Enable SDDM
 systemctl enable sddm
@@ -83,16 +90,16 @@ pacman -S --needed --noconfirm wl-clipboard cliphist
 pacman -S --needed --noconfirm obs-studio
 ### Discord & Vencord
 pacman -S --needed --noconfirm discord
-curl -o /home/arch/vencord -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
-chmod +x /home/arch/vencord
-sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/arch/vencord" --install -location /opt/discord
-rm -f /home/arch/vencord
+curl -o /home/$username/vencord -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
+chmod +x /home/$username/vencord
+sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/$username/vencord" --install -location /opt/discord
+rm -f /home/$username/vencord
 curl -o ~/.config/Vencord/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
 curl -o ~/.config/Vencord/themes/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
 
 ## Steam
 pacman -S --needed --noconfirm steam
-sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPosition     "TopRight"/' /home/arch/.steam/steam/resource/styles/steam.styles
+sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPosition     "TopRight"/' /home/$username/.steam/steam/resource/styles/steam.styles
 ## System
 pacman -S --needed --noconfirm xfce4 nautilus man
 pacman -S --needed --noconfirm otf-font-awesome noto-fonts-emoji

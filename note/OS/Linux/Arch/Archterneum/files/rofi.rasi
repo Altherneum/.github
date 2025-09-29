@@ -1,7 +1,7 @@
 configuration {
     show-icons: true;
     transparency: "root";
-    fullscreen: true;
+    fullscreen: false;
     
     combi-modes: [ window, drun, cmd, clipboard, filebrowser, recursivebrowser, run, calc, ssh ];
 
@@ -38,10 +38,8 @@ configuration {
 }
 
 #window {
-    width: 100%;
-    height: 100%;
-
-    margin: 20%;
+    width: 75%;
+    height: 75%;
 
     x-offset: 0%;
     y-offset: 0%;
