@@ -38,9 +38,6 @@ monitor_rofi_with_slurp() {
     slurp -b '#00000000' -c '#00000000' -s '#00000000' >/dev/null 2>&1 &
     local slurp_pid=$!
 
-    # Move cursor to absolute center of screen based on resolution
-    # Comment out from here to "ydotool mousemove" line below to disable
-
     # Monitor both rofi and slurp processes
     while true; do
         # Check if rofi is still running
