@@ -63,3 +63,33 @@ Utilitaire de gestion de package
 - `-y`, `--refresh` Téléchargez une nouvelle copie des bases de données des dépôts de packages `repo.db` depuis le(s) serveur(s) défini(s) dans `pacman.conf`
 ## Installer un package local via pacman
 `pacman -U <path><package>.pkg.tar.gz` Permet d'installer un paquet sous la forme de fichier
+## Vérifier la raison de l'installation d'un package
+- `pacman -Qi <PACKAGE>`
+  - `-Q` Query
+  - `-i` Affiche les informations d'un paquet (`-ii` pour les fichiers de configuration protégés)
+### Exemple d'information sur un package
+Exemple des informations du package `pacman`, via `pacman -Qi pacman`
+```
+Nom                      : pacman
+Version                  : 7.0.0.r6.gc685ae6-6
+Description              : A library-based package manager with dependency support
+Architecture             : x86_64
+URL                      : https://www.archlinux.org/pacman/
+Licences                 : GPL-2.0-or-later
+Groupes                  : --
+Fournit                  : libalpm.so=15-64
+Dépend de                : bash  coreutils  curl  libcurl.so=4-64  gawk  gettext  glibc  gnupg  gpgme  libgpgme.so=45-64  grep  libarchive  libarchive.so=13-64  openssl  libcrypto.so=3-64  pacman-mirrorlist  systemd
+Dépendances opt.         : base-devel: required to use makepkg [installé]
+                           perl-locale-gettext: translation support in makepkg-template
+Requis par               : appstream-glib  archlinux-keyring  base  base-devel  yay
+Optionnel pour           : --
+Est en conflit avec      : --
+Remplace                 : --
+Taille installée         : 4,82 MiB
+Paqueteur                : Christian Hesse <eworm@archlinux.org>
+Compilé le               : mar. 03 juin 2025 23:33:38
+Installé le              : lun. 08 sept. 2025 03:34:01
+Motif d’installation     : Installé comme dépendance d’un autre paquet
+Script d’installation    : Non
+Validé par               : Signature
+```
