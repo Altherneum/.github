@@ -142,9 +142,13 @@ echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.
 ## pavucontrol theme
 echo $userpassword | sudo -S cp -a /home/'$username'/.config/gtk-3.0/ /home/'$username'/.config/gtk-4.0/ 
 
-# fastfetch on terminal open
+# fastfetch
+## fastfetch on terminal open
 echo "fastfetch" >> ./.bashrc
 echo "PS1='\n\[\e[1m\]\[\e[0m\] \[\e[1;2;4m\]\D{%a %H %b %Y}\[\e[0m\]    \[\e[1m\]󰅐\[\e[0m\] \[\e[1m\]\t\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[2m\]\u\[\e[0m\]@\[\e[2m\]\H\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[1m\]\w\n\[\e[0m\] \[\e[1;2;4m\]History\[\e[0m\] \[\e[2m\]n°\[\e[1m\]\!\[\e[0m\] \[\e[1;2m\]=[\[\e[0;1;5m\]\$\[\e[25;2m\]]>\[\e[0m\] '" >> ./.bashrc
+## fastfetch configuration file
+echo $userpassword | sudo -S mkdir -p ~/.config/fastfetch/config.jsonc
+echo $userpassword | sudo -S curl -o ~/.config/fastfetch/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/fastfetch.jsonc
 
 # Rofi theme
 echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
