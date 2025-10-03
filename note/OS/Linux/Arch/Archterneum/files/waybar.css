@@ -1,6 +1,7 @@
 * {
     font-family: "JetBrainsMono NF";
     font-size: 14px;
+    color: #ffffff;
 }
 
 window#waybar {
@@ -76,15 +77,9 @@ button {
 
 #clock,
 #battery,
-#cpu,
 #custom-emote,
 #custom-rofi,
-#memory,
 #disk,
-#custom-gpuload,
-#custom-gputemperature,
-#custom-tempcpu,
-#custom-fan,
 #backlight,
 #network,
 #pulseaudio,
@@ -101,22 +96,37 @@ button {
     color: #ffffff;
 }
 
+
+#custom-gpuload,
+#cpu,
+#custom-gputemperature,
+#custom-tempcpu {
+    margin: 20px 0px 20px 0px;
+}
+
+#custom-cpulogo,
+#custom-gpulogo {
+    margin: 20px 5px 20px 5px;
+    font-size: 18px;
+}
+
 #custom-pacman,
-#memory,
-#keyboard-state,
 #tray {
     margin: 20px 20px 20px 20px;
 }
 
+#memory {
+    margin: 20px 20px 20px 10px;
+}
+
 #idle_inhibitor,
-#custom-emote,
+#custom-fan,
 #pulseaudio {
     margin: 20px 10px 20px 10px;
 }
 
-
 #network {
-    margin: 20px 20px 20px 10px;
+    margin: 20px 15px 20px 5px;
 }
 
 #custom-rofi{
@@ -152,6 +162,7 @@ menuitem, menu {
 }
 
 #clock {
+    font-size: 18px;
 }
 
 #battery {
@@ -201,13 +212,6 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-}
-
-#memory {
-    margin: 0px 15px 0px 0px;
-}
-
 #disk {
     background-color: #964B00;
 }
@@ -223,14 +227,8 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#pulseaudio {
-}
-
 #pulseaudio.muted {
     color: #2a5c45;
-}
-
-#wireplumber {
 }
 
 #wireplumber.muted {
