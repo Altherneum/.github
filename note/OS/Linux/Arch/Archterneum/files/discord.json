@@ -51,7 +51,7 @@
             "enabled": true
         },
         "AlwaysAnimate": {
-            "enabled": false
+            "enabled": true
         },
         "AlwaysExpandRoles": {
             "enabled": true
@@ -79,7 +79,7 @@
             "enabled": false
         },
         "BetterGifPicker": {
-            "enabled": true
+            "enabled": false
         },
         "BetterNotesBox": {
             "enabled": false
@@ -141,7 +141,9 @@
             "enabled": true
         },
         "CtrlEnterSend": {
-            "enabled": true
+            "enabled": false,
+            "submitRule": "ctrl+enter",
+            "sendMessageInTheMiddleOfACodeBlock": true
         },
         "CustomIdle": {
             "enabled": false
@@ -275,7 +277,17 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": false
+            "enabled": true,
+            "deleteStyle": "text",
+            "logDeletes": true,
+            "collapseDeleted": false,
+            "logEdits": true,
+            "inlineEdits": true,
+            "ignoreBots": false,
+            "ignoreSelf": true,
+            "ignoreUsers": "",
+            "ignoreChannels": "",
+            "ignoreGuilds": ""
         },
         "MessageTags": {
             "enabled": false
@@ -372,7 +384,7 @@
             "messages": true
         },
         "PreviewMessage": {
-            "enabled": false
+            "enabled": true
         },
         "QuickMention": {
             "enabled": false
@@ -426,7 +438,7 @@
             "enabled": false
         },
         "ShowAllMessageButtons": {
-            "enabled": false
+            "enabled": true
         },
         "ShowConnections": {
             "enabled": false
@@ -533,13 +545,13 @@
             "enabled": false
         },
         "ViewRaw": {
-            "enabled": false
+            "enabled": true
         },
         "VoiceDownload": {
-            "enabled": false
+            "enabled": true
         },
         "VoiceMessages": {
-            "enabled": false
+            "enabled": true
         },
         "VolumeBooster": {
             "enabled": false
@@ -566,6 +578,9 @@
         },
         "SupportHelper": {
             "enabled": true
+        },
+        "AutoDNDWhilePlaying": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -578,6 +593,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1758586984122
+        "settingsSyncVersion": 1760098036380
     }
 }
