@@ -95,7 +95,7 @@ chmod +x /home/$username/vencord
 sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/$username/vencord" --install -location /opt/discord
 rm -f /home/$username/vencord
 curl -o ~/.config/Vencord/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
-curl -o ~/.config/Vencord/themes/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
+curl -o ~/.config/Vencord/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
 
 ## Steam
 pacman -S --needed --noconfirm steam
