@@ -50,6 +50,8 @@ Utilitaire de gestion de package
 - Utilisez un paramètre `--clean` pour supprimer uniquement les paquets qui ne sont plus installés
   - Utilisez-en deux pour supprimer tous les fichiers du cache
   - Dans les deux cas, vous aurez le choix entre oui et non pour supprimer les paquets et/ou les bases de données téléchargées inutilisées
+## Supprimer le lock de pacman
+`sudo rm /var/lib/pacman/db.lck` Permet de supprimer le fichier `db.lck` A.K.A `database.lock` vérouillant pacman
 ## Mettre à jour le système via pacman
 - `-u`, `--sysupgrade` Met à jour tous les packages périmés
 - Chaque package installé sur votre système va être examiné et mis à jour si un package plus récent existe
