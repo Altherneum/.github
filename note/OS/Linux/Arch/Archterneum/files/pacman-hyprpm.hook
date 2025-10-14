@@ -6,7 +6,7 @@ Target = hyprland
 Target = aquamarine
 
 [Action]
-Description = Hyprpm update on hypr* package update
+Description = Hyprpm update on hyprland,hyprutils,aquamarine package update
 Depends = hyprland
 When = PostTransaction
 Exec = hyprpm update
