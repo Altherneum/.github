@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = hyprutils
+Target = hyprland
+Target = aquamarine
+
+[Action]
+Description = Hyprpm update on hypr* package update
+Depends = hyprland
+When = PostTransaction
+Exec = hyprpm update
