@@ -200,6 +200,9 @@ echo ""
 # hyprpm hook
 echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-hyprpm.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-hyprpm.hook
 
+# Discord -> Vencord hook
+echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
+
 # Slash screen
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
 # The image is then embedded into the UKI binary during the mkinitcpio build process.
