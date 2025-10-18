@@ -11,3 +11,7 @@ Description = Hyprpm update on hyprland,hyprutils,aquamarine package update
 Depends = hyprland
 When = PostTransaction
 Exec = hyprpm update
+# Muste be a file :(
+    Create file
+    set this cmd
+    and change the exec here to be exec = /path/.sh

@@ -7,4 +7,5 @@ Target = discord
 Description = Add vencord on Discord updates
 Depends = discord
 When = PostTransaction
-Exec = ~/vencord.sh $(whoami)
+Exec = /bin/bash /usr/share/libalpm/vencord.sh
+NeedsTargets
