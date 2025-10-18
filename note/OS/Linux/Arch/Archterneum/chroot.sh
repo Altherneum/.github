@@ -66,8 +66,8 @@ pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  n
 pacman -S --needed --noconfirm rofi rofi-calc
 #### requiered for rofi plugin click close
 pacman -S --needed --noconfirm slurp jq
-curl -o ~/.config/rofi/rofi-slurp-monitor.sh -L https://raw.githubusercontent.com/ilivetruth/rofi-wayland-click-to-close/refs/heads/main/rofi-slurp-monitor.sh
-chmod +x ~/.config/rofi/rofi-slurp-monitor.sh
+curl -o /home/$username/.config/rofi/rofi-slurp-monitor.sh -L https://raw.githubusercontent.com/ilivetruth/rofi-wayland-click-to-close/refs/heads/main/rofi-slurp-monitor.sh
+chmod +x /home/$username/.config/rofi/rofi-slurp-monitor.sh
 ### Language stack
 pacman -S --needed --noconfirm  jdk21-openjdk go
 ### Enable SDDM
@@ -89,13 +89,9 @@ pacman -S --needed --noconfirm wl-clipboard cliphist
 ### Other media
 pacman -S --needed --noconfirm obs-studio
 ### Discord & Vencord
-pacman -S --needed --noconfirm discord
-curl -o /home/$username/vencord -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
-chmod +x /home/$username/vencord
-sudo pkexec env "$@" "SUDO_USER=$(whoami)" "/home/$username/vencord" --install -location /opt/discord
-rm -f /home/$username/vencord
-curl -o ~/.config/Vencord/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
-curl -o ~/.config/Vencord/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
+curl -o /home/$username/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
+chmod +x /home/$username/pacman-vencord.hook
+/home/$username/pacman-vencord.hook arch
 
 ## Steam
 pacman -S --needed --noconfirm steam

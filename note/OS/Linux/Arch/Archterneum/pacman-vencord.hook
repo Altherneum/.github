@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = discord
+
+[Action]
+Description = Add vencord on Discord updates
+Depends = discord
+When = PostTransaction
+Exec = ~/pacman-vencord.hook $(whoami)
