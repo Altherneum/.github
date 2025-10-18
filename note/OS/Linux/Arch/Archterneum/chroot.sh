@@ -66,7 +66,7 @@ pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  n
 pacman -S --needed --noconfirm rofi rofi-calc
 #### requiered for rofi plugin click close
 pacman -S --needed --noconfirm slurp jq
-curl -o /home/$username/.config/rofi/rofi-slurp-monitor.sh -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
+curl -o ~/.config/rofi/rofi-slurp-monitor.sh -L https://raw.githubusercontent.com/ilivetruth/rofi-wayland-click-to-close/refs/heads/main/rofi-slurp-monitor.sh
 chmod +x ~/.config/rofi/rofi-slurp-monitor.sh
 ### Language stack
 pacman -S --needed --noconfirm  jdk21-openjdk go
