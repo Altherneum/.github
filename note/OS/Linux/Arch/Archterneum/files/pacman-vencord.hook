@@ -7,4 +7,4 @@ Target = discord
 Description = Add vencord on Discord updates
 Depends = discord
 When = PostTransaction
-Exec = ~/pacman-vencord.hook $(whoami)
+Exec = ~/vencord.sh $(whoami)
