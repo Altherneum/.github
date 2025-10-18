@@ -4,6 +4,7 @@ Type = Package
 Target = hyprutils
 Target = hyprland
 Target = aquamarine
+Target = xdg-desktop-portal-hyprland
 
 [Action]
 Description = Hyprpm update on hyprland,hyprutils,aquamarine package update
