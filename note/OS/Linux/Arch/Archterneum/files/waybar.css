@@ -1,6 +1,6 @@
 * {
     font-family: "JetBrainsMono NF";
-    font-size: 14px;
+    font-size: 12px;
     color: #ffffff;
 }
 
@@ -107,7 +107,6 @@ button {
 #custom-cpulogo,
 #custom-gpulogo {
     margin: 20px 5px 20px 5px;
-    font-size: 18px;
 }
 
 #custom-pacman,
@@ -162,7 +161,7 @@ menuitem, menu {
 }
 
 #clock {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #battery {
