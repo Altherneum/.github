@@ -38,6 +38,7 @@ Pour installer l'ISO sur une clef USB
 ###### Création en mode DD Rufus ancienne version
 ![rufus image](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-dd.png)
 ##### Finaliser la création de la clef USB
+![rufus image](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/rufus-finish.png)
 - Rufus gravera l'image d'Arch sur la clé USB
   - Cette opération peut prendre plusieurs minutes
 - Une fois terminée, la clé USB sera bootable pour l'installation d'Arch Linux
