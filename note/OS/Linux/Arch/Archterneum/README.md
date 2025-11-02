@@ -5,7 +5,7 @@
   - Ce qui donne avec un clavier `QWERTY` : `loqdkeys fr`
 ### Downloading script
 - `curl -o /arch.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/arch.sh`
-  - Lien alternatif : `curl -Lo /arch.sh http://arch.altherneum.fr`
+  - Lien alternatif : `curl -Lo /arch.sh https://arch.altherneum.fr`
 
 ### Liste de liens DNS :
 - `arch.altherneum.fr`
