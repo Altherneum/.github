@@ -1,10 +1,11 @@
 # Adresse réseau IP
-- L'adresse de réseau permet de savoir si 2 machines peuvent communiquer entre elles.  
-- Si ces 2 machines ont une adresse réseau identique, alors, elles appartiennent au même réseau et elles peuvent communiquer.  
+- L'adresse de réseau permet de savoir si 2 machines peuvent communiquer entre elles
+- Si ces 2 machines ont une adresse réseau identique, alors, elles appartiennent au même réseau local et elles peuvent communiquer via un switch
+  - Si elles n'ont pas la même adresse réseau, le PC devra demander à sa passerelle (le routeur) de diriger le paquet vers un réseau pouvant connaitre cette IP
 
 ## Exemple d'adresse
-- Soit l'adresse IP suivante : `192.168.0.10` `/24` (`255.255.255.0`).  
-- Soit l'adresse réseau : `192.168.0.0`, écrit sous forme décimale pointée.
+- Soit l'adresse IP suivante : `192.168.0.10` `/24` (`255.255.255.0`)
+- Soit l'adresse réseau : `192.168.0.0`, écrit sous forme décimale pointée
 - Et avec comme adresse de broadcast : `192.168.0.255`
 
 ## IPv4
