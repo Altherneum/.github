@@ -31,7 +31,9 @@ for (let i = 0; i < nombres.length; i++) {
 }
 ```
 ### for...in
-- La boucle `for...in` est utilisée pour parcourir les *propriétés* d'un objet. Contrairement à la boucle `for...in` qui utilise un tableau, la boucle `for...in` retourne également le nom de chaque propriété
+- La boucle for...in est utilisée pour parcourir les propriétés énumérables d'un objet qui ne sont pas des symboles
+- Elle permet d'itérer sur les noms des propriétés d'un objet, en assignant à la variable de boucle un nom de propriété différent à chaque itération.
+- Contrairement à une boucle for...of qui parcourt les valeurs des éléments d'un objet itérable, la boucle for...in parcourt les noms des propriétés.
 ```
 let personne = {
   nom: "Alice",
@@ -46,6 +48,9 @@ for (let prop in personne) {
   }
 }
 ```
+### for...of
+- La boucle for...of en JavaScript permet d'itérer directement sur les valeurs des objets itérables, tels que les tableaux, chaînes de caractères, Map, Set, etc.
+- Contrairement à for...in qui parcourt les noms des propriétés, for...of accède à chaque valeur de l'élément itérable, rendant le code plus lisible et intuitif
 
 ## while
 - `while` exécute un bloc de code tant que la condition est vraie
