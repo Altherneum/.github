@@ -9,7 +9,7 @@
 - `-c file` Lit le fichier de configuration en lieu et place du fichier `.screenrc`
 - `-d (-r)` Déconnecte et redémarre le écran (et le ré-attache ici)
 - `-dmS name` Démarrer screen en tant que session daemon en mode détaché
-- `-D (-r)` Déconnecte et se déconnecte du serveur.  Le ré-attache ici
+- `-D (-r)` Déconnecte et se déconnecte du serveur. Le ré-attache ici
 - `-D -RR` Effectue tout ce qui est nécessaire pour démarrer une session Screen
 - `-e xy` Change les caractères de commande. (Exemple `xy` pour changer le format de la commande)
 - `-f` Flow control sur, -fn = off, -fa = auto

@@ -175,7 +175,7 @@ Ce cours n'est constitué que d'informations OSI (Open source Intelligence), et 
 - Valeur maximum pour limiter un calcul
 
 ### Décote
-- Réduction qui est appliquée au montant de votre pension de retraite lorsque vous partez en retraite sans avoir droit à une retraite à taux plein.  
+- Réduction qui est appliquée au montant de votre pension de retraite lorsque vous partez en retraite sans avoir droit à une retraite à taux plein
 [# Calcul de décote](#Calcul-de-décote)
 
 ### Abattement
@@ -690,7 +690,7 @@ il est interdit de renvoyer des documents entrants (Hormis originale)
 
 ### Gesica
 - [gesica.org / outils](https://www.gesica.org/fr/outils/)
-- Envoie de RIS, EIG, RAP, etc...  
+- Envoie de RIS, EIG, RAP, etc..
 [# Bilans et rendez-vous](#Bilans-et-rendez-vous)
 - Combler des trous de carrière
 - Modification et lecture et carrière
@@ -825,9 +825,9 @@ Attention certaines entreprise ne veulent pas l'utiliser afin de ne pas surcharg
 - Cette façon de communiquer permet de créer un **climat de confiance** avec votre interlocuteur. Ainsi, il se sent libre de s'exprimer comme il l'entend, sans jugement de votre part.
 
 ### Ne pas interrompre son interlocuteur
-- La première étape de l'écoute bienveillante consiste à **__laisser votre interlocuteur s'exprimer__** clairement et librement.  
+- La première étape de l'écoute bienveillante consiste à **__laisser votre interlocuteur s'exprimer__** clairement et librement
 - Cela suppose que vous ne devez pas l'interrompre. 
-- En effet, **__il nous arrive souvent de couper la parole à notre interlocuteur pour lui faire savoir que l'on a compris__**. Erreur à éviter absolument.  
+- En effet, **__il nous arrive souvent de couper la parole à notre interlocuteur pour lui faire savoir que l'on a compris__**. Erreur à éviter absolument
 - Vous devez aller également au-delà du message verbal, par exemple, interprétez les gestes comme les tics, **__le débit rapide ou le regard fuyant__**.
 
 ### S'adapter à sa personnalité
@@ -836,14 +836,14 @@ Attention certaines entreprise ne veulent pas l'utiliser afin de ne pas surcharg
 - Si la personne a reçu une mauvaise nouvelle, il ne vaut mieux pas dire "super" par exemple
 
 ### L'inciter à approfondir son propos
-- Lorsqu'il a fini de s'exprimer, essayez d'avoir davantage d'approfondissements de sa part. **__Questionnez votre interlocuteur__** si vous n'êtes pas certain.e d'avoir compris ses pensées.  
-- Faites tout de même attention à ne pas avancer des solutions ou des avis.  
+- Lorsqu'il a fini de s'exprimer, essayez d'avoir davantage d'approfondissements de sa part. **__Questionnez votre interlocuteur__** si vous n'êtes pas certain.e d'avoir compris ses pensées
+- Faites tout de même attention à ne pas avancer des solutions ou des avis
 - L'idée est de l'inviter à exposer avec précision ses points de vue.
 
 ### Faire preuve de disponibilité  
 - L'autre clé de l'écoute active c'est de **__savoir reformuler le message partagé__** par votre interlocuteur.
 - Cela permet de faire preuve de votre disponibilité, physiquement et temporellement, vis-à-vis de l'autre. __En reformulant ce qu'il a dit, vous démontrez que vous êtes en plein dans la conversation__.
-- Il en résulte une relation apaisée.  
+- Il en résulte une relation apaisée
 - Cela permet aussi de __**faire savoir que vous avez compris la demande**__ du client
 
 ### Être patient
@@ -861,17 +861,17 @@ Attention certaines entreprise ne veulent pas l'utiliser afin de ne pas surcharg
 le verbe « quitter » n’est pas des plus positifs, n’est-ce pas ?
 
 ### Personnaliser
-- Connaître vos clients sur le bout des doigts : C’est le fondement même de votre métier.  
-- Collectez les données essentielles concernant vos clients afin de mieux communiquer avec eux.  
-- Par exemple, lors de l’appel, **__utilisez leur nom pour établir efficacement le contact__** (__1 à 3 fois maximum__).  
-- Votre réussite repose sur vos échanges avec vos clients, ce qui contribue à valoriser l’image de votre entreprise.  
+- Connaître vos clients sur le bout des doigts : C’est le fondement même de votre métier
+- Collectez les données essentielles concernant vos clients afin de mieux communiquer avec eux
+- Par exemple, lors de l’appel, **__utilisez leur nom pour établir efficacement le contact__** (__1 à 3 fois maximum__)
+- Votre réussite repose sur vos échanges avec vos clients, ce qui contribue à valoriser l’image de votre entreprise
 - Une fois à l’aise avec votre CRM et votre interlocuteur, vous serez automatiquement mieux préparés pour gérer les appels difficiles et maîtriser votre stress au téléphone.
 
 ### Faire bonne impression
 - __**Assurez-vous d’utiliser un ton dynamique et courtois**__ !  
-- Tout réside dans votre posture et votre attitude.  
-- Commencez immédiatement par une présentation claire, ainsi que celle de votre société.  
-- __**Évitez le fameux « Allô »**__, qui refroidit immédiatement la conversation.  
+- Tout réside dans votre posture et votre attitude
+- Commencez immédiatement par une présentation claire, ainsi que celle de votre société
+- __**Évitez le fameux « Allô »**__, qui refroidit immédiatement la conversation
 - Concentrez-vous à 100 % sur votre appel et évitez de faire patienter votre interlocuteur.
 
 ### Réduire le temps d’attente et les appels non aboutis

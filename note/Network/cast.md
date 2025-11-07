@@ -3,8 +3,8 @@ Anycast est une technique d'adressage et de routage permettant de rediriger les 
 - [Wikipedia](https://fr.wikipedia.org/wiki/Anycast)
 
 # Multicast
-Le multicast est une forme de diffusion d'un émetteur vers un groupe de récepteurs.  
-Les termes « diffusion multipoint » ou « diffusion de groupe » sont également employés.  
+Le multicast est une forme de diffusion d'un émetteur vers un groupe de récepteurs
+Les termes « diffusion multipoint » ou « diffusion de groupe » sont également employés
 Les récepteurs intéressés par les messages adressés à ce groupe doivent s'inscrire à ce groupe.
 - [Wikipedia](https://fr.wikipedia.org/wiki/Multicast)
 
@@ -13,6 +13,6 @@ La notion de broadcast est employée par les techniciens en informatique et rés
 - [Wikipedia](https://fr.wikipedia.org/wiki/Broadcast_(informatique))
 
 # Unicast
-Le terme unicast définit une connexion réseau point à point, c'est-à-dire d'un hôte vers un autre hôte.  
+Le terme unicast définit une connexion réseau point à point, c'est-à-dire d'un hôte vers un autre hôte
 On entend par unicast le fait de communiquer entre deux ordinateurs identifiés chacun par une adresse réseau unique.
 - [Wikipedia](https://fr.wikipedia.org/wiki/Unicast)

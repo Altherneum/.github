@@ -112,7 +112,7 @@
   - `nslookup mydomain.com 1.1.1.1` Recherche les adresses IP du nom de domaine mydomain.com sur le serveur de noms DNS à 1.1.1.1
   - `nslookup 4.4.4.4` Recherche le nom de domaine de l’adresse IP 4.4.4.4 sur le serveur de noms DNS par défaut
   - `nslookup -type=AAAA mydomain.com` Retourne uniquement les types d’enregistrements IPv6
-  - `nslookup -debug -type=A+AAAA -nosearch -recurse mydomain.com 1.1.1.1` Vous pouvez combiner des options et des requêtes de type d’enregistrement de ressource.   
+  - `nslookup -debug -type=A+AAAA -nosearch -recurse mydomain.com 1.1.1.1` Vous pouvez combiner des options et des requêtes de type d’enregistrement de ressource 
 L’exemple active la sortie de débogage, récupère les adresses IPv6 et IPv4, ne tente pas d’utiliser le domaine de recherche, utilise la recherche récursive et utilise le serveur de recherche DNS 1.1.1.1
 
 ### FTP

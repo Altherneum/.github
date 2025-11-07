@@ -25,7 +25,7 @@ Par exemple : plusieurs mots `* rechercher`
 Par exemple : `site:example.com mots à rechercher`
 - `intitle:` Limite les résultats aux pages dont le titre contient une expression donnée  
 Par exemple : `intitle:Titre mots à rechercher`
-- `inurl:` Cherche le terme entre parentès dans l'URL de la page.  
+- `inurl:` Cherche le terme entre parentès dans l'URL de la page
 Par exemple : `inurl:/folder/mots_à_rechercher`
 - `filetype:` Limite les résultats à un type de fichier  
 Par exemple : `filetype:pdf mots à rechercher`
@@ -46,15 +46,15 @@ Recherche sur le site Github.com et des fichiers PDF
 
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
 
-- `Base de données Google Dorks`: Un répertoire exhaustif de requêtes de Google Dork préconstruites.  
+- `Base de données Google Dorks`: Un répertoire exhaustif de requêtes de Google Dork préconstruites
 ~~[gogedork.com](https://www.gogedork.com/)~~ DNS_PROBE_FINISHED_NXDOMAIN
 
-- `Shodan`: Une base de données ouverte pour appareils connectés à Internet, fréquemment utilisée avec Google Dorks pour étendre les résultats de recherche.  
+- `Shodan`: Une base de données ouverte pour appareils connectés à Internet, fréquemment utilisée avec Google Dorks pour étendre les résultats de recherche
 [shodan.io](https://www.shodan.io/)
 
 ![image Shodan](https://github.com/Altherneum/.github/blob/main/note/assets/images/Shodan.png?raw=true)
 
-- `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork.  
+- `Grapher`: Une outil pour visualiser et analyser les résultats de requête Google Dork
 ~~[github.com/qazbnm456/Grapher](https://github.com/qazbnm456/Grapher)~~ 404
 
 # Utilisation de manière éthique

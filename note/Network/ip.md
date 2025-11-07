@@ -32,7 +32,7 @@
 - IPv6 est l'aboutissement des travaux menés au sein de l'IETF au cours des années 1990 pour succéder à IPv4
 - Grâce à des adresses de 128 bits, IPv6 dispose d'un espace d'adressage bien plus important qu'IPv4 (plus de 340 sextillions)
 - Exemple d'adresse IPv6 : `2001:0db8:0000:85a3:0000:0000:ac1f:8001`
-- Il est permis d’omettre de un à trois chiffres zéros non significatifs dans chaque groupe de quatre chiffres hexadécimaux.  
+- Il est permis d’omettre de un à trois chiffres zéros non significatifs dans chaque groupe de quatre chiffres hexadécimaux
 Ainsi, l’adresse IPv6 ci-dessus est équivalente à la suivante : `2001:db8:0:85a3:0:0:ac1f:8001`
 - Une unique suite de un ou plusieurs groupes consécutifs de 16 bits tous nuls peut être omise  
 Ainsi, l’adresse IPv6 ci-dessus peut être abrégée en la suivante : `2001:db8:0:85a3::ac1f:8001`
@@ -160,7 +160,7 @@ Il existe différents types de passerelles :
 - un relais, souvent appelé routeur, une passerelle de niveau 3
 
 # MAC
-- Une adresse MAC, parfois nommée adresse physique, est un identifiant physique stocké dans une carte réseau ou une interface réseau similaire.  
+- Une adresse MAC, parfois nommée adresse physique, est un identifiant physique stocké dans une carte réseau ou une interface réseau similaire
 - Elle est unique au monde. Toutes les cartes réseau ont une adresse MAC, même celles contenues dans les PC et autres appareils connectés.
 - Lié au protocole ARP
 - Cet identifiant est codé sur 48 bits, soit 6 octets, et est habituellement présenté sous forme hexadécimale

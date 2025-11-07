@@ -1,5 +1,7 @@
 # Fonction
-En JavaScript, les fonctions sont un élément fondamental du langage. Elles permettent de définir des blocs de code réutilisables pour effectuer une tâche spécifique.  Elles sont essentielles pour la modularité et l'organisation du code.
+En JavaScript, les fonctions sont un élément fondamental du langage. Elles permettent de définir des blocs de code réutilisables pour effectuer une tâche spécifique
+
+Elles sont essentielles pour la modularité et l'organisation du code
 
 ## Définition d'une Fonction
 Une fonction est définie en utilisant le mot-clé `function`

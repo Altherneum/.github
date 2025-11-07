@@ -18,9 +18,9 @@ Logs Windows, peut-être fait sur un PC comme un domaine
   - Déployer des profils utilisateur itinérants : 
     - [learn.microsoft.com](https://learn.microsoft.com/fr-fr/windows-server/storage/folder-redirection/deploy-roaming-user-profiles)
     - [it-connect.fr](https://www.it-connect.fr/active-directory-creer-des-profils-itinerants-pour-ses-utilisateurs/)
-  - Le profil unique d'un utilisateur est automatiquement disponible lorsqu'il se connecte à n'importe quel ordinateur du réseau.  
+  - Le profil unique d'un utilisateur est automatiquement disponible lorsqu'il se connecte à n'importe quel ordinateur du réseau
     - Les utilisateurs n'ont pas besoin de créer un profil sur chaque ordinateur qu'ils utilisent sur un réseau.
-  - Lorsque l'ordinateur d'un utilisateur doit être remplacé, il peut l'être facilement car toutes les informations de profil de l'utilisateur sont conservées séparément sur le réseau, indépendamment d'un ordinateur individuel.  
+  - Lorsque l'ordinateur d'un utilisateur doit être remplacé, il peut l'être facilement car toutes les informations de profil de l'utilisateur sont conservées séparément sur le réseau, indépendamment d'un ordinateur individuel
     - Lorsque l'utilisateur se connecte au nouvel ordinateur pour la première fois, la copie serveur du profil de l'utilisateur est copiée sur le nouvel ordinateur
 
 ### Temporary / Temporaire

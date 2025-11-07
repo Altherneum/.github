@@ -1,12 +1,12 @@
 # Fork bomb
-La fork bomb est une forme d'attaque par déni de service contre un système informatique utilisant la fonction fork.  
+La fork bomb est une forme d'attaque par déni de service contre un système informatique utilisant la fonction fork
 
 Elle est basée sur la supposition que le nombre de programmes et de processus pouvant être exécutés simultanément sur un ordinateur est limité.
 
 ## Principe
-Une fork bomb fonctionne en créant un grand nombre de processus très rapidement, au moyen de la fonction fork, afin de saturer l'espace disponible dans la liste des processus gardée par le système d'exploitation.  
+Une fork bomb fonctionne en créant un grand nombre de processus très rapidement, au moyen de la fonction fork, afin de saturer l'espace disponible dans la liste des processus gardée par le système d'exploitation
 
-Si la table des processus se met à saturer, aucun nouveau programme ne peut démarrer tant qu'aucun autre ne termine.  
+Si la table des processus se met à saturer, aucun nouveau programme ne peut démarrer tant qu'aucun autre ne termine
 
 Même si cela arrive, il est peu probable qu'un programme utile démarre étant donné que les instances de la bombe attendent chacune d'occuper cet emplacement libre.
 

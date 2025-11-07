@@ -3,7 +3,7 @@
 
 ## Croisé
 ![câble croisé](https://github.com/Altherneum/.github/blob/main/note/assets/images/cables.jpg?raw=true)
-- Permet de relier deux récepteurs ensemble sans passer par un réseau interne.  
+- Permet de relier deux récepteurs ensemble sans passer par un réseau interne
 - Connecte deux dispositifs du même type pour communiquer ensemble, comme un ordinateur à un autre ordinateur, ou un commutateur à un autre commutateur.
 ## Droit
 ![câble droit](https://github.com/Altherneum/.github/blob/main/note/assets/images/cables-straight.jpg?raw=true)
