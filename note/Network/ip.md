@@ -1,4 +1,12 @@
-# Adresse réseau IP
+# Adresse IP
+- Une adresse IP (Internet Protocol) est un numéro d'identification unique attribué à chaque appareil connecté à un réseau informatique ou à Internet, permettant l'identification et la communication entre les dispositifs
+  - Elle fonctionne comme une adresse postale ou un numéro de téléphone pour les appareils, facilitant l'acheminement des paquets de données d'un émetteur à un destinataire sur le réseau
+- Les adresses IP sont généralement représentées sous deux formats principaux : 
+  - IPv4, qui utilise une notation décimale avec quatre nombres compris entre 0 et 255 séparés par des points (par exemple, 127.0.0.1)
+  - Et IPv6, qui utilise une notation hexadécimale plus longue pour offrir un espace d'adressage massivement plus vaste
+- Cette identification est essentielle pour le routage des données, car chaque paquet transmis contient l'adresse IP de l'émetteur et celle du destinataire
+
+## Adresse de réseau
 - L'adresse de réseau permet de savoir si 2 machines peuvent communiquer entre elles
 - Si ces 2 machines ont une adresse réseau identique, alors, elles appartiennent au même réseau local et elles peuvent communiquer via un switch
   - Si elles n'ont pas la même adresse réseau, le PC devra demander à sa passerelle (le routeur) de diriger le paquet vers un réseau pouvant connaitre cette IP
