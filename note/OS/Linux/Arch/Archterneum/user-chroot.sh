@@ -28,24 +28,27 @@ echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting Bottles" && yay -S --noconfirm --needed bottles
 echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
 echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
+
 ### Waydroid
-echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
+# echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
 ##### Docs : https://forum.garudalinux.org/t/ultimate-guide-to-install-waydroid-in-any-arch-based-distro-especially-garuda/15902 : https://medium.com/@tony.j.miri/android-on-linux-mint-with-waydroid-setup-guide-ff0ca8eab22
-echo $userpassword | sudo -S waydroid init -s GAPPS
+# echo $userpassword | sudo -S waydroid init -s GAPPS
 #### Start Waydroid
-echo $userpassword | sudo -S systemctl enable --now waydroid-container
-echo $userpassword | sudo -S waydroid container start
-waydroid session start
+# echo $userpassword | sudo -S systemctl enable --now waydroid-container
+# echo $userpassword | sudo -S waydroid container start
+# waydroid session start
 #### Full screen
-waydroid prop set persist.waydroid.width 750
-waydroid prop set persist.waydroid.height 950
+# waydroid prop set persist.waydroid.width 750
+# waydroid prop set persist.waydroid.height 950
 #### Start Waydroid
-waydroid session stop
-echo $userpassword | sudo -S waydroid container stop
+# waydroid session stop
+# echo $userpassword | sudo -S waydroid container stop
 ##### https://docs.waydro.id/faq/google-play-certification
+
 ### MC
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
+
 ### Emote launcher
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
