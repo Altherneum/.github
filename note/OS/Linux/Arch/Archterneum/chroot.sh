@@ -7,6 +7,7 @@ hostname=$5
 rootpassword=$6
 username=$7
 userpassword=$8
+device=$9
 
 # Timezone and Clock
 ln -sf /usr/share/zoneinfo$localtime /etc/localtime
@@ -132,7 +133,7 @@ echo "console-mode max" >> /boot/loader/loader.conf
 echo "LOADER" >> /boot/loader/loader.conf
 
 # LVM and encrypted root UUID
-UUIDcrypt=$(blkid -o value -s UUID /dev/sda2)
+UUIDcrypt=$(blkid -o value -s UUID /dev/"{$device}2")
 
 # Boot entry
 echo "title Arch Linux" > /boot/loader/entries/arch.conf
