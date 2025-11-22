@@ -64,7 +64,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 # Chroot
 curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/chroot.sh
 chmod +x /mnt/chroot.sh
-arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $rootpassword $username $userpassword
+arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $rootpassword $username $userpassword $device
 
 
 # User-Chroot
