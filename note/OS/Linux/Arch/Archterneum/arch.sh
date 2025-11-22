@@ -20,17 +20,17 @@ sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 pacman -Sy --noconfirm
 
 # Disques
-parted --script "${device}" -- mklabel gpt \
+parted --script "$device" -- mklabel gpt \
   mkpart ESP fat32 1Mib 1024MiB \
   set 1 esp on \
   mkpart primary 1024MiB 100%
 
 # Format Boot
-mkfs.fat -F32 "{$device}1"
+mkfs.fat -F32 "$device"p1
 
 # Cryptlvm
-echo $lvmpassword | cryptsetup --use-random luksFormat "{$device}2"
-echo $lvmpassword | cryptsetup luksOpen "{$device}2" cryptlvm
+echo $lvmpassword | cryptsetup --use-random luksFormat "$device"p2
+echo $lvmpassword | cryptsetup luksOpen "$device"p2 cryptlvm
 
 # Volume physique PV
 pvcreate /dev/mapper/cryptlvm
@@ -53,7 +53,7 @@ swapon /dev/vg0/swap
 # Mount root & home
 mount /dev/vg0/root /mnt
 mount --mkdir /dev/vg0/home /mnt/home
-mount --mkdir "{$device}1" /mnt/boot
+mount --mkdir "$device"p1 /mnt/boot
 
 # Install the base system
 pacstrap -K /mnt linux linux-firmware base base-devel nano terminus-font efibootmgr lvm2 cryptsetup networkmanager openssh os-prober dosfstools amd-ucode
