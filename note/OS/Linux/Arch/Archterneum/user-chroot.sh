@@ -184,8 +184,8 @@ echo ""
 # Or else do it auto on first launch, then delete script
 echo $userpassword | sudo -S pacman --noconfirm --needed -S cpio
 echo $userpassword | sudo -S echo "" ; hyprpm --force update
-echo $userpassword | sudo -S echo "" ; hyprpm --force add https://github.com/hyprwm/hyprland-plugins
-echo $userpassword | sudo -S echo "" ; hyprpm --force add https://github.com/virtcode/hypr-dynamic-cursors
+echo $userpassword | sudo -S echo "" ; yes | hyprpm --force add https://github.com/hyprwm/hyprland-plugins
+echo $userpassword | sudo -S echo "" ; yes | hyprpm --force add https://github.com/virtcode/hypr-dynamic-cursors
 echo $userpassword | sudo -S echo "" ; hyprpm --force enable hyprbars
 echo $userpassword | sudo -S echo "" ; hyprpm --force enable dynamic-cursors
 #
