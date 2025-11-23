@@ -59,7 +59,9 @@ sed -z 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nIn
 set rlim_fd_max  8192
 set rlim_fd_cur  8192
 
-# Installing softwares
+# Installing software## Update keyring for PGP
+pacman -Sy archlinux-keyring
+## Update system
 pacman -Syu --noconfirm
 ## OS
 pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
