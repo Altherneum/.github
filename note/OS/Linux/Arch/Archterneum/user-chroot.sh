@@ -122,16 +122,14 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/power_menu.xml https://raw
 ##### download theme
 mkdir -p ~/.themes/transparent/xfce-notify-4.0/
 echo $userpassword | sudo -S curl -o ~/.themes/transparent/xfce-notify-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/notifyd.css
-xfconf-query -c xfce4-notifyd -p /theme -s transparent
-xfconf-query -c xfce4-notifyd -p /notify-location -s bottom-center
+xfconf-query -c xfce4-notifyd --create -p /theme --type string -s "transparent"
+xfconf-query -c xfce4-notifyd --create -p /notify-location --type string -s "bottom-center"
 # xfce4-terminal
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s ""
 xfconf-query -c xfce4-terminal --create -p /color-use-theme --type bool -s "false"
 xfconf-query -c xfce4-terminal --create -p /color-cursor-use-default --type bool -s "true"
 xfconf-query -c xfce4-terminal --create -p /background-mode --type string -s "TERMINAL_BACKGROUND_TRANSPARENT"
 xfconf-query -c xfce4-terminal --create -p /background-darkness --type double -s "0.5"
-xfconf-query -c xfce4-terminal --create -p /run-custom-command --type bool -s "true"
-xfconf-query -c xfce4-terminal --create -p /custom-command --type string -s "fastfetch"
 xfconf-query -c xfce4-terminal --create -p /font-name --type string -s "Monospace 12"
 xfconf-query -c xfce4-terminal --create -p /font-use-system --type bool -s "false"
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s "#ffffff"
@@ -218,6 +216,9 @@ echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh
 echo "Clean installation"
 echo $userpassword | sudo -S pacman -Scc --noconfirm
 echo $userpassword | sudo -S yay -Scc --noconfirm
+
+# Reset /home/user/ owner to the user
+echo $userpassword | sudo -S chown -R $username:$username /home/$username
 
 # Exit user arch-chroot
 echo "Exit user arch-chroot"
