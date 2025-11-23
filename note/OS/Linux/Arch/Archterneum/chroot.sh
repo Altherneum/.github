@@ -66,6 +66,9 @@ pacman-key --populate archlinux
 pacman -Sy archlinux-keyring --noconfirm
 ## Update system
 pacman -Syu --noconfirm
+## .config
+sudo -u $username mkdir -p /home/$username/.config
+# or # chown $username:$username /home/$username/.config
 ## OS
 pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 ### Rofi
