@@ -95,10 +95,12 @@ pacman -S --needed --noconfirm wl-clipboard cliphist
 #### https://github.com/sentriz/cliphist?tab=readme-ov-file#picker-examples # cliphist to do list
 ### Other media
 pacman -S --needed --noconfirm obs-studio
-### Discord & Vencord
-curl -o /home/$username/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
-chmod +x /home/$username/pacman-vencord.hook
-/home/$username/pacman-vencord.hook arch
+### Discord
+pacman -S --needed --noconfirm discord
+#### Vencord
+# curl -o /home/$username/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
+# chmod +x /home/$username/pacman-vencord.hook
+# /home/$username/pacman-vencord.hook arch
 
 ## Steam
 pacman -S --needed --noconfirm steam

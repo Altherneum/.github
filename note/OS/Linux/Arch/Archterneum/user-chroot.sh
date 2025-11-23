@@ -204,7 +204,7 @@ echo ""
 echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-hyprpm.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-hyprpm.hook
 
 # Discord -> Vencord hook
-echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
+# echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
 echo $userpassword | sudo -S curl -o  /usr/share/libalpm/scripts/vencord.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vencord.sh
 echo $userpassword | sudo -S chmod +x /usr/share/libalpm/scripts/vencord.sh
 echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh
