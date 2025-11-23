@@ -43,7 +43,7 @@ sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /et
 
 # Sudo less
 sudo touch /etc/sudoers.d/$username
-sudo echo "$username ALL=(ALL) NOPASSWD: ALL" > sudo /etc/sudoers.d/$username
+sudo sh -c "echo '$username ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/$username"
 # sudoers file already include files in this directory
 
 # Pacman config
