@@ -60,7 +60,7 @@ set rlim_fd_max  8192
 set rlim_fd_cur  8192
 
 # Installing software## Update keyring for PGP
-pacman -Sy archlinux-keyring
+pacman -Sy archlinux-keyring --noconfirm
 ## Update system
 pacman -Syu --noconfirm
 ## OS
