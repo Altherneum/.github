@@ -78,7 +78,6 @@ button {
 #clock,
 #battery,
 #custom-emote,
-#custom-rofi,
 #disk,
 #backlight,
 #network,
@@ -130,6 +129,7 @@ button {
 
 #custom-rofi{
     padding: 0px 0px 0px 20px;
+    font-size: 30px;
 }
 
 #custom-power {
