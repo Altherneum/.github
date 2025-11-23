@@ -1,8 +1,8 @@
 # Variables
-device="/dev/sda"
-hostname="Arch"
-username="User"
-lvmpassword="BootPass123"
+device="/dev/nvme0n1"
+hostname="arch"
+username="admin"
+lvmpassword="LVMPassword123"
 userpassword="UserPass123"
 rootpassword="SuperPass123"
 localtime="/Europe/Paris"
