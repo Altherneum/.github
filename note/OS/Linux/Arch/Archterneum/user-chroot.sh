@@ -56,6 +56,7 @@ echo "Getting Emote" && yay -S --noconfirm --needed emote
 echo $userpassword | sudo -S mkdir -p /etc/sddm.conf.d
 echo $userpassword | sudo -S cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
 echo $userpassword | sudo -S curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/sddm.conf
+echo $userpassword | sudo -S sed -i 's/User=admin/User='$username'/' /etc/sddm.conf.d/sddm.conf
 
 # Hyperland configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr 
