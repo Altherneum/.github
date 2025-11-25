@@ -66,7 +66,6 @@ curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs
 chmod +x /mnt/chroot.sh
 arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $rootpassword $username $userpassword $device
 
-
 # User-Chroot
 echo "Run User chroot for software installation"
 # User software installation

@@ -99,6 +99,14 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/24.mp4 -L https:
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/25.mp4 -L https://motionbgs.com/dl/hd/2104
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/26.mp4 -L https://motionbgs.com/dl/hd/3123
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/27.mp4 -L https://motionbgs.com/dl/hd/2078
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/28.mp4 -L https://motionbgs.com/dl/hd/8778
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/29.mp4 -L https://motionbgs.com/dl/hd/8638
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/30.mp4 -L https://motionbgs.com/dl/hd/8445
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/31.mp4 -L https://motionbgs.com/dl/hd/5300
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/32.mp4 -L https://motionbgs.com/dl/hd/3277
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/33.mp4 -L https://motionbgs.com/dl/hd/8151
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/34.mp4 -L https://motionbgs.com/dl/hd/7644
+echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/35.mp4 -L https://motionbgs.com/dl/hd/7028
 
 # HyprIdle configuration
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
