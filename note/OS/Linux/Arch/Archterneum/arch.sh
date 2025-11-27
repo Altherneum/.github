@@ -9,8 +9,8 @@ localtime="/Europe/Paris"
 utflang="fr_FR.UTF-8"
 langkey="fr"
 fonttype="ter-v28b"
-bool=true
-if $bool; then
+makeapause=true
+if $makeapause; then
     sleepcmd='read -p "Press Enter to continue..."'
 else
     sleepcmd='echo "Starting !"'
