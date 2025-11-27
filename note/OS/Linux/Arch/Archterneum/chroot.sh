@@ -8,45 +8,66 @@ rootpassword=$6
 username=$7
 userpassword=$8
 device=$9
+sleepcmd=$10
 
 # Timezone and Clock
+echo "TimeZone and clock"
+eval "$cmd"
 ln -sf /usr/share/zoneinfo$localtime /etc/localtime
 hwclock --systohc
 
 # Console Settings
+echo "Console Keymap & font"
+eval "$cmd"
 echo "KEYMAP=$langkey" > /etc/vconsole.conf
 echo "FONT=$fonttype" >> /etc/vconsole.conf
 
 # Locale
+echo "Locale"
+eval "$cmd"
 echo "$utflang UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=$utflang" > /etc/locale.conf
 
 # Computer & user
 ## Hostname
+echo "Hostname"
+eval "$cmd"
 echo "$hostname" > /etc/hostname
 
 ## Root Password
+echo "Root Password"
+eval "$cmd"
 echo "root:$rootpassword" | chpasswd
 
 ## Create User
+echo "User Creation"
+eval "$cmd"
 useradd -m -s /bin/bash "$username"
 echo "$username:$userpassword" | chpasswd
 
 ## Add the user to sudoers file
+echo "Adding to sudoers"
+eval "$cmd"
 usermod -aG wheel "$username"
 ## Add the user to input group
 usermod -aG input "$username"
 
 ## Uncomment wheel's group line
+echo "Adding to wheels group"
+eval "$cmd"
 sed -i 's/^[[:space:]]*# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
 # Sudo less
+echo "Adding to sudoless"
+eval "$cmd"
 sudo touch /etc/sudoers.d/$username
 sudo sh -c "echo '$username ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/$username"
 # sudoers file already include files in this directory
 
 # Pacman config
+echo "Pacman configuration"
+eval "$cmd"
 ## Add colors
 sed -i 's/^#Color/Color/' /etc/pacman.conf
 ## Add pacman Parallel Downloads
@@ -55,22 +76,35 @@ sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 sed -z 's/#\[multilib\]\n#Include = \/etc\/pacman.d\/mirrorlist/\[multilib\]\nInclude = \/etc\/pacman.d\/mirrorlist/' -i /etc/pacman.conf
 
 # https://community.unix.com/t/18-mar-2012-1403-209-general-error-socket-file-descriptor-exceeds-limit-4096-4096/306717/2
-# Update the per process limit for descriptors to avoid waybar crash
+# Waybar fix
+## Update the per process limit for descriptors to avoid waybar crash
+echo "Waybar fix"
+eval "$cmd"
 set rlim_fd_max  8192
 set rlim_fd_cur  8192
 
 # Installing software
 ## Update keyring for PGP
+echo "PGP keyring update"
+eval "$cmd"
 pacman-key --init
 pacman-key --populate archlinux
 pacman -Sy archlinux-keyring --noconfirm
 ## Update system
+echo "Pacman update -Syu"
+eval "$cmd"
 pacman -Syu --noconfirm
 ## .config
+echo "Creating user ~/.config"
+eval "$cmd"
 sudo -u $username mkdir -p /home/$username/.config
 ## OS
+echo "Downloading SoftWare"
+eval "$cmd"
 pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 ### Rofi
+echo "Rofi"
+eval "$cmd"
 pacman -S --needed --noconfirm rofi rofi-calc
 #### requiered for rofi plugin click close
 pacman -S --needed --noconfirm slurp jq
@@ -78,44 +112,72 @@ mkdir -p /home/$username/.config/rofi
 curl -o /home/$username/.config/rofi/rofi-slurp-monitor.sh -L https://raw.githubusercontent.com/ilivetruth/rofi-wayland-click-to-close/refs/heads/main/rofi-slurp-monitor.sh
 chmod +x /home/$username/.config/rofi/rofi-slurp-monitor.sh
 ### Language stack
+echo "Java & Go"
+eval "$cmd"
 pacman -S --needed --noconfirm  jdk21-openjdk go
 ### Enable SDDM
+echo "Enabling SDDM"
+eval "$cmd"
 systemctl enable sddm
 ### Sound system
+echo "Downloading soundSystem"
+eval "$cmd"
 pacman -S --needed --noconfirm pipewire wireplumber
 pacman -S --needed --noconfirm cava # Sound visualizer
 pacman -S --needed --noconfirm vlc
 pacman -S --needed --noconfirm pavucontrol
 ## Media
 ### Screen shots
+echo "Downloading ScreenShot software"
+eval "$cmd"
 pacman -S --needed --noconfirm grim slurp
 pacman -S --needed --noconfirm hyprshot
 ### Images
 pacman -S --needed --noconfirm gimp
 ### clipboard
+echo "Downloading ClipBoard SoftWare"
+eval "$cmd"
 pacman -S --needed --noconfirm wl-clipboard cliphist
 #### https://github.com/sentriz/cliphist?tab=readme-ov-file#picker-examples # cliphist to do list
 ### Other media
+echo "Downloading OBS SoftWare"
+eval "$cmd"
 pacman -S --needed --noconfirm obs-studio
 ### Discord
+echo "Downloading Discord SoftWare"
+eval "$cmd"
 pacman -S --needed --noconfirm discord
 #### Vencord
+# echo "Vencord Hook"
+# eval "$cmd"
 # curl -o /home/$username/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
 # chmod +x /home/$username/pacman-vencord.hook
 # /home/$username/pacman-vencord.hook arch
 
 ## Steam
+echo "Downloading Steam"
+eval "$cmd"
 pacman -S --needed --noconfirm steam
 sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPosition     "TopRight"/' /home/$username/.steam/steam/resource/styles/steam.styles
 ## System
+echo "Downloading Terminal, File Explorer and manual"
+eval "$cmd"
 pacman -S --needed --noconfirm xfce4 nautilus man
+echo "Downloading fonts"
+eval "$cmd"
 pacman -S --needed --noconfirm otf-font-awesome noto-fonts-emoji
 pacman -S --needed --noconfirm $(pacman -Sgq nerd-fonts)
 fc-cache # reload cache of fonts
+echo "Downloading Git & KeepassXC"
+eval "$cmd"
 pacman -S --needed --noconfirm git ufw keepassxc
 ### Other software
+echo "Downloading BTop/HTop & FastFetch"
+eval "$cmd"
 pacman -S --needed --noconfirm btop fastfetch htop
 ## Video drivers
+echo "Downloading Video Drivers"
+eval "$cmd"
 ### xf86
 pacman -S --needed --noconfirm xf86-video-amdgpu
 ### Mesa
@@ -124,9 +186,13 @@ pacman -S --needed --noconfirm mesa lib32-mesa libva-mesa-driver lib32-libva-mes
 pacman -S --needed --noconfirm amdvlk lib32-amdvlk
 pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
 #### Display VGA & 3D env
+echo "Displaying each VGA & 3D env"
+eval "$cmd"
 lspci -k | grep -A 3 -E "(VGA|3D)"
 
 # mkinitcpio
+echo "MKInitCPIO"
+eval "$cmd"
 # more /etc/mkinitcpio.conf
 sed -i 's/^HOOKS=.*/HOOKS=(base udev keyboard autodetect microcode modconf kms keymap lvm2 consolefont block encrypt filesystems fsck)/' /etc/mkinitcpio.conf
 sed -i 's/MODULES=.*/MODULES=(amdgpu radeon)/' /etc/mkinitcpio.conf # sudo sed -i 's/MODULES=($$.*$$)/MODULES=(amdgpu radeon \1)/' /etc/mkinitcpio.conf # if modules are not empty to append to it first it the row
@@ -134,18 +200,26 @@ sed -i 's/MODULES=.*/MODULES=(amdgpu radeon)/' /etc/mkinitcpio.conf # sudo sed -
 mkinitcpio -P
 
 # systemd-boot installation
+echo "BootCTL install"
+eval "$cmd"
 bootctl install
 
 # systemd-boot loader configuration
+echo "BootLoader configuration"
+eval "$cmd"
 echo "default arch" > /boot/loader/loader.conf
 echo "timeout 5" >> /boot/loader/loader.conf
 echo "console-mode max" >> /boot/loader/loader.conf
 echo "LOADER" >> /boot/loader/loader.conf
 
 # LVM and encrypted root UUID
+echo "Setting LVM UUID"
+eval "$cmd"
 UUIDcrypt=$(blkid -o value -s UUID "$device"p2)
 
 # Boot entry
+echo "BootLoader entry"
+eval "$cmd"
 echo "title Arch Linux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /amd-ucode.img" >> /boot/loader/entries/arch.conf
@@ -153,10 +227,14 @@ echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 echo "options cryptdevice=UUID=${UUIDcrypt}:lvm:allow-discards resume=/dev/vg0/swap root=/dev/vg0/root rw" >> /boot/loader/entries/arch.conf
 
 # Show desktop script
+echo "ShowDesktop script"
+eval "$cmd"
 curl -o /home/$username/show_desktop.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/show_desktop.sh
 chmod +x /home/$username/show_desktop.sh
 
 # Fan control
+echo "FanControl"
+eval "$cmd"
 ## Script
 curl -o /home/$username/gpu_scan.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/get_hwmon_data.sh
 sudo chmod +x /home/$username/gpu_scan.sh
@@ -178,23 +256,34 @@ echo "MAXPWM=$hwmon/pwm1=255" >> /etc/fancontrol
 systemctl enable fancontrol
 
 # Network setup
+## Starting network
+echo "Network Setup"
+eval "$cmd"
 systemctl enable systemd-networkd
 systemctl enable systemd-resolved
 systemctl enable NetworkManager
 systemctl enable sshd
 
+## Setting /etc/hosts
+echo "Settings /etc/hosts"
+eval "$cmd"
 echo "127.0.0.1    localhost" > /etc/hosts
 echo "::1          localhost" >> /etc/hosts
 echo "127.0.1.1    $hostname.localdomain    $hostname" >> /etc/hosts
 
 # Verify bootctl
 echo "BootCTL list"
+eval "$cmd"
 bootctl list
 
 # Set PS1
+echo "Setting PS1"
+eval "$cmd"
 echo "PS1='\n\[\e[1m\]\[\e[0m\] \[\e[1;2;4m\]\D{%a %H %b %Y}\[\e[0m\]    \[\e[1m\]󰅐\[\e[0m\] \[\e[1m\]\t\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[2m\]\u\[\e[0m\]@\[\e[2m\]\H\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[1m\]\w\n\[\e[0m\] \[\e[1;2;4m\]History\[\e[0m\] \[\e[2m\]n°\[\e[1m\]\!\[\e[0m\] \[\e[1;2m\]=[\[\e[0;1;5m\]\$\[\e[25;2m\]]>\[\e[0m\] '" >> /root/.bashrc
 
 # Exit chroot
+echo "Leaving Chroot"
+eval "$cmd"
 echo "Installation and basic configuration complete. exiting chroot"
 exit
 
