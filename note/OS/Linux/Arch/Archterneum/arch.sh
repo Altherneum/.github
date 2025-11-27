@@ -18,7 +18,7 @@ fi
 
 # Pacman config
 echo "Creating pacman config"
-eval "$cmd"
+eval "$sleepcmd"
 ## Add colors
 sed -i 's/^#Color/Color/' /etc/pacman.conf
 ## Add pacman Parallel Downloads
@@ -26,12 +26,12 @@ sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
 
 # Update
 echo "pacman -Sy"
-eval "$cmd"
+eval "$sleepcmd"
 pacman -Sy --noconfirm
 
 # Disques
 echo "Making parted"
-eval "$cmd"
+eval "$sleepcmd"
 parted --script "$device" -- mklabel gpt \
   mkpart ESP fat32 1Mib 1024MiB \
   set 1 esp on \
@@ -39,18 +39,18 @@ parted --script "$device" -- mklabel gpt \
 
 # Format Boot
 echo "Formating"
-eval "$cmd"
+eval "$sleepcmd"
 mkfs.fat -F32 "$device"p1
 
 # Cryptlvm
 echo "LVM"
-eval "$cmd"
+eval "$sleepcmd"
 echo $lvmpassword | cryptsetup --use-random luksFormat "$device"p2
 echo $lvmpassword | cryptsetup luksOpen "$device"p2 cryptlvm
 
 # Volume physique PV
 echo "Creating LVM volume"
-eval "$cmd"
+eval "$sleepcmd"
 pvcreate /dev/mapper/cryptlvm
 # Volume de groupe VG
 vgcreate vg0 /dev/mapper/cryptlvm
@@ -62,43 +62,43 @@ lvreduce --size -256M vg0/home # garde de l'espace vide
 
 # Format crypted mounted partition
 echo "Formating LVM volume"
-eval "$cmd"
+eval "$sleepcmd"
 mkfs.ext4 /dev/vg0/root
 mkfs.ext4 /dev/vg0/home
 
 # Format swap memory and mount it
 echo "Mounting LVM swap"
-eval "$cmd"
+eval "$sleepcmd"
 mkswap /dev/vg0/swap
 swapon /dev/vg0/swap
 
 # Mount root & home
 echo "Mounting LVM volume"
-eval "$cmd"
+eval "$sleepcmd"
 mount /dev/vg0/root /mnt
 mount --mkdir /dev/vg0/home /mnt/home
 mount --mkdir "$device"p1 /mnt/boot
 
 # Install the base system
 echo "Pacstrap"
-eval "$cmd"
+eval "$sleepcmd"
 pacstrap -K /mnt linux linux-firmware base base-devel nano terminus-font efibootmgr lvm2 cryptsetup networkmanager openssh os-prober dosfstools amd-ucode
 
 # Get the fstab
 echo "GenFSTab"
-eval "$cmd"
+eval "$sleepcmd"
 genfstab -U /mnt > /mnt/etc/fstab
 
 # Chroot
 echo "chroot.sh"
-eval "$cmd"
+eval "$sleepcmd"
 curl -o /mnt/chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/chroot.sh
 chmod +x /mnt/chroot.sh
 arch-chroot /mnt /chroot.sh $localtime $langkey $fonttype $utflang $hostname $rootpassword $username $userpassword $device $sleepcmd
 
 # User-Chroot
 echo "user-chroot.sh"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Run User chroot for software installation"
 # User software installation
 curl -o /mnt/user-chroot.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/user-chroot.sh
@@ -107,6 +107,6 @@ arch-chroot -u $username /mnt /user-chroot.sh $username $userpassword $sleepcmd
 echo "exited user-chroot"
 
 echo "Finishing"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Remove the CD/USB ISO of arch"
 echo "Reboot into your new installation of Arch"

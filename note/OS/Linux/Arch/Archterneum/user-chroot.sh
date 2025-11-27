@@ -9,14 +9,14 @@ sleepcmd=$3
 
 # Yay installation
 echo "Installing Yay"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Yay installation" && mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -s --noconfirm
 yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
 echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 
 # Install with yay
 echo "Installing Software with Yay"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Getting PipeWire" && yay -S --noconfirm --needed pipewire
 ## Enable PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
@@ -27,7 +27,7 @@ echo "Getting Soundux" && yay -S --noconfirm --needed soundux
 
 ## Downloading software from yay
 echo "Downloading Browsers, Proton, Pipes, MPVPaper, & Bottle"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Zen-browser" && yay -S --noconfirm --needed zen-browser-bin
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
@@ -37,7 +37,7 @@ echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 
 ### Waydroid
 # echo "Downloading WayDroid"
-# eval "$cmd"
+# eval "$sleepcmd"
 # echo "Getting Waydroid" && yay -S --noconfirm --needed waydroid
 #### Initialize Waydroid ROM
 ##### Docs : https://forum.garudalinux.org/t/ultimate-guide-to-install-waydroid-in-any-arch-based-distro-especially-garuda/15902 : https://medium.com/@tony.j.miri/android-on-linux-mint-with-waydroid-setup-guide-ff0ca8eab22
@@ -56,17 +56,17 @@ echo "Getting Pipes.sh" && yay -S --noconfirm --needed pipes.sh
 
 ### MC
 echo "Downloading MC launcher"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
 
 ### Emote launcher
 echo "Downloading Emote launcher"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Getting Emote" && yay -S --noconfirm --needed emote
 
 # SDDM configuration
 echo "SDDM configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p /etc/sddm.conf.d
 echo $userpassword | sudo -S cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
 echo $userpassword | sudo -S curl -o /etc/sddm.conf.d/sddm.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/sddm.conf
@@ -74,25 +74,25 @@ echo $userpassword | sudo -S sed -i 's/User=admin/User='$username'/' /etc/sddm.c
 
 # Hyperland configuration
 echo "Hyprland configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr 
 echo $userpassword | sudo -S cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
 echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland.conf
 
 # Hyprlock configuration
 echo "HyprLock configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
 echo $userpassword | sudo -S cp /usr/share/hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf.default
 echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprlock.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprlock.conf
 ## MpvPaper script
 echo "MPVPaper Script"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S curl -o ~/.config/hypr/mpvpaper.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/mpv.sh
 echo $userpassword | sudo -S chmod +x ~/.config/hypr/mpvpaper.sh
 ## MpvPaper Video background list
 echo "Downloading MPVPaper Video"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr/backgrounds/
 # Get each video
 echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/1.mp4 https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/backgrounds/neon-galaxy-bedroom.1920x1080.mp4
@@ -133,14 +133,14 @@ echo $userpassword | sudo -S curl -o ~/.config/hypr/backgrounds/35.mp4 -L https:
 
 # HyprIdle configuration
 echo "HyprIDLE configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr
 echo $userpassword | sudo -S cp /usr/share/hypr/hypridle.conf ~/.config/hypr/hypridle.conf.default
 echo $userpassword | sudo -S curl -o ~/.config/hypr/hypridle.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hypridle.conf
 
 # Waybar
 echo "WayBar configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/waybar
 echo $userpassword | sudo -S cp /etc/xdg/waybar/config.jsonc ~/.config/waybar/config.jsonc.default
 echo $userpassword | sudo -S curl -o ~/.config/waybar/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/waybar.conf
@@ -155,7 +155,7 @@ echo $userpassword | sudo -S curl -o ~/.config/waybar/power_menu.xml https://raw
 
 # xfce4-notifyd
 echo "XFCE-4 notifyD configuration"
-eval "$cmd"
+eval "$sleepcmd"
 ##### download theme
 mkdir -p ~/.themes/transparent/xfce-notify-4.0/
 echo $userpassword | sudo -S curl -o ~/.themes/transparent/xfce-notify-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/notifyd.css
@@ -163,7 +163,7 @@ xfconf-query -c xfce4-notifyd --create -p /theme --type string -s "transparent"
 xfconf-query -c xfce4-notifyd --create -p /notify-location --type string -s "bottom-center"
 # xfce4-terminal
 echo "XFCE-4 terminal configuration"
-eval "$cmd"
+eval "$sleepcmd"
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s ""
 xfconf-query -c xfce4-terminal --create -p /color-use-theme --type bool -s "false"
 xfconf-query -c xfce4-terminal --create -p /color-cursor-use-default --type bool -s "true"
@@ -182,24 +182,24 @@ echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.
 
 ## pavucontrol theme
 echo "PavuControl Theme"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S cp -a /home/'$username'/.config/gtk-3.0/ /home/'$username'/.config/gtk-4.0/ 
 
 # fastfetch
 ## fastfetch on terminal open
 echo "FastFetch & user PS1"
-eval "$cmd"
+eval "$sleepcmd"
 echo "fastfetch" >> ~/.bashrc
 echo "PS1='\n\[\e[1m\]\[\e[0m\] \[\e[1;2;4m\]\D{%a %H %b %Y}\[\e[0m\]    \[\e[1m\]󰅐\[\e[0m\] \[\e[1m\]\t\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[2m\]\u\[\e[0m\]@\[\e[2m\]\H\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[1m\]\w\n\[\e[0m\] \[\e[1;2;4m\]History\[\e[0m\] \[\e[2m\]n°\[\e[1m\]\!\[\e[0m\] \[\e[1;2m\]=[\[\e[0;1;5m\]\$\[\e[25;2m\]]>\[\e[0m\] '" >> ~/.bashrc
 ## fastfetch configuration file
 echo "FastFetch configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/fastfetch
 echo $userpassword | sudo -S curl -o ~/.config/fastfetch/config.jsonc https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/fastfetch.jsonc
 
 # Rofi theme
 echo "Rofi configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.local/share/rofi/themes/
 echo $userpassword | sudo -S curl -o ~/.local/share/rofi/themes/theme.rasi https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/rofi.rasi
 # Rofi cmd script
@@ -215,19 +215,19 @@ echo $userpassword | sudo -S chmod +x ~/.config/rofi/start.sh
 
 # XDG theme config
 echo "XDG theme configuration"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
 echo $userpassword | sudo -S curl -o ~/.config/xdg-desktop-portal/hyprland-portals.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland-portals.conf
 
 # Keyboard layout
 echo "KeyBoard Layout"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | localectl set-x11-keymap fr
 echo $userpassword | localectl set-keymap fr
 
 # Hyprbars
 echo "HyprPM plugins"
-eval "$cmd"
+eval "$sleepcmd"
 # Work in auto ??? test before leaving chroot
 echo ""
 echo "hypr plugins"
@@ -253,12 +253,12 @@ echo ""
 
 # hyprpm hook
 # echo "HyprPM hook"
-# eval "$cmd"
+# eval "$sleepcmd"
 # echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-hyprpm.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-hyprpm.hook
 
 # Discord -> Vencord hook
 echo "Vencord installation"
-eval "$cmd"
+eval "$sleepcmd"
 # echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
 echo $userpassword | sudo -S curl -o  /usr/share/libalpm/scripts/vencord.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vencord.sh
 echo $userpassword | sudo -S chmod +x /usr/share/libalpm/scripts/vencord.sh
@@ -271,18 +271,18 @@ echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh
 
 # Clean install
 echo "Clean installation"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S pacman -Scc --noconfirm
 echo $userpassword | sudo -S yay -Scc --noconfirm
 
 # Reset /home/user/ owner to the user
 echo "Setting RWX ~/ to user"
-eval "$cmd"
+eval "$sleepcmd"
 echo $userpassword | sudo -S chown -R $username:$username /home/$username
 
 # Exit user arch-chroot
 echo "Ending user-chroot.sh"
-eval "$cmd"
+eval "$sleepcmd"
 echo "Exit user arch-chroot"
 exit
 echo "exited"
