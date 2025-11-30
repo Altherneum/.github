@@ -1,10 +1,3 @@
-# Fiches
-- [README](https://doc.Altherneum.fr/github/readme.html)
-- [Contribuer](https://doc.Altherneum.fr/github/contribuer.html)
-- [Support](https://doc.Altherneum.fr/github/support.html)
-- [Securitée](https://doc.Altherneum.fr/github/security.html)
-- [License](https://doc.Altherneum.fr/github/license.html)
-
 # Code de conduite *Contributor Covenant*
 ## Notre engagement
 

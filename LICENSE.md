@@ -2,13 +2,6 @@
 [Apache License](apache.org/licenses/)
 Version 2.0, January 2004
 
-# Fiches
-- [README](https://doc.Altherneum.fr/github/readme.html)
-- [Contribuer](https://doc.Altherneum.fr/github/contribuer.html)
-- [Support](https://doc.Altherneum.fr/github/support.html)
-- [Securitée](https://doc.Altherneum.fr/github/security.html)
-- [Code de conduite](https://doc.Altherneum.fr/github/code_of_conduct.html)
-
 ## 1. Definitions.
 
       "License" shall mean the terms and conditions for use, reproduction,
