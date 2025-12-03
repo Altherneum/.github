@@ -1,5 +1,9 @@
 username=$(logname)
 
+## Cleaning cache & config
+sudo rm -R /home/$username/.config/discord/
+sudo rm -R /home/$username/.config/Vencord/
+
 ## Downloading Vencord
 echo "Downloading Vencord"
 sudo curl -o /home/$username/vencord -L https://github.com/Vencord/Installer/releases/latest/download/VencordInstallerCli-linux
