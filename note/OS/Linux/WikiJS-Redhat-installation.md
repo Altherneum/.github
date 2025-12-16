@@ -16,6 +16,7 @@
 * [Gestion du domaine](#gestion-du-domaine)
 * [Règle d'administration](#règle-dadministration)
 
+[Script d'installation sur RedHat](https://raw.githubusercontent.com/Altherneum/.github/main/note/OS/Linux/WikiJS-Redhat-installation.sh)
 ## Qu'est ce que WikiJS ?
 
 * Wiki.js est un moteur wiki fonctionnant sur Node.js et écrit en JavaScript
