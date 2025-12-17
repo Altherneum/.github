@@ -103,3 +103,4 @@
   - [MySQL](https://www.mysql.com/fr/)
   - [Fail2Ban](https://doc.ubuntu-fr.org/fail2ban)
   - [Systemd](https://doc.ubuntu-fr.org/systemd)
+  - [SendMail](https://sendmail.org)
