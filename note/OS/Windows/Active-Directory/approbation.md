@@ -4,14 +4,14 @@
 - IP `192.168.10.12`
 - Gate : `192.168.10.254`
 - Changer le nom du PC
-- Suffix DNS : `M2I.FORMATION.LAN`
+- Suffix DNS : `ALTHERNEUM.FORMATION.LAN`
 ## DNS
 - Ajouter le rôle `DNS`
   - Puis `Outils`, `DNS`
 - `Zone de recherche directe`, `Clique droit`, `Nouvelle zone`
   - `Zone principale`
   - `Directe`
-  - `M2I.FORMATION.LAN`
+  - `ALTHERNEUM.FORMATION.LAN`
 - `Clique droit` sur le serveur `Win22-SRV-4`
   - `Propriétés`
   - Onglet `Redirecteurs`
@@ -22,12 +22,12 @@
 - `Ajouter un nouveau domaine à une forêt existante`
   - Sélectionner le type du domaine : `Domaine enfant`
   - Nom du domaine parent : `FORMATION.LAN`
-  - Nouveau nom du domaine : `M2I`
+  - Nouveau nom du domaine : `Altherneum`
   - Connexion avec le compte : `FORMATION\Administrateur`, `Respons11`
-  - NetBIOS : `M2I`
+  - NetBIOS : `Altherneum`
 ## Domaines et approbations
 - Outils : `Domaines et approbations Active Directory`
-  - `M2I.FORMATION.LAN` est visible
+  - `ALTHERNEUM.FORMATION.LAN` est visible
 
 # AD enfant 2
 - `Win22-SRV-5`

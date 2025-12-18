@@ -64,7 +64,7 @@ Permet de se connecter à l'appareil et envoyer des commandes
 Doit être filtré / traité !
 ```
 username admin password SuperUser11
-ip domain-name m2i.labo
+ip domain-name altherneum.labo
 crypto key generate rsa modulus 1024
 line vty 0 4
 login local

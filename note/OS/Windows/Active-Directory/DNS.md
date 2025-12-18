@@ -195,9 +195,9 @@ Aliases:  www.FORMATION.LAN
 - Dans `Zones de recherche directes`
 - Clique droit sur `FORMATION.LAN`
 - `Nouvelle délégation`
-- `Domaine délégué` : `m2i`
-- `Nom de domaine pleinement qualifié` : `m2i.FORMATION.LAN`
-- Ajouter Server `SRV03.m2i.FORMATION.LAN` ⚠ N'existe pas encore ⚠ Faux exemple
+- `Domaine délégué` : `Altherneum`
+- `Nom de domaine pleinement qualifié` : `ALTHERNEUM.FORMATION.LAN`
+- Ajouter Server `SRV03.ALTHERNEUM.FORMATION.LAN` ⚠ N'existe pas encore ⚠ Faux exemple
 - Ajouter son IP `192.168.10.20` ⚠ N'existe pas encore ⚠ Faux exemple
 
 ## Redirecteurs

@@ -151,7 +151,7 @@ Les volumes rendent persistant les données
 - `docker run -d --name [NOM] --volume [VOLUME]:[MOUNTING_PATH] [IMAGE]`
 ### Partager un dossier
 - `docker run -d --name [NOM] --volume [PATH]:[MOUNTING_PATH] [IMAGE]`
-  - `docker run -d --name bind-vol-container --volume /tmp/m2i:/mnt/volumes/testvolume httpd` Partage un dossier linux
+  - `docker run -d --name bind-vol-container --volume /tmp/Altherneum:/mnt/volumes/testvolume httpd` Partage un dossier linux
 - `docker run -d --name [NOM] --volume "[PATH]":[MOUNTING_PATH] [IMAGE]`
   - `docker run -d --name test-vol-bind --volume "C:/Docker-Files":/mnt/volumes httpd` Partage un dossier Windows
 

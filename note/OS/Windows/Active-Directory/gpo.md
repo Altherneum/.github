@@ -78,7 +78,7 @@
 - `Utilisateur`, `Stratégie`, `Modèle d'administration`, `Bureau`, `Bureau`
 - `Papier peint du bureau`
 - Option `Activé`
-- Nom du papier peint `\\Win22-srv-1\FDE\m2i.jpg`
+- Nom du papier peint `\\Win22-srv-1\FDE\Altherneum.jpg`
 - Style du papier peint : `étendue`
 
 ## Stratégie de fond d'écran de verouillage
@@ -89,7 +89,7 @@
 - `Panneau de configuration`
 - `Personnalisation`
 - `Forcer une image de l'écran de verrouillage et d'ouverture de session par défaut spécifique`
-- `Chemin d'accès de l'image de l'écran de verrouillage` : `\\Win22-srv-1\FDE\m2i.jpg`
+- `Chemin d'accès de l'image de l'écran de verrouillage` : `\\Win22-srv-1\FDE\Altherneum.jpg`
 
 ## Stratégie de fond vérouillé
 - Sur la même stratégie

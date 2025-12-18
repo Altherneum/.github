@@ -96,7 +96,7 @@ Plage d'adresses IPv4
 - `ALT` + `F1` : Pour aller dans le shell
 
 - `esxcli network ip dns search list` Pour lister les domaines DNS
-- `esxcli network ip dns search remove -d m2iformation.local` Afin de retirer le domaine DNS par défaut
+- `esxcli network ip dns search remove -d altherneumformation.local` Afin de retirer le domaine DNS par défaut
 - `esxcli system hostname set --host=ESXi9A`
 - `esxcli system hostname set --fqdn=ESXi9A.form9.loc`
 
@@ -339,7 +339,7 @@ Faire la même chose sur le second ESXi
 
 #### DNS à ajouter test
 - TEST, pas sur si c'est la cause du soucis d'installation étape 2
-- Carte réseau M2I
+- Carte réseau Altherneum
   - DNS :
     - 10.210.17.153
     - 10.210.40.11

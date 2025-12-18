@@ -94,7 +94,7 @@ exit
 
 
 username admin password SuperUser11
-ip domain-name m2i.labo
+ip domain-name altherneum.labo
 crypto key generate rsa general-keys modulus 1024
 line vty 0 4
 login local
@@ -177,7 +177,7 @@ exit
 
 
 username admin password SuperUser11
-ip domain-name m2i.labo
+ip domain-name altherneum.labo
 crypto key generate rsa general-keys modulus 1024
 line vty 0 4
 login local
@@ -232,7 +232,7 @@ switchport mode trunk
 
 
 username admin password SuperUser11
-ip domain-name m2i.labo
+ip domain-name altherneum.labo
 crypto key generate rsa general-keys modulus 1024
 line vty 0 4
 login local
@@ -287,7 +287,7 @@ switchport mode trunk
 
 
 username admin password SuperUser11
-ip domain-name m2i.labo
+ip domain-name altherneum.labo
 crypto key generate rsa general-keys modulus 1024
 line vty 0 4
 login local

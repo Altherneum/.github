@@ -12,7 +12,7 @@
 
 # Test Approbation de domaine
 ## Utilisateurs et ordinateurs Active Directory Domaine enfant distant approbation
-- Créer une zone `@_M2I` similaire à la façon de faire sur le serveur AD principale
+- Créer une zone `@_Altherneum` similaire à la façon de faire sur le serveur AD principale
 
 ### Partage
 - Créer dossier

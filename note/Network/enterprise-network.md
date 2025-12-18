@@ -128,7 +128,7 @@ Réseau d'apprentissage (Création d'un domaine, DNS, DHCP, ...)
 - Win 22 Server `datacenter user experience`
 - Carte réseau sur : `Serveurs`
 
-- Gère le domaine enfant : `M2I.FORMATION.LAN`
+- Gère le domaine enfant : `ALTHERNEUM.FORMATION.LAN`
 
 - IP : `192.169.10.12`
 - Masque : `255.255.255.0`
@@ -343,7 +343,7 @@ Carte Serveurs
 -  -  -  - `RH`, (`\\Win22-srv-1\rh`)
 -  -  -  - `IT`, (`\\Win22-srv-1\it`)
 -  -  - `GPL/` (`\\Win22-srv-1\gpl`) (Chrome, Firefox, Putty, VLC, ...)
--  -  - `FDE/` (`\\Win22-srv-1\fde`) (Logo M2I)
+-  -  - `FDE/` (`\\Win22-srv-1\fde`) (Logo Altherneum)
 
 #### ETUDE.LOCAL
 - `@_ETUDE`
