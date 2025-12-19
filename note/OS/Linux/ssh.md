@@ -59,8 +59,32 @@ systemctl restart sshd
 #### Via SystemCTL
 - `Systemctl restart ssh`
 
+## Emplacement des clés SSH et leurs formats
+### Private Key (Clef privée)
+- 🐧**Linux**/🍎**macOS**: `~/.ssh/id_ed25519` (or `id_rsa`, `id_ecdsa`)
+- 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_ed25519`
+- **Format**:
+  - Commence avec : `-----BEGIN OPENSSH PRIVATE KEY-----`, 
+  - Contient uniquement de l'ASCII,
+  - Et fini par `-----END OPENSSH PRIVATE KEY-----`. 
+  - Doit **__être gardé secret et jamais partagé__**.
+
+### Public Key (Clef publique)
+- 🐧**Linux** / 🍎**macOS**: `~/.ssh/id_ed25519.pub`
+- 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_ed25519.pub`
+- **Format**: 
+  - Une ligne commencant par `ssh-ed25519 AAAAAAAAAA...`
+    - Ou `ssh-rsa AAAAAAAAAA...`
+  - Suivi d'un long texte, et un commentaire optionnelle (ex `user@host`).
+  - **__Peut être partagé__**.
+
+### Emplacements des clefs
+- **Private key**: Reste sur votre **ordinateur local** (Linux / Windows) dans le dossier `.ssh`.
+- **Public key**: Rest sur votre **serveur distant** sur le fichier `~/.ssh/authorized_keys`
+  - (une clef par ligne).
+
 ## Créer une clé SSH
-### Créer la clé
+### Créer la clé SSH avec SSH-KeyGen
 - `ssh-keygen -t rsa -b 4096`
 - Le serveur va répondre `Generating public/private rsa key pair.`
 #### Choisir l'emplacement de stockage
@@ -113,6 +137,7 @@ Si vous avez crée la clé sur le serveur et non pas sur votre machine
 - Copier la clé `.pub` vers votre machine
 - Exemple : `scp user@server:/home/<user>/.ssh/id_rsa C:\Users\<username>\.ssh\<id_rsa_key_name>`
   - Exemple du cours : `scp admin@altherneum.fr:/home/admin/.ssh/id_rsa C:\Users\user\.ssh\id_rsa`
+  - Depuis `admin@arch` : `scp admin@altherneum.fr:/home/admin/.ssh/id_rsa /home/admin/.ssh/`
 
 #### Résultat de l'extraction de la clé
 ```
@@ -122,7 +147,9 @@ id_rsa.pub           100%  760     8.7KB/s   00:00
 
 ### Tester la clé
 Vérifier si la commande est valide :
-- `ssh -i ~/.ssh/[KEY_NAME] root@[HOST]`
+- `ssh -i ~/.ssh/[KEY_NAME] [USER]@[HOST]`
+  - `ssh -i /.ssh/id_rsa admin@altherneum.fr`
+  - Ou directement `ssh admin@altherneum.fr` si les clefs sont bien placés
 
 ### Bloquer les connections sans clé
 - Voire la chapitre [# Fichier de configuration SSH](#Fichier-de-configuration-SSH)
@@ -136,6 +163,18 @@ Enter passphrase for key 'C:\Users\user/.ssh/id_rsa':
 - Valider avec la passPhrase
 
 ### Ajouter la clé privé sur Windows
+#### Ajouter une clef privé sur Windows avec durée
+On Windows with OpenSSH, use ssh-add in PowerShell or Command Prompt to add your private key with a time limit:
+
+ssh-add -t 8h $env:USERPROFILE\.ssh\id_ed25519
+ 
+
+Replace 8h with 30m, 1d, etc. The key stays cached until the timeout or reboot.
+
+Ensure the ssh-agent service is running:
+
+Start-Service ssh-agent
+#### Ajouter une clef sur Windows sans durée
 - Lancer SSH en administrateur : `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service`
 - Ajouter la clé privé : `ssh-add "C:\Users\<username>\.ssh\<id_rsa_key_name>"`
   - Exemple du cours : `ssh-add "C:\Users\user\.ssh\id_rsa"`
@@ -153,6 +192,63 @@ ssh admin@altherneum.fr
 🐧      OS              GNU/Linux
 ...
 ```
+
+### Ajouter la clé privé sur Linux
+#### Lancer l'agent SSH-add
+eval $(ssh-agent)
+#### Ajouter une clef sur Linux avec durée
+To set a time-limited SSH key in ssh-agent, use:
+
+ssh-add -t <time> ~/.ssh/id_ed25519
+ 
+
+Replace <time> with:
+
+    30m → 30 minutes
+
+    8h → 8 hours
+
+    7d → 7 days
+
+Example:
+
+ssh-add -t 8h ~/.ssh/id_ed25519
+#### Ajouter une clef sur Linux sans durée
+By default, ssh-agent caches keys indefinitely ("forever") unless a lifetime is explicitly set.
+
+To make a key persist for life (indefinitely), just use:
+
+ssh-add ~/.ssh/id_ed25519
+ 
+
+—without the -t option.
+
+This keeps the key cached for the entire session, including across reboots on some systems (like macOS with Keychain or Linux with keychain or gnome-keyring).
+
+For true persistence across reboots, combine with a startup script:
+
+    Linux (with keychain):
+
+    keychain ~/.ssh/id_ed25519
+    source ~/.keychain/$HOSTNAME-sh
+     
+
+macOS: Keys are often retained by default via Keychain.
+
+ssh-agent cache key forever
+
+## Retirer une clef SSH
+To remove it:
+
+ssh-add -d "C:\Users\<username>\.ssh\<id_rsa_key_name>"
+
+Or clear all:
+
+ssh-add -D
+
+Linux & Windows !
+
+> This command does not delete the private key files—only removes them from the agent’s memory
 
 ## Se connecter
 ### Se connecter en SSH
