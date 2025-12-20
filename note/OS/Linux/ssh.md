@@ -61,8 +61,8 @@ systemctl restart sshd
 
 ## Emplacement des clés SSH et leurs formats
 ### Private Key (Clef privée)
-- 🐧**Linux**/🍎**macOS**: `~/.ssh/id_ed25519` (or `id_rsa`, `id_ecdsa`)
-- 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_ed25519`
+- 🐧**Linux**/🍎**macOS**: `~/.ssh/id_rsa` (or `id_rsa`, `id_ecdsa`)
+- 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_rsa`
 - **Format**:
   - Commence avec : `-----BEGIN OPENSSH PRIVATE KEY-----`, 
   - Contient uniquement de l'ASCII,
@@ -70,10 +70,10 @@ systemctl restart sshd
   - Doit **__être gardé secret et jamais partagé__**.
 
 ### Public Key (Clef publique)
-- 🐧**Linux** / 🍎**macOS**: `~/.ssh/id_ed25519.pub`
-- 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_ed25519.pub`
+- 🐧**Linux** / 🍎**macOS**: `~/.ssh/id_rsa.pub`
+- 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_rsa.pub`
 - **Format**: 
-  - Une ligne commencant par `ssh-ed25519 AAAAAAAAAA...`
+  - Une ligne commencant par `ssh-rsa AAAAAAAAAA...`
     - Ou `ssh-rsa AAAAAAAAAA...`
   - Suivi d'un long texte, et un commentaire optionnelle (ex `user@host`).
   - **__Peut être partagé__**.
@@ -123,17 +123,17 @@ The key's randomart image is:
 ```
 
 ### Transférer la clé sur le serveur
-- Si vous avez crée la clée sur votre PC et non pas sur le serveur
+- **Si vous avez crée la clée sur votre PC** et non pas sur le serveur
 - `scp C:/Users/<username>/.ssh/<id_rsa_file_name>.pub admin@altherneum.fr:/home/<username>/.ssh/<id_rsa_file_name>.pub`
   - Exemple du cours : `scp C:/Users/user/.ssh/id_rsa.pub admin@altherneum.fr:/home/admin/.ssh/id_rsa.pub`
 
 ### Déplacer la clé .pub dans les authorized_keys
-Afin de permettre au serveur de lire la clé publique, et donc de confirmer notre clé privé lors de la connexion, il faut la déplacer dans la clé publique de l'utilisateur dans son profil sur le Serveur :
+Afin de **permettre au serveur de lire la clé publique**, et donc de **confirmer notre clé privé** lors de la connexion, il faut la déplacer dans la clé publique de l'utilisateur **dans son profil sur le Serveur** :
 - `cat /home/<username>/.ssh/<id_rsa_file_name>.pub >> /home/<username>/.ssh/authorized_keys`
   - Exemple du cours `cat /home/admin/.ssh/id_rsa.pub >> /home/admin/.ssh/authorized_keys`
 
 ### Extraire la clé privé
-Si vous avez crée la clé sur le serveur et non pas sur votre machine
+Si **vous avez crée la clé sur le serveur** et non pas sur votre machine
 - Copier la clé `.pub` vers votre machine
 - Exemple : `scp user@server:/home/<user>/.ssh/id_rsa C:\Users\<username>\.ssh\<id_rsa_key_name>`
   - Exemple du cours : `scp admin@altherneum.fr:/home/admin/.ssh/id_rsa C:\Users\user\.ssh\id_rsa`
@@ -164,18 +164,12 @@ Enter passphrase for key 'C:\Users\user/.ssh/id_rsa':
 
 ### Ajouter la clé privé sur Windows
 #### Ajouter une clef privé sur Windows avec durée
-On Windows with OpenSSH, use ssh-add in PowerShell or Command Prompt to add your private key with a time limit:
-
-ssh-add -t 8h $env:USERPROFILE\.ssh\id_ed25519
- 
-
-Replace 8h with 30m, 1d, etc. The key stays cached until the timeout or reboot.
-
-Ensure the ssh-agent service is running:
-
-Start-Service ssh-agent
+Sur Windows avec OpenSSH, utilisez `ssh-add` sur PowerShell ou dans un terminal pour ajouter votre clef privée avec une durée de temps :
+- Lancez le service SSH via `Start-Service ssh-agent`
+- `ssh-add -t 8h $env:USERPROFILE\.ssh\id_rsa` Ajoutez la clef "`id_rsa`" pour 8h
+  - Remplacez `8h` avec `30m`, `1d`, etc. La clef reste en cache jusqu'à la fin de la durée ou le redémarrage.
 #### Ajouter une clef sur Windows sans durée
-- Lancer SSH en administrateur : `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service`
+- Lancer SSH en administrateur : `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service` pour lancer SSH automatiquement
 - Ajouter la clé privé : `ssh-add "C:\Users\<username>\.ssh\<id_rsa_key_name>"`
   - Exemple du cours : `ssh-add "C:\Users\user\.ssh\id_rsa"`
 - Valider avec la passPhrase
@@ -195,60 +189,39 @@ ssh admin@altherneum.fr
 
 ### Ajouter la clé privé sur Linux
 #### Lancer l'agent SSH-add
-eval $(ssh-agent)
+Pour lancer l'agent SSH sur PC : `eval $(ssh-agent)`
 #### Ajouter une clef sur Linux avec durée
-To set a time-limited SSH key in ssh-agent, use:
-
-ssh-add -t <time> ~/.ssh/id_ed25519
- 
-
-Replace <time> with:
-
-    30m → 30 minutes
-
-    8h → 8 hours
-
-    7d → 7 days
-
-Example:
-
-ssh-add -t 8h ~/.ssh/id_ed25519
+Pour ajouter une clef sur Linux avec durée :
+- `ssh-add -t <time> ~/.ssh/id_rsa`
+  - Remplacez `8h` avec `30m`, `1d`, etc. La clef reste en cache jusqu'à la fin de la durée ou le redémarrage.
+##### Example d'ajout de clef SSH sur Linux avec durée:
+`ssh-add -t 8h ~/.ssh/id_rsa`
 #### Ajouter une clef sur Linux sans durée
-By default, ssh-agent caches keys indefinitely ("forever") unless a lifetime is explicitly set.
+Par défaut, `ssh-agent` conserve les clés sans durée sauf si une drée est précisé.
 
-To make a key persist for life (indefinitely), just use:
+Pour rendre une clée persistante utilisez :
+- `ssh-add ~/.ssh/id_rsa` without the `-t` option.
+  - This keeps the key cached for the entire session, including across reboots on some systems (like macOS with Keychain or Linux with keychain or gnome-keyring).
 
-ssh-add ~/.ssh/id_ed25519
- 
+Pour une persistance entre les redémarrage, combinez avec un script de démarrage (Avec Linux keychain) :
+```
+keychain ~/.ssh/id_rsa
+source ~/.keychain/$HOSTNAME-sh
+```
 
-—without the -t option.
-
-This keeps the key cached for the entire session, including across reboots on some systems (like macOS with Keychain or Linux with keychain or gnome-keyring).
-
-For true persistence across reboots, combine with a startup script:
-
-    Linux (with keychain):
-
-    keychain ~/.ssh/id_ed25519
-    source ~/.keychain/$HOSTNAME-sh
-     
-
-macOS: Keys are often retained by default via Keychain.
-
-ssh-agent cache key forever
+##### Note pour macOS
+Les clés sont retenues par défaut via KeyChain.
+`ssh-agent` conserve en cache les clés à vie
 
 ## Retirer une clef SSH
-To remove it:
+Pour retirer une clef SSH
+- Windows : `ssh-add -d "C:\Users\<username>\.ssh\<id_rsa_key_name>"`
+- Linux : `ssh-add -d /home/admin/.ssh/id_rsa`
+### Retirer toutes les clés SSH
+- `ssh-add -D`
+  - Linux & Windows !
 
-ssh-add -d "C:\Users\<username>\.ssh\<id_rsa_key_name>"
-
-Or clear all:
-
-ssh-add -D
-
-Linux & Windows !
-
-> This command does not delete the private key files—only removes them from the agent’s memory
+> Cette commande ne supprime pas le fichier de la clé, cela supprime uniquement la clé de la mémoire de l'agent SSH
 
 ## Se connecter
 ### Se connecter en SSH
