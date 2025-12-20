@@ -61,7 +61,7 @@ systemctl restart sshd
 
 ## Emplacement des clés SSH et leurs formats
 ### Private Key (Clef privée)
-- 🐧**Linux**/🍎**macOS**: `~/.ssh/id_rsa` (or `id_rsa`, `id_ecdsa`)
+- 🐧**Linux**, 🍎**macOS**: `~/.ssh/id_rsa` (or `id_rsa`, `id_ecdsa`)
 - 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_rsa`
 - **Format**:
   - Commence avec : `-----BEGIN OPENSSH PRIVATE KEY-----`, 
@@ -70,7 +70,7 @@ systemctl restart sshd
   - Doit **__être gardé secret et jamais partagé__**.
 
 ### Public Key (Clef publique)
-- 🐧**Linux** / 🍎**macOS**: `~/.ssh/id_rsa.pub`
+- 🐧**Linux**, 🍎**macOS**: `~/.ssh/id_rsa.pub`
 - 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_rsa.pub`
 - **Format**: 
   - Une ligne commencant par `ssh-rsa AAAAAAAAAA...`
