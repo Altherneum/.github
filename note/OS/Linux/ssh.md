@@ -201,7 +201,7 @@ Par défaut, `ssh-agent` conserve les clés sans durée sauf si une drée est pr
 
 Pour rendre une clée persistante utilisez :
 - `ssh-add ~/.ssh/id_rsa` without the `-t` option.
-  - This keeps the key cached for the entire session, including across reboots on some systems (like macOS with Keychain or Linux with keychain or gnome-keyring).
+  - Cela garde la clé en cache pour la session entière, et entre les redémarrage sur certains systèmes comme macOS, ou avec KeyChain/Gnome-KeyRing sur linux
 
 Pour une persistance entre les redémarrage, combinez avec un script de démarrage (Avec Linux keychain) :
 ```
