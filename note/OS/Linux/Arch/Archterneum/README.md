@@ -8,9 +8,7 @@
   - Lien alternatif : `curl -Lo /arch.sh https://arch.altherneum.fr`
 
 ### Liste de liens DNS :
-- `arch.altherneum.fr`
-- `archterneum.altherneum.fr`
-- `git.arch.altherneum.fr`
+- [https://doc.altherneum.fr/github/server#Arch](https://doc.altherneum.fr/github/server#Arch)
 
 ### Rendre le script exécutable
 `chmod +x /arch.sh`
