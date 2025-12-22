@@ -101,7 +101,7 @@ sudo -u $username mkdir -p /home/$username/.config
 ## OS
 echo "Downloading SoftWare"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar  networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar bind networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 ### Rofi
 echo "Rofi"
 eval "$sleepcmd"
@@ -114,7 +114,7 @@ chmod +x /home/$username/.config/rofi/rofi-slurp-monitor.sh
 ### Language stack
 echo "Java & Go"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm  jdk21-openjdk go
+pacman -S --needed --noconfirm jdk21-openjdk go
 ### Enable SDDM
 echo "Enabling SDDM"
 eval "$sleepcmd"
