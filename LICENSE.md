@@ -179,7 +179,7 @@ Version 2.0, January 2004
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-# Copyright 2024 by [doc.Altherneum.fr](https://doc.Altherneum.fr)
+# Copyright 2026 by [Altherneum.fr](https://altherneum.fr)
 
 # Licensed under the Apache License
 Version 2.0 (the "License")

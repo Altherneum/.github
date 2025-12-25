@@ -40,6 +40,11 @@
 - [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)
 - [mc.Altherneum.fr](https://mc.Altherneum.fr)
 - [github.com/Altherneum](https://github.com/Altherneum)
+  - [git.altherneum.fr](https://git.altherneum.fr)
+- [KeeWeb.altherneum.fr](https://keeweb.altherneum.fr)
+- [root@altherneum.fr](mailto:root@altherneum.fr)
+  - [contact@altherneum.fr](mailto:contact@altherneum.fr)
+  - [admin@altherneum.fr](mailto:admin@altherneum.fr)
 
 # Repo
 - **Altherneum.github.io** : [Page](https://Altherneum.github.io) | [Page DNS](https://doc.Altherneum.fr) | [Repo](https://github.com/Altherneum/Altherneum.github.io)
