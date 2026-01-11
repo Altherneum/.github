@@ -17,7 +17,7 @@
 `rm ~/.bash_history` ou via `echo "" > ~/.bash_history`
 ### Lancer une commande en vidant l'historique
 - `history -c && <CMD>`
-  - exemple `history -c && clear && fastfetch` Purge l'historique et le terminal, puis affiche fastfetch
+  - exemple `echo "" > ~/.bash_history && history -c && clear && fastfetch` Purge l'historique et le terminal, puis affiche fastfetch
 ## Voire une entrée de l'historique
 ## Voire les dernières entrées de l'historique
 - `history 3` Affiche les 3 derniers résultats
