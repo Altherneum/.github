@@ -281,6 +281,13 @@ echo "Setting PS1"
 eval "$sleepcmd"
 echo "PS1='\n\[\e[1m\]\[\e[0m\] \[\e[1;2;4m\]\D{%a %H %b %Y}\[\e[0m\]    \[\e[1m\]󰅐\[\e[0m\] \[\e[1m\]\t\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[2m\]\u\[\e[0m\]@\[\e[2m\]\H\[\e[0m\]    \[\e[1m\]\[\e[0m\] \[\e[1m\]\w\n\[\e[0m\] \[\e[1;2;4m\]History\[\e[0m\] \[\e[2m\]n°\[\e[1m\]\!\[\e[0m\] \[\e[1;2m\]=[\[\e[0;1;5m\]\$\[\e[25;2m\]]>\[\e[0m\] '" >> /root/.bashrc
 
+# KeePassXC ssh-agent configuration
+## Enable SSH-agent
+systemctl --user enable --now ssh-agent.socket
+## Create environement.d & add socket to $SSH_AUTH_SOCK
+mkdir -p ~/.config/environment.d
+echo 'SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket' > ~/.config/environment.d/ssh-agent.conf
+
 # Exit chroot
 echo "Leaving Chroot"
 eval "$sleepcmd"
