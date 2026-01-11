@@ -1,5 +1,5 @@
 # Historique
-- `history` ou sur le fichier `~/.history`
+- `history`
 ```
  History n°3 =[$]> history 
     1  history --help
