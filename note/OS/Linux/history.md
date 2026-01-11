@@ -6,10 +6,15 @@
     2  history
     3  echo "History"
 ```
+- Fichier : `~/.bash_history`
+  - (`/home/<USER>/.bash_history`)
 ## Voire une commande de l'historique
 - `history | grep <CMD>`
 ## Vider l'hitorique
-- `history -c`
+### Vider l'historique du terminal
+- `history -c` Vide l'historique jusqu'à la prochaine session
+### Vider définitivement l'historique
+`rm ~/.bash_history` ou via `"" > ~/.bash_history`
 ### Lancer une commande en vidant l'historique
 - `history -c && <CMD>`
   - exemple `history -c && clear && fastfetch` Purge l'historique et le terminal, puis affiche fastfetch
