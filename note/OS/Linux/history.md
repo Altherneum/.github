@@ -14,7 +14,7 @@
 ### Vider l'historique du terminal
 - `history -c` Vide l'historique jusqu'à la prochaine session
 ### Vider définitivement l'historique
-`rm ~/.bash_history` ou via `"" > ~/.bash_history`
+`rm ~/.bash_history` ou via `echo "" > ~/.bash_history`
 ### Lancer une commande en vidant l'historique
 - `history -c && <CMD>`
   - exemple `history -c && clear && fastfetch` Purge l'historique et le terminal, puis affiche fastfetch
