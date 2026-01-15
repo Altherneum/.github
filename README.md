@@ -35,6 +35,8 @@
 
 # Liens & utilité
 - [Note](https://github.com/Altherneum/.github/tree/main/note) - Utilisé sur [doc.Altherneum.fr/cours/](https://doc.Altherneum.fr)...
+  - [Arch Linux](https://github.com/Altherneum/.github/tree/main/note/OS/Linux/Arch)
+  - [Archterneum](https://github.com/Altherneum/.github/tree/main/note/OS/Linux/Arch/Archterneum)
 - [Profile Github](https://github.com/Altherneum/.github/tree/main/profile)
 
 # Github
