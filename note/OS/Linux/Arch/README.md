@@ -66,7 +66,7 @@ Voire [README](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arc
 ## Drivers
 - GPU & CPU : AMD
 ## Images et vidéos
-![Arch video background](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/videos/arch-background-video.mp4)
+[Arch video background](https://www.youtube.com/watch?v=B40xhtICzBY)
 ### SSH x KeePass
 #### SSH with KeePass locked
 ![Arch SSH](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-keepass-ssh.png)
