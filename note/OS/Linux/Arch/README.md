@@ -65,6 +65,16 @@ Pour installer l'ISO sur une clef USB
 Voire [README](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/Archterneum/README.md)
 ## Drivers
 - GPU & CPU : AMD
-
-# Installation manuelle
-Voire README : [Arch-install.md](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arch/Arch-install.md)
+## Images et vidéos
+![Arch video background](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/videos/arch-background-video.mp4)
+### SSH x KeePass
+#### SSH with KeePass locked
+![Arch SSH](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-keepass-ssh.png)
+#### SSH auto login with KeePass unlocked
+![Arch SSH unlocked](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-keepass-ssh-unlock.png)
+### Rofi
+![Arch rofi](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-rofi.png)
+### Vencord
+![Arch vencord](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-vencord.png)
+### Waybar
+![Arch waybar](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-waybar.png)
