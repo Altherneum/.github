@@ -241,10 +241,10 @@ sudo chmod +x /home/$username/gpu_scan.sh
 ## parsing data
 touch /etc/fancontrol
 echo "INTERVAL=10" >> /etc/fancontrol
-gpuid=$(/home/$username/gpu_scan GPU device)
-hwmon=$(/home/$username/gpu_scan GPU hwmon)
+gpuid=$(/home/$username/gpu_scan.sh GPU device)
+hwmon=$(/home/$username/gpu_scan.sh GPU hwmon)
 echo "DEVPATH=$hwmon=$gpuid" >> /etc/fancontrol
-gpuid=$(/home/$username/gpu_scan GPU device)
+gpuid=$(/home/$username/gpu_scan.sh GPU device)
 echo "DEVNAME=$hwmon=amdgpu" >> /etc/fancontrol
 echo "FCTEMPS=$hwmon/pwm1=$hwmon/temp1_input" >> /etc/fancontrol
 echo "FCFANS= $hwmon/pwm1=" >> /etc/fancontrol
