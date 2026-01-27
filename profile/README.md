@@ -86,17 +86,18 @@
 
 # Libs externes
 - CMS : @[Azuriom](https://github.com/Azuriom) | [Repo externe](https://github.com/Azuriom/Azuriom)
-- ~~Giscus : @[Giscus](https://github.com/Giscus) | [Repo externe](https://github.com/Giscus/Giscus)~~
+- ~~Giscus~~ : @[Giscus](https://github.com/Giscus) | [Repo externe](https://github.com/Giscus/Giscus)
 - Discord bot : @[Javacord](https://github.com/Javacord) | [Repo externe](https://github.com/Javacord/Javacord)
 - PaperMC : [Site](https://papermc.io/software/paper) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Paper)
-  - ~~Waterfall : [Site](https://papermc.io/software/waterfall) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)~~
+  - ~~Waterfall~~ : [Site](https://papermc.io/software/waterfall) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)
   - Velocity : [Site](https://papermc.io/software/velocity) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Velocity)
 - Maven : [Site](https://maven.apache.org/)
-- ~~VSCode : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)~~
-- Code-Server : [Site](https://coder.com/) | [Repo externe](https://github.com/coder/code-server)
+- ~~VSCode~~ : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)
+  - Code-Server : [Site](https://coder.com/) | [Repo externe](https://github.com/coder/code-server)
 - Git : [Site](https://git-scm.com/) | [Repo externe](https://github.com/git/git)
-- Github : @[Github](https://github.com/github) | [Desktop](https://desktop.github.com) | [Git](https://git-scm.com/)
-- Github pages : [README](https://github.com/github/welcome-to-github-and-pages) | [Site](https://pages.github.com/) | [Doc](https://docs.github.com/fr/pages) | [Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) | [404 custom](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+  - ~~Github~~ : @[Github](https://github.com/github) | [Desktop](https://desktop.github.com)
+    - Github pages : [README](https://github.com/github/welcome-to-github-and-pages) | [Site](https://pages.github.com/) | [Doc](https://docs.github.com/fr/pages) | [Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) | [404 custom](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+  - Forgejo : @[Github](https://github.com/forgejo) | [Site](https://forgejo.org/) | [Doc](https://forgejo.org/docs/latest/) | [Runner](https://forgejo.org/docs/next/admin/actions/runner-installation/)
 - Ubuntu : [Site](https://ubuntu.com/) | [Repo](https://github.com/ubuntu) | [Help](https://help.ubuntu.com/) | [Ask](https://askubuntu.com/) | [Packages](https://packages.ubuntu.com/)
   - [SSH](https://doc.ubuntu-fr.org/ssh)
   - [UFW](https://doc.ubuntu-fr.org/ufw)
