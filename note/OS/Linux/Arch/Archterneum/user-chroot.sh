@@ -10,9 +10,9 @@ sleepcmd=$3
 # Yay installation
 echo "Installing Yay"
 eval "$sleepcmd"
-echo "Yay installation" && mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -s --noconfirm
-yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
-echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
+echo "Yay installation" && mkdir ~/git-clone && cd ~/git-clone && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
+# yaytar=$(find ~/git-clone/yay/ -name 'yay-*.pkg.tar.zst' | grep -v 'debug')
+# echo $userpassword | sudo -S pacman -U --noconfirm --needed $yaytar
 
 # Install with yay
 echo "Installing Software with Yay"
