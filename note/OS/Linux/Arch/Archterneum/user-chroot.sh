@@ -30,6 +30,7 @@ echo "Downloading Browsers, Proton, Pipes, MPVPaper, & Bottle"
 eval "$sleepcmd"
 echo "Getting Brave" && yay -S --noconfirm --needed brave-bin
 echo "Getting Zen-browser" && yay -S --noconfirm --needed zen-browser-bin
+echo "Getting LM-Studio" && yay -S --noconfirm --needed lmstudio
 echo "Getting Proton UP QT" && yay -S --noconfirm --needed protonup-qt
 echo "Getting Bottles" && yay -S --noconfirm --needed bottles
 echo "Getting MPVPaper" && yay -S --noconfirm --needed mpvpaper
