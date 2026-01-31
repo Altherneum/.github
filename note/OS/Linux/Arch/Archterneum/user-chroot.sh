@@ -175,10 +175,15 @@ xfconf-query -c xfce4-terminal --create -p /font-use-system --type bool -s "fals
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s "#ffffff"
 xfconf-query -c xfce4-terminal --create -p /color-background --type string -s "#000000000000"
 xfconf-query -c xfce4-terminal --create -p /misc-cursor-shape --type string -s "TERMINAL_CURSOR_SHAPE_IBEAM"
-## xfce4-terminal spacing
-echo $userpassword | sudo -S touch ~/.config/gtk-3.0/gtk.css
+## GTK theme
+echo $userpassword | sudo -S touch /home/$username/.config/gtk-3.0/gtk.css
+### xfce4-terminal spacing
 echo $userpassword | sudo -S sh -c 'echo "VteTerminal, vte-terminal {" >> /home/'$username'/.config/gtk-3.0/gtk.css'
 echo $userpassword | sudo -S sh -c 'echo "    padding: 25px;" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+### Thunar
+echo $userpassword | sudo -S sh -c 'echo ".thunar, .thunar * {" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+echo $userpassword | sudo -S sh -c 'echo "    background-color: transparent;" >> /home/'$username'/.config/gtk-3.0/gtk.css'
 echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.0/gtk.css'
 
 ## pavucontrol theme
