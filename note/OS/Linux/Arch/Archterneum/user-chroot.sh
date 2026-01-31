@@ -175,16 +175,10 @@ xfconf-query -c xfce4-terminal --create -p /font-use-system --type bool -s "fals
 xfconf-query -c xfce4-terminal --create -p /color-foreground --type string -s "#ffffff"
 xfconf-query -c xfce4-terminal --create -p /color-background --type string -s "#000000000000"
 xfconf-query -c xfce4-terminal --create -p /misc-cursor-shape --type string -s "TERMINAL_CURSOR_SHAPE_IBEAM"
-## GTK theme
-echo $userpassword | sudo -S touch /home/$username/.config/gtk-3.0/gtk.css
-### xfce4-terminal spacing
-echo $userpassword | sudo -S sh -c 'echo "VteTerminal, vte-terminal {" >> /home/'$username'/.config/gtk-3.0/gtk.css'
-echo $userpassword | sudo -S sh -c 'echo "    padding: 25px;" >> /home/'$username'/.config/gtk-3.0/gtk.css'
-echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.0/gtk.css'
-### Thunar
-echo $userpassword | sudo -S sh -c 'echo ".thunar, .thunar * {" >> /home/'$username'/.config/gtk-3.0/gtk.css'
-echo $userpassword | sudo -S sh -c 'echo "    background-color: transparent;" >> /home/'$username'/.config/gtk-3.0/gtk.css'
-echo $userpassword | sudo -S sh -c 'echo "}" >> /home/'$username'/.config/gtk-3.0/gtk.css'
+## GTK transparent theme ; Thunar, Pavucontrol
+echo $userpassword | sudo -S curl -o /home/$username/.config/gtk-3.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/gtk-3.css
+echo $userpassword | sudo -S curl -o /home/$username/.config/gtk-4.0/gtk.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/gtk-4.css
+
 
 ## pavucontrol theme
 echo "PavuControl Theme"
