@@ -16,7 +16,7 @@ configuration {
     display-cmd: "🖥️ CMD ";
     display-clipboard: "📋️ Clipboard ";
     display-keys: "🎹 Keys ";
-    display-keys: "😀 Emoji ";
+    display-emoji: "😀 Emoji ";
 
     kb-cancel: "Escape";
 }
