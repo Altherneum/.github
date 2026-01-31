@@ -105,7 +105,7 @@ pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar bi
 ### Rofi
 echo "Rofi"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm rofi rofi-calc
+pacman -S --needed --noconfirm rofi rofi-calc rofi-moji
 #### requiered for rofi plugin click close
 pacman -S --needed --noconfirm slurp jq
 mkdir -p /home/$username/.config/rofi
