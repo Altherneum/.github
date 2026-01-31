@@ -1,25 +1,15 @@
 window,
 window.background {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Optional: Make all widgets transparent */
 * {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     background-image: none;
 }
 
-/* Ensure pavucontrol-specific containers are transparent */
-.pavucontrol-window,
-.view,
-.content-view {
-    background-color: transparent;
-}
-
-/* Remove any background from lists and boxes */
-GtkListBox,
-GtkListBoxRow,
-GtkBox,
-GtkWidget {
-    background-color: transparent;
+window box notebook stack box combobox popover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
 }
