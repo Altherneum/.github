@@ -1,4 +1,4 @@
-sudo pacman -Syuu && yay -Syuu
+sudo pacman -Syuu ; yay -Syuu
 
 sudo pkill -SIGRTMIN+8 waybar
 
