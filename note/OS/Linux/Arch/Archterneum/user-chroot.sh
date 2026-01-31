@@ -60,11 +60,6 @@ echo "Downloading MC launcher"
 eval "$sleepcmd"
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
 
-### Emote launcher
-echo "Downloading Emote launcher"
-eval "$sleepcmd"
-echo "Getting Emote" && yay -S --noconfirm --needed emote
-
 # SDDM configuration
 echo "SDDM configuration"
 eval "$sleepcmd"
