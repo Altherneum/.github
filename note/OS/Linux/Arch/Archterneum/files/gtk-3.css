@@ -3,5 +3,54 @@ VteTerminal, vte-terminal {
 }
 
 .thunar, .thunar * {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    background-image: none;
+}
+
+.thunar {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.thunar .view {
+    color: rgb(170,170,170);
+}
+
+.thunar .view:selected {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.thunar headerbar {
+    background-color: transparent;
+}
+
+.thunar menubar {
+    background-color: transparent;
+    color: white;
+}
+
+.thunar menubar > menuitem {
+    color: white;
+    background-color:transparent;
+}
+
+.thunar menubar > menuitem:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.thunar menu {
+    background-color: rgba(0,0,0,0.45);
+}
+
+.thunar menu menuitem {
+    background-color: transparent;
+}
+
+.thunar menu menuitem:hover {
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
 }
