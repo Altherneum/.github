@@ -255,6 +255,28 @@ echo "MINSTOP=$hwmon/pwm1=0" >> /etc/fancontrol
 echo "MAXPWM=$hwmon/pwm1=255" >> /etc/fancontrol
 systemctl enable fancontrol
 
+## Alterniative if not with root user ##
+
+# sudo rm /etc/fancontrol
+# sudo touch /etc/fancontrol
+
+# gpuid=$(/home/$username/gpu_scan.sh GPU device)
+# hwmon=$(/home/$username/gpu_scan.sh GPU hwmon)
+
+# sudo sh -c "echo 'INTERVAL=10' >> /etc/fancontrol"
+# sudo sh -c "echo 'DEVPATH=$hwmon=$gpuid' >> /etc/fancontrol"
+# sudo sh -c "echo 'DEVNAME=$hwmon=amdgpu' >> /etc/fancontrol"
+# sudo sh -c "echo 'FCTEMPS=$hwmon/pwm1=$hwmon/temp1_input' >> /etc/fancontrol"
+# sudo sh -c "echo 'FCFANS= $hwmon/pwm1=' >> /etc/fancontrol"
+# sudo sh -c "echo 'MINTEMP=$hwmon/pwm1=20' >> /etc/fancontrol"
+# sudo sh -c "echo 'MAXTEMP=$hwmon/pwm1=75' >> /etc/fancontrol"
+# sudo sh -c "echo 'MINSTART=$hwmon/pwm1=0' >> /etc/fancontrol"
+# sudo sh -c "echo 'MINSTOP=$hwmon/pwm1=0' >> /etc/fancontrol"
+# sudo sh -c "echo 'MAXPWM=$hwmon/pwm1=255' >> /etc/fancontrol"
+
+# sudo systemctl enable fancontrol
+# sudo systemctl restart fancontrol
+
 # Network setup
 ## Starting network
 echo "Network Setup"
