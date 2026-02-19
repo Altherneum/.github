@@ -1,7 +1,8 @@
 # pacman
 Utilitaire de gestion de package
 ## Installer un package avec pacman
-- `-S`, `--sync` Synchroniser les paquets. Les paquets sont installés directement depuis les dépôts distants, y compris toutes les dépendances nécessaires à leur exécution 
+- `-S`, `--sync` Synchroniser les paquets
+  - Les paquets sont installés directement depuis les dépôts distants, y compris toutes les dépendances nécessaires à leur exécution 
 - Par exemple, `pacman -S qt` télécharge et installe qt et tous les paquets dont il dépend
 - Si un nom de paquet existe dans plusieurs dépôts, vous pouvez spécifier explicitement le dépôt pour préciser le paquet à installer : `pacman -S testing/qt`
 - Vous pouvez également spécifier la version requise : `pacman -S "bash>=3.2"`
@@ -55,7 +56,8 @@ Utilitaire de gestion de package
 ## Supprimer les paquets temporaires
 - `pacman -Scc` Permet de supprimer les paquets temporaires 
   - Peut débloquer pacman dans le cas : `erreur : la synchronisation de toutes les bases de données a échoué (verrouillage de la base de données impossible)`
-## Mettre à jour le système via pacman
+## Mettre à jour via pacman
+### Mettre à jour le système via pacman
 - `-u`, `--sysupgrade` Met à jour tous les packages périmés
 - Chaque package installé sur votre système va être examiné et mis à jour si un package plus récent existe
   - Une liste de tous les packages à mettre à jour sera affichée et demandera une confirmation à l'utilisateur avant de lancer la mise à jour
@@ -63,9 +65,22 @@ Utilitaire de gestion de package
 - Soumettre cette option deux fois pour activer la rétrogration de package
   - Dans ce cas pacman va sélectionner les packages synchronisés dont la version ne correspond pas avec la version locale
   - Cela peut être utile pour les utilisateurs qui passent du dépôt testing au dépôt stable.
-- Il est possible de spécfier manuellement d'autres cibles : ainsi `pacman -Su <package>` déclenchera une mise à jour du système pour installer ou mettre à jour le package
-## Mettre à jour les bases de données pacman
+### Mettre à jour les bases de données pacman
 - `-y`, `--refresh` Téléchargez une nouvelle copie des bases de données des dépôts de packages `repo.db` depuis le(s) serveur(s) défini(s) dans `pacman.conf`
+- L'ajout de deux options `--refresh` ou `-y` forcera l'actualisation de toutes les bases de données de paquets, même si elles semblent être à jour
+  - N'est nécessaire que dans des cas rares, comme après un changement manuel du fichier `mirrorlist`, ou si les bases de données sont corrompues.
+  - Son utilisation fréquente est inutile et consomme inutilement la bande passante des miroirs.
+- Le triple `-y` (`-Syyy`) N'a aucun effet supplémentaire
+  - Le système ignore tout au-delà de deux y, car le niveau de force est déjà atteint avec deux 
+## Mettre tout à jour via pacman
+- `pacman -Syu`
+  - `s` Permet de synchroniser / installer
+  - `y` Permet de télécharger une copie fraiche du `repo.db`
+  - `u` Permet de mettre à jour tout les paquets périmés
+- ⚠️ Conseil
+  - Suivre les recommandations de l' Wiki est essentiel
+  - Les guides tiers, notamment sur YouTube, peuvent promouvoir des pratiques inutiles comme `-Syyu` ou `-Syyyu`
+  - Utilisez `pacman -Syu` pour la mise à jour quotidienne 
 ## Installer un package local via pacman
 `pacman -U <path><package>.pkg.tar.gz` Permet d'installer un paquet sous la forme de fichier
 ## Vérifier la raison de l'installation d'un package
