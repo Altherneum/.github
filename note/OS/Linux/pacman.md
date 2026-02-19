@@ -52,6 +52,9 @@ Utilitaire de gestion de package
   - Dans les deux cas, vous aurez le choix entre oui et non pour supprimer les paquets et/ou les bases de données téléchargées inutilisées
 ## Supprimer le lock de pacman
 `sudo rm /var/lib/pacman/db.lck` Permet de supprimer le fichier `db.lck` A.K.A `database.lock` vérouillant pacman
+## Supprimer les paquets temporaires
+- `pacman -Scc` Permet de supprimer les paquets temporaires 
+  - Peut débloquer pacman dans le cas : `erreur : la synchronisation de toutes les bases de données a échoué (verrouillage de la base de données impossible)`
 ## Mettre à jour le système via pacman
 - `-u`, `--sysupgrade` Met à jour tous les packages périmés
 - Chaque package installé sur votre système va être examiné et mis à jour si un package plus récent existe
