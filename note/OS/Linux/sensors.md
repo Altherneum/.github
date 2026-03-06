@@ -13,6 +13,36 @@
   - `sensors -s` est utilisé pour définir toutes les limites telles que spécifiées dans le fichier de configuration
   - `sensors --bus-list` est utilisé pour générer des énoncés de bus adaptés au fichier de configuration
 
+## Exemple de la commande sensors
+```
+ ven. 09 mars 2026    󰅐 09:18:30     admin@arch     ~
+ History n°501 =[$]> sensors
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +46.9°C  
+
+amdgpu-pci-0a00
+Adapter: PCI adapter
+vddgfx:      692.00 mV 
+fan1:           0 RPM  (min =    0 RPM, max = 3500 RPM)
+edge:         +47.0°C  (crit = +100.0°C, hyst = -273.1°C)
+                       (emerg = +105.0°C)
+junction:     +48.0°C  (crit = +110.0°C, hyst = -273.1°C)
+                       (emerg = +115.0°C)
+mem:          +66.0°C  (crit = +108.0°C, hyst = -273.1°C)
+                       (emerg = +113.0°C)
+PPT:          26.00 W  (cap = 182.00 W)
+pwm1:              0%
+sclk:           1 GHz 
+mclk:         456 MHz 
+
+nvme-pci-0100
+Adapter: PCI adapter
+Composite:    +40.9°C  (low  =  -0.1°C, high = +82.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +40.9°C  (low  = -273.1°C, high = +65261.8°C)
+```
+
 ## Options
 - `-c` ou `--config-file config-file`
   - Spécifier un fichier de configuration
