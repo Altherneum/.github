@@ -11,6 +11,7 @@ device=$9
 sleepcmd=$10
 
 # Timezone and Clock
+## timedatectl list-timezones
 echo "TimeZone and clock"
 eval "$sleepcmd"
 ln -sf /usr/share/zoneinfo$localtime /etc/localtime
@@ -257,6 +258,8 @@ systemctl enable fancontrol
 
 ## Alterniative if not with root user ##
 
+# username=$(whoami)
+
 # sudo rm /etc/fancontrol
 # sudo touch /etc/fancontrol
 
@@ -267,7 +270,7 @@ systemctl enable fancontrol
 # sudo sh -c "echo 'DEVPATH=$hwmon=$gpuid' >> /etc/fancontrol"
 # sudo sh -c "echo 'DEVNAME=$hwmon=amdgpu' >> /etc/fancontrol"
 # sudo sh -c "echo 'FCTEMPS=$hwmon/pwm1=$hwmon/temp1_input' >> /etc/fancontrol"
-# sudo sh -c "echo 'FCFANS= $hwmon/pwm1=' >> /etc/fancontrol"
+# sudo sh -c "echo 'FCFANS= $hwmon/pwm1=$hwmon/fan1_input' >> /etc/fancontrol"
 # sudo sh -c "echo 'MINTEMP=$hwmon/pwm1=20' >> /etc/fancontrol"
 # sudo sh -c "echo 'MAXTEMP=$hwmon/pwm1=75' >> /etc/fancontrol"
 # sudo sh -c "echo 'MINSTART=$hwmon/pwm1=0' >> /etc/fancontrol"
@@ -276,6 +279,8 @@ systemctl enable fancontrol
 
 # sudo systemctl enable fancontrol
 # sudo systemctl restart fancontrol
+# sudo systemctl status fancontrol
+# sudo more /etc/fancontrol
 
 # Network setup
 ## Starting network
