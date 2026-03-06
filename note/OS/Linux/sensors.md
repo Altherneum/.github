@@ -1,70 +1,70 @@
-# man sensors
-## NAME
+# Sensors
+## Intruduction à la commande sensors
 - `sensors`
-    - print sensors information
+    - afficher les informations des capteurs
 
-## SYNOPSIS
+## Exemples
 - `sensors [ options ] [ chips ]`
 - `sensors -s [ chips ]`
 - `sensors --bus-list`
 
-## DESCRIPTION
-- `sensors` is used to show the current readings of all sensor chips
-  - `sensors -s` is used to set all limits as specified in the configuration file
-  - `sensors --bus-list` is used to generate bus statements suitable for the configuration file
+## Informations
+- `sensors` est utilisé pour afficher les lectures actuelles de tous les puces capteur
+  - `sensors -s` est utilisé pour définir toutes les limites telles que spécifiées dans le fichier de configuration
+  - `sensors --bus-list` est utilisé pour générer des énoncés de bus adaptés au fichier de configuration
 
-## OPTIONS
+## Options
 - `-c` ou `--config-file config-file`
-  - Specify a configuration file
-  - If no file is specified, the libsensors default configuration file is used
-  - Use ‘-c /dev/null' to temporarily disable this default configuration file
+  - Spécifier un fichier de configuration
+  - Si aucun fichier n'est spécifié, le fichier de configuration par défaut de libsensors est utilisé
+  - Utilisez ‘-c /dev/null’ pour désactiver temporairement ce fichier de configuration par défaut
 
 - `-h` ou `--help`
-  - Print a help text and exit
+  - Afficher du texte d'aide et quitter
 
 - `-s` ou `--set`
-  - Evaluate all ‘set' statements in the configuration file and exit
-  - You must be ‘root' to do this
-  - If this parameter is not specified, no ‘set' statement is evaluated
+  - Évaluer toutes les instructions `set` dans le fichier de configuration et quitter
+  - Vous devez être ‘root’ pour cela
+  - Si ce paramètre n'est pas spécifié, aucune instruction `set` n'est évaluée
 
 - `-A` ou `--no-adapter`
-  - Do not show the adapter for each chip
+  - Ne pas afficher l'adaptateur pour chaque puce
 
 - `-u`
-  - Raw output
-  - This mode is suitable for debugging and for post- processing of the output by scripts
-  - It is also useful when writing a configuration file because it shows the raw input names which must be referenced in the configuration file
+  - Sortie brute
+  - Ce mode est adapté au débogage et au traitement ultérieur de la sortie par des scripts
+  - Il est également utile lors de la création d’un fichier de configuration car il montre les noms d’entrée bruts qui doivent être référencés dans le fichier de configuration
 
 - `-j`
-  - Json output
+  - Sortie JSON
 
 - `-J`
-  - New json output
-  - This mode is suitable for post-processing of the output by scripts
+  - Nouvelle sortie JSON
+  - Ce mode est adapté au traitement ultérieur de la sortie par des scripts
 
 - `-v` ou `--version`
-  - Print the program version and exit
+  - Afficher la version du programme et quitter
 
 - `-f` ou `--fahrenheit`
-  - Print the temperatures in degrees Fahrenheit instead of Celsius
+  - Afficher les températures en degrés Fahrenheit au lieu de Celsius
 
 - `--bus-list`
-  - Generate bus statements suitable for using in `sensors.conf`
-  Such bus statements are only needed if you have several chips sharing the same address on different buses of the same type
-  - As bus numbers are usually not guaranteed to be stable over reboots, these statements let you refer to each bus byits name rather than numbers
+  - Générer des énoncés de bus adaptés à l’utilisation dans `sensors.conf`
+  De tels énoncés de bus ne sont nécessaires que si vous avez plusieurs puces partageant la même adresse sur différents bus du même type
+  - Étant donné que les numéros de bus ne sont généralement pas garantis d'être stables au redémarrage, ces énoncés vous permettent de référencer chaque bus par son nom plutôt que par des numéros
 
 - `-n` ou `--allow-no-sensors`
-  - Do not fail if no sensors found
-  - The error message will be printed in the log
+  - Ne pas échouer si aucun capteur n’est trouvé
+  - Le message d'erreur sera imprimé dans le journal
 
 ## Fichiers
 - `/etc/sensors3.conf`
 - `/etc/sensors.conf`
-  - The system wide configuration file
-  - See `sensors.conf` for further details
+  - Le fichier de configuration système
+  - Voir `man sensors.conf` pour plus de détails
 
-## SEE ALSO
+## Voire aussi
 `sensors.conf`, `sensors-detect`
 
-## AUTHOR
-`Frodo Looijaard` and the `lm_sensors` group [hwmon.wiki.kernel.org/lm_sensors](https://hwmon.wiki.kernel.org/lm_sensors)
+## Auteur
+`Frodo Looijaard` et le groupe `lm_sensors` [hwmon.wiki.kernel.org/lm_sensors]
