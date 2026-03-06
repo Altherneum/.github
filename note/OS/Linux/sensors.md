@@ -13,6 +13,10 @@
   - `sensors -s` est utilisé pour définir toutes les limites telles que spécifiées dans le fichier de configuration
   - `sensors --bus-list` est utilisé pour générer des énoncés de bus adaptés au fichier de configuration
 
+## Mise à jour chaque seconde de la commande sensors
+- `watch -n 1 'sensors'`
+  - `watch -n 1` permet de relancer la commande chaque seconde
+
 ## Exemple de la commande sensors
 ```
  ven. 09 mars 2026    󰅐 09:18:30     admin@arch     ~
