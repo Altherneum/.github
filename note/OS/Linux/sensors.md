@@ -2,6 +2,7 @@
 ## Intruduction à la commande sensors
 - `sensors`
     - afficher les informations des capteurs
+    - `pacman -Q lm_sensors` Installation via Pacman
 
 ## Exemples
 - `sensors [ options ] [ chips ]`
