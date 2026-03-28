@@ -7,6 +7,9 @@ sudo pacman -Syuu
 # Update all yay's repo
 yay -Syuu
 
+# Update hyprpm's plugins
+hyprpm update
+
 # Update waybar
 sudo pkill -SIGRTMIN+8 waybar
 
