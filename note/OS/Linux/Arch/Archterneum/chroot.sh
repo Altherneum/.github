@@ -148,6 +148,10 @@ pacman -S --needed --noconfirm obs-studio
 echo "Downloading Discord SoftWare"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm discord
+### VS-Code openSource
+echo "Downloading Code (VSCode)"
+eval "$sleepcmd"
+pacman -S --needed --noconfirm code
 #### Vencord
 # echo "Vencord Hook"
 # eval "$sleepcmd"
