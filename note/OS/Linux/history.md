@@ -23,3 +23,15 @@
 - `history 3` Affiche les 3 derniers résultats
 - `history 2` Affiche la dernière commande (ainsi que `history 2`)
 - `history 1` Ne va que afficher la commande `history 1`
+
+# ClipHist
+![Image des historiques cliphist](https://github.com/Altherneum/.github/blob/main/note/assets/images/cliphist.png?raw=true)
+
+- ClipHist est pour Arch Linux, Rofi
+- ClipHist est pour "Clipboard History"
+
+## Purger l'historique
+`cliphist wipe` Vide l'historique de ClipHist
+
+## ClipHist help
+`cliphist <store|list|decode|delete|delete-query|wipe|version>`
