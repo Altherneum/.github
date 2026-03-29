@@ -30,9 +30,9 @@ Pour vérifier la configuration du serveur sshd, vous pouvez utiliser la command
 - `nano /etc/ssh/sshd_config.d/*.conf` Fichier de configuration à modifier
   - `PermitRootLogin` Spécifie si root peut se connecter par ssh
   - `PasswordAuthentication` Spécifie si l'authentification par mot de passe est autorisée
-  - `AllowUsers` Ce mot-clef peut être suivi d'une liste de noms d'utilisateurs. S'il est spécifié, seuls les noms d'utilisateurs correspondant sont autorisés à se connecter
-  - `AuthorizedKeysFile` Spécifie le fichier contenant les clefs publiques à utiliser pour l'authentification de l'utilisateur
-  - `PubkeyAuthentication` Spécifie si on autorise l'authentification par clef publique
+  - `AllowUsers` Ce mot-clé peut être suivi d'une liste de noms d'utilisateurs. S'il est spécifié, seuls les noms d'utilisateurs correspondant sont autorisés à se connecter
+  - `AuthorizedKeysFile` Spécifie le fichier contenant les clés publiques à utiliser pour l'authentification de l'utilisateur
+  - `PubkeyAuthentication` Spécifie si on autorise l'authentification par clé publique
 ### Fichier de configuration custom
 #### Comment créer un fichier de configuration SSH
 - Créer un fichier `<NOM>.conf` dans `/etc/ssh/sshd_config.d/`
@@ -50,7 +50,7 @@ touch /etc/ssh/sshd_config.d/hardening.conf
 
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config.d/hardening.conf
 echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config.d/hardening.conf
-# echo "PasswordAuthentication no" >> /etc/ssh/sshd_config.d/hardening.conf # Créer une clef SSH avant d'activer
+# echo "PasswordAuthentication no" >> /etc/ssh/sshd_config.d/hardening.conf # Créer une clé SSH avant d'activer
 echo "permitemptypasswords no" >> /etc/ssh/sshd_config.d/hardening.conf
 
 systemctl restart sshd
@@ -60,7 +60,7 @@ systemctl restart sshd
 - `Systemctl restart ssh`
 
 ## Emplacement des clés SSH et leurs formats
-### Private Key (Clef privée)
+### Private Key (clé privée)
 - 🐧**Linux**, 🍎**macOS**: `~/.ssh/id_rsa` (or `id_rsa`, `id_ecdsa`)
 - 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_rsa`
 - **Format**:
@@ -69,7 +69,7 @@ systemctl restart sshd
   - Et fini par `-----END OPENSSH PRIVATE KEY-----`. 
   - Doit **__être gardé secret et jamais partagé__**.
 
-### Public Key (Clef publique)
+### Public Key (clé publique)
 - 🐧**Linux**, 🍎**macOS**: `~/.ssh/id_rsa.pub`
 - 🪟**Windows**: `C:\Users\%USERNAME%\.ssh\id_rsa.pub`
 - **Format**: 
@@ -81,7 +81,7 @@ systemctl restart sshd
 ### Emplacements des clefs
 - **Private key**: Reste sur votre **ordinateur local** (Linux / Windows) dans le dossier `.ssh`.
 - **Public key**: Rest sur votre **serveur distant** sur le fichier `~/.ssh/authorized_keys`
-  - (une clef par ligne).
+  - (une clé par ligne).
 
 ## Créer une clé SSH
 ### Créer la clé SSH avec SSH-KeyGen
@@ -122,6 +122,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
+## Déplacer une clé SSH
 ### Transférer la clé sur le serveur
 - **Si vous avez crée la clée sur votre PC** et non pas sur le serveur
 - `scp C:/Users/<username>/.ssh/<id_rsa_file_name>.pub admin@altherneum.fr:/home/<username>/.ssh/<id_rsa_file_name>.pub`
@@ -145,11 +146,13 @@ admin@altherneum.fr's password:
 id_rsa.pub           100%  760     8.7KB/s   00:00
 ```
 
+## Utiliser une clé SSH
 ### Tester la clé
 Vérifier si la commande est valide :
-- `ssh -i ~/.ssh/[KEY_NAME] [USER]@[HOST]`
-  - `ssh -i /.ssh/id_rsa admin@altherneum.fr`
-  - Ou directement `ssh admin@altherneum.fr` si les clefs sont bien placés
+- `ssh -i <CHEMIN>/[KEY_NAME] [USER]@[HOST]`
+  - `ssh -i ~/.ssh/id_rsa admin@altherneum.fr` Si la clé est bien placé
+  - `ssh -i <CHEMIN>/id_rsa admin@altherneum.fr` Si la clé n'est pas bien placé
+- Ou directement `ssh admin@altherneum.fr` Si la clé est bien placée
 
 ### Bloquer les connections sans clé
 - Voire la chapitre [# Fichier de configuration SSH](#Fichier-de-configuration-SSH)
@@ -162,13 +165,26 @@ Enter passphrase for key 'C:\Users\user/.ssh/id_rsa':
 ```
 - Valider avec la passPhrase
 
+## Stocker une clé SSH
+### Ajouter la clé privé sur KeePassXC
+- Pour éviter de saisir les informations
+- Ajouter une entrée KeePassXC
+  - Nom de l'entrée `SSH altherneum.fr`
+  - Nom d'utilisateur `admin`
+  - Mot de passe : Ajoutez la passPhrase
+- Dans l'entrée, dans le sous menu `Agent SSH`
+  - Cochez `Ajouter la clé à l'agent si la base de donnée est ouverte ou déverrouillée`
+  - Cochez `Supprimer la clé de l'agent si la base de données est fermée ou verrouillée`
+  - Dans `Fichier externe` placez le chemin vers la clé (Exemple `/home/admin/.ssh/id_rsa`)
+  - Dans `Clé publique`, ajoutez la clé publique
+  
 ### Ajouter la clé privé sur Windows
-#### Ajouter une clef privé sur Windows avec durée
-Sur Windows avec OpenSSH, utilisez `ssh-add` sur PowerShell ou dans un terminal pour ajouter votre clef privée avec une durée de temps :
+#### Ajouter une clé privé sur Windows avec durée
+Sur Windows avec OpenSSH, utilisez `ssh-add` sur PowerShell ou dans un terminal pour ajouter votre clé privée avec une durée de temps :
 - Lancez le service SSH via `Start-Service ssh-agent`
-- `ssh-add -t 8h $env:USERPROFILE\.ssh\id_rsa` Ajoutez la clef "`id_rsa`" pour 8h
-  - Remplacez `8h` avec `30m`, `1d`, etc. La clef reste en cache jusqu'à la fin de la durée ou le redémarrage.
-#### Ajouter une clef sur Windows sans durée
+- `ssh-add -t 8h $env:USERPROFILE\.ssh\id_rsa` Ajoutez la clé "`id_rsa`" pour 8h
+  - Remplacez `8h` avec `30m`, `1d`, etc. La clé reste en cache jusqu'à la fin de la durée ou le redémarrage.
+#### Ajouter une clé sur Windows sans durée
 - Lancer SSH en administrateur : `Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service` pour lancer SSH automatiquement
 - Ajouter la clé privé : `ssh-add "C:\Users\<username>\.ssh\<id_rsa_key_name>"`
   - Exemple du cours : `ssh-add "C:\Users\user\.ssh\id_rsa"`
@@ -190,13 +206,13 @@ ssh admin@altherneum.fr
 ### Ajouter la clé privé sur Linux
 #### Lancer l'agent SSH-add
 Pour lancer l'agent SSH sur PC : `eval $(ssh-agent)`
-#### Ajouter une clef sur Linux avec durée
-Pour ajouter une clef sur Linux avec durée :
+#### Ajouter une clé sur Linux avec durée
+Pour ajouter une clé sur Linux avec durée :
 - `ssh-add -t <time> ~/.ssh/id_rsa`
-  - Remplacez `8h` avec `30m`, `1d`, etc. La clef reste en cache jusqu'à la fin de la durée ou le redémarrage.
-##### Example d'ajout de clef SSH sur Linux avec durée:
+  - Remplacez `8h` avec `30m`, `1d`, etc. La clé reste en cache jusqu'à la fin de la durée ou le redémarrage.
+##### Example d'ajout de clé SSH sur Linux avec durée:
 `ssh-add -t 8h ~/.ssh/id_rsa`
-#### Ajouter une clef sur Linux sans durée
+#### Ajouter une clé sur Linux sans durée
 Par défaut, `ssh-agent` conserve les clés sans durée sauf si une drée est précisé.
 
 Pour rendre une clée persistante utilisez :
@@ -213,8 +229,8 @@ source ~/.keychain/$HOSTNAME-sh
 Les clés sont retenues par défaut via KeyChain.
 `ssh-agent` conserve en cache les clés à vie
 
-## Retirer une clef SSH
-Pour retirer une clef SSH
+## Retirer une clé SSH
+Pour retirer une clé SSH
 - Windows : `ssh-add -d "C:\Users\<username>\.ssh\<id_rsa_key_name>"`
 - Linux : `ssh-add -d /home/admin/.ssh/id_rsa`
 ### Retirer toutes les clés SSH
