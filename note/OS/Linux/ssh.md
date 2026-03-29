@@ -177,7 +177,20 @@ Enter passphrase for key 'C:\Users\user/.ssh/id_rsa':
   - Cochez `Supprimer la clé de l'agent si la base de données est fermée ou verrouillée`
   - Dans `Fichier externe` placez le chemin vers la clé (Exemple `/home/admin/.ssh/id_rsa`)
   - Dans `Clé publique`, ajoutez la clé publique
-  
+#### Note sour Arch Linux Wayland pour KeePassXC
+- Ajouter dans `hyprland.conf` : `env = SSH_AUTH_SOCK,$XDG_RUNTIME_DIR/ssh-agent.socket`
+- Activez et configuré l'agent SSH ;
+```
+## Enable SSH-agent
+systemctl --user enable --now ssh-agent.socket
+
+## Create environement.d
+mkdir -p ~/.config/environment.d
+
+## And add socket to $SSH_AUTH_SOCK
+echo 'SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket' > ~/.config/environment.d/ssh-agent.conf
+```
+
 ### Ajouter la clé privé sur Windows
 #### Ajouter une clé privé sur Windows avec durée
 Sur Windows avec OpenSSH, utilisez `ssh-add` sur PowerShell ou dans un terminal pour ajouter votre clé privée avec une durée de temps :
