@@ -167,6 +167,8 @@ Enter passphrase for key 'C:\Users\user/.ssh/id_rsa':
 
 ## Stocker une clé SSH
 ### Ajouter la clé privé sur KeePassXC
+[keepassxc.org /docs /#faq-ssh-agent-how](https://keepassxc.org/docs/#faq-ssh-agent-how)
+
 - Pour éviter de saisir les informations
 - Ajouter une entrée KeePassXC
   - Nom de l'entrée `SSH altherneum.fr`
