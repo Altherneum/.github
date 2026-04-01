@@ -41,6 +41,8 @@ PanelWindow {
         anchors.fill: parent
         
         Text {
+            Layout.leftMargin: 20
+            
             id: logo
             text: "󰣇"
             font.pixelSize: 40
