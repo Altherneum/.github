@@ -115,7 +115,7 @@ chmod +x /home/$username/.config/rofi/rofi-slurp-monitor.sh
 ### Language stack
 echo "Java & Go"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm jdk21-openjdk go
+pacman -S --needed --noconfirm jdk21-openjdk go jre-openjdk maven
 ### Enable SDDM
 echo "Enabling SDDM"
 eval "$sleepcmd"
