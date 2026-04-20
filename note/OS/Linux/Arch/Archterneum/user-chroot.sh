@@ -207,6 +207,9 @@ echo $userpassword | sudo -S chmod +x ~/.config/rofi/cliphist-rofi-img.sh
 # Rofi start script
 echo $userpassword | sudo -S curl -o ~/.config/rofi/start.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/start-rofi
 echo $userpassword | sudo -S chmod +x ~/.config/rofi/start.sh
+# Rofi change desktop
+echo $userpassword | sudo -S curl -o ~/.config/rofi/backgroundswitcher.sh.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/mpv-backgroundswitcher.sh
+echo $userpassword | sudo -S chmod +x ~/.config/rofi/backgroundswitcher.sh.sh
 
 # XDG theme config
 echo "XDG theme configuration"
