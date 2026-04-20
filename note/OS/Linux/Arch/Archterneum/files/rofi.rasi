@@ -3,7 +3,7 @@ configuration {
     transparency: "root";
     fullscreen: false;
     
-    combi-modes: [ window, drun, cmd, emoji, clipboard, filebrowser, recursivebrowser, run, calc, ssh, keys ];
+    combi-modes: [ window, drun, cmd, emoji, clipboard, filebrowser, recursivebrowser, run, calc, ssh, keys, background ];
 
     display-ssh: "⚡️ SSH ";
     display-run: "📌 Lancer ";
@@ -17,6 +17,7 @@ configuration {
     display-clipboard: "📋️ Clipboard ";
     display-keys: "🎹 Keys ";
     display-emoji: "😀 Emoji ";
+    display-backgroundswitcher: "🎨 Fond";
 
     kb-cancel: "Escape";
 }
