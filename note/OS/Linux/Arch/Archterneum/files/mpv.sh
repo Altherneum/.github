@@ -9,16 +9,26 @@ getFileCount() {
 }
 
 setRandomVideo() {
-    FPS=30
-
     maxvideoamount=$(getFileCount ~/.config/hypr/backgrounds/)
     minvideoid=1
 
     VideoNumber=$(($RANDOM%($maxvideoamount-$minvideoid+1)+$minvideoid))
 
-    pkill mpvpaper
+    setVideoNumber $VideoNumber
+}
 
-    mpvpaper '*' -vs -l bottom -o "--no-audio --loop --panscan=1 --no-input-terminal --no-input-cursor --on-all-workspaces --container-fps-override=$FPS --ontop-level=desktop --no-correct-pts" ~/.config/hypr/backgrounds/$VideoNumber.mp4 -f
+setVideoNumber() {
+    if [ -z "$1" ]; then
+        echo "Missing video ID as param"
+    else
+        FPS=30
+
+        VideoNumber=$1
+
+        pkill mpvpaper
+
+        mpvpaper '*' -vs -l bottom -o "--no-audio --loop --panscan=1 --no-input-terminal --no-input-cursor --on-all-workspaces --container-fps-override=$FPS --ontop-level=desktop --no-correct-pts" ~/.config/hypr/backgrounds/$VideoNumber.mp4 -f
+    fi
 }
 
 addNewBackground() {
@@ -50,4 +60,5 @@ case $1 in
     setRandomVideo) "$@"; exit;;
     addNewBackground) "$@"; exit;;
     startLoop) "$@"; exit;;
+    setVideoNumber) "$@"; exit;;
 esac
