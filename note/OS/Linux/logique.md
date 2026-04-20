@@ -80,7 +80,7 @@ if test = "$nom" = abc
   
   then echo "abc"
 
-  else echp "not abc"
+  else echo "not abc"
 
 fi
 ```
