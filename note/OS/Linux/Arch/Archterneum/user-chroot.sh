@@ -60,6 +60,21 @@ echo "Downloading MC launcher"
 eval "$sleepcmd"
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
 
+### MC
+echo "Downloading Vesktop"
+eval "$sleepcmd"
+echo "Getting Vesktop" && yay -S --noconfirm --needed vesktop
+## ~/.config/Vencord/themes/
+echo "Creating user ~/.config/Vencord/themes/"
+echo $userpassword | sudo -S -u $username mkdir -p /home/$username/.config/vesktop/themes/
+echo $userpassword | sudo -S curl -o /home/$username/.config/vesktop/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
+echo $userpassword | sudo -S chown $username /home/$username/.config/vesktop/themes/transparent.css
+## ~/.config/Vencord/settings/
+echo $userpassword | sudo -S "Creating user ~/.config/vesktop/settings/"
+echo $userpassword | sudo -S -u $username mkdir -p /home/$username/.config/vesktop/settings/
+echo $userpassword | sudo -S curl -o /home/$username/.config/vesktop/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
+echo $userpassword | sudo -S chown $username /home/$username/.config/vesktop/settings/settings.json
+
 # SDDM configuration
 echo "SDDM configuration"
 eval "$sleepcmd"
@@ -260,7 +275,7 @@ eval "$sleepcmd"
 # echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
 echo $userpassword | sudo -S curl -o  /usr/share/libalpm/scripts/vencord.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vencord.sh
 echo $userpassword | sudo -S chmod +x /usr/share/libalpm/scripts/vencord.sh
-echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh
+# echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh # replaced by vesktop
 
 # Slash screen
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
