@@ -7,7 +7,7 @@ elif [[ $# -eq 0 ]]; then
     counter=1
     
     while [ $counter -le $maxvideoamount ]; do
-        echo $counter
+        echo "Background n° "$counter
         ((counter++))
     done
 
@@ -16,6 +16,8 @@ elif [[ $# -eq 0 ]]; then
 elif [ x"$@" = x"reload" ];
     then : #nothing
 else
-    $(~/.config/hypr/mpvpaper.sh setVideoNumber $1)
+    input=$1
+    words=($input)
+    $(~/.config/hypr/mpvpaper.sh setVideoNumber ${words[2]})
 fi
 
