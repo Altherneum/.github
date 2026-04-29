@@ -11,7 +11,7 @@ yay -Syuu
 hyprpm update
 
 # Update waybar
-sudo pkill -SIGRTMIN+8 waybar
+killall -SIGUSR2 waybar
 
 # Send message that terminal close in 15s
 echo 
