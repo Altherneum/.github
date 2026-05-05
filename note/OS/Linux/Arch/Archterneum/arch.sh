@@ -22,7 +22,7 @@ eval "$sleepcmd"
 ## Add colors
 sed -i 's/^#Color/Color/' /etc/pacman.conf
 ## Add pacman Parallel Downloads
-sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 1/' /etc/pacman.conf
+sed -i 's/^#\?ParallelDownloads.*/ParallelDownloads = 10/' /etc/pacman.conf
 
 # Update
 echo "pacman -Sy"
