@@ -36,12 +36,18 @@
 ![Org sponsors](https://img.shields.io/github/sponsors/Altherneum?color=red)
 
 # URL
+Liste plus complète du virtualHost Apache [doc.altherneum.fr /github /server #DNS-routing
+](https://doc.altherneum.fr/github/server#DNS-routing)
+## URL publiques
 - [Altherneum.fr](https://Altherneum.fr)
 - [doc.Altherneum.fr](https://doc.Altherneum.fr) | [/discord](https://doc.Altherneum.fr/discord)
 - [mc.Altherneum.fr](https://mc.Altherneum.fr)
+## URL privés
 - [github.com/Altherneum](https://github.com/Altherneum)
   - [git.altherneum.fr](https://git.altherneum.fr)
 - [KeeWeb.altherneum.fr](https://keeweb.altherneum.fr)
+- [code.altherneum.fr](https://code.altherneum.fr)
+## Mails
 - [root@altherneum.fr](mailto:root@altherneum.fr)
   - [contact@altherneum.fr](mailto:contact@altherneum.fr)
   - [admin@altherneum.fr](mailto:admin@altherneum.fr)
