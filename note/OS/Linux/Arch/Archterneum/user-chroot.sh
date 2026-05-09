@@ -70,10 +70,11 @@ echo $userpassword | sudo -S -u $username mkdir -p /home/$username/.config/veskt
 echo $userpassword | sudo -S curl -o /home/$username/.config/vesktop/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
 echo $userpassword | sudo -S chown $username /home/$username/.config/vesktop/themes/transparent.css
 ## ~/.config/Vencord/settings/
-echo $userpassword | sudo -S "Creating user ~/.config/vesktop/settings/"
+echo "Creating user ~/.config/vesktop/settings/"
 echo $userpassword | sudo -S -u $username mkdir -p /home/$username/.config/vesktop/settings/
 echo $userpassword | sudo -S curl -o /home/$username/.config/vesktop/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
 echo $userpassword | sudo -S chown $username /home/$username/.config/vesktop/settings/settings.json
+echo $userpassword | sudo -S sed -i 's|^Exec=\(.*\)|Exec=env XDG_CURRENT_DESKTOP=Hyprland XDG_SESSION_TYPE=wayland \1|' /usr/share/applications/vesktop.desktop
 
 # SDDM configuration
 echo "SDDM configuration"

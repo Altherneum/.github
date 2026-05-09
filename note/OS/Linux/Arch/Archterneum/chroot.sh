@@ -148,6 +148,8 @@ pacman -S --needed --noconfirm obs-studio
 echo "Downloading Discord SoftWare"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm discord
+sed -i 's|^Exec=\(.*\)|Exec=env XDG_CURRENT_DESKTOP=Hyprland XDG_SESSION_TYPE=wayland \1|' /usr/share/applications/discord.desktop
+
 ### VS-Code openSource
 echo "Downloading Code (VSCode)"
 eval "$sleepcmd"
