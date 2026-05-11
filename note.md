@@ -1358,3 +1358,12 @@ Move azure images to asset
 - [Stackoverflow Export](https://stackoverflow.com/questions/22317951/export-html-table-data-to-excel-using-javascript-jquery-is-not-working-properl)
 - [Phppot Convert](https://phppot.com/javascript/convert-html-table-excel-javascript/)
 - [Stackoverflow Convert](https://stackoverflow.com/questions/70304838/convert-excel-sheet-data-to-html-with-javascript)
+
+# Buy DNS for myself 
+# Set CV on Github Cname
+# Open linkedIn offers
+# Update the CV and website
+# Host on a small VPS for mail server
+## Set Ubuntu and postfix, roundcube, and dovecot
+## Durée du préavis
+
