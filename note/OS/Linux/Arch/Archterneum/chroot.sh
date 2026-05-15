@@ -182,6 +182,10 @@ pacman -S --needed --noconfirm git ufw keepassxc
 echo "Downloading BTop/HTop & FastFetch"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm btop fastfetch htop
+echo "Downloading BTop driver for AMD-GPU"
+eval "$sleepcmd"
+pacman -S --needed --noconfirm rocm-smi-lib
+
 ## Video drivers
 echo "Downloading Video Drivers"
 eval "$sleepcmd"
