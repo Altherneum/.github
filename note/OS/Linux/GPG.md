@@ -6,7 +6,7 @@ Son objectif est de garantir deux choses
 - la confidentialité (seul le destinataire peut lire)
 - l'intégrité/l'authenticité (le message n'a pas été modifié en chemin et vient bien de l'expéditeur déclaré)
 ## Introduction à GPG
-GPG : `GNU Privacy Guard` Est le logiciel qui qui implémente la norme PGP
+GPG : `GNU Privacy Guard` Est le logiciel qui qui implémente la norme OpenPGP
 GPG est une implémentation libre (open-source) très puissante du standard PGP
 Il permet aux utilisateurs de réaliser les tâches de chiffrement et de déchiffrement définies par PGP
 # Utilisation de GPG
@@ -118,7 +118,14 @@ rVroAtg3G1Dy+moe9LpBMzZCMKXlZY7dr5Iybd44zNY=
 =waC/
 -----END PGP MESSAGE-----
 ```
-
+## Déchiffrer avec GPG
+- `gpg --decrypt <file>`
+  - `gpg --decrypt test.txt.gpg`
+``` 
+gpg: chiffré avec une clef cv25519, identifiant FEF59278142BDE1F, créé le 2026-05-25
+      « Altherneum.fr <root@altherneum.fr> »
+Testing GPG
+```
 ## Lister les clés publiques
 - `gpg --list-keys`
 ```
