@@ -98,6 +98,7 @@ Liste plus complète du virtualHost Apache [doc.altherneum.fr /github /server #D
   - ~~Waterfall~~ : [Site](https://papermc.io/software/waterfall) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Waterfall)
   - Velocity : [Site](https://papermc.io/software/velocity) | @[PaperMC](https://github.com/PaperMC) | [Repo externe](https://github.com/PaperMC/Velocity)
   - Geyser : [Site](https://geysermc.org/) | @[GeyserMC](https://github.com/GeyserMC)
+  - java2bedrock.sh : @[Kas-tle](https://github.com/Kas-tle/) | [Repo externe](https://github.com/Kas-tle/java2bedrock.sh) | [Discussion / Github action run](https://github.com/Kas-tle/java2bedrock.sh/issues/69484)
 - Maven : [Site](https://maven.apache.org/)
 - ~~VSCode~~ : [Site](https://code.visualstudio.com/) | [Web](https://vscode.dev/)
   - Code-Server : [Site](https://coder.com/) | [Repo externe](https://github.com/coder/code-server)
