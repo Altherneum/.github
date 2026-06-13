@@ -258,6 +258,12 @@ Pour retirer une clé SSH
 ### Se connecter en SSH
 - `ssh [USER]@[HOST]`
   - `ssh root@altherneum.fr`
+- `ssh -l [USER] [HOST]`
+  - `ssh -l root altherneum.fr`
+- `ssh [HOST]`
+  - `ssh altherneum.fr`
+  - Va utiliser le nom d'utilisateur de l'OS
+  - Le nom d'utilisateur peut également être défini de manière permanente par hôte dans le fichier de configuration `~/.ssh/config` ou de manière globale avec `/etc/ssh/ssh_config` ou sur Windows avec `C:/Users/<USER>/.ssh/config`
 ### Envoyer une commande et se déconnecter
 - `ssh [HOST] "[CMD]"` Lance une commande sans rester connecté
 - `ssh 10.20.222.86 "ls -a"` Exemple
