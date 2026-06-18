@@ -181,7 +181,6 @@ pacman -S --needed --noconfirm git ufw keepassxc
 echo "Downloading Keyrings"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm gnome-keyring libsecret
-
 curl -o /home/$username/.config/hypr/gnome-keyring-daemon.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/gnome-keyring-daemon.sh
 chmod +x /home/$username/.config/hypr/gnome-keyring-daemon.sh
 
