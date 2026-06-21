@@ -6,4 +6,10 @@
   - Publisher: `GitHub`
 - VS Marketplace Link: https://open-vsx.org/vscode/item?itemName=GitHub.vscode-pull-request-github
 ## Configuration
-![alt text](https://github.com/Altherneum/.github/blob/main/note/assets/images/brave_GW7WsBLPfT.png?raw=true)
+[git-config](https://github.com/Altherneum/.github/blob/main/note/Github/git-config)
+```
+git config --global user.name "lx78WyY0J5"
+git config --global user.email "9j2k37st@gmail.com"
+```
+## Se connecter
+*prendre une capture d'écran du menu*
