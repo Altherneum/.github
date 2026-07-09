@@ -169,7 +169,7 @@ sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPos
 ## System
 echo "Downloading Terminal, File Explorer and manual"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm xfce4 nautilus man
+pacman -S --needed --noconfirm xfce4 nautilus man gnome-disk-utility
 echo "Downloading fonts"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm otf-font-awesome noto-fonts-emoji
