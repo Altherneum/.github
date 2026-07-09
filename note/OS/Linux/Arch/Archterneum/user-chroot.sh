@@ -60,7 +60,7 @@ echo "Downloading MC launcher"
 eval "$sleepcmd"
 echo "Getting MC-Launcher" && yay -S --noconfirm --needed minecraft-launcher
 
-### MC
+### Discord
 echo "Downloading Vesktop"
 eval "$sleepcmd"
 echo "Getting Vesktop" && yay -S --noconfirm --needed vesktop
