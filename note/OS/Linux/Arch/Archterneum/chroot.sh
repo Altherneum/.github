@@ -102,7 +102,7 @@ sudo -u $username mkdir -p /home/$username/.config
 ## OS
 echo "Downloading SoftWare"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar bind networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+pacman -S --needed --noconfirm hyprland sddm wayland hyprlock hypridle waybar bind networkmanager xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprpolkitagent
 ### Rofi
 echo "Rofi"
 eval "$sleepcmd"
