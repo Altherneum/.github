@@ -76,10 +76,6 @@ echo $userpassword | sudo -S curl -o /home/$username/.config/vesktop/settings/se
 echo $userpassword | sudo -S chown $username /home/$username/.config/vesktop/settings/settings.json
 echo $userpassword | sudo -S sed -i 's|^Exec=\(.*\)|Exec=env XDG_CURRENT_DESKTOP=Hyprland XDG_SESSION_TYPE=wayland \1|' /usr/share/applications/vesktop.desktop
 
-echo "Downloading woeusb-ng ISO burner"
-eval "$sleepcmd"
-echo "Getting woeusb-ng" && yay -S --noconfirm --needed woeusb-ng
-
 # SDDM configuration
 echo "SDDM configuration"
 eval "$sleepcmd"
