@@ -167,7 +167,7 @@ eval "$sleepcmd"
 pacman -S --needed --noconfirm steam
 sed -i 's/Notifications.PanelPosition     \"BottomRight\"/Notifications.PanelPosition     "TopRight"/' /home/$username/.steam/steam/resource/styles/steam.styles
 ## System
-echo "Downloading Terminal, File Explorer and manual"
+echo "Downloading Terminal, File Explorer and manual and gnome-disk-util"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm xfce4 nautilus man gnome-disk-utility
 echo "Downloading fonts"
