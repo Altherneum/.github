@@ -4,7 +4,8 @@
 Généralement, ce message est utilisé pour afficher les règles, les contacts administratifs, ou encore un dessin ASCII Art
 
 ## MOTD Ubuntu
-`/etc/update-motd.d/`
+- `/etc/update-motd.d/`
+  - `/etc/motd.d/[NAME].motd`
 ### Retirer le MOTD Ubuntu par défaut
 #### Désactiver les scripts MOTD d'Ubuntu
 - `sudo chmod -x /etc/update-motd.d/*` Permet de supprimer les autorisations d'exécution des scripts dans le répertoire `/etc/update-motd.d/`

@@ -282,9 +282,6 @@ Le résultat de la commande devant le pipe (`|`), devient la commande après le 
 ## Lien symbolique
 `ln -ls`
 
-## MOTD
-- `/etc/motd`
-- `/etc/motd.d/[NAME].motd`
 ## Cmd to doc
 - `Date`
   - `Date +%T`
