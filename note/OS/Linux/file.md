@@ -37,7 +37,7 @@ Afficher le contenu des fichiers :
   - `:[NUMBER]` Se déplacer à la ligne
     - (Exemple : `:10` = Ligne 10)
 
-## Écrire sur un fichier
+## Écrire ou rediriger vers un fichier
 ### Écrire en écrasant le fichier
 - `[CMD|FILE|Text] > [FILE]` Créer le fichier et écrit dedans, si il existe il sera écrasé
 
@@ -57,6 +57,10 @@ Afficher le contenu des fichiers :
 ### Écrire tout les résultats dans un fichier
 - `[CMD] &> [FILE]` Envoie les résultats et les erreurs dans le fichier
   - `[CMD] > [FILE] 2>&1` Envoie les résultats et les erreurs dans le fichier
+
+### Rediriger vers une commande via le pipe
+Le résultat de la commande devant le pipe (`|`), devient la commande après le pipe
+- `systemctl | wc -l` Compte le nombre de ligne du résultat de la commande systemctl
 
 ## Touch
 - `touch [FILE]` Modifie la date d'accès au fichier à la date actuelle
@@ -78,7 +82,23 @@ Afficher le contenu des fichiers :
 ## Move file
 - `mv [FILE] [NEW_FILE]`
 
+## Lien symbolique
+La commande `ln` sous Linux et Unix permet de créer des liens vers des fichiers ou répertoires, offrant ainsi plusieurs chemins d'accès aux mêmes données sans duplication
+### Lien physique (Hard link)
+- Créés par défaut, ils pointent directement vers l'inode (les données réelles sur le disque)
+- Ils doivent se trouver sur le même système de fichiers et ne peuvent pas être créés pour des répertoires
+- La suppression d'un lien physique n'affecte pas les autres liens pointant vers ces mêmes données
+### Lien symbolique (Symlinks)
+- Créés avec l'option `-s`, ils agissent comme des raccourcis pointant vers le chemin d'un autre fichier ou répertoire
+- Ils peuvent traverser différents systèmes de fichiers et pointer vers des répertoires, mais ils deviennent "cassés" si la cible originale est supprimée ou déplacée
+### Syntaxe des liens
+- La syntaxe de base est `ln [OPTIONS] TARGET LINK_NAME`
+- Par exemple, `ln fichier1 fichier2` ; crée un lien physique,
+  - Tandis que `ln -s fichier1 fichier2` crée un lien symbolique
+
 ## Locate a file
+### WhereIs
+- `whereis <cmd>` Affiche le chemin de du binaire, de la source, et du manuel de la commande
 ### Locate
 Le paquet `mlocate` n'est pas présent par défaut sur certains Linux
 
@@ -95,6 +115,22 @@ Le paquet `mlocate` n'est pas présent par défaut sur certains Linux
   - `-name` sensitive to caps
   - `-iregex` insensitive to caps regex
   - `-regex` sensitive to caps regex
+
+## Exécuter un fichier
+### Rendre le fichier exécutable
+Voire les permissions ; [#chmod +x <fichier>](#chmod)
+### Lancer un fichier de script
+- Taper son nom `File.sh`
+  - il peut aussi être sans le `.sh` dans le cadre des fichiers exécutables `ELF 64-bit LSB executable, x86-64` (visible via [#File](#file))
+
+- Taper son nom relatif `./File.txt` ou `/[PATH]/[FILE].sh`
+  - Ou un nom dupliqué : (Ex rm en fichier alors que la commande rm existe)
+- Le déplacer dans `/bin` puis `source [PATH]` le fichier ou est `bin` (Sourcer une seul fois pour ajouter le path dans `$PATH`)
+
+### Source pour include un script temporairement
+- Lancer la commande : `Source [FICHIER]` (En mémoire jusqu'au relancement du shell !)
+  - Utile pour par exemple créer une liste d'alias
+- équivaut à `. [FICHIER]` permet de l'inclure dans le shell en cours d'utilisation
 
 # Fichiers utiles
 - `more /etc/sudoers` Liste des comptes SU

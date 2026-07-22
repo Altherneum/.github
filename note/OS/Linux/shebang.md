@@ -8,6 +8,7 @@ Sur la même ligne est précisé l'interpréteur permettant d'exécuter ce scrip
 - `#!/bin/sh`
 - `#!/bin/sh -x`
 - `#!/bin/bash`
+  - Aussi : `#!bin/bash` mais (sans le premier slash) est incorrecte dans la quasi-totalité des cas, car elle spécifie un chemin relatif qui peut ne pas exister
 ### Autres Shebang
 - `#!/usr/bin/perl`
 - `#!/usr/bin/tcl`

@@ -1,4 +1,12 @@
 # User
+## Type d'utilisateurs
+- Root
+  - UUID : 0
+- Administratif (Système)
+  - UUID < 1000
+- Utilisateurs
+  - UUID > 1000
+
 ## Add user
 - Dans l'ensemble, adduser est souvent plus convivial et pratique pour ajouter des utilisateurs
 - Tandis que useradd est plus approprié pour une utilisation dans des scripts
@@ -6,15 +14,27 @@
 - `adduser` / `useradd`
   - `useradd [USER]` Créer un utilisateur
   - `useradd -m -s /bin/bash [USER]` Créer l'utilisateur et son `/home` et précise comme shell `bash`
-  - `useradd -m -p $(openssl passwd -1 $password) -s /bin/bash "$username"` Permet de créer l'utilisateur à partir d'une variable et de chiffrer son mot de passe 
+  - `useradd -m -p $(openssl passwd -1 $password) -s /bin/bash "$username"` Permet de créer l'utilisateur à partir d'une variable et de chiffrer son mot de passe
 
-## Edit user
+## Changer le mot de passe si besoin
+[# Password](#Password)
+
+## Lister les utilisateurs
+- `more /etc/passwd` Liste des utilisateurs
+- `cut -d: -f1 /etc/passwd` Liste uniquement les utilisateurs sans le reste du fichier
+- `awk -F: '{ print $1}' /etc/passwd` Liste uniquement les utilisateurs sans le reste du fichier
+
+## Modifier les utilisateurs et leurs groupes
 - `usermod`
+
 ### Ajouter à un groupe principal
 - `usermod -g [GROUP] [USER]` Ajoute l'utilisateur à un groupe principal
+
 ### Ajouter à des groupes secondaires
 - `usermod -a -G [GROUP] [USER]` Ajoute l'utilisateur au groupe secondaire
 - `usermod -a -G [GROUP],[GROUP2],[GROUP3] [USER]` Ajoute plusieurs groupes secondaires à l'utilisateur
+  - `sudo usermod --append --groups [GROUP1],[GROUP2],... [USER]`
+
 ### Retirer à des groupes
 - `deluser [USER] [GROUP]` Retire l'utilisateur du groupe secondaire
 
@@ -28,25 +48,14 @@
 ## Add group
 - `addgroup` / `groupadd`
   - `addgroup [GROUPName]` Créer un groupe
+
 ## Edit group
 - `groupmod` / `modgroup`
   - `groupmod -n [GROUPName] [NEWGroupName]` Renomme le groupe
+
 ## Delete group
 - `groupdel` / `delgroup`
   - `groupdel [GROUPName]`
-
-# Exemple pour créer des utilisateurs
-## Crée l'utilisateur
-- `useradd [USER]`
-## Ajouter des groupes secondaires
-- `sudo usermod --append --groups [GROUP1],[GROUP2],... [USERNAME]`
-## Changer le mot de passe si besoin
-[# Password](#Password)
-
-## Lister les utilisateurs
-- `more /etc/passwd` Liste des utilisateurs
-- `cut -d: -f1 /etc/passwd` Liste uniquement les utilisateurs sans le reste du fichier
-- `awk -F: '{ print $1}' /etc/passwd` Liste uniquement les utilisateurs sans le reste du fichier
 
 ## Lister les groupes
 - `more /etc/group` Liste les groupes et leurs utilisateurs

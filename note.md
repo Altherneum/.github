@@ -192,20 +192,9 @@ to setup & use for .MD visuals
   - `export` Variable global (temporaire)
   - `PAGER=most` Pagination passer sur le software most
 
-## Shells list
-- `more etc/shells` Liste des shells disponibles
-- `more /etc/passwd` Affiche la liste des utilisateurs et processus et leurs shells
-- `echo $SHELL` Affiche le shell actuel
-  - `echo $0` Affiche le nom du shell actuel
-- `ps -p $$` Affiche les détails du shell actuel
 
-- `chsh` Change de shell
-- `ls -l /bin/sh` Affiche les shells
-- `apt install zsh` Install ZSH shell
 
-## WhereIs
-- `whereis zsh` Affiche le chemin de zsh
-- `more [File]` ????
+
 
 ## Source list
 - `nano /etc/apt/source.list` liste des repo
@@ -234,39 +223,6 @@ set functioncolor green
 - `tree` Listing en arbre des dossiers
 - `apt install tree`
 
-## Password
-- `pwck` Vérifie la cohérance entre passwd et shadow
-
-- `more etc/passwd` liste d'utilisateurs
-  - Utilisateurs, x (ancien MDP), UUID, ID de groupe, nom d'affichage, répertoire de connexion, shell par défaut
-    - `man 5 passwd`
-- `more etc/shadow` Liste des mot de passe (chiffrés via `crypt`)
-  - Utilisateurs, mot de passe, Date de dernier changement du mot de passe, 0|1 si il doit changer de mot de passe, âge minimum du mot de passe, âge maximum du mot de passe, période d'avertissement avant expiration, période d'inactivité du mot de passe, date de fin du mot de passe
-
-## Type d'utilisateurs
-- Root
-  - UUID : 0
-- Administratif (Système)
-  - UUID < 1000
-- Utilisateurs
-  - UUID > 1000
-## Echo same line
-- If it does not work on your system, you can replace this way,
-  - `echo "test \c"; echo " same line"`
-- can become,
-  - `echo -n "test"; echo " same line"`
-## Exécuter un fichier
-- Taper son nom `File.sh`
-
-- Taper son nom relatif `./File.txt` ou `/[PATH]/[FILE].sh`
-  - Ou un nom dupliqué : (Ex rm en fichier alors que la commande rm existe)
-- Le déplacer dans `/bin` puis `source [PATH]` le fichier ou est `bin` (Sourcer une seul fois pour ajouter le path dans `$PATH`)
-
-- Lancer la commande : `Source [FICHIER]` (En mémoire jusqu'au relancement du shell !)
-- équivaut à `. [FICHIER]`
-## Include
-`.` devant un fichier permet de l'inclure dans le shell en cours d'utilisation
-
 ## STD
 - `stdin` Taper au clavier
 - `stdout` Sortie écran
@@ -276,29 +232,11 @@ set functioncolor green
 - Options et arguments
 - Code de retour
 
-## Pipe
-Le résultat de la commande devant le pipe (`|`), devient la commande après le pipe
-- `systemctl | wc -l` Compte le nombre de ligne du résultat de la commande systemctl
-## Lien symbolique
-`ln -ls`
-
 ## Cmd to doc
 - `Date`
   - `Date +%T`
 - `Nano`
 - `Clear` Clear l'interface de commande
-
-## Config files
-`/etc/profile` is a global file that gets run before `~/.profile`.
-
-`/etc/profile.d/` is a folder that contains scripts called by `/etc/profile`
-When `/etc/profile` is called (when you start/login a shell), it searches for any files ending in `.sh` in `/etc/profile.d/` and runs them with one of these commands:
-`source /etc/profile.d/myfile.sh`
-`. /etc/profile.d/myfile.sh`
-
-Technically, `/etc/bash.bashrc` is invoked for interactive, non-login bash shells for all users.
-
-However, usually `/etc/profile` (which is invoked for all login shells) calls `/etc/bash.bashrc` as well. So that means `/etc/bash.bashrc` is also invoked for all logins shells as well.
 
 ## Run CMD on open shell
 /etc/bash.bashrc
@@ -318,11 +256,6 @@ ls -R
 Trash / void
 Envoyer des infos dedans les supprimes
 `[CMD] 2>/dev/null` envoie les erreurs dans le dev/null
-
- 
-## Shebang
-Chemin du shell à utiliser
-Ex : `#!bin/bash`
 
 ## Types set
 - `typeset -i i=10`

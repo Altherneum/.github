@@ -1,3 +1,27 @@
+# Shell
+## Lister et changer de shell
+- `more etc/shells` Liste des shells disponibles
+- `more /etc/passwd` Affiche la liste des utilisateurs et processus et leurs shells
+- `echo $SHELL` Affiche le shell actuel
+  - `echo $0` Affiche le nom du shell actuel
+- `ps -p $$` Affiche les détails du shell actuel ;
+```
+    PID TTY          TIME CMD
+3943125 pts/0    00:00:00 bash
+```
+- `chsh` Change de shell
+- `ls -l /bin/sh` Affiche les shells
+- `apt install zsh` Install ZSH shell
+## Fichiers exécutés automatiquement à l'ouverture d'un shell
+- `/etc/profile` est un fichier qui se lance avant `~/.profile`
+- `/etc/profile.d/` est le dossier qui contient les scripts appelés par `/etc/profile`
+- Quand `/etc/profile` est appelé (lors quand lancez un terminal, ou vous connectez à un shell via  par exemple `SSH`), cela recherche tout fichiers finissant par `.sh` dans `/etc/profile.d/` et les lances avec une de ces commandes :
+  - `source /etc/profile.d/<myfile>.sh`
+  - `. /etc/profile.d/<myfile>.sh`
+- Techniquement, `/etc/bash.bashrc` est lancé pour les shells "non interactif", et shells non connectés pour tout utilisateurs
+- Par contre, habituellement `/etc/profile` (est lancé pour tout les shells) appel `/etc/bash.bashrc` aussi
+  - Cela veut dire que `/etc/bash.bashrc` est aussi appelé pour tout les shells de connexions
+
 # Les shells linux
 ## Évolution des Shells Unix : de Thompson à Bash
 Voici un résumé chronologique structuré pour un cours, détaillant la transition des premiers interpréteurs de commandes vers le standard moderne
