@@ -27,7 +27,7 @@
 - Les fichiers appartenant aux packages précisés seront supprimés et la base de donnée sera mise à jour
 - La plupart des fichiers de configuration seront sauvegardés avec l'extension .pacsave sauf si l'option --nosave est saisie
 ### Supprimer les paquets temporaires
-- `pacman -Scc` Permet de supprimer les paquets temporaires et tout fichiers présent dans le cache
+- `pacman -Scc` Permet de supprimer les paquets temporaires et tous les fichiers présents dans le cache
   - Peut débloquer pacman dans le cas : `erreur : la synchronisation de toutes les bases de données a échoué (verrouillage de la base de données impossible)`
   - Vous devrez télécharger vos paquets à nouveau pour downgrate ou re-installer d'autres version
 ### Supprimer les paquets non installés du cache
@@ -37,7 +37,7 @@
 - [# Supprimer les paquets orphelins](#supprimer-les-paquets-orphelins)
 
 ## Ne pas demander la confirmation de pacman
-- `pacman --noconfirm <PACKAGE>` Acquitte automatiquement tous les messages et demandes de confirmation
+- `pacman --noconfirm <PACKAGE>` Ignore / autorise automatiquement tous les messages et demandes de confirmation
 - À éviter sauf si vous souhaitez exécuter pacman dans un script
 
 ## Installer uniquement les packages requis avec pacman
@@ -124,11 +124,11 @@ Validé par               : Signature
 - Plusieurs packages peuvent être donnés sur la ligne de commande
 ### Gérer les paquets orphelins
 #### Lister les paquets orphelins
-- `pacman -Qdt` Permet de lister les paquets n'étants plus utiliser par le système (et donc à supprimer)
+- `pacman -Qdt` Permet de lister les paquets n'étant plus utilisés par le système (et donc à supprimer)
   - Ou `pacman -Qtdq` qui les listes sans le numéro de version et formattage
-- `-d` that are no longer required by any installed package `-t`, with quiet output `-q`
+- `-d` qui ne sont plus requis par un paquet installé `-t`, sortie non verbeuse (moins d'informations affichés) `-q`
 #### Supprimer les paquets orphelins
-- `sudo pacman -Rns $(pacman -Qtdq)` Supprime tout les paquets orphelins
+- `sudo pacman -Rns $(pacman -Qtdq)` Supprime tous les paquets orphelins
   - La commande de suppression utilise `-R` pour supprimer, `-s` pour de manière récursive supprimer les dépendances non nécéssaires, et `-n` pour supprimer les fichiers de configurations associés
 
 ## Autres gestion de pacman
@@ -140,4 +140,4 @@ Validé par               : Signature
   - Utilisez-en deux pour supprimer tous les fichiers du cache
   - Dans les deux cas, vous aurez le choix entre oui et non pour supprimer les paquets et/ou les bases de données téléchargées inutilisées
 ### Supprimer le lock de pacman
-`sudo rm /var/lib/pacman/db.lck` Permet de supprimer le fichier `db.lck` A.K.A `database.lock` vérouillant pacman
+`sudo rm /var/lib/pacman/db.lck` Permet de supprimer le fichier `db.lck` A.K.A `database.lock` verrouillant pacman
