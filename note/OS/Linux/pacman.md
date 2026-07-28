@@ -1,5 +1,8 @@
 # pacman
-Utilitaire de gestion de package
+[Wikipedia.org /wiki /pacman_(Arch_Linux)](https://fr.wikipedia.org/wiki/Pacman_(Arch_Linux))
+- Utilitaire de gestion de package officiel d'Arch Linux
+- Pacman est une contraction de package-manager (gestionnaire de paquets)
+
 ## Installer un package avec pacman
 - `-S`, `--sync` Synchroniser les paquets
   - Les paquets sont installés directement depuis les dépôts distants, y compris toutes les dépendances nécessaires à leur exécution 
@@ -8,6 +11,8 @@ Utilitaire de gestion de package
 - Vous pouvez également spécifier la version requise : `pacman -S "bash>=3.2"`
   - Les guillemets sont nécessaires, sinon le shell interprète `>` comme une redirection vers un fichier
 - Vous pouvez aussi utiliser `pacman -Su` pour mettre à jour tous les packages périmés
+### Installer un package local via pacman
+`pacman -U <path><package>.pkg.tar.gz` Permet d'installer un paquet sous la forme de fichier
 ### Gestion des versions via pacman
 - Lors d'une mise à jour, pacman compare les versions pour déterminer quels packages ont besoin d'être mis à jour. Cette opération se déroule comme ceci :
   - **__Alphanumérique__**: `1.0a` < `1.0b` < `1.0beta` < `1.0p` < `1.0pre` < `1.0rc` < `1.0` < `1.0.a` < `1.0.1`
@@ -15,48 +20,36 @@ Utilitaire de gestion de package
 - De plus, il est possible d'intégrer une valeur date au nom de version : celle-ci sera prioritaire pour les comparaisons de version, à moins bien sûr que deux valeurs de date ne soient égales
   - Le format de date est `version`-`rel`
   - Par exemple `2:1.0-1` est toujours plus récent que `1:3.6-1`
+
 ## Supprimer un package avec pacman
 - `-R`, `--remove` Supprime des packages de votre système
 - On peut aussi marquer des groupes à supprimer : dans ce cas tous les packages du groupe seront supprimés
 - Les fichiers appartenant aux packages précisés seront supprimés et la base de donnée sera mise à jour
 - La plupart des fichiers de configuration seront sauvegardés avec l'extension .pacsave sauf si l'option --nosave est saisie
-## Mettre à jour un paque via pacman
-- `pacman -U`, `--upgrade` Mettez à niveau ou ajoutez des packages au système et installez les dépendances requises depuis les dépôts de synchronisation
-- Vous pouvez spécifier une URL ou un chemin d'accès
-- Il s'agit d'un processus de type « suppression puis ajout »
+### Supprimer les paquets temporaires
+- `pacman -Scc` Permet de supprimer les paquets temporaires et tout fichiers présent dans le cache
+  - Peut débloquer pacman dans le cas : `erreur : la synchronisation de toutes les bases de données a échoué (verrouillage de la base de données impossible)`
+  - Vous devrez télécharger vos paquets à nouveau pour downgrate ou re-installer d'autres version
+### Supprimer les paquets non installés du cache
+- `pacman -Sc` Supprime tous les paquets non installés du cache
+  - Garde les paquets actuellement installés en cache (utile pour plus tard afin de les re-installer)
+### Supprimer et lister les paquets orphelins
+- [# Supprimer les paquets orphelins](#supprimer-les-paquets-orphelins)
+
 ## Ne pas demander la confirmation de pacman
 - `pacman --noconfirm <PACKAGE>` Acquitte automatiquement tous les messages et demandes de confirmation
 - À éviter sauf si vous souhaitez exécuter pacman dans un script
+
 ## Installer uniquement les packages requis avec pacman
 - `pacman --needed <PACKAGE>` Installe seulement la cible qui n'est pas installée ou à jour.
-## Chercher un package avec pacman
-### Chercher un package pacman installé via query
-- `pacman -Q`, `--query` Interroger la base de données des packages
-- Cette opération permet de visualiser les packages installés et leurs fichiers, ainsi que les méta-informations sur chaque package (dépendances, conflits, date d'installation, date de compilation, taille)
-- Cette opération peut être effectuée sur la base de données locale des packages ou sur des fichiers de packages individuels
-  - Dans le premier cas, si aucun nom de package n'est fourni en ligne de commande, tous les packages installés seront interrogés
-- De plus, différents filtres peuvent être appliqués à la liste des packages. Voir `--query`
-#### Chercher un package pacman installé via query et grep
-- `pacman -Q | grep <PACKAGE>`
-### Lister les dossiers d'un package pacman
-- `pacman -Qo <package>`, `--owns --query <package>` Liste tous les dossiers inclus dans `<package>`
-- Plusieurs packages peuvent être donnés sur la ligne de commande
-### Lister les fichiers d'un package pacman
-- `pacman -Ql <package>`, `--list --query <package>` Liste tous les fichiers inclus dans `<package>`
-- Plusieurs packages peuvent être donnés sur la ligne de commande
-## Nettoyer le cache de pacman
-- `pacman -c <PACKAGE>`, `--clean` Supprimez du cache les paquets qui ne sont plus installés ainsi que les bases de données de synchronisation actuellement inutilisées pour libérer de l'espace disque
-- Lorsque pacman télécharge des paquets, il les enregistre dans un répertoire de cache
-  - De plus, les bases de données sont enregistrées pour chaque base de données de synchronisation téléchargée et ne sont pas supprimées
-- Utilisez un paramètre `--clean` pour supprimer uniquement les paquets qui ne sont plus installés
-  - Utilisez-en deux pour supprimer tous les fichiers du cache
-  - Dans les deux cas, vous aurez le choix entre oui et non pour supprimer les paquets et/ou les bases de données téléchargées inutilisées
-## Supprimer le lock de pacman
-`sudo rm /var/lib/pacman/db.lck` Permet de supprimer le fichier `db.lck` A.K.A `database.lock` vérouillant pacman
-## Supprimer les paquets temporaires
-- `pacman -Scc` Permet de supprimer les paquets temporaires 
-  - Peut débloquer pacman dans le cas : `erreur : la synchronisation de toutes les bases de données a échoué (verrouillage de la base de données impossible)`
+
 ## Mettre à jour via pacman
+### Mettre à jour les paquets via pacman
+- `pacman -U`, `--upgrade` Mettez à niveau ou ajoutez des packages au système et installez les dépendances requises depuis les dépôts de synchronisation
+- Vous pouvez spécifier une URL ou un chemin d'accès
+- Il s'agit d'un processus de type « suppression puis ajout »
+
+- [# Installer un package local via pacman](#installer-un-package-local-via-pacman)
 ### Mettre à jour le système via pacman
 - `-u`, `--sysupgrade` Met à jour tous les packages périmés
 - Chaque package installé sur votre système va être examiné et mis à jour si un package plus récent existe
@@ -72,7 +65,7 @@ Utilitaire de gestion de package
   - Son utilisation fréquente est inutile et consomme inutilement la bande passante des miroirs.
 - Le triple `-y` (`-Syyy`) N'a aucun effet supplémentaire
   - Le système ignore tout au-delà de deux y, car le niveau de force est déjà atteint avec deux 
-## Mettre tout à jour via pacman
+### Mettre tout à jour via pacman
 - `pacman -Syu`
   - `s` Permet de synchroniser / installer
   - `y` Permet de télécharger une copie fraiche du `repo.db`
@@ -80,14 +73,22 @@ Utilitaire de gestion de package
 - ⚠️ Conseil
   - Suivre les recommandations de l' Wiki est essentiel
   - Les guides tiers, notamment sur YouTube, peuvent promouvoir des pratiques inutiles comme `-Syyu` ou `-Syyyu`
-  - Utilisez `pacman -Syu` pour la mise à jour quotidienne 
-## Installer un package local via pacman
-`pacman -U <path><package>.pkg.tar.gz` Permet d'installer un paquet sous la forme de fichier
-## Vérifier la raison de l'installation d'un package
+  - Utilisez `pacman -Syu` pour la mise à jour quotidienne
+
+## Chercher un package avec pacman
+### Lister les packages pacman installés via query
+- `pacman -Q`, `--query` Interroger la base de données des packages
+- Cette opération permet de visualiser les packages installés et leurs fichiers, ainsi que les méta-informations sur chaque package (dépendances, conflits, date d'installation, date de compilation, taille)
+- Cette opération peut être effectuée sur la base de données locale des packages ou sur des fichiers de packages individuels
+  - Dans le premier cas, si aucun nom de package n'est fourni en ligne de commande, tous les packages installés seront interrogés
+- De plus, différents filtres peuvent être appliqués à la liste des packages. Voir `--query`
+### Chercher un package pacman installé via query et grep
+- `pacman -Q | grep <PACKAGE>` Cette commande affiche une liste concise de tous les paquets actuellement installés sur votre système, accompagnée de leur numéro de version
+### Vérifier la raison de l'installation d'un package
 - `pacman -Qi <PACKAGE>`
   - `-Q` Query
   - `-i` Affiche les informations d'un paquet (`-ii` pour les fichiers de configuration protégés)
-### Exemple d'information sur un package
+#### Exemple d'information sur un package
 Exemple des informations du package `pacman`, via `pacman -Qi pacman`
 ```
 Nom                      : pacman
@@ -113,3 +114,30 @@ Motif d’installation     : Installé comme dépendance d’un autre paquet
 Script d’installation    : Non
 Validé par               : Signature
 ```
+### Lister les paquets installés manuellement
+- `pacman -Qe` Permet de lister les paquets n'ayant pas étés installés comme dépendances, mais manuellement
+### Lister les dossiers d'un package pacman
+- `pacman -Qo <package>`, `--owns --query <package>` Liste tous les dossiers inclus dans `<package>`
+- Plusieurs packages peuvent être donnés sur la ligne de commande
+### Lister les fichiers d'un package pacman
+- `pacman -Ql <package>`, `--list --query <package>` Liste tous les fichiers inclus dans `<package>`
+- Plusieurs packages peuvent être donnés sur la ligne de commande
+### Gérer les paquets orphelins
+#### Lister les paquets orphelins
+- `pacman -Qdt` Permet de lister les paquets n'étants plus utiliser par le système (et donc à supprimer)
+  - Ou `pacman -Qtdq` qui les listes sans le numéro de version et formattage
+- `-d` that are no longer required by any installed package `-t`, with quiet output `-q`
+#### Supprimer les paquets orphelins
+- `sudo pacman -Rns $(pacman -Qtdq)` Supprime tout les paquets orphelins
+  - La commande de suppression utilise `-R` pour supprimer, `-s` pour de manière récursive supprimer les dépendances non nécéssaires, et `-n` pour supprimer les fichiers de configurations associés
+
+## Autres gestion de pacman
+### Nettoyer le cache de pacman
+- `pacman -c <PACKAGE>`, `--clean` Supprimez du cache les paquets qui ne sont plus installés ainsi que les bases de données de synchronisation actuellement inutilisées pour libérer de l'espace disque
+- Lorsque pacman télécharge des paquets, il les enregistre dans un répertoire de cache
+  - De plus, les bases de données sont enregistrées pour chaque base de données de synchronisation téléchargée et ne sont pas supprimées
+- Utilisez un paramètre `--clean` pour supprimer uniquement les paquets qui ne sont plus installés
+  - Utilisez-en deux pour supprimer tous les fichiers du cache
+  - Dans les deux cas, vous aurez le choix entre oui et non pour supprimer les paquets et/ou les bases de données téléchargées inutilisées
+### Supprimer le lock de pacman
+`sudo rm /var/lib/pacman/db.lck` Permet de supprimer le fichier `db.lck` A.K.A `database.lock` vérouillant pacman
