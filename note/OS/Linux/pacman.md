@@ -44,6 +44,22 @@
 - `pacman --needed <PACKAGE>` Installe seulement la cible qui n'est pas installée ou à jour.
 
 ## Mettre à jour via pacman
+### Downgrade un paquet via pacman
+#### Downgrade en utilisant le cache
+- `pacman` garde les anciennes versions des paquets dans `/var/cache/pacman/pkg/` sauf si nettoyé
+  - Lister les versions disponibles `ls /var/cache/pacman/pkg/ | grep package_name`
+  - Installer l'ancien paquet `sudo pacman -U /var/cache/pacman/pkg/package_name-old_version-architecture.pkg.tar.zst`
+
+## Downgrade en utilisant le serveur Arch Linux d'archive
+Si la version n'est plus dans le cache, téléchargé le depuis l'[Arch Linux Archive](https://archive.archlinux.org/packages/)
+
+- Trouver l'URL du paquet dans l'archive
+- Télécharger et installer le paquet `sudo pacman -U https://archive.archlinux.org/packages/p/<package_name>/<package_name-old_version-architecture>.pkg.tar.zst`
+- Ou téléchargez le manuellement pour l'installer
+```
+wget https://archive.archlinux.org/packages/p/package_name/package_name-old_version-architecture.pkg.tar.zst
+sudo pacman -U package_name-old_version-architecture.pkg.tar.zst
+```
 ### Mettre à jour les paquets via pacman
 - `pacman -U`, `--upgrade` Mettez à niveau ou ajoutez des packages au système et installez les dépendances requises depuis les dépôts de synchronisation
 - Vous pouvez spécifier une URL ou un chemin d'accès
