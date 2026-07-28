@@ -206,6 +206,11 @@ pacman -S --needed --noconfirm vulkan-radeon lib32-vulkan-radeon
 echo "Displaying each VGA & 3D env"
 eval "$sleepcmd"
 lspci -k | grep -A 3 -E "(VGA|3D)"
+#### Fix Nvidia sleep_freeze_user_session
+mkdir -p /etc/systemd/system/systemd-suspend.service.d
+nano /etc/systemd/system/systemd-suspend.service.d/20-re-enable-freeze.conf
+echo "[Service]" >> /etc/systemd/system/systemd-suspend.service.d/20-re-enable-freeze.conf
+echo "Environment=SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=true" >> /etc/systemd/system/systemd-suspend.service.d/20-re-enable-freeze.conf
 
 # mkinitcpio
 echo "MKInitCPIO"
