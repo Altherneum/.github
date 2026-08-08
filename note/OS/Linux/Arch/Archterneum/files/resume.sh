@@ -5,7 +5,8 @@
 ADDR=$(hyprctl activewindow -j | jq -r '.address')
 
 if [ -n "$ADDR" ] && [ "$ADDR" != "null" ]; then
-    WORKSPACE=0
-    hyprctl dispatch "hl.dsp.window.move({workspace = \"${WORKSPACE}\", window = \"address:${ADDR}\"})"
-    hyprctl dispatch workspace 0
+    WORKSPACE=$(hyprctl activeworkspace -j | jq '.id')
+    if [ -n "$WORKSPACE" ] && [ "$WORKSPACE" != "null" ]; then
+        hyprctl dispatch "hl.dsp.window.move({workspace = \"${WORKSPACE}\", window = \"address:${ADDR}\"})"
+    fi
 fi
