@@ -123,7 +123,7 @@ hl.plugin.hyprbars.add_button({
     fg_color = "rgb(FFFFFF)",
     size = 25,
     icon = "⇪",
-    action   = "~/.config/hypr/resume.sh",
+    action = "~/.config/hypr/resume.sh",
 })
 
 local mainMod = "SUPER"
