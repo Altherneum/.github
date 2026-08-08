@@ -45,7 +45,7 @@ hl.config({
             bar_padding = 50,
             bar_button_padding = 10,
             bar_text_align = "left",
-            on_double_click = "hyprctl dispatch 'hl.dsp.window.fullscreen({ action = \"toggle\" })'",
+            on_double_click = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" })'",
         },
     },
 })
@@ -73,7 +73,7 @@ hl.plugin.hyprbars.add_button({
     fg_color = "rgb(FFFFFF)",
     size = 25,
     icon = "🗖",
-    action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ action = \"toggle\" })'",
+    action = "hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" })'",
 })
 
 hl.plugin.hyprbars.add_button({
@@ -125,6 +125,14 @@ hl.plugin.hyprbars.add_button({
     icon = "⇪",
     action = "~/.config/hypr/resume.sh",
 })
+
+hl.plugin.hyprbars.add_button({
+    bg_color = "rgba(0, 0, 0, 0)",
+    fg_color = "rgb(FFFFFF)",
+    size = 10,
+    icon = "|",
+    action = "",
+})   
 
 local mainMod = "SUPER"
 hl.bind(mainMod .. " + Super_L", hl.dsp.exec_cmd("pkill rofi || " .. menu), { release = true })
