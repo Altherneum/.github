@@ -89,7 +89,8 @@ echo "Hyprland configuration"
 eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/hypr 
 echo $userpassword | sudo -S cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.default
-echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland.conf
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.conf.old https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland.conf
+echo $userpassword | sudo -S curl -o ~/.config/hypr/hyprland.lua https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland.lua
 
 # Hyprlock configuration
 echo "HyprLock configuration"
@@ -244,6 +245,13 @@ echo "XDG theme configuration"
 eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p ~/.config/xdg-desktop-portal/
 echo $userpassword | sudo -S curl -o ~/.config/xdg-desktop-portal/hyprland-portals.conf https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/hyprland-portals.conf
+
+# HyprBar minimize
+echo $userpassword | sudo -S curl -o ~/.config/hypr/minimize.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/minimize.sh
+echo $userpassword | sudo -S chmod +x ~/.config/hypr/minimize.sh
+# HyprBar un-minimize
+echo $userpassword | sudo -S curl -o ~/.config/hypr/resume.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/resume.sh
+echo $userpassword | sudo -S chmod +x ~/.config/hypr/resume.sh
 
 # Keyboard layout
 echo "KeyBoard Layout"

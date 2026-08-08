@@ -89,6 +89,9 @@ echo "GenFSTab"
 eval "$sleepcmd"
 genfstab -U /mnt > /mnt/etc/fstab
 
+# Configuration de la console (TTY)
+echo "KEYMAP=fr" > /mnt/etc/vconsole.conf
+
 # Chroot
 echo "chroot.sh"
 eval "$sleepcmd"
