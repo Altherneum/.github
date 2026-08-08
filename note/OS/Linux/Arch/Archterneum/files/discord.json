@@ -48,7 +48,8 @@
             "enabled": true
         },
         "AccountPanelServerProfile": {
-            "enabled": true
+            "enabled": true,
+            "prioritizeServerProfile": false
         },
         "AlwaysAnimate": {
             "enabled": true
@@ -101,7 +102,7 @@
             "enabled": false
         },
         "BiggerStreamPreview": {
-            "enabled": false
+            "enabled": true
         },
         "BlurNSFW": {
             "enabled": false
@@ -152,7 +153,26 @@
             "enabled": false
         },
         "CustomRPC": {
-            "enabled": false
+            "enabled": true,
+            "type": 0,
+            "appName": "🐧 Arch Linux",
+            "details": "Hyprland, Wayland",
+            "state": "",
+            "partySize": 0,
+            "partyMaxSize": 0,
+            "buttonOneText": "Contact",
+            "buttonOneURL": "https://doc.altherneum.fr/admin/contact",
+            "timestampMode": 3,
+            "startTime": 1,
+            "endTime": 999999999999999,
+            "imageBig": "",
+            "imageBigTooltip": "",
+            "imageBigURL": "",
+            "imageSmall": "",
+            "detailsURL": "",
+            "buttonTwoText": "My Arch",
+            "buttonTwoURL": "https://myarch.altherneum.fr/",
+            "appID": "0000000000000001"
         },
         "Dearrow": {
             "enabled": false
@@ -181,7 +201,8 @@
             "enableStreamQualityBypass": true,
             "enableEmojiBypass": true,
             "transformEmojis": true,
-            "transformStickers": true
+            "transformStickers": true,
+            "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -199,7 +220,7 @@
             "enabled": false
         },
         "FixSpotifyEmbeds": {
-            "enabled": false
+            "enabled": true
         },
         "FixYoutubeEmbeds": {
             "enabled": true
@@ -255,9 +276,6 @@
         "KeepCurrentChannel": {
             "enabled": false
         },
-        "LastFMRichPresence": {
-            "enabled": false
-        },
         "LoadingQuotes": {
             "enabled": false
         },
@@ -271,7 +289,11 @@
             "enabled": false
         },
         "MessageLatency": {
-            "enabled": true
+            "enabled": true,
+            "latency": 2,
+            "detectDiscordKotlin": true,
+            "showMillis": false,
+            "ignoreSelf": false
         },
         "MessageLinkEmbeds": {
             "enabled": false
@@ -359,10 +381,10 @@
             "enabled": false
         },
         "PermissionsViewer": {
-            "enabled": false
+            "enabled": true
         },
         "petpet": {
-            "enabled": false
+            "enabled": true
         },
         "PictureInPicture": {
             "enabled": false
@@ -408,7 +430,7 @@
             "enabled": false
         },
         "ReverseImageSearch": {
-            "enabled": false
+            "enabled": true
         },
         "ReviewDB": {
             "enabled": false
@@ -423,7 +445,7 @@
             "enabled": false
         },
         "SendTimestamps": {
-            "enabled": false
+            "enabled": true
         },
         "ServerInfo": {
             "enabled": true
@@ -461,19 +483,24 @@
             "enabled": true
         },
         "SilentTyping": {
-            "enabled": true
+            "enabled": true,
+            "isEnabled": true,
+            "showIcon": false
         },
         "SortFriendRequests": {
             "enabled": false
         },
         "SpotifyControls": {
-            "enabled": false
+            "enabled": true,
+            "hoverControls": false
         },
         "SpotifyCrack": {
-            "enabled": false
+            "enabled": true,
+            "noSpotifyAutoPause": true,
+            "keepSpotifyActivityOnIdle": false
         },
         "SpotifyShareCommands": {
-            "enabled": false
+            "enabled": true
         },
         "StartupTimings": {
             "enabled": false
@@ -494,7 +521,8 @@
             "enabled": false
         },
         "Translate": {
-            "enabled": false
+            "enabled": true,
+            "autoTranslate": false
         },
         "TypingIndicator": {
             "enabled": false
@@ -524,10 +552,10 @@
             "enabled": false
         },
         "ValidReply": {
-            "enabled": false
+            "enabled": true
         },
         "ValidUser": {
-            "enabled": false
+            "enabled": true
         },
         "VoiceChatDoubleClick": {
             "enabled": true
@@ -542,7 +570,9 @@
             "enabled": false
         },
         "ViewRaw": {
-            "enabled": true
+            "enabled": true,
+            "clickMethod": "Left",
+            "messageContextMenu": false
         },
         "VoiceDownload": {
             "enabled": true
@@ -560,13 +590,13 @@
             "enabled": true
         },
         "WhoReacted": {
-            "enabled": false
+            "enabled": true
         },
         "XSOverlay": {
             "enabled": false
         },
         "YoutubeAdblock": {
-            "enabled": false
+            "enabled": true
         },
         "BadgeAPI": {
             "enabled": true
@@ -579,6 +609,33 @@
             "enabled": true,
             "settingsLocation": "aboveNitro",
             "includeVencordInfoWhenCopying": true
+        },
+        "MusicRichPresence": {
+            "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "TenorGifSearch": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
+            "enabled": true
+        },
+        "ContextMenuAPI": {
+            "enabled": true
+        },
+        "DisableDeepLinks": {
+            "enabled": true
+        },
+        "NoticesAPI": {
+            "enabled": true
+        },
+        "SupportHelper": {
+            "enabled": true
+        },
+        "WebContextMenus": {
+            "enabled": true
         }
     },
     "uiElements": {
@@ -595,6 +652,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1778319187703
-    }
+        "settingsSyncVersion": 1786172227478
+    },
+    "windowsMaterial": "none"
 }
