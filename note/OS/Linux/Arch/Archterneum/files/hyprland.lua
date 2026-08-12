@@ -1,3 +1,19 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("hyprpm reload -n")
+    hl.exec_cmd("~/.config/hypr/mpvpaper.sh startLoop 3600")
+    hl.exec_cmd("hyprlock -c ~/.config/hypr/hyprlock.conf --immediate-render || hyprctl dispatch exit")
+    hl.exec_cmd("waybar")
+    hl.exec_cmd("hypridle -c ~/.config/hypr/hypridle.conf")
+    hl.exec_cmd("nm-applet")
+    hl.exec_cmd("wl-paste --watch cliphist store")
+    hl.exec_cmd("vesktop --start-minimized")
+    hl.exec_cmd("steam -silent -vgui")
+    hl.exec_cmd("zen-browser --new-tab https://doc.altherneum.fr/outils/cube")
+    hl.exec_cmd("cliphist wipe")
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Adwaita-dark\"")
+end)
+
 hl.monitor({
     output = "DP-3",
     mode = "1920x1080",
@@ -289,19 +305,3 @@ hl.config({
         },
     },
 })
-
-hl.on("hyprland.start", function()
-    hl.exec_cmd("~/.config/hypr/mpvpaper.sh startLoop 3600")
-    hl.exec_cmd("hyprlock -c ~/.config/hypr/hyprlock.conf --immediate-render || hyprctl dispatch exit")
-    hl.exec_cmd("waybar")
-    hl.exec_cmd("hypridle -c ~/.config/hypr/hypridle.conf")
-    hl.exec_cmd("nm-applet")
-    hl.exec_cmd("wl-paste --watch cliphist store")
-    hl.exec_cmd("vesktop --start-minimized")
-    hl.exec_cmd("steam -silent -vgui")
-    hl.exec_cmd("zen-browser --new-tab https://doc.altherneum.fr/outils/cube")
-    hl.exec_cmd("hyprpm reload")
-    hl.exec_cmd("cliphist wipe")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Adwaita-dark\"")
-end)
