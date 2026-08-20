@@ -11,6 +11,7 @@
     "frameless": false,
     "transparent": true,
     "winCtrlQ": false,
+    "windowsMaterial": "none",
     "disableMinSize": false,
     "winNativeTitleBar": false,
     "plugins": {
@@ -491,8 +492,7 @@
             "enabled": false
         },
         "SpotifyControls": {
-            "enabled": true,
-            "hoverControls": false
+            "enabled": false
         },
         "SpotifyCrack": {
             "enabled": true,
@@ -500,7 +500,7 @@
             "keepSpotifyActivityOnIdle": false
         },
         "SpotifyShareCommands": {
-            "enabled": true
+            "enabled": false
         },
         "StartupTimings": {
             "enabled": false
@@ -652,7 +652,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1786172227478
-    },
-    "windowsMaterial": "none"
+        "settingsSyncVersion": 1787248424306
+    }
 }
