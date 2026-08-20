@@ -1,2 +1,5 @@
+sudo apt update
+sudo apt install -y nodejs npm build-essential python3
+
 curl -fsSL https://code-server.dev/install.sh | sh
 code-server --auth none
