@@ -7,6 +7,16 @@
             </object>
         </child>
         <child>
+            <object class="GtkMenuItem" id="suspend1800">
+                <property name="label">Suspend 30m</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="suspend3600">
+                <property name="label">Suspend 1H</property>
+            </object>
+        </child>
+        <child>
             <object class="GtkMenuItem" id="hibernat">
                 <property name="label">Hibernate</property>
             </object>
@@ -26,9 +36,3 @@
         </child>
     </object>
 </interface>
-
-
-
-
-
-
