@@ -214,18 +214,6 @@ hl.window_rule({
     suppress_event = "maximize",
 })
 
-hl.window_rule({
-    match = {
-        class = "^$",
-        title = "^$",
-        xwayland = true,
-        float = true,
-        fullscreen = false,
-        pin = false,
-    },
-    no_focus = true,
-})
-
 hl.layer_rule({
     match = { namespace = "rofi" },
     blur = true,
@@ -297,11 +285,13 @@ hl.config({
         kb_variant = "",
         kb_model = "",
         kb_rules = "",
-        follow_mouse = 1,
+        follow_mouse = 0,
+        mouse_refocus = false,
+        float_switch_override_focus = 0,
         sensitivity = 0,
         numlock_by_default = true,
         touchpad = {
-            natural_scroll = false,
+        natural_scroll = false,
         },
     },
 })
