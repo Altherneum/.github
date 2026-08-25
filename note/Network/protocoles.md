@@ -52,7 +52,7 @@
 - SRV record qui généralise la notion de MX record, mais qui propose aussi des fonctionnalités avancées comme le taux de répartition de charge pour un service donné, standardisé dans la RFC 278227 ;
 - NAPTR record ou Name Authority Pointer record qui donne accès à des règles de réécriture de l'information, permettant des correspondances assez lâches entre un nom de domaine et une ressource. Il est spécifié dans la RFC 340328 ;
 - TXT record permet à un administrateur d'insérer un texte quelconque dans un enregistrement DNS (par exemple, cet enregistrement est utilisé pour implémenter la spécification Sender Policy Framework) ;
-- d'autres types d'enregistrements sont utilisés occasionnellement, ils servent simplement à donner des informations (par exemple, un enregistrement de type LOC indique l'emplacement physique d'un hôte, c'est-à-dire sa latitude et sa longitude). Certaines personnes[Qui ?] disent que cela aurait un intérêt majeur mais n'est que très rarement utilisé sur le monde Internet.
+- d'autres types d'enregistrements sont utilisés occasionnellement, ils servent simplement à donner des informations (par exemple, un enregistrement de type LOC indique l'emplacement physique d'un hôte, c'est-à-dire sa latitude et sa longitude). Certaines personnes disent que cela aurait un intérêt majeur mais n'est que très rarement utilisé sur le monde Internet.
 
 - [wikipedia.org/wiki/Domain_Name_System](https://fr.wikipedia.org/wiki/Domain_Name_System)
 

@@ -1,4 +1,4 @@
-Sur ce guide on va vous expliquer le fonctionnement du site  
+Sur ce guide on va vous expliquer le fonctionnement du site
 Tout les cours et guides utilisent le markdown en fichier principal
 
 # Comment aider ?
