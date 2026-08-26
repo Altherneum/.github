@@ -35,15 +35,28 @@ Par exemple : `mots à rechercher:date`
 Par exemple : `define:mots à définir`
 
 ### Exemple
+#### Github.com & token & .yml
 - [google.com/search?q=site:github.com+token+filetype:yml](https://www.google.com/search?q=site:github.com+token+filetype:pdf)  
 Recherche sur le site Github.com et des fichiers YML contenant le mot "token"
+#### Github.com & .pdf
 - [google.com/search?q=site:github.com+filetype:pdf](https://www.google.com/search?q=site:github.com+filetype:pdf)  
 Recherche sur le site Github.com et des fichiers PDF
-
 ![image Google dork](https://github.com/Altherneum/.github/blob/main/note/assets/images/google-dork.png?raw=true)
+#### Mediafire.com/file/
+- [google.com/search?q=site:mediafire.com/file/](https://google.com/search?q=site:mediafire.com/file/)
+#### Drive.Google.com
+##### Drive.Google.com/file
+[google.com/search?q=site:drive.google.com/file/](https://www.google.com/search?q=site:drive.google.com/file/)
+###### Drive.Google.com/file .pdf
+[google.com/search?q=site:drive.google.com/file/ ".pdf"](https://www.google.com/search?q=site:drive.google.com/file/+".pdf")
+###### Drive.Google.com/file .mp4
+[google.com/search?q=site:drive.google.com/file/ ".mp4"](https://www.google.com/search?q=site:drive.google.com/file/+".mp4")
+###### Drive.Google.com/file .png
+[google.com/search?q=site:drive.google.com/file/ ".png"](https://www.google.com/search?q=site:drive.google.com/file/+".png")
+##### Drive.Google.com/drive/folders
+[google.com/search?q=site:drive.google.com/drive/folders](https://www.google.com/search?q=site:drive.google.com/drive/folders)
 
 ## Outils et Ressources
-
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
 
 - `Base de données Google Dorks`: Un répertoire exhaustif de requêtes de Google Dork préconstruites
