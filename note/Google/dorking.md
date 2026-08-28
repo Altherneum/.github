@@ -79,9 +79,6 @@ Recherche sur le site GitLab.com et des fichiers .env contenant le mot "password
 #### Pastebin.com & api_key
 - [google.com/search?q=site:pastebin.com+api_key](https://www.google.com/search?q=site:pastebin.com+api_key)  
 Recherche sur Pastebin.com pour les snippets contenant "api_key"
-#### Bitbucket.org & credentials & .json
-- [google.com/search?q=site:bitbucket.org+credentials+filetype:json](https://www.google.com/search?q=site:bitbucket.org+credentials+filetype:json)  
-Recherche sur Bitbucket.org pour les fichiers JSON contenant "credentials"
 #### Stack Overflow & \"Stack Overflow用户\" + sql
 - [google.com/search?q=site:stackoverflow.com+\"Stack%20Overflow%E7%94%A8%E6%88%B7\"+sql](https://www.google.com/search?q=site:stackoverflow.com+\"Stack%20Overflow%E7%94%A8%E6%88%B7\"+sql)  
 Recherche sur Stack Overflow en chinois pour les questions SQL
@@ -92,14 +89,13 @@ Recherche de rapports budgétaires PDF sur les sites gouvernementaux
 - [google.com/search?q=site:linkedin.com/in+\"Chief%20Information%20Officer\"](https://www.google.com/search?q=site:linkedin.com/in+\"Chief%20Information%20Officer\")  
 Recherche de profils LinkedIn pour les CIO
 #### site:wikipedia.org + intext:\"climate change\"
-- [google.com/search?q=site:wikipedia.org+intext:%22climate%20change%22](https://www.google.com/search?q=site:wikipedia.org+intext:%22climate%20change%22)  
+- [google.com/search?q=site:wikipedia.org+intext:"climate" intext:"change"](https://www.google.com/search?q=site:wikipedia.org+intext:"climate"+intext:"change")  
 Recherche d'articles Wikipedia sur le changement climatique
 #### filetype:log + error
 - [google.com/search?q=filetype:log+error](https://www.google.com/search?q=filetype:log+error)  
 Recherche de fichiers log contenant l'erreur
-#### site:github.com + intitle:\"index of\" + src + filetype:js
-- [google.com/search?q=site:github.com+intitle:%22index%20of%22+src+filetype:js](https://www.google.com/search?q=site:github.com+intitle:%22index%20of%22+src+filetype:js)  
-Recherche de répertoires index contenant du JavaScript
+#### intitle:"index of /"
+- [google.com/search?q=intitle:"index of /"](https://www.google.com/search?q=intitle:"index+of+/")
 
 ## Outils et Ressources
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
