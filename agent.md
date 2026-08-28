@@ -76,36 +76,39 @@ Ce dépôt est le **dépôt .github** d’une organisation GitHub, dédié à la
 ```
 
 ## Explication rapide des dossiers et fichiers
-
-- **.** : racine du dépôt .github
+- *README.md* : Accueil du dépôt et description générale
+- *note.md* : Index ou résumé des notes à trier et ajouter dans un cours
+- *SECURITY.md* : Informations de sécurité, vulnérabilités, contacts
+- *SUPPORT.md* : Infos support, FAQ, contacts d’assistance
+- *CODE_OF_CONDUCT.md* : Code de conduite GitHub
+- *CONTRIBUTING.md* : Guide des contributions
+- *LICENSE.md* : Licence du dépôt
 - **note/** : répertoire central contenant toutes les notes et cours
   - **assets/** : ressources multimédias (images, PacketTracer, etc.)
-    - *images/* : images utilisées dans les documents Markdown
-    - *PacketTracer/* : captures de Packet Tracer
+    - **images/** : images utilisées dans les documents Markdown
+    - **PacketTracer/** : captures de Packet Tracer
   - **Azure/** : modèles Azure (bicep) et documentation associée
-    - *template/Disk*, *Network*, *VM* : sous‑répertoires pour différents types de ressources
   - **Code/** : exemples de code dans plusieurs langages
-    - *Java/*, *QML/*, *VSCode/*, *Web/* (Binaire, CSS, HTML, JS, SQL) : dossiers dédiés aux langages
+    - **Java/**, **QML/**, **VSCode/**, **Web/** (Binaire, CSS, HTML, JS, SQL) : dossiers dédiés aux langages
   - **Discord/** : notes sur l’utilisation de Discord
   - **Games/** : notes liées aux jeux vidéo
   - **Github/** : guides et tutoriels GitHub
-    - *Markdown/* : exemples de fichiers Markdown
+    - **Markdown** : exemples de fichiers Markdown
   - **Google/** : recherches Google, dorking
   - **IA/** : apprentissage machine / intelligence artificielle
   - **Malware/** : informations sur le malware (CVE, Discord)
-    - *CVE/* : CVE spécifiques
+    - **CVE** : CVE spécifiques
   - **Network/** : concepts réseaux
-    - *Cisco/* : configuration Cisco
+    - **Cisco/** : configuration Cisco
   - **OS/** : systèmes d’exploitation
-    - *Container/* : Docker, Kubernetes
-    - *ESXi/* : VMware ESXi
-    - *Linux/* : Commandes Linux expliqués
-      - *Arch/* : scripts Arch Linux
-        - *Archinstall/* : scripts d’installation d’Arch
-        - *Archterneum/* : scripts spécifiques à l’installation de mon PC (archlinux)
-          - *files/backgrounds*, *fonts* etc. : ressources utilisées dans les scripts
-    - *Termux/* : scripts pour Termux
-    - *Windows/* : scripts Windows, PowerShell, Active Directory
+    - **Container** : Docker, Kubernetes
+    - **ESXi** : VMware ESXi
+    - **Linux** : Commandes Linux expliqués
+      - **Arch** : scripts Arch Linux
+        - **Archinstall** : scripts d’installation d’Arch
+        - **Archterneum** : scripts spécifiques à l’installation de mon PC (archlinux)
+    - **Termux** : scripts pour Termux
+    - **Windows** : scripts Windows, PowerShell, Active Directory
   - **Retraite/** : notes sur la retraite
   - **RTFM/** : documentation de référence (PDF)
   - **Scam/** : notes sur les arnaques
@@ -120,7 +123,7 @@ Ce dépôt est le **dépôt .github** d’une organisation GitHub, dédié à la
 - **Manque de contenu** : lorsqu’un chapitre est absent ou incomplet (ex. « manque un sujet sur les VLANs »), ouvrir une issue avec le titre : `Sujet manquant dans <nom du cours> : <nom de la partie manquante>`
 - **Arch Linux** : la partie `OS/Linux/Arch` contient l’installation de mon PC sous Arch Linux ; les scripts sont destinés à être exécutés sur un système Arch servant de desktop et non sur d’autres distributions
 - **Pas d’émoticônes excessifs** : garder une documentation claire, sans surcharge visuelle
-- Ne pas utiliser `*` ou des chiffres `1.` en guise de début de ligne, mais utiliser les tiret et ne pas hésiter à utiliser des espacements pour les lignes tabulés !
-- Ne pas mettre de point en fin de phrase, ou de virgule ou tout autre ponctuation autre que `!` ou `?`
-- Ne pas utiliser les tableaux de préférences (sauf si il faut obligatoirement un format de tableau)
-- Ne pas utiliser les doubles espaces en markdown pour créer une nouvelle ligne, mais préférez utiliser le retour à la ligne
+- Ne pas utiliser `*` ou des chiffres `1.` en guise de début de ligne, mais **utiliser les tiret** et **utiliser des espacements pour les nouvelles lignes tabulés** !
+- **Ne pas mettre de point en fin de phrase**, ou de virgule **ou tout autre ponctuation** autre que `!` ou `?`
+- **Ne pas utiliser les tableaux markdown de préférences** (sauf si il faut obligatoirement un format de tableau)
+- **Ne pas utiliser les doubles espaces** en markdown pour créer une nouvelle ligne, mais préférez utiliser le retour à la ligne
