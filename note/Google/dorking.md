@@ -17,10 +17,10 @@ Par exemple : `pomme AND tarte`
 Par exemple : `pomme NOT banane`
 - `"` Permet de rechercher une phrase précise `"appel pour le secours"`
 - `*` Permet de rechercher plusieurs mots  
-Par exemple : au début `* à rechercher`  
-Par exemple : au milieu `mots * rechercher`  
-Par exemple : à la fin `mots à *`  
-Par exemple : plusieurs mots `* rechercher`
+  - Par exemple : au début `* à rechercher`  
+  - Par exemple : au milieu `mots * rechercher`  
+  - Par exemple : à la fin `mots à *`  
+  - Par exemple : plusieurs mots `* rechercher`
 - `site:` Limite les résultats à un domaine spécifique  
 Par exemple : `site:example.com mots à rechercher`
 - `intitle:` Limite les résultats aux pages dont le titre contient une expression donnée  
@@ -33,6 +33,24 @@ Par exemple : `filetype:pdf mots à rechercher`
 Par exemple : `mots à rechercher:date`
 - `define:` Retourne la définition d'une expression  
 Par exemple : `define:mots à définir`
+- `intext:` Recherche du texte sur la page
+Par exemple : `intext:"erreur"`
+- `link:` Trouve les pages qui lient vers une URL donnée
+Par exemple : `link:example.com`
+- `related:` Pages similaires à un site donné
+Par exemple : `related:example.com`
+- `cache:` Affiche la version mise en cache d'une page
+Par exemple : `cache:example.com`
+- `info:` Récupère des informations sur le domaine
+Par exemple : `info:example.com`
+- `allintitle:` Toutes les expressions dans le titre
+Par exemple : `allintitle:"data breach"`
+- `allinurl:` Toutes les expressions dans l'URL
+Par exemple : `allinurl:"admin panel"`
+- `numrange:` Recherche de plage numérique
+Par exemple : `numrange:1000..2000`
+- `daterange:` Recherche par plage de dates
+Par exemple : `daterange:20200101..20201231`
 
 ### Exemple
 #### Github.com & token & .yml
@@ -55,6 +73,33 @@ Recherche sur le site Github.com et des fichiers PDF
 [google.com/search?q=site:drive.google.com/file/ ".png"](https://www.google.com/search?q=site:drive.google.com/file/+".png")
 ##### Drive.Google.com/drive/folders
 [google.com/search?q=site:drive.google.com/drive/folders](https://www.google.com/search?q=site:drive.google.com/drive/folders)
+#### Gitlab.com & password & .env
+- [google.com/search?q=site:gitlab.com+password+filetype:env](https://www.google.com/search?q=site:gitlab.com+password+filetype:env)  
+Recherche sur le site GitLab.com et des fichiers .env contenant le mot "password"
+#### Pastebin.com & api_key
+- [google.com/search?q=site:pastebin.com+api_key](https://www.google.com/search?q=site:pastebin.com+api_key)  
+Recherche sur Pastebin.com pour les snippets contenant "api_key"
+#### Bitbucket.org & credentials & .json
+- [google.com/search?q=site:bitbucket.org+credentials+filetype:json](https://www.google.com/search?q=site:bitbucket.org+credentials+filetype:json)  
+Recherche sur Bitbucket.org pour les fichiers JSON contenant "credentials"
+#### Stack Overflow & \"Stack Overflow用户\" + sql
+- [google.com/search?q=site:stackoverflow.com+\"Stack%20Overflow%E7%94%A8%E6%88%B7\"+sql](https://www.google.com/search?q=site:stackoverflow.com+\"Stack%20Overflow%E7%94%A8%E6%88%B7\"+sql)  
+Recherche sur Stack Overflow en chinois pour les questions SQL
+#### site:.gov + filetype:pdf + budget
+- [google.com/search?q=site:.gov+filetype:pdf+budget](https://www.google.com/search?q=site:.gov+filetype:pdf+budget)  
+Recherche de rapports budgétaires PDF sur les sites gouvernementaux
+#### site:linkedin.com/in + \"Chief Information Officer\"
+- [google.com/search?q=site:linkedin.com/in+\"Chief%20Information%20Officer\"](https://www.google.com/search?q=site:linkedin.com/in+\"Chief%20Information%20Officer\")  
+Recherche de profils LinkedIn pour les CIO
+#### site:wikipedia.org + intext:\"climate change\"
+- [google.com/search?q=site:wikipedia.org+intext:%22climate%20change%22](https://www.google.com/search?q=site:wikipedia.org+intext:%22climate%20change%22)  
+Recherche d'articles Wikipedia sur le changement climatique
+#### filetype:log + error
+- [google.com/search?q=filetype:log+error](https://www.google.com/search?q=filetype:log+error)  
+Recherche de fichiers log contenant l'erreur
+#### site:github.com + intitle:\"index of\" + src + filetype:js
+- [google.com/search?q=site:github.com+intitle:%22index%20of%22+src+filetype:js](https://www.google.com/search?q=site:github.com+intitle:%22index%20of%22+src+filetype:js)  
+Recherche de répertoires index contenant du JavaScript
 
 ## Outils et Ressources
 De nombreux outils et ressources peuvent vous aider à construire des requêtes de Google Dork efficaces. Quelques-uns des plus populaires incluent :
