@@ -22,35 +22,35 @@ Par exemple : `pomme NOT banane`
   - Par exemple : à la fin `mots à *`  
   - Par exemple : plusieurs mots `* rechercher`
 - `site:` Limite les résultats à un domaine spécifique  
-Par exemple : `site:example.com mots à rechercher`
+  - Par exemple : `site:example.com mots à rechercher`
 - `intitle:` Limite les résultats aux pages dont le titre contient une expression donnée  
-Par exemple : `intitle:Titre mots à rechercher`
+  - Par exemple : `intitle:Titre mots à rechercher`
 - `inurl:` Cherche le terme entre parentès dans l'URL de la page
-Par exemple : `inurl:/folder/mots_à_rechercher`
+  - Par exemple : `inurl:/folder/mots_à_rechercher`
 - `filetype:` Limite les résultats à un type de fichier  
-Par exemple : `filetype:pdf mots à rechercher`
+  - Par exemple : `filetype:pdf mots à rechercher`
 - `before:` Affiche les résultats qui contiennent une expression avant une date donnée  
-Par exemple : `mots à rechercher:date`
+  - Par exemple : `mots à rechercher:date`
 - `define:` Retourne la définition d'une expression  
-Par exemple : `define:mots à définir`
+  - Par exemple : `define:mots à définir`
 - `intext:` Recherche du texte sur la page
-Par exemple : `intext:"erreur"`
+  - Par exemple : `intext:"erreur"`
 - `link:` Trouve les pages qui lient vers une URL donnée
-Par exemple : `link:example.com`
+  - Par exemple : `link:example.com`
 - `related:` Pages similaires à un site donné
-Par exemple : `related:example.com`
+  - Par exemple : `related:example.com`
 - `cache:` Affiche la version mise en cache d'une page
-Par exemple : `cache:example.com`
+  - Par exemple : `cache:example.com`
 - `info:` Récupère des informations sur le domaine
-Par exemple : `info:example.com`
+  - Par exemple : `info:example.com`
 - `allintitle:` Toutes les expressions dans le titre
-Par exemple : `allintitle:"data breach"`
+  - Par exemple : `allintitle:"data breach"`
 - `allinurl:` Toutes les expressions dans l'URL
-Par exemple : `allinurl:"admin panel"`
+  - Par exemple : `allinurl:"admin panel"`
 - `numrange:` Recherche de plage numérique
-Par exemple : `numrange:1000..2000`
+  - Par exemple : `numrange:1000..2000`
 - `daterange:` Recherche par plage de dates
-Par exemple : `daterange:20200101..20201231`
+  - Par exemple : `daterange:20200101..20201231`
 
 ### Exemple
 #### Github.com & token & .yml
