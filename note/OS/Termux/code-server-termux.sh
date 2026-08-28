@@ -17,4 +17,7 @@ pkg install code-server
 
 code-server --install-extension GitHub.vscode-pull-request-github
 
-code-server --auth none
+clear ; fastfetch 
+
+echo "Starting Code-Server"
+code-server --auth none 2&>1 /dev/null
