@@ -14,11 +14,15 @@ sudo rm -f /home/$username/vencord
 ## ~/.config/Vencord/themes/
 echo "Creating user ~/.config/Vencord/themes/"
 sudo -u $username mkdir -p /home/$username/.config/Vencord/themes/
-sudo curl -o /home/$username/.config/Vencord/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.css
+sudo curl -o /home/$username/.config/Vencord/themes/transparent.css https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vesktop.css
 sudo chown $username /home/$username/.config/Vencord/themes/transparent.css
+
+## ~/.config/Vencord/settings.json
+sudo curl -o /home/$username/.config/Vencord/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vesktop.json
+sudo chown $username /home/$username/.config/Vencord/settings.json
 
 ## ~/.config/Vencord/settings/
 echo "Creating user ~/.config/Vencord/settings/"
 sudo -u $username mkdir -p /home/$username/.config/Vencord/settings/
-sudo curl -o /home/$username/.config/Vencord/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/discord.json
+sudo curl -o /home/$username/.config/Vencord/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vesktop-settings
 sudo chown $username /home/$username/.config/Vencord/settings/settings.json
