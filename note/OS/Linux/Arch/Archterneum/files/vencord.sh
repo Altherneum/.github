@@ -24,5 +24,5 @@ sudo chown $username /home/$username/.config/Vencord/settings.json
 ## ~/.config/Vencord/settings/
 echo "Creating user ~/.config/Vencord/settings/"
 sudo -u $username mkdir -p /home/$username/.config/Vencord/settings/
-sudo curl -o /home/$username/.config/Vencord/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vesktop-settings
+sudo curl -o /home/$username/.config/Vencord/settings/settings.json https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vesktop-settings.json
 sudo chown $username /home/$username/.config/Vencord/settings/settings.json
