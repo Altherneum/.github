@@ -288,15 +288,49 @@ echo ""
 # hyprpm hook
 # echo "HyprPM hook"
 # eval "$sleepcmd"
-# echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-hyprpm.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-hyprpm.hook
+# echo $userpassword | sudo -S curl -o /usr/share/libalpm/hooks/pacman-hyprpm.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-hyprpm.hook
 
 # Discord -> Vencord hook
 echo "Vencord installation"
 eval "$sleepcmd"
-# echo $userpassword | sudo -S curl -o  /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
-echo $userpassword | sudo -S curl -o  /usr/share/libalpm/scripts/vencord.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vencord.sh
+# echo $userpassword | sudo -S curl -o /usr/share/libalpm/hooks/pacman-vencord.hook https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/pacman-vencord.hook
+echo $userpassword | sudo -S curl -o /usr/share/libalpm/scripts/vencord.sh https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/OS/Linux/Arch/Archterneum/files/vencord.sh
 echo $userpassword | sudo -S chmod +x /usr/share/libalpm/scripts/vencord.sh
 # echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh # replaced by vesktop
+
+echo "Installing Bionic Package via AppImage..."
+eval "$sleepcmd"
+echo $userpassword | sudo -S mkdir -p /opt/bionic
+echo $userpassword | sudo -S curl -o /opt/bionic/bionic-desktop-app.AppImage https://lmstudio.ai/download/latest/linux/x64?format=AppImage
+echo $userpassword | sudo -S chmod +x /opt/bionic/bionic-desktop-app.AppImage
+
+# Desktop Integration for Rofi/Wayland: Creating .desktop file with Icon
+echo "Downloading Bionic icon..."
+eval "$sleepcmd"
+echo $userpassword | sudo -S curl -o /opt/bionic/bionic-logo.png "https://lmstudio.ai/_next/image?url=/_next/static/media/bionic-logo-dark.441aaef8.png&w=256&q=75"
+
+echo "Creating desktop launcher for Bionic..."
+echo $userpassword | sudo -S mkdir -p /home/$username/.local/share/applications
+
+
+echo $userpassword | sudo -S touch /home/$username/.local/share/applications/bionic.desktop
+
+echo $userpassword | sudo -S chmod +w /home/$username/.local/share/applications/bionic.desktop
+
+echo $userpassword | sudo -S chown admin /home/$username/.local/share/applications/bionic.desktop
+
+echo $userpassword | sudo -S echo "[Desktop Entry]" > /home/$username/.local/share/applications/bionic.desktop
+echo "Name=Bionic Package" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Comment=Launch the installed Bionic AppImage" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Exec=/opt/bionic/bionic-desktop-app.AppImage%u" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Icon=/opt/bionic/bionic-logo.png" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Terminal=false" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Type=Application" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Categories=Utility;" >> /home/$username/.local/share/applications/bionic.desktop
+
+# Create a launcher symlink
+echo $userpassword | sudo -S ln -s /opt/bionic/bionic-desktop-app.AppImage /usr/bin/bionic-launcher
+echo $userpassword | sudo -S update-desktop-database /home/$username/.local/share/applications
 
 # Slash screen
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
