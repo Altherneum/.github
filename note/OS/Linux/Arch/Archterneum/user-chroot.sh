@@ -320,7 +320,7 @@ echo $userpassword | sudo -S chmod +w /home/$username/.local/share/applications/
 echo $userpassword | sudo -S chown admin /home/$username/.local/share/applications/bionic.desktop
 
 echo $userpassword | sudo -S echo "[Desktop Entry]" > /home/$username/.local/share/applications/bionic.desktop
-echo "Name=Bionic Package" >> /home/$username/.local/share/applications/bionic.desktop
+echo "Name=LM Studio Bionic" >> /home/$username/.local/share/applications/bionic.desktop
 echo "Comment=Launch the installed Bionic AppImage" >> /home/$username/.local/share/applications/bionic.desktop
 echo "Exec=/opt/bionic/bionic-desktop-app.AppImage%u" >> /home/$username/.local/share/applications/bionic.desktop
 echo "Icon=/opt/bionic/bionic-logo.png" >> /home/$username/.local/share/applications/bionic.desktop
