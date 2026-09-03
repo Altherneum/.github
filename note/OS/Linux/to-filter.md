@@ -166,18 +166,6 @@ va donner A, puis B, puis C
 `sleep 1m`
 Attend un délais
 
-## read
-```
-echo "Entrez ABC ou break"
-read response
-if [ $response = "ABC" ]
-  then echo "ok ABC"
-elif [ $response = "break" ]
-  then echo "breaking while ..."
-  break
-else echo "erreur faite ABC ou break :("
-fi
-```
 
 # fil rouge
 Firewall *2 ("UFW" sur debian, "D" sur redhat) + proxy
@@ -1015,56 +1003,3 @@ des noms de fichiers temporaires « uniques » (voir l'Exemple A.13, « ftpget: 
 l'Exemple 29.6, « Nettoyage après un Control-C », l'Exemple 15.28, « Déballer une archive rpm » et l'Exemple 14.27, « Un
 script qui se tue lui-même »). Ceci est généralement plus simple que d'appeler mktemp.
 ```
-
-# Filter A tester et à filter
-Faire recherche 
-- a tester
-- à tester
-- a filter
-- to filter
-...
-
-
-
-
-
-# Domaine AD
-AD DS (Entra ID / Azure ID)
-Objet
-UO
-Domaine
-Forêt (Qui est : Tenant(Locataire)??? / Annuaire)
-
-
-
-# Local key
-Get-PSDrive
-
-Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
-----           ---------     --------- --------      ----                                               ---------------
-Alias                                  Alias
-C                 161,49         61,48 FileSystem    C:\                                                     Users\User
-Cert                                   Certificate   \
-Env                                    Environment
-Function                               Function
-G                   4,39         10,61 FileSystem    G:\
-HKCU                                   Registry      HKEY_CURRENT_USER
-HKLM                                   Registry      HKEY_LOCAL_MACHINE
-Variable                               Variable
-WSMan                                  WSMan
-
-# local key list
-ls hkcu:
-ls hklm:
-
-
-
-
-
-
-
-# Disques 
-- DAS direct access storage (Direct Attached Storage est le terme utilisé pour un système de disque dur en attachement direct, par opposition au NAS qui est en attachement réseau)
-- SAS Serial Attached SCSI (technique d'interface pour disques durs, elle constitue une évolution des bus SCSI)
-- NAS Network Attached Storage (serveur de fichiers autonome, relié à un réseau)
-- SAN storage area network (est un réseau spécialisé permettant de mutualiser des ressources de stockage, système de stockage en block (Exemple 64Ko))

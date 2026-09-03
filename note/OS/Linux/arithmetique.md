@@ -72,9 +72,11 @@ La plupart des programmeurs C supposeraient que cela affecte le résultat de « 
 ## Expressions spéciales
 Il y a quelques expressions spéciales supplémentaires qui sont fournies dans bc. Elles se rapportent à des fonctions définies par l'utilisateur et à des fonctions standard. Elles apparaissent toutes sous la forme « nom(paramètres) ». Voyez la section sur les fonctions pour en savoir plus sur les fonctions définies par l'utilisateur. Les fonctions standard sont :
 
-- `length ( expression )` La valeur de la fonction length est le nombre de chiffres significatifs de l'expression.
-- `read ( )` La fonction read (une extension) lit un nombre à partir de l'entrée standard, où qu'elle soit appelée. Attention : cela peut causer des problèmes lors du mélange de données et d'un programme sur l'entrée standard. Le meilleur usage de cette fonction se situe dans un programme précédemment écrit qui a besoin d'entrée en provenance de l'utilisateur, mais qui ne permet jamais que l'utilisateur entre du code. La valeur de la fonction read est le nombre lu à partir de l'entrée standard en utilisant la valeur actuelle de la variable ibase comme base de conversion.
+### Length
+- `length ( expression )` La valeur de la fonction length est le nombre de chiffres significatifs de l'expression
+### Scale
 - `scale ( expression )` La valeur de la fonction scale est le nombre de chiffres après la virgule dans l'expression.
+### Sqrt
 - `sqrt ( expression )` La valeur de la fonction sqrt est la racine carrée de l'expression. Si l'expression est négative, une erreur à l'exécution est générée.
 
 ## BC avec pipe
