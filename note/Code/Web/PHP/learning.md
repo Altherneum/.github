@@ -4,6 +4,8 @@
 - Faire un test via apache et le doc
 - Also : https://www.w3schools.com/php/php_examples.asp : seem good AF
   - https://www.w3schools.com/php/php_ref_overview.asp
+- `echo shell_exec('ping google.com -c 1 -W 1 &');` à doc
+- `exec('ls -la &', $output, $return_var);` à doc
 
 # PHP
 - PHP: Hypertext Preprocessor
@@ -13,7 +15,8 @@
 ## Intoduction à PHP
 ### Installer PHP
 - [php.net/downloads](https://www.php.net/downloads.php?os=linux&osvariant=linux-ubuntu&version=default)
-- `sudo apt update && apt install -y php`
+- `sudo apt update && apt install -y php` : Ubuntu
+- `sudo pacman -S php` : Arch
 
 ### Créer le premier fichier
 - Créer un fichier `hello.php`
@@ -21,29 +24,34 @@
 ```
 <?php
 
-echo "Hello World string !";
 echo "<h1>PHP !</h1>";
+$php_version = PHP_VERSION_ID;
+echo "PHP v°$php_version !";
+echo phpinfo();
 echo '<p>Hello World HTML !</p>';
 
+echo shell_exec('ping google.com -c 1 &');
+echo "<br><hr>";
+
+exec('ls -la &', $output, $return_var);
+print_r($output);
+echo "<br><hr>";
+
+print_r($GLOBALS);
+echo "<br><hr>";
+
+print_r($_SERVER);
+echo "<br><hr>";
+
 echo phpversion();
+echo "<br><hr>";
 
-echo phpinfo();
-echo ini_get();
-echo get_loaded_extensions();
-
-echo "$GLOBALS"
-echo "$_SERVER"
-echo "$_GET"
-echo "$_POST"
-echo "$_FILES"
-echo "$_COOKIE"
-echo "$_SESSION"
-echo "$_REQUEST"
-echo "$_ENV"
+print_r(get_loaded_extensions());
 
 ?>
 ```
 - Lancer via ;
+  - Déplacez vous dans le dossier contenant la page (de préférance pour avoir uniquement ce fichier dans le serveur web) via : `cd <chemin>`
   - Lancer la commande `php -S localhost:8000`
   - Puis naviguer sur [localhost:8000/hello.php](http://localhost:8000/hello.php)
 
