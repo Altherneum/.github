@@ -66,7 +66,10 @@ Voire [README](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arc
 ## Drivers
 - GPU & CPU : AMD
 ## Images et vidéos
-[Arch video background](https://www.youtube.com/watch?v=B40xhtICzBY)
+### Fonds d'écrans vidéos
+https://github.com/user-attachments/assets/eb1fa497-5cf7-4f7d-b16f-28e9e87bb700
+### Présentation vidéo
+https://github.com/user-attachments/assets/d8b102f6-e232-40ce-9109-f0a3ff55c70a
 ### SSH x KeePass
 #### SSH with KeePass locked
 ![Arch SSH](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-keepass-ssh.png)
@@ -78,3 +81,4 @@ Voire [README](https://github.com/Altherneum/.github/blob/main/note/OS/Linux/Arc
 ![Arch vencord](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-vencord.png)
 ### Waybar
 ![Arch waybar](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/arch-waybar.png)
+![Arch waybar 2]([note/assets/images/](https://raw.githubusercontent.com/Altherneum/.github/refs/heads/main/note/assets/images/2026-09-06-222618_hyprshot.png)
