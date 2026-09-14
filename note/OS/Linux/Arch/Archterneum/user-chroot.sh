@@ -301,11 +301,11 @@ echo $userpassword | sudo -S chmod +x /usr/share/libalpm/scripts/vencord.sh
 echo "Installing Bionic Package via AppImage..."
 eval "$sleepcmd"
 echo $userpassword | sudo -S mkdir -p /opt/bionic
-echo $userpassword | sudo -S curl -o /opt/bionic/bionic-desktop-app.AppImage https://lmstudio.ai/download/latest/linux/x64?format=AppImage
+echo $userpassword | sudo -S curl -Lo /opt/bionic/bionic-desktop-app.AppImage https://lmstudio.ai/download/latest/linux/x64?format=AppImage
 echo $userpassword | sudo -S chmod +x /opt/bionic/bionic-desktop-app.AppImage
 
 # Desktop Integration for Rofi/Wayland: Creating .desktop file with Icon
-echo "Downloading Bionic icon..."
+echo "Downloading OpenCode Bionic icon..."
 eval "$sleepcmd"
 echo $userpassword | sudo -S curl -o /opt/bionic/bionic-logo.png "https://lmstudio.ai/_next/image?url=/_next/static/media/bionic-logo-dark.441aaef8.png&w=256&q=75"
 
