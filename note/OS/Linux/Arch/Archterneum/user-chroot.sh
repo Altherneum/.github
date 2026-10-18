@@ -308,6 +308,9 @@ echo $userpassword | sudo -S mkdir -p /home/$username/.config/environment.d
 TARGET_UID=$(getent passwd "$username" | cut -d: -f3)
 echo $userpassword | sudo -S echo "SSH_AUTH_SOCK=/run/user/${TARGET_UID}/ssh-agent.socket" > /home/$username/.config/environment.d/ssh-agent.conf
 
+# Export to bashrc
+echo 'export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"' >> ~/.bashrc
+
 echo "Installing OpenCode Package"
 eval "$sleepcmd"
 echo $userpassword | sudo -S pacman -S opencode
