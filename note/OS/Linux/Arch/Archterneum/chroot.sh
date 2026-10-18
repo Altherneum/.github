@@ -335,7 +335,9 @@ echo "cd /root/" >> /root/.bashrc
 systemctl --user enable --now ssh-agent.socket
 ## Create environement.d & add socket to $SSH_AUTH_SOCK
 mkdir -p ~/.config/environment.d
-echo 'SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket' > ~/.config/environment.d/ssh-agent.conf
+
+TARGET_UID=$(id -u)   # ou: TARGET_UID=$(getent passwd monuser | cut -d: -f3)
+echo "SSH_AUTH_SOCK=/run/user/${TARGET_UID}/ssh-agent.socket" > ~/.config/environment.d/ssh-agent.conf
 
 # Exit chroot
 echo "Leaving Chroot"
