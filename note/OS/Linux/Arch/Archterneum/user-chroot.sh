@@ -301,9 +301,16 @@ echo $userpassword | sudo -S curl -o /usr/share/libalpm/scripts/vencord.sh https
 echo $userpassword | sudo -S chmod +x /usr/share/libalpm/scripts/vencord.sh
 # echo $userpassword | sudo -S /bin/bash /usr/share/libalpm/scripts/vencord.sh # replaced by vesktop
 
+# KeePassXC ssh-agent configuration
+## Create environement.d & add socket to $SSH_AUTH_SOCK
+echo $userpassword | sudo -S mkdir -p /home/$username/.config/environment.d
+
+TARGET_UID=$(getent passwd "$username" | cut -d: -f3)
+echo $userpassword | sudo -S echo "SSH_AUTH_SOCK=/run/user/${TARGET_UID}/ssh-agent.socket" > /home/$username/.config/environment.d/ssh-agent.conf
+
 echo "Installing OpenCode Package"
 eval "$sleepcmd"
-sudo pacman -S opencode
+echo $userpassword | sudo -S pacman -S opencode
 
 # Slash screen
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
