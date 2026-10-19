@@ -73,7 +73,7 @@
 - L’umask est utilisé par `open`, `mkdir`, `touch` et d’autres appels systèmes qui créé ou modifie les permissions sur les nouveaux fichiers ou répertoires
 
 ### Précisions sur umask
-- Par défaut, tous les fichiers sont créés avec les droits `666` (`rw-rw-rw—`)
+- Par défaut, tous les fichiers sont créés avec les droits `666` (`rw-rw-rw-`)
 - Par défaut tous les répertoires sont créés avec les droits `777` (`rwxrwxrwx`)
 - Puis le masque est appliqué
 - Le masque est le même pour l'ensemble des fichiers
