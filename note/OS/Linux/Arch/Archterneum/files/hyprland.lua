@@ -152,6 +152,25 @@ hl.plugin.hyprbars.add_button({
 
 local mainMod = "SUPER"
 hl.bind(mainMod .. " + Super_L", hl.dsp.exec_cmd("pkill rofi || " .. menu), { release = true })
+
+-- Ferme rofi en cliquant en dehors sans capturer le clavier (remplace slurp)
+local function close_rofi_on_outside_click()
+    local cursor = hl.get_cursor_pos()
+    if not cursor then return end
+    for _, layer in ipairs(hl.get_layers({ namespace = "rofi" })) do
+        local inside = cursor.x >= layer.x and cursor.x <= layer.x + layer.w
+            and cursor.y >= layer.y and cursor.y <= layer.y + layer.h
+        if not inside then
+            hl.dispatch(hl.dsp.exec_cmd("pkill -x rofi"))
+            return
+        end
+    end
+end
+
+hl.bind("mouse:272", close_rofi_on_outside_click, { mouse = true, non_consuming = true })
+hl.bind("mouse:273", close_rofi_on_outside_click, { mouse = true, non_consuming = true })
+hl.bind("mouse:274", close_rofi_on_outside_click, { mouse = true, non_consuming = true })
+
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -s -m window -o ~/Images/hyprshot/"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -s -m output -o ~/Images/hyprshot/"))
 hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("hyprshot -s -m region -o ~/Images/hyprshot/"))

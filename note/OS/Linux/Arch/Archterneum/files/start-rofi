@@ -1,5 +1,9 @@
-~/.config/rofi/rofi-slurp-monitor.sh &
-rofi \
+#!/bin/bash
+
+# Le clic en dehors de rofi est gere par hyprland.lua (bind souris non_consuming)
+# Plus de slurp : il capturait le clavier et empechait de taper dans rofi
+
+exec rofi \
   -modi "combi,window,cmd:~/.config/rofi/run_cmd.sh,emoji,clipboard:~/.config/rofi/cliphist-rofi-img.sh,filebrowser,recursivebrowser,drun,calc,ssh,keys,backgroundswitcher:~/.config/rofi/backgroundswitcher.sh" \
   -show combi -combi-modes drun,window,cmd,emoji,clipboard,ssh,filebrowser,recursivebrowser,calc,keys,backgroundswitcher \
   -kb-secondary-copy "" -kb-custom-1 Ctrl+c -theme theme -normalize-match -disable-history -click-to-exit -sidebar-mode \
