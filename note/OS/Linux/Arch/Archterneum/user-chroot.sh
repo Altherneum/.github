@@ -315,6 +315,10 @@ echo "Installing OpenCode Package"
 eval "$sleepcmd"
 echo $userpassword | sudo -S pacman -S opencode
 
+echo "Installing NextCloud client Package"
+eval "$sleepcmd"
+echo $userpassword | sudo -S pacman -S nextcloud-client
+
 # Slash screen
 # To set up a systemd splash screen on Arch Linux, you can use the unified kernel image (UKI) feature, which allows you to embed a splash image directly into the boot binary. This method does not require Plymouth and works with systemd-boot. The splash image, typically a BMP file, is specified in the /etc/mkinitcpio.d/linux.preset file using the default_options="--splash=/path/to/image.bmp" parameter.
 # The image is then embedded into the UKI binary during the mkinitcpio build process.
