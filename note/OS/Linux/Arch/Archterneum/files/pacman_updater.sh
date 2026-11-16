@@ -1,9 +1,16 @@
+# Update mirror list
+sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
 # Refresh arch keyring & keys
-sudo pacman -Syy ; sudo pacman -S archlinux-keyring --noconfirm ; sudo pacman --refresh-keys || sudo pacman-key --refresh-keys
+sudo pacman -Syy
+sudo pacman -S archlinux-keyring --noconfirm
+sudo pacman --refresh-keys || sudo pacman-key --refresh-keys
 
 # Update all pacman's repo
 sudo pacman -Syuu
 
+# Refresh yay
+yay -Syy
 # Update all yay's repo
 yay -Syuu
 
