@@ -2,11 +2,13 @@
 sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Refresh arch keyring & keys
+# Add a skip default true
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring --noconfirm
 sudo pacman --refresh-keys || sudo pacman-key --refresh-keys
 
 # Update all pacman's repo
+# Add a skip default true
 sudo pacman -Syuu
 
 # Refresh yay
@@ -30,3 +32,6 @@ echo 🕒️💤 15s ➡️ 🗑️
 
 # Sleep 15s
 sleep 15
+
+# Add a skip default false
+## reboot depending on switch state true/false
