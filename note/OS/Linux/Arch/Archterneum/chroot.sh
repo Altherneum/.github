@@ -183,7 +183,7 @@ chmod +x /home/$username/.config/hypr/gnome-keyring-daemon.sh
 ### Other software
 echo "Downloading BTop/HTop & FastFetch"
 eval "$sleepcmd"
-pacman -S --needed --noconfirm btop fastfetch htop
+pacman -S --needed --noconfirm btop fastfetch htop netcat
 echo "Downloading BTop driver for AMD-GPU"
 eval "$sleepcmd"
 pacman -S --needed --noconfirm rocm-smi-lib
