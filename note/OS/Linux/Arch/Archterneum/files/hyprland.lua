@@ -233,6 +233,21 @@ hl.window_rule({
     suppress_event = "maximize",
 })
 
+-- Ouvre toutes les fenêtres en floating, centrées, à 90% de la largeur
+-- et 85% de la hauteur de l'écran (85% pour laisser la place à la waybar)
+hl.window_rule({
+    name = "floating-windows",
+    match = {
+        class = ".*",
+    },
+    float = true,
+    size = {
+        "monitor_w*0.9",
+        "monitor_h*0.85",
+    },
+    center = true,
+})
+
 hl.layer_rule({
     match = { namespace = "rofi" },
     blur = true,
